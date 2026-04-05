@@ -1,0 +1,10 @@
+﻿JavaPackage GS2GC.p041_MarsExploreOp;
+csharpspace GS2GC.p041_MarsExploreOp;
+
+import Common.MarsObj.alpro;
+
+ALProtocol GS2GC_041_058_OnExploreTeamState[火星探索队伍-队伍状态变更] <41, 58>
+{
+	long teamId;
+	Common.MarsObj.Mars_TeamState state;
+}

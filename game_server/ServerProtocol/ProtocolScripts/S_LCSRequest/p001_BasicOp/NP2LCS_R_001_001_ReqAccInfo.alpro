@@ -1,0 +1,11 @@
+JavaPackage NP2LCS_R.p001_BasicOp;
+
+/**********************************************************
+ * 申请帐号信息
+ **********************************************************/
+ALProtocol NP2LCS_R_001_001_ReqAccInfo <1, 1>
+{
+	//帐号名
+	string accountName;
+	string accountPass;
+}

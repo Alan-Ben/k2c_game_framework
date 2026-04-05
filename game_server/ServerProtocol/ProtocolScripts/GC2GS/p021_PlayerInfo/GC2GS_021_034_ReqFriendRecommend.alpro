@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p021_PlayerInfo;
+csharpspace GC2GS.p021_PlayerInfo;
+
+ALProtocol GC2GS_021_034_ReqFriendRecommend <21, 34>
+{
+	
+}

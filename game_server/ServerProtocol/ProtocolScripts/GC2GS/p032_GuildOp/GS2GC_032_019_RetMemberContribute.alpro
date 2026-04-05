@@ -1,0 +1,9 @@
+﻿import Common.GuildObj.alpro;
+
+JavaPackage GS2GC.p032_GuildOp;
+csharpspace GS2GC.p032_GuildOp;
+
+ALProtocol GS2GC_032_019_RetMemberContribute <32, 19>
+{
+	Common.GuildObj.Guild_MemberContributeInfo member;
+}

@@ -1,0 +1,7 @@
+﻿JavaPackage GS2GC.p032_GuildOp;
+csharpspace GS2GC.p032_GuildOp;
+
+ALProtocol GS2GC_032_067_OnGuildConstructListChg[联盟建造次数信息变更] <32, 67>
+{
+    Common.GuildObj.Guild_ConstructList constructList;
+}

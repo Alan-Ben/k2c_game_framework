@@ -1,0 +1,11 @@
+JavaPackage NP2US.p001_BasicOp;
+
+/**********************************************************
+ * 广播发送给多个用户的消息
+ **********************************************************/
+ALProtocol NP2US_001_004_BroadUserMsg <1, 4>
+{
+	long[] cidList;
+	bytebuffer msgBuffer;
+}
+

@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p023_ArenaOp;
+csharpspace GC2GS.p023_ArenaOp;
+
+ALProtocol GC2GS_023_022_ReqTowerChallengeList[请求挑战列表] <23, 22>
+{
+    
+}

@@ -1,0 +1,11 @@
+﻿JavaPackage NP2US_B.p001_BasicOp;
+
+/**********************************************************
+ * 有新的全服邮件新增或更新
+ **********************************************************/
+ALProtocol NP2US_B_001_003_AllServerMailUpdate <1, 3>
+{
+    bool isAllServer[是否全部服务器邮件];
+    long allServerMailId;
+    int[] serverList[服务器列表];
+}

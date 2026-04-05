@@ -1,0 +1,8 @@
+﻿JavaPackage GC2GS.p036_TreasureHuntOp;
+csharpspace GC2GS.p036_TreasureHuntOp;
+
+ALProtocol GC2GS_036_003_ReqTreasureHuntOreSkillUpgrade[太空寻宝-矿石技能升级] <36, 3>
+{
+	long oreId[矿石ID];
+	bool isNormal[true普通技能 false高级技能];
+}

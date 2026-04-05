@@ -1,0 +1,7 @@
+﻿﻿JavaPackage GS2GC.p013_HeroOp;
+csharpspace GS2GC.p013_HeroOp;
+
+ALProtocol GS2GC_013_060_OnHeroSuitChg[大臣套系变更推送]<13, 60>
+{
+    Common.HeroObj.Hero_SuitInfo suitInfo[套系信息];
+}

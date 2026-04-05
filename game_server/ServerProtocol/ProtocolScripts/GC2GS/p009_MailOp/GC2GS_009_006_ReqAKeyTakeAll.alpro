@@ -1,0 +1,6 @@
+﻿JavaPackage GC2GS.p009_MailOp;
+csharpspace GC2GS.p009_MailOp;
+
+ALProtocol GC2GS_009_006_ReqAKeyTakeAll[一键已读，领取全部奖励] <9, 6>
+{
+}

@@ -1,0 +1,10 @@
+﻿JavaPackage NP2CGS_R.p001_BasicOp;
+
+import Enum.NPServerEnum.alpro;
+
+ALProtocol NP2CGS_R_001_002_ReqCreateCrossGameInstance <1, 2>
+{
+	Enum.NPServerEnum.ENPCrossGameCategoryEnum category[跨服游戏类型];
+	long instanceId[实例ID];
+	bytebuffer extData[消息];
+}

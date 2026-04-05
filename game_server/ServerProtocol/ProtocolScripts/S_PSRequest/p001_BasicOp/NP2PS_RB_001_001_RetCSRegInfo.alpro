@@ -1,0 +1,14 @@
+﻿﻿﻿import Common.CommonObj.alpro;
+
+JavaPackage NP2PS_RB.p001_BasicOp;
+
+/**********************************************************
+ * 返回通用服务器的注册信息
+ **********************************************************/
+ALProtocol NP2PS_RB_001_001_RetCSRegInfo <1, 1>
+{
+	Common.CommonObj.Common_RSInfo[] rsList[已有房间服务器的信息列表];
+	int[] crossGameServerTypeIdList[已注册的CrossGame服务器列表];
+	int[] crossRankServerTypeIdList[已注册的CrossRank服务器列表];
+	int[] gameLogicServerTypeIdList[已注册的GameLogic服务器列表];
+}

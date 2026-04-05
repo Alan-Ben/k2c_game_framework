@@ -1,0 +1,9 @@
+﻿﻿import Common.NPCommonObj.alpro;
+JavaPackage GS2GC.p028_QuestOp;
+csharpspace GS2GC.p028_QuestOp;
+
+ALProtocol GS2GC_028_060_OnPlayerDailyQuestChg[日常任务信息变更] <28, 60>
+{
+	Enum.QuestEnum.EDailyQuestType type[日常任务类型];
+	Common.QuestObj.DailyQuest_Info quest[任务数据更新];
+}

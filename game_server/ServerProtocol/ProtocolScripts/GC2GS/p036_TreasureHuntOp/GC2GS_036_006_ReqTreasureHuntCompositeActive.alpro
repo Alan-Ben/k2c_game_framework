@@ -1,0 +1,8 @@
+﻿JavaPackage GC2GS.p036_TreasureHuntOp;
+csharpspace GC2GS.p036_TreasureHuntOp;
+
+ALProtocol GC2GS_036_006_ReqTreasureHuntCompositeActive[太空寻宝-组合激活] <36, 6>
+{
+	long compositeId[组合ID];
+	bool isNormal[true普通技能 false高级技能];
+}

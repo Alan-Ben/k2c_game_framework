@@ -1,0 +1,5 @@
+JavaPackage GC2GS.p015_ConsortOp;
+csharpspace GC2GS.p015_ConsortOp;
+ALProtocol GC2GS_015_004_ReqCallRand [家人-随机邀约] <15, 4>
+{
+}

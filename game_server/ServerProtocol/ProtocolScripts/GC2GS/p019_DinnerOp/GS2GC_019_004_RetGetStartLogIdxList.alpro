@@ -1,0 +1,7 @@
+JavaPackage GS2GC.p019_DinnerOp;
+csharpspace GS2GC.p019_DinnerOp;
+import Common.DinnerObj.alpro;
+ALProtocol GS2GC_019_004_RetGetStartLogIdxList [开宴索引记录列表] <19, 4>
+{
+    Common.DinnerObj.Dinner_StartLogIdx[] idxList[开宴索引记录列表];
+}

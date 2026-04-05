@@ -1,0 +1,96 @@
+﻿JavaPackage Common.OfflineRewardObj;
+csharpspace Common.OfflineRewardObj;
+
+import Common.NPInclude.alpro;
+import Common.NPCommonObj.alpro;
+
+import Enum.GuildEnum.alpro;
+
+ALProtocol OfflineReward_Info[离线奖励数据]
+{
+	long id[实例ID];
+	int rewardType[奖励类型 - ECommonOfflineRewardType类型];
+	bytebuffer rewardShow[奖励展示];
+}
+
+ALProtocol Offline_CommonReward[通用奖励数据]
+{
+	Common.NPCommonObj.NPCommon_ItemInfo[] itemList[物品列表];
+}
+
+ALProtocol Offline_PlayerGmCommand[玩家GM命令]
+{
+	string command;
+}
+
+ALProtocol Offline_PlayerJoinGuild[玩家加入联盟]
+{
+	long newGuildId;
+	string guildName;
+	string simpleName;
+	int[] buildingAddPerArr;
+}
+
+ALProtocol Offline_PlayerQuitGuild[玩家退出联盟]
+{
+	long oriGuildId[原联盟ID];
+	string oriGuildName;
+	long timestamp;
+	bool isKick[是否被踢出];
+}
+
+ALProtocol Offline_ChgPlayerRecord[玩家记录操作]
+{
+	Enum.NPPlayerPro.ENPPlayerRecordParam type[记录类型];
+	Enum.NPCommonEnum.ENCounterDealType dealType[操作类型];
+	long num[数值];
+}
+
+ALProtocol Offline_OrderDelivery[订单发货]
+{
+	string orderId[订单ID];
+	long giftPackId[礼包ID];
+	Common.NPCommonObj.NPCommon_ItemInfo[] itemList[物品列表];
+	string sdkOrderId[sdk订单ID];
+	float payMoney[支付金额];
+	string payCurrency[支付币种];
+	short orderType[订单类型：1 内购，2 网页充值，3 福利（虚拟充值）];
+}
+
+ALProtocol Offline_GuildMarsHelpSuc[公会-火星互助]
+{
+	Enum.GuildEnum.EGuildMarsHelpObjType objType[对象类型];
+	long objId[对象实例ID];
+	long helpId[求助实例ID];
+	int helpSecs[求助时长（秒）];
+	long dealedCid[互助玩家CID];
+	int dealedCount[被互助次数];
+	int dealLimit[允许被帮助的上限];
+}
+
+ALProtocol Offline_GuildMarsHelpBeAutoDealed[公会-火星互助-被帮助]
+{
+	Enum.GuildEnum.EGuildMarsHelpObjType objType[对象类型];
+	long objId[对象实例ID];
+	long helpId[求助实例ID];
+	int helpSecs[求助时长（秒）];
+	long[] dealedCidList[互助玩家CID列表];
+	int preDealedCount[之前被互助次数];
+	int dealLimit[允许被帮助的上限];
+}
+
+ALProtocol Offline_GuildMarsHelpAutoDeal[公会-火星互助-帮助]
+{
+	int dealedCount[帮助次数];
+}
+
+ALProtocol Offline_ForbidChat[玩家禁言]
+{
+	long endMs[截至时间戳（毫秒）];
+	int roomType[房间类型];
+}
+
+ALProtocol Offline_LiftForbidChat[解除玩家禁言]
+{
+	int roomType[房间类型];
+}

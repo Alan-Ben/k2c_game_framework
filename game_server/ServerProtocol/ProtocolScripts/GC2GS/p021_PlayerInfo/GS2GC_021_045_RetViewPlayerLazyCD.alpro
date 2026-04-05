@@ -1,0 +1,12 @@
+JavaPackage GS2GC.p021_PlayerInfo;
+csharpspace GS2GC.p021_PlayerInfo;
+
+import Common.NPCommonObj.alpro;
+
+/**********************************************************
+ * 返回指定玩家的CD信息
+ **********************************************************/
+ALProtocol GS2GC_021_045_RetViewPlayerLazyCD <21, 45>
+{
+	Common.NPCommonObj.NPCommon_PlayerLazyCD cdInfo[CD信息];
+}

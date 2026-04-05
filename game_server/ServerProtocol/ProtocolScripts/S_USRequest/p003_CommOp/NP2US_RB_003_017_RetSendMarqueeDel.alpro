@@ -1,0 +1,5 @@
+﻿JavaPackage WCGCS2US_RB.p003_CommOp;
+
+ALProtocol NP2US_RB_003_017_RetSendMarqueeDel[删除跑马灯] <3, 17>
+{
+}

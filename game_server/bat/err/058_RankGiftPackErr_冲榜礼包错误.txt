@@ -1,0 +1,7 @@
+java_path= ../Common/src
+java_package=NPCommon.ErrMain
+csharp_type = main
+id	name	desc
+1	NO_ACTIVE_PACK	当前没有激活的礼包
+2	PACK_EXPIRED	礼包已过期,请刷新
+3	BUY_LIMIT_EXCEEDED	购买次数超限

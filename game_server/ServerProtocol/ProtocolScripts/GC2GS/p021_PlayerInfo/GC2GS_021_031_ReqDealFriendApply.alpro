@@ -1,0 +1,8 @@
+﻿JavaPackage GC2GS.p021_PlayerInfo;
+csharpspace GC2GS.p021_PlayerInfo;
+
+ALProtocol GC2GS_021_031_ReqDealFriendApply <21, 31>
+{
+	bool isAgree[true-同意，false-拒绝];
+	long applyCid;
+}

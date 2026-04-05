@@ -1,0 +1,7 @@
+﻿﻿import Common.NPCommonObj.alpro;
+JavaPackage GS2GC.p007_CommOp;
+
+ALProtocol GS2GC_007_053_OnDebugMsg[调试信息推送] <7, 53>
+{
+	string msg[调试信息];
+}

@@ -1,0 +1,7 @@
+JavaPackage GC2GS.p004_PlayerOp;
+csharpspace GC2GS.p004_PlayerOp;
+
+ALProtocol GC2GS_004_026_ReqClientPayCancel [客户端通知支付取消] <4, 26>
+{
+    string orderId[订单ID];
+}

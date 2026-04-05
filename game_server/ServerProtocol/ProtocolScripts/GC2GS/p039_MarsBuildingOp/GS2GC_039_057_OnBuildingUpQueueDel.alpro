@@ -1,0 +1,7 @@
+﻿JavaPackage GS2GC.p039_MarsBuildingOp;
+csharpspace GS2GC.p039_MarsBuildingOp;
+
+ALProtocol GS2GC_039_057_OnBuildingUpQueueDel[建筑建造/升级队列数据结束] <39, 57>
+{
+	long id[队列ID];
+}

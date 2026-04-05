@@ -1,0 +1,24 @@
+﻿JavaPackage ALLRPC.MarryMatchServer.MarryMatch;
+
+﻿﻿﻿﻿﻿import Common.ChildObj.alpro;
+
+ALProtocol MmsGetMatchItemList_Req
+{
+	long groupId[分组ID];
+	
+	long adultId[匹配子嗣ID];
+	long cid[匹配玩家CID];
+	int matchId[匹配ID];
+	long bonus[子嗣收益];
+	
+	int count[获取符合匹配的数量];
+}
+
+ALProtocol MmsGetMatchItemList_Return
+{
+	Common.ChildObj.Adult_PoolBaseInfo[] matchList[匹配成功的子嗣列表];
+}
+
+//[RPC]获取符合匹配要求的子嗣基础数据列表
+//[CLASS_PACKAGE] : AllRpcData.MarryMatch_Service.MarryMatch
+//[DEALER_PACKAGE] : MarryMatchServer.RPCDispatcher.MarryMatch

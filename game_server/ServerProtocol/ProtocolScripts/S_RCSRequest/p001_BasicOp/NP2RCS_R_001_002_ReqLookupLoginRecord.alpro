@@ -1,0 +1,9 @@
+JavaPackage NP2LCS_R.p001_BasicOp;
+
+/**********************************************************
+ * 更新账号登录记录
+ **********************************************************/
+ALProtocol NP2RCS_R_001_002_ReqLookupLoginRecord <1, 2>
+{
+	string accountId[用户id];
+}

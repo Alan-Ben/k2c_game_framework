@@ -1,0 +1,10 @@
+﻿JavaPackage GC2GS.p004_PlayerOp;
+csharpspace GC2GS.p004_PlayerOp;
+
+/**********************************************************
+ * 请求GM 命令
+ **********************************************************/
+ALProtocol GC2GS_004_002_ReqGmCommand <4, 2>
+{
+    string command;
+}

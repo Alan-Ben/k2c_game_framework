@@ -1,0 +1,7 @@
+﻿JavaPackage GS2GC.p002_InitOp;
+csharpspace GS2GC.p002_InitOp;
+
+ALProtocol GS2GC_002_057_RetInnInit <2, 57>
+{
+	Common.InnObj.Inn_Info innInfo[旅店信息];
+}

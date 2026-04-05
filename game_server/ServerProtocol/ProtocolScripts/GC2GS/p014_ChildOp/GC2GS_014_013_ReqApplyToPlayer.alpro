@@ -1,0 +1,7 @@
+JavaPackage GC2GS.p014_ChildOp;
+csharpspace GC2GS.p014_ChildOp;
+ALProtocol GC2GS_014_013_ReqApplyToPlayer [联姻请求-对指定玩家发起请求] <14, 13>
+{
+    long adultId[匹配的子嗣实例ID];
+    long targetCid[目标玩家CID];
+}

@@ -1,0 +1,5 @@
+JavaPackage GS2GC.p015_ConsortOp;
+csharpspace GS2GC.p015_ConsortOp;
+ALProtocol GS2GC_015_011_RetGetCgUnlockReward [家人-领取CG解锁奖励] <15, 11>
+{
+}

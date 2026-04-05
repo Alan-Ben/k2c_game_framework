@@ -1,0 +1,87 @@
+package Common.ServerObj;
+
+import java.nio.ByteBuffer;
+/*********
+ * 排行榜结算时的联盟结算数据
+ **/
+public class ServerObj_RankSettleGuild implements ALBasicProtocolPack._IALProtocolStructure {
+private long guildId;
+private long leaderCid;
+
+
+public ServerObj_RankSettleGuild() {
+	guildId = (long)0;
+	leaderCid = (long)0;
+}
+
+public ServerObj_RankSettleGuild(
+	 long _guildId
+	, long _leaderCid
+) {	guildId = _guildId;
+	leaderCid = _leaderCid;
+}
+
+public final byte getMainOrder() { return (byte)0; }
+
+public final byte getSubOrder() { return (byte)0; }
+
+public long getGuildId() { return guildId; }
+public void setGuildId(long _guildId) { guildId = _guildId; }
+public long getLeaderCid() { return leaderCid; }
+public void setLeaderCid(long _leaderCid) { leaderCid = _leaderCid; }
+
+
+public final int GetBufSize() {
+	int _size = 16;
+
+	return _size;
+}
+
+public final int GetFullPackBufSize() {
+	int _size = 18;
+
+	return _size;
+}
+
+
+
+public final void ReadUnzipBuf(ByteBuffer _buf, int _finalPos) {
+	 if(_finalPos > 0 && _buf.position() >= _finalPos) return ;
+	if(_buf.remaining() > 0) guildId = _buf.getLong();
+	 if(_finalPos > 0 && _buf.position() >= _finalPos) return ;
+	if(_buf.remaining() > 0) leaderCid = _buf.getLong();
+}
+
+public final void PutUnzipBuf(ByteBuffer _buf) {
+	_buf.putLong(guildId);
+	_buf.putLong(leaderCid);
+}
+
+public final ByteBuffer makeFullPackage() {
+	int _bufSize = GetBufSize() + 2;
+	ByteBuffer _buf = ByteBuffer.allocate(_bufSize);
+	_buf.put((byte)0);
+	_buf.put((byte)0);
+	PutUnzipBuf(_buf);
+	_buf.flip();
+	return _buf;
+}
+public final void makeFullPackage(ByteBuffer _recBuf) {
+	if(null == _recBuf)
+		return ;
+	_recBuf.put((byte)0);
+	_recBuf.put((byte)0);
+	PutUnzipBuf(_recBuf);
+}
+public final ByteBuffer makePackage() {
+	int _bufSize = GetBufSize();
+	ByteBuffer _buf = ByteBuffer.allocate(_bufSize);
+	PutUnzipBuf(_buf);
+	_buf.flip();
+	return _buf;
+}
+public final void readPackage(ByteBuffer _buf) {
+	ReadUnzipBuf(_buf, -1);
+}
+}
+

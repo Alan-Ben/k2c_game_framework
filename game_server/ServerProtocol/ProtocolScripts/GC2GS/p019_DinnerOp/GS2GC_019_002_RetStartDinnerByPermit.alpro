@@ -1,0 +1,7 @@
+JavaPackage GS2GC.p019_DinnerOp;
+csharpspace GS2GC.p019_DinnerOp;
+import Common.DinnerObj.alpro;
+ALProtocol GS2GC_019_002_RetStartDinnerByPermit [开启宴会（许可证模式）] <19, 2>
+{
+    Common.DinnerObj.Dinner_Info info[宴会详情];
+}

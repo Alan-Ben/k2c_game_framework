@@ -1,0 +1,10 @@
+﻿JavaPackage NPGC2GS.p001_BasicOp;
+csharpspace NPGC2GS.p001_BasicOp;
+
+/**********************************************************
+ * 玩家查询进入服务器的队列信息
+ **********************************************************/
+ALProtocol NPGC2GS_001_007_ReqQueueInfo <1, 7>
+{
+	long clientSerialize[客户端用于识别的序列号];
+}

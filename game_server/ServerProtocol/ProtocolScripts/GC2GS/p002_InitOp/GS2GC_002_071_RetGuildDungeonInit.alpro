@@ -1,0 +1,17 @@
+﻿JavaPackage GS2GC.p002_InitOp;
+csharpspace GS2GC.p002_InitOp;
+
+import Common.GuildDungeonObj.alpro;
+
+ALProtocol GS2GC_002_071_RetGuildDungeonInit <2, 71>
+{
+	//公会副本数据
+	Common.GuildDungeonObj.GuildDungeon_SetInfo[] setList[设置数据列表];
+	Common.GuildDungeonObj.GuildDungeon_InstanceInfo[] instanceList[实力数据列表];
+	
+	//已领取奖励的怪物ID列表
+	Common.GuildDungeonObj.GuildDungeon_DungeonMonster[] gainedRewardMonsterIdList[已领取奖励的怪物数据列表];
+	
+	//出战大臣
+	Common.GuildDungeonObj.GuildDungeon_FightHero[] fightHeroList[出战大臣数据列表];
+}

@@ -1,0 +1,7 @@
+JavaPackage GS2GC.p018_PlayerSkinOp;
+csharpspace GS2GC.p018_PlayerSkinOp;
+import Common.NPPlayerInfo.alpro;
+ALProtocol GS2GC_018_053_OnComboTitleBgChg [组合称号底色变更] <18, 53>
+{
+    Common.NPPlayerInfo.PlayerInfo_ComboTitleBg bg[空];
+}

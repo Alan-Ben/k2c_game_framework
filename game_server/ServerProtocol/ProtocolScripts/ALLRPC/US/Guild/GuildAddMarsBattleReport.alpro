@@ -1,0 +1,17 @@
+import Common.ServerObj.alpro;
+JavaPackage ALLRPC.US.Guild;
+
+ALProtocol GuildAddMarsBattleReport_Req
+{
+    long cid;
+    long guildId;
+    Common.ServerObj.ServerObj_MarsExplorePVPLog logObj;
+}
+
+ALProtocol GuildAddMarsBattleReport_Return
+{
+}
+
+//[RPC] add mars mine guild battle report
+//[CLASS_PACKAGE] : AllRpcData.US_Service.Guild
+//[DEALER_PACKAGE] : USServer.RPCDispatcher.Guild

@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p007_CommOp;
+csharpspace GC2GS.p007_CommOp;
+
+ALProtocol GC2GS_007_030_ReqDrawGachaCumulativeReward[领取抽卡累计奖励]<7, 30> 
+{
+	long poolId[卡池id];
+}

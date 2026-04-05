@@ -1,0 +1,10 @@
+package NPUSServer.NPUSUserMgr.UserComp.BuildingComp.ConditionDealer;
+
+import Common.ConditionEnum.EBuildingConditionType;
+import NPGameRes.GameObjs.CommonObj.BuildingCondition._ABasicBuildingCondition;
+import NPGameRes.GameObjs.CommonObj.Condition._ITNPBasicConditionDealer;
+import NPUSServer.NPUSUserMgr.UserComp.BuildingComp._IBuildingConditionProxy;
+
+public abstract class _ABuildingConditionDealer implements _ITNPBasicConditionDealer<EBuildingConditionType, _ABasicBuildingCondition, _IBuildingConditionProxy>
+{
+}

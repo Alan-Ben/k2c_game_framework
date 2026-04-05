@@ -1,0 +1,9 @@
+JavaPackage GC2GS.p016_ChapterOp;
+csharpspace GC2GS.p016_ChapterOp;
+
+import Enum.ChapterEnum.alpro;
+
+ALProtocol GC2GS_016_003_ReqChapterFightBossInspire [打Boss鼓舞] <16, 3>
+{
+    Enum.ChapterEnum.EChapterInspireType type[鼓舞类型];
+}

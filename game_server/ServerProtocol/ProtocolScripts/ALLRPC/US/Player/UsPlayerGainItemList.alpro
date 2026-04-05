@@ -1,0 +1,19 @@
+﻿JavaPackage ALLRPC.US.Player;
+import Common.CommonObj.alpro;
+
+ALProtocol UsPlayerGainItemList_Req
+{
+    long  cid;
+    Common.CommonObj.Common_Context context[上下文信息];
+  	 Common.NPCommonObj.NPCommon_ItemList itemList;//获得的物品列表
+    bool isPush[是否弹窗提示];
+}
+
+ALProtocol UsPlayerGainItemList_Return
+{
+   Common.CommonObj.RESULT result;
+   Common.NPCommonObj.NPCommon_ItemList gainItemList[获得物品列表];
+}
+//[RPC]玩家获得物品列表
+//[CLASS_PACKAGE] : AllRpcData.US_Service.Player
+//[DEALER_PACKAGE] : USServer.RPCDispatcher.Player

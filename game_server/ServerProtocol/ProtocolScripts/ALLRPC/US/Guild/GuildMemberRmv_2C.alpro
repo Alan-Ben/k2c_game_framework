@@ -1,0 +1,14 @@
+﻿JavaPackage ALLRPC.US.Guild;
+
+ALProtocol GuildMemberRmv_2C_Req
+{
+	long cid;
+	long guildId;
+	string guildName;
+	long timeMS;
+	bool isKicked;
+}
+
+ALProtocol GuildMemberRmv_2C_Return
+{
+}

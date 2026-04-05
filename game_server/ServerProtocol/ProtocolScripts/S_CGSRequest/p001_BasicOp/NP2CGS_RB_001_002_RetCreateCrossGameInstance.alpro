@@ -1,0 +1,6 @@
+﻿JavaPackage NP2CGS_RB.p001_BasicOp;
+
+ALProtocol NP2CGS_RB_001_002_RetCreateCrossGameInstance <1, 2>
+{
+	bytebuffer retMsg[消息];
+}

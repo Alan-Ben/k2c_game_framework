@@ -1,0 +1,7 @@
+﻿JavaPackage GS2GC.p002_InitOp;
+csharpspace GS2GC.p002_InitOp;
+
+ALProtocol GS2GC_002_048_RetFixedCdInfo[初始化定时恢复cd数据] <2, 48>
+{
+	Common.NPCommonObj.NPCommon_PlayerFixedCD[] cdList[定时恢复cd数据列表];
+}

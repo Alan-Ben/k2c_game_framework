@@ -1,0 +1,15 @@
+﻿JavaPackage Common.ActivityEnum;
+csharpspace Common.ActivityEnum;
+
+ALEnum EActivityState[活动状态枚举]
+{
+	PLAN[待开启];
+	PLAYING[运行中];
+	SETTLING[结算中];
+	REWARDING[领奖期];
+	CLOSED[已关闭];
+	CAN_DISCARD[可销毁];
+	RESTORE[活动状态恢复中];
+	INITIALIZING[活动初始化中];
+	LOAD_FROM_DB[从数据库加载中];
+}

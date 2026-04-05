@@ -1,0 +1,8 @@
+﻿JavaPackage NP2CRS_RB.p001_CrossRankOp;
+
+﻿import Common.RankObj.alpro;
+
+ALProtocol NP2CRS_RB_001_026_GetCrossRankBaseSubListByKey <1, 26>
+{
+    Common.RankObj.Rank_BaseSubItem[] subList[基础子数据列表];
+}

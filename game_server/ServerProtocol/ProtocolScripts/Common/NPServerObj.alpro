@@ -1,0 +1,186 @@
+import Common.NPInclude.alpro;
+import Common.NPCommonObj.alpro;
+import Common.NPPlayerInfo.alpro;
+import Enum.NPServerEnum.alpro;
+
+JavaPackage Common.NpServerObj;
+
+/**********************************************************
+ * 服务端专用结构体，不生成到C#目录
+ **********************************************************/
+ALProtocol NpServerObj_USServerChatRoomInitInfo[NP US服务器单服聊天房间初始化信息]
+{
+	int serverTypeId[创建房间的服务器id];
+	long createTimeMs[创建时间];
+}
+
+ALProtocol NPCommon_ChatPlayerISRegInfo[玩家注册到Interface上携带的身份信息]
+{
+    long cid[玩家id];
+	int usTypeId[所属us服务器id];
+	long allianceId[所属联盟id];
+}
+ 
+ALProtocol NpServerObj_CommonLongList[NP 通用 long 数组,用来往数据库存bytebuffer]
+{
+	long[] longList[long 数组];
+}
+ 
+ALProtocol NpServerObj_CommonIntegerList[NP 通用 integer 数组,用来往数据库存bytebuffer]
+{
+	int[] integerList[integer 数组];
+}
+
+ ALProtocol NpServerObj_CommonLongPair[NP 通用 long Map,用来往数据库存bytebuffer]
+{
+	long key[];
+	long value[];
+}
+
+ ALProtocol NpServerObj_CommonLongMap[NP 通用 long Map,用来往数据库存bytebuffer]
+{
+	NpServerObj_CommonLongPair[] longMap[long map];
+}
+
+ ALProtocol NpServerObj_SYS_ServerIndexInfo[服务器索引信息]
+ {
+    int serverLogicId[外部赋予的服务器id];
+    int serverTypeId[服务器typeId];
+ }
+ 
+  /**********************************************************
+ * 服务器基础信息结构体
+ **********************************************************/
+ 
+ ALProtocol NpServerObj_SYS_ServerItem[服务器信息]
+ {
+    string areaTag[服务器大区];
+    long groupId[服务器分组id];
+    int serverTypeId[服务器typeId];
+    string serverName[服务器名];
+    int onlineStateTypeId[在线状态 EServerOnlineState];
+    int showStateTypeId[对外显示状态 EServerShowState];
+    bool isNew[是否新服];
+    String startDate[开服时间 日期格式：yyyy-mm-dd ];
+    String ext[预留];
+ }
+ 
+  
+ ALProtocol NpServerObj_SYS_ServerHoldInfo[服务器负载信息]
+ {
+    int serverTypeId[服务器typeId];
+    int holdCount[负载计数];
+    int totalCount[总负载];
+ }
+
+/**********************************************************
+ * pve 战斗服务端存储用阵容数据
+ **********************************************************/
+  ALProtocol NpServerObj_NPCommon_LayoutInfoList[战斗服务端存储用阵容数据]
+ {
+    long layoutRefId[使用阵型id];
+    Common.NPCommonObj.NPCommon_RetLayoutInfo[] layoutInfoList[阵型数据];
+ }
+ 
+ALProtocol Arena_InstanceInitInfo[比武场初始化信息]
+{
+	long arenaRefId[比武场配置id];
+	int serverType[服务器类型];
+	int serverTypeId[服务器id];
+}
+
+ALProtocol NpServerObj_PVPFightInfo[PVP战斗初始化数据]
+{
+	Common.NPCommonObj.NPCommon_PlayerFightInfo attackerFightInfo[攻击玩家阵容信息];
+	
+	Common.NPCommonObj.NPCommon_PlayerFightInfo defencerFightInfo[防守玩家阵容信息];
+} 
+
+  ALProtocol NpServerObj_Arena_FighterInfo[比武擂台玩家战斗记录数据]
+ {
+    Common.NPCommonObj.NPCommon_PetInfo[] petInfoList[使用的宠物皮肤列表];
+    long[] avatarIdList[战斗时使用的avatar数据];
+	long prefab[玩家预制形象ID];
+    Common.NPCommonObj.NPCommon_PlayerFightInfo fightInfo[战斗数据];
+ }
+
+/**********************************************************
+ *平台邮件内容
+ **********************************************************/
+ ALProtocol NpServerObj_PlatFormMailText[平台邮件内容]
+{
+	string lang[语言编号，查看公共参数中的语言ID对应表];
+	string title[标题];
+	string content[邮件内容];
+}
+ALProtocol NpServerObj_PlatFormMail[平台邮件]
+{
+    long mailUid[邮件唯一id];
+    long mailRefId[邮件配置id];
+    long phpMailId[后台邮件id];
+    string sendTime[发送时间];
+    string expiredTime[过期时间];
+    string defaultLang[默认语言];
+    long passedTimeMs[邮件审核时间戳];
+    NpServerObj_PlatFormMailText[] platformMailTextList[平台邮件内容];
+    Common.NPCommonObj.NPCommon_ItemInfo[] itemList[平台邮件附件];
+	string[] contentReplace[邮件内容替换数据];
+}
+
+ALProtocol NpServerObj_DDRobot[钉钉预警机器人信息]
+{
+    Enum.NPServerEnum.ENPDDAlertType alertType[报警类型];
+    string token[钉钉机器人access_token];
+	string secret[钉钉机器人签名];
+}
+
+ALProtocol NpServerObj_ServerInfo[服务器信息]
+{
+    int serverType;
+	int typeId;
+}
+
+ALProtocol NPServerObj_CrossServerGroupInfo[跨服分组信息]
+{
+	long groupId[跨服分组id];
+	int[] usIdList[包含usId列表];
+	long crsInstanceId[跨服排行实例id];
+}
+
+ALProtocol NPServerObj_ActivityGroupScheduleInfo[活动组排期信息]
+{
+	long activityGroupId[活动组id];
+	long startTimeMs[开启时间];
+	long endTimeMs[结算时间];
+	long closeTimeMs[关闭时间];   
+}
+
+ALProtocol NPServerObj_ActivityScheduleInfo[活动排期信息]
+{
+	long activityId[活动id];
+	long startTimeMs[开启时间];
+	long endTimeMs[结算时间];
+	long closeTimeMs[关闭时间];   
+}
+
+ALProtocol NPServerObj_GroupScheduleInfo[分组排期信息]
+{
+	long scheduleId[排期id];
+	long[] crossGroupIdList[涉及服务器跨服分组id列表];
+	long prePushTimeMs[排期预推送时间,开始推送到US的时间];
+	long startTimeMs[排期开始时间,排期下发到US后的既定开始执行的时间];
+	long stopTimeMs[排期结束时间,用于报警,如果该排期下所属活动,超时5-10分钟未结束需要报警];
+	NPServerObj_ActivityScheduleInfo[] activityScheduleList[活动排期列表];
+	NPServerObj_ActivityGroupScheduleInfo[] activityGroupScheduleList[活动组排期列表];
+}
+
+ALProtocol NPServerObj_SingleScheduleInfo[单服排期信息]
+{
+	long scheduleId[排期id];
+	int[] usIdList[涉及服务器id列表];
+	long prePushTimeMs[排期预推送时间,开始推送到US的时间];
+	long startTimeMs[排期开始时间,排期下发到US后的既定开始执行的时间];
+	long stopTimeMs[排期结束时间,用于报警,如果该排期下所属活动,超时5-10分钟未结束需要报警];
+	NPServerObj_ActivityScheduleInfo[] activityScheduleList[活动排期列表];
+	NPServerObj_ActivityGroupScheduleInfo[] activityGroupScheduleList[活动组排期列表];
+}

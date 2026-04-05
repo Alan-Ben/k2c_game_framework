@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p009_MailOp;
+csharpspace GC2GS.p009_MailOp;
+
+ALProtocol GC2GS_009_007_ReqDelMail[删除邮件] <9, 7>
+{
+    long mailUid[邮件唯一id];
+}

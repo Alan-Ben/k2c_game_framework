@@ -1,0 +1,11 @@
+﻿JavaPackage ALLRPC.Common.Chat;
+
+ALProtocol QuitChatRoom_Req
+{
+	long roomId;
+	long cid;
+}
+
+ALProtocol QuitChatRoom_Return
+{
+}

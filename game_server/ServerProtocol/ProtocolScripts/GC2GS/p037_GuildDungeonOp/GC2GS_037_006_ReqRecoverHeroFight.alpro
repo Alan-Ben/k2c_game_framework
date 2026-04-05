@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p037_GuildDungeonOp;
+csharpspace GC2GS.p037_GuildDungeonOp;
+
+ALProtocol GC2GS_037_006_ReqRecoverHeroFight[攻击副本怪物-恢复指定大臣出战次数] <37, 6>
+{
+	long heroId;
+}

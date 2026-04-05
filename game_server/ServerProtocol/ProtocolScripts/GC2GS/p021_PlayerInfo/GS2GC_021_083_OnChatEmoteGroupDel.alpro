@@ -1,0 +1,7 @@
+﻿﻿JavaPackage GS2GC.p021_PlayerInfo;
+csharpspace GS2GC.p021_PlayerInfo;
+
+ALProtocol GS2GC_021_083_OnChatEmoteGroupDel[移除聊天表情包推送]<21, 83>
+{
+    long refId;
+}

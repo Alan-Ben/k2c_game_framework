@@ -1,0 +1,7 @@
+JavaPackage NP2PS_RB.p100_SysOp;
+
+ALProtocol NP2PS_RB_100_001_RetAreaSerial <100, 1>
+{
+	bool isFound;
+	long areaSerial;
+}

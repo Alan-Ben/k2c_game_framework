@@ -1,0 +1,104 @@
+﻿import Common.NPInclude.alpro;
+
+import Enum.CommonEnum.alpro;
+import Enum.ConsortEnum.alpro;
+
+JavaPackage Common.ConsortObj;
+csharpspace Common.ConsortObj;
+
+
+ALProtocol Consort_Fetters[家人羁绊数据]
+{
+	int lvl[羁绊等级];
+}
+
+ALProtocol Consort_BusinessSkill[家人经营技能]
+{
+	long skillId[技能ID];
+	long proAdd[概率加成];
+	int normalOpCount[普通领悟次数];
+	int advanceOpCount[高级领悟次数];
+}
+
+ALProtocol Consort_BusinessSkillPropertySum[家人经营技能属性汇总]
+{
+	Enum.CommonEnum.ESpecAttrType attr[相性];
+	long proAddSum[概率加成];
+}
+
+ALProtocol Consort_BlessSkill[家人加护技能]
+{
+	long skillId[技能ID];
+	int lvl[技能等级];
+}
+
+ALProtocol Consort_SkinInfo[情人皮肤数据]
+{
+	long skinId;
+	int lvl;
+}
+
+ALProtocol Consort_Halo[家人星辉数据]
+{
+	int lvl[星辉等级];
+}
+
+ALProtocol Consort_Info[家人数据]
+{
+	long consortId[家人ID];
+	long intimacy[亲密度];
+	long charm[加护力];
+	long charmPoint[加护点];
+	
+	Consort_Fetters fetters[羁绊数据];
+	
+	Consort_BlessSkill[] blessSkillList[加护技能列表];
+	
+	long[] triggeredCallStoryIdList[已触发的邀约剧情ID列表];
+	
+	Consort_SkinInfo[] skinList[家人皮肤列表];
+	long curSkinId[当前穿戴皮肤ID];
+	
+	bool isUnlockHalo[星辉是否解锁 true-已解锁];
+	Consort_Halo halo[星辉数据];
+	
+	int opBusinessSkillCount[已操作经营技能数量];
+	Consort_BusinessSkillPropertySum[] businessSkillPropertySum[经营技能属性数据汇总];
+}
+
+ALProtocol Consort_CGInfo[家人CG数据]
+{
+	long cgId[家人CG];
+	bool rewarded[是否领取奖励];
+}
+
+ALProtocol Consort_CallRes[家人邀约结果]
+{
+	long consortId[家人ID];
+	long consortStoryId[家人剧情ID];
+	long addCharmPoint[增加的加护点数];
+	bool isGainCg[是否获取CG];
+	long childId[获得子嗣的实例ID，0-未获得];
+}
+
+ALProtocol Consort_DialogueOption[家人聊天句子选择结果]
+{
+	long sentenceId[句子id];
+	long optionId[选项id];
+}
+
+ALProtocol Consort_ChatDialogue[家人聊天对话数据]
+{
+	long dialogueId[对话id];
+	long triggerTimeMs[触发时间戳];
+	Consort_DialogueOption[] optionList[选项列表];
+	bool hadDraw[是否领奖];
+	long drawRewardTimeMs[领奖时间ms];
+}
+
+ALProtocol Consort_ChatInfo[家人聊天数据]
+{
+	long consortId[家人ID];
+	Consort_ChatDialogue[] dialogueList[聊天对话列表];
+	bool hasAdd[是否已添加好友];
+}

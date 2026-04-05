@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p007_CommOp;
+csharpspace GC2GS.p007_CommOp;
+
+ALProtocol GC2GS_007_022_ReqDrawTargetReward[领取目标奖励] <7, 22>
+{
+	long id;
+}

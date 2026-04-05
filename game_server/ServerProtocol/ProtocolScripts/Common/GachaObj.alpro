@@ -1,0 +1,29 @@
+﻿JavaPackage Common.GachaObj;
+csharpspace Common.GachaObj;
+
+ALProtocol Gacha_RecordInfo[抽卡记录信息]
+{
+	long itemId[卡池物品id];
+	int rollTimeSec[抽卡时间戳 秒];
+	long dbId[数据id];
+}
+
+ALProtocol Gacha_GuaranteeInfo[抽卡保底信息]
+{
+	long guaranteeId[保底规则id];
+	int remianTimes[剩余次数];
+}
+
+ALProtocol Gacha_PoolInfo[抽卡卡池信息]
+{
+	long poolId;
+	Gacha_GuaranteeInfo[] guaranteeList[保底信息列表];
+	int cumulativeRewardTimes[抽卡累计奖励次数];
+}
+
+ALProtocol Gacha_PublicRecordInfo[公屏抽卡记录信息]
+{
+	long itemId[卡池物品id];
+	long dbId[数据id];
+	string playerName[玩家名字];
+}

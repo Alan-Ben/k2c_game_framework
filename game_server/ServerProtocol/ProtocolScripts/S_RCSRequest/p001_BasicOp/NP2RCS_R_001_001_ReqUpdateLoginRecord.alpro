@@ -1,0 +1,12 @@
+JavaPackage NP2LCS_R.p001_BasicOp;
+
+/**********************************************************
+ * 更新账号登录记录
+ **********************************************************/
+ALProtocol NP2RCS_R_001_001_ReqUpdateLoginRecord <1, 1>
+{
+	string accountId[账号id];
+	long cid[角色id];
+	int serverLogicId[US服务器LogicId];
+	int serverTypeId[US服务器typeId];
+}

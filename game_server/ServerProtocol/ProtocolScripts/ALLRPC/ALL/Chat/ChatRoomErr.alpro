@@ -1,0 +1,10 @@
+﻿JavaPackage ALLRPC.Common.Chat;
+
+ALProtocol ChatRoomErr_Req
+{
+	long roomId;
+}
+
+ALProtocol ChatRoomErr_Return
+{
+}

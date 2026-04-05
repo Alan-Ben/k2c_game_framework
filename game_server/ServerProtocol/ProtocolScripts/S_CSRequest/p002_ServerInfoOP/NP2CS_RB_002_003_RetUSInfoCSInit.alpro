@@ -1,0 +1,11 @@
+﻿﻿import Common.CommonObj.alpro;
+
+JavaPackage NP2CS_RB.np_p002_serverInfoOp;
+
+/**********************************************************
+ * 根据外部信息初始化CS的服务器列表
+ **********************************************************/ 
+ALProtocol NP2CS_RB_002_003_RetUSInfoCSInit <2, 3>
+{
+ 
+}

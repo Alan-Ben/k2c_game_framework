@@ -1,0 +1,9 @@
+﻿JavaPackage WCGCS2LCS_R.p001_BasicOp;
+
+/**********************************************************
+ * 请求列表玩家的UserIndex
+ **********************************************************/
+ALProtocol WCGCS2LCS_R_001_002_ReqListUserIndex <1, 2>
+{
+	long[] uids;
+}

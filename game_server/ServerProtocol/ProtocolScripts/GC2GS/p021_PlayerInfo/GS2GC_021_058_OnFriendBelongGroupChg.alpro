@@ -1,0 +1,10 @@
+﻿JavaPackage GS2GC.p021_PlayerInfo;
+csharpspace GS2GC.p021_PlayerInfo;
+
+import Common.FriendObj.alpro;
+
+ALProtocol GS2GC_021_058_OnFriendBelongGroupChg[好友归属分组变更] <21, 58>
+{
+	long targetGroupDbId[目标分组数据id];
+	long[] cidList[变动玩家列表];
+}

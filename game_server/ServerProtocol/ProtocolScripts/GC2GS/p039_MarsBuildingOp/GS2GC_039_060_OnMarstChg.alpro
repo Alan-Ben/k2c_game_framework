@@ -1,0 +1,9 @@
+﻿JavaPackage GS2GC.p039_MarsBuildingOp;
+csharpspace GS2GC.p039_MarsBuildingOp;
+
+import Common.MarsObj.alpro;
+
+ALProtocol GS2GC_039_060_OnMarsTechnologyChg[火星科技数据变化推送] <39, 60>
+{
+	Common.MarsObj.Mars_Technology info;
+}

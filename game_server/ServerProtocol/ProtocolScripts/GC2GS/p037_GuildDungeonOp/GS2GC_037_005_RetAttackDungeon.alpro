@@ -1,0 +1,10 @@
+﻿JavaPackage GS2GC.p037_GuildDungeonOp;
+csharpspace GS2GC.p037_GuildDungeonOp;
+
+﻿import Common.NPCommonObj.alpro;
+
+ALProtocol GS2GC_037_005_RetAttackDungeon <37, 5>
+{
+	bool isKilled[是否击杀怪物];
+	Common.NPCommonObj.NPCommon_ItemInfo[] gainItemList[获得物品列表];
+}

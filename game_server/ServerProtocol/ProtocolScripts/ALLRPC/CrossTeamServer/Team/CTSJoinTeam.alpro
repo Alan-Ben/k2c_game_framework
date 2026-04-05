@@ -1,0 +1,19 @@
+﻿JavaPackage ALLRPC.CrossTeamServer.Team;
+
+import Common.CrossTeamObj.alpro;
+
+ALProtocol CTSJoinTeam_Req
+{
+	long teamId[队伍实例ID];
+	long cid[玩家CID];
+	Common.CrossTeamObj.CrossTeam_SetInfo_Join[] joinCondList[玩家入队条件列表];
+}
+
+ALProtocol CTSJoinTeam_Return
+{
+	Common.CrossTeamObj.CrossTeam_Info team;
+}
+
+//[RPC]加入队伍
+//[CLASS_PACKAGE] : AllRpcData.CrossTeam_Service.Team
+//[DEALER_PACKAGE] : CrossTeamServer.RPCDispatcher.Team

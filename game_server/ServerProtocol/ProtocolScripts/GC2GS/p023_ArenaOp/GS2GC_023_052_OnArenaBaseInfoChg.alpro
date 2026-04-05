@@ -1,0 +1,7 @@
+﻿﻿JavaPackage GS2GC.p023_ArenaOp;
+csharpspace GS2GC.p023_ArenaOp;
+
+ALProtocol GS2GC_023_052_OnArenaBaseInfoChg <23, 52>
+{
+    Common.ArenaObj.Arena_BaseInfo baseInfo[基础数据];
+}

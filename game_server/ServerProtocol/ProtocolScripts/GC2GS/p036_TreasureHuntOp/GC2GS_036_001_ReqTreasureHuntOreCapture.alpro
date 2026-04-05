@@ -1,0 +1,10 @@
+﻿JavaPackage GC2GS.p036_TreasureHuntOp;
+csharpspace GC2GS.p036_TreasureHuntOp;
+
+ALProtocol GC2GS_036_001_ReqTreasureHuntOreCapture[太空寻宝-捕捉矿石] <36, 1>
+{
+	Enum.TreasureHuntEnum.ETreasureHuntCaptureType type[捕捉类型];
+	bool isAdvance[是否高级];
+	long areaId[区域ID];
+	long distance[距离];
+}

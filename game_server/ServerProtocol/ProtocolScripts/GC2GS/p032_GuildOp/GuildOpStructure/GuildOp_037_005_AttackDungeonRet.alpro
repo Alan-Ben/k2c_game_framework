@@ -1,0 +1,10 @@
+﻿JavaPackage GC2GS.p032_GuildOp.GuildOpStructure;
+
+ALProtocol GuildOp_037_005_AttackDungeonRet[攻击副本的返回信息]
+{
+	long dungeonId;
+	long gainGuildExp;
+	long gainGuildCointCount;
+	long guildDevoteCount;
+	bool isKilled;
+}

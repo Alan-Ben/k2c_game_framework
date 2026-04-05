@@ -1,0 +1,9 @@
+﻿JavaPackage GS2GC.p039_MarsBuildingOp;
+csharpspace GS2GC.p039_MarsBuildingOp;
+
+import Common.PlayerObj.alpro;
+
+ALProtocol GS2GC_039_055_OnMarsEnergyChg <39, 55>
+{
+	Common.PlayerObj.Player_MarsEnergyInfo info[火星能量信息];
+}

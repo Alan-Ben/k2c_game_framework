@@ -1,0 +1,9 @@
+﻿JavaPackage GS2GC.p040_MarsPeopleOp;
+csharpspace GS2GC.p040_MarsPeopleOp;
+
+import Common.MarsObj.alpro;
+
+ALProtocol GS2GC_040_055_OnHelpChg[求助变更] <40, 55>
+{
+	Common.MarsObj.Mars_Help help;
+}

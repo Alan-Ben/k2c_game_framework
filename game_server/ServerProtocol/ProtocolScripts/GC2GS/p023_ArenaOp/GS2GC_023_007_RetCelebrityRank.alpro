@@ -1,0 +1,7 @@
+﻿﻿JavaPackage GS2GC.p023_ArenaOp;
+csharpspace GS2GC.p023_ArenaOp;
+
+ALProtocol GS2GC_023_007_RetCelebrityRank <23, 7>
+{
+    Common.ArenaObj.Arena_CelebrityRankInfo[] rankList[名人榜列表];
+}

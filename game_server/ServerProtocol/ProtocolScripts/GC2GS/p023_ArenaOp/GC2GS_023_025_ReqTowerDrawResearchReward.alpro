@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p023_ArenaOp;
+csharpspace GC2GS.p023_ArenaOp;
+
+ALProtocol GC2GS_023_025_ReqTowerDrawResearchReward[爬塔领取研究奖励] <23, 25>
+{
+    long chapterId[章节ID];
+}

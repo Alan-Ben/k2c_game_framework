@@ -1,0 +1,7 @@
+JavaPackage GC2GS.p021_PlayerInfo;
+csharpspace GC2GS.p021_PlayerInfo;
+
+ALProtocol GC2GS_021_046_ReqClientNotifyFuncUnlock <21, 46>
+{
+	Enum.NPEnum.ENPFunctionType funcType[功能类型];
+}

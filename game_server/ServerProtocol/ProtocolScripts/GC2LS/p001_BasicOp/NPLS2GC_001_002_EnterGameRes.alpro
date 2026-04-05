@@ -1,0 +1,17 @@
+﻿JavaPackage NPLS2GC.p001_BasicOp;
+csharpspace NPLS2GC.p001_BasicOp;
+
+/**********************************************************
+ * 进入游戏的操作结果
+ **********************************************************/
+ALProtocol NPLS2GC_001_002_EnterGameRes <1, 2>
+{
+	//是否进入成功
+	bool res;
+	
+	string gateServerIp;
+	int gateServerPort;
+	string uid;
+	string checkCode;
+	bool isWhite[是否白名单];
+}

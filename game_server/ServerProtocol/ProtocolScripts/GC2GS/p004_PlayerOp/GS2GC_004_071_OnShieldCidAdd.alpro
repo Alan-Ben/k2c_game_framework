@@ -1,0 +1,7 @@
+﻿JavaPackage GS2GC.p004_PlayerOp;
+csharpspace GS2GC.p004_PlayerOp;
+
+ALProtocol GS2GC_004_071_OnShieldCidAdd[屏蔽玩家CID新增推送] <4, 71>
+{
+	long cid;
+}

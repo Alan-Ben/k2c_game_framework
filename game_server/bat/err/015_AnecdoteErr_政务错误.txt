@@ -1,0 +1,8 @@
+java_path= ../Common/src
+java_package=NPCommon.ErrMain
+id	name	desc
+1	EVENT_NOT_EXIST	政务事件不存在
+2	EVENT_EARNINGS_NOT_REACH	不满足政务事件所需赚速
+3	EARNINGS_DIDNT_DRAW_FIRST_REWARD	未领取首次奖励
+4	EARNINGS_HAD_DRAW_FIRST_REWARD	已领取首次奖励
+5	EARNINGS_HAD_DRAW_FINAL_REWARD	已领取最终奖励

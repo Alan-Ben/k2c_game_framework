@@ -1,0 +1,7 @@
+JavaPackage GS2GC.p014_ChildOp;
+csharpspace GS2GC.p014_ChildOp;
+import Common.CommonObj.alpro;
+
+ALProtocol GS2GC_014_020_RetSetRefuseMarry[设置拒绝联姻响应] <14, 20>
+{
+}

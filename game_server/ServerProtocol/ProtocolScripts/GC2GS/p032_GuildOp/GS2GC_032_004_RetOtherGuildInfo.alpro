@@ -1,0 +1,10 @@
+﻿import Common.GuildObj.alpro;
+
+JavaPackage GS2GC.p032_GuildOp;
+csharpspace GS2GC.p032_GuildOp;
+
+ALProtocol GS2GC_032_004_RetOtherGuildInfo <32, 4>
+{
+	Common.GuildObj.Guild_ShowInfo showInfo;
+	Common.GuildObj.Guild_MemberBaseInfo[] memberList;
+}

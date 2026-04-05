@@ -1,0 +1,7 @@
+﻿JavaPackage GS2GC.p021_PlayerInfo;
+csharpspace GS2GC.p021_PlayerInfo;
+
+ALProtocol GS2GC_021_064_OnFriendRemove[推送好友移除] <21, 64>
+{
+	long fCid;
+}

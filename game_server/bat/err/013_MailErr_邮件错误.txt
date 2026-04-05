@@ -1,0 +1,12 @@
+java_path= ../Common/src
+java_package=NPCommon.ErrMain
+id	name	desc
+1	MAIL_NOT_FOUND	邮件不存在
+2	MAIL_TAKE_NOT_HAS_ITEM	没有可领取的物品
+3	MAIL_TAKE_ALREADY_TAKEN	邮件物品已经领取
+4	MAIL_LOCK_MAX	已达收藏邮件的上限
+5	MAIL_DEL_HAS_ITEM	有物品的邮件不能删除
+6	MAIL_DEL_LOCKED	收藏邮件不能删除
+7	MAIL_DEL_MUST_READ	必读未读的邮件不能删除
+8	MAIL_DEL_MUST_READ_OVER	必读未读完的邮件不能删除
+9	MAIL_TAKE_HAS_ERROR	邮件不能领取

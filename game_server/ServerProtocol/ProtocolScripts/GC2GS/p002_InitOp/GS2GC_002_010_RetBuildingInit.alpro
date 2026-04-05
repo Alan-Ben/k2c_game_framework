@@ -1,0 +1,12 @@
+﻿JavaPackage GS2GC.p002_InitOp;
+csharpspace GS2GC.p002_InitOp;
+
+import Common.BuildingObj.alpro;
+
+ALProtocol GS2GC_002_010_RetBuildingInit[建筑初始化] <2, 10>
+{
+	long[] buildingIdList[已建造的建筑ID列表];
+	Common.BuildingObj.Building_Farm[] farmList[已建造的农田建筑列表];
+	Common.BuildingObj.Building_Business[] businessList[已建造的经营建筑列表];
+	Common.BuildingObj.Building_FarmMultipleInfo farmMultipleInfo[农田建筑暴击信息];
+}

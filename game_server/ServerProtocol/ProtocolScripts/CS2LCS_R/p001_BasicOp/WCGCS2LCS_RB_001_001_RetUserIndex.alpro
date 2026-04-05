@@ -1,0 +1,10 @@
+﻿JavaPackage WCGCS2LCS_R.p001_BasicOp;
+
+/**********************************************************
+ * 返回玩家的UserIndex
+ **********************************************************/
+ALProtocol WCGCS2LCS_RB_001_001_RetUserIndex <1, 1>
+{
+	long uid;
+	int usIndex;
+}

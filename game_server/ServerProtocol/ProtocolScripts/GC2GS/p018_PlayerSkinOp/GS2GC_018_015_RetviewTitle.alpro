@@ -1,0 +1,5 @@
+JavaPackage GS2GC.p018_PlayerSkinOp;
+csharpspace GS2GC.p018_PlayerSkinOp;
+ALProtocol GS2GC_018_015_RetviewTitle [查看普通称号] <18, 15>
+{
+}

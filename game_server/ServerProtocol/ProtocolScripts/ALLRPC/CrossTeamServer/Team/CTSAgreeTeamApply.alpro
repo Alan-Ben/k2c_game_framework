@@ -1,0 +1,16 @@
+﻿JavaPackage ALLRPC.CrossTeamServer.Team;
+
+ALProtocol CTSAgreeTeamApply_Req
+{
+	long teamId[队伍实例ID];
+	long cid[玩家CID];
+	long applyCid[申请玩家CID];
+}
+
+ALProtocol CTSAgreeTeamApply_Return
+{
+}
+
+//[RPC]同意玩家入队申请
+//[CLASS_PACKAGE] : AllRpcData.CrossTeam_Service.Team
+//[DEALER_PACKAGE] : CrossTeamServer.RPCDispatcher.Team

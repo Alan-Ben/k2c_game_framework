@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p041_MarsExploreOp;
+csharpspace GC2GS.p041_MarsExploreOp;
+
+ALProtocol GC2GS_041_011_ReqMarsMineInfo[火星探险-获取火星矿数据] <41, 11>
+{
+	long id[矿产实例ID];
+}

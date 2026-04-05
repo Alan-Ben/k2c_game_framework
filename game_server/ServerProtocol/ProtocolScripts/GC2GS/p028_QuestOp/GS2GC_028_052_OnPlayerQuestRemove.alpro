@@ -1,0 +1,11 @@
+﻿﻿import Common.NPCommonObj.alpro;
+JavaPackage GS2GC.p028_QuestOp;
+csharpspace GS2GC.p028_QuestOp;
+
+/**********************************************************
+ * 推送玩家名字更新
+ **********************************************************/
+ALProtocol GS2GC_028_052_OnPlayerQuestRemove <28, 52>
+{
+	long questId;
+}

@@ -1,0 +1,70 @@
+{
+    "PayDBConf.properties": {
+        "_comments": {
+            "1": "数据库主机地址",
+            "2": "数据库名称",
+            "3": "数据库用户名",
+            "4": "数据库密码",
+            "5": "数据库安全保存路径"
+        },
+        "PayDB.DBHost": "127.0.0.1",
+        "PayDB.DBName": "gom_pay",
+        "PayDB.DBUser": "wcggame",
+        "PayDB.DBPass": "wcggame",
+        "PayDB.DBSafeSavePath": "./_pay_db"
+    },
+    "PayCenterConf.properties": {
+        "_comments": {
+            "1": "时区信息",
+            "2": "SDK支付回调签名密钥",
+            "3": "对平台开放服务端http端口"
+        },
+        "PayCenter.TimeZone": "GMT+8:00",
+        "PayCenter.PaySecret": "your_pay_secret_here",
+        "PayCenter.ToPlatHttpPort": 6004
+    },
+    "ALServerLog.properties": {
+        "_comments": {
+            "1": "打印日志等级 可选: DEBUG, INFO, WARNING, ERROR, FATAL"
+        },
+        "ALServerLog.LogLevel": "INFO"
+    },
+    "ALBasicServerConf.properties": {
+        "_comments": {
+            "1": "服务器标志字符串",
+            "2": "同步任务执行的线程数量",
+            "3": "Socket信息发送线程数量",
+            "4": "定时任务的时间精度",
+            "5": "定时任务的大区间长度，根据精度和长度可以决定一个区间的时间跨度",
+            "6": "是否检测线程加锁等级合法性"
+        },
+        "ALBasicServer.ServerTag": "PayServer",
+        "ALBasicServer.SynTaskDealThreadNum": 4,
+        "ALBasicServer.ServerSendBackDealThreadNum": 1,
+        "ALBasicServer.TimerCheckTime": 20,
+        "ALBasicServer.TimerCheckAreaSize": 5000,
+        "ALBasicServer.CheckMutex": true
+    },
+    "ALBasicClientConf.properties": {
+        "_comments": {
+            "1": "消息发送线程的数量",
+            "2": "缓冲区长度"
+        },
+        "ALBasicClient.SendThreadNum": 1,
+        "ALBasicClient.RecSocketBufLen": 131072
+    },
+    "PayServerListConf.json": {
+        "raw": [
+            {
+                "Id": 1,
+                "RecBufferLen": 102400,
+                "Port": 7005,
+                "PlatServerIp": "127.0.0.1",
+                "PlatServerPort": 6660,
+                "PlatServerPassword": "wcg_basic_plat_server",
+                "InternalIp": "127.0.0.1",
+                "InternalPort": 7005
+            }
+        ]
+    }
+}

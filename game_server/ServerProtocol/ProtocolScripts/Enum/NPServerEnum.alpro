@@ -1,0 +1,41 @@
+﻿JavaPackage NPEnum;
+
+ALEnum ENPCommonGeneralEnum[Comm服务器自增数据类型]
+{
+	ARENA_ID[比武擂台];
+}
+
+ALEnum ENPCrossGameCategoryEnum[跨服游戏类型]
+{
+	ARENA[比武擂台];
+}
+
+ALEnum ENPPlayerCacheDataEnum[玩家缓存数据类型]
+{
+	NAME[玩家昵称];
+	LVL[玩家等级];
+}
+ALEnum ENPMonitorClientType[登录服务器的客户端连接类型]
+{
+    NONE;
+    PHP;
+}
+ALEnum ENPDDAlertType[钉钉预警类型]
+{
+    COMMON[日常];
+    MEMORY[内存];
+}
+
+ALEnum ENPCommActivityEventEnum[通用活动监听类型]
+{
+    START[活动开启触发监听];
+    FROZEN[活动冻结触发监听];
+    CLOSED[活动关闭触发监听];
+    DISCARD[活动销毁触发监听];
+}
+
+ALEnum ENPCommCrossGroupEventEnum[通用跨服分组监听类型]
+{
+    CREATE[分组创建触发监听];
+    DISCARD[分组销毁触发监听];
+}

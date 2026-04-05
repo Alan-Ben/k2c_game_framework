@@ -1,0 +1,6 @@
+﻿JavaPackage WCGCS2US_R.p003_CommOp;
+
+ALProtocol NP2US_R_003_017_ReqSendMarqueeDel[删除跑马灯] <3, 17>
+{
+	long phpId[跑马灯ID];
+}

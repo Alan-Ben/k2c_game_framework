@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p013_HeroOp;
+csharpspace GC2GS.p013_HeroOp;
+
+ALProtocol GC2GS_013_015_ReqHeroHaloUnlock[大臣解锁光环]<13, 15> 
+{
+    long heroId;
+}

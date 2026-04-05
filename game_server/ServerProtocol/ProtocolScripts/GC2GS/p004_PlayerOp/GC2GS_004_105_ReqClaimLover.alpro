@@ -1,0 +1,7 @@
+JavaPackage GC2GS.p004_PlayerOp;
+csharpspace GC2GS.p004_PlayerOp;
+
+
+ALProtocol GC2GS_004_105_ReqClaimLover[情人收集-领取情人] <4, 105>
+{
+}

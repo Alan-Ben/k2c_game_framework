@@ -1,0 +1,8 @@
+JavaPackage NP2US_RB.p005_WebPayOp;
+
+import Common.ServerObj.alpro;
+
+ALProtocol NP2US_RB_005_003_RetGetWebPayRoleInfo[返回网页支付角色信息] <5, 3>
+{
+	Common.ServerObj.ServerObj_WebPayRoleInfo roleInfo[角色信息];
+}

@@ -1,0 +1,18 @@
+﻿JavaPackage Common.TreasureHuntEnum;
+csharpspace Common.TreasureHuntEnum;
+
+ALEnum ETreasureHuntGainType[太空寻宝获得类型]
+{
+	NONE;
+	ORE[矿石];
+	TREASURE[奇物];
+	REWARD[奖励];
+}
+
+ALEnum ETreasureHuntCaptureType[太空寻宝捕获类型]
+{
+	NORMAL[普通];
+	SINGLE_AKEY[单次一键];
+	MULTIPLE_AKEY[多次一键];
+	DATA_ANALYSE[数据分析];
+}

@@ -1,0 +1,9 @@
+JavaPackage NP2CS_R.np_p002_serverInfoOp;
+
+import Enum.NPServerEnum.alpro;
+
+ALProtocol NP2CS_R_002_012_ReqBanUid <2, 12>
+{
+	string uid[玩家uid];
+	long freezeTimeMs[冻结时长];
+}

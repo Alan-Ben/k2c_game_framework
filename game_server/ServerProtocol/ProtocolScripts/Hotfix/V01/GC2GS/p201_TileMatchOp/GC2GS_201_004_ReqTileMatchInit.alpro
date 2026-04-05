@@ -1,0 +1,7 @@
+JavaPackage Hotfix.V01.GC2GS.p201_TileMatchOp;
+csharpspace Hotfix.GC2GS.p201_TileMatchOp;
+
+ALProtocol GC2GS_201_004_ReqTileMatchInit [三消数据初始化] <201, 4>
+{
+    
+}

@@ -1,0 +1,7 @@
+JavaPackage GC2GS.p015_ConsortOp;
+csharpspace GC2GS.p015_ConsortOp;
+ALProtocol GC2GS_015_007_ReqSetCurSkin [家人-设置当前皮肤] <15, 7>
+{
+    long consortId[家人ID];
+    long skinId[皮肤ID];
+}

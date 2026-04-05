@@ -1,0 +1,6 @@
+JavaPackage GS2GC.p015_ConsortOp;
+csharpspace GS2GC.p015_ConsortOp;
+ALProtocol GS2GC_015_002_RetUnderstandBusinessSkill [家人-领悟经营技能等级] <15, 2>
+{
+    bool isProUp[操作是否成功];
+}

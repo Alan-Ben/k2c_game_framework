@@ -1,0 +1,8 @@
+JavaPackage GS2GC.p016_ChapterOp;
+csharpspace GS2GC.p016_ChapterOp;
+import Common.ChapterObj.alpro;
+
+ALProtocol GS2GC_016_055_OnChapterPlotRewardDraw [关卡剧情奖励领取推送] <16, 55>
+{
+    long[] plotIdList[剧情ID列表];
+}

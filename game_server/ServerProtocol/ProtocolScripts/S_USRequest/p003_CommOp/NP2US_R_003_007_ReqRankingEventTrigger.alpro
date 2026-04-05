@@ -1,0 +1,9 @@
+﻿JavaPackage WCGCS2US_R.p003_CommOp;
+
+ALProtocol NP2US_R_003_007_ReqRankingEventTrigger[排行榜事件触发] <3, 7>
+{
+	long dealSerial;
+	long cid;
+	long scoreSourceId;
+	long chgValue;
+}

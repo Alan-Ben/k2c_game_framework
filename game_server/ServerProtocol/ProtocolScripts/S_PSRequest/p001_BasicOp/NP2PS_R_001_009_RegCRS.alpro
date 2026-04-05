@@ -1,0 +1,5 @@
+﻿JavaPackage NP2PS_R.p001_BasicOp;
+
+ALProtocol NP2PS_R_001_009_RegCRS [注册跨服排行榜服务器] <1, 9>
+{
+}

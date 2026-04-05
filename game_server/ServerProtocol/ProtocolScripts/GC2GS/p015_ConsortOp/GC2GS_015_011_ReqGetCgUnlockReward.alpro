@@ -1,0 +1,6 @@
+JavaPackage GC2GS.p015_ConsortOp;
+csharpspace GC2GS.p015_ConsortOp;
+ALProtocol GC2GS_015_011_ReqGetCgUnlockReward [家人-领取CG解锁奖励] <15, 11>
+{
+    long cgId[家人Cg配置ID];
+}

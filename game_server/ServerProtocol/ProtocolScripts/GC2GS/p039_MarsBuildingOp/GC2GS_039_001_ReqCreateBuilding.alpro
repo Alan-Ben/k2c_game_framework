@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p039_MarsBuildingOp;
+csharpspace GC2GS.p039_MarsBuildingOp;
+
+ALProtocol GC2GS_039_001_ReqCreateBuilding[火星建筑-建造建筑] <39, 1>
+{
+	long buildingId[建筑ID];
+}

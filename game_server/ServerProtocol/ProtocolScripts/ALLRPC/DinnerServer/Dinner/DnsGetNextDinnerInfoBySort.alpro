@@ -1,0 +1,24 @@
+﻿JavaPackage ALLRPC.DinnerServer.Dinner;
+
+﻿﻿﻿﻿﻿import Common.DinnerObj.alpro;
+
+ALProtocol DnsGetNextDinnerInfoBySort_Req
+{
+	long groupId;
+	
+	long instanceId;
+	int idx;
+	long cid;
+}
+
+ALProtocol DnsGetNextDinnerInfoBySort_Return
+{
+	long instanceId;
+	int idx;
+	bool hasPre;
+	bool hasNext;
+}
+
+//[RPC]获取排序规则的后一个宴会数据
+//[CLASS_PACKAGE] : AllRpcData.Dinner_Service.Dinner
+//[DEALER_PACKAGE] : DinnerServer.RPCDispatcher.Dinner

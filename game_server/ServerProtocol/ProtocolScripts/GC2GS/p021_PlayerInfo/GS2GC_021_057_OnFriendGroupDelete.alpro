@@ -1,0 +1,9 @@
+﻿JavaPackage GS2GC.p021_PlayerInfo;
+csharpspace GS2GC.p021_PlayerInfo;
+
+import Common.FriendObj.alpro;
+
+ALProtocol GS2GC_021_057_OnFriendGroupDelete[分组删除] <21, 57>
+{
+	long groupDbId[分组数据id];
+}

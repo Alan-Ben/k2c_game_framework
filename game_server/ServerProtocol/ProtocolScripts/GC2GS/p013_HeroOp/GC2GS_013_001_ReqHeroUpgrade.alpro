@@ -1,0 +1,8 @@
+﻿JavaPackage GC2GS.p013_HeroOp;
+csharpspace GC2GS.p013_HeroOp;
+
+ALProtocol GC2GS_013_001_ReqHeroUpgrade[升级大臣]<13, 1> 
+{
+    long heroId[大臣id];
+    bool isTen[是否十连升级];
+}

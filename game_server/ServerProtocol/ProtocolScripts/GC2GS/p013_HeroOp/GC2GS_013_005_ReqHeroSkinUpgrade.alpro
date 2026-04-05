@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p013_HeroOp;
+csharpspace GC2GS.p013_HeroOp;
+
+ALProtocol GC2GS_013_005_ReqHeroSkinUpgrade[提升大臣皮肤等级]<13, 5> 
+{
+    long skinId[皮肤id];
+}

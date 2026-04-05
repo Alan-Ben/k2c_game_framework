@@ -1,0 +1,223 @@
+[P_TILE_MATCH_SCORE_CHG]:三消获得分数 =1001
+SCORE:分数
+
+[P_NUM_MERGE_TOTAL_SCORE_CHG]:2048总分变化 =2001
+SCORE:分数
+
+[P_NUM_MERGE_ROUND_MAX_SCORE_CHG]:2048单轮最高分变化 =2002
+SCORE:分数
+
+[P_NUM_MERGE_NEW_BLOCK]:2048新方块生成 =2003
+ID:方块等级
+COUNT:数量
+
+[S_ONLY_TEST]:只用于测试，只对服务端内部开放 =0
+
+[P_CROSS_DAY]:玩家跨天登录 =1
+DAY_TAG:登录日期 例：20210812
+
+[S_ALL_SERVER_MAIL_CHG]:全服邮件变更 =2
+MAX_MAIL_ID:最大邮件id
+
+[P_HERO_UPGRADE]:提升骑士等级 =5
+HERO_ID:骑士ID
+LEVEL_NUM:提升等级数量
+
+[P_EQUIP_RESHAPE]:装备重塑 =6
+
+[P_ARENA_INFLUENCE_CHG]:竞技场影响力变更 =7
+NUM:影响力变更值
+
+[P_FARM_COLLECT]:农田收获 =8
+
+[P_BUSSINESS_HIRE_EMPLOYEE]:经营建筑雇佣员工 =9
+NUM:数量
+
+[P_CONSORT_RAND_CALL]:妃子随机宠幸 =10
+CONSORT_ID:情人ID
+CHARM_POINT_NUM:获得的加护力点数
+
+[P_TRAIN_CHILD]:培养子嗣 =11
+CHILD_ID:子嗣实例ID
+TRAIN_NUM:培养次数
+TRAIN_EXP:培养经验
+HERO_EXP:大臣经验
+
+[P_CHAPTER_FORWARD]:关卡前进一波次 =12
+
+[P_JOIN_DINNER]:参加宴会 =13
+DINNER_TYPE:宴会类型
+
+[P_CONSORT_BUSINESS_SKILL_UPGRADE]:妃子经营技能升级 =14
+
+[P_CONSORT_SEND_GIFT]:妃子送礼 =15
+NUM:数量
+
+[P_TRAVEL_EVENT]:游历 =16
+
+[P_ARENA_DEFEAT_HERO]:竞技场击败对手大臣 =17
+NUM:数量
+
+[P_MARKET_OPERATE]:经营集市 =19
+NUM:数量
+
+[P_PLAYER_UPGRADE]:玩家升级 =20
+
+[P_MAX_EARNINGS_CHG]:最大赚速变更 =21
+EARNINGS:赚速
+INCREASE_VALUE:增量
+
+[P_DEAL_ANECDOTE]:处理政务 =22
+
+[P_RANK_FIXED_LIKE]:常驻排行榜点赞 =24
+NUM:点赞数量
+
+[P_MAX_POWER_CHG]:最大战力变更 =25
+POWER:战力
+INCREASE_VALUE:增量
+
+[P_SEND_CHAT_TO_ROOM]:聊天频道发言 =26
+
+[P_CONSUME_CURRENCY]:消耗货币 =27
+TYPE:货币类型
+NUM:数量
+
+[P_COLLECT_LIKE_COUNT_CHG]:集赞次数变更 =28
+LIKE_COUNT:点赞次数
+
+[P_LIKE]:点赞 =29
+
+[P_ADULT_MARRY]:子嗣联姻 =30
+
+[P_CONSORT_INTIMACY_UP]:玩家亲密度记录涨幅 =31
+NUM:涨幅值
+
+[P_CONSORT_CHARM_UP]:玩家加护值记录涨幅 =32
+NUM:涨幅值
+
+[P_DINNER_SCORE_UP]:玩家宴会积分记录涨幅 =33
+NUM:涨幅值
+
+[P_TOTAL_INTIMACY_CHG]:玩家亲密度记录 =34
+NUM:亲密度
+
+[P_GUILD_CONSTRUCT]:公会建设 =35
+
+[P_GAIN_DUNGEON_COIN]:获取副本币 =36
+NUM:数量
+
+[P_GAIN_ACTIVITY_CURRENCY]:获取活动货币 =37
+ITEM_ID:活动货币ID
+NUM:数量
+
+[P_GAIN_CONSORT]:获取妃子 =38
+CONSORT_ID:妃子ID
+
+[P_CONSORT_INTIMACY_CHG]:妃子亲密度变更 =39
+CONSORT_ID:妃子ID
+INTIMACY:亲密度
+
+[P_INN_POPULARITY_CHG]:旅店人气变更 =40
+POPULARITY:人气值
+
+[P_INN_ADD_GUEST]:旅店迎宾 =41
+NUM:数量
+
+[P_TREASURE_HUNT_CAPTURE]:太空寻宝捕捉 =42
+NUM:次数
+
+[P_BUSINESS_UPGRADE]:经营建筑提升等级 =43
+BUILDING_ID:建筑ID
+
+[P_EQUIP_UPGRADE]:藏品提升等级 =44
+EQUIP_ID:藏品ID
+NUM:次数
+
+[P_ARENA_SELECT_ATTACK]:竞技场指定谈判次数 =45
+NUM:次数
+
+[P_GAIN_ITEM_DEF]:获取ITEM_DEF道具 =46
+ITEM_ID:道具ID
+NUM:数量
+
+[P_ARENA_GAIN_ROUND_REWARD]:获取比武场连胜宝箱 =47
+
+[P_DRAW_DAILY_REWARD]:领取每日奖励 =48
+
+[P_SHOP_BUY_ITEM]:商店购买物品 =49
+SHOP_ID:商店ID
+
+[P_GRAVE_CELEBRATE]:杰出者大厅点赞 =50
+
+[P_TREASURE_HUNT_DRAW_DAILY_GEM]:太空寻宝每日钻石产出领取 =51
+
+[P_MARS_DEAL_INTELLIGENT]:火星系统-处理AI决策 =52
+INTELLIGENT_ID:决策ID
+
+[P_GAIN_CURRENCY]:获取货币 =53
+TYPE:货币类型
+NUM:数量
+
+[P_MARS_MAX_POWER_UP]:火星实力最高值新增 =54
+ADD:新增数量
+NUM:当前数量
+
+[P_MARS_TRIGGER_EVENT]:火星触发事件 =55
+EVENT_ID:事件配置ID
+
+[P_STEP_REWARD_SCORE_CHG]:阶段奖励分数变更 =56
+SET_ID:当前阶段Set配置ID
+SCORE:当前分数
+
+[P_CONSUME_BAG_ITEM]:消耗背包物品 =57
+ID:物品ID
+COUNT:数量
+
+[P_CONSUME_LAZY_CD]:消耗体力 =58
+ID:体力id
+COUNT:数量
+
+[P_GAIN_CHILD]:获得子嗣 =59
+COUNT:数量
+
+[P_TRAN_ADULT]:子嗣毕业 =60
+QUALITY:品质
+COUNT:数量
+
+[P_START_DINNER]:开启宴会 =61
+
+[P_MIDDAY_ATTACK]:午间副本派遣伙伴 =62
+
+[P_EVENING_ATTACK]:晚间副本派遣伙伴 =63
+
+[P_MARS_EVENT_DONE]:火星探索事件完成 =64
+
+[P_ARENA_OP]:竞技场操作 =65
+NUM:数量
+
+[P_MARS_BAG_TIME_HELP_UP]:火星-总道具加速分钟数（分钟） =66
+ADD:新增数量
+
+[P_MARS_BAG_TIME_HELP_BUILDING_UP]:火星-建筑升级加速时长（分钟） =67
+ADD:新增数量
+
+[P_MARS_BAG_TIME_HELP_TECH_UP]:火星-科研加速时长（分钟） =68
+ADD:新增数量
+
+[P_MARS_BAG_TIME_HELP_TEAM_REPAIR_UP]:火星队伍-维修所维修加速时长（分钟） =69
+ADD:新增数量
+
+[P_MARS_GAIN_BUILDING_ENERGY]:火星-能源厂收取能源次数 =70
+ADD:新增数量
+
+[P_MARS_MINE_COLLECT_SUM]:火星-累积采集矿获得能源数量 =71
+ADD:新增数量
+
+[P_MARS_IMMIGRATION]:火星-移民 =72
+ADD:新增数量
+
+[P_GUILD_EXP_GAIN]:联盟-获得公会经验 =73
+ADD:新增数量
+
+[P_ACTIVITY_FUND_ADD]:活动基金新增 =74
+

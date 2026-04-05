@@ -1,0 +1,6 @@
+JavaPackage GS2GC.p038_MarsOp;
+csharpspace GS2GC.p038_MarsOp;
+
+ALProtocol GS2GC_038_004_RetSendStageMsg[前往火星-发送阶段留言响应] <38, 4>
+{
+}

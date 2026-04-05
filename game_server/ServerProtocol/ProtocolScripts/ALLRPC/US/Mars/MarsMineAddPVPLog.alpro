@@ -1,0 +1,16 @@
+import Common.ServerObj.alpro;
+JavaPackage ALLRPC.US.Mars;
+
+ALProtocol MarsMineAddPVPLog_Req
+{
+	long cid[玩家CID];
+	Common.ServerObj.ServerObj_MarsExplorePVPLog logObj[战报数据];
+}
+
+ALProtocol MarsMineAddPVPLog_Return
+{
+}
+
+//[RPC] 火星矿PVP战报跨服添加
+//[CLASS_PACKAGE] : AllRpcData.US_Service.Mars
+//[DEALER_PACKAGE] : USServer.RPCDispatcher.Mars

@@ -1,0 +1,28 @@
+csharpspace ClientEnum;
+
+ALEnum EBagClickShowView[背包中的物品点击下拉弹窗的类型]
+{
+	NONE;
+	DETAIL[详情];
+	USE[使用];
+	CONVERT[合成];
+	USE_AND_CONVERT[使用和合成];
+}
+
+ALEnum EPlayerAvatarEditViewType[客户端用，玩家 Avatar 编辑场景的视点类型]
+{
+	NONE;
+	NORMAL[正常视点];
+    FACE[脸部视点];
+    DYE[染色视点];
+}
+
+ALEnum EDinnerShowType[宴会展示类型]
+{
+	NONE;
+	FAMILY[妃子宴];
+	CELEBRATION[庆功宴];
+	PARTY[普通酒会];
+	HIGH_PARTY[高级酒会];
+	GIFTDE_CHILD_CELE[卷王子嗣高级酒会];
+}

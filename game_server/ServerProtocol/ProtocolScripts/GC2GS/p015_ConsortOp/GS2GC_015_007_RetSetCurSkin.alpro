@@ -1,0 +1,5 @@
+JavaPackage GS2GC.p015_ConsortOp;
+csharpspace GS2GC.p015_ConsortOp;
+ALProtocol GS2GC_015_007_RetSetCurSkin [家人-设置当前皮肤] <15, 7>
+{
+}

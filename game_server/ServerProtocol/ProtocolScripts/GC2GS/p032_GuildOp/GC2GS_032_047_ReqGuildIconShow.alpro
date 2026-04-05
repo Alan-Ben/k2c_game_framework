@@ -1,0 +1,7 @@
+JavaPackage GC2GS.p032_GuildOp;
+csharpspace GC2GS.p032_GuildOp;
+
+ALProtocol GC2GS_032_047_ReqGuildIconShow[请求联盟最简展示] <32, 47>
+{
+	long guildId[联盟ID];
+}

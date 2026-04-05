@@ -1,0 +1,7 @@
+﻿JavaPackage GS2GC.p041_MarsExploreOp;
+csharpspace GS2GC.p041_MarsExploreOp;
+
+ALProtocol GS2GC_041_060_OnMineDel[火星探索-矿产数据移除] <41, 60>
+{
+	long id[矿产实例ID];
+}

@@ -1,0 +1,8 @@
+JavaPackage Hotfix.V02.GS2GC.p202_NumMergeOp;
+csharpspace Hotfix.GS2GC.p202_NumMergeOp;
+
+import Hotfix.V02.Common.NumMergeObj.alpro;
+
+ALProtocol GS2GC_202_004_RetNumMergeGameOver [返回数字合并-游戏结束/重新开始] <202, 4>
+{
+}

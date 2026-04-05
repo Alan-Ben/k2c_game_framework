@@ -1,0 +1,8 @@
+﻿﻿JavaPackage GS2GC.p002_InitOp;
+csharpspace GS2GC.p002_InitOp;
+
+ALProtocol GS2GC_002_026_RetDailyCheckInfo <2, 26>
+{
+    Common.DailyCheckObj.DailyCheck_Info info[每日签到信息];
+    Common.DailyCheckObj.DailyCheck_RewardInfo rewardInfo[每日签到奖励信息];
+}

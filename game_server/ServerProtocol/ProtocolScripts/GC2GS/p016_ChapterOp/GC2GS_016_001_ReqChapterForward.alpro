@@ -1,0 +1,9 @@
+JavaPackage GC2GS.p016_ChapterOp;
+csharpspace GC2GS.p016_ChapterOp;
+
+ALProtocol GC2GS_016_001_ReqChapterForward [关卡前进] <16, 1>
+{
+    long chapterId;
+    int point;
+    bool isAKey;
+}

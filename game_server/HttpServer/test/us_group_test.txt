@@ -1,0 +1,12 @@
+{
+  "usGroupList": [
+    {
+      "groupId": 1001,
+      "usIdList": [1,2]
+    },
+    {
+      "groupId": 1002,
+      "usIdList": [3,4]
+    }
+  ]
+}

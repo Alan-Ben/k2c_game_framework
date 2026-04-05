@@ -1,0 +1,6 @@
+JavaPackage GC2GS.p019_DinnerOp;
+csharpspace GC2GS.p019_DinnerOp;
+ALProtocol GC2GS_019_001_ReqStartDinner [开启宴会（普通模式）] <19, 1>
+{
+    long dinnerId[宴会配置ID];
+}

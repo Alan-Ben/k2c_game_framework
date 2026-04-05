@@ -1,0 +1,9 @@
+﻿JavaPackage GS2GC.p041_MarsExploreOp;
+csharpspace GS2GC.p041_MarsExploreOp;
+
+﻿import Common.NPCommonObj.alpro;
+
+ALProtocol GS2GC_041_006_RetGetBattleDoneReward <41, 6>
+{
+	Common.NPCommonObj.NPCommon_ItemInfo[] itemList[物品列表];
+}

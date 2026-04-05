@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p007_CommOp;
+csharpspace GC2GS.p007_CommOp;
+
+ALProtocol GC2GS_007_016_ReqStageGoalFirstReachDetailInfo[请求阶段目标首达详细信息] <7, 16>
+{
+	long bigStepId[大阶段ID];
+}

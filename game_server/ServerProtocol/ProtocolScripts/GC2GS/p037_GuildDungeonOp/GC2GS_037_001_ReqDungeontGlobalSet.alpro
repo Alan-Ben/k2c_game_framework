@@ -1,0 +1,6 @@
+﻿JavaPackage GC2GS.p037_GuildDungeonOp;
+csharpspace GC2GS.p037_GuildDungeonOp;
+
+ALProtocol GC2GS_037_001_ReqDungeontGlobalSet[获取公会副本全局配置] <37, 1>
+{
+}

@@ -1,0 +1,11 @@
+﻿﻿JavaPackage GS2GC.p022_ChatOp;
+csharpspace GS2GC.p022_ChatOp;
+
+ALProtocol GS2GC_022_001_RetPlayerChatLogin <22, 1>
+{
+	long systemId[聊天系统ID];
+    string systemTag[聊天系统标识];
+    string ip[聊天服ip];
+    int port[聊天服端口];
+    string checkCode[登录密码];
+}

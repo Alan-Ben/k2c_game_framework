@@ -1,0 +1,9 @@
+﻿JavaPackage GS2GC.p021_PlayerInfo;
+csharpspace GS2GC.p021_PlayerInfo;
+
+import Common.PrivilegeCardObj.alpro;
+
+ALProtocol GS2GC_021_054_OnPrivilegeCardChg <21, 54>
+{
+	Common.PrivilegeCardObj.PrivilegeCardObj_Info card[权益卡数据];
+}

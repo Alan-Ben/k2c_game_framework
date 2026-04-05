@@ -1,0 +1,9 @@
+import Common.GuildCooperateObj.alpro;
+
+JavaPackage GS2GC.p032_GuildOp;
+csharpspace GS2GC.p032_GuildOp;
+
+ALProtocol GS2GC_032_080_OnRewardPointUnlock[联盟协作奖励据点解锁推送] <32, 80>
+{
+    Common.GuildCooperateObj.GuildCooperate_RewardPointPos[] posList[奖励据点位置列表];
+}

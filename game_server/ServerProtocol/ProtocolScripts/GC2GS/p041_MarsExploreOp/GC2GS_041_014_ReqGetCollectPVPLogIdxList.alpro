@@ -1,0 +1,6 @@
+﻿JavaPackage GC2GS.p041_MarsExploreOp;
+csharpspace GC2GS.p041_MarsExploreOp;
+
+ALProtocol GC2GS_041_014_ReqGetCollectPVPLogIdxList[火星探险-通知火星矿PVP日志索引数据] <41, 14>
+{
+}

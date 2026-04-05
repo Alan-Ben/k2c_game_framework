@@ -1,0 +1,7 @@
+﻿JavaPackage GS2GC.p007_CommOp;
+csharpspace GS2GC.p007_CommOp;
+
+ALProtocol GS2GC_007_065_OnQuestionnaireRewardAdd <7, 65>
+{
+    long questionnaireId[问卷实例id];
+}

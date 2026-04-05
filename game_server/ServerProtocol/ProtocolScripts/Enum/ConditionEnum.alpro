@@ -1,0 +1,23 @@
+JavaPackage Common.ConditionEnum;
+csharpspace Common.ConditionEnum;
+
+ALEnum EHeroConditionType[大臣条件类型]
+{
+	NONE;
+	CS_LEVEL[判断大臣等级是否在范围内 CS_LEVEL:min:max];
+	CS_STAR[判断大臣星级是否在范围内 CS_STAR:min:max];
+	CS_ATTR[判断大臣是否拥有该特长 CS_ATTR:ESpecAttrType];
+	CS_STEP[判断大臣阶段是否在范围内 CS_STEP:min:max];
+}
+
+ALEnum EHeroVariableVarType[大臣的参数类型 特殊定义的值类型]
+{
+	NONE;
+}
+
+ALEnum EBuildingConditionType[建筑条件类型]
+{
+	NONE;
+	CS_BUILDING_ID[判断是否是指定建筑 CS_BUILDING_ID:BuildingId];
+	CS_SPEC_ATTR_TYPE[判断建筑是否是指定偏向属性 CS_SPEC_ATTR_TYPE:ESpecAttrType];
+}

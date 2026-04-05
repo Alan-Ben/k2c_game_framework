@@ -1,0 +1,46 @@
+﻿JavaPackage Common.CrossTeamObj;
+csharpspace Common.CrossTeamObj;
+
+import Enum.CrossTeamEnum.alpro;
+import Common.NPCommonObj.alpro;
+
+ALProtocol CrossTeam_BaseInfo[组队基础数据]
+{
+	long teamId[队伍实例ID];
+	int memberLimit[队伍成员上限];
+	string teamName[队伍名称];
+	string teamDec[队伍宣言];
+}
+
+ALProtocol CrossTeamMember_Info[组队成员数据]
+{
+	long cid[成员ID];
+	Enum.CrossTeamEnum.ENPCrossTeamMemberPos pos[成员职位];
+	long joinMs[加入时间];
+}
+
+ALProtocol CrossTeam_SetInfo_Join[组队设置-加入条件]
+{
+	Enum.CrossTeamEnum.ENPCrossTeamJoinCond cond;
+	long value;
+}
+
+ALProtocol CrossTeam_Info[组队数据]
+{
+	CrossTeam_BaseInfo teamBase[组队基础数据];
+	Enum.CrossTeamEnum.ENPCrossTeamJoinType joinType[加入方式];
+	CrossTeam_SetInfo_Join joinCond[加入条件];
+	CrossTeamMember_Info[] memberList[成员列表];
+}
+
+ALProtocol CrossTeam_ApplyInfo[组队申请数据]
+{
+	long applyCid[申请玩家CID];
+	long applyMs[请求时间（毫秒）];
+}
+
+ALProtocol CrossTeam_PlayerApplyInfo[玩家组队申请数据]
+{
+	long teamId[申请队伍实例ID];
+	long applyMs[请求时间（毫秒）];
+}

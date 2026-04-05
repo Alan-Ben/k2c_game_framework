@@ -1,0 +1,7 @@
+﻿JavaPackage GS2GC.p002_InitOp;
+csharpspace GS2GC.p002_InitOp;
+
+ALProtocol GS2GC_002_041_RetRecuritInfo <2, 41>
+{
+	long[] hadRecuritIdList[已兑换id列表];
+}

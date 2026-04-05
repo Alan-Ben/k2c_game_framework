@@ -1,0 +1,6 @@
+JavaPackage GC2GS.p010_BuildingOp;
+csharpspace GC2GS.p010_BuildingOp;
+ALProtocol GC2GS_010_005_ReqBusinessHireEmployee [请求招聘经营建筑雇员] <10, 5>
+{
+    long buildingId[建筑ID];
+}

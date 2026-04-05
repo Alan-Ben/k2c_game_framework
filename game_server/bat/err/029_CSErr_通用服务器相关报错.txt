@@ -1,0 +1,9 @@
+java_path= ../Common/src
+java_package=NPCommon.ErrMain
+
+id	name	desc
+1	HANDLE_SERVER_NOT_FOUND	找不到合适的负载对象
+2	HANDLE_OBJ_NOT_FOUND	服务器对象不存在
+3	US_INFO_LIST_NOT_READY	玩家服务器信息列表未就绪
+4	US_INFO_NOT_FOUND	玩家服务器信息不存在
+6	US_INFO_SET_FFOM_FILE	US信息设置从文件获取

@@ -1,0 +1,13 @@
+﻿JavaPackage GS2GC.p028_QuestOp;
+csharpspace GS2GC.p028_QuestOp;
+
+/**********************************************************
+ * 推送任务步骤的目标计数更新
+ **********************************************************/
+ALProtocol GS2GC_028_051_OnPlayerQuestStepCountChg <28, 51>
+{
+	long questId[任务ID];
+	long questStep[任务步骤];
+	long questTargetId[任务步骤下的目标ID];
+	long questTargetCount[任务步骤的计数];
+}

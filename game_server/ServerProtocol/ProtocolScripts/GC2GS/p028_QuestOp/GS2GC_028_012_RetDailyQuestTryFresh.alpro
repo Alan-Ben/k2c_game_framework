@@ -1,0 +1,7 @@
+﻿JavaPackage GS2GC.p028_QuestOp;
+csharpspace GS2GC.p028_QuestOp;
+
+ALProtocol GS2GC_028_012_RetDailyQuestTryFresh[尝试刷新任务数据] <28, 12>
+{
+	Common.QuestObj.DailyQuest_Group dailyquestInfo[日常任务数据];
+}

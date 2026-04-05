@@ -1,0 +1,7 @@
+JavaPackage GS2GC.p015_ConsortOp;
+csharpspace GS2GC.p015_ConsortOp;
+ALProtocol GS2GC_015_051_OnConsortIntimacyChg [家人亲密度推送] <15, 51>
+{
+    long consortId[空];
+    long intimacy[空];
+}

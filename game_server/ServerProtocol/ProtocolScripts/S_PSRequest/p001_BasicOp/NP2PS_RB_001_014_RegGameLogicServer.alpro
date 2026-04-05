@@ -1,0 +1,5 @@
+﻿JavaPackage NP2PS_RB.p001_BasicOp;
+
+ALProtocol NP2PS_RB_001_014_RegGameLogicServer <1, 14>
+{
+}

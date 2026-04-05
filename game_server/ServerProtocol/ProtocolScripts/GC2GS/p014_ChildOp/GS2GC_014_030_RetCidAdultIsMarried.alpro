@@ -1,0 +1,9 @@
+JavaPackage GS2GC.p014_ChildOp;
+csharpspace GS2GC.p014_ChildOp;
+import Common.CommonObj.alpro;
+
+ALProtocol GS2GC_014_030_RetCidAdultIsMarried[返回其他玩家子嗣是否结婚的信息] <14, 30>
+{
+	bool isGiftde;
+	bool isMarried;
+}

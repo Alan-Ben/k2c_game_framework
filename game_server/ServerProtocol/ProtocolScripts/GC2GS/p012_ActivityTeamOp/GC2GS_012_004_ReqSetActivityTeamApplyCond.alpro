@@ -1,0 +1,11 @@
+﻿JavaPackage GC2GS.p012_ActivityTeamOp;
+csharpspace GC2GS.p012_ActivityTeamOp;
+
+import Common.CrossTeamObj.alpro;
+
+ALProtocol GC2GS_012_004_ReqSetActivityTeamApplyCond[设置队伍申请条件] <12, 4> 
+{
+	long teamId[队伍实例ID];
+	Common.CrossTeamObj.CrossTeam_SetInfo_Join joinCond[申请条件];
+}
+

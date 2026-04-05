@@ -1,0 +1,12 @@
+﻿JavaPackage NP2CRS_R.p001_CrossRankOp;
+
+ALProtocol NP2CRS_R_001_011_SetCrossRankSubScore <1, 11>
+{
+	long crossInstanceId[跨服分组ID];
+	long rankId[排行Id];
+	long objId[排行榜元素KEY];
+	long subObjId[排行榜元素子KEY];
+	long score[当前分数];
+	long scoreSourceId[分数来源id];
+	long updateTimeMs[更新时间];
+}

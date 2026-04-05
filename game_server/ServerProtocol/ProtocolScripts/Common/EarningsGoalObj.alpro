@@ -1,0 +1,17 @@
+﻿JavaPackage Common.EarningsGoalObj;
+csharpspace Common.EarningsGoalObj;
+
+
+ALProtocol EarningsGoal_RewardInfo[赚速奖励信息]
+{
+	long refId;
+	long firstReachCid[首达玩家cid];
+	long timestamp[达成时间戳];
+}
+
+ALProtocol EarningsGoal_HonorRewardInfo[赚速荣耀奖励信息]
+{
+	long refId;
+	long firstReachCid[首达玩家cid];
+	long timestamp[达成时间戳];
+}

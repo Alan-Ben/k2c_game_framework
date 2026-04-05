@@ -1,0 +1,7 @@
+﻿JavaPackage GS2GC.p036_TreasureHuntOp;
+csharpspace GS2GC.p036_TreasureHuntOp;
+
+ALProtocol GS2GC_036_011_RetTreasureHuntDrawTreasureOutput <36, 11>
+{
+    
+}

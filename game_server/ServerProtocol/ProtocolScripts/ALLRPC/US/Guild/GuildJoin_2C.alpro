@@ -1,0 +1,18 @@
+﻿JavaPackage ALLRPC.US.Guild;
+
+ALProtocol GuildJoin_2C_Req
+{
+	long cid;
+	long guildId;
+	bool isRequestJoin[是否申请审批的加入];
+	string guildName;
+	string simpleName;
+	int guildLvl;
+	int[] buildingAddPerArr;
+}
+
+ALProtocol GuildJoin_2C_Return
+{
+	long maxEarning;
+	long marsAutoHelpEndTimeMS[火星自动互助有效时间，如无则为0];
+}

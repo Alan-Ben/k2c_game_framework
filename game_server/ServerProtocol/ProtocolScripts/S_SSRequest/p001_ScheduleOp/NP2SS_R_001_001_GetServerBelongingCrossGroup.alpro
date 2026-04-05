@@ -1,0 +1,6 @@
+﻿JavaPackage NP2SS_R.p001_ScheduleOp;
+
+ALProtocol NP2SS_R_001_001_GetServerBelongingCrossGroup[获取服务器所在分组信息] <1, 1>
+{
+	int usId;
+}

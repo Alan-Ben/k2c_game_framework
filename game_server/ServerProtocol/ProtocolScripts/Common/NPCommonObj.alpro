@@ -1,0 +1,391 @@
+﻿JavaPackage NPCommon;
+csharpspace NPCommon;
+
+import Enum.NPCommonEnum.alpro;
+import Enum.NPPlayerPro.alpro;
+
+/**********************************************************
+ * 技能等级信息
+ **********************************************************/
+ALProtocol NPCommon_SkillLevel
+{
+	long skillId;
+	int level;
+}
+
+
+/**********************************************************
+ * 英雄卡信息
+ **********************************************************/
+ALProtocol NPCommon_HeroCardInfo
+{
+	long dbId;
+	long refId;
+	int  level;
+	int  starNum;
+	short quality;
+	int[] prop_add;
+	NPCommon_SkillLevel[] skillLevels;
+	int viewTimeTag;
+	int getTimeTagS;
+}
+
+/**********************************************************
+ * 货币信息
+ **********************************************************/
+ALProtocol NPCommon_CurrencyInfo
+{
+	int type;
+	long count;
+}
+
+/**********************************************************
+ * 宠物通用数据
+ **********************************************************/
+ALProtocol NPCommon_PetInfo[宠物通用数据]
+{
+	long petRefId[宠物配置ID];
+	int petLevel[宠物等级];
+	long petSkin[宠物皮肤];
+}
+
+/**********************************************************
+ * 单位时间产出信息
+ **********************************************************/
+ALProtocol NPCommon_TimerProductInfo
+{
+	long refId;
+	long unitMultiple;//产出片段倍数
+	long unitDuration;//产出片段时长（毫秒）
+	long lastEndTimeMs;//最后一次设置时间
+}
+
+/**********************************************************
+ * PVE关卡信息
+ **********************************************************/
+ALProtocol NPCommon_MissionInfo
+{
+	long missionId;
+	int passtime;
+}
+
+/**********************************************************
+ * 精英关卡信息
+ **********************************************************/
+ALProtocol NPCommon_EliteInfo
+{
+	long id;
+	long refId;
+	int passtime; //通关时间（首次）
+	int battleTask; //完成的战斗任务
+	int dailyPassCount; //当日通关次数
+}
+
+/**********************************************************
+ * 玩家BUFF信息
+ **********************************************************/
+ALProtocol NPCommon_PlayerBuffInfo
+{
+	long buffId;
+	int layer;
+	long endMs;
+	long startMs;
+}
+
+/**********************************************************
+ * 带入战斗的单位信息
+ **********************************************************/
+ ALProtocol NPCommon_BattleLordInfo
+{
+	int  level;
+	NPCommon_SkillLevel[] skillLevels;
+	long[] propertyBonus;
+}
+
+ALProtocol NPCommon_BattleCardInfo[带入战斗的宠物信息]
+{
+	long petInstanceId[宠物实例id];
+	long petRefId[宠物配表id];
+	int  level[宠物等级];
+	long starRefId[宠物星级配置];
+	short quality[宠物品质];
+	long skinId;
+	NPCommon_SkillLevel[] skillLevels;
+	long[] propertyBonus;
+	Enum.NPCommonEnum.ENPAttrGrade attrGrade[宠物资质品质];
+	int[] attrList[资质列表];
+}
+
+ALProtocol NPCommon_BattleMobHp[战斗怪物血量信息]
+{
+	int lineupMobId[mission_lineup 配表id];
+	short hp[血量万分比];
+	long hpMax[最大血量];
+}
+
+ALProtocol NPCommon_BattlePetHp[战斗玩家血量信息]
+{
+	long petInstanceId[宠物实例id];
+	short hp[血量万分比];
+	short sp[宠物能量值];
+}
+
+/**********************************************************
+ * 阵型信息
+ **********************************************************/
+ALProtocol NPCommon_layoutInfo[设置阵型时客户端发给服务端的数据]
+{
+	long petInstanceId[宠物实例id];
+	long layoutIndex[阵型里的坐标];
+}
+/**********************************************************
+ * 阵型信息
+ **********************************************************/
+ALProtocol NPCommon_RetLayoutInfo[服务端返回给客户端阵型数据]
+{
+	long petInstanceId[宠物实例id];
+	long layoutIndex[阵型位置id];
+	short hp[血量万分比];
+	short sp[宠物能量值];
+}
+
+/**********************************************************
+ * 阵容信息
+ **********************************************************/
+ALProtocol NPCommon_LineupInfo
+{
+	long petInstanceId[宠物实例id];
+	short hp[血量万分比];
+	short sp[宠物能量值];
+	short posX[x坐标];
+	short posY[y坐标];
+}
+/**********************************************************
+ * 阵容设置信息
+ **********************************************************/
+ALProtocol NPCommon_LineupSettingInfo
+{
+	long layoutRefId[阵型配置id];
+	NPCommon_LineupInfo[] lineupList;
+}
+/**********************************************************
+ * 阵容设置信息（数据库）
+ **********************************************************/
+ALProtocol NPCommon_LineupSettingDetailInfo
+{
+	long id;
+	string lineupName;
+	string lineupDesc;
+	NPCommon_LineupSettingInfo lineupSettingInfo;
+}
+
+/**********************************************************
+ * 玩家参数
+ **********************************************************/
+ALProtocol NPCommon_PlayerParam
+{
+    //参数枚举ID
+    int paramIndex;
+    //参数值
+    long value;
+}
+
+/**********************************************************
+ * 背包物品数据
+ **********************************************************/
+ALProtocol NPCommon_BagItemInfo
+{
+	long itemId;
+	long itemCount;
+	int lastGetTimeS;
+	int newItemTimeS[首次获得本物品的时间戳];
+	int clickItemTimeS[最后一次点击本物品的时间戳];
+}
+
+ALProtocol PlayerInfo_CurTitle[当前穿戴称号]
+{
+	Enum.NPPlayerPro.ENPPlayerTitleType type[称号类型];
+	bytebuffer info[称号信息];
+}
+
+/**********************************************************
+ * 玩家基础信息
+ **********************************************************/
+ALProtocol PlayerInfo_IconShow
+{
+	long cid[玩家id];
+	string playerName[玩家名];
+	long iconId[头像id];
+	long iconBgkId[头像框id];
+	long bubbleId[气泡框id];
+	long vipLvl[vip等级];
+	long playerLvl[玩家等级];
+	long guildId[联盟id];
+	string guildName[联盟名称];
+	bool isOnline[true-在线 false-离线];
+	long lastOfflineMs[最后一次离线时间戳（毫秒）];
+	long lastOnlineMs[最后一次在线时间戳（毫秒）];
+	string guildSimpleName[联盟简称];
+	long totalPower[总实力];
+	long earnings[赚速];
+	long playerSkinId[皮肤ID];
+	PlayerInfo_CurTitle curTitle[玩家当前穿戴称号数据];
+	bool isShow[是否展示称号];
+	long exp[玩家经验];
+}
+
+ALProtocol NPCommon_PlayerFightInfo[玩家战斗初始化数据]
+{
+	NPCommon_LineupSettingInfo lineupList[阵容位置和血量列表];
+	NPCommon_BattleCardInfo[] petList[卡牌属性列表];
+}
+
+ALProtocol NPCommon_PlayerPveExInfo[PVE关卡其他信息结构体]
+{
+	NPCommon_BattleMobHp[] mobHpList[怪物血量列表];
+}
+
+ALProtocol NPCommon_DiggingsPVPFightInfo[矿区PVP战斗初始化数据]
+{
+	NPCommon_PlayerFightInfo attackerFightInfo[攻击玩家阵容信息];
+	
+	NPCommon_PlayerFightInfo defencerFightInfo[防守玩家阵容信息];
+}
+
+ALProtocol NPCommon_ArenaPVPFightInfo[比武擂台PVP战斗初始化数据]
+{
+	NPCommon_PlayerFightInfo attackerFightInfo[攻击玩家阵容信息];
+	
+	NPCommon_PlayerFightInfo defencerFightInfo[防守玩家阵容信息];
+} 
+
+/**********************************************************
+ * 单个物品数据
+ **********************************************************/
+ALProtocol NPCommon_ItemInfo
+{
+	int   itemType;
+	long  subId;
+	long  count;
+	bytebuffer extData;
+}
+/**********************************************************
+ * 物品列表数据
+ **********************************************************/
+ALProtocol NPCommon_ItemList
+{
+	NPCommon_ItemInfo[] itemList;
+}
+
+ALProtocol Common_ItemExchangeInfo
+{
+	long exchangeRefId[兑换配置id];
+	NPCommon_ItemInfo[] itemList;
+}
+
+/**********************************************************
+ * 玩家掉落信息
+ **********************************************************/
+ALProtocol NPCommon_DropItemInfo
+{
+	long id;
+	long dropId;
+	int leftSecs;//剩余秒数，0：已过期，-1：永远有效，-2：未读取
+}
+
+/**********************************************************
+ * 邮件信息
+ **********************************************************/
+ALProtocol NPCommon_MailBriefInfo
+{
+	long id;
+	string title;
+	long createTimeMs;
+	long readTimeMs;
+	long gainTimeMs;
+}
+ALProtocol NPCommon_MailInfo
+{
+	long id;
+	string sender;
+	string title;
+	string content;
+	string keyParams;
+	long createTimeMs;
+	long readTimeMs;
+	long gainTimeMs;
+	NPCommon_ItemInfo[] reward;
+}
+
+ /**********************************************************
+ * 服务器基础信息结构体
+ **********************************************************/
+ 
+ ALProtocol NP_SYS_ServerItem[服务器信息]
+ {
+    string areaTag[服务器大区];
+    long groupId[服务器分组id];
+    int serverLogicId[外部赋予的服务器id];
+    int serverTypeId[服务器typeId];
+    string serverName[服务器名];
+    int onlineStateTypeId[在线状态 EServerOnlineState];
+    int showStateTypeId[对外显示状态 EServerShowState];
+    bool isNew[是否新服];
+    String startDate[开服时间 日期格式：yyyy-mm-dd ];
+    String ext[预留];
+ }
+ 
+ALProtocol NPCommon_PlayerLazyCD[玩家CD数据]
+{
+    int cdId[CD唯一ID];
+    long lastCalTimeMS[上次count变动时间（毫秒）];
+    int count[当前数量];
+    int maxCount[最大数量];
+    int addCountPerTime[每次恢复点数];
+    int cdDurationMs[CD时长];
+    long fullGetNextCdRemainTimeMs[上次有效时长和实际计算时长之间的差额时长];
+	long relativeActivityInstanceId[关联的活动实例ID];
+}
+
+
+ALProtocol NPCommon_EffectVarObj[执行效果时使用的参数]
+{
+    int type[效果类型];
+    long value[效果值];
+}
+
+ALProtocol NPCommon_PlayerFixedCD[玩家固定时间刷新CD数据]
+{
+    int cdId[CD唯一ID];
+    int count[当前数量];
+    long lastCalTimeMS[上次恢复时间];
+    int maxCount[最大数量];
+    int addCountPerTime[每次恢复点数];
+}
+
+ALProtocol NPCommon_TreasureMap[藏宝图数据]
+{   
+	long dbId[唯一id];
+	long refId[藏宝图配置id];
+	long spaceId[藏宝图空间位置];
+	int posX[藏宝图位置x];
+	int posY[藏宝图位置y];
+}
+
+ALProtocol NPCommon_SingleItemConvert[单道具合成]
+{   
+	NPCommon_ItemInfo targetItem[目标道具];
+	NPCommon_ItemInfo[] originItemList[原道具列表];
+}
+
+ALProtocol NPCommon_ForeverAddInfo[永久加成数据]
+{
+	long id;
+	int count;
+}
+
+ALProtocol NPCommon_ForbidChatInfo[禁言数据]
+{
+	long endMs[截至时间 -1表示永久];
+	int roomType[聊天房间类型];
+}

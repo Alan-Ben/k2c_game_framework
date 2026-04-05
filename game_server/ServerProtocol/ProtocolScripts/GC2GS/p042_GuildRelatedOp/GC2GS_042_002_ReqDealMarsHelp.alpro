@@ -1,0 +1,6 @@
+﻿JavaPackage GC2GS.p042_GuildRelatedOp;
+csharpspace GC2GS.p042_GuildRelatedOp;
+
+ALProtocol GC2GS_042_002_ReqDealMarsHelp[处理火星系统求助] <42, 2>
+{
+}

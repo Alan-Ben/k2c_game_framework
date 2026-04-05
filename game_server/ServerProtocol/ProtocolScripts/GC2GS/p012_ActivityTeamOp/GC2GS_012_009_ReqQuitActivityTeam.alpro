@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p012_ActivityTeamOp;
+csharpspace GC2GS.p012_ActivityTeamOp;
+
+ALProtocol GC2GS_012_009_ReqQuitActivityTeam[退出队伍] <12, 9> 
+{
+	long teamId[队伍实例ID];
+}

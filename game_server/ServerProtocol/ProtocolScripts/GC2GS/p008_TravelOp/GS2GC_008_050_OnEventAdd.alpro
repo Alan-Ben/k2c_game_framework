@@ -1,0 +1,7 @@
+JavaPackage GS2GC.p008_TravelOp;
+csharpspace GS2GC.p008_TravelOp;
+import Common.TravelObj.alpro;
+ALProtocol GS2GC_008_050_OnEventAdd [新增事件推送] <8, 50>
+{
+    Common.TravelObj.Travel_Event eventInfo[空];
+}

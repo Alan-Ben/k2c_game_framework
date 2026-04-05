@@ -1,0 +1,9 @@
+﻿JavaPackage GS2GC.p021_PlayerInfo;
+csharpspace GS2GC.p021_PlayerInfo;
+
+import Common.FriendObj.alpro;
+
+ALProtocol GS2GC_021_055_OnFriendGroupOrderListChg[好友分组顺序变更] <21, 55>
+{
+	long[] friendGroupOrderList[好友分组顺序];
+}

@@ -1,0 +1,8 @@
+﻿JavaPackage GS2GC.p007_CommOp;
+csharpspace GS2GC.p007_CommOp;
+
+ALProtocol GS2GC_007_017_RetStageGoalFirstReachBaseInfo <7, 17>
+{
+    Common.StageGoalObj.StageGoal_TopPlayerInfo topInfo[顶级玩家信息];
+    Common.StageGoalObj.StageGoal_BigStepFirstReachInfo[] infoList[大阶段首达信息列表];
+}

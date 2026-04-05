@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p012_ActivityTeamOp;
+csharpspace GC2GS.p012_ActivityTeamOp;
+
+ALProtocol GC2GS_012_003_ReqSelfActivityTeam[玩家自身队伍数据] <12, 3> 
+{
+	long instanceId[活动实例ID];
+}

@@ -1,0 +1,9 @@
+JavaPackage GS2GC.p015_ConsortOp;
+csharpspace GS2GC.p015_ConsortOp;
+import Common.ConsortObj.alpro;
+import Enum.ConsortEnum.alpro;
+ALProtocol GS2GC_015_050_OnConsortAdd [家人新增推送] <15, 50>
+{
+    Common.ConsortObj.Consort_Info consort[空];
+    Enum.ConsortEnum.EConsortSourceType sourceType[来源类型];
+}

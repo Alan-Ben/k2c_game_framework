@@ -1,0 +1,6 @@
+﻿JavaPackage NP2US_R.p006_CacheOp;
+
+ALProtocol NP2US_R_006_004_GetPlayerJoinUSInfo <6, 4>
+{
+	long cid;
+}

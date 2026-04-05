@@ -1,0 +1,7 @@
+﻿﻿JavaPackage GS2GC.p023_ArenaOp;
+csharpspace GS2GC.p023_ArenaOp;
+
+ALProtocol GS2GC_023_022_RetTowerChallengeList <23, 22>
+{
+    Common.TowerObj.Tower_OpponentInfo[] opponentList[对手列表];
+}

@@ -1,0 +1,23 @@
+{
+  "serial": "20240815000000001",
+  "zoneId": 1001,
+  "scheduleList": [
+    {
+      "scheduleId": 1001,
+      "prePushTime": "2024-06-22 15:00:00",
+      "activity": {
+        "activityId": 101,
+        "startTime": "2024-06-24 00:00:00",
+        "endTime": "2024-06-24 00:00:00",
+        "closeTime": "2024-06-25 00:00:00"
+      },
+      "usIdList": [],
+      "usGroupList": [
+        {
+          "groupId": 1,
+          "usIdList": [1]
+        }
+      ]
+    }
+  ]
+}

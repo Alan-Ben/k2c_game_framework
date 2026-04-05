@@ -1,0 +1,8 @@
+JavaPackage GS2GC.p032_GuildOp;
+csharpspace GS2GC.p032_GuildOp;
+import Common.RankObj.alpro;
+
+ALProtocol GS2GC_032_046_RetGuildCooperateDamageRank[返回联盟协作伤害排行榜] <32, 46>
+{
+    Common.RankObj.Rank_BaseItem[] rankList[完整排行榜列表];
+}

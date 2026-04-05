@@ -1,0 +1,8 @@
+JavaPackage GS2GC.p016_ChapterOp;
+csharpspace GS2GC.p016_ChapterOp;
+import Common.ChapterObj.alpro;
+
+ALProtocol GS2GC_016_003_RetChapterFightBossInspire <16, 3>
+{
+    
+}

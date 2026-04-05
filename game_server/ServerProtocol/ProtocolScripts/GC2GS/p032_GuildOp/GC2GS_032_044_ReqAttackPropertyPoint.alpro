@@ -1,0 +1,11 @@
+import Common.GuildCooperateObj.alpro;
+
+JavaPackage GC2GS.p032_GuildOp;
+csharpspace GC2GS.p032_GuildOp;
+
+ALProtocol GC2GS_032_044_ReqAttackPropertyPoint[攻击属性据点] <32, 44>
+{
+    Common.GuildCooperateObj.GuildCooperate_RewardPointPos pos[奖励据点位置];
+    int propertyPointIndex[属性据点索引];
+    long heroId[出战大臣ID];
+}

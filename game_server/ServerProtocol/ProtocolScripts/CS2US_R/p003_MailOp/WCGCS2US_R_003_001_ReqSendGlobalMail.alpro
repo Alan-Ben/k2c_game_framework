@@ -1,0 +1,11 @@
+﻿﻿﻿import Common.CommonObj.alpro;
+
+JavaPackage WCGCS2US_R.p003_MailOp;
+
+/**********************************************************
+ * Common服务器向用户服务器发送全局邮件
+ **********************************************************/
+ALProtocol WCGCS2US_R_003_001_ReqSendGlobalMail <3, 1>
+{
+	Common.CommonObj.WCGCS2US_GlobalMail gmail;
+}

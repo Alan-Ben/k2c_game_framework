@@ -1,0 +1,8 @@
+﻿JavaPackage GC2GS.p004_PlayerOp;
+csharpspace GC2GS.p004_PlayerOp;
+
+ALProtocol GC2GS_004_018_ReqWeekCardChgNPC[请求修改周卡NPC] <4, 18>
+{
+    Enum.CommonEnum.EWeekCardNPCType npcType[NPC类型];
+	long npcId;
+}

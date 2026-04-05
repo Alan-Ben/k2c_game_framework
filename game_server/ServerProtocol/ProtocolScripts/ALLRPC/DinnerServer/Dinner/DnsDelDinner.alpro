@@ -1,0 +1,15 @@
+﻿JavaPackage ALLRPC.DinnerServer.Dinner;
+
+ALProtocol DnsDelDinner_Req
+{
+	long groupId[分组ID];
+	long instanceId[宴会实例ID];
+}
+
+ALProtocol DnsDelDinner_Return
+{
+}
+
+//[RPC]向跨服宴会池移除宴会数据
+//[CLASS_PACKAGE] : AllRpcData.Dinner_Service.Dinner
+//[DEALER_PACKAGE] : DinnerServer.RPCDispatcher.Dinner

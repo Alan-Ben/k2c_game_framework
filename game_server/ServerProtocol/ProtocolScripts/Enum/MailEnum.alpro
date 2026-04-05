@@ -1,0 +1,10 @@
+﻿JavaPackage Common.MailEnum;
+csharpspace Common.MailEnum;
+
+ALEnum EMailExtType[邮件额外数据类型]
+{
+	NONE;
+	TEST_ITEM_LIST[测试-物品列表];
+	HERO_GAIN[骑士-骑士获得];
+	HERO_UP_STEP[骑士-骑士升阶];
+}

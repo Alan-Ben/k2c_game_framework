@@ -1,0 +1,16 @@
+﻿JavaPackage ALLRPC.US.Mars;
+
+ALProtocol MarsMineHasOtherGuildAttacked_Req
+{
+	long mineInstanceId;
+	long guildId;
+}
+
+ALProtocol MarsMineHasOtherGuildAttacked_Return
+{
+	bool hasOtherGuildAttacked;
+}
+
+//[RPC] 火星矿结算数据
+//[CLASS_PACKAGE] : AllRpcData.US_Service.Mars
+//[DEALER_PACKAGE] : USServer.RPCDispatcher.Mars

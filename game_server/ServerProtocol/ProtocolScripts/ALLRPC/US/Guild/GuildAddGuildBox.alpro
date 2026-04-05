@@ -1,0 +1,18 @@
+﻿JavaPackage ALLRPC.US.Guild;
+
+import Enum.GuildEnum.alpro;
+
+ALProtocol GuildAddGuildBox_Req
+{
+	long cid;
+	long guildId;
+	Enum.GuildEnum.EGuildBoxType boxType;
+	long boxId;
+	long count;
+	int contextType;
+	long contextGuid;
+}
+
+ALProtocol GuildAddGuildBox_Return
+{
+}

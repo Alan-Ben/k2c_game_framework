@@ -1,0 +1,43 @@
+﻿import Common.NPInclude.alpro;
+import Enum.TravelEnum.alpro;
+import Common.NPCommonObj.alpro;
+
+JavaPackage Common.TravelObj;
+csharpspace Common.TravelObj;
+
+ALProtocol Travel_Event[游历事件]
+{
+	long instanceId[实例ID];
+	long eventId[事件ID];
+	long pos[位置];
+}
+
+ALProtocol Travel_Consort[游历妃子数据]
+{
+	long consortId[妃子ID];
+	int like[好感度];
+}
+
+ALProtocol Travel_EventResult[游历事件结果]
+{
+	long eventId[事件ID];
+	Common.NPCommonObj.NPCommon_ItemInfo[] itemList[奖励物品列表];
+	bytebuffer ext[额外数据];
+}
+
+ALProtocol Travel_EventResultExt_ConsoleLike[游历事件结果-妃子好感度额外数据]
+{
+	long preLike;
+}
+
+ALProtocol Travel_EventResultExt_ConsoleIntimacy[游历事件结果-妃子亲密度额外数据]
+{
+	long preIntimacy;
+}
+
+ALProtocol Travel_GambleResult[博彩事件额外结果]
+{
+	Enum.TravelEnum.ETravelGambleResult resultType[结果类型];
+	long diamondChange[钻石变化量（正获得负损失）];
+	long betAmount[下注金额];
+}

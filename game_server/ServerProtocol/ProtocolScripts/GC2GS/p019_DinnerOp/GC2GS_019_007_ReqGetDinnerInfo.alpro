@@ -1,0 +1,6 @@
+JavaPackage GC2GS.p019_DinnerOp;
+csharpspace GC2GS.p019_DinnerOp;
+ALProtocol GC2GS_019_007_ReqGetDinnerInfo [宴会信息] <19, 7>
+{
+    long instanceId[宴会实例ID];
+}

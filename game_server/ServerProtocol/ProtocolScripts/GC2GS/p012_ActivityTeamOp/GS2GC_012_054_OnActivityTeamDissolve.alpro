@@ -1,0 +1,7 @@
+﻿﻿JavaPackage GS2GC.p012_ActivityTeamOp;
+csharpspace GS2GC.p012_ActivityTeamOp;
+
+ALProtocol GS2GC_012_054_OnActivityTeamDissolve[解散活动队伍] <12, 54>
+{
+	long teamId[队伍实例ID];
+}

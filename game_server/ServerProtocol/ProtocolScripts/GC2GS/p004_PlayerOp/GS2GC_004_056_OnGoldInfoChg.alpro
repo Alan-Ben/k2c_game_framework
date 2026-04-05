@@ -1,0 +1,7 @@
+﻿﻿JavaPackage GS2GC.p004_PlayerOp;
+csharpspace GS2GC.p004_PlayerOp;
+
+ALProtocol GS2GC_004_056_OnGoldInfoChg <4, 56>
+{
+	Common.PlayerObj.Player_GoldInfo goldInfo[金币信息];
+}

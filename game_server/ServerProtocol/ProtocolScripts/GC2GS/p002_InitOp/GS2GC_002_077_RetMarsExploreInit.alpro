@@ -1,0 +1,12 @@
+JavaPackage GS2GC.p002_InitOp;
+csharpspace GS2GC.p002_InitOp;
+
+import Common.MarsObj.alpro;
+
+ALProtocol GS2GC_002_077_RetMarsExploreInit[火星探险数据初始化] <2, 77>
+{
+	Common.MarsObj.Mars_Explore explore[探索数据];
+	Common.MarsObj.Mars_ExploreEvent[] eventList[事件数据];
+	Common.MarsObj.Mars_Team[] teamList[队伍列表];
+	Common.MarsObj.Mars_MineIdx[] mineIdx[火星矿产数据索引列表];
+}

@@ -1,0 +1,52 @@
+JavaPackage Hotfix.V01.Enum.TileMatchEnum;
+csharpspace Hotfix.TileMatchEnum;
+
+ALEnum ETileMatch_LogicType[三消逻辑类型] 
+{
+	NONE;
+	NORMAL[普通 Composite];
+	BOX[宝箱 Remove];
+	ROCKET[火箭 Remove];
+	RAINBOW[彩虹 Remove];
+	BOX_BOX[宝箱+宝箱 CombineRemove];
+	BOX_ROCKET[宝箱+火箭 CombineRemove];
+	ROCKET_ROCKET[火箭+火箭 CombineRemove];
+	BOX_RAINBOW[宝箱+彩虹 RainbowTrans+Remove];
+	ROCKET_RAINBOW[火箭+彩虹 RainbowTrans+Remove];
+	RAINBOW_RAINBOW[彩虹+彩虹 CombineRemove];
+	DROP[掉落 Drop];
+}
+
+ALEnum ETileMatch_ModeType[三消模式类型] 
+{
+	NONE;
+	NORMAL[普通];
+	ADVANCED[高级];
+	EXTREME[极限];
+}
+
+ALEnum ETileMatch_BlockType[三消格子类型] 
+{
+	NONE;
+	BOOM[宝箱];
+	ROCKET[火箭];
+	RAINBOW[彩虹];
+}
+
+ALEnum ETileMatch_LinkType[三消连接类型] 
+{
+	NONE;
+	LINK_3;
+	LINK_4;
+	LINK_5;
+	LINK_T;
+	LINK_L;
+}
+
+ALEnum ETileMatch_GameEvent[三消活动事件] 
+{
+	NONE;
+	TILE_MATCH_GAME_INIT(101000)[三消初始化];
+	TILE_MATCH_SWITCH(101001)[三消交换操作];
+	TILE_MATCH_DRAW_STEP_REWARD(101002)[三消领取阶段奖励];
+}

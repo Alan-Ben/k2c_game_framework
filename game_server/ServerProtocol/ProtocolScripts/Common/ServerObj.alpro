@@ -1,0 +1,566 @@
+﻿JavaPackage Common.ServerObj;
+
+import Enum.NPCommonEnum.alpro;
+import Common.NPCommonObj.alpro;
+import Enum.ChildEnum.alpro;
+import Common.ChildObj.alpro;
+import Enum.DinnerEnum.alpro;
+import Common.DinnerObj.alpro;
+import Enum.ServerEnum.alpro;
+import Common.DungeonObj.alpro;
+import Common.InnObj.alpro;
+import Common.MarsObj.alpro;
+
+import Enum.GuildEnum.alpro;
+import Common.GuildObj.alpro;
+
+ALProtocol ServerObj_PHPParam[平台参数]
+{
+	Enum.CommonEnum.EPlatParamType pKey;
+	string pValue;
+}
+ALProtocol ServerObj_PHPParamList[平台参数列表]
+{
+	ServerObj_PHPParam[] pList;
+}
+
+ALProtocol ServerObj_PHPPlayer[平台获取的玩家明细信息]
+{
+	string uid[账号UID];
+	long cid[角色CID];
+	string name[用户名];
+	int lvl[角色等级];
+	int vip_lvl[VIP等级];
+	int ar_time[注册时间-时间戳];
+	int create_role_time[创角时间-时间戳];
+	int last_login_time[最后登录时间-时间戳];
+	double recharged_money[累计充值金额];
+	double game_coin[剩余游戏币];
+	double game_diamond[剩余钻石（充值转换币种）];
+	long union_id[所属联盟ID];
+	int union_position[所属联盟职位];
+}
+
+ALProtocol ServerObj_PHPMarqueeContent[平台获取的跑马灯内容信息]
+{
+	string lang[语言];
+	string[] paramList[参数列表];
+	string content[内容];
+}
+
+ALProtocol ServerObj_PHPMarquee[平台获取的跑马灯信息]
+{
+	long phpId[平台跑马灯ID];
+	long refId[跑马灯配置ID 0-无配置];
+	int showPosId[窗口展示队列];
+	int priorityId[优先级（越大越优先）];
+	int durationSec[循环播放时长秒（优先于次数）];
+	int durationCount[循环播放次数];
+	long uiResId[预制体ID];
+	Enum.CommonEnum.EMarqueeCanDelType canDelType[是否可删除类型];
+	int lifeSec[生存时间秒];
+	Enum.ServerEnum.EMarqueeOfflineNeedShowType offlineNeedShowType[玩家离线期间是否需要展示];
+	string defaultLang[默认语言];
+	ServerObj_PHPMarqueeContent[] marqueeContentList[跑马灯多语言内容数据列表];
+	string[] channelList[渠道列表];
+	string showCondition[展示条件（客户端使用）];
+}
+
+ALProtocol ServerObj_CommonItemList[物品列表基础数据]
+{
+	Common.NPCommonObj.NPCommon_ItemInfo[] itemList[物品列表];
+}
+
+ALProtocol ServerObj_HeroCacheInfo[玩家通用大臣展示信息缓存]
+{
+	long cid[玩家id];
+	long heroId[大臣id];
+	int  level[大臣等级];
+	long skinId[皮肤id];
+}
+
+ALProtocol ServerObj_AdultMarryApplyInfo[子嗣联姻请求数据]
+{
+	long applyCid[申请玩家CID];
+	Common.ChildObj.Adult_Info applyAdult[请求联姻子嗣数据];
+	int applyExpiredTs[请求超时时间];
+	
+	long targetCid[请求目标玩家CID];
+	
+	Common.NPCommonObj.NPCommon_ItemInfo marriedItem[联姻奖励];
+	
+	string applyCname[申请玩家昵称];
+}
+
+ALProtocol ServerObj_AdultMarryCancelApply[子嗣联姻取消请求数据]
+{
+	long applyCid[发起请求的玩家CID];
+	long applyAdultId[发起请求的子嗣实例ID];
+	
+	long targetCid[目标玩家CID];
+}
+
+ALProtocol ServerObj_AdultMarryRefuseApply[子嗣联姻拒绝请求数据]
+{
+	long targetCid[目标玩家CID];
+
+	long applyCid[发起请求的玩家CID];
+	long applyAdultId[发起请求的子嗣实例ID];
+}
+
+ALProtocol ServerObj_AdultMarriedInfo[联姻子嗣结婚数据]
+{
+	long cid[玩家CID];
+	long adultId[玩家子嗣实例ID];
+	
+	long marriedCid[联姻玩家CID];
+	Common.ChildObj.Adult_Info marriedAdult[联姻子嗣数据];
+	
+	Common.NPCommonObj.NPCommon_ItemInfo marriedItem[联姻奖励];
+	
+	string marriedCname[联姻玩家昵称];
+}
+
+ALProtocol ServerObj_AdultMarryGroupApplyInfo[子嗣联姻池请求数据]
+{
+	long applyCid[申请玩家CID];
+	long applyAdultId[发起请求的子嗣实例ID];
+	int matchId[匹配ID];
+	long bonus[子嗣收益];
+	long minBonus[对方子嗣允许最小收益];
+}
+
+ALProtocol ServerObj_DinnerJoiner[赴宴玩家数据]
+{
+	long cid[赴宴玩家CID];
+	long costId[赴宴玩家消耗配置ID];
+	long gainCoin[赴宴玩家获得宴会币];
+	long gainScore[赴宴玩家获得宴人气];
+	
+    string cname[赴宴玩家名称];
+}
+
+ALProtocol ServerObj_DinnerResult[开宴玩家结算数据]
+{
+	long ownerCid[开宴玩家CID];
+	int startTs[开始时间戳（秒）];
+	
+	Common.DinnerObj.Dinner_ResultInfo result[宴会结算数据];
+}
+
+ALProtocol ServerObj_DinnerCrossIdx[宴会跨服索引信息]
+{
+	long instanceId[宴会实例ID];
+}
+
+ALProtocol ServerObj_FriendApply[好友申请数据]
+{
+	long applyCid[申请玩家CID];
+	int applyTs[申请时间戳（秒）];
+}
+
+ALProtocol ServerObj_FriendAgree[同意好友申请数据]
+{
+	long agreeCid[同意申请玩家CID];
+}
+
+ALProtocol ServerObj_FriendRemove[移除好友数据]
+{
+	long sendCid[发起玩家CID];
+}
+
+///////////////////////////征收数据
+ALProtocol ServerObj_Levy_Silver[银币征收数据]
+{
+	long lastSettleMs[上次结算时间（毫秒）];
+	long startMs[本次征收开始时间（毫秒）];
+	long settledSum[已经结算的数量总和];
+	long speed[产出速度];
+}
+
+ALProtocol ServerObj_Levy_Food[粮食征收数据]
+{
+	long lastSettleMs[上次结算时间（毫秒）];
+	long speed[产出速度];
+}
+
+ALProtocol ServerObj_Levy_Soldier[士兵征收数据]
+{
+	long lastSettleMs[上次结算时间（毫秒）];
+	long nextSettleMs[下次结算时间（毫秒）];
+	int count[使用次数];
+	long durationMs[当前周期用时（毫秒）];
+}
+
+ALProtocol ServerObj_RankSubObjInfo[排行榜子对象数据]
+{
+	long subObjId[子对象ID];
+	long scoreSourceId[分数来源ID];
+	long score[分数];
+	long updatedMs[更新时间（毫秒）];
+}
+
+ALProtocol ServerObj_RankObjInfo[排行榜对象数据]
+{
+	long objId[对象ID];
+	long scoreSourceId[分数来源ID];
+	long score[分数];
+	long updatedMs[更新时间（毫秒）];
+	ServerObj_RankSubObjInfo[] subObjList[子对象列表];
+}
+
+ALProtocol ServerObj_SpecialItem_PaidGem[特殊物品付费钻石数据]
+{
+	long count[数量];
+	long totalGainCount[总获得数量];
+}
+
+ALProtocol ServerObj_SpecialItem_Gold[特殊物品金币数据]
+{
+	long lastSettleTimeMs[上次结算时间（毫秒）];
+	long outputSpeed[产出速度];
+	long count[金币数量];
+	long totalGainCount[总获得数量];
+	long totalConsumeCount[总消耗数量];
+}
+
+ALProtocol ServerObj_SpecialItem_Station[特殊物品竞技场贸易站数据]
+{
+	int level[等级];
+	long hadOutputNum[已产出数量];
+	long hadOutputSec[已产出时间];
+	long lastSettleTimeMs[上次结算时间戳];
+	bool isUnlimited[是否无限制];
+}
+
+ALProtocol ServerObj_SpecialItem_MarsEnergy[特殊物品火星能量数据]
+{
+	long lastSettleTimeMs[上次结算时间（毫秒）];
+	long count[数量];
+	long costSpeed[消耗速度（单位：分钟）];
+	
+	long totalGainCount[总获得数量];
+	long totalConsumeCount[总消耗数量];
+}
+
+ALProtocol ServerObj_MiddayDungeon_FightHeroList[午间副本_玩家使用的英雄列表]
+{
+	Common.DungeonObj.MiddayDungeon_FightHero[] heroList;
+}
+
+ALProtocol ServerObj_SpecialItem_FarmMultiple[特殊物品_农田暴击数据]
+{
+	int hadMultipleTimes[已暴击次数];
+	long lastRefreshTimeMs[上次刷新时间戳];
+}
+
+ALProtocol ServerObj_Inn_ReceiveList[旅店_接待信息]
+{
+	Common.InnObj.Inn_ReceiveInfo[] receiveList[接待列表];
+}
+
+ALProtocol ServerObj_PayCallbackInfo[支付回调信息]
+{
+	long dbId[数据库ID];
+	string orderId[订单号];
+	string sdkOrderId[SDK订单号];
+	long cid[角色ID];
+	string uid[用户ID];
+	string appId[应用ID];
+	long productId[产品ID];
+	string amount[商品定价];
+	string amountType[商品定价货币];
+	string payType[支付方式（钱包聚合平台）];
+	long createTime[创建时间（10位时间戳）];
+	long payTime[支付时间（10位时间戳）];
+	int sdkType[订单来源:1正常，2补单，3虚拟充值,4测试订单];
+	string tradeId[第三方订单号];
+	string skuId[第三方内购产品id];
+	string sdkPayId[sdk档位ID];
+	int purchaseType[购买类型：0普通，1测试，2促销，3奖励];
+	string payment[实际支付金额];
+	string paymentCode[实际支付货币];
+	string channelCode[渠道标识(网页支付时玩家选择的站点标识)];
+	string payId[支付ID（钱包ID）];
+	int orderType[订单类型：1 内购，2 网页充值，3 福利（虚拟充值）];
+}
+
+ALProtocol ServerObj_WebPayGoodsLimitInfo[网页支付商品限购信息]
+{
+	int maxPurchase[最大购买数量];
+	int purchased[已购买数量];
+	long endTime[限购结束时间（10位时间戳）];
+}
+
+ALProtocol ServerObj_WebPayGoodsInfo[网页支付商品信息]
+{
+	long goodsId[商品ID];
+	string sdkPayId[sdk档位ID];
+	float amount[价格];
+	ServerObj_WebPayGoodsLimitInfo limit[限购信息];
+	Common.NPCommonObj.NPCommon_ItemInfo[] item[物品列表];
+	Common.NPCommonObj.NPCommon_ItemInfo[] gift[赠品列表];
+}
+
+ALProtocol ServerObj_WebPayGoodsList[网页支付商品列表]
+{
+	ServerObj_WebPayGoodsInfo[] goodsList[商品列表];
+}
+
+ALProtocol ServerObj_WebPayOrderInfo[网页支付订单信息]
+{
+	string orderId[订单号];
+	long goodsId[商品ID];
+	string sdkPayId[sdk档位ID];
+	float amount[价格];
+}
+
+ALProtocol ServerObj_WebPayOrderList[网页支付订单列表]
+{
+	ServerObj_WebPayOrderInfo[] orderList[订单列表];
+}
+
+ALProtocol ServerObj_WebPayRoleInfo[网页支付角色信息]
+{
+	long cid[角色ID];
+	string uid[用户ID];
+	string name[角色昵称];
+	int lvl[等级];
+	int vipLvl[VIP等级];
+}
+
+ALProtocol ServerObj_GuildCooperatePropertyPointLayout[联盟协作-属性据点布局数据]
+{
+	long areaId[区域ID];
+	int rewardPointIndex[奖励据点索引];
+	long posId[奖励据点展示id];
+	Enum.CommonEnum.ESpecAttrType[] attrType[属性据点属性类型列表];
+}
+
+ALProtocol ServerObj_GuildCooperatePointLayoutList[联盟协作-据点布局数据列表]
+{
+	ServerObj_GuildCooperatePropertyPointLayout[] layoutList[布局列表];
+}
+
+///////////////////////////火星探索数据
+ALProtocol ServerObj_MarsDailyEvent[火星-每日事件数据]
+{
+	long eventId;
+	int num;
+}
+ALProtocol ServerObj_MarsDailyEventList[火星-每日事件数据列表]
+{
+	ServerObj_MarsDailyEvent[] list;
+}
+
+ALProtocol ServerObj_MarsDailyEventList[火星-每日事件数据列表]
+{
+	ServerObj_MarsDailyEvent[] list;
+}
+
+ALProtocol ServerObj_MarsExploreEvent_Boss[火星探索事件-BOSS事件]
+{
+	bool hadReward[已领奖];
+}
+
+ALProtocol ServerObj_MarsMine[火星探险-矿数据]
+{
+	long id[实例ID];
+	long cid[归属玩家CID];
+	long refId[配置ID];
+	long serialize[状态序列号];
+	long endShowMs[结束展示时间（毫秒）];
+	long remainNum[剩余资源量];
+	long teamId[当前队伍ID];
+	long startCollectMs[开启征收时间（毫秒）];
+	long collectSpeed[玩家结束采集速度（秒）];
+	long guildId[联盟ID];
+	long troopNum[占据队伍带兵量];
+	long teamPower[占据队伍实力];
+}
+
+//战斗v2.0结构体  --- start
+
+ALProtocol ServerObj_MarsBattleV2_PropertyBonus[火星探险-队伍战斗属性加成信息]
+{
+	int type[属性类型];
+	long value[属性值];
+}
+
+
+
+ALProtocol ServerObj_MarsBattleV2_TeamInfo[火星探险-队伍战斗信息组成]
+{
+	ServerObj_MarsBattleV2_PropertyBonus[] teamMajorBonus[队伍主加成，类似车头加成];
+	Common.MarsObj.MarsBattleV2_MemberInfo[] memberList[参与队伍的所有成员信息];
+}
+
+ALProtocol ServerObj_MarsBattleV2_MemberFightResult[火星探险-队伍战斗单个成员战斗结果信息]
+{
+	long memberId[成员标记Id，用于区分战损];
+	int teamSoldierLvl[兵种等级];
+	long soldierNum[兵种数量];
+	long soldierLossValue[本次战斗兵种损耗数量];
+	long soldierFinalLossValue[兵种最终损耗量];
+}
+
+ALProtocol ServerObj_MarsBattleV2_TeamFightResult[火星探险-队伍战斗结果信息]
+{
+	ServerObj_MarsBattleV2_PropertyBonus[] teamMajorBonus[队伍主加成，类似车头加成];
+	ServerObj_MarsBattleV2_MemberFightResult[] memberList[参与队伍的所有成员信息];
+}
+
+//战斗v2.0结构体 --- end
+
+ALProtocol ServerObj_MarsTeam_OccupyMinePlayer[火星探险-占领火星矿玩家]
+{
+	long cid[玩家CID];
+	long teamId[玩家队伍ID];
+	long teamSoldierPower[玩家队伍单兵实力];
+	long teamTroopNum[玩家队伍带兵量];
+	long teamLossValue[玩家队伍损耗量];
+	long guildId[联盟ID];
+	string cname[玩家昵称];
+	string guildBName[联盟简称];
+}
+
+ALProtocol ServerObj_MarsTeam_OccupyMineResult[火星探险-占领火星矿结果]
+{
+	long cid[玩家CID];
+	long teamId[玩家队伍ID];
+	long teamLossValue[玩家队伍损耗量];
+	long mineInstanceId[火星矿实例ID];
+	long startCollectMs[开始采集的时间];
+	long endCollectMs[采集结束时间];
+	long battleTimeMs[战斗发生时间];
+	bool isWin[成功占领];
+}
+
+ALProtocol ServerObj_MarsMineSettle[火星探险-采集结算数据]
+{
+	long cid[归属玩家CID];
+	long teamId[当前队伍ID];
+	long id[实例ID];
+	long refId[配置ID];
+	long endCollectMs[采集结束时间];
+	long num[采集资源量];
+	long lossValue[队伍损耗数量];
+}
+
+ALProtocol ServerObj_MarsExplorePVPLog[火星探险-PVP日志数据]
+{
+	Enum.MarsEnum.EMarsExplorePVPLogType logType[日志类型];
+	long createdAt[创建时间（毫秒）];
+	bytebuffer logData[日志数据];
+}
+
+ALProtocol ServerObj_OrderPaySimpleInfo[订单支付简要信息]
+{
+	float money[支付金额];
+	string orderId[订单ID];
+	string sdkPayId[sdk档位ID];
+}
+
+ALProtocol ServerObj_WhiteAccList[白名单列表]
+{
+	string[] accList[账号列表];
+}
+
+ALProtocol ServerObj_GuildBoxList[联盟宝箱列表]
+{
+	Enum.GuildEnum.EGuildBoxType boxType[宝箱类型];
+	Common.GuildObj.Guild_BoxInfo[] boxList;
+}
+
+ALProtocol ServerObj_GuildBoxSettle[联盟宝箱结算数据]
+{
+	Enum.GuildEnum.EGuildBoxType boxType[宝箱类型];
+	Common.GuildObj.Guild_BoxInfo[] boxList;
+}
+
+ALProtocol ServerObj_GuildBoxSettleList[联盟宝箱结算数据列表]
+{
+	ServerObj_GuildBoxSettle[] settleList;
+}
+
+ALProtocol ServerObj_GuildAutoDealedInfo[联盟火星自动互助数据]
+{
+	long cid;
+	int lastDate;
+	int count;
+}
+
+ALProtocol ServerObj_GuildAutoDealedList[联盟火星自动互助数据列表]
+{
+	ServerObj_GuildAutoDealedInfo[] list;
+}
+
+ALProtocol ServerObj_RankSettleGuild[排行榜结算时的联盟结算数据]
+{
+	long guildId;
+	long leaderCid;
+}
+
+ALProtocol ServerObj_RankSettleGuildList[排行榜结算时的联盟结算数据列表]
+{
+	ServerObj_RankSettleGuild[] list;
+}
+
+ALProtocol ServerObj_RankSettleActivityTeam[排行榜结算时的活动队伍结算数据]
+{
+	long teamId;
+	long leaderCid;
+}
+
+ALProtocol ServerObj_RankSettleActivityTeamList[排行榜结算时的活动队伍结算数据列表]
+{
+	ServerObj_RankSettleActivityTeam[] list;
+}
+
+ALProtocol ServerObj_ChatUser[聊天系统-玩家数据]
+{
+	long cid;
+	string chatUid;
+	long userSerial;
+}
+
+ALProtocol ServerObj_ActivityTeamUser[活动队伍-玩家数据]
+{
+	long cid;
+}
+
+ALProtocol ServerObj_ActivityTeamGroup[活动队伍-活动下的队伍]
+{
+	long teamId;
+	long leaderCid;
+}
+
+ALProtocol ServerObj_ActivityTeamGroupList[活动队伍-活动下的队伍列表]
+{
+	long groupId[活动组ID];
+	ServerObj_ActivityTeamGroup[] teamList[队伍列表];
+}
+
+ALProtocol ServerObj_GameLogicTestAdd[GameLogic测试附加信息]
+{
+	long param1;
+}
+ALProtocol ServerObj_GameLogicTestRet[GameLogic测试返回信息]
+{
+	long param1;
+}
+
+ALProtocol ServerObj_GLSTeamMember[GLS GroupMgr-队伍成员数据]
+{
+	long cid[成员CID];
+}
+
+ALProtocol ServerObj_FirstTeam_Team[GLS GroupMgr-队伍数据]
+{
+	long leaderCid[队长CID];
+	ServerObj_GLSTeamMember[] memberList[成员列表];
+}
+
+ALProtocol ServerObj_FirstTeam_Player[FirstTeam活动中玩家需要上传的数据]
+{
+}

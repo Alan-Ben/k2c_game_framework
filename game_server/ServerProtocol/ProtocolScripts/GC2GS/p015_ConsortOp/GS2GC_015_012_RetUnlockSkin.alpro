@@ -1,0 +1,5 @@
+JavaPackage GS2GC.p015_ConsortOp;
+csharpspace GS2GC.p015_ConsortOp;
+ALProtocol GS2GC_015_012_RetUnlockSkin [家人-解锁皮肤] <15, 12>
+{
+}

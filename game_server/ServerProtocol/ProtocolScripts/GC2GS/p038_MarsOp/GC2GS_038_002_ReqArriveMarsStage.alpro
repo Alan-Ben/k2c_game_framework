@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p038_MarsOp;
+csharpspace GC2GS.p038_MarsOp;
+
+ALProtocol GC2GS_038_002_ReqArriveMarsStage[火星-到达火星指定阶段] <38, 2>
+{
+	int stage;
+}

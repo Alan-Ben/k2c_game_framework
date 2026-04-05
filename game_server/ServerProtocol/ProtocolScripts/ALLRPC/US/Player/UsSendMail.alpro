@@ -1,0 +1,18 @@
+﻿JavaPackage ALLRPC.US.Player;
+
+import Common.MailObj.alpro;
+
+ALProtocol UsSendMail_Req
+{
+	long cid[玩家cid];
+	int gameEvent[事件类型];
+	Common.MailObj.Mail_Data mailData[邮件内容];
+}
+
+ALProtocol UsSendMail_Return
+{
+}
+
+//[RPC]发送玩家邮件
+//[CLASS_PACKAGE] : AllRpcData.US_Service.Player
+//[DEALER_PACKAGE] : USServer.RPCDispatcher.Player

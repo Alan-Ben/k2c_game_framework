@@ -1,0 +1,8 @@
+JavaPackage GC2GS.p015_ConsortOp;
+csharpspace GC2GS.p015_ConsortOp;
+
+ALProtocol GC2GS_015_021_ReqConsortDrawDialogueReward [家人-领取对话奖励] <15, 21>
+{
+    long consortId[家人ID];
+    long dialogueId[对话ID];
+}

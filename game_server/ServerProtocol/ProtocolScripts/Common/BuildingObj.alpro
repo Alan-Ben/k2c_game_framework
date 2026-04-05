@@ -1,0 +1,37 @@
+﻿import Common.NPInclude.alpro;
+import Common.NPCommonObj.alpro;
+
+import Enum.BuildingEnum.alpro;
+
+JavaPackage Common.BuildingObj;
+csharpspace Common.BuildingObj;
+
+ALProtocol Building_Farm[农田建筑数据]
+{
+	long buildingId[建筑ID];
+	int lvl[等级];
+	long lastClickMS[上次点击时间点（毫秒）];
+}
+
+ALProtocol Building_Business[经营建筑数据]
+{
+	long buildingId[建筑ID];
+	int lvl[等级];
+	int employeeCount[雇员数量];
+	long[] productList[产品列表];
+}
+
+ALProtocol Building_EffectGainWorkers[效果获得员工数据]
+{
+	long buildingId[建筑ID];
+	int employeeCount[雇员数量];
+}
+
+ALProtocol Building_FarmMultipleInfo[农田暴击信息]
+{
+	int critCount[暴击次数];
+	long lastRefreshTimeMs[上次刷新暴击次数时间 毫秒];
+
+	long clickNum[点击次数];
+	long randomSeed[随机种子];
+}

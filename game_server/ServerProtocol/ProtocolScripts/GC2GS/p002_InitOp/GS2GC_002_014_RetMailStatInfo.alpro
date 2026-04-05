@@ -1,0 +1,8 @@
+﻿﻿import Common.MailObj.alpro;
+JavaPackage GS2GC.p002_InitOp;
+csharpspace GS2GC.p002_InitOp;
+
+ALProtocol GS2GC_002_014_RetMailStatInfo <2, 14>
+{
+	Common.MailObj.Mail_StatInfo mailStatInfo[邮件统计信息];
+}

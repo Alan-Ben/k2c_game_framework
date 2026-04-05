@@ -1,0 +1,9 @@
+JavaPackage NP2US_RB.p010_MarsMineOp;
+
+/**********************************************************
+ * 返回火星矿是否被其他公会攻击过
+ **********************************************************/
+ALProtocol NP2US_RB_010_002_RetGetMarsHadAttackByOtherTag <10, 2>
+{
+	bool hasAttacked[是否被其他公会攻击过];
+}

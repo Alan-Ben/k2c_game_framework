@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p034_InnOp;
+csharpspace GC2GS.p034_InnOp;
+
+ALProtocol GC2GS_034_008_ReqInnUnlockGuest[旅店解锁客人] <34, 8>
+{
+    long guestId[客人ID];
+}

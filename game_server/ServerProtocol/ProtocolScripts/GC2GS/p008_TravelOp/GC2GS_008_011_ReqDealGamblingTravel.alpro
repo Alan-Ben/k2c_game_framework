@@ -1,0 +1,9 @@
+JavaPackage GC2GS.p008_TravelOp;
+csharpspace GC2GS.p008_TravelOp;
+
+ALProtocol GC2GS_008_011_ReqDealGamblingTravel [处理博彩游历事件] <8, 11>
+{
+    long instanceId[待处理事件实例ID];
+    int betAmount[押注钻石数量];
+    bool isAbandon[是否放弃事件];
+}

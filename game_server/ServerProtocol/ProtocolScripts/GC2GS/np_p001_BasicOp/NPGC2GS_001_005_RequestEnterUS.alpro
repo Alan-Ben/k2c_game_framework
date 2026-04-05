@@ -1,0 +1,11 @@
+﻿JavaPackage NPGC2GS.p001_BasicOp;
+csharpspace NPGC2GS.p001_BasicOp;
+
+/**********************************************************
+ * 申请进入US服务器，服务器收到此消息才会建立与US的连接
+ **********************************************************/
+ALProtocol NPGC2GS_001_005_RequestEnterUS <1, 5>
+{
+	long clientSerialize[客户端用于识别的序列号];
+	int serverLogicId[用户挑选的US服务器LogicId];
+}

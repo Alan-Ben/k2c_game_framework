@@ -1,0 +1,7 @@
+﻿JavaPackage GS2GC.p034_InnOp;
+csharpspace GS2GC.p034_InnOp;
+
+ALProtocol GS2GC_034_063_OnInnFirstTimeUpgradeTimeMsChg [旅店首次升级时间变更] <34, 63>
+{
+    long firstTimeUpgradeTimeMs[旅店首次升级时间（毫秒）];
+}

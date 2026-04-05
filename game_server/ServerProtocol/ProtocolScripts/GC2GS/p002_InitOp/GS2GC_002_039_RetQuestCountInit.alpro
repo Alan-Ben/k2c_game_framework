@@ -1,0 +1,11 @@
+﻿import Common.QuestObj.alpro;
+JavaPackage GS2GC.p002_InitOp;
+csharpspace GS2GC.p002_InitOp;
+
+/**********************************************************
+ * 任务数据初始化
+ **********************************************************/
+ALProtocol GS2GC_002_039_RetQuestCountInit [通过分页推送初始化] <2, 39>
+{
+	
+}

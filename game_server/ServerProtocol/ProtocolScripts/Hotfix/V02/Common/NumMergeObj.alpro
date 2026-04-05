@@ -1,0 +1,36 @@
+JavaPackage Hotfix.V02.Common.NumMergeObj;
+csharpspace Hotfix.Common.NumMergeObj;
+
+import Hotfix.V02.Enum.NumMergeEnum.alpro;
+
+ALProtocol NumMerge_BlockBase[数字合并-棋子基础信息]
+{
+	int level[棋子等级 0=空 1-10=等级];
+	int buffStep[buff还有多少步消失 0=无buff];
+}
+
+ALProtocol NumMerge_BlockList[数字合并-棋子列表]
+{
+	NumMerge_BlockBase[] blocks[棋子列表];
+}
+
+ALProtocol NumMerge_BoardData[数字合并-棋盘数据]
+{
+	int currentStep[当前是第几步];
+	NumMerge_BlockBase[] blocks[16个格子数据];
+	long currentScore[当前得分];
+	long maxScore[单局积分最大值];
+	long totalScore[累计得分];
+}
+
+ALProtocol NumMerge_BoxInfo[数字合并-宝箱信息]
+{
+	int level[领取到的宝箱等级];
+	long score[当前剩余分数];
+}
+
+ALProtocol NumMerge_Info[数字合并-完整状态信息]
+{
+	NumMerge_BoardData boardData[棋盘数据];
+	NumMerge_BoxInfo boxInfo[宝箱信息];
+}

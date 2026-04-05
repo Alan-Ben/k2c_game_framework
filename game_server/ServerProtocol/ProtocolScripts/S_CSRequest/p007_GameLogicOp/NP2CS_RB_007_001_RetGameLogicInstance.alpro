@@ -1,0 +1,6 @@
+﻿JavaPackage NP2CS_RB.np_p007_GameLogicOp;
+
+ALProtocol NP2CS_RB_007_001_RetGameLogicInstance <7, 1>
+{
+	long instanceId;
+}

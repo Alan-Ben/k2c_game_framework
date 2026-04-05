@@ -1,0 +1,76 @@
+﻿csharpspace Common.ClientData;
+
+ALProtocol Common_ClientData[通用ClientData]
+{
+	bool isReadStoryVideo[是否看过开篇剧情];
+	bool isSelectLandingMarsArea[是否选择了登录火星的地点];
+	bool isFinishStoreReviews[是否完成了商店评价];
+}
+
+ALProtocol Shop_ClientInfoData
+{
+	long shopId[商店id];
+	long lastShowTimeS[最后一次显示的时间戳];
+	long nextRefreshTimeMs[下一次刷新时间戳];
+}
+
+ALProtocol Shop_ClientInfo[商店-客户端数据]
+{
+	Shop_ClientInfoData[] ShopInfoData[商店信息数据];
+}
+
+ALProtocol Consort_ClientInfoData
+{
+	long consortId[情人id];
+	long[] lookedSkinIdList;
+	long[] lookedExperienceIdList;
+}
+
+ALProtocol Consort_ClientInfo[情人-客户端数据]
+{
+	bool isShowAKeyUnlockSfx[一键召唤解锁表现];
+	Consort_ClientInfoData[] consortInfoData[一键召唤解锁表现];
+	long consortEntranceShowConsortId[妃子入口展示的妃子ID];
+}
+
+ALProtocol AvatarGacha_PoolDataClientData[情人-客户端数据]
+{
+	long poolRefId[卡池Id];
+	int lastSeeTimeSec[上次查看卡池的时间];
+}
+
+ALProtocol AvatarGacha_ClientData
+{
+	AvatarGacha_PoolDataClientData[] poolList;
+}
+
+ALProtocol Travel_ClientData[游历-客户端数据]
+{
+	long[] unlockedPosList[已解锁的位置列表];
+	bool hadEnteredTravel[是否进入过游历界面];
+}
+
+ALProtocol Announcement_ClientData[运营公告-客户端数据]
+{
+	long maxId[最大的运营公告id];
+	long[] readIdList[已读列表];
+}
+
+ALProtocol GuildConstruct_ClientData[联盟建设-客户端数据]
+{
+	int date[日期];
+	long[] constructRefIdList[建设id列表];
+}
+
+ALProtocol ActivityRankRush_ClientData[活动冲榜-客户端数据]
+{
+	long instanceId[活动实例id];
+	long rankId[排行榜id];
+	long recordInitialValue[记录的冲榜初始值];
+	long ranking[排名];
+}
+
+ALProtocol ActivityRankRushList_ClientData[活动冲榜-客户端数据]
+{
+	ActivityRankRush_ClientData[] dataList[数据列表];
+}

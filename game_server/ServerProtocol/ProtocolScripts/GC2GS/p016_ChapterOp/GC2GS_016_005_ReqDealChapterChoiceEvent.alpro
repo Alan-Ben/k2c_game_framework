@@ -1,0 +1,7 @@
+JavaPackage GC2GS.p016_ChapterOp;
+csharpspace GC2GS.p016_ChapterOp;
+
+ALProtocol GC2GS_016_005_ReqDealChapterChoiceEvent [处理选项事件] <16, 5>
+{
+    long optionId[选项ID];
+}

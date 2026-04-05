@@ -1,0 +1,5 @@
+﻿JavaPackage NP2GLS_R.p001_BasicOp;
+
+ALProtocol NP2GLS_RB_001_007_QuitInstance <1, 7>
+{
+}

@@ -1,0 +1,10 @@
+﻿JavaPackage GS2GC.p007_CommOp;
+csharpspace GS2GC.p007_CommOp;
+
+import Common.StageGoalObj.alpro;
+
+ALProtocol GS2GC_007_070_OnStageGoalTaskChg <7, 70>
+{
+	long step;
+    Common.StageGoalObj.StageGoalTask_Info task[阶段任务数据];
+}

@@ -1,0 +1,8 @@
+﻿JavaPackage GC2GS.p013_HeroOp;
+csharpspace GC2GS.p013_HeroOp;
+
+ALProtocol GC2GS_013_024_ReqEquipAwaken[藏品觉醒]<13, 24> 
+{
+    long dbId[数据id];
+    long groupId[消耗组ID];
+}

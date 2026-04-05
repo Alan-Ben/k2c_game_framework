@@ -1,0 +1,15 @@
+﻿JavaPackage ALLRPC.CS.Common;
+
+import Common.ServerObj.alpro;
+
+ALProtocol GetPHPParamList_Req
+{
+}
+
+ALProtocol GetPHPParamList_Return
+{
+	bool isSucc;
+	
+	long serial;
+	Common.ServerObj.ServerObj_PHPParamList pListObj[平台参数列表];
+}

@@ -1,0 +1,6 @@
+﻿JavaPackage WCGCS2US_R.p003_CommOp;
+
+ALProtocol NP2US_R_003_018_ReqSendServerMailDel[删除全服邮件] <3, 18>
+{
+	long phpMailId[全服邮件平台ID];
+}

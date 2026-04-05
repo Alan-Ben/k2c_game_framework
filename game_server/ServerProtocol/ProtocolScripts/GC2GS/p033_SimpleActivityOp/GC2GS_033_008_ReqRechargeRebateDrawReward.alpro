@@ -1,0 +1,9 @@
+JavaPackage GC2GS.p033_SimpleActivityOp;
+csharpspace GC2GS.p033_SimpleActivityOp;
+
+ALProtocol GC2GS_033_008_ReqRechargeRebateDrawReward[请求领取充值返利奖励] <33, 8>
+{
+	long activityInstanceId[活动实例ID];
+	long groupId[返利组ID];
+	long stepId[档位ID];
+}

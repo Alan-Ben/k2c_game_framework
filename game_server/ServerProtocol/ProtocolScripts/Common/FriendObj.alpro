@@ -1,0 +1,22 @@
+﻿import Common.NPInclude.alpro;
+
+JavaPackage Common.FriendObj;
+csharpspace Common.FriendObj;
+
+ALProtocol Friend_ApplyInfo[申请数据]
+{
+	long applyCid[申请玩家CID];
+	int applyTimeS[申请时间];
+}
+
+ALProtocol Friend_Info[好友数据]
+{
+	long fcid[好友CID];
+}
+
+ALProtocol Friend_CustomGroupInfo[自定义好友分组数据]
+{
+	long dbId[数据库id];
+	string name[分组名];
+	long[] cidList[好友列表];
+}

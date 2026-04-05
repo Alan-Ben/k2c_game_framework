@@ -1,0 +1,13 @@
+JavaPackage Common.RushExchangeObj;
+csharpspace Common.RushExchangeObj;
+
+ALProtocol RushExchange_Info[急速兑换信息]
+{
+	long groupId[礼包组ID];
+	long refId[当前礼包配置ID];
+	long activeTimeMs[当前兑换开始时间 如果没兑换影响刷新礼包时间];
+	long exchangeTimeMs[兑换时间 影响什么时候可以领奖];
+	bool isRewarded[是否已领奖];
+	int todayExchangeCount[当天兑换次数];
+	long nextResetCountTimeMs[下次刷新兑换次数时间];
+}

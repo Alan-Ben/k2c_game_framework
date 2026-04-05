@@ -1,0 +1,6 @@
+﻿JavaPackage GS2GC.p038_MarsOp;
+csharpspace GS2GC.p038_MarsOp;
+
+ALProtocol GS2GC_038_003_RetSendDoneMarquee <38, 3>
+{
+}

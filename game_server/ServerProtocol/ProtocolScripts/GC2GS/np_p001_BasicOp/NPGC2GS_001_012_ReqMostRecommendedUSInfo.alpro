@@ -1,0 +1,10 @@
+﻿JavaPackage NPGC2GS.p001_BasicOp;
+csharpspace NPGC2GS.p001_BasicOp;
+
+/**********************************************************
+ * 查询最推荐的服务器logicId
+ **********************************************************/
+ALProtocol NPGC2GS_001_012_ReqMostRecommendedUSInfo <1, 12>
+{
+	
+}

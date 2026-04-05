@@ -1,0 +1,6 @@
+﻿JavaPackage GS2GC.p035_MuseumOp;
+csharpspace GS2GC.p035_MuseumOp;
+
+ALProtocol GS2GC_035_001_RetMuseumItemUpgrade <35, 1>
+{
+}

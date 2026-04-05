@@ -1,0 +1,7 @@
+﻿JavaPackage GS2GC.p011_ClientDataOp;
+csharpspace GS2GC.p011_ClientDataOp;
+
+ALProtocol GS2GC_011_003_RetWebEncryptedData <11, 3>
+{
+	string data;
+}

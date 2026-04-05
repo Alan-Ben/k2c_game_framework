@@ -1,0 +1,6 @@
+JavaPackage GS2GC.p015_ConsortOp;
+csharpspace GS2GC.p015_ConsortOp;
+
+ALProtocol GS2GC_015_020_RetConsortChooseDialogueOption [家人-选择对话选项] <15, 20>
+{
+}

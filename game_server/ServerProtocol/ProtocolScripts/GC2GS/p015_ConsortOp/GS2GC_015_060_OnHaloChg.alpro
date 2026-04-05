@@ -1,0 +1,8 @@
+JavaPackage GS2GC.p015_ConsortOp;
+csharpspace GS2GC.p015_ConsortOp;
+import Common.ConsortObj.alpro;
+ALProtocol GS2GC_015_060_OnHaloChg [家人星辉数据变更] <15, 60>
+{
+    long consortId[空];
+    Common.ConsortObj.Consort_Halo halo[家人星辉数据];
+}

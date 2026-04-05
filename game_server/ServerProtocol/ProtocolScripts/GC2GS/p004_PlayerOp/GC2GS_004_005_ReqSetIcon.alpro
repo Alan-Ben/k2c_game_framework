@@ -1,0 +1,10 @@
+﻿JavaPackage GC2GS.p004_PlayerOp;
+csharpspace GC2GS.p004_PlayerOp;
+
+/**********************************************************
+ * 设置玩家当前头像
+ **********************************************************/
+ALProtocol GC2GS_004_005_ReqSetIcon <4, 5>
+{
+    long iconId;
+}

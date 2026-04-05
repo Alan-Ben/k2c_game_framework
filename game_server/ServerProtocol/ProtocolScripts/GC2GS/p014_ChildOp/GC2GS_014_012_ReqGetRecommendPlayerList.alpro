@@ -1,0 +1,6 @@
+JavaPackage GC2GS.p014_ChildOp;
+csharpspace GC2GS.p014_ChildOp;
+ALProtocol GC2GS_014_012_ReqGetRecommendPlayerList [联姻请求-获取推荐玩家列表] <14, 12>
+{
+    long adultId[匹配的子嗣实例ID];
+}

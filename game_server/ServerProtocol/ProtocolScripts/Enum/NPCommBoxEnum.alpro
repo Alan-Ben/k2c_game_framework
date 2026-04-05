@@ -1,0 +1,11 @@
+﻿JavaPackage NPEnum;
+csharpspace NPEnum;
+
+ALEnum ENPBoxChatStatus[聊天宝箱状态]
+{
+	NONE;
+	IS_INVAILD[已失效];
+	IS_LIMIT[达到上限];
+	IS_EMPTY[已领完];
+	IS_GAINED[已领取];
+}

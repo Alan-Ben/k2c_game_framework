@@ -1,0 +1,5 @@
+JavaPackage GS2GC.p015_ConsortOp;
+csharpspace GS2GC.p015_ConsortOp;
+ALProtocol GS2GC_015_010_RetUpgradeHaloLvl [家人-升级星辉等级] <15, 10>
+{
+}

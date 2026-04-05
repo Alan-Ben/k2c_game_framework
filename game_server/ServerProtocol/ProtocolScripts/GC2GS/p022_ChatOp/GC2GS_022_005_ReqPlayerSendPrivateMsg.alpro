@@ -1,0 +1,10 @@
+﻿JavaPackage GC2GS.p022_ChatOp;
+csharpspace GC2GS.p022_ChatOp;
+
+ALProtocol GC2GS_022_005_ReqPlayerSendPrivateMsg[发送私聊消息] <22, 5>
+{
+    long receiverCid[接收玩家CID];
+    int msgType[消息类型,解释消息内容];
+    bytebuffer gameUser[发送者信息];
+    bytebuffer gameContent[消息内容];
+}

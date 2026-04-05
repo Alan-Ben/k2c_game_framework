@@ -1,0 +1,6 @@
+JavaPackage NP2HS_R.p001_HSOp;
+
+ALProtocol NP2HS_R_001_004_ReqCheckIsInWhiteList <1, 4>
+{
+    string accName;    
+}

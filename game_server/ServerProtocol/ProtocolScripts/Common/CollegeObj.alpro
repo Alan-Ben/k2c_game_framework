@@ -1,0 +1,16 @@
+﻿JavaPackage Common.CollegeObj;
+csharpspace Common.CollegeObj;
+
+ALProtocol College_SeatInfo[大学座位信息]
+{
+	int index[索引];
+	long heroId[大臣id];
+	long remainTimeMs[剩余时间];
+}
+
+ALProtocol College_StudySettleInfo[大学学习结束信息]
+{
+	long heroId[大臣id];
+	long talentExp[资质经验];
+	long skillPoint[技能点];
+}

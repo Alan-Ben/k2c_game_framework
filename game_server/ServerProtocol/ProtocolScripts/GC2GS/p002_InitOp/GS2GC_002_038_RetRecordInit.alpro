@@ -1,0 +1,8 @@
+﻿import Common.NPPlayerInfo.alpro;
+JavaPackage GS2GC.p002_InitOp;
+csharpspace GS2GC.p002_InitOp;
+
+ALProtocol GS2GC_002_038_RetRecordInit <2, 38>
+{
+	Common.NPPlayerInfo.PlayerInfo_Record[] recordList[记录列表];
+}

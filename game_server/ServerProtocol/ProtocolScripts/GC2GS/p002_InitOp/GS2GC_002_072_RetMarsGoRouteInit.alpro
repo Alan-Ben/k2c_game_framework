@@ -1,0 +1,12 @@
+﻿JavaPackage GS2GC.p002_InitOp;
+csharpspace GS2GC.p002_InitOp;
+
+import Common.MarsObj.alpro;
+
+ALProtocol GS2GC_002_072_RetMarsGoRouteInit[火星-前往火星数据初始化] <2, 72>
+{
+	bool isAllDone[是否全部完成];
+	int stage[当前阶段];
+	long startMs[开始时间];
+	long stageStartMs[当前阶段开始时间（毫秒）];
+}

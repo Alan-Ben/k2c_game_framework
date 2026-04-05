@@ -1,0 +1,88 @@
+﻿using System;
+using ALPackage;
+
+namespace ALBasicProtocolPack
+{
+    public class ALBasicProtocolMainOrderDealer
+    {
+        private byte mainOrder;
+        private _IALBasicProtocolSubOrderInterface[] dealArray = null;
+
+        /*****************
+         * 带入主协议号以及处理的协议最大的子协议号，进行协议处理队列的初始化
+         * 
+         * @author alzq.z
+         * @time   Feb 19, 2013 10:52:55 AM
+         */
+        public ALBasicProtocolMainOrderDealer(byte _mainOrder, int _protocolMaxTypeNum)
+        {
+            mainOrder = _mainOrder;
+            dealArray = new _IALBasicProtocolSubOrderInterface[_protocolMaxTypeNum + 1];
+        }
+
+        /************
+         * 获取主协议号
+         * 
+         * @author alzq.z
+         * @time   Feb 19, 2013 11:38:46 AM
+         */
+        public byte getMainOrder() { return mainOrder; }
+
+        /****************
+         * 设置处理对象，直接设置到数组中保证处理速度
+         * 
+         * @author alzq.z
+         * @time   Feb 19, 2013 10:52:50 AM
+         */
+        public void regDealer(_IALBasicProtocolSubOrderInterface _dealer)
+        {
+            if (null == dealArray)
+                return;
+
+            if (_dealer.getMainOrder() != mainOrder)
+            {
+                //主协议号不匹配，提示警告
+                UnityEngine.Debug.LogError(mainOrder + " doesn't match the dealer's(" + _dealer.GetType() + ") main order: " + _dealer.getMainOrder() + "!");
+            }
+
+            int subOrder = ALCommon.byte2int(_dealer.getSubOrder());
+            if (subOrder >= dealArray.Length)
+            {
+                UnityEngine.Debug.LogError(mainOrder + " Protocol dispather don't have " + subOrder + " size list to save the dealer obj!");
+                return;
+            }
+
+            dealArray[subOrder] = _dealer;
+        }
+
+        /**********************
+         * 根据协议编号分发协议并进行处理
+         * 
+         * @author alzq.z
+         * @time   Feb 19, 2013 10:52:46 AM
+         */
+        public bool dispathProtocol(_IALProtocolDealer _dealer, ALProtocolBuf _msg)
+        {
+            if (null == _msg)
+                return false;
+
+            //获取子协议编号
+            byte subType = _msg.get();
+
+            //编号超出数组大小，直接返回失败
+            if (subType >= dealArray.Length)
+            {
+                return false;
+            }
+
+            //处理具体协议对象
+            if (dealArray[subType] != null)
+            {
+                dealArray[subType].dealProtocol(_dealer, _msg);
+                return true;
+            }
+
+            return false;
+        }
+    }
+}

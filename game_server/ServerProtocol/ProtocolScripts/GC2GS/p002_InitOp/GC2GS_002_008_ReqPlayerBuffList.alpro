@@ -1,0 +1,9 @@
+JavaPackage GC2GS.p002_InitOp;
+csharpspace GC2GS.p002_InitOp;
+
+/**********************************************************
+ * 请求BUFF信息列表
+ **********************************************************/
+ALProtocol GC2GS_002_008_ReqPlayerBuffList <2, 8>
+{
+}

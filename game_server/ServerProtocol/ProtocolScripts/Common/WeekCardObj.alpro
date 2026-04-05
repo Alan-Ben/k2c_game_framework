@@ -1,0 +1,92 @@
+﻿JavaPackage Common.WeekCardObj;
+csharpspace Common.WeekCardObj;
+import Common.NPCommonObj.alpro;
+import Enum.LevyEnum.alpro;
+
+//以下为周卡信息
+ALProtocol WeekCard_ExtraInfo_DealPolicy[周卡-额外设置-懒汉策略]
+{
+	bool isLazy[是否懒汉 即只处理超过上限的];
+}
+
+ALProtocol WeekCard_ExtraInfo_CollegeStudy[周卡-额外设置-大学学习]
+{
+	long[] heroList[大臣列表];
+	bool isClose[是否关闭 关闭则需要给玩家留下可以收获的];
+}
+
+ALProtocol WeekCard_SingleSettingInfo[周卡-设置信息]
+{
+	Enum.CommonEnum.EWeekCardSettleType type[类型];
+	bytebuffer extraInfo[额外设置];
+}
+
+ALProtocol WeekCard_Info[周卡-信息]
+{
+	int expireTimeTagS[过期时间 超时时间标记，单位秒];
+	bool hadUseFreeTrial[是否使用过免费试用];
+	Enum.CommonEnum.EWeekCardNPCType npcType[NPC类型];
+	long npcId;
+}
+
+//以下为周卡结算信息
+ALProtocol WeekCard_ConsortRndCallInfo[周卡-妃子倾诉结算信息]
+{
+	long consortId[妃子id];
+	long skillPoint[获得势力值];
+}
+
+ALProtocol WeekCard_TravelGotConsrtInfo[周卡-游历已获得妃子结算信息]
+{
+	long consortId[妃子id];
+	long intimacy[获得亲密度];
+}
+
+ALProtocol WeekCard_TravelUngetConsortInfo[周卡-游历未获得妃子结算信息]
+{
+	long consortId[妃子id];
+	long like[获得好感值];
+}
+
+ALProtocol WeekCard_SettleInfo_NumInfo[周卡-次数结算信息（政务结算、子嗣培养、大学学习）]
+{
+	int num[次数];
+}
+
+ALProtocol WeekCard_SettleInfo_LevyInfo[周卡-征收结算信息]
+{
+	Enum.LevyEnum.ELevy_Type type;
+	int num[次数];
+}
+
+ALProtocol WeekCard_SettleInfo_LevyList[周卡-征收结算列表]
+{
+	WeekCard_SettleInfo_LevyInfo[] list[列表];
+}
+
+ALProtocol WeekCard_SettleInfo_ConsortRndCall[周卡-妃子倾诉结算列表]
+{
+	int num[次数];
+	int childNum[获得子嗣数量];
+	WeekCard_ConsortRndCallInfo[] list;
+}
+
+ALProtocol WeekCard_SettleInfo_Travel[周卡-游历结算信息]
+{
+	int num[次数];
+	WeekCard_TravelGotConsrtInfo[] gotConsrtlist[已获得妃子列表];
+	WeekCard_TravelUngetConsortInfo[] ungetConsortlist[未获得妃子列表];
+}
+
+
+ALProtocol WeekCard_SettleDetailInfo[周卡-详细结算信息]
+{
+	Enum.CommonEnum.EWeekCardSettleType type;
+	bytebuffer detailInfo;
+}
+
+ALProtocol WeekCard_SettleInfo[周卡-详细结算列表]
+{
+	WeekCard_SettleDetailInfo[] detailList[详细信息列表];
+	Common.NPCommonObj.NPCommon_ItemInfo[] itemList[事件奖励物品列表];
+}

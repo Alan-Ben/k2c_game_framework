@@ -1,0 +1,242 @@
+/************************
+关键字：
+$Module	:模块
+$Action	:行为，包含$req{} 和$ret{}
+$Push	:推送协议
+$Req	:请求包
+$Ret	:返回包
+************************/
+
+$Module 015 Consort //家人
+
+$Action 001 UpgradeFettersLvl[家人-升级羁绊等级]
+(
+	$req	
+	{
+		long consortId[家人ID];
+	}
+	$ret	
+	{
+	}
+)
+
+$Action 002 UnderstandBusinessSkill[家人-领悟经营技能等级]
+(
+	$req	
+	{
+		long consortId[家人ID];
+		long skillId[经营技能ID];
+		bool isAdvanced[是否高级领悟];
+	}
+	$ret	
+	{
+		bool isProUp[操作是否成功];
+	}
+)
+
+$Action 003 UpgradeBlessSkill[家人-升级加护技能等级]
+(
+	$req	
+	{
+		long consortId[家人ID];
+		long skillId[经营技能ID];
+	}
+	$ret	
+	{
+	}
+)
+
+$Action 004 CallRand[家人-随机邀约]
+(
+	$req	
+	{
+	}
+	$ret	
+	{
+		Common.ConsortObj.Consort_CallRes res[邀约结果];
+	}
+)
+
+$Action 005 CallAkey[家人-一键邀约]
+(
+	$req	
+	{
+	}
+	$ret	
+	{
+		Common.ConsortObj.Consort_CallRes[] resList[邀约结果列表];
+	}
+)
+
+$Action 006 CallAppoint[家人-指定邀约]
+(
+	$req	
+	{
+		long consortId[家人ID];
+		long consortTravelId[家人邀约类型ID];
+	}
+	$ret	
+	{
+		long addCharmPoint[增加的加护点数];
+	}
+)
+
+$Action 007 SetCurSkin[家人-设置当前皮肤]
+(
+	$req	
+	{
+		long consortId[家人ID];
+		long skinId[皮肤ID];
+	}
+	$ret	
+	{
+	}
+)
+
+$Action 008 GetRoundTravelCount[家人-获取周期出游次数]
+(
+	$req	
+	{
+		long consortTravelId[家人邀约类型ID];
+	}
+	$ret	
+	{
+		long counter[出游次数];
+	}
+)
+
+$Action 009 GetAllBusinessSkill[家人-获取所有经营技能数据]
+(
+	$req	
+	{
+		long consortId[家人ID];
+	}
+	$ret	
+	{
+		Common.ConsortObj.Consort_BusinessSkill[] dataList[结果列表];
+	}
+)
+
+$Action 010 UpgradeHaloLvl[家人-升级星辉等级]
+(
+	$req	
+	{
+		long consortId[家人ID];
+	}
+	$ret	
+	{
+	}
+)
+
+$Action 011 GetCgUnlockReward[家人-领取CG解锁奖励]
+(
+	$req	
+	{
+		long cgId[家人Cg配置ID];
+	}
+	$ret	
+	{
+	}
+)
+
+$Action 012 UnlockSkin[家人-解锁皮肤]
+(
+	$req	
+	{
+		long skinId[皮肤ID];
+	}
+	$ret	
+	{
+	}
+)
+
+$Action 013 UnlockHalo[家人-解锁星辉]
+(
+	$req	
+	{
+		long consortId[家人ID];
+	}
+	$ret	
+	{
+	}
+)
+
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+
+$Push 050 OnConsortAdd[家人新增推送]
+{
+   Common.ConsortObj.Consort_Info consort;
+   Enum.ConsortEnum.EConsortSourceType sourceType[来源类型];
+}
+
+$Push 051 OnConsortIntimacyChg[家人亲密度推送]
+{
+	long consortId;
+	long intimacy;
+}
+
+$Push 052 OnConsortCharmChg[家人加护力推送]
+{
+	long consortId;
+	long charm;
+}
+
+$Push 053 OnConsortCharmPointChg[家人加护点推送]
+{
+	long consortId;
+	long charmPoint;
+}
+
+$Push 054 OnTriggeredCallDlgIdAdd[已触发的邀约剧情ID推送]
+{
+	long consortId;
+	long triggeredCallStroryId;
+}
+
+$Push 055 OnSkinAdd[家人新增皮肤推送]
+{
+	long consortId;
+	Common.ConsortObj.Consort_SkinInfo skin[皮肤数据];
+}
+
+$Push 056 OnCurSkinChg[家人当前皮肤变更]
+{
+	long consortId;
+	long curSkinId[当前皮肤ID];
+}
+
+$Push 057 OnFettersChg[家人羁绊数据变更]
+{
+	long consortId;
+	Common.ConsortObj.Consort_Fetters fetters[家人羁绊数据];
+}
+
+$Push 058 OnBusinessSkillChg[家人经营技能数据变更]
+{
+	long consortId;
+	Common.ConsortObj.Consort_BusinessSkill skill[家人经营技能数据];
+}
+
+$Push 059 OnBlessSkillChg[家人加护技能数据变更]
+{
+	long consortId;
+	Common.ConsortObj.Consort_BlessSkill skill[家人加护技能数据];
+}
+
+$Push 060 OnHaloChg[家人星辉数据变更]
+{
+	long consortId;
+	Common.ConsortObj.Consort_Halo halo[家人星辉数据];
+}
+
+$Push 061 OnCgChg[家人CG数据变更]
+{
+	Common.ConsortObj.Consort_CGInfo cg[家人CG数据];
+}
+
+$Push 062 OnRandCallConsortChg[随机邀约中指定的妃子ID列表变更]
+{
+	long[] consortIdList;
+}

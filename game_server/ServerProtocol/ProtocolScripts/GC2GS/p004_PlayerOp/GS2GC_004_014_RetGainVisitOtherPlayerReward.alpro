@@ -1,0 +1,9 @@
+﻿JavaPackage GS2GC.p004_PlayerOp;
+csharpspace GS2GC.p004_PlayerOp;
+
+﻿import Common.NPCommonObj.alpro;
+
+ALProtocol GS2GC_004_014_RetGainVisitOtherPlayerReward <4, 14>
+{
+	Common.NPCommonObj.NPCommon_ItemInfo[] itemList[物品列表];
+}

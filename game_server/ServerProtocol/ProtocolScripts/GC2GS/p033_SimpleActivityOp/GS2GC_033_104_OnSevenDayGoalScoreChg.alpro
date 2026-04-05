@@ -1,0 +1,7 @@
+﻿JavaPackage GS2GC.p033_SimpleActivityOp;
+csharpspace GS2GC.p033_SimpleActivityOp;
+
+ALProtocol GS2GC_033_104_OnSevenDayGoalScoreChg <33, 104>
+{
+	long score;
+}

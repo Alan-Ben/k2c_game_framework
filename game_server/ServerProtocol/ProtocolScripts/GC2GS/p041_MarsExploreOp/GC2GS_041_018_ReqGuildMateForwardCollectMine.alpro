@@ -1,0 +1,12 @@
+JavaPackage GC2GS.p041_MarsExploreOp;
+csharpspace GC2GS.p041_MarsExploreOp;
+
+/**
+ * 请求攻击联盟分享矿
+ */
+ALProtocol GC2GS_041_018_ReqGuildMateForwardCollectMine[请求攻击联盟分享矿] <41, 18> {
+    long shareMineDbId[分享矿数据库ID];
+    long teamId[派遣队伍ID];
+    bool isPvpOp[是否Pvp行为];
+    bool isOtherTeamForward[是否已知有其他队伍前往];
+}

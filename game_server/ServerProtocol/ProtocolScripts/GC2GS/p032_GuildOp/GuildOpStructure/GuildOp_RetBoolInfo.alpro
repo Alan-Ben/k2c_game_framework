@@ -1,0 +1,6 @@
+﻿JavaPackage GC2GS.p032_GuildOp.GuildOpStructure;
+
+ALProtocol GuildOp_RetBoolInfo[返回一个布尔值数据]
+{
+	bool v;
+}

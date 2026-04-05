@@ -1,0 +1,9 @@
+import Common.GuildCooperateObj.alpro;
+
+JavaPackage GS2GC.p032_GuildOp;
+csharpspace GS2GC.p032_GuildOp;
+
+ALProtocol GS2GC_032_075_OnRecommendRewardPointChange[推荐奖励据点变更推送] <32, 75>
+{
+    Common.GuildCooperateObj.GuildCooperate_RewardPointPos recommendPos[推荐奖励据点];
+}

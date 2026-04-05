@@ -1,0 +1,9 @@
+﻿JavaPackage GS2GC.p039_MarsBuildingOp;
+csharpspace GS2GC.p039_MarsBuildingOp;
+
+import Common.MarsObj.alpro;
+
+ALProtocol GS2GC_039_054_OnEnergyOutputChg[建筑能量产出数据变化] <39, 54>
+{
+	Common.MarsObj.Mars_BuildingEnergyOutput info;
+}

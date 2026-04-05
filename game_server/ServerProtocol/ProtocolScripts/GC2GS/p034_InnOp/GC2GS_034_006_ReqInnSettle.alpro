@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p034_InnOp;
+csharpspace GC2GS.p034_InnOp;
+
+ALProtocol GC2GS_034_006_ReqInnSettle[旅店结算] <34, 6>
+{
+    int guestNum[结算客人数量];
+}

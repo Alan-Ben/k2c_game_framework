@@ -1,0 +1,9 @@
+﻿JavaPackage GS2GC.p021_PlayerInfo;
+csharpspace GS2GC.p021_PlayerInfo;
+
+import Common.NPCommonObj.alpro;
+
+ALProtocol GS2GC_021_075_OnForeverAddChg [永久加成变更] <21, 75>
+{
+	Common.NPCommonObj.NPCommon_ForeverAddInfo add;
+}

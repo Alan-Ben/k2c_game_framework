@@ -1,0 +1,12 @@
+﻿JavaPackage WCGCS2US.p001_BasicOp;
+
+/**********************************************************
+ * Common服向User通知玩家赛季结束
+ **********************************************************/
+ALProtocol WCGCS2US_001_003_NotifyPlayerSeasonEnd <1, 3>
+{
+	long uid;
+	int curSeason;
+	int lastSeason;
+	int ranking;
+}

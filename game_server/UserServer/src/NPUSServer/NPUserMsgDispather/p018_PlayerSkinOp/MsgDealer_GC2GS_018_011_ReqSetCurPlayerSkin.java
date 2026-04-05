@@ -1,0 +1,29 @@
+package  NPUSServer.NPUserMsgDispather.p018_PlayerSkinOp;
+import GC2GS.p018_PlayerSkinOp.GC2GS_018_011_ReqSetCurPlayerSkin;
+import NPCommon.ErrMain.PlayerSkinErr;
+import NPEnum.ENPPlayerParam;
+import NPUSServer.NPUSUserMgr.NPUSUserData;
+import NPUSServer.NPUSUserMgr.UserMsgMgr.MsgItem._ANPUSUserBasicMsgItem;
+import NPUSServer.NPUserMsgDispather.NPUserMsgDealer;
+import NPUSServer.NPUserMsgDispather.Write.US2GCWriter_018_PlayerSkinOp;
+public class  MsgDealer_GC2GS_018_011_ReqSetCurPlayerSkin extends NPUserMsgDealer<GC2GS_018_011_ReqSetCurPlayerSkin>
+{
+    @Override
+    protected void _dealMessage(_ANPUSUserBasicMsgItem _commiter, GC2GS_018_011_ReqSetCurPlayerSkin _msg)
+    {
+        NPUSUserData userData = _commiter.getUserData();
+        if (null == userData)
+            return;
+        
+        //尚未解锁皮肤
+        if(!userData.getPlayerSkinComp().hasItem(_msg.getSkinId(), 1))
+        {
+        	_commiter.commitFailRes(PlayerSkinErr.PLAYER_SKIN_NOT_FOUND.getCode());
+        	return;
+        }
+        
+        userData.getPlayerComponent().setParam(ENPPlayerParam.PLAYER_SKIN, _msg.getSkinId());
+        
+        _commiter.commitSucRes(US2GCWriter_018_PlayerSkinOp.make_011_RetSetCurPlayerSkin());
+    }
+}

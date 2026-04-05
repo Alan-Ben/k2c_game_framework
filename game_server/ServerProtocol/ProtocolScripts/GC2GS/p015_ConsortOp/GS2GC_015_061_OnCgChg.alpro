@@ -1,0 +1,7 @@
+JavaPackage GS2GC.p015_ConsortOp;
+csharpspace GS2GC.p015_ConsortOp;
+import Common.ConsortObj.alpro;
+ALProtocol GS2GC_015_061_OnCgChg [家人CG数据变更] <15, 61>
+{
+    Common.ConsortObj.Consort_CGInfo cg[家人CG数据];
+}

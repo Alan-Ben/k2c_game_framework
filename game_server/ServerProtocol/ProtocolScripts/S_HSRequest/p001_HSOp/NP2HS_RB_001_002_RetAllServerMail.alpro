@@ -1,0 +1,12 @@
+JavaPackage NP2HS_RB.p001_HSOp;
+
+import Common.NpServerObj.alpro;
+
+/**********************************************************
+ * 获取全服邮件内容
+ **********************************************************/
+ALProtocol NP2HS_RB_001_002_RetAllServerMail <1, 2>
+{
+    long mailMaxId[最大邮件dbid];
+    Common.NpServerObj.NpServerObj_PlatFormMail[] platformMailList[平台邮件];
+}

@@ -1,0 +1,7 @@
+JavaPackage GS2GC.p010_BuildingOp;
+csharpspace GS2GC.p010_BuildingOp;
+ALProtocol GS2GC_010_053_OnFarmClickChg [推送农田建筑点击数据变更] <10, 53>
+{
+    long buildingId[建筑ID];
+    long lastClickMS[上次点击时间点（毫秒）];
+}

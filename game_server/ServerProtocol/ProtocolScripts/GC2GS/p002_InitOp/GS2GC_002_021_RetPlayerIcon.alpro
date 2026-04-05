@@ -1,0 +1,11 @@
+﻿﻿import Common.NPPlayerInfo.alpro;
+JavaPackage GS2GC.p002_InitOp;
+csharpspace GS2GC.p002_InitOp;
+
+/**********************************************************
+ * 
+ **********************************************************/
+ALProtocol GS2GC_002_021_RetPlayerIcon <2, 21>
+{
+	Common.NPPlayerInfo.PlayerInfo_Icon[] iconInfoList[玩家拥有的头像信息队列];
+}

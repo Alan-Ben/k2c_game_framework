@@ -1,0 +1,6 @@
+JavaPackage GC2GS.p032_GuildOp.GuildOpStructure;
+
+ALProtocol GuildOp_RetMarsMineShareId[联盟分享矿消息ID]
+{
+	long guildShareMineMsgId;
+}

@@ -1,0 +1,9 @@
+JavaPackage Hotfix.V01.GS2GC.p201_TileMatchOp;
+csharpspace Hotfix.GS2GC.p201_TileMatchOp;
+
+import Hotfix.V01.Common.TileMatchObj.alpro;
+
+ALProtocol GS2GC_201_004_RetTileMatchInit <201, 4>
+{
+    Hotfix.V01.Common.TileMatchObj.TileMatch_Info info[数据];
+}

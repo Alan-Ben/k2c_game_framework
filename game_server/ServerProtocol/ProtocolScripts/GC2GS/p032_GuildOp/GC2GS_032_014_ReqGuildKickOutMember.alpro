@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p032_GuildOp;
+csharpspace GC2GS.p032_GuildOp;
+
+ALProtocol GC2GS_032_014_ReqGuildKickOutMember[请求踢出联盟成员] <32, 14>
+{
+	long memberId;
+}

@@ -1,0 +1,9 @@
+﻿JavaPackage GS2GC.p021_PlayerInfo;
+csharpspace GS2GC.p021_PlayerInfo;
+
+import Common.AnecdoteObj.alpro;
+
+ALProtocol GS2GC_021_072_OnAnecdoteEventRemove[移除政务事件] <21, 72>
+{
+	long instanceId[实例ID];
+}

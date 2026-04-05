@@ -1,0 +1,7 @@
+﻿﻿JavaPackage GS2GC.p004_PlayerOp;
+csharpspace GS2GC.p004_PlayerOp;
+
+ALProtocol GS2GC_004_057_OnStationInfoChg <4, 57>
+{
+	Common.PlayerObj.Player_StationInfo stationInfo[贸易站信息];
+}

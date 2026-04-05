@@ -1,0 +1,10 @@
+JavaPackage Hotfix.V02.GC2GS.p202_NumMergeOp;
+csharpspace Hotfix.GC2GS.p202_NumMergeOp;
+
+import Hotfix.V02.Enum.NumMergeEnum.alpro;
+
+ALProtocol GC2GS_202_003_ReqNumMergeMove [数字合并-移动棋子操作] <202, 3>
+{
+	Hotfix.V02.Enum.NumMergeEnum.ENumMerge_ModeType modeType[模式类型];
+	Hotfix.V02.Enum.NumMergeEnum.ENumMerge_MoveDir moveDir[移动方向];
+}

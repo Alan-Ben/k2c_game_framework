@@ -1,0 +1,6 @@
+﻿JavaPackage NP2CRS_RB.p001_CrossRankOp;
+
+ALProtocol NP2CRS_RB_001_003_RegCrossRank <1, 3>
+{
+	long crossRankInstanceId[跨服排行榜实例ID];
+}

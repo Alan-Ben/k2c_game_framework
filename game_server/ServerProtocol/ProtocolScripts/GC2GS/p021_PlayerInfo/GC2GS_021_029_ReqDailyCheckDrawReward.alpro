@@ -1,0 +1,6 @@
+﻿JavaPackage GC2GS.p021_PlayerInfo;
+csharpspace GC2GS.p021_PlayerInfo;
+
+ALProtocol GC2GS_021_029_ReqDailyCheckDrawReward [每日签到领取累计奖励] <21, 29>
+{
+}

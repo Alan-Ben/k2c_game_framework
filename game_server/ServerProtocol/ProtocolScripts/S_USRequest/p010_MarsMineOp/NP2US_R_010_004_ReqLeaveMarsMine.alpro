@@ -1,0 +1,11 @@
+JavaPackage NP2US_R.p010_MarsMineOp;
+
+/**********************************************************
+ * 请求离开火星矿
+ **********************************************************/
+ALProtocol NP2US_R_010_004_ReqLeaveMarsMine <10, 4>
+{
+	long instanceId[矿实例ID];
+	long cid[玩家CID];
+	long teamId[队伍ID];
+}

@@ -1,0 +1,9 @@
+JavaPackage GS2GC.p016_ChapterOp;
+csharpspace GS2GC.p016_ChapterOp;
+
+ALProtocol GS2GC_016_005_RetDealChapterChoiceEvent <16, 5>
+{
+    long eventId[事件ID];
+    long optionId[选项ID];
+    Common.NPCommonObj.NPCommon_ItemInfo[] itemList[物品列表];
+}

@@ -1,0 +1,7 @@
+﻿﻿JavaPackage GS2GC.p021_PlayerInfo;
+csharpspace GS2GC.p021_PlayerInfo;
+
+ALProtocol GS2GC_021_024_RetDoneFuncUnlock <21, 24>
+{
+    Common.NPCommonObj.NPCommon_ItemInfo[] itemList[物品列表];
+}

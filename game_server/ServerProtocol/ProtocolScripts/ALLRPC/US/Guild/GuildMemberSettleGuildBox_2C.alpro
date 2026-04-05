@@ -1,0 +1,13 @@
+﻿JavaPackage ALLRPC.US.Guild;
+
+﻿﻿﻿﻿﻿import Common.ServerObj.alpro;
+
+ALProtocol GuildMemberSettleGuildBox_2C_Req
+{
+	long cid;
+	Common.ServerObj.ServerObj_GuildBoxSettleList boxList;
+}
+
+ALProtocol GuildMemberSettleGuildBox_2C_Return
+{
+}

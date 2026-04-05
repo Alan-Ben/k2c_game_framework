@@ -1,0 +1,22 @@
+﻿JavaPackage Common.ShopObj;
+csharpspace Common.ShopObj;
+
+/**********************************************************
+ * 商店数据结构
+ **********************************************************/
+ ALProtocol Shop_ItemInfo[商店商品数据]
+{
+	long instanceId[商品id];
+	long shopItemRefId[商店商品配置id];
+	long hasBuyNum[已购买次数];
+	long discountRefId[折扣配置id];	
+	long shopItemGroupId[商品组id];	
+	long canBuyNum[限购次数];	
+}
+ALProtocol Shop_Info[商店数据]
+{
+	long shopRefId[商店配置id];
+	long nextRefreshTimeMs[下一次刷新时间戳];
+	int refreshNum[已刷新次数];
+	Shop_ItemInfo[] goodsList[商品列表];
+}

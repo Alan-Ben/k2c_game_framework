@@ -1,0 +1,9 @@
+﻿JavaPackage GC2GS.p023_ArenaOp;
+csharpspace GC2GS.p023_ArenaOp;
+
+ALProtocol GC2GS_023_014_ReqSysSelectAttackSelectHero[攻击系统内定账号选择出战大臣] <23, 14>
+{
+    long itemId[道具id];
+    long heroId;
+    long buffId;
+}

@@ -1,0 +1,21 @@
+tableComment = "梦加日志-寻宝图鉴记录"
+field = [
+    ["long", "cid", "角色id"],
+    ["string(64)", "uid", "平台用户id"],
+    ["int", "vip_lv", "玩家VIP等级"],
+    ["int", "server_id", "服务器id"],
+    ["int", "platform", "平台id"],
+    ["int", "region", "区域id"],
+    ["int", "create_time", "玩家创角时间"],
+    ["int", "type", "物品类型：1=矿石；2=奇物；3=组合"],
+    ["long", "item_id", "物品id"],
+    ["int", "is_advanced", "是否高级：1=是；2=否"],
+    ["int", "action_type", "操作类型：1=解锁；2=升级"],
+    ["string(128)", "before_level", "升级前等级，未解锁为0"],
+    ["string(128)", "new_level", "升级后等级"],
+    ["int", "event", "事件id"],
+    ["int", "timestamp", "事件发生时间戳(10位)"],
+]
+key = []
+ukey = []
+dbTag = "us_log"

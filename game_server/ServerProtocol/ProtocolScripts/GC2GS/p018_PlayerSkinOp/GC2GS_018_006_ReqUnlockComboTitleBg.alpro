@@ -1,0 +1,6 @@
+JavaPackage GC2GS.p018_PlayerSkinOp;
+csharpspace GC2GS.p018_PlayerSkinOp;
+ALProtocol GC2GS_018_006_ReqUnlockComboTitleBg [解锁组合称号底色] <18, 6>
+{
+    long bgId[空];
+}

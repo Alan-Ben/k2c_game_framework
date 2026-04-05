@@ -1,0 +1,6 @@
+JavaPackage NP2CS_R.np_p007_GameLogicOp;
+
+ALProtocol NP2CS_R_007_002_ReqDiscardGameLogicInstance [请求销毁游戏主体实例id] <7, 2>
+{
+	long instanceId;
+}

@@ -1,0 +1,11 @@
+﻿JavaPackage ALLRPC.US.Guild;
+
+ALProtocol GuildMarsRmvAutoHelp_Req
+{
+	long guildId;
+	long cid;
+}
+
+ALProtocol GuildMarsRmvAutoHelp_Return
+{
+}

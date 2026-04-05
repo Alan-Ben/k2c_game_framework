@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p007_CommOp;
+csharpspace GC2GS.p007_CommOp;
+
+ALProtocol GC2GS_007_007_ReqGetOnlineCidList[请求在线玩家CID列表] <7, 7>
+{
+	int num[客户端需要数量，服务端做保护，不超过100个];
+}

@@ -1,0 +1,8 @@
+﻿﻿import Common.HeroRecommendObj.alpro;
+JavaPackage GS2GC.p002_InitOp;
+csharpspace GS2GC.p002_InitOp;
+
+ALProtocol GS2GC_002_024_RetHeroRecommendInit[大臣推荐事件初始化] <2, 24>
+{
+	Common.HeroRecommendObj.HeroRecommend_Info[] infoList;
+}

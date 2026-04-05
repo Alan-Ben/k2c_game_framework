@@ -1,0 +1,10 @@
+﻿JavaPackage NPGC2LS.p001_BasicOp;
+csharpspace NPGC2LS.p001_BasicOp;
+
+/**********************************************************
+ * 请求队列头部索引位置
+ **********************************************************/
+ALProtocol NPGC2LS_001_005_ReqQueueHeadIdx <1, 5>
+{
+	
+}

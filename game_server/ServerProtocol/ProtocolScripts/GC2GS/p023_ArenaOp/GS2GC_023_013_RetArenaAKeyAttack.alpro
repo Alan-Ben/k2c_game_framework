@@ -1,0 +1,7 @@
+﻿﻿JavaPackage GS2GC.p023_ArenaOp;
+csharpspace GS2GC.p023_ArenaOp;
+
+ALProtocol GS2GC_023_013_RetArenaAKeyAttack <23, 13>
+{
+    Common.ArenaObj.Arena_BattleResult battleResult[战斗结果];
+}

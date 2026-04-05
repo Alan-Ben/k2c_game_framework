@@ -1,0 +1,7 @@
+﻿﻿JavaPackage GS2GC.p013_HeroOp;
+csharpspace GS2GC.p013_HeroOp;
+
+ALProtocol GS2GC_013_068_OnEquipRemove[藏品移除]<13, 68>
+{
+    long[] dbIdList[藏品数据id列表];
+}

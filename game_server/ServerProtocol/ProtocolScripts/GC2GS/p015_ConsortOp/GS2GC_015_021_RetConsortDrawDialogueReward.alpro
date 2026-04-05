@@ -1,0 +1,6 @@
+JavaPackage GS2GC.p015_ConsortOp;
+csharpspace GS2GC.p015_ConsortOp;
+
+ALProtocol GS2GC_015_021_RetConsortDrawDialogueReward [家人-领取对话奖励] <15, 21>
+{
+}

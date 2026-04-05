@@ -1,0 +1,14 @@
+﻿JavaPackage ALLRPC.US.Guild;
+
+ALProtocol GuildCidScoreChg_Req
+{
+	long cid;
+	long guildId;
+	long rankInstanceId;
+	long scoreSourceId;
+	long chgValue;
+}
+
+ALProtocol GuildCidScoreChg_Return
+{
+}

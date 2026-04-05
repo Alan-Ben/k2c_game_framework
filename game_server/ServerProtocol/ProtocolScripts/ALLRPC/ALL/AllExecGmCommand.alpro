@@ -1,0 +1,13 @@
+﻿JavaPackage ALLRPC.Common;
+
+ALProtocol AllExecGmCommand_Req
+{
+     string command;
+     string[] exCommands;
+}
+
+ALProtocol AllExecGmCommand_Return
+{
+   bool isSucc;
+   string[] resultList;
+}

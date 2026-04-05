@@ -1,0 +1,8 @@
+JavaPackage GS2GC.p016_ChapterOp;
+csharpspace GS2GC.p016_ChapterOp;
+
+ALProtocol GS2GC_016_002_RetChapterFightBoss <16, 2>
+{
+    long chapterId;
+    Common.NPCommonObj.NPCommon_ItemInfo[] rewardList[物品列表];
+}

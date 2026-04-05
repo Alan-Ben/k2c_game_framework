@@ -1,0 +1,83 @@
+{
+    "data": {
+        "server_index_list": [
+            {
+                "serverLogicId": 1,
+                "serverTypeId": 1
+            },
+            {
+                "serverLogicId": 2,
+                "serverTypeId": 2
+            },
+            {
+                "serverLogicId": 3,
+                "serverTypeId": 4
+            },
+            {
+                "serverLogicId": 4,
+                "serverTypeId": 3
+            },
+            {
+                "serverLogicId": 5,
+                "serverTypeId": 5
+            }
+        ],
+        "server_list": [
+            {
+                "areaTag": "as",
+                "groupId": 1,
+                "serverTypeId": 1,
+                "serverName": "我是1服",
+                "onlineStateTypeId": 0,
+                "showStateTypeId": 1,
+                "isNew": true,
+                "startDate": "2022-07-01",
+                "ext": ""
+            },
+            {
+                "areaTag": "as",
+                "groupId": 1,
+                "serverTypeId": 2,
+                "serverName": "我是2服",
+                "onlineStateTypeId": 0,
+                "showStateTypeId": 3,
+                "isNew": true,
+                "startDate": "2022-07-01",
+                "ext": ""
+            },
+            {
+                "areaTag": "as",
+                "groupId": 2,
+                "serverTypeId": 3,
+                "serverName": "不存在的3服",
+                "onlineStateTypeId": 1,
+                "showStateTypeId": 5,
+                "isNew": false,
+                "startDate": "2022-07-01",
+                "ext": ""
+            },
+            {
+                "areaTag": "as",
+                "groupId": 2,
+                "serverTypeId": 4,
+                "serverName": "不存在的4服",
+                "onlineStateTypeId": 1,
+                "showStateTypeId": 2,
+                "isNew": false,
+                "startDate": "2022-07-01",
+                "ext": ""
+            },
+            {
+                "areaTag": "as",
+                "groupId": 2,
+                "serverTypeId": 5,
+                "serverName": "不存在的5服",
+                "onlineStateTypeId": 1,
+                "showStateTypeId": 4,
+                "isNew": false,
+                "startDate": "2022-07-01",
+                "ext": ""
+            }
+        ]
+    }
+}

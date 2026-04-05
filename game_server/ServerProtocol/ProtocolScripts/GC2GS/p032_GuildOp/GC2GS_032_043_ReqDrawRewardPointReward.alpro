@@ -1,0 +1,9 @@
+import Common.GuildCooperateObj.alpro;
+
+JavaPackage GC2GS.p032_GuildOp;
+csharpspace GC2GS.p032_GuildOp;
+
+ALProtocol GC2GS_032_043_ReqDrawRewardPointReward[领取奖励据点个人奖励] <32, 43>
+{
+    Common.GuildCooperateObj.GuildCooperate_RewardPointPos pos[奖励据点位置];
+}

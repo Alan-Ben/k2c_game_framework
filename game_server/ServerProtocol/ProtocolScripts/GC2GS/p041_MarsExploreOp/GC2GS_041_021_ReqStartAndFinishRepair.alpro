@@ -1,0 +1,14 @@
+JavaPackage GC2GS.p041_MarsExploreOp;
+csharpspace GC2GS.p041_MarsExploreOp;
+
+/**
+ * 火星探险-开始并立即完成队伍维修
+ *
+ * 功能说明：
+ * 一次性完成维修，同时扣除维修成本和钻石加速成本
+ */
+ALProtocol GC2GS_041_021_ReqStartAndFinishRepair[火星探险-开始并立即完成队伍维修] <41, 21>
+{
+	long teamId[队伍ID];
+	long repairNum[修复士兵数，0表示全部];
+}

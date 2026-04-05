@@ -1,0 +1,7 @@
+﻿JavaPackage NP2SS_R.p001_ScheduleOp;
+
+ALProtocol NP2SS_R_001_013_CmdAddActivitySchedule[命令增加活动排期] <1, 13>
+{
+	Common.ScheduleObj.Schedule_PhpInfo scheduleInfo[后台排期数据];
+	bool isGmAdd[是否为GM添加];
+}

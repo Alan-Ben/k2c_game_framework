@@ -1,0 +1,7 @@
+JavaPackage GC2GS.p008_TravelOp;
+csharpspace GC2GS.p008_TravelOp;
+ALProtocol GC2GS_008_006_ReqDealInvitationTravel [处理妃子邀约游历事件] <8, 6>
+{
+    long instanceId[游历事件ID];
+    long consortId[妃子ID];
+}

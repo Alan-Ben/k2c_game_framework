@@ -1,0 +1,6 @@
+﻿JavaPackage GC2GS.p041_MarsExploreOp;
+csharpspace GC2GS.p041_MarsExploreOp;
+
+ALProtocol GC2GS_041_015_ReqGetTempBuildingQueue[火星探险-获取临时建造队列] <41, 15>
+{
+}

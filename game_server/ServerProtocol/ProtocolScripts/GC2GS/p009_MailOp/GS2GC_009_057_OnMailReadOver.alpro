@@ -1,0 +1,8 @@
+﻿﻿import Common.MailObj.alpro;
+JavaPackage GS2GC.p009_MailOp;
+csharpspace GS2GC.p009_MailOp;
+
+ALProtocol GS2GC_009_057_OnMailReadOver <9, 57>
+{
+	long mailUid[邮件唯一id];
+}

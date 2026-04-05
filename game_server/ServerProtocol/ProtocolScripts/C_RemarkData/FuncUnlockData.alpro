@@ -1,0 +1,19 @@
+csharpspace RemarkData;
+
+/**********************************************************
+ * 功能解锁存储对象
+ **********************************************************/
+ALProtocol FuncUnlockData
+{
+	long[] funcUnlockIdList[功能解锁id列表];
+}
+
+ALProtocol ChapterUnlockData[章节解锁数据]
+{
+	long[] unlockIdList[章节解锁id列表];
+}
+
+ALProtocol ResIslandUnlockData[资源岛解锁数据]
+{
+	long[] unlockIdList[资源岛解锁id列表];
+}

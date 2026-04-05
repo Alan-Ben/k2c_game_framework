@@ -1,0 +1,9 @@
+JavaPackage GC2GS.p015_ConsortOp;
+csharpspace GC2GS.p015_ConsortOp;
+
+ALProtocol GC2GS_015_022_ReqConsortAiChat [家人-Ai对话] <15, 22>
+{
+    long consortId[家人ID];
+    Common.CommonObj.Common_AiChatMessage[] msgList[消息列表];
+    long clientDataId[客户端数据ID];
+}

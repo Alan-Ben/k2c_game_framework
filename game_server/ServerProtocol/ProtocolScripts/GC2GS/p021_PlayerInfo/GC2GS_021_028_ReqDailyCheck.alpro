@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p021_PlayerInfo;
+csharpspace GC2GS.p021_PlayerInfo;
+
+ALProtocol GC2GS_021_028_ReqDailyCheck [每日签到] <21, 28>
+{
+	long dessertId[点心id];
+}

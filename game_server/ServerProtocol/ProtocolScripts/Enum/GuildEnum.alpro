@@ -1,0 +1,120 @@
+﻿JavaPackage Common.GuildEnum;
+csharpspace Common.GuildEnum;
+
+ALEnum EGuildPositionType[联盟职位类型]
+{
+	NONE;
+	MEMBER[成员];
+	ELITE[精英];
+	DEPUTY_LEADER[副盟主];
+	LEADER[盟主];
+}
+
+ALEnum EGuildPermissionType[联盟权限类型]
+{
+	NONE;
+	TRANSFER_LEADER[盟主转让];
+	DISSOLVE_GUILD[解散联盟];
+	CHANGE_GUILD_INFO[更改联盟信息];
+	POSITION_APPOINT[职位任命];
+	TOGGLE_FREE_JOIN[开启/关闭自由加入];
+	PROCESS_JOIN_REQUEST[处理入盟申请];
+	KICK_OUT[踢出联盟];
+	BROADCAST_MESSAGE[群发消息];
+	LEAVE_GUILD[退出联盟];
+	GUILD_MANAGEMENT[联盟管理];
+	DAILY_CONSTRUCTION[每日建设];
+	VIEW_MEMBERS[查看成员];
+	STORE_EXCHANGE[商店兑换];
+	LEADERBOARD[排行榜];
+	OPEN_RECRUITMENT[开启招募];
+	SET_PVE_AUTO_STAR[设置公会副本自动开启];
+	USE_GUILD_WEALTH[使用联盟财富];
+	USE_ITEM_START_PVE[使用物品开启公会副本];
+	SET_PVE_MONSTER_TAG[设置公会怪物标签];
+	SET_GUILD_COOPERATE_RECOMMEND_REWARD_POINT[设置联盟协作推荐奖励据点];
+}
+
+ALEnum EGuildConstructType[联盟建设类型]
+{
+	NONE;
+	GOLD[金币建设];
+	ITEM[道具建设];
+}
+
+ALEnum EGuildLogType[联盟日志类型]
+{
+	NONE;
+	GUILD_CREATION[联盟创建];
+	MEMBER_JOIN[新成员加入];
+	MEMBER_LEAVE[老成员离开];
+	GUILD_CONSTRUCTION[联盟建设];
+	KICK_OUT_MEMBER[踢出成员];
+	POSITION_CHANGE[职位变更];
+	ANNOUNCEMENT_CHANGE[公告变更];
+	GUILD_RENAME[联盟改名];
+	GUILD_FLAG_CHANGE[联盟旗帜变更];
+	ENABLE_FREE_JOIN[开启自由加入];
+	DISABLE_FREE_JOIN[关闭自由加入];
+	GUILD_UPGRADE[联盟升级];
+	LEADER_TRANSFER[盟主转让];
+}
+
+ALEnum EGuildLogShowType[联盟日志展示类型]
+{
+	NONE;
+	CHAT[聊天];
+	POPUP_WINDOW[弹窗];
+}
+
+ALEnum EGuildJoinType[联盟加入类型]
+{
+	NONE;
+	FREE_JOIN[自由加入];
+	APPROVAL_JOIN[审批加入];
+	DECLINE_JOIN[拒绝加入];
+}
+
+ALEnum EGuildJoinLimitType[联盟加入限制类型]
+{
+	NONE;
+	NATION_POWER[国力];
+	LEVEL[等级];
+}
+
+ALEnum EGuildImpeachLeaderEventState[联盟弹劾盟主事件状态]
+{
+	CAN_IMPEACH[可弹劾];
+	IN_IMPEACH[弹劾中];
+	IMPEACH_SUCCESS[弹劾成功];
+	IMPEACH_FAIL[弹劾失败];
+}
+
+ALEnum EGuildEventType[联盟事件类型]
+{
+	NONE;
+	IMPEACH_LEADER[弹劾盟主];
+}
+
+
+ALEnum EGuildMarsHelpObjType[联盟火星互助类型]
+{
+	NONE;
+	BUILDING_QUEUE[火星建筑队列];
+	TECH_UP[火星科技升级];
+	TEAM_REPAIR[火星队伍修复];
+}
+
+ALEnum EGuildBoxType[联盟宝箱类型]
+{
+	NONE;
+	GUILD_ACTIVE_BOX[联盟辉煌宝箱];
+	GUILD_FREE_BOX[免费赠礼宝箱];
+	GUILD_GIFT_BOX[盟友等级宝箱];
+}
+
+ALEnum EGuildRallyType[联盟集结类型]
+{
+	NONE;
+	DEFAULT[默认集结];
+}

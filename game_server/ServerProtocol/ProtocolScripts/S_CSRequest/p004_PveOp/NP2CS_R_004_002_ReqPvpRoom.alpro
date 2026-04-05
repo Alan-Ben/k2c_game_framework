@@ -1,0 +1,11 @@
+JavaPackage NP2CS_R.np_p004_PveOp;
+
+/**********************************************************
+ * 
+ **********************************************************/
+ALProtocol NP2CS_R_004_002_ReqPvpRoom <4, 2>
+{
+	long missionId;
+	int missionType;
+	long stageSerial;
+}

@@ -1,0 +1,5 @@
+﻿JavaPackage WCGCS2US_RB.p003_CommOp;
+
+ALProtocol NP2US_RB_003_003_RetLiftForbidPlayerChat <3, 3>
+{
+}

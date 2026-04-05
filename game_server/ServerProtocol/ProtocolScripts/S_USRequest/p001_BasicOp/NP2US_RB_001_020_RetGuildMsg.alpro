@@ -1,0 +1,6 @@
+﻿JavaPackage NP2US_RB.p001_BasicOp;
+
+ALProtocol NP2US_RB_001_020_RetGuildMsg <1, 20>
+{
+	bytebuffer msg[返回的消息内容];
+}

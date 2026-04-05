@@ -1,0 +1,78 @@
+package Common.NpChatObj;
+
+import java.nio.ByteBuffer;
+public class NPCommon_ChatSystemPlayerContent implements ALBasicProtocolPack._IALProtocolStructure {
+/** 系统用户展示信息id */
+private long systemPlayerId;
+
+
+public NPCommon_ChatSystemPlayerContent() {
+	systemPlayerId = (long)0;
+}
+
+public NPCommon_ChatSystemPlayerContent(
+	 long _systemPlayerId
+) {	systemPlayerId = _systemPlayerId;
+}
+
+public final byte getMainOrder() { return (byte)0; }
+
+public final byte getSubOrder() { return (byte)0; }
+
+/** 系统用户展示信息id */
+public long getSystemPlayerId() { return systemPlayerId; }
+/** 系统用户展示信息id */
+public void setSystemPlayerId(long _systemPlayerId) { systemPlayerId = _systemPlayerId; }
+
+
+public final int GetBufSize() {
+	int _size = 8;
+
+	return _size;
+}
+
+public final int GetFullPackBufSize() {
+	int _size = 10;
+
+	return _size;
+}
+
+
+
+public final void ReadUnzipBuf(ByteBuffer _buf, int _finalPos) {
+	 if(_finalPos > 0 && _buf.position() >= _finalPos) return ;
+	if(_buf.remaining() > 0) systemPlayerId = _buf.getLong();
+}
+
+public final void PutUnzipBuf(ByteBuffer _buf) {
+	_buf.putLong(systemPlayerId);
+}
+
+public final ByteBuffer makeFullPackage() {
+	int _bufSize = GetBufSize() + 2;
+	ByteBuffer _buf = ByteBuffer.allocate(_bufSize);
+	_buf.put((byte)0);
+	_buf.put((byte)0);
+	PutUnzipBuf(_buf);
+	_buf.flip();
+	return _buf;
+}
+public final void makeFullPackage(ByteBuffer _recBuf) {
+	if(null == _recBuf)
+		return ;
+	_recBuf.put((byte)0);
+	_recBuf.put((byte)0);
+	PutUnzipBuf(_recBuf);
+}
+public final ByteBuffer makePackage() {
+	int _bufSize = GetBufSize();
+	ByteBuffer _buf = ByteBuffer.allocate(_bufSize);
+	PutUnzipBuf(_buf);
+	_buf.flip();
+	return _buf;
+}
+public final void readPackage(ByteBuffer _buf) {
+	ReadUnzipBuf(_buf, -1);
+}
+}
+

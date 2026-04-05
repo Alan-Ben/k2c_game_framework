@@ -1,0 +1,12 @@
+JavaPackage NP2GS_RB.p001_PSOp;
+
+/**********************************************************
+ * 返回用户申请的key
+ **********************************************************/
+ALProtocol NP2GS_RB_001_001_RetUserKey <1, 1>
+{
+	bool res;
+
+	string uid;
+	string checkCode;
+}

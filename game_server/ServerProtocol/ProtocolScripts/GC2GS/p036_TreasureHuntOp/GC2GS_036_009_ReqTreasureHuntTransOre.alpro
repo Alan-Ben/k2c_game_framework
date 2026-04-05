@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p036_TreasureHuntOp;
+csharpspace GC2GS.p036_TreasureHuntOp;
+
+ALProtocol GC2GS_036_009_ReqTreasureHuntTransOre[太空寻宝-转换矿石] <36, 9>
+{
+	
+}

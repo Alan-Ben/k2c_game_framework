@@ -1,0 +1,6 @@
+JavaPackage GC2GS.p014_ChildOp;
+csharpspace GC2GS.p014_ChildOp;
+ALProtocol GC2GS_014_007_ReqGetMarriedAdult [获取子嗣（成年已婚）数据] <14, 7>
+{
+    long adultId[子嗣实例ID];
+}

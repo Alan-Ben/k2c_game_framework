@@ -1,0 +1,9 @@
+JavaPackage GS2GC.p002_InitOp;
+csharpspace GS2GC.p002_InitOp;
+
+import Common.ActivityObj.alpro;
+
+ALProtocol GS2GC_002_079_RetActivityHotRefList <2, 79>
+{
+    Common.ActivityObj.Activity_HotRefInfo[] hotRefList[活动热更配置列表];
+}

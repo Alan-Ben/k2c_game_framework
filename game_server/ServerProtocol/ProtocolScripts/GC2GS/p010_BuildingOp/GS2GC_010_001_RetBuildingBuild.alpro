@@ -1,0 +1,5 @@
+JavaPackage GS2GC.p010_BuildingOp;
+csharpspace GS2GC.p010_BuildingOp;
+ALProtocol GS2GC_010_001_RetBuildingBuild [请求建造建筑] <10, 1>
+{
+}

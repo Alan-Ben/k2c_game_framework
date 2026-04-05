@@ -1,0 +1,10 @@
+﻿JavaPackage GC2GS.p004_PlayerOp;
+csharpspace GC2GS.p004_PlayerOp;
+
+/**********************************************************
+ * 修改玩家名称
+ **********************************************************/
+ALProtocol GC2GS_004_004_ReqSetName <4, 4>
+{
+    string newName;
+}

@@ -1,0 +1,7 @@
+﻿JavaPackage Hotfix.V01.GS2GC.p200_HotSimpleActivityOp;
+csharpspace Hotfix.GS2GC.p200_HotSimpleActivityOp;
+
+ALProtocol GS2GC_200_003_RetRegularActivityUseItem <200, 3>
+{
+	Common.NPCommonObj.NPCommon_ItemInfo[] itemList[物品列表];
+}

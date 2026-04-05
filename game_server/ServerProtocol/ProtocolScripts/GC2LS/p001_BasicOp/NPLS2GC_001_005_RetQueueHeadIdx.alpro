@@ -1,0 +1,10 @@
+﻿JavaPackage NPLS2GC.p001_BasicOp;
+csharpspace NPLS2GC.p001_BasicOp;
+
+/**********************************************************
+ * 返回队列头部索引位置
+ **********************************************************/
+ALProtocol NPLS2GC_001_005_RetQueueHeadIdx <1, 5>
+{
+	long headQueueIdx;
+}

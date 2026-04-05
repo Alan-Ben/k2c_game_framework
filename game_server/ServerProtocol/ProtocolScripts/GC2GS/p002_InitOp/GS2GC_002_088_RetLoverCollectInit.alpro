@@ -1,0 +1,8 @@
+JavaPackage GS2GC.p002_InitOp;
+csharpspace GS2GC.p002_InitOp;
+
+ALProtocol GS2GC_002_088_RetLoverCollectInit <2, 88>
+{
+	long targetLoverId[当前选中的情人配置ID，0=未选择];
+	bool isClaimed[是否已领取当前目标情人];
+}

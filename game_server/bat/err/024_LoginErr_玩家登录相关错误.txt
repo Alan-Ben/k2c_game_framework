@@ -1,0 +1,14 @@
+java_path= ../Common/src
+java_package=NPCommon.ErrMain
+
+id	name	desc
+1	LOGIN_SDK_ENTER_SERVICE_UNAVAILABLE	SDK登录服务不可用
+2	LOGIN_CHECK_DB_UNAVAILABLE	登录校验数据库不可用
+3	LOGIN_NO_USER_INFO	登录找不到用户信息
+4	LOGIN_ADD_ACC_INFO_FAIL	增加account信息错误
+5	LOGIN_CHECK_CODE_ERR	登录校验码错误
+6	LOGIN_SDK_RESPONSE_ERR	SDK返回内容错误
+7	PLAYER_DATA_LOAD_FAIL	玩家数据加载失败
+8	GS_GEN_USER_CODE_ERR	GS生成用户验证码错误
+9	LOGIN_WHEN_US_NOT_READY	玩家服务器状态未就绪时登录
+10	RECOMMEND_SERVER_NOT_FOUND	找不到推荐服务器

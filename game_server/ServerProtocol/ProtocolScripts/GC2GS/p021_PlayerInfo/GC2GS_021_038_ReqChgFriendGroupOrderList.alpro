@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p021_PlayerInfo;
+csharpspace GC2GS.p021_PlayerInfo;
+
+ALProtocol GC2GS_021_038_ReqChgFriendGroupOrderList[变更好友分组的顺序] <21, 38>
+{
+    long[] groupIdList[分组id的顺序列表];
+}

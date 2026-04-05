@@ -1,0 +1,9 @@
+﻿JavaPackage GC2GS.p013_HeroOp;
+csharpspace GC2GS.p013_HeroOp;
+
+ALProtocol GC2GS_013_007_ReqHeroTalentSkillUpgrade[升级大臣资质技能]<13, 7> 
+{
+    long heroId[大臣id];
+    long talentSkillId[资质技能id];
+    bool isTen[是否十连升级];
+}

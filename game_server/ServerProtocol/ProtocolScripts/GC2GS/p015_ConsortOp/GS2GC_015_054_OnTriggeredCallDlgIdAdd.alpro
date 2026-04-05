@@ -1,0 +1,7 @@
+JavaPackage GS2GC.p015_ConsortOp;
+csharpspace GS2GC.p015_ConsortOp;
+ALProtocol GS2GC_015_054_OnTriggeredCallDlgIdAdd [已触发的邀约剧情ID推送] <15, 54>
+{
+    long consortId[空];
+    long triggeredCallStroryId[空];
+}

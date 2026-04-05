@@ -1,0 +1,6 @@
+﻿JavaPackage NP2US_B.p001_BasicOp;
+
+ALProtocol NP2US_B_001_004_GSOnline <1, 4>
+{
+    int gsId;
+}

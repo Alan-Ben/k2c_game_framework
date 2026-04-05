@@ -1,0 +1,11 @@
+﻿﻿import Common.NPPlayerInfo.alpro;
+JavaPackage GS2GC.p021_PlayerInfo;
+csharpspace GS2GC.p021_PlayerInfo;
+
+/**********************************************************
+ * 玩家气泡框信息删除
+ **********************************************************/
+ALProtocol GS2GC_021_018_PlayerBubbleDel <21, 18>
+{
+	long id[气泡框唯一Id];
+}

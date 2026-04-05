@@ -1,0 +1,10 @@
+﻿JavaPackage GS2GC.p021_PlayerInfo;
+csharpspace GS2GC.p021_PlayerInfo;
+
+import Common.FriendObj.alpro;
+
+ALProtocol GS2GC_021_063_OnFriendChg[推送好友变更消息] <21, 63>
+{
+	Common.FriendObj.Friend_Info friend[好友数据];
+	bool isAgree[是否同意方玩家];
+}

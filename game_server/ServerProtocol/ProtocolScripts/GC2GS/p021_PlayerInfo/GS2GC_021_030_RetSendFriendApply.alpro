@@ -1,0 +1,6 @@
+﻿﻿JavaPackage GS2GC.p021_PlayerInfo;
+csharpspace GS2GC.p021_PlayerInfo;
+
+ALProtocol GS2GC_021_030_RetSendFriendApply <21, 30>
+{
+}

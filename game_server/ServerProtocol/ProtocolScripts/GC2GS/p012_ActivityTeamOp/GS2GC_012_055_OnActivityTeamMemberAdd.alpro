@@ -1,0 +1,10 @@
+﻿﻿JavaPackage GS2GC.p012_ActivityTeamOp;
+csharpspace GS2GC.p012_ActivityTeamOp;
+
+import Common.CrossTeamObj.alpro;
+
+ALProtocol GS2GC_012_055_OnActivityTeamMemberAdd[活动队伍成员增加] <12, 55>
+{
+	long teamId[队伍实例ID];
+	Common.CrossTeamObj.CrossTeamMember_Info member[队伍玩家数据];
+}

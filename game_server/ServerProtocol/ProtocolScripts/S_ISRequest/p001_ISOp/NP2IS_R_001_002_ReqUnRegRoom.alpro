@@ -1,0 +1,7 @@
+JavaPackage NP2IS_R.p001_ISOp;
+
+ALProtocol NP2IS_R_001_002_ReqUnRegRoom[注销聊天房间] <1, 2>
+{
+	int roomType[房间类型];
+    long roomTypeId[房间类型ID];
+}

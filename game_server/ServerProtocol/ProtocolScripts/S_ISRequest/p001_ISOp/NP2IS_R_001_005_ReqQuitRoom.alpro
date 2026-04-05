@@ -1,0 +1,7 @@
+JavaPackage NP2IS_R.p001_ISOp;
+
+ALProtocol NP2IS_R_001_005_ReqQuitRoom[退出聊天房间] <1, 5>
+{
+	string chatUid[聊天系统用户唯一标识];
+    long sdkRoomId[注册到聊天服务器的房间实例ID];
+}

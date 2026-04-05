@@ -1,0 +1,12 @@
+﻿﻿JavaPackage NPGS2GC.p001_BasicOp;
+csharpspace NPGS2GC.p001_BasicOp;
+
+/**********************************************************
+ * 查询最推荐的服务器logicId
+ **********************************************************/
+ALProtocol NPGS2GC_001_012_RetMostRecommendedUSInfo <1, 12>
+{
+	Common.NPCommonObj.NP_SYS_ServerItem serverItem[最推荐服务器信息];
+	int errCode[错误码];
+}
+

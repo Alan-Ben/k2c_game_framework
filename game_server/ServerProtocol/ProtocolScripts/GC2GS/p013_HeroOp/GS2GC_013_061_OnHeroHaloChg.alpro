@@ -1,0 +1,7 @@
+﻿﻿JavaPackage GS2GC.p013_HeroOp;
+csharpspace GS2GC.p013_HeroOp;
+
+ALProtocol GS2GC_013_061_OnHeroHaloChg[大臣光环变更推送]<13, 61>
+{
+    Common.HeroObj.Hero_HaloInfo haloInfo[光环信息];
+}

@@ -1,0 +1,9 @@
+﻿JavaPackage GS2GC.p039_MarsBuildingOp;
+csharpspace GS2GC.p039_MarsBuildingOp;
+
+import Common.MarsObj.alpro;
+
+ALProtocol GS2GC_039_056_OnBuildingUpQueueAdd[建筑建造/升级队列数据增加] <39, 56>
+{
+	Common.MarsObj.Mars_BuildingUpQueue info;
+}

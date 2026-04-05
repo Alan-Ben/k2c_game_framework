@@ -1,0 +1,7 @@
+JavaPackage GS2GC.p014_ChildOp;
+csharpspace GS2GC.p014_ChildOp;
+
+ALProtocol GS2GC_014_019_RetRandomGainChild [随机获得子嗣] <14, 19>
+{
+    
+}

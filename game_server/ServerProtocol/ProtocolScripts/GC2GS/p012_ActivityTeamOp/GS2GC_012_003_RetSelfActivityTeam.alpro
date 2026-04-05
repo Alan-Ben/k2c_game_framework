@@ -1,0 +1,9 @@
+﻿﻿JavaPackage GS2GC.p012_ActivityTeamOp;
+csharpspace GS2GC.p012_ActivityTeamOp;
+
+import Common.CrossTeamObj.alpro;
+
+ALProtocol GS2GC_012_003_RetSelfActivityTeam <12, 3>
+{
+	Common.CrossTeamObj.CrossTeam_Info team[活动队伍数据];
+}

@@ -1,0 +1,8 @@
+﻿JavaPackage GC2GS.p012_ActivityTeamOp;
+csharpspace GC2GS.p012_ActivityTeamOp;
+
+ALProtocol GC2GS_012_007_ReqKickActivityTeamPlayer[踢出队伍玩家] <12, 7> 
+{
+	long teamId[队伍实例ID];
+	long kickCid[被踢玩家CID];
+}

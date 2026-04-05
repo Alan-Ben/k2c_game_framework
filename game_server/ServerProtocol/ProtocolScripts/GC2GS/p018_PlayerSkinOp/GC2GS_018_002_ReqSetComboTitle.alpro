@@ -1,0 +1,8 @@
+JavaPackage GC2GS.p018_PlayerSkinOp;
+csharpspace GC2GS.p018_PlayerSkinOp;
+ALProtocol GC2GS_018_002_ReqSetComboTitle [穿戴组合称号] <18, 2>
+{
+    long preId[空];
+    long sfxId[空];
+    long bgId[空];
+}

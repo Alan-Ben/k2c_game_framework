@@ -1,0 +1,7 @@
+JavaPackage GS2GC.p015_ConsortOp;
+csharpspace GS2GC.p015_ConsortOp;
+import Common.ConsortObj.alpro;
+ALProtocol GS2GC_015_009_RetGetAllBusinessSkill [家人-获取所有经营技能数据] <15, 9>
+{
+    Common.ConsortObj.Consort_BusinessSkill[] dataList[结果列表];
+}

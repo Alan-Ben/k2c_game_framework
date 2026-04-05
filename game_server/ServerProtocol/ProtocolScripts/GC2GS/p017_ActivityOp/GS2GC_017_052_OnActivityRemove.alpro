@@ -1,0 +1,6 @@
+JavaPackage GS2GC.p017_ActivityOp;
+csharpspace GS2GC.p017_ActivityOp;
+ALProtocol GS2GC_017_052_OnActivityRemove [活动移除推送] <17, 52>
+{
+    long instanceId[活动实例ID];
+}

@@ -1,0 +1,8 @@
+﻿﻿JavaPackage GS2GC.p013_HeroOp;
+csharpspace GS2GC.p013_HeroOp;
+
+ALProtocol GS2GC_013_050_OnHeroLevelChg[大臣升级]<13, 50>
+{
+    long heroId;
+	int level[当前等级];
+}

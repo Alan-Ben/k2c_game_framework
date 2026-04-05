@@ -1,0 +1,8 @@
+﻿JavaPackage GS2GC.p033_SimpleActivityOp;
+csharpspace GS2GC.p033_SimpleActivityOp;
+
+ALProtocol GS2GC_033_101_OnEarningsGoalRewardReach <33, 101>
+{
+	Common.EarningsGoalObj.EarningsGoal_RewardInfo rewardInfo[奖励信息];
+	long activityInstanceId[活动实例ID];
+}

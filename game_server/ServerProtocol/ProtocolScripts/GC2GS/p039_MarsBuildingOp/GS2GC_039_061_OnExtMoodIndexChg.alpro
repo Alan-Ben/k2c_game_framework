@@ -1,0 +1,7 @@
+﻿JavaPackage GS2GC.p039_MarsBuildingOp;
+csharpspace GS2GC.p039_MarsBuildingOp;
+
+ALProtocol GS2GC_039_061_OnExtMoodIndexChg[火星系统-额外心情指数变化] <39, 61>
+{
+	long value;
+}

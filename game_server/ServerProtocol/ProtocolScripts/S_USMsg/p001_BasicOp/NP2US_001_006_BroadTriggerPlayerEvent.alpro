@@ -1,0 +1,12 @@
+JavaPackage NP2US.p001_BasicOp;
+
+/**********************************************************
+ * 远程广播触发多个玩家的逻辑事件
+ **********************************************************/
+ALProtocol NP2US_001_006_BroadTriggerPlayerEvent <1, 6>
+{
+	long[] cidList[目标玩家CID列表];
+	string eventName[事件名称，与@EventDesc.name一致];
+	long[] paramList[事件参数列表];
+}
+

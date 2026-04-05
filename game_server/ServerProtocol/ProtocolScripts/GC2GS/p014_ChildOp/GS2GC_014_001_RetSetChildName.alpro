@@ -1,0 +1,5 @@
+JavaPackage GS2GC.p014_ChildOp;
+csharpspace GS2GC.p014_ChildOp;
+ALProtocol GS2GC_014_001_RetSetChildName [设置子嗣（未成年）名称] <14, 1>
+{
+}

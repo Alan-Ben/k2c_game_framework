@@ -1,0 +1,6 @@
+JavaPackage GS2GC.p014_ChildOp;
+csharpspace GS2GC.p014_ChildOp;
+ALProtocol GS2GC_014_057_OnChildRemove [子嗣（未成年）移除] <14, 57>
+{
+    long id[子嗣实例ID];
+}

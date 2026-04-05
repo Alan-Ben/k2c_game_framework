@@ -1,0 +1,10 @@
+﻿JavaPackage GS2GC.p004_PlayerOp;
+csharpspace GS2GC.p004_PlayerOp;
+
+﻿﻿﻿﻿import Common.GraveObj.alpro;
+
+ALProtocol GS2GC_004_042_RetGraveRecordList <4, 42>
+{
+	Common.GraveObj.GraveObj_Record[] recordList;
+	int count;
+}

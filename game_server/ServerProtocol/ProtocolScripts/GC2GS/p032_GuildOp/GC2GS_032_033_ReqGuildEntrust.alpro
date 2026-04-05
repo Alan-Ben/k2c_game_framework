@@ -1,0 +1,6 @@
+﻿JavaPackage GC2GS.p032_GuildOp;
+csharpspace GC2GS.p032_GuildOp;
+
+ALProtocol GC2GS_032_033_ReqGuildEntrust[联盟委托] <32, 33>
+{
+}

@@ -1,0 +1,6 @@
+﻿JavaPackage NP2LS.p001_BasicOp;
+
+ALProtocol NP2LS_001_002_SetForbidenLogin[设置是否屏蔽登录] <1, 2>
+{
+	bool isForbidenLogin;
+}

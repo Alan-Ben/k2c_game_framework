@@ -1,0 +1,10 @@
+﻿JavaPackage Common.ArenaEnum;
+csharpspace Common.ArenaEnum;
+
+ALEnum EArenaBuffType[竞技场buff类型]
+{
+	NONE;
+	CRYSTAL[水晶增益];
+	TWO_COIN[2硬币增益];
+	ONE_COIN[1硬币增益];
+}

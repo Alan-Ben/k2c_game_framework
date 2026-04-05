@@ -1,0 +1,6 @@
+JavaPackage GC2GS.p018_PlayerSkinOp;
+csharpspace GC2GS.p018_PlayerSkinOp;
+ALProtocol GC2GS_018_005_ReqUnlockComboTitleSfx [解锁组合称号后缀] <18, 5>
+{
+    long sfxId[空];
+}

@@ -1,0 +1,9 @@
+﻿JavaPackage NP2GS_B.p001_BasicOp;
+
+/**********************************************************
+ * 服务器信息列表变更广播协议
+ **********************************************************/
+ALProtocol NP2GS_B_001_007_USIndexListChg <1, 7>
+{
+	Common.NPServerObj.NpServerObj_SYS_ServerIndexInfo[] serverIndexList[US服务器变更列表];
+}

@@ -1,0 +1,8 @@
+java_path= ../Common/src
+java_package=NPCommon.ErrMain
+id	name	desc
+1	MARKET_NOT_UNLOCK	 集市尚未解锁
+2	MARKET_LVL_FULL	 集市已经满级
+3	MARKET_COUNT_EMPTY	 集市经营次数不足
+4	MARKET_CD_NOT_RECOVER	 集市CD未回复
+5	MARKET_AKEY_OPERATE_NOT_UNLOCK	 集市一键经营未解锁

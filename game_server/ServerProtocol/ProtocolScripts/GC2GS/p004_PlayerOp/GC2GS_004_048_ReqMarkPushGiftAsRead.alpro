@@ -1,0 +1,9 @@
+JavaPackage GC2GS.p004_PlayerOp;
+csharpspace GC2GS.p004_PlayerOp;
+
+// 标记推送礼包为已读
+ALProtocol GC2GS_004_048_ReqMarkPushGiftAsRead[标记推送礼包为已读] <4, 48>
+{
+	long groupId[礼包组id];
+	long pushGiftId[推送礼包id];
+}

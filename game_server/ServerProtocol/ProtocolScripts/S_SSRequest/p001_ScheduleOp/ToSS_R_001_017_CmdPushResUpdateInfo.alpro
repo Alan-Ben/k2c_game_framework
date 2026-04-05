@@ -1,0 +1,10 @@
+JavaPackage NP2SS_R.p001_ScheduleOp;
+
+/**
+ * 命令推送资源更新信息
+ */
+ALProtocol ToSS_R_001_017_CmdPushResUpdateInfo[命令推送资源更新信息] <1, 17>
+{
+    /** 后台资源更新数据 */
+    Common.ScheduleObj.Schedule_ResUpdateInfo resUpdateInfo[后台资源更新数据];
+}

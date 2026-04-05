@@ -1,0 +1,6 @@
+JavaPackage GC2GS.p002_InitOp;
+csharpspace GC2GS.p002_InitOp;
+
+ALProtocol GC2GS_002_075_ReqGuildCooperateInit[联盟协作初始化请求] <2, 75>
+{
+}

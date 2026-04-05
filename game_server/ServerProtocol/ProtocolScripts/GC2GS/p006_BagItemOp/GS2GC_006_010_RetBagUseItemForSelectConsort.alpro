@@ -1,0 +1,7 @@
+JavaPackage GS2GC.p006_BagItemOp;
+csharpspace GS2GC.p006_BagItemOp;
+
+ALProtocol GS2GC_006_010_RetBagUseItemForSelectConsort <6, 10>
+{
+    Common.BagItemUseObj.BagItemUse_ConsortShowInfo[] itemList;
+}

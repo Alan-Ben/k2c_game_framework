@@ -1,0 +1,9 @@
+﻿JavaPackage GS2GC.p040_MarsPeopleOp;
+csharpspace GS2GC.p040_MarsPeopleOp;
+
+import Common.MarsObj.alpro;
+
+ALProtocol GS2GC_040_051_OnIntelligentChg[决策数据变化] <40, 51>
+{
+	Common.MarsObj.Mars_Intelligent intelligent[决策数据];
+}

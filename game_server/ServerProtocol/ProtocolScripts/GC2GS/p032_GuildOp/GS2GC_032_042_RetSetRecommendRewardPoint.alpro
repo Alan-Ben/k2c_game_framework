@@ -1,0 +1,8 @@
+import Common.CommonObj.alpro;
+
+JavaPackage GS2GC.p032_GuildOp;
+csharpspace GS2GC.p032_GuildOp;
+
+ALProtocol GS2GC_032_042_RetSetRecommendRewardPoint[设置推荐奖励据点响应] <32, 42>
+{
+}

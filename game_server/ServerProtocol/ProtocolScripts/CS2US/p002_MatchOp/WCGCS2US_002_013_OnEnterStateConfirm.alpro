@@ -1,0 +1,10 @@
+﻿JavaPackage WCGCS2US.p002_MatchOp;
+
+/**********************************************************
+ * Common服务器通知User服务器进入等待确认状态。
+ **********************************************************/
+ALProtocol WCGCS2US_002_013_OnEnterStateConfirm <2, 13>
+{
+	long uid;
+	long dungeonId;
+}

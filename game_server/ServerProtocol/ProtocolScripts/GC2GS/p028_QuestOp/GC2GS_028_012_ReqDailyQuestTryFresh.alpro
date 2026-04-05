@@ -1,0 +1,8 @@
+JavaPackage GC2GS.p028_QuestOp;
+csharpspace GC2GS.p028_QuestOp;
+
+ALProtocol GC2GS_028_012_ReqDailyQuestTryFresh[尝试刷新任务数据] <28, 12>
+{
+	long refreshSerial[任务刷新序列号];
+	Enum.QuestEnum.EDailyQuestType type[日常任务类型];
+}

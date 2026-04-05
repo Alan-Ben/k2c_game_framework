@@ -1,0 +1,8 @@
+﻿JavaPackage GC2GS.p024_DungeonOp;
+csharpspace GC2GS.p024_DungeonOp;
+
+ALProtocol GC2GS_024_013_ReqEveningDungeonAttackLog[晚间副本攻击日志] <24, 13>
+{
+    long serial;
+    int needNum[需要数量];
+}

@@ -1,0 +1,9 @@
+﻿﻿import Common.CommonFuncObj.alpro;
+
+JavaPackage GS2GC.p017_ActivityOp;
+csharpspace GS2GC.p017_ActivityOp;
+
+ALProtocol GS2GC_017_062_OnActivityHotRefInfoChg [活动热更配表信息变更推送] <17, 62>
+{
+     Common.ActivityObj.Activity_HotRefInfo hotRefInfo[活动热更配表信息];
+}

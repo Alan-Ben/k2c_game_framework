@@ -1,0 +1,7 @@
+JavaPackage GS2GC.p014_ChildOp;
+csharpspace GS2GC.p014_ChildOp;
+import Common.ChildObj.alpro;
+ALProtocol GS2GC_014_055_OnMarriedAdultAdd [子嗣（成年已婚）新增推送] <14, 55>
+{
+    Common.ChildObj.Adult_MarriedInfo adult[空];
+}

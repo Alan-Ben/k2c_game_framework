@@ -1,0 +1,9 @@
+﻿JavaPackage GC2GS.p032_GuildOp.GuildOpStructure;
+
+import Common.NpChatObj.alpro;
+
+ALProtocol GuildOp_PlayerSendChatInfo[附带玩家聊天Uid]
+{
+	string chatUid;
+	Common.NpChatObj.NPCommon_ChatPlayerContent playerContent;
+}

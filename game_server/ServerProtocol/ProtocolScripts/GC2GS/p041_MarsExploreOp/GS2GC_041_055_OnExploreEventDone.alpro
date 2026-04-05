@@ -1,0 +1,7 @@
+﻿JavaPackage GS2GC.p041_MarsExploreOp;
+csharpspace GS2GC.p041_MarsExploreOp;
+
+ALProtocol GS2GC_041_055_OnExploreEventDone <41, 55>
+{
+	long id[事件实例ID];
+}

@@ -1,0 +1,15 @@
+﻿JavaPackage WCGCS2LCS_R.p001_BasicOp;
+
+/**********************************************************
+ * 返回列表玩家的User服ID
+ **********************************************************/
+ALProtocol WCGCS2LCS_RB_001_002_Inter_UserIndex
+{
+	long uid;
+	int usIndex;
+}
+
+ALProtocol WCGCS2LCS_RB_001_002_RetListUserIndex <1, 2>
+{
+	WCGCS2LCS_RB_001_002_Inter_UserIndex[] userServerID;
+}

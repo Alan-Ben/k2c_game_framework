@@ -1,0 +1,7 @@
+JavaPackage GS2GC.p041_MarsExploreOp;
+csharpspace GS2GC.p041_MarsExploreOp;
+
+ALProtocol GS2GC_041_024_RetGuildShareMineHadAttackByOthersTag <41, 24>
+{
+    bool hadAttackByOthersTag[是否被其他人攻击标识];
+}

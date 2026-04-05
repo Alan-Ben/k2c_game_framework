@@ -1,0 +1,9 @@
+﻿JavaPackage GS2GC.p021_PlayerInfo;
+csharpspace GS2GC.p021_PlayerInfo;
+
+import Common.AnecdoteObj.alpro;
+
+ALProtocol GS2GC_021_071_OnAnecdoteEventAdd[新增政务事件] <21, 71>
+{
+	Common.AnecdoteObj.Anecdote_EventInfo[] eventList[事件数据列表];
+}

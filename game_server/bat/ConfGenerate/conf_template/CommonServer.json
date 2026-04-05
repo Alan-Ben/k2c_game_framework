@@ -1,0 +1,165 @@
+{
+    "WCGBasicServerConf.properties": {
+        "_comments": {
+            "1": "服务器接收客户端缓存的字节长度",
+            "2": "服务器在内部系统中的监听端口（注意，非外部监听端口）",
+            "3": "平台服务器连接IP",
+            "4": "平台服务器连接端口",
+            "5": "平台服务器连接密码",
+            "6": "内部其他服务器连接本服务器时使用的IP",
+            "7": "内部其他服务器连接本服务器时使用的端口"
+        },
+        "WCGBasicServer.RecBufferLen": 102400,
+        "WCGBasicServer.Port": 7002,
+        "WCGBasicServer.PlatServerIp": "127.0.0.1",
+        "WCGBasicServer.PlatServerPort": 6660,
+        "WCGBasicServer.PlatServerPassword": "wcg_basic_plat_server",
+        "WCGBasicServer.InternalIp": "127.0.0.1",
+        "WCGBasicServer.InternalPort": 7002
+    },
+    "GameResConf.properties": {
+        "_comments": {
+            "1": "配表资源地址"
+        },
+        "GameRes.refPath": "../../project_res/Assets/Resources/__dlserverref"
+    },
+    "CommonServerConf.properties": {
+        "_comments": {
+            "1": "CrossGame权重上限",
+            "2": "是否加载虚构服务器信息",
+            "3": "时区信息"
+        },
+        "CommonServer.CrossGameWeightLimit": 50000,
+        "CommonServer.NeedLoadFooServerList": false,
+        "CommonServer.TimeZone": "GMT+8:00"
+    },
+    "CommonDBConf.properties": {
+        "_comments": {
+            "1": "数据库主机地址",
+            "2": "数据库名称",
+            "3": "数据库用户名",
+            "4": "数据库密码",
+            "5": "数据库安全保存路径"
+        },
+        "CommonDB.DBHost": "127.0.0.1",
+        "CommonDB.DBName": "gom_common",
+        "CommonDB.DBUser": "wcggame",
+        "CommonDB.DBPass": "wcggame",
+        "CommonDB.DBSafeSavePath": "./_common_db"
+    },
+    "ALServerLog.properties": {
+        "_comments": {
+            "1": "打印日志等级 可选: DEBUG, INFO, WARNING, ERROR, FATAL"
+        },
+        "ALServerLog.LogLevel": "INFO"
+    },
+    "ALBasicServerConf.properties": {
+        "_comments": {
+            "1": "服务器标志字符串",
+            "2": "同步任务执行的线程数量",
+            "3": "Socket信息发送线程数量",
+            "4": "定时任务的时间精度",
+            "5": "定时任务的大区间长度，根据精度和长度可以决定一个区间的时间跨度",
+            "6": "是否检测线程加锁等级合法性"
+        },
+        "ALBasicServer.ServerTag": "WCGBasicLoginServer",
+        "ALBasicServer.SynTaskDealThreadNum": 4,
+        "ALBasicServer.ServerSendBackDealThreadNum": 1,
+        "ALBasicServer.TimerCheckTime": 20,
+        "ALBasicServer.TimerCheckAreaSize": 5000,
+        "ALBasicServer.CheckMutex": true
+    },
+    "ALBasicClientConf.properties": {
+        "_comments": {
+            "1": "消息发送线程的数量",
+            "2": "缓冲区长度"
+        },
+        "ALBasicClient.SendThreadNum": 1,
+        "ALBasicClient.RecSocketBufLen": 131072
+    },
+    "FooServerListJson.txt": {
+        "raw": {
+            "data": {
+                "server_index_list": [
+                    {
+                        "serverLogicId": 1,
+                        "serverTypeId": 1
+                    },
+                    {
+                        "serverLogicId": 2,
+                        "serverTypeId": 2
+                    },
+                    {
+                        "serverLogicId": 3,
+                        "serverTypeId": 4
+                    },
+                    {
+                        "serverLogicId": 4,
+                        "serverTypeId": 3
+                    },
+                    {
+                        "serverLogicId": 5,
+                        "serverTypeId": 5
+                    }
+                ],
+                "server_list": [
+                    {
+                        "areaTag": "as",
+                        "groupId": 1,
+                        "serverTypeId": 1,
+                        "serverName": "我是1服",
+                        "onlineStateTypeId": 0,
+                        "showStateTypeId": 1,
+                        "isNew": true,
+                        "startDate": "2022-07-01",
+                        "ext": ""
+                    },
+                    {
+                        "areaTag": "as",
+                        "groupId": 1,
+                        "serverTypeId": 2,
+                        "serverName": "我是2服",
+                        "onlineStateTypeId": 0,
+                        "showStateTypeId": 3,
+                        "isNew": true,
+                        "startDate": "2022-07-01",
+                        "ext": ""
+                    },
+                    {
+                        "areaTag": "as",
+                        "groupId": 2,
+                        "serverTypeId": 3,
+                        "serverName": "不存在的3服",
+                        "onlineStateTypeId": 1,
+                        "showStateTypeId": 5,
+                        "isNew": false,
+                        "startDate": "2022-07-01",
+                        "ext": ""
+                    },
+                    {
+                        "areaTag": "as",
+                        "groupId": 2,
+                        "serverTypeId": 4,
+                        "serverName": "不存在的4服",
+                        "onlineStateTypeId": 1,
+                        "showStateTypeId": 2,
+                        "isNew": false,
+                        "startDate": "2022-07-01",
+                        "ext": ""
+                    },
+                    {
+                        "areaTag": "as",
+                        "groupId": 2,
+                        "serverTypeId": 5,
+                        "serverName": "不存在的5服",
+                        "onlineStateTypeId": 1,
+                        "showStateTypeId": 4,
+                        "isNew": false,
+                        "startDate": "2022-07-01",
+                        "ext": ""
+                    }
+                ]
+            }
+        }
+    }
+}

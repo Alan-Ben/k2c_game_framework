@@ -1,0 +1,11 @@
+JavaPackage NP2US_R.p009_CrossRankOp;
+
+ALProtocol ToUS_R_009_001_PushCrossRankScoreChg [跨服排行榜分数变更推送] <9, 1>
+{
+	long cid[玩家CID];
+	long crossInstanceId[跨服活动实例ID];
+	long rankId[排行榜ID];
+	int oriRank[原排名];
+	int curRank[当前排名];
+	long score[当前分数];
+}

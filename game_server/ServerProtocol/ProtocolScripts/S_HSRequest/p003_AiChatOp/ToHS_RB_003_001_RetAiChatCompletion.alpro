@@ -1,0 +1,6 @@
+JavaPackage NP2HS_RB.p003_AiChatOp;
+
+ALProtocol ToHS_RB_003_001_RetAiChatCompletion <3, 1>
+{
+	
+}

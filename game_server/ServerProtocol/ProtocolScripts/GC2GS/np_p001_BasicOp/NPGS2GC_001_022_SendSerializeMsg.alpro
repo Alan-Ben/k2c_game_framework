@@ -1,0 +1,11 @@
+﻿JavaPackage NPGS2GC.p001_BasicOp;
+csharpspace NPGS2GC.p001_BasicOp;
+
+/**********************************************************
+ * 服务端返回客户端消息
+ **********************************************************/
+ALProtocol NPGS2GC_001_022_SendSerializeMsg <1, 22>
+{
+	int msgSerialize; //消息序列号
+	Bytebuffer msg;
+}

@@ -1,0 +1,18 @@
+﻿JavaPackage ALLRPC.CrossTeamServer.Team;
+import Enum.CrossTeamEnum.alpro;
+import Common.CrossTeamObj.alpro;
+ALProtocol CTSSetTeamSetting_Req
+{
+        long teamId[队伍实例ID];
+        long cid[操作玩家CID];
+        string teamName[队伍名称];
+        string teamDec[队伍宣言];
+        Enum.CrossTeamEnum.ENPCrossTeamJoinType joinType[加入方式];
+        Common.CrossTeamObj.CrossTeam_SetInfo_Join joinCond[申请条件];
+}
+ALProtocol CTSSetTeamSetting_Return
+{
+}
+//[RPC]修改队伍设置
+//[CLASS_PACKAGE] : AllRpcData.CrossTeam_Service.Team
+//[DEALER_PACKAGE] : CrossTeamServer.RPCDispatcher.Team

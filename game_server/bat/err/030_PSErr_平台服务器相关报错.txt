@@ -1,0 +1,6 @@
+java_path= ../Common/src
+java_package=NPCommon.ErrMain
+
+id	name	desc
+1	PS_NO_AREA	未找到区域信息
+2	PS_NO_GS	未找到GS

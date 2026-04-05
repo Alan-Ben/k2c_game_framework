@@ -1,0 +1,8 @@
+﻿JavaPackage GC2GS.p037_GuildDungeonOp;
+csharpspace GC2GS.p037_GuildDungeonOp;
+
+ALProtocol GC2GS_037_004_ReqUpgradeDungeonLvl[副本升级] <37, 4>
+{
+	long dungeonId;
+	int curLvl[当前等级];
+}

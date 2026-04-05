@@ -1,0 +1,7 @@
+﻿JavaPackage NP2CGS_RB.p001_BasicOp;
+
+ALProtocol NP2CGS_RB_001_004_RetGM <1, 4>
+{
+	bool res;
+	string returnMsg;
+}

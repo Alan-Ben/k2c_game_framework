@@ -1,0 +1,16 @@
+﻿JavaPackage ALLRPC.US.Child;
+
+﻿﻿﻿﻿﻿import Common.ServerObj.alpro;
+
+ALProtocol AgreePersonMarryApply_Req
+{
+	Common.ServerObj.ServerObj_AdultMarriedInfo marryInfo[结婚子嗣数据];
+}
+
+ALProtocol AgreePersonMarryApply_Return
+{
+}
+
+//[RPC] 同意子嗣指定联姻请求
+//[CLASS_PACKAGE] : AllRpcData.US_Service.Child
+//[DEALER_PACKAGE] : USServer.RPCDispatcher.Child

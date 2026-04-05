@@ -1,0 +1,8 @@
+JavaPackage GS2GC.p016_ChapterOp;
+csharpspace GS2GC.p016_ChapterOp;
+import Common.ChapterObj.alpro;
+
+ALProtocol GS2GC_016_052_OnChapterInspireChg [关卡鼓舞信息变更] <16, 52>
+{
+    Common.ChapterObj.Chapter_InspireInfo inspireInfo[鼓舞信息];
+}

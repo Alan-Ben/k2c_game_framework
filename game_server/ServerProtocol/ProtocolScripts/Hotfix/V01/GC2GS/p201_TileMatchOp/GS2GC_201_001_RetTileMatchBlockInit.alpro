@@ -1,0 +1,10 @@
+JavaPackage Hotfix.V01.GS2GC.p201_TileMatchOp;
+csharpspace Hotfix.GS2GC.p201_TileMatchOp;
+
+import Hotfix.V01.Common.TileMatchObj.alpro;
+
+ALProtocol GS2GC_201_001_RetTileMatchBlockInit <201, 1>
+{
+    Hotfix.V01.Common.TileMatchObj.TileMatch_BlockBaseInfo[] blockList[方块数据];
+    Hotfix.V01.Common.TileMatchObj.TileMatch_TaskInfo taskInfo[任务数据];
+}

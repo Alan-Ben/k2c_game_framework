@@ -1,0 +1,7 @@
+﻿JavaPackage GS2GC.p042_GuildRelatedOp;
+csharpspace GS2GC.p042_GuildRelatedOp;
+
+ALProtocol GS2GC_042_054_OnMyMarsHelpDel[自身发起的求助数据删除] <42, 54>
+{
+	long id[求助实例ID];
+}

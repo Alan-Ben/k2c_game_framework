@@ -1,0 +1,47 @@
+﻿JavaPackage Common.CommonFuncObj;
+csharpspace Common.CommonFuncObj;
+
+ALProtocol CommonFunc_TargetReward[目标奖励信息]
+{
+	long id[目标id];
+	long value[计数];
+	bool hadDraw[是否领取];
+}
+
+ALProtocol CommonFunc_Refresh[通用刷新信息]
+{
+	long id[刷新id];
+	long nextRefreshTimeMs[下次刷新时间];
+}
+
+ALProtocol CrystalGiftPack_BuyRecord[钻石礼包购买记录]
+{
+    long giftPackId[礼包id];
+    long hadBuyCount[已购买数量];
+}
+
+ALProtocol CrystalGiftPack_Info[钻石礼包组信息]
+{
+	long groupId[礼包组id];
+    long nextRefreshTimeMs[下次刷新时间];
+    CrystalGiftPack_BuyRecord[] buyRecordList[购买记录列表];
+}
+
+ALProtocol GiftPack_Info[礼包信息]
+{
+	long giftPackId[礼包id];
+    long nextRefreshTimeMs[下次刷新时间];
+    int hadBuyCount[已购买数量];
+}
+
+ALProtocol Order_Info[订单信息]
+{
+	string orderId[订单号];
+    long payId[支付id];
+
+    long giftPackId[礼包id];
+	
+    Enum.CommonEnum.EOrderStatus status[订单状态];
+    long createTimeMs[创建时间 ms];
+	long payTimeMs[支付时间 ms];
+}

@@ -1,0 +1,9 @@
+﻿JavaPackage GS2GC.p040_MarsPeopleOp;
+csharpspace GS2GC.p040_MarsPeopleOp;
+
+import Common.MarsObj.alpro;
+
+ALProtocol GS2GC_040_050_OnMarsPeopleNumChg[人口数量变化] <40, 50>
+{
+	Common.MarsObj.Mars_PeopleNum peopleNum[居民数量];
+}

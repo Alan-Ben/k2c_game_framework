@@ -1,0 +1,71 @@
+namespace GOE
+{
+    public class NoticeDealer_ChildMarrySuccess : _AMainCityCanJumpPushNotice
+    {
+        private bool _m_bWndLoaded;
+        private readonly MarriedInfo _m_marriedInfo;
+        private readonly NPCommonCostItem _m_rewardItem;
+        
+        
+        public NoticeDealer_ChildMarrySuccess(MarriedInfo _marriedInfo, NPCommonCostItem _rewardItem, EMainCityPushNoticeTriggerType _pushNoticeTriggerType) : base(_pushNoticeTriggerType)
+        {
+            _m_marriedInfo = _marriedInfo;
+            _m_rewardItem = _rewardItem;
+        }
+        
+        
+        public override ENoticeType[] noticeType { get { return NPNoticeType.g_adultOrBuildingOrRoomTypeArr; } }
+        protected override bool _isEnable { get { return true; } }
+        protected override bool _canCurShow { get { return true; } }
+        protected override string _noticeTag { get { return NoticeTagConst.CHILD_MARRY_SUCCESS; } }
+        public override bool canPlayPriority { get { return false; } }
+        public override bool needTransBk { get { return true; } }
+        public override bool isNoticeFullScreen { get { return false; } }
+        public override bool isOnlyUINode { get { return true; } }
+        
+
+        public override void dealShowNotice()
+        {
+            //未加载的时候加载
+            if (!_m_bWndLoaded)
+            {
+                _m_bWndLoaded = true;
+
+                GGUIWndAdultMarrySuccess.instance.load(GGUIWndAdultMarrySuccess.instance.showWnd);
+            }
+            else
+            {
+                //已经加载的，需要刷新层级
+                if (null != GGUIWndAdultMarrySuccess.instance.wnd)
+                    GCommon.moveTransformToLastAndRefreshLayer(GGUIWndAdultMarrySuccess.instance.rectTransform);
+            }
+            
+            GGUIWndAdultMarrySuccess.instance.refreshWnd(_m_marriedInfo, _m_rewardItem);
+        }
+        public override void dealHideNotice()
+        {
+            //已加载的时候才卸载，同时重置状态
+            if (_m_bWndLoaded)
+            {
+                GGUIWndAdultMarrySuccess.instance.discard();
+                _m_bWndLoaded = false;
+            }
+        }
+
+        protected override void __onDealerDone()
+        {
+        }
+        
+        // 临时加上, 防止不能IF修改
+        public override void showNotice()
+        {
+            base.showNotice();
+        }
+
+        // 临时加上, 防止不能IF修改
+        protected override void _onGotoOtherMainViewNode()
+        {
+            base._onGotoOtherMainViewNode();
+        }
+    }
+}

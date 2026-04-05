@@ -1,0 +1,8 @@
+JavaPackage GS2GC.p015_ConsortOp;
+csharpspace GS2GC.p015_ConsortOp;
+
+ALProtocol GS2GC_015_074_OnConsortChatHasAddChg [家人对话是否添加好友标志位变更] <15, 74>
+{
+    long consortId;
+    bool hasAdd[是否添加好友];
+}

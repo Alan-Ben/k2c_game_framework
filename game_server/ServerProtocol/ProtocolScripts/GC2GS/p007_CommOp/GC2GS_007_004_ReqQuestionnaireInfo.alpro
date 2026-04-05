@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p007_CommOp;
+csharpspace GC2GS.p007_CommOp;
+
+ALProtocol GC2GS_007_004_ReqQuestionnaireInfo[查询问卷信息] <7, 4>
+{
+	long id[问卷id];
+}

@@ -1,0 +1,11 @@
+﻿﻿import Common.CommonFuncObj.alpro;
+
+JavaPackage GS2GC.p017_ActivityOp;
+csharpspace GS2GC.p017_ActivityOp;
+
+ALProtocol GS2GC_017_061_OnActivityCrystalGiftPackItemBuy [活动钻石礼包购买记录推送] <17, 61>
+{
+     long instanceId[活动实例id];
+     long groupId[组id];
+     Common.CommonFuncObj.CrystalGiftPack_BuyRecord buyRecord[购买记录];
+}

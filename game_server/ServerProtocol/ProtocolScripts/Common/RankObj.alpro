@@ -1,0 +1,33 @@
+﻿JavaPackage Common.RankObj;
+csharpspace Common.RankObj;
+
+ALProtocol Rank_BaseItem[排行榜基础数据]
+{
+	long key;
+	long sourceId[分数来源id 针对大臣....];
+	long score;
+	int rank[排名];
+}
+
+ALProtocol Rank_ItemDump[排行榜基础数据]
+{
+	long key;
+	long groupId[团体id];
+	int rank[排名];
+	long score[分数];
+}
+
+ALProtocol RankFixed_LikeResult[常驻排行榜点赞结果]
+{
+	long rankFixedId[常驻排行榜id];
+	Rank_BaseItem info[基础数据];
+	long likeScore[点赞积分];
+	Common.NPCommonObj.NPCommon_ItemInfo[] rewardItemList[奖励列表];
+}
+
+ALProtocol Rank_BaseSubItem[排行榜基础子数据]
+{
+	long key;
+	long sourceId[分数来源id 针对大臣....];
+	long score;
+}

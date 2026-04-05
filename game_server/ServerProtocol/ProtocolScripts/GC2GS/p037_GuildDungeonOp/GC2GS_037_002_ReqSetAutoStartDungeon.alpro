@@ -1,0 +1,9 @@
+﻿JavaPackage GC2GS.p037_GuildDungeonOp;
+csharpspace GC2GS.p037_GuildDungeonOp;
+
+ALProtocol GC2GS_037_002_ReqSetAutoStartDungeon[设置副本自动开启] <37, 2>
+{
+	long[] autoStartDungeonIdList;
+	int hour;
+	int min;
+}

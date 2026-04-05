@@ -1,0 +1,14 @@
+﻿JavaPackage ALLRPC.US.Guild;
+
+ALProtocol GuildAddMarsMine_Req
+{
+	long cid;
+	long guildId;
+	long mineId;
+	long posId;
+	long endShowTimeMS;
+}
+
+ALProtocol GuildAddMarsMine_Return
+{
+}

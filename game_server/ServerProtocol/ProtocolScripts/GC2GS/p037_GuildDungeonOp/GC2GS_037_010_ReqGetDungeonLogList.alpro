@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p037_GuildDungeonOp;
+csharpspace GC2GS.p037_GuildDungeonOp;
+
+ALProtocol GC2GS_037_010_ReqGetDungeonLogList[公会副本-日志列表] <37, 10>
+{
+	long id[公会副本实例ID];
+}

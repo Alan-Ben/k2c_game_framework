@@ -1,0 +1,7 @@
+JavaPackage GS2GC.p019_DinnerOp;
+csharpspace GS2GC.p019_DinnerOp;
+import Common.DinnerObj.alpro;
+ALProtocol GS2GC_019_003_RetJoinedPlayerList [宴会交互记录] <19, 3>
+{
+    Common.DinnerObj.Dinner_JoinerLogList[] joinerList[赴宴玩家记录];
+}

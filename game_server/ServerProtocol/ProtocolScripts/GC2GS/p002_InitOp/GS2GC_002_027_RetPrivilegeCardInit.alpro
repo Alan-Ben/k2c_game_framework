@@ -1,0 +1,9 @@
+﻿﻿JavaPackage GS2GC.p002_InitOp;
+csharpspace GS2GC.p002_InitOp;
+
+import Common.PrivilegeCardObj.alpro;
+
+ALProtocol GS2GC_002_027_RetPrivilegeCardInit <2, 27>
+{
+    Common.PrivilegeCardObj.PrivilegeCardObj_Info[] cardList[权益卡数据列表];
+}

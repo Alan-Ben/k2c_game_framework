@@ -1,0 +1,7 @@
+﻿﻿JavaPackage GS2GC.p023_ArenaOp;
+csharpspace GS2GC.p023_ArenaOp;
+
+ALProtocol GS2GC_023_064_OnTowerHighestPosHadReachChg <23, 64>
+{
+    Common.TowerObj.Tower_PosInfo pos[最高位置信息];
+}

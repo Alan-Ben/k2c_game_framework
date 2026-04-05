@@ -1,0 +1,13 @@
+﻿JavaPackage ALLRPC.US.Guild;
+
+ALProtocol GuildMemberOnlineState_Req
+{
+	long guildId;
+	long cid;
+	bool isOnLine;
+	long timeMS;
+}
+
+ALProtocol GuildMemberOnlineState_Return
+{
+}

@@ -1,0 +1,11 @@
+﻿JavaPackage NP2US_R.p001_BasicOp;
+
+ALProtocol NP2US_R_001_020_GuildMsg <1, 20>
+{
+	long guildId;
+	long cid;
+	
+	bytebuffer msg[具体的消息内容];
+	
+	bytebuffer addInfo[附加的信息];
+}

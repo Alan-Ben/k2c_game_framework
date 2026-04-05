@@ -1,0 +1,6 @@
+﻿JavaPackage GC2GS.p039_MarsBuildingOp;
+csharpspace GC2GS.p039_MarsBuildingOp;
+
+ALProtocol GC2GS_039_006_ReqGetBuildingEnergy[火星建筑-获得能源] <39, 6>
+{
+}

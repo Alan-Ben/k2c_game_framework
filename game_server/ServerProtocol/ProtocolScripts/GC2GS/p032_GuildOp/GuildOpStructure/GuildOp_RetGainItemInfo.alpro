@@ -1,0 +1,9 @@
+﻿JavaPackage GC2GS.p032_GuildOp.GuildOpStructure;
+
+import Common.NPCommonObj.alpro;
+
+ALProtocol GuildOp_RetGainItemInfo[附带玩家获取的物品信息]
+{
+	Common.NPCommonObj.NPCommon_ItemInfo[] itemList;
+	int critMul;
+}

@@ -1,0 +1,11 @@
+﻿JavaPackage GC2GS.p006_BagItemOp;
+csharpspace GC2GS.p006_BagItemOp;
+
+/**********************************************************
+ * 请求出售背包物品
+ **********************************************************/
+ALProtocol GC2GS_006_001_ReqSellBagItem <6, 1>
+{
+    long itemId;
+    int count;
+}

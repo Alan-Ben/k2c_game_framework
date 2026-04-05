@@ -1,0 +1,7 @@
+﻿JavaPackage GS2GC.p032_GuildOp;
+csharpspace GS2GC.p032_GuildOp;
+
+ALProtocol GS2GC_032_068_OnOpenRecruitCdChg <32, 68>
+{
+	long nextCanRecruitTimeMs[下次可招募时间];
+}

@@ -1,0 +1,8 @@
+﻿JavaPackage NP2CGS_R.p001_BasicOp;
+
+import Enum.NPServerEnum.alpro;
+
+ALProtocol NP2CGS_R_001_004_ReqGM <1, 4>
+{
+	string gm;
+}

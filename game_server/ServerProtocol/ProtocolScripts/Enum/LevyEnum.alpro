@@ -1,0 +1,10 @@
+﻿JavaPackage Common.LevyEnum;
+csharpspace Common.LevyEnum;
+
+ALEnum ELevy_Type[征收类型类型]
+{
+	NONE;
+	SILVER[银币 -> 金币];
+	FOOD[粮食 -> 面粉];
+	SOLDIER[士兵 -> 面包];
+}

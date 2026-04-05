@@ -1,0 +1,10 @@
+﻿JavaPackage GS2GC.p021_PlayerInfo;
+csharpspace GS2GC.p021_PlayerInfo;
+
+/**********************************************************
+ * 定时恢复cd数据变更
+ **********************************************************/
+ALProtocol GS2GC_021_052_OnFixedCDChged <21, 52>
+{
+	Common.NPCommonObj.NPCommon_PlayerFixedCD cdInfo[定时恢复cd信息];
+}

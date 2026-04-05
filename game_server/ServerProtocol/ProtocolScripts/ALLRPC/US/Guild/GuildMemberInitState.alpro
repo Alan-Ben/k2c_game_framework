@@ -1,0 +1,15 @@
+﻿JavaPackage ALLRPC.US.Guild;
+
+ALProtocol GuildMemberInitState_Req
+{
+	long guildId;
+	long cid;
+}
+
+ALProtocol GuildMemberInitState_Return
+{
+	string guildName;
+	string guildSimpleName;
+	int guildLvl;
+	int[] buildingAddPerArr;
+}

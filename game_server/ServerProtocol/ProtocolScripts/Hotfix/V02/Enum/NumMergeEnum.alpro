@@ -1,0 +1,30 @@
+JavaPackage Hotfix.V02.Enum.NumMergeEnum;
+csharpspace Hotfix.NumMergeEnum;
+
+ALEnum ENumMerge_ModeType[数字合并模式类型]
+{
+	NONE;
+	NORMAL[普通模式];
+	ADVANCED[快速模式];
+	ULTRA[极速模式];
+}
+
+ALEnum ENumMerge_MoveDir[数字合并移动方向]
+{
+	NONE;
+	UP[向上];
+	DOWN[向下];
+	LEFT[向左];
+	RIGHT[向右];
+}
+
+ALEnum ENumMerge_GameEvent[数字合并活动事件]
+{
+	NONE;
+	NUM_MERGE_GAME_INIT(102000)[数字合并初始化];
+	NUM_MERGE_MOVE(102001)[移动操作];
+	NUM_MERGE_GAME_OVER(102002)[游戏结束];
+	NUM_MERGE_USE_ORGANIZE_ITEM(102003)[使用整理道具];
+	NUM_MERGE_USE_ELIMINATE_ITEM(102004)[使用消除道具];
+	NUM_MERGE_DRAW_BOX(102005)[领取宝箱];
+}

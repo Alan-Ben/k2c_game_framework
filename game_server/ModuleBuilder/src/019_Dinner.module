@@ -1,0 +1,208 @@
+/************************
+关键字：
+$Module	:模块
+$Action	:行为，包含$req{} 和$ret{}
+$Push	:推送协议
+$Req	:请求包
+$Ret	:返回包
+************************/
+
+$Module 019 Dinner //宴会
+
+$Action 001 StartDinner[开启宴会（普通模式）]
+(
+	$req	
+	{
+		long dinnerId[宴会配置ID];
+	}
+	$ret	
+	{
+		Common.DinnerObj.Dinner_Info info[宴会详情];
+	}
+)
+
+$Action 002 StartDinnerByPermit[开启宴会（许可证模式）]
+(
+	$req	
+	{
+		long permitInstanceId[许可证实例ID];
+	}
+	$ret	
+	{
+		Common.DinnerObj.Dinner_Info info[宴会详情];
+	}
+)
+
+$Action 003 JoinedPlayerList[宴会交互记录]
+(
+	$req	
+	{
+	}
+	$ret	
+	{
+		Common.DinnerObj.Dinner_JoinerLogList[] joinerList[赴宴玩家记录];
+	}
+)
+
+$Action 004 GetStartLogIdxList[开宴索引记录列表]
+(
+	$req	
+	{
+	}
+	$ret	
+	{
+		Common.DinnerObj.Dinner_StartLogIdx[] idxList[开宴索引记录列表];
+	}
+)
+
+$Action 005 GetStartLogInfo[开宴记录]
+(
+	$req	
+	{
+		long instanceId[宴会实例ID]; 
+	}
+	$ret	
+	{
+		Common.DinnerObj.Dinner_StartLogInfo info[开宴记录数据];
+	}
+)
+
+$Action 006 GetDinnerIdxList[宴会索引列表]
+(
+	$req	
+	{
+		int page[当前页数];
+		int num[展示数量，上限不超过100];
+	}
+	$ret
+	{
+		Common.DinnerObj.Dinner_Idx[] idxLIst[宴会索引数据列表];
+		bool hasNext[是否有后续宴会数据];
+	}
+)
+
+$Action 007 GetDinnerInfo[宴会信息]
+(
+	$req	
+	{
+		long instanceId[宴会实例ID];
+	}
+	$ret	
+	{
+		Common.DinnerObj.Dinner_Info info[宴会详情];
+		int idx[当前排序];
+		
+		bool hasPre[是否有上一条宴会数据 true-有];
+		bool hasNext[是否有下一条宴会数据 true-有];
+	}
+)
+
+$Action 008 JoinDinner[加入宴会]
+(
+	$req	
+	{
+		long instanceId[宴会实例ID];
+		long costId[消耗配置ID];
+	}
+	$ret	
+	{
+		Common.NPCommonObj.NPCommon_ItemInfo[] gainItemList[领取的物品列表];
+	}
+)
+
+$Action 009 TakeOpenReward[领取开宴结算奖励]
+(
+	$req	
+	{
+	}
+	$ret	
+	{
+		Common.DinnerObj.Dinner_ResultInfo result[开宴玩家结算数据];
+	}
+)
+
+$Action 011 GetPreDinnerInfo[取指定宴会的上一条宴会数据]
+(
+	$req	
+	{
+		long instanceId[宴会实例ID];
+		int idx[当前排序];
+	}
+	$ret	
+	{
+		Common.DinnerObj.Dinner_Info info[宴会详情];
+		int idx[当前排序];
+		
+		bool hasPre[是否有上一条宴会数据 true-有];
+		bool hasNext[是否有下一条宴会数据 true-有];
+	}
+)
+
+$Action 012 GetNextDinnerInfo[取指定宴会的下一条宴会数据]
+(
+	$req	
+	{
+		long instanceId[宴会实例ID];
+		int idx[当前排序];
+	}
+	$ret	
+	{
+		Common.DinnerObj.Dinner_Info info[宴会详情];
+		int idx[当前排序];
+		
+		bool hasPre[是否有上一条宴会数据 true-有];
+		bool hasNext[是否有下一条宴会数据 true-有];
+	}
+)
+
+$Action 013 SendInviteToPlayer[对指定玩家发起邀请]
+(
+	$req	
+	{
+		long targetCid[目标玩家CID];
+	}
+	$ret	
+	{
+		long msgId[私聊消息ID];
+	}
+)
+
+$Action 014 CheckDinnerInvite[检查宴会邀请信息]
+(
+	$req	
+	{
+		long instanceId[宴会实例ID];
+	}
+	$ret	
+	{
+		int joinerCount[参与宴会玩家数量];
+	}
+)
+
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+
+$Push 50 OnDinnerAdd[宴会开启推送]
+{
+   long instanceId[宴会实例ID];
+}
+
+$Push 51 OnDinnerEnd[宴会结束推送]
+{
+   long instanceId[宴会实例ID];
+}
+
+$Push 52 OnPermitAdd[宴会凭证推送]
+{
+   Common.DinnerObj.Dinner_Permit permit[宴会凭证];
+}
+
+$Push 53 OnJoinerAdd[参加宴会玩家推送]
+{
+   long cid[赴宴玩家CID];
+   long costId[赴宴配置ID];
+   long dinnerId[宴会配置ID];
+   
+   string cname[赴宴玩家名称];
+}

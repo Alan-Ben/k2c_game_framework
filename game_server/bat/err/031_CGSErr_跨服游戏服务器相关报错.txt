@@ -1,0 +1,6 @@
+java_path= ../Common/src
+java_package=NPCommon.ErrMain
+
+id	name	desc
+1	NO_CROSSGAME_CATEGORY_ERROR	跨服游戏模块不存在
+2	NO_CROSSGAME_INSTANCE_ERROR	跨服游戏实例不存在

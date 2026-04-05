@@ -1,0 +1,10 @@
+JavaPackage GC2GS.p004_PlayerOp;
+csharpspace GC2GS.p004_PlayerOp;
+
+/**********************************************************
+ * 设置玩家当前房间皮肤
+ **********************************************************/
+ALProtocol GC2GS_004_047_ReqSetRoomSkin <4, 47>
+{
+    long roomSkinId[房间皮肤ID];
+}

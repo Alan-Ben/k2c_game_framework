@@ -1,0 +1,10 @@
+﻿import Common.NPPlayerInfo.alpro;
+JavaPackage NP2US_RB.p006_CacheOp;
+
+/**********************************************************
+ * 返回玩家展示数据
+ **********************************************************/
+ALProtocol NP2US_RB_006_001_GetPlayerShowInfo <6, 1>
+{
+	Common.NPPlayerInfo.PlayerInfo_CommonShow showInfo;
+}

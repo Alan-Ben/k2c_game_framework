@@ -1,0 +1,12 @@
+﻿﻿﻿﻿import Common.CommonObj.alpro;
+
+JavaPackage WCGCS2US_R.p003_MailOp;
+
+/**********************************************************
+ * Common服向用户服务器发送个人邮件
+ **********************************************************/
+ALProtocol WCGCS2US_R_003_002_ReqSendPersonalMail <3, 2>
+{
+	long uid; //用户uid
+	Common.CommonObj.WCGCS2US_PersonalMail pmail; //个人邮件详情
+}

@@ -1,0 +1,357 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using ALBasicProtocolPack;
+
+
+namespace Common.ChildObj
+{
+
+/// <summary>
+/// 子嗣数据
+/// </summary>
+public class Child_Info : ALBasicProtocolPack._IALProtocolStructure {
+/// <summary>
+/// 子嗣ID
+/// </summary>
+private long id;
+/// <summary>
+/// 关联家人ID
+/// </summary>
+private long consortId;
+/// <summary>
+/// 子嗣初始形象配置ID
+/// </summary>
+private long initResId;
+/// <summary>
+/// 子嗣资质
+/// </summary>
+private long quality;
+/// <summary>
+/// 子嗣相性
+/// </summary>
+private CommonEnum.ESpecAttrType attrType;
+/// <summary>
+/// 子嗣职业配置ID
+/// </summary>
+private long careerId;
+/// <summary>
+/// 训练位ID
+/// </summary>
+private long seatId;
+/// <summary>
+/// 是否卷王
+/// </summary>
+private bool isGiftde;
+/// <summary>
+/// 初始亲密度
+/// </summary>
+private long initIntimacy;
+/// <summary>
+/// 子嗣名称
+/// </summary>
+private string name;
+/// <summary>
+/// 子嗣等级
+/// </summary>
+private int lvl;
+/// <summary>
+/// 子嗣基础收益（用于计算上课收益）
+/// </summary>
+private long baseBonus;
+/// <summary>
+/// 子嗣收益（上课收益）
+/// </summary>
+private long bonus;
+/// <summary>
+/// 子嗣初始教学经验加成（万分比），来源：consort_fetters_lvl.study_bonus
+/// </summary>
+private int initStudyBonus;
+
+
+public Child_Info() {
+	id = (long)0;
+	consortId = (long)0;
+	initResId = (long)0;
+	quality = (long)0;
+	attrType = 0;
+	careerId = (long)0;
+	seatId = (long)0;
+	isGiftde = false;
+	initIntimacy = (long)0;
+	name = "";
+	lvl = 0;
+	baseBonus = (long)0;
+	bonus = (long)0;
+	initStudyBonus = 0;
+}
+
+public Child_Info(
+	long _id
+	, long _consortId
+	, long _initResId
+	, long _quality
+	, CommonEnum.ESpecAttrType _attrType
+	, long _careerId
+	, long _seatId
+	, bool _isGiftde
+	, long _initIntimacy
+	, string _name
+	, int _lvl
+	, long _baseBonus
+	, long _bonus
+	, int _initStudyBonus
+) {	id = _id;
+	consortId = _consortId;
+	initResId = _initResId;
+	quality = _quality;
+	attrType = _attrType;
+	careerId = _careerId;
+	seatId = _seatId;
+	isGiftde = _isGiftde;
+	initIntimacy = _initIntimacy;
+	name = _name;
+	lvl = _lvl;
+	baseBonus = _baseBonus;
+	bonus = _bonus;
+	initStudyBonus = _initStudyBonus;
+}
+
+public byte getMainOrder() { return (byte)0; }
+
+public byte getSubOrder() { return (byte)0; }
+
+/// <summary>
+/// 子嗣ID
+/// </summary>
+public long getId() { return id; }
+/// <summary>
+/// 子嗣ID
+/// </summary>
+public void setId(long _id) { id = _id; }
+/// <summary>
+/// 关联家人ID
+/// </summary>
+public long getConsortId() { return consortId; }
+/// <summary>
+/// 关联家人ID
+/// </summary>
+public void setConsortId(long _consortId) { consortId = _consortId; }
+/// <summary>
+/// 子嗣初始形象配置ID
+/// </summary>
+public long getInitResId() { return initResId; }
+/// <summary>
+/// 子嗣初始形象配置ID
+/// </summary>
+public void setInitResId(long _initResId) { initResId = _initResId; }
+/// <summary>
+/// 子嗣资质
+/// </summary>
+public long getQuality() { return quality; }
+/// <summary>
+/// 子嗣资质
+/// </summary>
+public void setQuality(long _quality) { quality = _quality; }
+/// <summary>
+/// 子嗣相性
+/// </summary>
+public CommonEnum.ESpecAttrType getAttrType() { return attrType; }
+/// <summary>
+/// 子嗣相性
+/// </summary>
+public void setAttrType(CommonEnum.ESpecAttrType _attrType) { attrType = _attrType; }
+/// <summary>
+/// 子嗣职业配置ID
+/// </summary>
+public long getCareerId() { return careerId; }
+/// <summary>
+/// 子嗣职业配置ID
+/// </summary>
+public void setCareerId(long _careerId) { careerId = _careerId; }
+/// <summary>
+/// 训练位ID
+/// </summary>
+public long getSeatId() { return seatId; }
+/// <summary>
+/// 训练位ID
+/// </summary>
+public void setSeatId(long _seatId) { seatId = _seatId; }
+/// <summary>
+/// 是否卷王
+/// </summary>
+public bool getIsGiftde() { return isGiftde; }
+/// <summary>
+/// 是否卷王
+/// </summary>
+public void setIsGiftde(bool _isGiftde) { isGiftde = _isGiftde; }
+/// <summary>
+/// 初始亲密度
+/// </summary>
+public long getInitIntimacy() { return initIntimacy; }
+/// <summary>
+/// 初始亲密度
+/// </summary>
+public void setInitIntimacy(long _initIntimacy) { initIntimacy = _initIntimacy; }
+/// <summary>
+/// 子嗣名称
+/// </summary>
+public string getName() { return name; }
+/// <summary>
+/// 子嗣名称
+/// </summary>
+public void setName(string _name) { name = _name; }
+/// <summary>
+/// 子嗣等级
+/// </summary>
+public int getLvl() { return lvl; }
+/// <summary>
+/// 子嗣等级
+/// </summary>
+public void setLvl(int _lvl) { lvl = _lvl; }
+/// <summary>
+/// 子嗣基础收益（用于计算上课收益）
+/// </summary>
+public long getBaseBonus() { return baseBonus; }
+/// <summary>
+/// 子嗣基础收益（用于计算上课收益）
+/// </summary>
+public void setBaseBonus(long _baseBonus) { baseBonus = _baseBonus; }
+/// <summary>
+/// 子嗣收益（上课收益）
+/// </summary>
+public long getBonus() { return bonus; }
+/// <summary>
+/// 子嗣收益（上课收益）
+/// </summary>
+public void setBonus(long _bonus) { bonus = _bonus; }
+/// <summary>
+/// 子嗣初始教学经验加成（万分比），来源：consort_fetters_lvl.study_bonus
+/// </summary>
+public int getInitStudyBonus() { return initStudyBonus; }
+/// <summary>
+/// 子嗣初始教学经验加成（万分比），来源：consort_fetters_lvl.study_bonus
+/// </summary>
+public void setInitStudyBonus(int _initStudyBonus) { initStudyBonus = _initStudyBonus; }
+
+
+public int GetBufSize() {
+	int _size = 85;
+	_size += ALBasicProtocolPack.ALProtocolCommon.GetStringBufSize(name);
+
+	return _size;
+}
+
+public int GetFullPackBufSize() {
+	int _size = 87;
+	_size += ALBasicProtocolPack.ALProtocolCommon.GetStringBufSize(name);
+
+	return _size;
+}
+
+
+
+public void ReadUnzipBuf(ALProtocolBuf _buf, int _finalPos) {
+	 if(_finalPos > 0 && _buf.getCurPos() >= _finalPos) return ;
+	id = _buf.getLong();
+	 if(_finalPos > 0 && _buf.getCurPos() >= _finalPos) return ;
+	consortId = _buf.getLong();
+	 if(_finalPos > 0 && _buf.getCurPos() >= _finalPos) return ;
+	initResId = _buf.getLong();
+	 if(_finalPos > 0 && _buf.getCurPos() >= _finalPos) return ;
+	quality = _buf.getLong();
+	 if(_finalPos > 0 && _buf.getCurPos() >= _finalPos) return ;
+	attrType = (CommonEnum.ESpecAttrType)_buf.getInt();
+	 if(_finalPos > 0 && _buf.getCurPos() >= _finalPos) return ;
+	careerId = _buf.getLong();
+	 if(_finalPos > 0 && _buf.getCurPos() >= _finalPos) return ;
+	seatId = _buf.getLong();
+	 if(_finalPos > 0 && _buf.getCurPos() >= _finalPos) return ;
+	isGiftde = (_buf.get() != 0);
+	 if(_finalPos > 0 && _buf.getCurPos() >= _finalPos) return ;
+	initIntimacy = _buf.getLong();
+	 if(_finalPos > 0 && _buf.getCurPos() >= _finalPos) return ;
+	name = _buf.getString();
+	 if(_finalPos > 0 && _buf.getCurPos() >= _finalPos) return ;
+	lvl = _buf.getInt();
+	 if(_finalPos > 0 && _buf.getCurPos() >= _finalPos) return ;
+	baseBonus = _buf.getLong();
+	 if(_finalPos > 0 && _buf.getCurPos() >= _finalPos) return ;
+	bonus = _buf.getLong();
+	 if(_finalPos > 0 && _buf.getCurPos() >= _finalPos) return ;
+	initStudyBonus = _buf.getInt();
+}
+
+public void PutUnzipBuf(ALProtocolBuf _buf) {
+	_buf.putLong(id);
+	_buf.putLong(consortId);
+	_buf.putLong(initResId);
+	_buf.putLong(quality);
+	_buf.putInt((int)attrType);
+
+	_buf.putLong(careerId);
+	_buf.putLong(seatId);
+	_buf.put(isGiftde?(byte)1:(byte)0);
+	_buf.putLong(initIntimacy);
+	_buf.putString(name);
+	_buf.putInt(lvl);
+	_buf.putLong(baseBonus);
+	_buf.putLong(bonus);
+	_buf.putInt(initStudyBonus);
+}
+
+public byte[] makeFullPackage() {
+	int _bufSize = GetBufSize() + 2;
+	ALProtocolBuf _buf = ALProtocolBuf.allocate(_bufSize);
+	_buf.put((byte)0);
+	_buf.put((byte)0);
+	PutUnzipBuf(_buf);
+	return _buf.getBuf();
+}
+public void makeFullPackage(ALProtocolBuf _recBuf) {
+	if(null == _recBuf)
+		return ;
+	_recBuf.put((byte)0);
+	_recBuf.put((byte)0);
+	PutUnzipBuf(_recBuf);
+}
+public byte[] makePackage() {
+	int _bufSize = GetBufSize();
+	ALProtocolBuf _buf = ALProtocolBuf.allocate(_bufSize);
+	PutUnzipBuf(_buf);
+	return _buf.getBuf();
+}
+public void readPackage(byte[] _buf) {
+	ALProtocolBuf _bufObj = new ALProtocolBuf(_buf);
+	ReadUnzipBuf(_bufObj, -1);
+}
+public void readPackage(ALProtocolBuf _buf) {
+	ReadUnzipBuf(_buf, -1);
+}
+public override string ToString() {
+	System.Text.StringBuilder builder = new System.Text.StringBuilder();
+
+	builder.Append("{");
+	builder.Append("id").Append(":").Append(id.ToString()).Append(", ");
+	builder.Append("consortId").Append(":").Append(consortId.ToString()).Append(", ");
+	builder.Append("initResId").Append(":").Append(initResId.ToString()).Append(", ");
+	builder.Append("quality").Append(":").Append(quality.ToString()).Append(", ");
+	builder.Append("attrType").Append(":").Append(attrType.ToString()).Append(", ");
+	builder.Append("careerId").Append(":").Append(careerId.ToString()).Append(", ");
+	builder.Append("seatId").Append(":").Append(seatId.ToString()).Append(", ");
+	builder.Append("isGiftde").Append(":").Append(isGiftde.ToString()).Append(", ");
+	builder.Append("initIntimacy").Append(":").Append(initIntimacy.ToString()).Append(", ");
+	builder.Append("name").Append(":").Append(name.ToString()).Append(", ");
+	builder.Append("lvl").Append(":").Append(lvl.ToString()).Append(", ");
+	builder.Append("baseBonus").Append(":").Append(baseBonus.ToString()).Append(", ");
+	builder.Append("bonus").Append(":").Append(bonus.ToString()).Append(", ");
+	builder.Append("initStudyBonus").Append(":").Append(initStudyBonus.ToString()).Append(", ");
+	builder.Append("}");
+	return builder.ToString();
+}
+
+}
+
+}
+

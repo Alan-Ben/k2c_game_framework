@@ -1,0 +1,8 @@
+﻿JavaPackage GC2GS.p032_GuildOp;
+csharpspace GC2GS.p032_GuildOp;
+
+ALProtocol GC2GS_032_007_ReqGuildPositionAppoint[请求联盟职位任命] <32, 7>
+{
+	long memberId;
+    long positionId[职位id];
+}

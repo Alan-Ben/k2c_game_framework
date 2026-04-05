@@ -1,0 +1,13 @@
+﻿﻿JavaPackage NPGS2GC.p001_BasicOp;
+csharpspace NPGS2GC.p001_BasicOp;
+
+/**********************************************************
+ * 玩家退出队列的通知消息，可能是玩家主动的也可能是被动的
+ * 如果是玩家被动退出的，serialize为0
+ **********************************************************/
+ALProtocol NPGS2GC_001_008_QuitQueue <1, 8>
+{
+	long clientSerialize[客户端用于识别的序列号];
+	int errCode;
+}
+

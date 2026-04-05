@@ -1,0 +1,7 @@
+JavaPackage GC2GS.p015_ConsortOp;
+csharpspace GC2GS.p015_ConsortOp;
+
+ALProtocol GC2GS_015_023_ReqConsortAddChatFriend [家人-添加对话好友] <15, 23>
+{
+    long consortId[家人ID];
+}

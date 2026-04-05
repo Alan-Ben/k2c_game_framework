@@ -1,0 +1,916 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>服务器状态监控</title>
+    <meta charset="utf-8">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            width: 100%;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        h2 {
+            color: #333;
+            font-size: 18px;
+            margin: 15px 0;
+            font-weight: 500;
+            background-color: #f5f7f9;
+            padding: 10px 15px;
+            border-radius: 6px;
+            border-left: 4px solid #4a9eff;
+        }
+
+        .status-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 100%;
+            max-width: 900px;
+            box-sizing: border-box;
+        }
+
+        .error {
+            color: #dc3545;
+            font-weight: bold;
+        }
+
+        .status-item {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .status-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .status-label {
+            font-weight: bold;
+            color: #666;
+        }
+
+        .modal {
+            display: flex;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0);
+            padding-top: 60px;
+            opacity: 0;
+            visibility: hidden;
+            align-items: flex-start;
+            justify-content: center;
+        }
+
+        .modal.active {
+            opacity: 1;
+            visibility: visible;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .modal-content {
+            background-color: #fff;
+            margin: 5% auto;
+            padding: 16px;
+            border: none;
+            border-radius: 8px;
+            max-width: 800px;
+            width: 90%;
+            box-shadow: 0 3px 20px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .modal.active .modal-content {
+            opacity: 1;
+        }
+
+        .close {
+            position: absolute;
+            right: 16px;
+            top: 16px;
+            width: 24px;
+            height: 24px;
+            opacity: 0.6;
+            cursor: pointer;
+            font-size: 24px;
+            line-height: 24px;
+            color: #666;
+        }
+
+        .close:hover {
+            opacity: 1;
+        }
+
+        .modal-json {
+            background: #f8f9fa;
+            border-radius: 6px;
+            padding: 16px;
+            font-family: 'Consolas', monospace;
+            font-size: 13px;
+            line-height: 1.4;
+            color: #333;
+            max-height: 70vh;
+            white-space: pre;
+        }
+
+        .modal-json::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .modal-json::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 4px;
+        }
+
+        .modal-json::-webkit-scrollbar-thumb {
+            background: #ccc;
+            border-radius: 4px;
+        }
+
+        .server-group {
+            margin-bottom: 20px;
+        }
+
+        .group-title {
+            font-weight: bold;
+            background-color: #f0f0f0;
+            padding: 8px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .group-title-actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .filter-type-select {
+            min-width: 120px;
+            font-size: 13px;
+            padding: 5px 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            outline: none;
+            background-color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .filter-type-select:focus {
+            border-color: #4a9eff;
+            box-shadow: 0 0 0 2px rgba(74, 158, 255, 0.2);
+        }
+
+        .filter-reverse-label {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 13px;
+            color: #666;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .filter-reverse-checkbox {
+            cursor: pointer;
+        }
+
+        .filter-input {
+            width: 120px;
+            font-size: 13px;
+            padding: 5px 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .filter-count {
+            font-size: 12px;
+            color: #666;
+            white-space: nowrap;
+        }
+
+        .filter-input:focus {
+            border-color: #4a9eff;
+            box-shadow: 0 0 0 2px rgba(74, 158, 255, 0.2);
+        }
+
+        .filter-input::placeholder {
+            color: #999;
+            font-size: 12px;
+        }
+
+        .group-content {
+            margin-left: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .group-content[data-type="1"] {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .group-content .status-item {
+            flex: 0 0 calc(25% - 8px);
+            margin: 0;
+            box-sizing: border-box;
+            border: 1px solid #eee;
+            border-radius: 4px;
+            padding: 8px 10px;
+            text-align: center;
+        }
+
+        .group-content .status-item:hover {
+            border-color: #4a9eff;
+        }
+
+        .status-item a {
+            font-size: 13px;
+            text-decoration: none;
+            color: #333;
+            display: block;
+            line-height: 1.2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .status-item a:visited {
+            color: #333;
+        }
+
+        .status-item a:hover {
+            color: #333;
+        }
+
+        .config-form {
+            border-radius: 6px;
+            padding: 0px 15px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 20px;
+            font-size: 13px;
+        }
+
+        .form-group {
+            display: flex;
+            font-size: 16px;
+            align-items: center;
+            margin: 0;
+        }
+
+        .form-group label {
+            margin-right: 8px;
+            white-space: nowrap;
+            color: #666;
+        }
+
+        .form-group input {
+            width: 120px;
+            font-size: 14px;
+            padding: 6px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            outline: none;
+        }
+
+        .form-group input:focus {
+            border-color: #4a9eff;
+            box-shadow: 0 0 0 2px rgba(74, 158, 255, 0.2);
+        }
+
+        .config-form button {
+            font-size: 13px;
+            padding: 6px 16px;
+            height: 30px;
+            background: #4a9eff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .config-form button:hover {
+            background: #3989e6;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+        }
+
+        .json-line {
+            display: block;
+        }
+
+        .json-content {
+            color: #333;
+        }
+
+        .modal h3 {
+            margin: 0 0 12px 0;
+            font-size: 16px;
+            color: #333;
+            padding-right: 24px;
+        }
+
+        #app {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .detail-table {
+            width: 99%;
+            border-spacing: 0;
+            font-size: 14px;
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            border-radius: 4px;
+            overflow-x: auto;
+            overflow-y: auto;
+        }
+
+        .details-info {
+            font-size: 12px; /* 调整字体大小 */
+            color: #333;
+            text-align: left; /* 右对齐 */
+        }
+
+        .details-separator {
+            border: 0;
+            height: 1px;
+            background: #ddd;
+            margin: 5px 0 8px 0;
+        }
+
+        .detail-table::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        .detail-table::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 4px;
+        }
+
+        .detail-table::-webkit-scrollbar-thumb {
+            background: #ccc;
+            border-radius: 4px;
+        }
+
+        .detail-table::-webkit-scrollbar-thumb:hover {
+            background: #bbb;
+        }
+
+        .detail-row {
+            display: flex;
+            padding: 0;
+            border-bottom: 1px solid #e5e7eb;
+            align-items: stretch;
+        }
+
+        .detail-row:last-child {
+            border-bottom: none;
+            background: #fff;
+        }
+
+        .detail-row:nth-child(odd) {
+            background-color: #f9fafb;
+        }
+
+        .detail-row:nth-child(even) {
+            background-color: #fff;
+        }
+
+        .detail-label {
+            flex: 0 0 100px;
+            padding: 10px 12px;
+            background: #f5f7f9;
+            border-right: 1px solid #e5e7eb;
+            color: #666;
+            font-weight: 500;
+        }
+
+        .detail-value {
+            flex: 1;
+            padding: 10px 12px;
+            color: #333;
+            line-height: 1.4;
+        }
+
+        .memory-bar {
+            margin: 3px 0;
+            height: 4px;
+            background: #f0f0f0;
+            border-radius: 2px;
+            max-width: 200px;
+        }
+
+        .memory-used {
+            height: 100%;
+            background: #4a9eff;
+            border-radius: 3px;
+            transition: width 0.3s ease;
+        }
+
+        .form-group select {
+            min-width: 200px;
+            font-size: 14px;
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            outline: none;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M6 8.825L1.175 4 2.238 2.938 6 6.7l3.763-3.763L10.825 4 6 8.825z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+            padding-right: 32px;
+        }
+
+        .form-group select:hover {
+            border-color: #4a9eff;
+        }
+
+        .form-group select:focus {
+            border-color: #4a9eff;
+            box-shadow: 0 0 0 2px rgba(74, 158, 255, 0.2);
+        }
+
+        .form-group select option {
+            padding: 8px;
+            font-size: 14px;
+        }
+
+        .config-form {
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 15px 20px;
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            font-size: 14px;
+            color: #555;
+            font-weight: 500;
+            margin-right: 12px;
+        }
+
+        .group-title button {
+            font-size: 13px;
+            padding: 6px 12px;
+            background: #4a9eff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s;
+        }
+
+        .group-title button:hover {
+            background: #3989e6;
+            transform: translateY(-2px);
+        }
+
+        .group-title button:active {
+            background: #357ab8;
+            transform: translateY(0);
+        }
+        .global-details-btn {
+            font-size: 13px;
+            padding: 6px 12px;
+            background: #4a9eff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s;
+        }
+
+        .global-details-btn:hover {
+            background: #3989e6;
+            transform: translateY(-2px);
+        }
+
+        .global-details-btn:active {
+            background: #357ab8;
+            transform: translateY(0);
+        }
+        .section-header {
+            position: relative;
+        }
+        .section-header h2 {
+            color: #333;
+            font-size: 18px;
+            margin: 15px 0;
+            font-weight: 500;
+            background-color: #f5f7f9;
+            padding: 10px 15px;
+            border-radius: 6px;
+            border-left: 4px solid #4a9eff;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .header-btn {
+            font-size: 13px;
+            padding: 6px 12px;
+            background: #4a9eff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s;
+        }
+        .header-btn:hover {
+            background: #3989e6;
+            transform: translateY(-2px);
+        }
+        .header-btn:active {
+            background: #357ab8;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div class="status-card">
+            <h2>服务器配置</h2>
+            <div class="config-form">
+                <div class="form-group">
+                    <label>选择服务器:</label>
+                    <select v-model="selectedServer" @change="saveConfig">
+                        <option value="">请选择服务器</option>
+                        <option v-for="(server, id) in servers" 
+                                :key="id" 
+                                :value="id">
+                            {% raw %}{{ server.name }}{% endraw %}
+                        </option>
+                    </select>
+                </div>
+            </div>
+            <div class="section-header">
+                <h2>服务器状态监控
+                    <button class="header-btn" @click="fetchAllDetails" v-if="!loading && serverStatus.list && serverStatus.list.length">获取全部简要信息</button>
+                </h2>
+            </div>
+            
+            <!-- 添加 loading 状态显示 -->
+            <div v-if="loading" class="loading">
+                正在获取服务器列表...
+            </div>
+            
+            <div v-else-if="serverStatus.error" class="error">
+                {% raw %}{{ serverStatus.error }}{% endraw %}
+            </div>
+            <div v-else>
+                <div v-for="(group, t) in groupedServers" :key="t" class="server-group">
+                    <div class="group-title">
+                        {% raw %}{{ getServerType(t, true) }}{% endraw %}
+                        <div class="group-title-actions">
+                            <template v-if="t != 1">
+                                <label class="filter-reverse-label">
+                                    <input type="checkbox" 
+                                           class="filter-reverse-checkbox"
+                                           v-model="filterReverse[t]"
+                                           @change="updateFilter(t)">
+                                    反向
+                                </label>
+                                <select class="filter-type-select" v-model="filterTypes[t]" @change="updateFilter(t)">
+                                    <option value="id">服务器ID</option>
+                                    <option value="version">版本号</option>
+                                    <option value="refVersion">配表版本号</option>
+                                </select>
+                                <input type="text" 
+                                       class="filter-input" 
+                                       :placeholder="getFilterPlaceholder(t)"
+                                       v-model="serverFilters[t]"
+                                       @input="updateFilter(t)"
+                                       @click.stop>
+                                <span class="filter-count">{% raw %}{{ getFilteredGroup(group, t).length }}{% endraw %} / {% raw %}{{ group.length }}{% endraw %}</span>
+                            </template>
+                            <button @click="fetchGroupDetails(t)">获取简要信息</button>
+                        </div>
+                    </div>
+                    <div class="group-content" :data-type="t">
+                        <div class="status-item" 
+                            v-for="item in getFilteredGroup(group, t)" 
+                            :key="item.tid" 
+                            @click="openModal(item.t, item.tid)"
+                            :style="{ backgroundColor: item.details ? getMemoryUsageColor(item.details.memoryUsagePercent) : '' }">
+                            <a href="#" @click.prevent>
+                                {% raw %}{{ getServerName(item.t, item.tid) }}{% endraw %}
+                            </a>
+                            <hr v-if="item.details" class="details-separator">
+                            <div v-if="item.details" class="details-info">
+                                <div>版本号: {% raw %}{{ item.details.version }}{% endraw %}</div>
+                                <div>内存: {% raw %}{{ item.details.memoryUsed }}{% endraw %}</div>
+                                <div>百分比: {% raw %}{{ item.details.memoryPercent }}{% endraw %}</div>
+                                <div v-if="item.details.refVersion">配表版本号: {% raw %}{{ item.details.refVersion }}{% endraw %}</div>
+                                <div v-if="item.details.areaTag">区域标签: {% raw %}{{ item.details.areaTag }}{% endraw %}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close" @click="closeModal">&times;</span>
+                <h3>{% raw %}{{ modalTitle }}{% endraw %}</h3>
+                <div class="modal-json" v-html="modalContent"></div>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='server-config.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                serverStatus: {},
+                modalContent: '',
+                modalTitle: '',
+                loading: false,  // 添加 loading 状态
+                servers: {},
+                selectedServer: '',
+                serverFilters: {}, // 添加过滤器对象，key为服务器类型t
+                filterTypes: {}, // 添加过滤类型对象，key为服务器类型t，默认值为'id'
+                filterReverse: {} // 添加反向过滤对象，key为服务器类型t
+            },
+            mounted() {
+                this.updateStatus();
+                fetch('/api/servers')
+                    .then(response => response.json())
+                    .then(data => {
+                        this.servers = data;
+                    });
+            },
+            computed: {
+                groupedServers() {
+                    if (!this.serverStatus.list) return {};
+                    return this.serverStatus.list.reduce((groups, item) => {
+                        if (!groups[item.t]) {
+                            groups[item.t] = [];
+                        }
+                        groups[item.t].push(item);
+                        return groups;
+                    }, {});
+                }
+            },
+            methods: {
+                updateStatus() {
+                    if(!this.selectedServer)
+                        return;
+
+                    this.loading = true;  // 设置 loading 属性
+                    
+                    const serverParam = this.selectedServer ? `?server=${this.selectedServer}` : '';
+                    fetch(`/api/status${serverParam}`)
+                        .then(response => response.json())
+                        .then(data => {
+                            this.loading = false;
+                            if (data.list) {
+                                data.list.sort((a, b) => {
+                                    if (a.t === b.t) {
+                                        return a.tid - b.tid;
+                                    }
+                                    return a.t - b.t;
+                                });
+                                
+                                // 初始化每个服务器类型的过滤类型为'id'
+                                const uniqueTypes = [...new Set(data.list.map(item => item.t))];
+                                uniqueTypes.forEach(t => {
+                                    if (!this.filterTypes[t]) {
+                                        this.$set(this.filterTypes, t, 'id');
+                                    }
+                                });
+                            }
+                            this.serverStatus = data;
+                        })
+                        .catch(error => {
+                            this.loading = false;
+                            this.serverStatus = { error: '获取数据失败: ' + error };
+                        });
+                },
+                openModal(t, tid) {
+                    // 先清空旧内容
+                    this.modalContent = '';
+                    this.modalTitle = this.getServerName(t, tid);
+                    const serverParam = this.selectedServer ? `&server=${this.selectedServer}` : '';
+                    fetch(`/api/detail?t=${t}&tid=${tid}${serverParam}`)
+                        .then(response => response.json())
+                        .then(data => {
+                            try {
+                                this.modalTitle = this.getServerName(t, tid);
+                                if (data.info) {
+                                    const jsonObj = JSON.parse(data.info);
+                                    const memoryUsed = jsonObj.totalMemory - jsonObj.freeMemory;
+                                    const memoryPercent = ((memoryUsed / jsonObj.totalMemory) * 100).toFixed(1);
+                                    
+                                    this.modalContent = `<div class="detail-table"><div class="detail-row"><div class="detail-label">服务器类型</div><div class="detail-value">${jsonObj.serverType}</div></div><div class="detail-row"><div class="detail-label">版本</div><div class="detail-value">${jsonObj.version}</div></div><div class="detail-row"><div class="detail-label">时区</div><div class="detail-value">${jsonObj.timeZone}</div></div><div class="detail-row"><div class="detail-label">IP地址</div><div class="detail-value">${jsonObj.ip}</div></div><div class="detail-row"><div class="detail-label">内部端口</div><div class="detail-value">${jsonObj.innerPort}</div></div><div class="detail-row"><div class="detail-label">内存使用</div><div class="detail-value">${this.formatMemory(memoryUsed)} / ${this.formatMemory(jsonObj.totalMemory)} (${memoryPercent}%)<div class="memory-bar"><div class="memory-used" style="width: ${memoryPercent}%"></div></div></div></div><div class="detail-row"><div class="detail-label">最大内存</div><div class="detail-value">${this.formatMemory(jsonObj.maxMemory)}</div></div>${jsonObj.__extMsg__ && Object.keys(jsonObj.__extMsg__).length > 0 ? `<div class="detail-row"><div class="detail-label">扩展信息</div><div class="detail-value"><pre>${JSON.stringify(jsonObj.__extMsg__, null, 2)}</pre></div></div>` : ''}</div>`;
+                                }
+                                document.getElementById('myModal').classList.add('active');
+                            } catch (e) {
+                                this.modalContent = '数据格式错误';
+                                document.getElementById('myModal').classList.add('active');
+                            }
+                        });
+                },
+                closeModal() {
+                    // 隐藏弹窗
+                    document.getElementById('myModal').classList.remove('active');
+                },
+                getServerType(t, includeDescription = true) {
+                    if (!SERVER_TYPES[t]) {
+                        return `未知类型(${t})`;
+                    }
+                    
+                    return includeDescription ? 
+                        `${SERVER_TYPES[t][0]}（${SERVER_TYPES[t][1]}）` : 
+                        SERVER_TYPES[t][0];
+                },
+                getServerName(t, tid) {
+                    if (t === 1) {
+                        return `${SINGLE_SERVER_NAMES[tid][0]}`;
+                    } else {
+                        return `${this.getServerType(t, false)} - ${tid}`;
+                    }
+                },
+                saveConfig() {
+                    if (!this.selectedServer) {
+                        alert('请选择服务器');
+                        return;
+                    }
+                    // 只保存到 localStorage
+                    localStorage.setItem('lastServer', this.selectedServer);
+                    // 立即刷新数据
+                    this.updateStatus();
+                },
+                fetchGroupDetails(t) {
+                    const group = this.groupedServers[t];
+                    group.forEach(item => {
+                        const serverParam = this.selectedServer ? `&server=${this.selectedServer}` : '';
+                        fetch(`/api/detail?t=${item.t}&tid=${item.tid}${serverParam}`)
+                            .then(response => response.json())
+                            .then(data => {
+                                if (data.info) {
+                                    const jsonObj = JSON.parse(data.info);
+                                    const totalMemoryBytes = jsonObj.totalMemory;
+                                    const memoryUsedBytes = totalMemoryBytes - jsonObj.freeMemory;
+                                    const memoryUsed = this.formatMemory(memoryUsedBytes);
+                                    const totalMemory = this.formatMemory(totalMemoryBytes);
+                                    const memoryPercent = ((memoryUsedBytes / totalMemoryBytes) * 100).toFixed(1);
+                                    const details = {
+                                        version: jsonObj.version,
+                                        memoryUsed: `${memoryUsed} / ${totalMemory}`,
+                                        memoryPercent: `${memoryPercent}%`,
+                                        memoryUsagePercent: memoryPercent // 添加这个字段
+                                    };
+                                    if (jsonObj.refVersion) {
+                                        details.refVersion = jsonObj.refVersion;
+                                    }
+                                    // 检查扩展信息中是否有 areaTag
+                                    if (jsonObj.__extMsg__ && jsonObj.__extMsg__.areaTag) {
+                                        details.areaTag = jsonObj.__extMsg__.areaTag;
+                                    }
+                                    this.$set(item, 'details', details);
+                                }
+                            })
+                            .catch(error => {
+                                console.error('获取详细信息失败:', error);
+                            });
+                    });
+                },
+                // 新增：一次性获取所有服务器的简要信息
+                fetchAllDetails() {
+                    if (!this.serverStatus.list || !this.serverStatus.list.length) return;
+                    Object.keys(this.groupedServers).forEach(t => {
+                        this.fetchGroupDetails(t);
+                    });
+                },
+                getMemoryUsageColor(memoryPercent) {
+                    if (memoryPercent < 70) {
+                        return '#d4edda'; // 绿色
+                    } else if (memoryPercent < 85) {
+                        return '#fff3cd'; // 黄色
+                    } else {
+                        return '#f8d7da'; // 红色
+                    }
+                },
+                formatMemory(bytes) {
+                    const units = ['B', 'KB', 'MB', 'GB', 'TB'];
+                    let unitIndex = 0;
+                    let value = bytes;
+                    while (value >= 1024 && unitIndex < units.length - 1) {
+                        value /= 1024;
+                        unitIndex++;
+                    }
+                    return `${value.toFixed(2)} ${units[unitIndex]}`;
+                },
+                // 更新过滤器
+                updateFilter(t) {
+                    // Vue会自动响应数据变化，不需要额外处理
+                },
+                // 获取过滤提示文本
+                getFilterPlaceholder(t) {
+                    const filterType = this.filterTypes[t] || 'id';
+                    const placeholders = {
+                        'id': '过滤服务器ID',
+                        'version': '过滤版本号',
+                        'refVersion': '过滤配表版本号'
+                    };
+                    return placeholders[filterType] || '过滤';
+                },
+                // 获取过滤后的服务器组
+                getFilteredGroup(group, t) {
+                    // SINGLE类型(t=1)不过滤
+                    if (t == 1) {
+                        return group;
+                    }
+                    
+                    // 获取当前类型的过滤关键字、过滤类型和是否反向过滤
+                    const filterText = this.serverFilters[t];
+                    const filterType = this.filterTypes[t] || 'id';
+                    const isReverse = this.filterReverse[t] || false;
+                    
+                    // 如果没有过滤关键字，返回全部
+                    if (!filterText || filterText.trim() === '') {
+                        return group;
+                    }
+                    
+                    // 根据过滤类型进行过滤
+                    const filtered = group.filter(item => {
+                        const keyword = filterText.trim();
+                        let matches = false;
+                        
+                        switch(filterType) {
+                            case 'id':
+                                // 过滤服务器ID
+                                matches = String(item.tid).includes(keyword);
+                                break;
+                            
+                            case 'version':
+                                // 过滤版本号（需要先获取详情）
+                                if (item.details && item.details.version) {
+                                    matches = item.details.version.includes(keyword);
+                                }
+                                break;
+                            
+                            case 'refVersion':
+                                // 过滤配表版本号（需要先获取详情）
+                                if (item.details && item.details.refVersion) {
+                                    matches = item.details.refVersion.includes(keyword);
+                                }
+                                break;
+                            
+                            default:
+                                matches = String(item.tid).includes(keyword);
+                        }
+                        
+                        // 如果是反向过滤，返回相反的结果
+                        return isReverse ? !matches : matches;
+                    });
+                    
+                    return filtered;
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

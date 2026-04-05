@@ -1,0 +1,12 @@
+﻿JavaPackage GS2GC.p002_InitOp;
+csharpspace GS2GC.p002_InitOp;
+
+import Common.PlayerObj.alpro;
+
+/**********************************************************
+ * 请求事件记录消息
+ **********************************************************/
+ALProtocol GS2GC_002_043_RetEventRecordInit <2, 43>
+{
+	Common.PlayerObj.Player_EventRecordInfo[] recordList[数据列表];
+}

@@ -1,0 +1,6 @@
+java_path= ../Common/src
+java_package=NPCommon.ErrMain
+id	name	desc
+1	HERO_USE_REACH_LIMIT	大臣使用次数已达上限
+2	BOSS_DEAD	BOSS已死亡
+3	NOT_IN_FIGHT_TIME	未在战斗时间内

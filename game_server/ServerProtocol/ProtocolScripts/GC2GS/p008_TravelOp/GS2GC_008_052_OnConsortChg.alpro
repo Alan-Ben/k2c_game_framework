@@ -1,0 +1,7 @@
+JavaPackage GS2GC.p008_TravelOp;
+csharpspace GS2GC.p008_TravelOp;
+import Common.TravelObj.alpro;
+ALProtocol GS2GC_008_052_OnConsortChg [妃子数据变化推送] <8, 52>
+{
+    Common.TravelObj.Travel_Consort consort[妃子数据];
+}

@@ -1,0 +1,7 @@
+﻿JavaPackage GS2GC.p002_InitOp;
+csharpspace GS2GC.p002_InitOp;
+
+ALProtocol GS2GC_002_053_RetLoginCountInit <2, 53>
+{
+	int[] hadDrawRewardDays[已经领取的奖励天数];
+}

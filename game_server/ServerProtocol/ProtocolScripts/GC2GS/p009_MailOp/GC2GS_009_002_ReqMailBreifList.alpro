@@ -1,0 +1,6 @@
+﻿JavaPackage GC2GS.p009_MailOp;
+csharpspace GC2GS.p009_MailOp;
+
+ALProtocol GC2GS_009_002_ReqBriefList[请求邮件列表数据] <9, 2>
+{
+}

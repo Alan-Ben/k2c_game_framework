@@ -1,0 +1,9 @@
+JavaPackage GS2GC.p008_TravelOp;
+csharpspace GS2GC.p008_TravelOp;
+
+import Common.TravelObj.alpro;
+
+ALProtocol GS2GC_008_011_RetDealGamblingTravel [处理博彩游历事件结果] <8, 11>
+{
+    Common.TravelObj.Travel_EventResult result[事件结果];
+}

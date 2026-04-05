@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p032_GuildOp;
+csharpspace GC2GS.p032_GuildOp;
+
+ALProtocol GC2GS_032_026_ReqApproveLeaderImpeachEvent[批准弹劾事件] <32, 26>
+{
+	long eventDbId[事件数据ID];
+}

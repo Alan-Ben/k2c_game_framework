@@ -1,0 +1,8 @@
+﻿JavaPackage GC2GS.p013_HeroOp;
+csharpspace GC2GS.p013_HeroOp;
+
+ALProtocol GC2GS_013_010_ReqBuildingPlaceHero[建筑放置大臣]<13, 10> 
+{
+    long heroId[大臣id];
+    long buildingId[建筑id];
+}

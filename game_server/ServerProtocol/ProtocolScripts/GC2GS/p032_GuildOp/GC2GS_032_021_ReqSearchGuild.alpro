@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p032_GuildOp;
+csharpspace GC2GS.p032_GuildOp;
+
+ALProtocol GC2GS_032_021_ReqSearchGuild[请求联盟加入请求列表] <32, 21>
+{
+	string searchData;
+}

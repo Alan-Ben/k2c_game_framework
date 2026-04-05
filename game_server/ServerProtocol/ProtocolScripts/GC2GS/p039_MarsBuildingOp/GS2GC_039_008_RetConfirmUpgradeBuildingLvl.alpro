@@ -1,0 +1,6 @@
+﻿JavaPackage GS2GC.p039_MarsBuildingOp;
+csharpspace GS2GC.p039_MarsBuildingOp;
+
+ALProtocol GS2GC_039_008_RetConfirmUpgradeBuildingLvl <39, 8>
+{
+}

@@ -1,0 +1,8 @@
+﻿﻿﻿import Common.HeroRecommendObj.alpro;
+JavaPackage GS2GC.p021_PlayerInfo;
+csharpspace GS2GC.p021_PlayerInfo;
+
+ALProtocol GS2GC_021_085_OnHeroRecommendAdd[新增大臣推荐事件推送]<21, 85>
+{
+    Common.HeroRecommendObj.HeroRecommend_Info info;
+}

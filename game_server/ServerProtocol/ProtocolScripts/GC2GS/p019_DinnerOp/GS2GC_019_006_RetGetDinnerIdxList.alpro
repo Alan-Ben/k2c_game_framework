@@ -1,0 +1,8 @@
+JavaPackage GS2GC.p019_DinnerOp;
+csharpspace GS2GC.p019_DinnerOp;
+import Common.DinnerObj.alpro;
+ALProtocol GS2GC_019_006_RetGetDinnerIdxList [宴会索引列表] <19, 6>
+{
+    Common.DinnerObj.Dinner_Idx[] idxLIst[宴会索引数据列表];
+    bool hasNext[是否有后续宴会数据];
+}

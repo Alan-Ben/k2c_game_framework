@@ -1,0 +1,8 @@
+﻿JavaPackage GC2GS.p007_CommOp;
+csharpspace GC2GS.p007_CommOp;
+
+ALProtocol GC2GS_007_026_ReqGachaRoll[抽卡]<7, 26> 
+{
+	long poolId[卡池id];
+	bool isTen[是否十连抽];
+}

@@ -1,0 +1,8 @@
+java_path= ../Common/src
+java_package=NPCommon.ErrMain
+id	name	desc
+1	PLAYER_TITLE_NOT_FOUND	未找到玩家称号
+2	PLAYER_TITLE_EXISTED	玩家称号已存在
+3	PLAYER_SKIN_NOT_FOUND	未找到玩家皮肤
+4	PLAYER_SKIN_EXISTED	玩家皮肤已存在
+5	PLAYER_SKIN_LVL_FULLL	玩家皮肤已满级

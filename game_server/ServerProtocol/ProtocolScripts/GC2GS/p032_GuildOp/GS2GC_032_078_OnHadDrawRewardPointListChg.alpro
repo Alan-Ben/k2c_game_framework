@@ -1,0 +1,9 @@
+import Common.GuildCooperateObj.alpro;
+
+JavaPackage GS2GC.p032_GuildOp;
+csharpspace GS2GC.p032_GuildOp;
+
+ALProtocol GS2GC_032_078_OnHadDrawRewardPointListChg[已领取奖励点列表变更推送] <32, 78>
+{
+    Common.GuildCooperateObj.GuildCooperate_HadDrawRewardPointList data[信息];
+}

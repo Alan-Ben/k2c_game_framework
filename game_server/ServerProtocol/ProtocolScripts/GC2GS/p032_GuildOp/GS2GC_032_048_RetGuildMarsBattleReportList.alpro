@@ -1,0 +1,8 @@
+JavaPackage GS2GC.p032_GuildOp;
+csharpspace GS2GC.p032_GuildOp;
+import Common.MarsObj.alpro;
+
+ALProtocol GS2GC_032_048_RetGuildMarsBattleReportList[返回联盟战报列表] <32, 48>
+{
+    Common.MarsObj.Mars_GuildBattleReportIdx[] reportList[联盟战报列表];
+}

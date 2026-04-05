@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p007_CommOp;
+csharpspace GC2GS.p007_CommOp;
+
+ALProtocol GC2GS_007_015_ReqDrawStageGoalFirstReachReward[领取阶段目标首达奖励] <7, 15>
+{
+	long bigStepId[大阶段ID];
+}

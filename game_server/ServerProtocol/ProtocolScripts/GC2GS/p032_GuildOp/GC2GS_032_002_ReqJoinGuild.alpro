@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p032_GuildOp;
+csharpspace GC2GS.p032_GuildOp;
+
+ALProtocol GC2GS_032_002_ReqJoinGuild[请求加入联盟] <32, 2>
+{
+	long guildId[联盟id];
+}

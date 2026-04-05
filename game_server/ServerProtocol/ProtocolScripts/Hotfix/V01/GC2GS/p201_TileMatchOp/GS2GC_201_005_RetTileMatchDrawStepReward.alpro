@@ -1,0 +1,7 @@
+JavaPackage Hotfix.V01.GS2GC.p201_TileMatchOp;
+csharpspace Hotfix.GS2GC.p201_TileMatchOp;
+
+ALProtocol GS2GC_201_005_RetTileMatchDrawStepReward <201, 5>
+{
+
+}

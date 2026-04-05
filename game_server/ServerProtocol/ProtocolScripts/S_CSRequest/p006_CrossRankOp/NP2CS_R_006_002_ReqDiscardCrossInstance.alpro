@@ -1,0 +1,6 @@
+JavaPackage NP2CS_R.np_p006_RankOp;
+
+ALProtocol NP2CS_R_006_002_ReqDiscardCrossInstance [请求销毁跨服排行榜分组实例id] <6, 2>
+{
+	long crossInstanceId;
+}

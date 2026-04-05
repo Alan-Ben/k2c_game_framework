@@ -1,0 +1,84 @@
+﻿JavaPackage Common.InnObj;
+csharpspace Common.InnObj;
+
+ALProtocol Inn_DishInfo[旅店_菜品信息]
+{
+	long dishId[菜品ID];
+	int level[等级];
+	long finesse[熟练度];
+	bool hadUnlock[是否解锁];
+	bool hadGainRecipe[是否获得菜谱];
+	long startLineUpId[开始排队的ID];
+}
+
+ALProtocol Inn_StationInfo[旅店_设施信息]
+{
+	long stationId[设施ID];
+	int level[等级];
+}
+
+ALProtocol Inn_ReceiveInfo[旅店_接待队列信息]
+{
+	long startTimeMs[接待开始时间 毫秒];
+	int needReceiveNum[需要接待数量];
+}
+
+ALProtocol Inn_ReceiveList[旅店_接待队列列表]
+{
+	long hadBeenReceiveNum[已接待数量];
+	Inn_ReceiveInfo[] receiveList[接待队列列表];
+}
+
+ALProtocol Inn_ReceiveGuestInfo[旅店_接待客人信息]
+{
+	int index[队列中的索引];
+	long guestId[客人ID];
+	long dishId[菜品ID];
+}
+
+ALProtocol Inn_GuestInfo[旅店_客人信息]
+{
+	long guestId[客人ID];
+	bool hadDrawHandbookReward[是否领取图鉴奖励];
+	long startLineUpId[开始排队的ID];
+}
+
+ALProtocol Inn_SpecialGuestInfo[旅店_特殊客人信息]
+{
+	long specialGuestId[特殊客人ID];
+	bool hadBeenServe[是否接待过];
+	bool hadDrawHandbookReward[是否领取图鉴奖励];
+}
+
+ALProtocol Inn_Info[旅店_信息]
+{
+	int level;
+	long popularity[人气值];
+	int medalLevel[奖牌等级];
+
+	Inn_ReceiveList receiveList[接待信息];
+
+	Inn_StationInfo[] stationList[设施列表];
+	Inn_DishInfo[] dishList[菜品列表];
+
+	Inn_GuestInfo[] guestList[客人列表];
+	Inn_SpecialGuestInfo[] specialGuestList[特殊客人列表];
+	long firstTimeUpgradeTimeMs[首次升级时间 ms];
+	long randomSeed[随机种子];
+}
+
+ALProtocol Inn_DishSettleInfo[旅店_菜品结算信息]
+{
+	long dishId[菜品ID];
+	int receiveNum[接待数量];
+	long addFinesse[获得熟练度];
+}
+
+ALProtocol Inn_SettleInfo[旅店_结算信息]
+{
+	int receiveNum[接待数量];
+	long addPopularity[获得人气值];
+	long addAffection[获得心意值];
+	long addStationBlueprintNum[获得设施蓝图数量];
+	Inn_DishSettleInfo[] dishList[菜品结算列表];
+}

@@ -1,0 +1,7 @@
+﻿JavaPackage GS2GC.p028_QuestOp;
+csharpspace GS2GC.p028_QuestOp;
+
+ALProtocol GS2GC_028_010_RetFinishDailyQuest[完成日常任务] <28, 10>
+{
+    Common.NPCommonObj.NPCommon_ItemInfo[] itemList[物品列表];
+}

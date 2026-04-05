@@ -1,0 +1,17 @@
+﻿JavaPackage ALLRPC.US.Common;
+
+ALProtocol ExecPlayerGmCommand_Req
+{
+	long cid;
+	string command;
+}
+
+ALProtocol ExecPlayerGmCommand_Return
+{
+	bool isSucc;
+	string result;
+}
+
+//[RPC] 执行玩家GM命令
+//[CLASS_PACKAGE] : AllRpcData.US_Service.Common
+//[DEALER_PACKAGE] : USServer.RPCDispatcher.Common

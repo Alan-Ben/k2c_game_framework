@@ -1,0 +1,7 @@
+JavaPackage GS2GC.p014_ChildOp;
+csharpspace GS2GC.p014_ChildOp;
+import Common.ChildObj.alpro;
+ALProtocol GS2GC_014_008_RetGetToMeApply [获取对玩家的指定联姻请求] <14, 8>
+{
+    Common.ChildObj.Adult_ToMeApplyInfo apply[空];
+}

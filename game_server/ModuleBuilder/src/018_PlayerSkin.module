@@ -1,0 +1,199 @@
+/************************
+关键字：
+$Module	:模块
+$Action	:行为，包含$req{} 和$ret{}
+$Push	:推送协议
+$Req	:请求包
+$Ret	:返回包
+************************/
+
+$Module 018 PlayerSkin //玩家形象
+
+$Action 001 SetCommTitle[穿戴普通称号]
+(
+	$req	
+	{
+		long title;
+	}
+	$ret	
+	{
+	}
+)
+
+$Action 002 SetComboTitle[穿戴组合称号]
+(
+	$req	
+	{
+		long preId;
+		long sfxId;
+		long bgId;
+	}
+	$ret	
+	{
+	}
+)
+
+$Action 003 SetTitleShow[设置称号是否可展示]
+(
+	$req	
+	{
+		bool isShow;
+	}
+	$ret	
+	{
+	}
+)
+
+$Action 004 UnlockComboTitlePre[解锁组合称号前缀]
+(
+	$req	
+	{
+		long preId;
+	}
+	$ret	
+	{
+	}
+)
+
+$Action 005 UnlockComboTitleSfx[解锁组合称号后缀]
+(
+	$req	
+	{
+		long sfxId;
+	}
+	$ret	
+	{
+	}
+)
+
+$Action 006 UnlockComboTitleBg[解锁组合称号底色]
+(
+	$req	
+	{
+		long bgId;
+	}
+	$ret	
+	{
+	}
+)
+
+$Action 007 viewComboTitlePre[查看组合称号前缀]
+(
+	$req	
+	{
+		long preId;
+	}
+	$ret	
+	{
+	}
+)
+
+$Action 008 ViewComboTitleSfx[查看组合称号后缀]
+(
+	$req	
+	{
+		long sfxId;
+	}
+	$ret	
+	{
+	}
+)
+
+$Action 009 ViewComboTitleBg[查看组合称号底色]
+(
+	$req	
+	{
+		long bgId;
+	}
+	$ret	
+	{
+	}
+)
+
+$Action 010 UnlockPlayerSkin[解锁玩家皮肤]
+(
+	$req	
+	{
+		long skinId;
+	}
+	$ret	
+	{
+	}
+)
+
+$Action 011 SetCurPlayerSkin[穿戴皮肤]
+(
+	$req	
+	{
+		long skinId;
+	}
+	$ret	
+	{
+	}
+)
+
+$Action 012 UnsetCurPlayerSkin[脱下皮肤]
+(
+	$req	
+	{
+	}
+	$ret	
+	{
+	}
+)
+
+$Action 013 UpgradePlayerSkin[升级皮肤等级]
+(
+	$req	
+	{
+		long skinId;
+	}
+	$ret	
+	{
+	}
+)
+
+$Action 015 viewTitle[查看普通称号]
+(
+	$req	
+	{
+		long title;
+	}
+	$ret	
+	{
+	}
+)
+
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+
+$Push 50 OnCommTitleChg [普通称号数据变更]
+{
+	Common.NPPlayerInfo.PlayerInfo_Title info;
+}
+
+$Push 51 OnComboTitlePreChg [组合称号前缀变更]
+{
+	Common.NPPlayerInfo.PlayerInfo_ComboTitlePre pre;
+}
+
+$Push 52 OnComboTitleSfxChg [组合称号后缀变更]
+{
+	Common.NPPlayerInfo.PlayerInfo_ComboTitleSfx sfx;
+}
+
+$Push 53 OnComboTitleBgChg [组合称号底色变更]
+{
+	Common.NPPlayerInfo.PlayerInfo_ComboTitleBg bg;
+}
+
+$Push 54 OnCurTitleChg [当前穿戴称号变化]
+{
+	Common.NPCommonObj.PlayerInfo_CurTitle curInfo[玩家当前穿戴称号数据];
+}
+
+$Push 60 OnPlayerSkinChg [玩家皮肤数据变更]
+{
+	Common.NPPlayerInfo.PlayerInfo_Skin info;
+}

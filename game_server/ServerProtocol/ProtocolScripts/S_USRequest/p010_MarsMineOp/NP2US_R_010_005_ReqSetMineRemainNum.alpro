@@ -1,0 +1,10 @@
+JavaPackage NP2US_R.p010_MarsMineOp;
+
+/**********************************************************
+ * 请求设置火星矿剩余资源数量（GM命令）
+ **********************************************************/
+ALProtocol NP2US_R_010_005_ReqSetMineRemainNum <10, 5>
+{
+	long instanceId[矿实例ID];
+	long remainNum[剩余资源数量];
+}

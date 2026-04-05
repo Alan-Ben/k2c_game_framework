@@ -1,0 +1,11 @@
+﻿﻿import Common.NPCommonObj.alpro;
+JavaPackage GS2GC.p028_QuestOp;
+csharpspace GS2GC.p028_QuestOp;
+
+/**********************************************************
+ * 推送玩家名字更新
+ **********************************************************/
+ALProtocol GS2GC_028_053_OnPlayerQuestCountChg <28, 53>
+{
+	Common.QuestObj.Quest_Count questCount;
+}

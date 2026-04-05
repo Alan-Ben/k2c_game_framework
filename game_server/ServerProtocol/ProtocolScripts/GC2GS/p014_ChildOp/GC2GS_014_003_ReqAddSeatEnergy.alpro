@@ -1,0 +1,7 @@
+JavaPackage GC2GS.p014_ChildOp;
+csharpspace GC2GS.p014_ChildOp;
+ALProtocol GC2GS_014_003_ReqAddSeatEnergy [增加训练位脑力值] <14, 3>
+{
+    long seatId[训练位ID];
+    int addCount[增加数量];
+}

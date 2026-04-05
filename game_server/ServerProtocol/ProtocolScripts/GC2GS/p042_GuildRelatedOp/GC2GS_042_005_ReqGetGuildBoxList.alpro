@@ -1,0 +1,9 @@
+﻿JavaPackage GC2GS.p042_GuildRelatedOp;
+csharpspace GC2GS.p042_GuildRelatedOp;
+
+import Enum.GuildEnum.alpro;
+
+ALProtocol GC2GS_042_005_ReqGetGuildBoxList[获取可领取联盟宝箱列表] <42, 5>
+{
+	Enum.GuildEnum.EGuildBoxType boxType[宝箱类型];
+}

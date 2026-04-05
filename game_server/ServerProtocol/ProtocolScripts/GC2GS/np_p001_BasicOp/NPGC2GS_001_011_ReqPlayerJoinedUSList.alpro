@@ -1,0 +1,10 @@
+﻿JavaPackage NPGC2GS.p001_BasicOp;
+csharpspace NPGC2GS.p001_BasicOp;
+
+/**********************************************************
+ * 玩家请求 已加入过的服务器信息列表
+ **********************************************************/
+ALProtocol NPGC2GS_001_011_ReqPlayerJoinedUSList <1, 11>
+{
+	
+}

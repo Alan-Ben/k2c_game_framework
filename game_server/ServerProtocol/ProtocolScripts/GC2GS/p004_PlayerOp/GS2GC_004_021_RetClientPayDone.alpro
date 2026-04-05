@@ -1,0 +1,7 @@
+﻿﻿JavaPackage GS2GC.p004_PlayerOp;
+csharpspace GS2GC.p004_PlayerOp;
+
+ALProtocol GS2GC_004_021_RetClientPayDone <4, 21>
+{
+	
+}

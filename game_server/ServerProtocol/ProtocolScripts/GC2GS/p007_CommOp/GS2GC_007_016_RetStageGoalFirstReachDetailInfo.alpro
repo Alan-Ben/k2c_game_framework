@@ -1,0 +1,7 @@
+﻿JavaPackage GS2GC.p007_CommOp;
+csharpspace GS2GC.p007_CommOp;
+
+ALProtocol GS2GC_007_016_RetStageGoalFirstReachDetailInfo <7, 16>
+{
+    Common.StageGoalObj.StageGoal_BigStepFirstReachInfo[] infoList[大阶段首达信息列表];
+}

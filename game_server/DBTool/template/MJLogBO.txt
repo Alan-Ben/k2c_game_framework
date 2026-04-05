@@ -1,0 +1,133 @@
+package <%PACKAGE%>;
+import java.nio.ByteBuffer;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
+
+import NPCommon.DB.BM.BM;
+import NPCommon.DB.Annotation.DataBaseField;
+import NPCommon.NPLogDB.MJEventLogBo;
+import NPCommon.Enum.NPCommonEnum.EDBTag;
+
+public class <%CLASS_NAME%> extends MJEventLogBo {
+
+    @DataBaseField(type = "bigint(20)", fieldname = "id", comment = "数据库表唯一键值")
+    private long id;
+<%FIELD_DEFINE%>
+
+    public <%CLASS_NAME%>() {
+        id = 0;
+<%FIELD_DEFAULT%>
+    }
+
+    public <%CLASS_NAME%>(ResultSet rs) throws Exception {
+        id = rs.getLong(1);
+<%FIELD_RESTORE%>
+    }
+
+    @Override
+    @SuppressWarnings({ "unchecked", "rawtypes" })
+    public void getFromResultSet(ResultSet rs, List list) throws Exception {
+        list.add(new <%CLASS_NAME%>(rs));
+    }
+
+    @Override
+    public String getItemsName() {
+        return "`id`<%FIELD_LIST%>";
+    }
+
+    @Override
+    public String getTableName() {
+        return "`<%TABLE_NAME%>`";
+    }
+
+    @Override
+    public String getItemsValue() {
+        StringBuilder strBuf = new StringBuilder();
+        strBuf.append("'").append(id).append("', ");
+<%FIELD_STORE%>
+        strBuf.deleteCharAt(strBuf.length() - 2);
+        return strBuf.toString();
+    }
+
+    @Override
+    public ArrayList<byte[]> getInsertValueBytes() {
+        ArrayList<byte[]> ret = new ArrayList<>();
+<%FIELD_STORE_BYTES%>        return ret;
+    }
+
+   @Override
+    public ArrayList<byte[]> getMarkedValueBytes() {
+        ArrayList<byte[]> ret = new ArrayList<>();
+<%FIELD_STORE_MARKED_BYTES%>        return ret;
+    }
+	
+    @Override
+    public void setId(long iID) {
+        id = iID;
+    }
+
+    @Override
+    public long getId() {
+        return id;
+    }
+
+<%FIELD_INTERFACE%>
+
+
+    @Override
+    protected String getUpdateKeyValue() {
+        StringBuilder sBuilder = new StringBuilder();
+<%FIELD_UPDATE%>
+        sBuilder.deleteCharAt(sBuilder.length() - 1);
+        return sBuilder.toString();
+    }
+
+    @Override
+    public String getMarkedUpdateKeyValue() {
+        StringBuilder sBuilder = new StringBuilder();
+<%FIELD_MARK_UPDATE%>
+        sBuilder.deleteCharAt(sBuilder.length() - 1);
+        return sBuilder.toString();
+    }
+    public static String getSql_TableCreate() {
+        String sql = <%CREATE_SQL%>
+        return sql;
+    }
+    
+     @Override
+    public EDBTag getDBTag() {
+        return EDBTag.<%DB_TAG%>;
+    }
+    private int getBufferSize()
+    {
+        int _size=ALBasicProtocolPack.ALProtocolCommon.GetStringBufSize( this.getClass().getName());
+        _size+=8;//id
+<%FIELD_BUFFERSIZE%>
+         return _size;
+    }
+   
+
+    @Override
+    public ByteBuffer toByteBuffer()
+    {
+        ByteBuffer buff= ByteBuffer.allocate(getBufferSize());
+        ALBasicProtocolPack.ALProtocolCommon.PutStringIntoBuf(buff, this.getClass().getName());
+        buff.putLong(id);
+<%FIELD_WRITEBUFFER%>        
+        return buff;
+    }
+
+    @Override
+    protected void readFromByteBuffer(ByteBuffer buff)
+    {
+        id=buff.getLong();
+<%FIELD_READBUFFER%> 
+    }
+	
+	@Override
+	public  int getRecordExpiredTimeSec()
+    {
+    	return <%EXPIRED_SECOND%> ;
+    }
+}

@@ -1,0 +1,5 @@
+﻿JavaPackage WCGCS2US_RB.p003_CommOp;
+
+ALProtocol NP2US_RB_003_015_RetSendMarquee[发送跑马灯] <3, 15>
+{
+}

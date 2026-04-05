@@ -1,0 +1,11 @@
+﻿﻿import Common.CommonObj.alpro;
+
+JavaPackage NP2CS_RB.np_p002_serverInfoOp;
+
+/**********************************************************
+ * 查询最推荐的服务器logicId
+ **********************************************************/ 
+ALProtocol NP2CS_RB_002_008_RetMostRecommendedUSInfo <2, 8>
+{
+   Common.NPCommonObj.NP_SYS_ServerItem serverItem[最推荐服务器信息];
+}

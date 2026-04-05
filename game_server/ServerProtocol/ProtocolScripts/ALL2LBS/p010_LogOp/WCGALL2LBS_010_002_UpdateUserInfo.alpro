@@ -1,0 +1,10 @@
+﻿import Common.CommonObj.alpro;
+﻿JavaPackage WCGALL2LBS.p010_LogOp;
+
+/**********************************************************
+ * 发送BO日志
+ **********************************************************/
+ALProtocol WCGALL2LBS_010_002_UpdateUserInfo <10, 2>
+{
+	Common.CommonObj.Common_UserLogInfo updateInfo;
+}

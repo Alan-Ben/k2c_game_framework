@@ -1,0 +1,12 @@
+﻿JavaPackage WCGCS2US.p002_MatchOp;
+
+/**********************************************************
+ * Common服务器通知User服务器进入等待确认状态。
+ **********************************************************/
+ALProtocol WCGCS2US_002_014_OnEnterStateBattle <2, 14>
+{
+	bool isStackCurrentState;
+	long uid;
+	int roomSid;
+	long roomId;
+}

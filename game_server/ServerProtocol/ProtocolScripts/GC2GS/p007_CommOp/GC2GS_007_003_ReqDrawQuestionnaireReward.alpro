@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p007_CommOp;
+csharpspace GC2GS.p007_CommOp;
+
+ALProtocol GC2GS_007_003_ReqDrawQuestionnaireReward[领取问卷奖励] <7, 3>
+{
+	long id[问卷id];
+}

@@ -1,0 +1,9 @@
+JavaPackage GS2GC.p017_ActivityOp;
+csharpspace GS2GC.p017_ActivityOp;
+
+import Common.ActivityFundObj.alpro;
+
+ALProtocol GS2GC_017_067_OnActivityFundAdd[活动基金-新增推送] <17, 67>
+{
+	Common.ActivityFundObj.ActivityFund_Info fundInfo[基金信息];
+}

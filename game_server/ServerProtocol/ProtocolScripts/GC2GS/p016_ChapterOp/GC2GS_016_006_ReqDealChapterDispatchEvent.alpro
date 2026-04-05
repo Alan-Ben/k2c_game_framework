@@ -1,0 +1,7 @@
+JavaPackage GC2GS.p016_ChapterOp;
+csharpspace GC2GS.p016_ChapterOp;
+
+ALProtocol GC2GS_016_006_ReqDealChapterDispatchEvent [处理派遣事件] <16, 6>
+{
+    long[] heroList[大臣列表];
+}

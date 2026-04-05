@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p021_PlayerInfo;
+csharpspace GC2GS.p021_PlayerInfo;
+
+ALProtocol GC2GS_021_041_ReqDealCommonRefresh <21, 41>
+{
+	long refId[刷新id];
+}

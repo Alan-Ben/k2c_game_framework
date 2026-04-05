@@ -1,0 +1,7 @@
+﻿JavaPackage WCGCS2US_R.p003_CommOp;
+
+ALProtocol NP2US_R_003_010_ReqRemoveBoxGainedCid[请求宝箱已领取玩家数据] <3, 10>
+{
+	long instanceId;
+	long cid;
+}

@@ -1,0 +1,9 @@
+﻿JavaPackage GC2GS.p032_GuildOp.GuildOpStructure;
+
+ALProtocol GuildOp_043_AttackpropertyPointInfo[攻击据点对应属性节点]
+{
+	string playerName;
+	long heroId;
+	long power;
+	bool canGetDevote[是否可获得公会贡献];
+}

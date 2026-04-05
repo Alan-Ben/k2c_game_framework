@@ -1,0 +1,7 @@
+JavaPackage GC2GS.p015_ConsortOp;
+csharpspace GC2GS.p015_ConsortOp;
+ALProtocol GC2GS_015_006_ReqCallAppoint [家人-指定邀约] <15, 6>
+{
+    long consortId[家人ID];
+    long consortTravelId[家人邀约类型ID];
+}

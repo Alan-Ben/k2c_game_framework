@@ -1,0 +1,10 @@
+﻿JavaPackage GS2GC.p032_GuildOp;
+csharpspace GS2GC.p032_GuildOp;
+
+ALProtocol GS2GC_032_057_OnSelfRequestJoinGuildListChg <32, 57>
+{
+	long[] selfRequestJoinGuildList[自己请求加入联盟列表];
+}
+
+
+

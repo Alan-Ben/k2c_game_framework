@@ -1,0 +1,9 @@
+﻿﻿JavaPackage GS2GC.p002_InitOp;
+csharpspace GS2GC.p002_InitOp;
+
+import Common.LevyObj.alpro;
+
+ALProtocol GS2GC_002_016_RetLevyInit[征收初始化] <2, 16>
+{
+	Common.LevyObj.Levy_Info[] levyList[征收数据列表];
+}

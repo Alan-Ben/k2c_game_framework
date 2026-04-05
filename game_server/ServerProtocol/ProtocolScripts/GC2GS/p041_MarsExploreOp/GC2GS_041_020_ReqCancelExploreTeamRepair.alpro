@@ -1,0 +1,7 @@
+JavaPackage GC2GS.p041_MarsExploreOp;
+csharpspace GC2GS.p041_MarsExploreOp;
+
+ALProtocol GC2GS_041_020_ReqCancelExploreTeamRepair[火星探险-取消队伍维修] <41, 20>
+{
+	long teamId[队伍ID];
+}

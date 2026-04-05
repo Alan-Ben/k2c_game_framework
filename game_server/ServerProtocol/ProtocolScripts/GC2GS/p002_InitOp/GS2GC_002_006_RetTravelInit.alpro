@@ -1,0 +1,10 @@
+﻿JavaPackage GS2GC.p002_InitOp;
+csharpspace GS2GC.p002_InitOp;
+
+﻿﻿﻿﻿import Common.TravelObj.alpro;
+
+ALProtocol GS2GC_002_006_RetTravelInit <2, 6>
+{
+	Common.TravelObj.Travel_Event[] canDealEventList[待处理的事件列表];
+	Common.TravelObj.Travel_Consort[] travelConsortList[游历组件的妃子数据];
+}

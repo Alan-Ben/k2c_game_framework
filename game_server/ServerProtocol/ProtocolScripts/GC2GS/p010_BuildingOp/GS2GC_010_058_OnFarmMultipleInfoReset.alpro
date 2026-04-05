@@ -1,0 +1,7 @@
+JavaPackage GS2GC.p010_BuildingOp;
+csharpspace GS2GC.p010_BuildingOp;
+
+ALProtocol GS2GC_010_058_OnFarmMultipleInfoReset [农田暴击信息重置] <10, 58>
+{
+    Common.BuildingObj.Building_FarmMultipleInfo farmMultipleInfo[农田建筑暴击信息];
+}

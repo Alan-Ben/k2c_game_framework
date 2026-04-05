@@ -1,0 +1,11 @@
+﻿﻿import Common.NPPlayerInfo.alpro;
+JavaPackage GS2GC.p021_PlayerInfo;
+csharpspace GS2GC.p021_PlayerInfo;
+
+/**********************************************************
+ * 玩家头像框删除
+ **********************************************************/
+ALProtocol GS2GC_021_014_PlayerIconBgkDel <21, 14>
+{
+	long id[头像框唯一Id];
+}

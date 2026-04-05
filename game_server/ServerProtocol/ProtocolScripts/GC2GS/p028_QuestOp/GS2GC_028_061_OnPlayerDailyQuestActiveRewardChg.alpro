@@ -1,0 +1,10 @@
+﻿﻿import Common.NPCommonObj.alpro;
+JavaPackage GS2GC.p028_QuestOp;
+csharpspace GS2GC.p028_QuestOp;
+
+ALProtocol GS2GC_028_061_OnPlayerDailyQuestActiveRewardChg[已领取阶段奖励变更] <28, 61>
+{
+	Enum.QuestEnum.EDailyQuestType type[日常任务类型];
+	long refreshSerial[刷新序列号];
+	long[] hasTakenActiveRewardRefIdList[已领取活跃度奖励id];
+}

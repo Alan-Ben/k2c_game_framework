@@ -1,0 +1,10 @@
+import Enum.ActivityEnum.alpro;
+
+JavaPackage GS2GC.p017_ActivityOp;
+csharpspace GS2GC.p017_ActivityOp;
+
+ALProtocol GS2GC_017_056_OnActivityStateChg[活动状态变更推送] <17, 56>
+{
+    long instanceId[活动实例ID];
+    Enum.ActivityEnum.EActivityState state[活动状态];
+}

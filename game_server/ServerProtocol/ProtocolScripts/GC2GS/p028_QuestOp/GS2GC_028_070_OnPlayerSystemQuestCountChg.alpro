@@ -1,0 +1,7 @@
+﻿﻿JavaPackage GS2GC.p028_QuestOp;
+csharpspace GS2GC.p028_QuestOp;
+
+ALProtocol GS2GC_028_070_OnPlayerSystemQuestChg[系统任务变更] <28, 70>
+{
+	Common.QuestObj.SystemQuest_Info info;
+}

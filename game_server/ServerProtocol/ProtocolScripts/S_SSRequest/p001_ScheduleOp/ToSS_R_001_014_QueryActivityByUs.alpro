@@ -1,0 +1,6 @@
+JavaPackage NP2SS_R.p001_ScheduleOp;
+
+ALProtocol ToSS_R_001_014_QueryActivityByUs[查询指定US的待激活排期] <1, 14>
+{
+    int usId[用户服务器ID];
+}

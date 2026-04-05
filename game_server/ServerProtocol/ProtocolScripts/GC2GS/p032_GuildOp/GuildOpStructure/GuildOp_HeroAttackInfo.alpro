@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p032_GuildOp.GuildOpStructure;
+
+ALProtocol GuildOp_HeroAttackInfo[攻击通用信息]
+{
+	long heroId;
+	long power;
+}

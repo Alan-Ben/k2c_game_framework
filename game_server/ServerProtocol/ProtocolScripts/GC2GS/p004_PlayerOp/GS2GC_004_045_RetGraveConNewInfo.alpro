@@ -1,0 +1,10 @@
+﻿JavaPackage GS2GC.p004_PlayerOp;
+csharpspace GS2GC.p004_PlayerOp;
+
+import Common.NPCommonObj.alpro;
+
+ALProtocol GS2GC_004_045_RetGraveConNewInfo <4, 45>
+{
+	long cid;
+	Common.NPCommonObj.NPCommon_ItemInfo[] gainItemList[领取的物品列表];
+}

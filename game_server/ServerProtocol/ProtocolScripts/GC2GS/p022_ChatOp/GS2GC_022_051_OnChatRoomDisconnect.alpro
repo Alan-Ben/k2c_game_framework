@@ -1,0 +1,7 @@
+﻿﻿JavaPackage GS2GC.p022_ChatOp;
+csharpspace GS2GC.p022_ChatOp;
+
+ALProtocol GS2GC_022_051_OnChatRoomDisconnect[聊天房间断开] <22, 51>
+{
+    long roomId[聊天房间ID];
+}

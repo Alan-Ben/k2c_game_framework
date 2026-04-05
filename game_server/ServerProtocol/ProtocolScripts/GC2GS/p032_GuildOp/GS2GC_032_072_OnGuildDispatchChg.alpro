@@ -1,0 +1,7 @@
+﻿JavaPackage GS2GC.p032_GuildOp;
+csharpspace GS2GC.p032_GuildOp;
+
+ALProtocol GS2GC_032_072_OnGuildDispatchChg[派遣信息变更] <32, 72>
+{
+	Common.GuildObj.Guild_AttrDispatchInfo data;
+}

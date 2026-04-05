@@ -1,0 +1,15 @@
+java_path= ../Common/src
+java_package=NPCommon.ErrMain
+id	name	desc
+1	INSTANCE_NO_EXIST	跨服分组实例不存在
+2	RANK_NO_EXIST	排行对象不存在
+3	RANK_OP_FAIL	排行榜操作失败
+4	CROSS_RANK_HANDLE_FAIL	跨服排行榜服务器承载失败
+5	RANK_FIXED_NOT_FOUND	 常驻排行榜未找到
+6	RANK_FIXED_LIKE_LIST_EMPTY	 常驻排行榜找不到点赞对象
+7	RANK_FIXED_LIKE_CD_NOT_ENOUGH	 常驻排行榜点赞次数不足
+8	RANK_FIXED_A_KEY_LIKE_NOT_UNLOCK	 常驻排行榜一键点赞功能未解锁
+9	RANK_FIXED_CANT_LIKE	 该常驻排行榜不支持点赞
+10	RANK_FIXED_NO_TARGET_CAN_LIKE	 常驻排行榜没有可点赞目标
+11	RANK_ITEM_NO_EXIST	排行item数据不存在
+12	RANK_NOT_JOIN	未参加排行

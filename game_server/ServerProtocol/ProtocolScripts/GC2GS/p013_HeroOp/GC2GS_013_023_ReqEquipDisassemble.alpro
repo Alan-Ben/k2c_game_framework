@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p013_HeroOp;
+csharpspace GC2GS.p013_HeroOp;
+
+ALProtocol GC2GS_013_023_ReqEquipDisassemble[藏品分解]<13, 23> 
+{
+    long[] dbList[数据id列表];
+}

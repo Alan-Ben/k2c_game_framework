@@ -1,0 +1,26 @@
+JavaPackage Common.DinnerEnum;
+csharpspace Common.DinnerEnum;
+
+ALEnum EDinnerType[宴会标签]
+{
+	NONE;
+	CEREMONY[典礼];
+	PARTY[酒会];
+}
+
+ALEnum EDinnerPermitType[宴会凭证类型]
+{
+	NONE;
+	FAMILY[家庭宴];
+	CHILD_CELE[子嗣庆功宴];
+	TOWER_CELE[爬塔庆功宴];
+	GIFTDE_CHILD_CELE[卷王子嗣庆功宴];
+}
+
+
+ALEnum EDinnerJoinerType[赴宴对象类型]
+{
+	NONE;
+	PLAYER[玩家];
+	HERO[大臣];
+}

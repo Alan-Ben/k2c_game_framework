@@ -1,0 +1,5 @@
+﻿JavaPackage WCGCS2US_RB.p003_CommOp;
+
+ALProtocol NP2US_RB_003_018_RetSendServerMailDel[删除全服邮件] <3, 18>
+{
+}

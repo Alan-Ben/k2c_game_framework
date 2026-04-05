@@ -1,0 +1,22 @@
+﻿JavaPackage ALLRPC.DinnerServer.Dinner;
+
+﻿﻿﻿﻿﻿import Common.DinnerObj.alpro;
+
+ALProtocol DnsGetDinnerIdxList_Req
+{
+	long groupId;
+	
+	long cid;
+	int page;
+	int num;
+}
+
+ALProtocol DnsGetDinnerIdxList_Return
+{
+	Common.DinnerObj.Dinner_Idx[] idxList;
+	bool hasNext;
+}
+
+//[RPC]获取跨服池宴会索引数据列表
+//[CLASS_PACKAGE] : AllRpcData.Dinner_Service.Dinner
+//[DEALER_PACKAGE] : DinnerServer.RPCDispatcher.Dinner

@@ -1,0 +1,5 @@
+JavaPackage NP2US_RB.p009_CrossRankOp;
+
+ALProtocol ToUS_RB_009_001_PushCrossRankScoreChg [跨服排行榜分数变更推送响应] <9, 1>
+{
+}

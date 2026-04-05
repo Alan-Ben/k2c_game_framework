@@ -1,0 +1,18 @@
+﻿JavaPackage ALLRPC.CrossTeamServer.Team;
+
+import Common.ServerObj.alpro;
+
+ALProtocol CTSGetUsAllTeam_Req
+{
+	int usId;
+	long[] groupIdList[分组实例ID列表];
+}
+
+ALProtocol CTSGetUsAllTeam_Return
+{
+	Common.ServerObj.ServerObj_ActivityTeamGroupList[] groupTeamList;
+}
+
+//[RPC]获取队长是指定US的所有队伍列表
+//[CLASS_PACKAGE] : AllRpcData.CrossTeam_Service.Team
+//[DEALER_PACKAGE] : CrossTeamServer.RPCDispatcher.Team

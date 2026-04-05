@@ -1,0 +1,7 @@
+JavaPackage GS2GC.p015_ConsortOp;
+csharpspace GS2GC.p015_ConsortOp;
+ALProtocol GS2GC_015_052_OnConsortCharmChg [家人加护力推送] <15, 52>
+{
+    long consortId[空];
+    long charm[空];
+}

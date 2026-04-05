@@ -1,0 +1,8 @@
+﻿JavaPackage NP2US_R.p008_ScheduleOp;
+
+import Common.ScheduleObj.alpro;
+
+ALProtocol NP2US_R_008_010_PushSchedule[发送排期数据] <8, 10>
+{
+	Common.ScheduleObj.Schedule_UsPushData usSchedule[US排期数据];
+}

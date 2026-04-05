@@ -1,0 +1,14 @@
+﻿JavaPackage NP2GS.p001_BasicOp;
+
+/**********************************************************
+ * 用户数据加载完成之后，通知GS的Info对象的处理
+ **********************************************************/
+ALProtocol NP2GS_001_003_OnUserDataLoaded <1, 3>
+{
+	int errCode[错误码，0为成功];
+	
+	long gsSessionId;
+	long infoSerialize;
+	
+	long cid;
+}

@@ -1,0 +1,14 @@
+﻿JavaPackage NP2HS_RB.p002_HsClientOp;
+
+ALProtocol ExeGmSuperResult
+{
+	int serverType;
+	int serverTypeId;
+	bool isSucc;
+	String result;
+}
+
+ALProtocol NP2HS_RB_002_001_RetExecGmSuper <2, 1>
+{
+	ExeGmSuperResult[] resultList;
+}

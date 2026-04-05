@@ -1,0 +1,5 @@
+JavaPackage GS2GC.p018_PlayerSkinOp;
+csharpspace GS2GC.p018_PlayerSkinOp;
+ALProtocol GS2GC_018_009_RetViewComboTitleBg [查看组合称号底色] <18, 9>
+{
+}

@@ -1,0 +1,11 @@
+JavaPackage NP2LCS_R.p001_BasicOp;
+
+/**********************************************************
+ * 申请帐号做SDK校验
+ **********************************************************/
+ALProtocol NP2LCS_R_001_004_ReqSDKCheck <1, 4>
+{
+	string accName[外部用户id];
+	string token[校验串];
+	string clientIp[客户端ip地址];
+}

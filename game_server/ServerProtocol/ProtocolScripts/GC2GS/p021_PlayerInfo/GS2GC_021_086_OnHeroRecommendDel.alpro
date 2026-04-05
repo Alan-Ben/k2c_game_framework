@@ -1,0 +1,7 @@
+﻿JavaPackage GS2GC.p021_PlayerInfo;
+csharpspace GS2GC.p021_PlayerInfo;
+
+ALProtocol GS2GC_021_086_OnHeroRecommendDel[移除大臣推荐事件推送]<21, 86>
+{
+    long instanceId;
+}

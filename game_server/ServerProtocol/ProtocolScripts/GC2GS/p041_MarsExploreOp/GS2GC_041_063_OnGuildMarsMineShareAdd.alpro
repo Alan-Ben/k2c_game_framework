@@ -1,0 +1,7 @@
+﻿JavaPackage GS2GC.p041_MarsExploreOp;
+csharpspace GS2GC.p041_MarsExploreOp;
+
+ALProtocol GS2GC_041_063_OnGuildMarsMineShareAdd[火星探索-最新联盟分享火星矿数据ID] <41, 63>
+{
+	long id[最新联盟分享火星矿数据ID];
+}

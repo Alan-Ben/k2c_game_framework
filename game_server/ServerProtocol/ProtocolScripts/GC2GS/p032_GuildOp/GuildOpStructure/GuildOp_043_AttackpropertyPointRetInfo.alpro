@@ -1,0 +1,10 @@
+﻿import Common.NPCommonObj.alpro;
+
+JavaPackage GC2GS.p032_GuildOp.GuildOpStructure;
+
+ALProtocol GuildOp_043_AttackpropertyPointRetInfo[攻击据点对应属性节点返回的信息]
+{
+	long gainGuildCointCount;
+	long damageHp;
+	Common.NPCommonObj.NPCommon_ItemInfo[] itemList[奖励物品列表];
+}

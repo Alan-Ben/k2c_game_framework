@@ -1,0 +1,13 @@
+JavaPackage GC2GS.p039_MarsBuildingOp;
+csharpspace GC2GS.p039_MarsBuildingOp;
+
+import Common.NPCommonObj.alpro;
+import Enum.MarsEnum.alpro;
+
+ALProtocol GC2GS_039_014_ReqBagUseItemForTimeReduce[使用时间减少道具] <39, 14>
+{
+	Common.NPCommonObj.NPCommon_ItemInfo[] useItemList[使用道具列表];
+	
+	Enum.MarsEnum.EMarsBagItemUseTimeType objType;
+	long objId[对象ID];
+}

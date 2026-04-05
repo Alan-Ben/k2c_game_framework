@@ -1,0 +1,10 @@
+JavaPackage GS2GC.p042_GuildRelatedOp;
+csharpspace GS2GC.p042_GuildRelatedOp;
+
+ALProtocol GS2GC_042_064_OnRallyMemberExit[成员退出集结推送] <42, 64>
+{
+    long rallyId[集结ID];
+    long memberCid[成员CID];
+}
+
+

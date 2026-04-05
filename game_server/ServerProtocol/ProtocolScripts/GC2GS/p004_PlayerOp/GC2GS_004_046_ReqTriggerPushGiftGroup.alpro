@@ -1,0 +1,7 @@
+JavaPackage GC2GS.p004_PlayerOp;
+csharpspace GC2GS.p004_PlayerOp;
+
+ALProtocol GC2GS_004_046_ReqTriggerPushGiftGroup[触发推送礼包组] <4, 46>
+{
+	long groupId[礼包组id];
+}

@@ -1,0 +1,6 @@
+JavaPackage GC2GS.p010_BuildingOp;
+csharpspace GC2GS.p010_BuildingOp;
+ALProtocol GC2GS_010_004_ReqBusinessUpgradeLvl [请求升级经营建筑等级] <10, 4>
+{
+    long buildingId[建筑ID];
+}

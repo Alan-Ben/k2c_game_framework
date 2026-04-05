@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p007_CommOp;
+csharpspace GC2GS.p007_CommOp;
+
+ALProtocol GC2GS_007_018_ReqTakeStageGoalSubTaskReward[领取阶段目标子任务奖励] <7, 18>
+{
+	long taskId;
+}

@@ -1,0 +1,7 @@
+﻿﻿JavaPackage GS2GC.p023_ArenaOp;
+csharpspace GS2GC.p023_ArenaOp;
+
+ALProtocol GS2GC_023_063_OnTowerResearchRewardDraw <23, 63>
+{
+    long chapterId[章节ID];
+}

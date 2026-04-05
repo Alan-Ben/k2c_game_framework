@@ -1,0 +1,111 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using ALBasicProtocolPack;
+
+
+namespace GC2GS.p011_ClientDataOp
+{
+
+public class GC2GS_011_002_ReqSaveClientData : ALBasicProtocolPack._IALProtocolStructure {
+private int index;
+private byte[] data;
+
+
+public GC2GS_011_002_ReqSaveClientData() {
+	index = 0;
+	data = null;
+}
+
+public GC2GS_011_002_ReqSaveClientData(
+	int _index
+	, byte[] _data
+) {	index = _index;
+	data = _data;
+}
+
+public byte getMainOrder() { return (byte)11; }
+
+public byte getSubOrder() { return (byte)2; }
+
+public int getIndex() { return index; }
+public void setIndex(int _index) { index = _index; }
+public byte[] getData() { return data; }
+
+public void setData(byte[] _data) { data = _data; }
+
+
+
+public int GetBufSize() {
+	int _size = 4;
+	_size += 4 + (data == null ? 0 : data.Length);
+
+	return _size;
+}
+
+public int GetFullPackBufSize() {
+	int _size = 6;
+	_size += 4 + (data == null ? 0 : data.Length);
+
+	return _size;
+}
+
+
+
+public void ReadUnzipBuf(ALProtocolBuf _buf, int _finalPos) {
+	 if(_finalPos > 0 && _buf.getCurPos() >= _finalPos) return ;
+	index = _buf.getInt();
+	 if(_finalPos > 0 && _buf.getCurPos() >= _finalPos) return ;
+	data = _buf.getByteBuffer();
+
+}
+
+public void PutUnzipBuf(ALProtocolBuf _buf) {
+	_buf.putInt(index);
+	_buf.putByteBuffer(data);
+
+}
+
+public byte[] makeFullPackage() {
+	int _bufSize = GetBufSize() + 2;
+	ALProtocolBuf _buf = ALProtocolBuf.allocate(_bufSize);
+	_buf.put((byte)11);
+	_buf.put((byte)2);
+	PutUnzipBuf(_buf);
+	return _buf.getBuf();
+}
+public void makeFullPackage(ALProtocolBuf _recBuf) {
+	if(null == _recBuf)
+		return ;
+	_recBuf.put((byte)11);
+	_recBuf.put((byte)2);
+	PutUnzipBuf(_recBuf);
+}
+public byte[] makePackage() {
+	int _bufSize = GetBufSize();
+	ALProtocolBuf _buf = ALProtocolBuf.allocate(_bufSize);
+	PutUnzipBuf(_buf);
+	return _buf.getBuf();
+}
+public void readPackage(byte[] _buf) {
+	ALProtocolBuf _bufObj = new ALProtocolBuf(_buf);
+	ReadUnzipBuf(_bufObj, -1);
+}
+public void readPackage(ALProtocolBuf _buf) {
+	ReadUnzipBuf(_buf, -1);
+}
+public override string ToString() {
+	System.Text.StringBuilder builder = new System.Text.StringBuilder();
+
+	builder.Append("{");
+	builder.Append("index").Append(":").Append(index.ToString()).Append(", ");
+	builder.Append("data").Append(":").Append(data == null ? "null" : data.ToString()).Append(", ");
+	builder.Append("}");
+	return builder.ToString();
+}
+
+}
+
+}
+

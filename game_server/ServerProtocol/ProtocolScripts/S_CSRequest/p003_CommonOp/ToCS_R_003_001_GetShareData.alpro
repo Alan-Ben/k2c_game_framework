@@ -1,0 +1,7 @@
+JavaPackage NP2CS_R.p003_CommonOp;
+
+ALProtocol ToCS_R_003_001_GetShareData <3, 1>
+{
+	int type;
+	long serial;
+}

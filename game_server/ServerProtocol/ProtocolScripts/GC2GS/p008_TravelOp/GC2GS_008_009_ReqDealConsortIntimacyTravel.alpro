@@ -1,0 +1,6 @@
+JavaPackage GC2GS.p008_TravelOp;
+csharpspace GC2GS.p008_TravelOp;
+ALProtocol GC2GS_008_009_ReqDealConsortIntimacyTravel [处理增加妃子亲密度游历事件] <8, 9>
+{
+    long instanceId[游历事件ID];
+}

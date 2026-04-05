@@ -1,0 +1,7 @@
+JavaPackage GC2GS.p014_ChildOp;
+csharpspace GC2GS.p014_ChildOp;
+
+ALProtocol GC2GS_014_019_ReqRandomGainChild [随机获得子嗣] <14, 19>
+{
+    int seatId[位置ID];
+}

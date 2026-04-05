@@ -1,0 +1,11 @@
+java_path= ../Common/src
+java_package=NPCommon.ErrMain
+id	name	desc
+1	HERO_USE_REACH_LIMIT	大臣使用次数已达上限
+2	ALREADY_BORROW_GUILD_HERO	已经借用过联盟大臣
+3	BORROW_HERO_REACH_LIMIT	借用大臣次数已达上限
+4	ALREADY_DRAW_BOX	已经领取过宝箱
+5	DRAW_BOX_REACH_LIMIT	领取宝箱次数已达上限
+6	BOX_EXPIRED	宝箱已过期
+7	BOX_EMPTY	宝箱已领取完
+8	NOT_IN_FIGHT_TIME	未在战斗时间内

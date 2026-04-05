@@ -1,0 +1,6 @@
+﻿JavaPackage GS2GC.p040_MarsPeopleOp;
+csharpspace GS2GC.p040_MarsPeopleOp;
+
+ALProtocol GS2GC_040_059_OnPeopleImmigrantDel[移民数据移除] <40, 59>
+{
+}

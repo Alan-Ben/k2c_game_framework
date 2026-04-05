@@ -1,0 +1,7 @@
+﻿﻿JavaPackage GS2GC.p013_HeroOp;
+csharpspace GS2GC.p013_HeroOp;
+
+ALProtocol GS2GC_013_066_OnEquipBaseChg[藏品基础信息变更]<13, 66>
+{
+    Common.HeroObj.Equip_BaseInfo equipInfo;
+}

@@ -1,0 +1,8 @@
+﻿﻿import Common.NPCommonObj.alpro;
+JavaPackage GS2GC.p004_PlayerOp;
+csharpspace GS2GC.p004_PlayerOp;
+
+ALProtocol GS2GC_004_011_RetSomeOnePlayerBriefInfo <4, 11>
+{
+	Common.NPCommonObj.PlayerInfo_IconShow playerBrief[玩家简要信息];
+}

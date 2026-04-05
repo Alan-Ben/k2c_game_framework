@@ -1,0 +1,10 @@
+﻿JavaPackage GC2GS.p037_GuildDungeonOp;
+csharpspace GC2GS.p037_GuildDungeonOp;
+
+import Enum.GuildDungeonEnum.alpro;
+
+ALProtocol GC2GS_037_003_ReqStartDungeon[开启副本] <37, 3>
+{
+	long dungeonId;
+	Enum.GuildDungeonEnum.EGuildDungeon_StartType startType;
+}

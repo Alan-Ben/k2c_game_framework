@@ -1,0 +1,7 @@
+﻿JavaPackage GS2GC.p036_TreasureHuntOp;
+csharpspace GS2GC.p036_TreasureHuntOp;
+
+ALProtocol GS2GC_036_009_RetTreasureHuntTransOre <36, 9>
+{
+    Common.TreasureHuntObj.TreasureHunt_TransOreResult[] transResultList[转换结果列表];
+}

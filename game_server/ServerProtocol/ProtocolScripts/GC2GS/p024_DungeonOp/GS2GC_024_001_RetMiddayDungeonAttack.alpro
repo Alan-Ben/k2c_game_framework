@@ -1,0 +1,7 @@
+﻿﻿JavaPackage GS2GC.p024_DungeonOp;
+csharpspace GS2GC.p024_DungeonOp;
+
+ALProtocol GS2GC_024_001_RetMiddayDungeonAttack <24, 1>
+{
+    Common.DungeonObj.MiddayDungeon_SettleInfo settleInfo[副本结算信息];
+}

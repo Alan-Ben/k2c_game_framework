@@ -1,0 +1,10 @@
+﻿JavaPackage NPGS2GC.p001_BasicOp;
+csharpspace NPGS2GC.p001_BasicOp;
+
+/**********************************************************
+ * 服务端返回客户端已经收到的消息数量
+ **********************************************************/
+ALProtocol NPGS2GC_001_021_ReceivedMsg <1, 21>
+{
+	int receivedMesCount;
+}

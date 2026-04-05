@@ -1,0 +1,15 @@
+JavaPackage NP2HS_R.p003_AiChatOp;
+
+ALProtocol ToHS_R_003_001_ReqAiChatCompletion <3, 1>
+{
+	string uid;
+	long cid;
+	string role;
+	int level;
+	int vipLevel;
+
+	long usRequestSerial[us请求序列号];
+	int usId;
+	string charCode[角色代码];
+	Common.CommonObj.Common_AiChatMessage[] msgList[消息列表];
+}

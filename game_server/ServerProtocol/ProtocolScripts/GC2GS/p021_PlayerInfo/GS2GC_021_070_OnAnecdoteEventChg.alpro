@@ -1,0 +1,10 @@
+﻿JavaPackage GS2GC.p021_PlayerInfo;
+csharpspace GS2GC.p021_PlayerInfo;
+
+import Common.AnecdoteObj.alpro;
+
+ALProtocol GS2GC_021_070_OnAnecdoteChg[政务事件数据变更] <21, 70>
+{
+	long instanceId;
+	bytebuffer extraData;
+}

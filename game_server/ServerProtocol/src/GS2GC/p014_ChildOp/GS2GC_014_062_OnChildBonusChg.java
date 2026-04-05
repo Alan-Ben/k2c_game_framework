@@ -1,0 +1,93 @@
+package GS2GC.p014_ChildOp;
+
+import java.nio.ByteBuffer;
+/*********
+ * 指定子嗣（未成年）收益变动推送
+ **/
+public class GS2GC_014_062_OnChildBonusChg implements ALBasicProtocolPack._IALProtocolStructure {
+/** 子嗣实例ID */
+private long id;
+/** 指定子嗣（未成年）收益 */
+private long bonus;
+
+
+public GS2GC_014_062_OnChildBonusChg() {
+	id = (long)0;
+	bonus = (long)0;
+}
+
+public GS2GC_014_062_OnChildBonusChg(
+	 long _id
+	, long _bonus
+) {	id = _id;
+	bonus = _bonus;
+}
+
+public final byte getMainOrder() { return (byte)14; }
+
+public final byte getSubOrder() { return (byte)62; }
+
+/** 子嗣实例ID */
+public long getId() { return id; }
+/** 子嗣实例ID */
+public void setId(long _id) { id = _id; }
+/** 指定子嗣（未成年）收益 */
+public long getBonus() { return bonus; }
+/** 指定子嗣（未成年）收益 */
+public void setBonus(long _bonus) { bonus = _bonus; }
+
+
+public final int GetBufSize() {
+	int _size = 16;
+
+	return _size;
+}
+
+public final int GetFullPackBufSize() {
+	int _size = 18;
+
+	return _size;
+}
+
+
+
+public final void ReadUnzipBuf(ByteBuffer _buf, int _finalPos) {
+	 if(_finalPos > 0 && _buf.position() >= _finalPos) return ;
+	if(_buf.remaining() > 0) id = _buf.getLong();
+	 if(_finalPos > 0 && _buf.position() >= _finalPos) return ;
+	if(_buf.remaining() > 0) bonus = _buf.getLong();
+}
+
+public final void PutUnzipBuf(ByteBuffer _buf) {
+	_buf.putLong(id);
+	_buf.putLong(bonus);
+}
+
+public final ByteBuffer makeFullPackage() {
+	int _bufSize = GetBufSize() + 2;
+	ByteBuffer _buf = ByteBuffer.allocate(_bufSize);
+	_buf.put((byte)14);
+	_buf.put((byte)62);
+	PutUnzipBuf(_buf);
+	_buf.flip();
+	return _buf;
+}
+public final void makeFullPackage(ByteBuffer _recBuf) {
+	if(null == _recBuf)
+		return ;
+	_recBuf.put((byte)14);
+	_recBuf.put((byte)62);
+	PutUnzipBuf(_recBuf);
+}
+public final ByteBuffer makePackage() {
+	int _bufSize = GetBufSize();
+	ByteBuffer _buf = ByteBuffer.allocate(_bufSize);
+	PutUnzipBuf(_buf);
+	_buf.flip();
+	return _buf;
+}
+public final void readPackage(ByteBuffer _buf) {
+	ReadUnzipBuf(_buf, -1);
+}
+}
+

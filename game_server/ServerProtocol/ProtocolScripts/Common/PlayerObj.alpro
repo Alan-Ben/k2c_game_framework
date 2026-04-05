@@ -1,0 +1,42 @@
+﻿JavaPackage Common.PlayerObj;
+csharpspace Common.PlayerObj;
+
+import Enum.PlayerEnum.alpro;
+
+ALProtocol Player_HeroShowInfo[玩家通用大臣展示信息]
+{
+	long cid[玩家id];
+	long heroId[大臣id];
+	int level[等级];
+	long skinId[皮肤id];
+}
+
+ALProtocol Player_EventRecordInfo[玩家事件记录信息]
+{
+	Enum.PlayerEnum.EPlayerEventRecordType type;
+	long subId;
+	long count;
+}
+
+ALProtocol Player_GoldInfo[玩家金币信息]
+{
+	long lastSettleTimeMs[上次结算时间];
+	long count;
+	long outputSpeed[产出速度];
+	long totalConsumeCount[总消耗数量];
+}
+
+ALProtocol Player_StationInfo[玩家贸易站数据]
+{
+	int level[等级];
+	long hadOutputNum[已产出数量];
+	long hadOutputSec[已产出时间];
+	long lastSettleTimeMs[上次结算时间戳];
+}
+
+ALProtocol Player_MarsEnergyInfo[玩家火星能量信息]
+{
+	long lastSettleTimeMs[上次结算时间];
+	long count;
+	long costSpeed[消耗速度（单位：分钟）];
+}

@@ -1,0 +1,10 @@
+﻿﻿JavaPackage GS2GC.p017_ActivityOp;
+csharpspace GS2GC.p017_ActivityOp;
+
+ALProtocol GS2GC_017_063_OnActivityStepRewardEventTaskScoreChg [活动阶段事件任务奖励分数变更] <17, 63>
+{
+     long activityInstanceId[活动实例ID];
+	 long stepRewardId[阶段奖励ID];
+     long eventTaskId[事件配置ID];
+     long score;
+}

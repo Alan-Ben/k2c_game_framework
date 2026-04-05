@@ -1,0 +1,8 @@
+﻿JavaPackage GS2GC.p042_GuildRelatedOp;
+csharpspace GS2GC.p042_GuildRelatedOp;
+
+ALProtocol GS2GC_042_004_RetMarsHelpDealedList <42, 4>
+{
+	int dealedCount[已互助的数量];
+	int dealLimit[允许互助的上限];
+}

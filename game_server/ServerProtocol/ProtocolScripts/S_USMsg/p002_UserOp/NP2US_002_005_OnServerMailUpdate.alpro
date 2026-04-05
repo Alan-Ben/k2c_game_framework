@@ -1,0 +1,7 @@
+﻿JavaPackage NP2US.p002_UserOp;
+
+
+ALProtocol NP2US_002_005_OnServerMailUpdate[有新的全服邮件需要查收] <2, 5>
+{
+	long phpMailId[邮件唯一id];
+}

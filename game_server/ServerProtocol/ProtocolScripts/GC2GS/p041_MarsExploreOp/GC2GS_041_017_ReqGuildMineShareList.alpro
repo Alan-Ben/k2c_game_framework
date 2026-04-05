@@ -1,0 +1,8 @@
+JavaPackage GC2GS.p041_MarsExploreOp;
+csharpspace GC2GS.p041_MarsExploreOp;
+
+/**
+ * 请求联盟分享矿列表
+ */
+ALProtocol GC2GS_041_017_ReqGuildMineShareList[请求联盟分享矿列表] <41, 17> {
+}

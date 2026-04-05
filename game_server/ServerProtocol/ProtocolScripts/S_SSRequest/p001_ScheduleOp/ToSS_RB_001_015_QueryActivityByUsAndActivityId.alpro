@@ -1,0 +1,7 @@
+JavaPackage NP2SS_RB.p001_ScheduleOp;
+import Common.ScheduleObj.alpro;
+
+ALProtocol ToSS_RB_001_015_QueryActivityByUsAndActivityId[返回指定活动在各US的排期信息] <1, 15>
+{
+    Common.ScheduleObj.Schedule_SimpleActivityInfoByUs[] activityList[活动列表，每个US一条记录];
+}

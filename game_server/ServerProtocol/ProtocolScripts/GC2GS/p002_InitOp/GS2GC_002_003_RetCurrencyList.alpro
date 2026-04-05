@@ -1,0 +1,8 @@
+﻿﻿﻿﻿﻿import Common.NPCommonObj.alpro;
+JavaPackage GS2GC.p002_InitOp;
+csharpspace GS2GC.p002_InitOp;
+
+ALProtocol GS2GC_002_003_RetCurrencyList <2, 3>
+{
+	Common.NPCommonObj.NPCommon_CurrencyInfo[] currencyList;
+}

@@ -1,0 +1,16 @@
+﻿JavaPackage ALLRPC.CrossTeamServer.Team;
+
+ALProtocol CTSGetPlayerTeamRoom_Req
+{
+	long groupId[分组实例ID];
+	long cid[分组参加对象实例ID];
+}
+
+ALProtocol CTSGetPlayerTeamRoom_Return
+{
+	long roomId;
+}
+
+//[RPC]获取玩家的队伍聊天房间ID
+//[CLASS_PACKAGE] : AllRpcData.CrossTeam_Service.Team
+//[DEALER_PACKAGE] : CrossTeamServer.RPCDispatcher.Team

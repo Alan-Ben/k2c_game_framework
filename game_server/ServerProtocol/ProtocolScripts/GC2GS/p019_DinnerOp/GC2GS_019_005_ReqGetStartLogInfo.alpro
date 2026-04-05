@@ -1,0 +1,6 @@
+JavaPackage GC2GS.p019_DinnerOp;
+csharpspace GC2GS.p019_DinnerOp;
+ALProtocol GC2GS_019_005_ReqGetStartLogInfo [开宴记录] <19, 5>
+{
+    long instanceId[宴会实例ID];
+}

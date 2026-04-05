@@ -1,0 +1,13 @@
+﻿JavaPackage ALLRPC.US.Guild;
+
+ALProtocol GuildRmvMarsHelp_Req
+{
+	long cid;
+	long guildId;
+	long helpId;
+	bool needPush;
+}
+
+ALProtocol GuildRmvMarsHelp_Return
+{
+}

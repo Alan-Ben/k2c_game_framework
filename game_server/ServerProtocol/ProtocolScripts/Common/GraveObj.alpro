@@ -1,0 +1,17 @@
+﻿import Common.NPInclude.alpro;
+import Common.NPCommonObj.alpro;
+
+JavaPackage Common.GraveObj;
+csharpspace Common.GraveObj;
+
+ALProtocol GraveObj_NewInfo[新晋杰出者信息]
+{
+	long titleId[达成称号];
+	long cid[玩家CID];
+}
+
+ALProtocol GraveObj_Record[杰出者记录]
+{
+	long cid[玩家CID];
+	int achieveTs[达成时间，时间戳：秒];
+}

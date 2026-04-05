@@ -1,0 +1,7 @@
+JavaPackage GS2GC.p014_ChildOp;
+csharpspace GS2GC.p014_ChildOp;
+import Common.ChildObj.alpro;
+ALProtocol GS2GC_014_006_RetGetUnMarriedAdult [获取子嗣（成年未婚）数据] <14, 6>
+{
+    Common.ChildObj.Adult_UnmarriedInfo adult[空];
+}

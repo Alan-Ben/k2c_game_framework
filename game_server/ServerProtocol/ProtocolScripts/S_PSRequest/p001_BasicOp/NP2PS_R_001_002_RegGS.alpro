@@ -1,0 +1,19 @@
+﻿JavaPackage NP2PS_R.p001_BasicOp;
+
+/**********************************************************
+ * 注册连接服务器的处理
+ **********************************************************/
+ALProtocol NP2PS_R_001_002_RegGS <1, 2>
+{
+	//对应连接区域的标记
+	string areaTag;
+	//服务器可容纳用户数量
+	int userMaxCount;
+	//服务器接纳用户权重
+	int userHandleWeight;
+	
+	//连接本服务器的Ip
+	string connectIp;
+	//连接本服务器的端口
+	int connectPort;
+}

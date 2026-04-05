@@ -1,0 +1,6 @@
+JavaPackage GC2GS.p007_CommOp;
+csharpspace GC2GS.p007_CommOp;
+
+ALProtocol GC2GS_007_034_ReqStoreReviewsGetReward[领取商店评价奖励（发邮件）] <7, 34>
+{
+}

@@ -1,0 +1,11 @@
+﻿﻿﻿import Common.CommonObj.alpro;
+JavaPackage WCGCS2US.p002_MatchOp;
+
+/**********************************************************
+ * Common服务器通知User服务器匹配结果。
+ **********************************************************/
+ALProtocol WCGCS2US_002_001_OnPlayerMatchSuccess <2, 1>
+{
+	long uid;
+	Common.CommonObj.Common_Lineup lineup;
+}

@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p034_InnOp;
+csharpspace GC2GS.p034_InnOp;
+
+ALProtocol GC2GS_034_009_ReqInnServeSpecialGuest[旅店接待特殊客人] <34, 9>
+{
+	long specialGuestId[特殊客人ID];
+}

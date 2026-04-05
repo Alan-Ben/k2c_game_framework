@@ -1,0 +1,11 @@
+JavaPackage NP2IS_R.p001_ISOp;
+
+ALProtocol NP2IS_R_001_007_ReqSendPrivateMsg[发送私聊消息] <1, 7>
+{
+	string senderChatUid[发送方玩家唯一标识];
+	long receiverCid[接收方玩家CID];
+	
+	int msgType[消息类型,解释消息内容];
+	bytebuffer gameUser[发送者信息];
+	bytebuffer gameContent[消息内容];
+}

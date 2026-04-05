@@ -1,0 +1,8 @@
+JavaPackage GS2GC.p004_PlayerOp;
+csharpspace GS2GC.p004_PlayerOp;
+
+ALProtocol GS2GC_004_076_OnLoverCollectChg <4, 76>
+{
+	long targetLoverId[当前选中的情人配置ID，0=未选择];
+	bool isClaimed[是否已领取当前目标情人];
+}

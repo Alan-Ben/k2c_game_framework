@@ -1,0 +1,6 @@
+JavaPackage GC2GS.p015_ConsortOp;
+csharpspace GC2GS.p015_ConsortOp;
+ALProtocol GC2GS_015_012_ReqUnlockSkin [家人-解锁皮肤] <15, 12>
+{
+    long skinId[皮肤ID];
+}

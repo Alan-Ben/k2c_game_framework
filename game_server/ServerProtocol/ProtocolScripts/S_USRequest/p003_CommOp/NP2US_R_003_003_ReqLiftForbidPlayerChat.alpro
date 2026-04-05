@@ -1,0 +1,9 @@
+﻿JavaPackage WCGCS2US_R.p003_CommOp;
+
+import Enum.NPEnum.alpro;
+
+ALProtocol NP2US_R_003_003_ReqLiftForbidPlayerChat[玩家禁言] <3, 3>
+{
+	long[] cidList;
+	Enum.NPEnum.ENPChatRoomType roomType[禁言频道id];
+}

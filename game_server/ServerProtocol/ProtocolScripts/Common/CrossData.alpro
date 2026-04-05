@@ -1,0 +1,13 @@
+JavaPackage Common.CrossDataType;
+csharpspace Common.CrossDataType;
+
+/**********************************************************
+ * 单个矿的跨服同步信息结构体
+ **********************************************************/
+ALProtocol MarsMineInfo
+{
+	long mineInstanceId[矿实例Id，注意要区分服务器];
+	long mineRefId[静态数据Id];
+	long mineExpireTimeMS[矿超时时间戳];
+}
+

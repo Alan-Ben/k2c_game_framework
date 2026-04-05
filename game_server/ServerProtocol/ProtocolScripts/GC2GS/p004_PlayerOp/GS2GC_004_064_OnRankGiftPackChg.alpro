@@ -1,0 +1,7 @@
+JavaPackage GS2GC.p004_PlayerOp;
+csharpspace GS2GC.p004_PlayerOp;
+
+ALProtocol GS2GC_004_064_OnRankGiftPackChg[冲榜礼包信息变更] <4, 64>
+{
+	Common.RankGiftPackObj.RankGiftPack_Info giftPackInfo[冲榜礼包信息];
+}

@@ -1,0 +1,108 @@
+{
+    "WCGBasicServerConf.properties": {
+        "_comments": {
+            "1": "服务器接收客户端缓存的字节长度",
+            "2": "服务器在内部系统中的监听端口（注意，非外部监听端口）",
+            "3": "平台服务器连接IP",
+            "4": "平台服务器连接端口",
+            "5": "平台服务器连接密码",
+            "6": "内部其他服务器连接本服务器时使用的IP",
+            "7": "内部其他服务器连接本服务器时使用的端口"
+        },
+        "WCGBasicServer.RecBufferLen": 102400,
+        "WCGBasicServer.Port": 6902,
+        "WCGBasicServer.PlatServerIp": "127.0.0.1",
+        "WCGBasicServer.PlatServerPort": 6660,
+        "WCGBasicServer.PlatServerPassword": "wcg_basic_plat_server",
+        "WCGBasicServer.InternalIp": "127.0.0.1",
+        "WCGBasicServer.InternalPort": 6902
+    },
+    "InterfaceServerConf.properties": {
+        "_comments": {
+            "1": "用户服务器对应的地域标记",
+            "2": "时区信息"
+        },
+        "InterfaceServer.AreaTag": "common",
+        "InterfaceServer.TimeZone": "GMT+8:00"
+    },
+    "InterfaceLogDBConf.properties": {
+        "_comments": {
+            "1": "数据库主机地址",
+            "2": "数据库名称",
+            "3": "数据库用户名",
+            "4": "数据库密码",
+            "5": "数据库安全保存路径"
+        },
+        "InterfaceLogDB.DBHost": "127.0.0.1",
+        "InterfaceLogDB.DBName": "gom_interface_log",
+        "InterfaceLogDB.DBUser": "wcggame",
+        "InterfaceLogDB.DBPass": "wcggame",
+        "InterfaceLogDB.DBSafeSavePath": "./_interface_log_db"
+    },
+    "InterfaceDBConf.properties": {
+        "_comments": {
+            "1": "数据库主机地址",
+            "2": "数据库名称",
+            "3": "数据库用户名",
+            "4": "数据库密码",
+            "5": "数据库安全保存路径"
+        },
+        "InterfaceDB.DBHost": "127.0.0.1",
+        "InterfaceDB.DBName": "gom_interface",
+        "InterfaceDB.DBUser": "wcggame",
+        "InterfaceDB.DBPass": "wcggame",
+        "InterfaceDB.DBSafeSavePath": "./_interface_db"
+    },
+    "GameResConf.properties": {
+        "_comments": {
+            "1": "配表资源地址"
+        },
+        "GameRes.refPath": "../../project_res/Assets/Resources/__dlserverref"
+    },
+    "ChatSDKConf.properties": {
+        "_comments": {
+            "1": "登录聊天服使用的系统标识",
+            "2": "登录聊天服使用的系统ID",
+            "3": "客户端连接Ip",
+            "4": "客户端连接端口",
+            "5": "客户端连接用户",
+            "6": "客户端连接密码"
+        },
+        "ChatSDK.SystemTag": "np_interface_chat_system",
+        "ChatSDK.SystemId": 1,
+        "ChatSDK.ConnectIp": "127.0.0.1",
+        "ChatSDK.ConnectPort": 7900,
+        "ChatSDK.ConnectUser": "tp_chat_user",
+        "ChatSDK.ConnectPassword": "tp_chat_password"
+    },
+    "ALServerLog.properties": {
+        "_comments": {
+            "1": "打印日志等级 可选: DEBUG, INFO, WARNING, ERROR, FATAL"
+        },
+        "ALServerLog.LogLevel": "INFO"
+    },
+    "ALBasicServerConf.properties": {
+        "_comments": {
+            "1": "服务器标志字符串",
+            "2": "同步任务执行的线程数量",
+            "3": "Socket信息发送线程数量",
+            "4": "定时任务的时间精度",
+            "5": "定时任务的大区间长度，根据精度和长度可以决定一个区间的时间跨度",
+            "6": "是否检测线程加锁等级合法性"
+        },
+        "ALBasicServer.ServerTag": "WCGBasicLoginServer",
+        "ALBasicServer.SynTaskDealThreadNum": 4,
+        "ALBasicServer.ServerSendBackDealThreadNum": 1,
+        "ALBasicServer.TimerCheckTime": 20,
+        "ALBasicServer.TimerCheckAreaSize": 5000,
+        "ALBasicServer.CheckMutex": true
+    },
+    "ALBasicClientConf.properties": {
+        "_comments": {
+            "1": "消息发送线程的数量",
+            "2": "缓冲区长度"
+        },
+        "ALBasicClient.SendThreadNum": 1,
+        "ALBasicClient.RecSocketBufLen": 131072
+    }
+}

@@ -1,0 +1,10 @@
+﻿JavaPackage GS2GC.p002_InitOp;
+csharpspace GS2GC.p002_InitOp;
+
+ALProtocol GS2GC_002_011_RetGoldInit[金币初始化] <2, 11>
+{
+	Common.PlayerObj.Player_GoldInfo goldInfo[金币信息];
+
+	long offlineProduceCount[离线产出数量];
+	long offlineProduceTime[离线产出时间];
+}

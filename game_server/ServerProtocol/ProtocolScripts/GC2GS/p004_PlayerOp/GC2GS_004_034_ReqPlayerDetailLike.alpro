@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p004_PlayerOp;
+csharpspace GC2GS.p004_PlayerOp;
+
+ALProtocol GC2GS_004_034_ReqPlayerDetailLike[给玩家详情点赞] <4, 34>
+{
+	long cid;
+}

@@ -1,0 +1,6 @@
+JavaPackage GC2GS.p002_InitOp;
+csharpspace GC2GS.p002_InitOp;
+
+ALProtocol GC2GS_002_018_ReqActivityList [请求活动列表] <2, 18>
+{
+}

@@ -1,0 +1,6 @@
+JavaPackage GS2GC.p008_TravelOp;
+csharpspace GS2GC.p008_TravelOp;
+ALProtocol GS2GC_008_051_OnEventDel [移除事件推送] <8, 51>
+{
+    long instanceId[事件实例ID];
+}

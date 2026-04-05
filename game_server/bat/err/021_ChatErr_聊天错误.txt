@@ -1,0 +1,11 @@
+java_path= ../Common/src
+java_package=NPCommon.ErrMain
+
+id	name	desc
+1	CHAT_ROOM_NOT_FOUND	聊天房间不存在
+2	CHAT_ROOM_NOT_INITED	聊天房间未初始化完成
+3	CHAT_USER_NOT_FOUND	聊天用户不存在
+6	CHAT_USER_JOIN_ROOM_FAIL	聊天用户加入房间失败
+7	CHAT_USER_QUIT_ROOM_FAIL	聊天用户退出房间失败
+8	CHAT_SEND_MSG_FAIL	发送消息失败
+9	CHAT_FORBID	禁言中

@@ -1,0 +1,15 @@
+﻿JavaPackage ALLRPC.CrossTeamServer.Team;
+
+ALProtocol CTSTeamBroadcastMsg_Req
+{
+	long teamId[队伍实例ID];
+	bytebuffer protocol;
+}
+
+ALProtocol CTSTeamBroadcastMsg_Return
+{
+}
+
+//[RPC]队伍成员广播消息
+//[CLASS_PACKAGE] : AllRpcData.CrossTeam_Service.Team
+//[DEALER_PACKAGE] : CrossTeamServer.RPCDispatcher.Team

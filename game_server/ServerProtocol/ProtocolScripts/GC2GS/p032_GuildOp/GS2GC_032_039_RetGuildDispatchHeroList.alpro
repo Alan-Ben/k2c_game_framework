@@ -1,0 +1,7 @@
+﻿JavaPackage GS2GC.p032_GuildOp;
+csharpspace GS2GC.p032_GuildOp;
+
+ALProtocol GS2GC_032_039_RetGuildDispatchHeroList <32, 39>
+{
+    Common.GuildObj.Guild_DispatchHeroDetailInfo[] infoList;
+}

@@ -1,0 +1,11 @@
+JavaPackage GS2GC.p014_ChildOp;
+csharpspace GS2GC.p014_ChildOp;
+import Enum.ChildEnum.alpro;
+ALProtocol GS2GC_014_059_OnUnmarriedAdultStatusChg [子嗣（成年未婚）状态变更] <14, 59>
+{
+    long id[子嗣实例ID];
+    Enum.ChildEnum.EAdultStatus status[子嗣状态];
+    int expiredTs[请求过期截至时间（秒）];
+	
+	long minAllowBonus[允许联姻的最小收益数值];
+}

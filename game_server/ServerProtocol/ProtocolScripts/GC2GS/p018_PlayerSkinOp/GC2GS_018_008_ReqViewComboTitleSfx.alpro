@@ -1,0 +1,6 @@
+JavaPackage GC2GS.p018_PlayerSkinOp;
+csharpspace GC2GS.p018_PlayerSkinOp;
+ALProtocol GC2GS_018_008_ReqViewComboTitleSfx [查看组合称号后缀] <18, 8>
+{
+    long sfxId[空];
+}

@@ -1,0 +1,5 @@
+﻿JavaPackage GS2GC.p012_ActivityTeamOp;
+csharpspace GS2GC.p012_ActivityTeamOp;
+ALProtocol GS2GC_012_015_RetSetActivityTeamSetting[修改队伍设置响应] <12, 15>
+{
+}

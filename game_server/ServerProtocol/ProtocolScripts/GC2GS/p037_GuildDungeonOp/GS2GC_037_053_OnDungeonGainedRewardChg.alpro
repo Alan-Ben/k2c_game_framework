@@ -1,0 +1,9 @@
+﻿JavaPackage GS2GC.p037_GuildDungeonOp;
+csharpspace GS2GC.p037_GuildDungeonOp;
+
+import Common.GuildDungeonObj.alpro;
+
+ALProtocol GS2GC_037_053_OnDungeonGainedRewardChg[已领取奖励的副本怪物数据列表] <37, 53>
+{
+	Common.GuildDungeonObj.GuildDungeon_DungeonMonster[] gainedRewardMonsterIdList[已领取奖励的怪物数据列表];
+}

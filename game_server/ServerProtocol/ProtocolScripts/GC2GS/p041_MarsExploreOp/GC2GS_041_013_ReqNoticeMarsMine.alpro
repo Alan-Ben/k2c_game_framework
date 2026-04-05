@@ -1,0 +1,8 @@
+﻿JavaPackage GC2GS.p041_MarsExploreOp;
+csharpspace GC2GS.p041_MarsExploreOp;
+
+ALProtocol GC2GS_041_013_ReqNoticeMarsMine[火星探险-通知火星矿最新数据] <41, 13>
+{
+	long id[火星矿实例ID];
+	long checkSerialize[检查状态序列号，0表示不检查都要返回];
+}

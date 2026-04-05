@@ -1,0 +1,10 @@
+JavaPackage GS2GC.p015_ConsortOp;
+csharpspace GS2GC.p015_ConsortOp;
+
+ALProtocol GS2GC_015_073_OnConsortAiChatMsgAdd [家人AI对话新增消息] <15, 73>
+{
+    long consortId;
+    string msg[消息内容];
+    int errCode[错误码];
+    long clientDataId[客户端数据ID];
+}

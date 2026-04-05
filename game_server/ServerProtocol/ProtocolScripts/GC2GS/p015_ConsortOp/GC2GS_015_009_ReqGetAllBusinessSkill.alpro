@@ -1,0 +1,6 @@
+JavaPackage GC2GS.p015_ConsortOp;
+csharpspace GC2GS.p015_ConsortOp;
+ALProtocol GC2GS_015_009_ReqGetAllBusinessSkill [家人-获取所有经营技能数据] <15, 9>
+{
+    long consortId[家人ID];
+}

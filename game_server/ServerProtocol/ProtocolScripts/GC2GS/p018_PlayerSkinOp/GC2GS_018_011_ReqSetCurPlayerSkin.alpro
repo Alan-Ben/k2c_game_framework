@@ -1,0 +1,6 @@
+JavaPackage GC2GS.p018_PlayerSkinOp;
+csharpspace GC2GS.p018_PlayerSkinOp;
+ALProtocol GC2GS_018_011_ReqSetCurPlayerSkin [穿戴皮肤] <18, 11>
+{
+    long skinId[空];
+}

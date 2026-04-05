@@ -1,0 +1,10 @@
+﻿JavaPackage GS2GC.p042_GuildRelatedOp;
+csharpspace GS2GC.p042_GuildRelatedOp;
+
+import Enum.GuildEnum.alpro;
+
+ALProtocol GS2GC_042_055_OnGuildBoxAddCountChg[联盟宝箱新增数量变更] <42, 55>
+{
+	Enum.GuildEnum.EGuildBoxType boxType[宝箱类型];
+	int addCount[新增数量];
+}

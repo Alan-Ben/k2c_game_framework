@@ -1,0 +1,9 @@
+JavaPackage NP2HS_R.p001_HSOp;
+
+/**
+ * CommonServer请求HttpServer获取白名单列表
+ */
+ALProtocol NP2HS_R_001_007_ReqWhiteAccList[请求白名单列表] <1, 7>
+{
+    // 空请求体
+}

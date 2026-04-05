@@ -1,0 +1,10 @@
+JavaPackage GC2GS.p028_QuestOp;
+csharpspace GC2GS.p028_QuestOp;
+
+/**********************************************************
+ * 请求开启任务
+ **********************************************************/
+ALProtocol GC2GS_028_001_ReqStartQuest <28, 1>
+{
+	long questId;
+}

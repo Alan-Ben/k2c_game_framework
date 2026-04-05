@@ -1,0 +1,10 @@
+﻿JavaPackage Common.CountdownEventObj;
+csharpspace Common.CountdownEventObj;
+
+ALProtocol CountdownEvent_Info[倒计时事件_数据]
+{
+	long dbId[数据ID];
+	long eventId[事件ID];
+	long triggerTimeMs[触发时间(毫秒)];
+	int resetCount[重置次数];
+}

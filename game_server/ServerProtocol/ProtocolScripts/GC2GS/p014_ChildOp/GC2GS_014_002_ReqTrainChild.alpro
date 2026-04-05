@@ -1,0 +1,6 @@
+JavaPackage GC2GS.p014_ChildOp;
+csharpspace GC2GS.p014_ChildOp;
+ALProtocol GC2GS_014_002_ReqTrainChild [训练子嗣（未成年）] <14, 2>
+{
+    long id[子嗣（未成年）实例ID];
+}

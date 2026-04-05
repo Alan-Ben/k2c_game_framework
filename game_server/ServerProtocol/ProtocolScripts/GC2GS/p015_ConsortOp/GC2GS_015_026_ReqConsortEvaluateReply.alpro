@@ -1,0 +1,9 @@
+JavaPackage GC2GS.p015_ConsortOp;
+csharpspace GC2GS.p015_ConsortOp;
+
+ALProtocol GC2GS_015_026_ReqConsortEvaluateReply [家人-AI评价回复] <15, 26>
+{
+    long instanceId[实例id];
+    long consortId[家人ID];
+    Common.CommonObj.Common_AiChatMessage[] msgList[消息列表];
+}

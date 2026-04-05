@@ -1,0 +1,6 @@
+﻿﻿JavaPackage GS2GC.p030_ShopOp;
+csharpspace GS2GC.p030_ShopOp;
+
+ALProtocol GS2GC_030_021_RetRefreshGiftPack <30, 21>
+{
+}

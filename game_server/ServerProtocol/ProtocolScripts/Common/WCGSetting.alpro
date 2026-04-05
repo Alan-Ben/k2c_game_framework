@@ -1,0 +1,24 @@
+csharpspace Common;
+
+/**********************************************************
+ * 地图坐标信息
+ **********************************************************/
+ALProtocol TeamInfoSettingRaceInfo
+{
+	long raceId;
+	long[] actorIdList;
+	long[] heroIdList;
+	long selectHouseActorId;
+	long selectBowTowerActorId;
+	long[] allActorIdList;
+}
+
+/**********************************************************
+ * 地图坐标信息
+ **********************************************************/
+ALProtocol TeamInfoSetting
+{
+	long selectRace;
+	TeamInfoSettingRaceInfo[] raceInfoList;
+}
+

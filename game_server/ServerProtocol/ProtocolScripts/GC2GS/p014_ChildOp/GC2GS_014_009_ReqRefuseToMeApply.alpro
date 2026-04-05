@@ -1,0 +1,6 @@
+JavaPackage GC2GS.p014_ChildOp;
+csharpspace GC2GS.p014_ChildOp;
+ALProtocol GC2GS_014_009_ReqRefuseToMeApply [拒绝对玩家的指定联姻请求] <14, 9>
+{
+    long applyAdultId[发起请求的玩家子嗣实例ID];
+}

@@ -1,0 +1,11 @@
+﻿JavaPackage ALLRPC.US.Guild;
+
+ALProtocol GuildRequestLoadRankData_Req
+{
+	long cid;
+	long guildId;
+}
+
+ALProtocol GuildRequestLoadRankData_Return
+{
+}

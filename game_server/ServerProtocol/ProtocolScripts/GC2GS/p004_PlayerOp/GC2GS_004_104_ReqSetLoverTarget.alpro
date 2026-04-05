@@ -1,0 +1,8 @@
+JavaPackage GC2GS.p004_PlayerOp;
+csharpspace GC2GS.p004_PlayerOp;
+
+
+ALProtocol GC2GS_004_104_ReqSetLoverTarget[情人收集-选择目标情人] <4, 104>
+{
+	long loverId[选择的情人配置ID];
+}

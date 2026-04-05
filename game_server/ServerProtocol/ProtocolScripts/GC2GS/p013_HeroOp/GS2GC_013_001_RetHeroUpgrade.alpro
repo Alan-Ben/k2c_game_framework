@@ -1,0 +1,7 @@
+﻿﻿JavaPackage GS2GC.p013_HeroOp;
+csharpspace GS2GC.p013_HeroOp;
+
+ALProtocol GS2GC_013_001_RetHeroUpgrade <13, 1>
+{
+	
+}

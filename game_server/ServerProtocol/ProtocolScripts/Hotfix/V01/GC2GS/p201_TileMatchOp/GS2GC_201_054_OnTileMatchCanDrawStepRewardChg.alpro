@@ -1,0 +1,9 @@
+JavaPackage Hotfix.V01.GS2GC.p201_TileMatchOp;
+csharpspace Hotfix.GS2GC.p201_TileMatchOp;
+
+import Hotfix.V01.Common.TileMatchObj.alpro;
+
+ALProtocol GS2GC_201_054_OnTileMatchCanDrawStepRewardChg [三消阶段可领取奖励数据变更] <201, 54>
+{
+    Hotfix.V01.Common.TileMatchObj.TileMatch_CanDrawStepReward[] canDrawStepRewardList;
+}

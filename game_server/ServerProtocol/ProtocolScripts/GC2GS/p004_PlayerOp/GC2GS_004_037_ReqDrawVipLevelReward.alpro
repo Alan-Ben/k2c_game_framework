@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p004_PlayerOp;
+csharpspace GC2GS.p004_PlayerOp;
+
+ALProtocol GC2GS_004_037_ReqDrawVipLevelReward[领取vip奖励] <4, 37>
+{
+    int vipLevel[VIP等级];
+}

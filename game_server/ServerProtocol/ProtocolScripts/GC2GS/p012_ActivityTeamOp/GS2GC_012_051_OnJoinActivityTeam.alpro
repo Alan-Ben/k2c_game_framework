@@ -1,0 +1,10 @@
+﻿﻿JavaPackage GS2GC.p012_ActivityTeamOp;
+csharpspace GS2GC.p012_ActivityTeamOp;
+
+import Common.CrossTeamObj.alpro;
+
+ALProtocol GS2GC_012_051_OnJoinActivityTeam[加入活动队伍] <12, 51>
+{
+	long teamId[队伍实例ID];
+	Common.CrossTeamObj.CrossTeam_Info team[活动队伍数据];
+}

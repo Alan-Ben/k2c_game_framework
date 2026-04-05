@@ -1,0 +1,24 @@
+java_path= ../Common/src
+java_package=NPCommon.ErrMain
+id	name	desc
+1	CHILD_NOT_EXISTS	子嗣不存在
+2	CHILD_NAME_ERROR	子嗣名称不符合要求
+3	CHILD_NAME_EXIST	子嗣名称已存在
+4	CHILD_NAME_NOT_SET	子嗣未命名
+5	CHILD_SEAT_NOT_EXIST	子嗣训练位不存在
+6	CHILD_SEAT_NOT_UNLOCK	子嗣训练位未解锁
+7	CHILD_SEAT_NOT_ENERGY	子嗣训练位没有脑力值
+8	CHILD_LVL_FULL	子嗣已满级
+9	CHILD_NOT_LVL_FULL	子嗣未满级
+10	ADULT_COUNT_UNMARRY_FULL	成年未婚子嗣数量到达上限
+11	TO_ME_APPLY_NOT_EXISTS	联姻请求不存在
+12	ADULT_NOT_IDLE	子嗣状态不是空闲
+13	ADULT_MARRY_FAIL	子嗣联姻失败
+14	ADULT_NOT_APPLY_PLAYER	子嗣状态不是指定联姻请求中
+15	ADULT_POOL_GROUP_NOT_MATCH	子嗣联姻池不匹配
+16	ADULT_NOT_MATCH_SELF	不能与自身子嗣进行联姻
+17	ADULT_POOL_NOT_FIND	联姻池子嗣不存在
+18	ADULT_NOT_IN_POOL	子嗣不存在联姻池
+19	NO_FREE_SEAT	没有空闲位置
+20	RAND_GAIN_CHILD_FAIL	随机获得子嗣失败
+21	ADULT_MATCH_MIN	匹配子嗣需要超过最小值

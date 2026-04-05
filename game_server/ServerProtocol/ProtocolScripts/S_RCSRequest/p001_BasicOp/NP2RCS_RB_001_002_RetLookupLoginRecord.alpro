@@ -1,0 +1,9 @@
+JavaPackage NP2LCS_RB.p001_BasicOp;
+
+/**********************************************************
+ * 返回帐号基本信息
+ **********************************************************/
+ALProtocol NP2RCS_RB_001_002_RetLookupLoginRecord <1, 2>
+{
+	Common.NpPlayerInfo.NP_SYS_PlayerJoinedUSInfo[] joinedUSList[登录记录];
+}

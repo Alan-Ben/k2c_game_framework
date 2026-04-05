@@ -1,0 +1,8 @@
+﻿JavaPackage GC2GS.p032_GuildOp.GuildOpStructure;
+
+ALProtocol GuildOp_002_UserJoinInfo[加入联盟的附加信息]
+{
+	long earnings[赚速];
+	long level[等级];
+	bool canRequest[玩家是否达到申请上限];
+}

@@ -1,0 +1,7 @@
+JavaPackage GS2GC.p010_BuildingOp;
+csharpspace GS2GC.p010_BuildingOp;
+import Common.BuildingObj.alpro;
+ALProtocol GS2GC_010_056_OnEffectGainBusinessWorkes [通过效果获得额外员工推送] <10, 56>
+{
+    Common.BuildingObj.Building_EffectGainWorkers[] list[效果获得员工数据列表];
+}

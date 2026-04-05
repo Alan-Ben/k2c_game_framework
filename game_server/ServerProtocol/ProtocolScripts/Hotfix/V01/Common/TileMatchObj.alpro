@@ -1,0 +1,101 @@
+﻿JavaPackage Hotfix.V01.Common.TileMatchObj;
+csharpspace Hotfix.Common.TileMatchObj;
+
+import Hotfix.V01.Enum.TileMatchEnum.alpro;
+
+ALProtocol TileMatch_BlockBaseInfo[三消-方块信息]
+{
+	int blockId[方块id];
+	int originBlockId[原始方块id];
+}
+
+ALProtocol TileMatch_BlockBaseList[三消-方块列表]
+{
+	TileMatch_BlockBaseInfo[] blockList[方块信息列表];
+}
+
+ALProtocol TileMatch_BlockInfo[三消-方块信息]
+{
+	int index[方块索引];
+	TileMatch_BlockBaseInfo baseInfo[方块类型];
+}
+
+ALProtocol TileMatch_Composite[三消-合成逻辑]
+{
+	int[] removeBlockIndexList[消除方块索引列表];
+	TileMatch_BlockInfo[] genBlockList[生成方块信息列表];
+}
+
+ALProtocol TileMatch_Remove[三消-消除逻辑]
+{
+	int triggerBlockIndex[触发方块索引];
+	int[] removeBlockIndexList[消除方块索引列表];
+}
+
+ALProtocol TileMatch_CombineRemove[三消-组合消除逻辑]
+{
+	int mainTriggerBlockIndex[主触发方块索引];
+	int subTriggerBlockIndex[子触发方块索引];
+	int[] removeBlockIndexList[消除方块索引列表];
+}
+
+ALProtocol TileMatch_RainbowTrans[三消-彩虹转换逻辑]
+{
+	int triggerBlockIndex[触发方块索引];
+	int newBlockId[新方块id];
+	int[] beTransIndexList[被转换方块索引列表];
+}
+
+ALProtocol TileMatch_BlockPosChg[三消-格子位置变更]
+{
+	int oriBlockIndex[原始方块索引];
+	int tarBlockIndex[目标方块索引];
+}
+
+ALProtocol TileMatch_Drop[三消-掉落逻辑]
+{
+	TileMatch_BlockPosChg[] posChgList[位置变更列表];
+	TileMatch_BlockInfo[] genBlockList[生成方块信息列表];
+}
+
+ALProtocol TileMatch_LogicInfo[三消-逻辑信息]
+{
+	int serialId[逻辑序列号];
+	Hotfix.V01.Enum.TileMatchEnum.ETileMatch_LogicType logicType[逻辑类型];
+    bytebuffer data[逻辑信息];
+	int score[分数];
+}
+
+ALProtocol TileMatch_TaskSubInfo[三消-子任务信息]
+{
+	int blockId[目标方块id];
+	int doneNum[达成数量];
+}
+
+ALProtocol TileMatch_TaskInfo[三消-任务信息]
+{
+	int serialId[任务序列号];
+    long taskId[任务id];
+	TileMatch_TaskSubInfo[] subList[子任务列表];
+	int hadGoStep[已经走的步数];
+}
+
+ALProtocol TileMatch_CanDrawStepReward[三消-可领取阶段奖励]
+{
+	int step[阶段];
+	int num[奖励数量];
+}
+
+ALProtocol TileMatch_StepRewardInfo[三消-阶段奖励信息]
+{
+	int step[阶段];
+	long curScore[分数];
+	int serialId[序列号];
+}
+
+ALProtocol TileMatch_Info[三消-信息]
+{
+	TileMatch_StepRewardInfo stepRewardInfo[阶段奖励信息];
+	TileMatch_CanDrawStepReward[] canDrawStepRewardList[可领取阶段奖励列表];
+	long totalScore[总分数];
+}

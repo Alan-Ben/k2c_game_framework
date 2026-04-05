@@ -1,0 +1,9 @@
+﻿JavaPackage GS2GC.p039_MarsBuildingOp;
+csharpspace GS2GC.p039_MarsBuildingOp;
+
+import Common.MarsObj.alpro;
+
+ALProtocol GS2GC_039_053_OnEquipmentChg[建筑部件数据变化] <39, 53>
+{
+	Common.MarsObj.Mars_BuildingEquipment info;
+}

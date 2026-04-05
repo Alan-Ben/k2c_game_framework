@@ -1,0 +1,7 @@
+﻿JavaPackage GS2GC.p034_InnOp;
+csharpspace GS2GC.p034_InnOp;
+
+ALProtocol GS2GC_034_057_OnInnLevelChg [旅店等级变更] <34, 57>
+{
+    int newLevel[新等级];
+}

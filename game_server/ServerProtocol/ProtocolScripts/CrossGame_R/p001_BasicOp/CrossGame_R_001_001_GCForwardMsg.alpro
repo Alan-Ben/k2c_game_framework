@@ -1,0 +1,7 @@
+﻿JavaPackage CrossGame_R.p001_BasicOp;
+
+ALProtocol CrossGame_R_001_001_GCForwardMsg <1, 1>
+{
+	long cid;
+	bytebuffer msg[转发协议];
+}

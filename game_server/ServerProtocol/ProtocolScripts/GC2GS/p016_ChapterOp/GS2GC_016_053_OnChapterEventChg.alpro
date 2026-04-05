@@ -1,0 +1,8 @@
+JavaPackage GS2GC.p016_ChapterOp;
+csharpspace GS2GC.p016_ChapterOp;
+import Common.ChapterObj.alpro;
+
+ALProtocol GS2GC_016_053_OnChapterEventChg [关卡事件信息变更] <16, 53>
+{
+    Common.ChapterObj.Chapter_EventInfo eventInfo[事件信息];
+}

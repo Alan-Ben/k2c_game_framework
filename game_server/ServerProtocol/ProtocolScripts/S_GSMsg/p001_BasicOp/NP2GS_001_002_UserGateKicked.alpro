@@ -1,0 +1,11 @@
+﻿JavaPackage NP2GS.p001_BasicOp;
+
+/**********************************************************
+ * 用户的连接方式被替换
+ **********************************************************/
+ALProtocol NP2GS_001_002_UserGateKicked <1, 2>
+{
+	long uid;
+	long sessionId;
+	int kickType;
+}

@@ -1,0 +1,17 @@
+JavaPackage ALLRPC.US.Mars;
+
+ALProtocol MarsRallySInitedCheck_Req
+{
+    long cid[玩家CID];
+    long guildId[联盟ID];
+    long rallyId[集结ID];
+}
+
+ALProtocol MarsRallySInitedCheck_Return
+{
+}
+
+//[RPC] 启动阶段检查集结与成员是否存在
+//[CLASS_PACKAGE] : AllRpcData.US_Service.Mars
+//[DEALER_PACKAGE] : USServer.RPCDispatcher.Mars
+

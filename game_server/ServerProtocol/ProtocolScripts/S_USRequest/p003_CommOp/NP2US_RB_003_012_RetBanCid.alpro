@@ -1,0 +1,6 @@
+﻿JavaPackage WCGCS2US_RB.p003_CommOp;
+
+ALProtocol NP2US_RB_003_012_RetBanCid[禁用cid] <3, 12>
+{
+	
+}

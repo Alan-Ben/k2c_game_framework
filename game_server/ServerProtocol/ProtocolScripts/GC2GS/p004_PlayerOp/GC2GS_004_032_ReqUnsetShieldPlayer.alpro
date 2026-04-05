@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p004_PlayerOp;
+csharpspace GC2GS.p004_PlayerOp;
+
+ALProtocol GC2GS_004_032_ReqUnsetShieldPlayer[设置玩家捏脸数据] <4, 32>
+{
+	long shieldCid[屏蔽玩家CID];
+}

@@ -1,0 +1,7 @@
+﻿JavaPackage GS2GC.p042_GuildRelatedOp;
+csharpspace GS2GC.p042_GuildRelatedOp;
+
+ALProtocol GS2GC_042_009_RetMarsHelpAutoDailyRecord <42, 8>
+{
+	int count;
+}

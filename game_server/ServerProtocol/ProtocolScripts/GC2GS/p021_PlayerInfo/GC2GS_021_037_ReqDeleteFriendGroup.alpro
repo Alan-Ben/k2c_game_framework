@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p021_PlayerInfo;
+csharpspace GC2GS.p021_PlayerInfo;
+
+ALProtocol GC2GS_021_037_ReqDeleteFriendGroup[删除好友分组] <21, 37>
+{
+    long groupDbId[目标分组数据id];
+}

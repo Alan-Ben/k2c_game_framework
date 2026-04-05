@@ -1,0 +1,9 @@
+﻿JavaPackage GS2GC.p002_InitOp;
+csharpspace GS2GC.p002_InitOp;
+
+import Common.OfflineRewardObj.alpro;
+
+ALProtocol GS2GC_002_054_RetOfflineRewardInit[离线玩家奖励初始化数据] <2, 54>
+{
+	Common.OfflineRewardObj.OfflineReward_Info[] rewardList;
+}

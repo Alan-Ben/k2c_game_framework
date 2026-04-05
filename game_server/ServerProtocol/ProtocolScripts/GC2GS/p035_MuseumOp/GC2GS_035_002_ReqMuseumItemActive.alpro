@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p035_MuseumOp;
+csharpspace GC2GS.p035_MuseumOp;
+
+ALProtocol GC2GS_035_002_ReqMuseumItemActive[博物馆物品升级] <35, 2>
+{
+    long itemId[物品ID];
+}

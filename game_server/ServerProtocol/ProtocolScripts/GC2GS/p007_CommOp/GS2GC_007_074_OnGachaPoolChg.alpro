@@ -1,0 +1,7 @@
+﻿JavaPackage GS2GC.p007_CommOp;
+csharpspace GS2GC.p007_CommOp;
+
+ALProtocol GS2GC_007_074_OnGachaPoolChg <7, 74>
+{
+	Common.GachaObj.Gacha_PoolInfo poolInfo[卡池信息];
+}

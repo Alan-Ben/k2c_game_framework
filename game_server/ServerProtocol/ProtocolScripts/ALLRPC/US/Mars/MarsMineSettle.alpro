@@ -1,0 +1,16 @@
+﻿JavaPackage ALLRPC.US.Mars;
+
+﻿﻿﻿﻿﻿import Common.ServerObj.alpro;
+
+ALProtocol MarsMineSettle_Req
+{
+	Common.ServerObj.ServerObj_MarsMineSettle info[结算数据];
+}
+
+ALProtocol MarsMineSettle_Return
+{
+}
+
+//[RPC] 火星矿结算数据
+//[CLASS_PACKAGE] : AllRpcData.US_Service.Mars
+//[DEALER_PACKAGE] : USServer.RPCDispatcher.Mars

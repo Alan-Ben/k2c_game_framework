@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p030_ShopOp;
+csharpspace GC2GS.p030_ShopOp;
+
+ALProtocol GC2GS_030_022_ReqBuyGiftPack [购买礼包] <30, 22> 
+{
+    long packId[礼包id];
+}

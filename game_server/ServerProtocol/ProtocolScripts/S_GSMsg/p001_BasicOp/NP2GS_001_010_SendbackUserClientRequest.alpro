@@ -1,0 +1,19 @@
+﻿JavaPackage NP2GS.p001_BasicOp;
+
+/**********************************************************
+ * 返回客户端的请求式处理给用户
+ **********************************************************/
+ALProtocol NP2GS_001_010_SendbackUserClientRequest <1, 10>
+{
+	long sessionId;
+	int dealerSerialize;	//消息处理序列号
+	
+	//客户端请求序列号
+	long clientRequestSerialize;
+	
+	//处理结果
+	bool res;
+	//错误时使用的错误编号
+	int errCode;
+	bytebuffer retMsg;
+}

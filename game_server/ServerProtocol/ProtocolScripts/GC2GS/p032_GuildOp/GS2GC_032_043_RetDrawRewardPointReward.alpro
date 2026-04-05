@@ -1,0 +1,10 @@
+import Common.CommonObj.alpro;
+import Common.NPCommonObj.alpro;
+
+JavaPackage GS2GC.p032_GuildOp;
+csharpspace GS2GC.p032_GuildOp;
+
+ALProtocol GS2GC_032_043_RetDrawRewardPointReward[领取奖励据点个人奖励响应] <32, 43>
+{
+
+}

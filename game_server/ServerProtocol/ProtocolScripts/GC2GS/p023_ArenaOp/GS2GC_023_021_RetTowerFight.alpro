@@ -1,0 +1,9 @@
+﻿﻿JavaPackage GS2GC.p023_ArenaOp;
+csharpspace GS2GC.p023_ArenaOp;
+
+ALProtocol GS2GC_023_021_RetTowerFight <23, 21>
+{
+    bool isDefeat[是否打败];
+    Common.NPCommonObj.NPCommon_ItemInfo[] rewardList[奖励列表];
+    long cid[玩家ID 如果为0则为NPC];
+}

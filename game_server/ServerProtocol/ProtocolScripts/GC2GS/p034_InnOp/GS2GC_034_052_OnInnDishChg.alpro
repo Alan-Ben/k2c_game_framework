@@ -1,0 +1,9 @@
+﻿JavaPackage GS2GC.p034_InnOp;
+csharpspace GS2GC.p034_InnOp;
+
+import Common.InnObj.alpro;
+
+ALProtocol GS2GC_034_052_OnInnDishChg [旅店菜品信息变更] <34, 52>
+{
+    Common.InnObj.Inn_DishInfo dishInfo[菜品信息];
+}

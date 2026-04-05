@@ -1,0 +1,9 @@
+﻿JavaPackage NP2SS_R.p001_ScheduleOp;
+
+ALProtocol NP2SS_R_001_012_ReportUsActivityScheduleSettling[US上报活动进入结算期] <1, 12>
+{
+	int usId;
+	
+	long scheduleId[排期ID];
+	long usGroupId[US分组ID];
+}

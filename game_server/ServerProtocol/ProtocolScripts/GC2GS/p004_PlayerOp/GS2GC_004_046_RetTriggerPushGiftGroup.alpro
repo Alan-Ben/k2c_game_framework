@@ -1,0 +1,9 @@
+JavaPackage GS2GC.p004_PlayerOp;
+csharpspace GS2GC.p004_PlayerOp;
+
+import Common.PushGiftObj.alpro;
+
+ALProtocol GS2GC_004_046_RetTriggerPushGiftGroup[返回触发礼包组结果] <4, 46>
+{
+
+}

@@ -1,0 +1,6 @@
+﻿JavaPackage GS2GC.p039_MarsBuildingOp;
+csharpspace GS2GC.p039_MarsBuildingOp;
+
+ALProtocol GS2GC_039_001_RetCreateBuilding <39, 1>
+{
+}

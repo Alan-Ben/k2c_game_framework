@@ -1,0 +1,10 @@
+JavaPackage GS2GC.p042_GuildRelatedOp;
+csharpspace GS2GC.p042_GuildRelatedOp;
+
+ALProtocol GS2GC_042_063_OnRallyMemberArrive[成员到达集结推送] <42, 63>
+{
+    long rallyId[集结ID];
+    long memberCid[成员CID];
+}
+
+

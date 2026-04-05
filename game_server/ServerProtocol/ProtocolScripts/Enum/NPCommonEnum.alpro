@@ -1,0 +1,94 @@
+﻿JavaPackage NPEnum;
+csharpspace NPEnum;
+
+
+/******************
+ * 时间叠加类型枚举
+ **/
+ALEnum ENPTimeAddType[时间叠加方式枚举]
+{
+	ADD[默认叠加];
+	SET[设置];
+}
+
+ALEnum ENPQualityClass[品质类型，用于客户端和策划定义客户端显示部分数据]
+{
+	NONE[无];
+	EQUIP[藏品];
+	BAG_ITEM[道具];
+	RECIPE[烹饪食谱];
+	MUSEUM_ITEM[博物馆藏品];
+	AVATAR[服装];
+	MUSEUM_ITEM_CHIP[博物馆藏品碎片];
+	ICON[玩家头像];
+	SPACE_CAPTURE_ITEM[宠物捕捉道具];
+	MINI_GAME_QUEST[悬赏任务];
+	PET_RAND[宠物随机资质];
+	SEED[种子];
+	HERO_SKIN[骑士皮肤];
+	CONSORT_SKIN[妃子皮肤];
+	CLOTHES_SUIT[套装];
+	
+	HERO[伙伴];
+	CONSORT[家人];
+}
+ 
+ /******************
+ * 时间刷新类型
+ **/
+ALEnum ENPTimeRefreshType[时间刷新类型]
+{
+	NONE;
+	REF_BY_LIVE[按存在时间到期刷新];
+	REF_IF_DIS[消失立马刷新];
+	REF_DURATION[按照间隔时间刷新 REF_DURATION:MIN（S）:MAX（S）];
+	REF_CLOCK[按照定时时间刷新 REF_CLOCK:24进制小时数];
+	REF_WEEK_CLOCK[按照周定时时间刷新 REF_WEEK_CLOCK:周几:24进制小时数];
+	REF_NOT_REFRESH[不刷新];
+	REF_MONTH_CLOCK[按照月定时时间刷新 REF_MONTH_CLOCK:几号:24进制小时数];
+	REF_MIN_CLOCK[按照定时时间刷新 REF_MIN_CLOCK:24进制小时数:60进制分钟数];
+}
+
+/*****************
+ * 计数操作类型
+ **/
+ALEnum ENCounterDealType[计数器类型操作类型]
+{
+	ADD[增加];
+	REDUCE[减少];
+	SET[设置];
+	SET_GT[只比当前值才设置];
+}
+
+/*****************
+ * 小游戏结果类型
+ **/
+ALEnum ENPMiniGameResultType[小游戏结果类型]
+{
+	NONE;
+	SUCCESS[胜利];
+	FAIL[失败];
+}
+
+/*****************
+ * 宠物资质品质类型
+ **/
+ALEnum ENPAttrGrade[宠物资质品质类型]
+{
+	NONE;
+	N;
+	R;
+	SR;
+	SSR;
+	UR;
+	SP;
+}
+
+/*****************
+ * 白名单操作类型
+ **/
+ALEnum EWhiteAccOpType[白名单操作类型]
+{
+	ADD[添加账号];
+	REMOVE[删除账号];
+}

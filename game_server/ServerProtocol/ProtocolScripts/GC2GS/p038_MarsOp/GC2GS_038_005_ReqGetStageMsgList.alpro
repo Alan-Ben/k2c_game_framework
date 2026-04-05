@@ -1,0 +1,7 @@
+JavaPackage GC2GS.p038_MarsOp;
+csharpspace GC2GS.p038_MarsOp;
+
+ALProtocol GC2GS_038_005_ReqGetStageMsgList[前往火星-请求阶段留言列表] <38, 5>
+{
+	int stage[阶段];
+}

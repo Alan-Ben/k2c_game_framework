@@ -1,0 +1,21 @@
+﻿JavaPackage Common.OrderObj;
+csharpspace Common.OrderObj;
+
+ALProtocol Order_Info[订单信息]
+{
+	string orderId[订单号];
+    long payId[支付id];
+
+    long giftPackId[礼包id];
+	
+    Enum.CommonEnum.EOrderStatus status[订单状态];
+    long createTimeMs[创建时间 ms];
+	long payTimeMs[支付时间 ms];
+}
+
+ALProtocol Order_GiftPackInfo[礼包订单信息]
+{
+	long giftPackId[礼包id];
+	long buyTimes[购买次数];
+	long nextRefreshTimeMs[下次刷新时间 ms];
+}

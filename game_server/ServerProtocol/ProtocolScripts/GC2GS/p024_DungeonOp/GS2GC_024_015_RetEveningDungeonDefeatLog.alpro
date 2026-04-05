@@ -1,0 +1,7 @@
+﻿﻿JavaPackage GS2GC.p024_DungeonOp;
+csharpspace GS2GC.p024_DungeonOp;
+
+ALProtocol GS2GC_024_015_RetEveningDungeonDefeatLog <24, 15>
+{
+    Common.DungeonObj.EveningDungeon_DefeatInfo[] logList[日志列表];
+}

@@ -1,0 +1,11 @@
+﻿JavaPackage GS2GC.p002_InitOp;
+csharpspace GS2GC.p002_InitOp;
+
+ALProtocol GS2GC_002_063_RetGuildInit <2, 63>
+{
+	long[] selfRequestJoinGuildList[自己请求加入联盟列表];
+	Common.GuildObj.Guild_JoinCdInfo joinCdInfo[加入联盟CD信息];
+	Common.GuildObj.Guild_MemberDailyData dailyData[每日数据];
+
+	Common.GuildObj.Guild_DetailInfo guildInfo;
+}

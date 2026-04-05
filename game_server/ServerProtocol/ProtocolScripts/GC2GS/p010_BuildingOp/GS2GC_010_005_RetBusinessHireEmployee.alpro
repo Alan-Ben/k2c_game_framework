@@ -1,0 +1,5 @@
+JavaPackage GS2GC.p010_BuildingOp;
+csharpspace GS2GC.p010_BuildingOp;
+ALProtocol GS2GC_010_005_RetBusinessHireEmployee [请求招聘经营建筑雇员] <10, 5>
+{
+}

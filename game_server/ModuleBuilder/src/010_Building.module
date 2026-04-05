@@ -1,0 +1,116 @@
+/************************
+关键字：
+$Module	:模块
+$Action	:行为，包含$req{} 和$ret{}
+$Push	:推送协议
+$Req	:请求包
+$Ret	:返回包
+************************/
+
+$Module 010 Building //建筑
+
+$Action 001 BuildingBuild[请求建造建筑]
+(
+	$req	
+	{
+		long buildingId[建筑ID];
+	}
+	$ret	
+	{
+	}
+)
+
+$Action 002 FarmUpgradeLvl[请求升级农田建筑等级]
+(
+	$req	
+	{
+		long buildingId[建筑ID];
+	}
+	$ret	
+	{
+	}
+)
+
+$Action 003 FarmClickOutput[请求点击农田产出]
+(
+	$req	
+	{
+		long buildingId[建筑ID];
+	}
+	$ret	
+	{
+	}
+)
+
+$Action 004 BusinessUpgradeLvl[请求升级经营建筑等级]
+(
+	$req	
+	{
+		long buildingId[建筑ID];
+	}
+	$ret	
+	{
+	}
+)
+
+$Action 005 BusinessHireEmployee[请求招聘经营建筑雇员]
+(
+	$req	
+	{
+		long buildingId[建筑ID];
+	}
+	$ret	
+	{
+	}
+)
+
+$Action 006 BusinessHireTenEmployees[请求招聘经营10个建筑雇员]
+(
+	$req	
+	{
+		long buildingId[建筑ID];
+	}
+	$ret	
+	{
+	}
+)
+
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+
+$Push 050 OnBuidingBuilt[推送建筑完成]
+{
+   long buildingId;
+}
+
+$Push 051 OnFarmChg[推送农田数据变更]
+{
+	Common.BuildingObj.Building_Farm farm[农田建筑数据];
+}
+
+$Push 052 OnBusinessChg[推送经营建筑数据变更]
+{
+	Common.BuildingObj.Building_Business business[经营建筑建筑数据];
+}
+
+$Push 053 OnFarmClickChg[推送农田建筑点击数据变更]
+{
+	long buildingId[建筑ID];
+	long lastClickMS[上次点击时间点（毫秒）];
+}
+
+$Push 054 OnBusinessBuilt[推送经营建筑建造]
+{
+	Common.BuildingObj.Building_Business business[经营建筑建筑数据];
+}
+
+$Push 055 OnFarmBuilt[推送农田建筑建造]
+{
+	Common.BuildingObj.Building_Farm farm[农田建筑数据];
+}
+
+$Push 056 OnEffectGainBusinessWorkes[通过效果获得额外员工推送]
+{
+	Common.BuildingObj.Building_EffectGainWorkers[] list[效果获得员工数据列表];
+}

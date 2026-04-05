@@ -1,0 +1,18 @@
+JavaPackage ALLRPC.CrossTeamServer.Team;
+
+import Common.ServerObj.alpro;
+
+ALProtocol CTSGetGLSTeamData_Req
+{
+	long teamId[队伍实例ID];
+}
+
+ALProtocol CTSGetGLSTeamData_Return
+{
+	Common.ServerObj.ServerObj_FirstTeam_Team teamData[GLS GroupMgr所需的队伍数据];
+}
+
+//[RPC]获取GLS GroupMgr所需的指定队伍数据
+//[CLASS_PACKAGE] : AllRpcData.CrossTeam_Service.Team
+//[DEALER_PACKAGE] : CrossTeamServer.RPCDispatcher.Team
+

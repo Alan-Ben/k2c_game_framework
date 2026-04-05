@@ -1,0 +1,11 @@
+JavaPackage GS2GC.p002_InitOp;
+csharpspace GS2GC.p002_InitOp;
+
+import Common.ActivityObj.alpro;
+
+ALProtocol GS2GC_002_018_RetActivityList <2, 18>
+{
+    Common.ActivityObj.Activity_Info[] activityList[活动信息列表];
+    Common.ActivityObj.Activity_PlayerData[] playerDataList[活动玩家相关信息列表];
+    Common.ActivityObj.Activity_StepRewardInfo[] stepRewardList[活动阶段奖励信息列表];
+}

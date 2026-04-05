@@ -1,0 +1,7 @@
+﻿﻿JavaPackage GS2GC.p002_InitOp;
+csharpspace GS2GC.p002_InitOp;
+
+ALProtocol GS2GC_002_017_RetCollegeSeatList <2, 17>
+{
+	Common.CollegeObj.College_SeatInfo[] seatList;
+}

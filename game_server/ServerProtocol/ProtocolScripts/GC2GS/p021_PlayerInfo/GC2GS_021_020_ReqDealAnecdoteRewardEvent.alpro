@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p021_PlayerInfo;
+csharpspace GC2GS.p021_PlayerInfo;
+
+ALProtocol GC2GS_021_020_ReqDealAnecdoteRewardEvent <21, 20>
+{
+	long instanceId[政务实例ID];
+}

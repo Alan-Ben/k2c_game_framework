@@ -1,0 +1,12 @@
+﻿﻿import Common.NPPlayerInfo.alpro;
+JavaPackage GS2GC.p021_PlayerInfo;
+csharpspace GS2GC.p021_PlayerInfo;
+
+/**********************************************************
+ * 玩家头像信息变更消息，一般更改的是超时时间
+ **********************************************************/
+ALProtocol GS2GC_021_007_PlayerIconChg <21, 7>
+{
+	long id[头像唯一Id];
+	int expireTimeTagS[超时时间标记，单位秒。-1表示永久];
+}

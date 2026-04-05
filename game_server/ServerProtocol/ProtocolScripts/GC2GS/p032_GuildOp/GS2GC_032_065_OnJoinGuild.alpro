@@ -1,0 +1,9 @@
+﻿JavaPackage GS2GC.p032_GuildOp;
+csharpspace GS2GC.p032_GuildOp;
+
+ALProtocol GS2GC_032_065_OnJoinGuild <32, 65>
+{
+	bool isCreate[是否是创建联盟];
+
+	Common.GuildObj.Guild_DetailInfo guildInfo;
+}

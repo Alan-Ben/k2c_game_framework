@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p023_ArenaOp;
+csharpspace GC2GS.p023_ArenaOp;
+
+ALProtocol GC2GS_023_026_ReqTowerReportList[爬塔战报列表] <23, 26>
+{
+    
+}

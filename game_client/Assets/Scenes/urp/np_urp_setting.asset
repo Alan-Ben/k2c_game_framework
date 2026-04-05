@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32f17156adcb4b169c0c053961621e47, type: 3}
+  m_Name: np_urp_setting
+  m_EditorClassIdentifier: Assembly-CSharp::NPURPSetting
+  uiRenderData: {fileID: 11400000, guid: d55cca3f3f4f6a844ab29e3059cb1272, type: 2}
+  defaultRenderData: {fileID: 11400000, guid: d3a1fc78f7c57a743932c50b09ea894a, type: 2}
+  ultraRenderPipelineAsset: {fileID: 11400000, guid: 4d6492c4e09591d4cbef45e0ac07d5f9,
+    type: 2}
+  highRenderPipelineAsset: {fileID: 11400000, guid: 42a93f0ba091ec441baf27049d035f49,
+    type: 2}
+  mediumRenderPipelineAsset: {fileID: 11400000, guid: 09289b8d211c95e4fa018f6712511de9,
+    type: 2}
+  lowRenderPipelineAsset: {fileID: 11400000, guid: 4c916498c54384f49aac88911decd3d2,
+    type: 2}
+  veryLowRenderPipelineAsset: {fileID: 11400000, guid: 8d8bb5f5f9ba1b84d9d4d53eddb0da59,
+    type: 2}

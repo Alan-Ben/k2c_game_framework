@@ -1,0 +1,9 @@
+JavaPackage Common.RechargeRebateEnum;
+csharpspace Common.RechargeRebateEnum;
+
+ALEnum ERechargeRebateType[充值返利类型枚举]
+{
+	DAILY[每日充值];
+	TOTAL[累计充值];
+	DAYS[累天充值];
+}

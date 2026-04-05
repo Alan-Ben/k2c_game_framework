@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p040_MarsPeopleOp;
+csharpspace GC2GS.p040_MarsPeopleOp;
+
+ALProtocol GC2GS_040_004_ReqDealRewardHelp[火星居民-处理奖励帮助] <40, 4>
+{
+	long id[实例ID];
+}

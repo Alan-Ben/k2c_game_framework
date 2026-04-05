@@ -1,0 +1,9 @@
+JavaPackage GS2GC.p019_DinnerOp;
+csharpspace GS2GC.p019_DinnerOp;
+ALProtocol GS2GC_019_053_OnJoinerAdd [参加宴会玩家推送] <19, 53>
+{
+    long cid[赴宴玩家CID];
+    long costId[赴宴配置ID];
+    long dinnerId[宴会配置ID];
+    string cname[赴宴玩家名称];
+}

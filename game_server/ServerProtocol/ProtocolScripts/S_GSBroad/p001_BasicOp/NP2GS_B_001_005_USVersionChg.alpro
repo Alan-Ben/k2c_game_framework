@@ -1,0 +1,11 @@
+﻿JavaPackage NP2GS_B.p001_BasicOp;
+
+/**********************************************************
+ * US服务器信息变更广播协议
+ **********************************************************/
+ALProtocol NP2GS_B_001_005_USVersionChg[US服务器信息变更广播协议] <1, 5>
+{
+	int usId;
+	string resVersion[资源版本];
+	string serverVersion[服务器版本];
+}

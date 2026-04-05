@@ -1,0 +1,8 @@
+﻿JavaPackage GS2GC.p002_InitOp;
+csharpspace GS2GC.p002_InitOp;
+
+ALProtocol GS2GC_002_068_RetGraveInit <2, 68>
+{
+	bool hasGraveNewReward[是否可领奖新晋杰出者];
+	bool hasGraveRecord[是否有杰出者记录];
+}

@@ -1,0 +1,7 @@
+JavaPackage GS2GC.p010_BuildingOp;
+csharpspace GS2GC.p010_BuildingOp;
+import Common.BuildingObj.alpro;
+ALProtocol GS2GC_010_055_OnFarmBuilt [推送农田建筑建造] <10, 55>
+{
+    Common.BuildingObj.Building_Farm farm[农田建筑数据];
+}

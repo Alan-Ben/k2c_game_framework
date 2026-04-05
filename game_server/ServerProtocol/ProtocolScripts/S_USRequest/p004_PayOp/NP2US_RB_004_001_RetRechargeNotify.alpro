@@ -1,0 +1,6 @@
+﻿JavaPackage WCGCS2US_RB.p004_PayOp;
+
+ALProtocol NP2US_RB_004_001_RetRechargeNotify[充值通知响应] <4, 1>
+{
+
+}

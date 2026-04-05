@@ -1,0 +1,296 @@
+﻿import Enum.GuildEnum.alpro;
+
+JavaPackage Common.GuildObj;
+csharpspace Common.GuildObj;
+
+ALProtocol Guild_JoinLimitInfo[加入限制信息]
+{
+	Enum.GuildEnum.EGuildJoinLimitType type[限制类型];
+	long value[数值];
+}
+
+ALProtocol Guild_IconShow[联盟最简展示信息]
+{
+	long guidId;
+	long flagId;
+	string name;
+}
+
+ALProtocol Guild_ShowInfo[联盟展示信息]
+{
+	long guidId;
+	long flagId;
+	string name;
+	string simpleName;
+	string declaration[宣言];
+	long leaderId;
+	int level;
+	long exp;
+	long totalEarnings[成员总赚速];
+	
+	Enum.GuildEnum.EGuildJoinType joinType[加入类型];
+	Guild_JoinLimitInfo[] joinLimitInfo[加入限制信息];
+}
+
+ALProtocol Guild_JoinLimitInfoList[加入限制信息列表]
+{
+	Guild_JoinLimitInfo[] joinLimitInfo[加入限制信息];
+}
+
+ALProtocol Guild_MemberBaseInfo[联盟成员基础信息]
+{
+	long cid;
+	int positionId;
+}
+
+ALProtocol Guild_MemberContributeInfo[联盟成员贡献信息]
+{
+	long cid;
+	long sevenDaysContribute[7日贡献度];
+	long totalContribute[总贡献度];
+}
+
+ALProtocol Guild_MemberEntrustInfo[联盟成员委托信息]
+{
+	long cid;
+	int dayDealTimes[当日处理次数];
+	int totalDealTimes[处理总次数];
+}
+
+ALProtocol Guild_JoinRequestInfo[联盟加入请求信息]
+{
+	long dbId[数据id]; 
+	long cid;
+	long requestTimeMs[请求入盟时间];
+}
+
+ALProtocol Guild_EventInfo[联盟事件]
+{
+	long dbId;
+	Enum.GuildEnum.EGuildEventType type[事件类型];
+	bytebuffer data[事件数据];
+}
+
+ALProtocol GuildEvent_ImpeachLeader[联盟弹劾盟主事件]
+{
+	Enum.GuildEnum.EGuildImpeachLeaderEventState state[事件状态];
+	long leaderCid[盟主cid];
+	long requestTimeMs[发起时间戳]; 
+	long[] agreeMemberCidList[同意列表];
+}
+
+ALProtocol Guild_JoinCdInfo[联盟加入cd信息]
+{
+	int guildFreeJoinCdNum[联盟免cd加入次数];
+	long joinGuildCdEndTimeMs[加入联盟cd结束时间];
+}
+
+ALProtocol Guild_ConstructInfo[联盟今日建造信息]
+{
+	Enum.GuildEnum.EGuildConstructType type[建造类型];
+	int num[已建造次数];
+	long gainGuildExpCount[获得联盟经验];
+	long gainGuildWealthCount[获得联盟财富];
+}
+
+ALProtocol Guild_ConstructList[联盟建造信息列表]
+{
+	int date[日期];
+	Guild_ConstructInfo[] constructList[建造信息列表];
+	int rewardPoint[捐赠进度];
+}
+
+ALProtocol Guild_EntrustInfo[联盟杂物委托信息]
+{
+	long serial[序列号];
+	long refId[配表id];
+	long eventId[事件id];
+	int point[当前进度];
+}
+
+ALProtocol Guild_DispatchHeroInfo[联盟派遣大臣信息]
+{
+	long cid;
+	long heroId;
+	int addPer[加成万分比];
+}
+
+ALProtocol Guild_DispatchHeroDetailInfo[联盟派遣大臣详细信息]
+{
+	long cid;
+	long heroId;
+	int level;
+	long power;
+	long skinId;
+}
+
+ALProtocol Guild_AttrDispatchInfo[联盟相性派遣信息]
+{
+	Enum.CommonEnum.ESpecAttrType attr[相性];
+	Guild_DispatchHeroInfo[] heroList[大臣列表];
+}
+
+ALProtocol Guild_DispatchData[联盟派遣信息]
+{
+	Guild_AttrDispatchInfo[] dispatchList[相性派遣列表];
+}
+
+ALProtocol Guild_DetailInfo[联盟详细信息]
+{
+	Guild_ShowInfo guildInfo;
+	long guildWealth[联盟财富];
+	string announcement[公告];
+	Guild_MemberBaseInfo[] memberList[成员列表];
+	Guild_JoinRequestInfo[] joinRequestList[入盟请求列表];
+	Guild_ConstructList constructList[建造信息列表];
+	Guild_EventInfo[] eventList[事件列表];
+	long nextCanRecruitTimeMs[下次可公开招募时间];
+	Guild_EntrustInfo entrustInfo[杂物委托信息];
+	Guild_DispatchData dispatchData[派遣信息];
+
+	//玩家自己的相关信息
+	Guild_MemberContributeInfo selfContributeInfo[贡献信息];
+
+	//联盟火星矿战报相关
+	long latestMarsMineBattleReportId[最新联盟火星矿战报ID，用于红点判断];
+}
+
+ALProtocol Guild_ActiveBoxInfo[联盟活跃宝箱信息]
+{
+	long dbId[数据id];
+	long senderCid[发送者cid];
+	long sendTimeMs[发放时间];
+	long stamp[印章数量];
+}
+
+ALProtocol Guild_GreatRewardInfo[联盟大礼信息]
+{
+	long dbId[数据id];
+	long sendTimeMs[发放时间];
+}
+
+ALProtocol GuildLog_MemberName[成员名称]
+{
+	string playerName;
+}
+
+ALProtocol GuildLog_GuildConstruction[联盟建设]
+{
+	string playerName;
+	long refId;
+	int guildExp[联盟经验];
+	int guildWealth[联盟财富];
+	int guildCoin[个人联盟币];
+}
+
+ALProtocol GuildLog_OperatorInfo[联盟操作者信息]
+{
+	string operatorName[操作者名];
+	Enum.GuildEnum.EGuildPositionType operatorPosition[操作者职位];
+}
+
+ALProtocol GuildLog_KickOutMember[联盟踢出成员]
+{
+	GuildLog_OperatorInfo operatorInfo[操作者信息];
+	string targetPlayerName[目标成员名];
+}
+
+ALProtocol GuildLog_PositionChange[联盟职位变更]
+{
+	GuildLog_OperatorInfo operatorInfo[操作者信息];
+	string targetPlayerName[目标成员名];
+	Enum.GuildEnum.EGuildPositionType targetPosition[目标职位];
+}
+
+ALProtocol GuildLog_GuildRename[联盟改名]
+{
+	GuildLog_OperatorInfo operatorInfo[操作者信息];
+	string newName;
+}
+
+ALProtocol GuildLog_GuildUpgrade[联盟升级]
+{
+	int level;
+}
+
+ALProtocol GuildLog_LeaderTransfer[盟主转让]
+{
+	string oriLeaderName;
+	string newLeaderName;
+}
+
+ALProtocol Guild_MemberDailyData[联盟成员当日信息]
+{
+	int date[日期 用于每天重置数据];
+	int[] todayDrawConstructRewardList[当天已领取建设奖励列表];
+}
+
+ALProtocol Guild_MemberWeekData[联盟成员本周信息]
+{
+	int weekTag[周标记];
+	int hadDrawActiveBoxNum[已领取活跃宝箱次数];
+	int gainActiveStampNum[获得活跃印章数量];
+	int hadDrawGreatRewardNum[已领取联盟大礼次数];
+}
+
+ALProtocol Guild_LogInfo[联盟日志信息]
+{
+	Enum.GuildEnum.EGuildLogType logType[日志类型];
+	bytebuffer data[数据];
+	long sendTimeMs[时间戳];
+}
+
+ALProtocol Guild_MarsHelp_BuildingQueue[联盟火星求助展示信息-火星建筑队列]
+{
+	long buildingId;
+	int lvl;
+}
+
+ALProtocol Guild_MarsHelp_TechUp[联盟火星求助展示信息-火星科技升级]
+{
+	long techId;
+	int lvl;
+}
+
+ALProtocol Guild_MarsHelpInfo[联盟火星求助信息]
+{
+	long id[求助实例ID];
+	Enum.GuildEnum.EGuildMarsHelpObjType objType[对象类型];
+	long objId[对象实例ID];
+	int dealLimit[求助允许处理的次数上限];
+	int dealSecs[求助扣除的时长（秒）];
+	int dealedCount[被帮助的次数];
+	bytebuffer ext[额外数据];
+}
+
+ALProtocol Guild_MarsHelpShowInfo[联盟火星求助展示信息]
+{
+	long id[求助实例ID];
+	long senderCid[发起玩家CID];
+	Enum.GuildEnum.EGuildMarsHelpObjType objType[对象类型];
+	long objId[对象实例ID];
+	int dealLimit[求助允许处理的次数上限];
+	int dealedCount[被帮助的次数];
+	bytebuffer ext[额外数据];
+}
+
+ALProtocol Guild_BoxInfo[联盟宝箱数据]
+{
+	long id[实例ID];
+	long boxId[宝箱ID];
+	long shareCid[分享玩家CID];
+	long endMs[截至时间（毫秒）];
+}
+
+ALProtocol Guild_BoxReward[联盟宝箱奖励数据]
+{
+	long id[宝箱实例ID];
+	Common.NPCommonObj.NPCommon_ItemInfo item[物品];
+}
+
+ALProtocol Guild_MineShareInfo[联盟分享矿信息] {
+    long id;
+    long mineInstanceId[矿实例ID];
+    long finderCid[分享者CID];
+    long mineEndShowMs[矿有效期毫秒时间戳];
+}

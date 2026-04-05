@@ -1,0 +1,9 @@
+﻿JavaPackage GC2GS.p024_DungeonOp;
+csharpspace GC2GS.p024_DungeonOp;
+
+import Enum.DungeonEnum.alpro;
+
+ALProtocol GC2GS_024_003_ReqMiddayDungeonBoxList[查询午间副本宝箱列表] <24, 3>
+{
+    Enum.DungeonEnum.EDungeonBoxType boxType[宝箱类型];
+}

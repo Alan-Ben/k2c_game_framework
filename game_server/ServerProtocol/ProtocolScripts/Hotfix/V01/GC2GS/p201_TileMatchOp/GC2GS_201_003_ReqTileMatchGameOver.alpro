@@ -1,0 +1,9 @@
+JavaPackage Hotfix.V01.GC2GS.p201_TileMatchOp;
+csharpspace Hotfix.GC2GS.p201_TileMatchOp;
+
+import Hotfix.V01.Enum.TileMatchEnum.alpro;
+
+ALProtocol GC2GS_201_003_ReqTileMatchGameOver [三消死局重开] <201, 3>
+{
+    Hotfix.V01.Enum.TileMatchEnum.ETileMatch_ModeType modeType[模式类型];
+}

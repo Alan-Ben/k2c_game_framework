@@ -1,0 +1,77 @@
+package WCGCommon.Security;
+
+import NPCommon.Log.CommLog;
+
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+
+public class MD5
+{
+    /***********************************
+     * MD5加码 生成32位md5码
+     * 注：中文加密结果与平台不一致，请使用 md5Encryption 方法
+     *
+     * @param inStr
+     * @return
+     */
+    public static String md5(String inStr)
+    {
+        MessageDigest md5 = null;
+        try
+        {
+            md5 = MessageDigest.getInstance("MD5");
+        } catch (Exception e)
+        {
+            CommLog.error("生成MD5串错误");
+            return "";
+        }
+        char[] charArray = inStr.toCharArray();
+        byte[] byteArray = new byte[charArray.length];
+
+        for (int i = 0; i < charArray.length; i++)
+        {
+            byteArray[i] = (byte) charArray[i];
+        }
+        byte[] md5Bytes = md5.digest(byteArray);
+        StringBuffer hexValue = new StringBuffer();
+        for (int i = 0; i < md5Bytes.length; i++)
+        {
+            int val = ((int) md5Bytes[i]) & 0xff;
+            if (val < 16)
+            {
+                hexValue.append("0");
+            }
+            hexValue.append(Integer.toHexString(val));
+        }
+        return hexValue.toString();
+    }
+    
+
+    /**
+     * 支持中文的加密
+     * @param input
+     * @return
+     */
+    public static String md5Encryption(String input) 
+    {
+        try 
+        {
+            MessageDigest md = MessageDigest.getInstance("MD5");
+            byte[] messageDigest = md.digest(input.getBytes());
+            StringBuilder hexString = new StringBuilder();
+            for (byte b : messageDigest) 
+            {
+                String hex = Integer.toHexString(0xFF & b);
+                if (hex.length() == 1) 
+                {
+                    hexString.append('0');
+                }
+                hexString.append(hex);
+            }
+            return hexString.toString();
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
+        return "";
+    }
+}

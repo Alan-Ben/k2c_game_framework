@@ -1,0 +1,8 @@
+﻿JavaPackage GC2GS.p021_PlayerInfo;
+csharpspace GC2GS.p021_PlayerInfo;
+
+ALProtocol GC2GS_021_039_ReqChgFriendGroupName[变更好友分组的名称] <21, 39>
+{
+    long groupDbId[目标分组数据id];
+    string name;
+}

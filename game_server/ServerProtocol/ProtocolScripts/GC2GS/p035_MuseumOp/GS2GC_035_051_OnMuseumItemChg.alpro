@@ -1,0 +1,7 @@
+﻿JavaPackage GS2GC.p035_MuseumOp;
+csharpspace GS2GC.p035_MuseumOp;
+
+ALProtocol GS2GC_035_051_OnMuseumItemChg [博物馆物品新增推送] <35, 51>
+{
+    Common.MuseumObj.Museum_ItemInfo itemInfo[物品信息];
+}

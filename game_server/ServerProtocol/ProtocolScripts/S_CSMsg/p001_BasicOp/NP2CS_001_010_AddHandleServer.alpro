@@ -1,0 +1,7 @@
+﻿JavaPackage NP2CS.p001_BasicOp;
+
+ALProtocol NP2CS_001_010_AddHandleServer <1, 10>
+{
+	int serverType;
+	int serverTypeId;
+}

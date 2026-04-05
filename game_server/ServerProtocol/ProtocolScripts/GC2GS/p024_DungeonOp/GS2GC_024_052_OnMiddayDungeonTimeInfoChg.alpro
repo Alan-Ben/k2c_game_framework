@@ -1,0 +1,7 @@
+﻿﻿JavaPackage GS2GC.p024_DungeonOp;
+csharpspace GS2GC.p024_DungeonOp;
+
+ALProtocol GS2GC_024_052_OnMiddayDungeonTimeInfoChg <24, 52>
+{
+    Common.DungeonObj.MiddayDungeon_TimeInfo info[副本时间信息];
+}

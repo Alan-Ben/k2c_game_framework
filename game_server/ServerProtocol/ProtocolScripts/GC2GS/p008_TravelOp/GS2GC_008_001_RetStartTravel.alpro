@@ -1,0 +1,5 @@
+JavaPackage GS2GC.p008_TravelOp;
+csharpspace GS2GC.p008_TravelOp;
+ALProtocol GS2GC_008_001_RetStartTravel [单次游历] <8, 1>
+{
+}

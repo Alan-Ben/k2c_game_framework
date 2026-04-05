@@ -1,0 +1,76 @@
+﻿import Enum.ActivityEnum.alpro;
+import Common.CommonFuncObj.alpro;
+
+JavaPackage Common.ActivityObj;
+csharpspace Common.ActivityObj;
+
+ALProtocol Activity_Info[活动信息]
+{
+	long instanceId[活动实例ID];
+	long activityId;
+    long startTimeMs[活动开始时间 仅用于展示];
+    long endTimeMs[活动结束时间 仅用于展示];
+    long settleTimeMs[活动结算时间 仅用于展示];
+    long closeTimeMs[活动关闭时间 仅用于展示];
+    Enum.ActivityEnum.EActivityState state[当前状态];
+    int[] usIdList[参与跨服的usId列表 空列表则为单服活动];
+	long usGroupId[来自SS服务器排期的自增ID，可以用于上传跨服组队服务器，用于表示组队的分组ID];
+}
+
+ALProtocol Activity_RankSettleInfo[活动排行榜结算信息]
+{
+	long rankId[排行榜ID];
+	long rank[排名];
+    bool hadDraw[是否已领奖];
+    long score[分数];
+}
+
+ALProtocol Activity_ShopBuyRecord[活动商店购买记录]
+{
+	long itemId[商品id];
+    long hadBuyCount[已购买数量];
+}
+
+ALProtocol Activity_ShopInfo[活动商店信息]
+{
+	long shopId[商店ID];
+    long nextRefreshTimeMs[下次刷新时间];
+    Activity_ShopBuyRecord[] buyRecordList[购买记录列表];
+}
+
+ALProtocol Activity_PlayerData[活动玩家相关信息]
+{
+    long activityInstanceId[活动实例ID];
+    Activity_ShopInfo shopInfo[商店信息];
+    Common.CommonFuncObj.CrystalGiftPack_Info crystalGiftPackInfo[钻石礼包信息];
+}
+
+ALProtocol Activity_HotRefInfo[活动热更配置信息]
+{
+    long activityInstanceId[活动实例ID];
+    long activityId[活动ID];
+    string fileName[热更文件名];
+    string fileMd5[热更文件MD5];
+    string fileDir[热更文件目录];
+}
+
+ALProtocol Activity_StepRewardEventTaskInfo[活动阶段奖励事件任务信息]
+{
+    long eventTaskId[事件配置ID];
+    long score[分数];
+}
+
+ALProtocol Activity_StepRewardInfo[活动阶段奖励信息]
+{
+    long activityInstanceId[活动实例ID];
+    long stepRewardId[阶段奖励ID];
+    long score[分数];
+    int[] hadDrawStepList[已领取阶段列表];
+	Activity_StepRewardEventTaskInfo[] eventTaskList[事件任务数据列表];
+}
+
+ALProtocol Activity_TeamBase[组队活动的队伍基础数据]
+{
+    long activityInstanceId[活动实例ID];
+	long teamId[活动队伍ID];
+}

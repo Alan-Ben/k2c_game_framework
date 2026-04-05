@@ -1,0 +1,8 @@
+java_path= ../Common/src
+java_package=NPCommon.ErrMain
+id	name	desc
+1	TASK_NOT_REACH	任务未达成
+2	TASK_REWARD_HAD_DRAW	任务奖励已领取
+3	SERVER_START_DAY_NOT_REACH	服务器开服天数未达成
+4	STEP_REWARD_NOT_REACH	阶段奖励未达成
+5	STEP_REWARD_HAD_DRAW	阶段奖励已领取

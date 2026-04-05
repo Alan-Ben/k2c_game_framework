@@ -1,0 +1,7 @@
+JavaPackage GS2GC.p015_ConsortOp;
+csharpspace GS2GC.p015_ConsortOp;
+
+ALProtocol GS2GC_015_075_OnConsortChatInfoAdd [家人对话信息新增] <15, 75>
+{
+    Common.ConsortObj.Consort_ChatInfo chatInfo[对话信息];
+}

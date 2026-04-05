@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p012_ActivityTeamOp;
+csharpspace GC2GS.p012_ActivityTeamOp;
+
+ALProtocol GC2GS_012_002_ReqActivityTeam[队伍数据] <12, 2> 
+{
+	long teamId[队伍实例ID];
+}

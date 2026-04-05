@@ -1,0 +1,6 @@
+﻿JavaPackage GC2GS.p040_MarsPeopleOp;
+csharpspace GC2GS.p040_MarsPeopleOp;
+
+ALProtocol GC2GS_040_002_ReqPeopleConfirmImmigrant[火星居民-确认移民数量] <40, 2>
+{
+}

@@ -1,0 +1,11 @@
+﻿JavaPackage NPGS2GC.p001_BasicOp;
+csharpspace NPGS2GC.p001_BasicOp;
+
+/**********************************************************
+ * 重连时返回的相关信息
+ **********************************************************/
+ALProtocol NPGS2GC_001_020_RetReconnectInfo <1, 20>
+{
+	int receivedMesCount;
+	int curServerResVersion;
+}

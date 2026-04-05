@@ -1,0 +1,8 @@
+﻿﻿JavaPackage GS2GC.p024_DungeonOp;
+csharpspace GS2GC.p024_DungeonOp;
+
+ALProtocol GS2GC_024_005_RetMiddayDungeonBoxCanDraw <24, 5>
+{
+    bool canDraw[是否可领取];
+    int remainDrawCount[剩余可领取次数];
+}

@@ -1,0 +1,7 @@
+﻿﻿JavaPackage GS2GC.p021_PlayerInfo;
+csharpspace GS2GC.p021_PlayerInfo;
+
+ALProtocol GS2GC_021_089_OnCuteActorChg[Q版形象变更推送]<21, 89>
+{
+    Common.NPPlayerInfo.PlayerInfo_CuteActor info;
+}

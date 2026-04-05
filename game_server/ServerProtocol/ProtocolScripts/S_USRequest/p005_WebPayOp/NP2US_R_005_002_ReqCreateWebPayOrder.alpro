@@ -1,0 +1,8 @@
+JavaPackage NP2US_R.p005_WebPayOp;
+
+ALProtocol NP2US_R_005_002_ReqCreateWebPayOrder[创建网页支付订单] <5, 2>
+{
+	long cid[角色ID];
+	long[] goodsIds[商品ID列表];
+	string channelCode[渠道标识];
+}

@@ -1,0 +1,6 @@
+JavaPackage GS2GC.p015_ConsortOp;
+csharpspace GS2GC.p015_ConsortOp;
+
+ALProtocol GS2GC_015_022_RetConsortAiChat [家人-AI对话] <15, 22>
+{
+}

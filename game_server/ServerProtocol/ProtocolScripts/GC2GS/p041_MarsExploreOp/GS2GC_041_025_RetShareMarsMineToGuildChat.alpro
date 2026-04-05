@@ -1,0 +1,8 @@
+JavaPackage GS2GC.p041_MarsExploreOp;
+csharpspace GS2GC.p041_MarsExploreOp;
+
+import Common.CommonObj.alpro;
+
+ALProtocol GS2GC_041_025_RetShareMarsMineToGuildChat[返回分享矿到联盟聊天] <41, 25>
+{
+}

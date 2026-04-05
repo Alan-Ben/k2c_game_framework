@@ -1,0 +1,4 @@
+[submodule "Hotfix/Assets/Protocol"]
+	path = Hotfix/Assets/Protocol
+	url = git@gitlab.dev.mjgame.com:GOM/hotfix_protocol.git
+	branch = master

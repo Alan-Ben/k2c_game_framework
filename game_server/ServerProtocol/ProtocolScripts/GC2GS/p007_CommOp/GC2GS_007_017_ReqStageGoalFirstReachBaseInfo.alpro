@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p007_CommOp;
+csharpspace GC2GS.p007_CommOp;
+
+ALProtocol GC2GS_007_017_ReqStageGoalFirstReachBaseInfo[请求阶段目标首达基础信息] <7, 17>
+{
+	
+}

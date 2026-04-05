@@ -1,0 +1,8 @@
+java_path= ../Common/src
+java_package=NPCommon.ErrMain
+id	name	desc
+1	TOWER_FLOOR_HAD_BEEN_OCCUPIED	爬塔楼层已被占领
+2	TOWER_NOT_ATTACK_FORWARD	爬塔不能向前进攻关卡
+3	TOWER_RESEARCH_ALREADY_ACTIVE	爬塔研究已激活
+4	TOWER_CHAPTER_RESEARCH_NOT_DONE	爬塔章节研究未完成
+5	TOWER_RESEARCH_NOT_FOUND	爬塔研究未找到

@@ -1,0 +1,10 @@
+﻿JavaPackage GS2GC.p021_PlayerInfo;
+csharpspace GS2GC.p021_PlayerInfo;
+
+/**********************************************************
+ * 返回某个索引的客户端数据
+ **********************************************************/
+ALProtocol GS2GC_021_050_OnPlayerLazyCdChged <21, 50>
+{
+	Common.NPCommonObj.NPCommon_PlayerLazyCD cdInfo[cd信息];
+}

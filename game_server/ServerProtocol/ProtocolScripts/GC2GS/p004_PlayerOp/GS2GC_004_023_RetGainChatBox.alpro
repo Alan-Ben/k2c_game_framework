@@ -1,0 +1,14 @@
+﻿JavaPackage GS2GC.p004_PlayerOp;
+csharpspace GS2GC.p004_PlayerOp;
+
+import Enum.NPCommBoxEnum.alpro;
+
+/**********************************************************
+ * 请求延迟消息
+ **********************************************************/
+ALProtocol GS2GC_004_023_RetGainChatBox <4, 23>
+{
+	long instanceId[宝箱实例ID];
+	Enum.NPCommBoxEnum.ENPBoxChatStatus boxStatus[宝箱状态];
+	long[] gainedCidList[已经领取的玩家CID列表];
+}

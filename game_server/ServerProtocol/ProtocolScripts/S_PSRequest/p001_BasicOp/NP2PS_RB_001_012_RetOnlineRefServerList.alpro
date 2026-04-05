@@ -1,0 +1,6 @@
+﻿JavaPackage NP2PS_RB.p001_BasicOp;
+
+ALProtocol NP2PS_RB_001_012_RetOnlineRefServerList <1, 12>
+{
+    Common.NpServerObj.NpServerObj_ServerInfo[] refServerList;
+}

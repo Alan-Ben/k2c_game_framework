@@ -1,0 +1,6 @@
+﻿JavaPackage GC2GS.p009_MailOp;
+csharpspace GC2GS.p009_MailOp;
+
+ALProtocol GC2GS_009_008_ReqAkeyDelAll[一键删除邮件] <9, 8>
+{
+}

@@ -1,0 +1,6 @@
+﻿JavaPackage NP2US_R.p008_ScheduleOp;
+
+ALProtocol NP2US_R_008_002_NoticeScheduleCanSendReward[通知排期可以开始领奖] <8, 2>
+{
+	long scheduleId;
+}

@@ -1,0 +1,8 @@
+JavaPackage GS2GC.p015_ConsortOp;
+csharpspace GS2GC.p015_ConsortOp;
+import Common.ConsortObj.alpro;
+ALProtocol GS2GC_015_058_OnBusinessSkillChg [家人经营技能数据变更] <15, 58>
+{
+    long consortId[空];
+    Common.ConsortObj.Consort_BusinessSkill skill[家人经营技能数据];
+}

@@ -1,0 +1,15 @@
+﻿JavaPackage ALLRPC.US.Grave;
+
+ALProtocol GetGravePlayerTitleRecordList_Req
+{
+	long cid;
+}
+
+ALProtocol GetGravePlayerTitleRecordList_Return
+{
+	long[] titleIdList;
+}
+
+//[RPC] 获取指定玩家的杰出者的称号列表
+//[CLASS_PACKAGE] : AllRpcData.US_Service.Grave
+//[DEALER_PACKAGE] : USServer.RPCDispatcher.Grave

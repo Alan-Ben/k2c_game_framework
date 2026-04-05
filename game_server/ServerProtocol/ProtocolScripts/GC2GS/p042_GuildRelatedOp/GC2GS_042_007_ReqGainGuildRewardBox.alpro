@@ -1,0 +1,10 @@
+﻿JavaPackage GC2GS.p042_GuildRelatedOp;
+csharpspace GC2GS.p042_GuildRelatedOp;
+
+import Enum.GuildEnum.alpro;
+
+ALProtocol GC2GS_042_007_ReqGainGuildRewardBox[领取联盟宝箱奖励] <42, 7>
+{
+	Enum.GuildEnum.EGuildBoxType boxType[宝箱类型];
+	long id[宝箱实例ID];
+}

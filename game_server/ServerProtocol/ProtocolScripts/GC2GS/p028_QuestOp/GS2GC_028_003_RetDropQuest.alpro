@@ -1,0 +1,6 @@
+﻿JavaPackage GS2GC.p028_QuestOp;
+csharpspace GS2GC.p028_QuestOp;
+
+ALProtocol GS2GC_028_003_RetDropQuest <28, 3>
+{
+}

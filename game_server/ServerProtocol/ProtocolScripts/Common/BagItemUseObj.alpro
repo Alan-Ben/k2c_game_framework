@@ -1,0 +1,18 @@
+﻿JavaPackage Common.BagItemUseObj;
+csharpspace Common.BagItemUseObj;
+
+import Enum.BagItemUseEnum.alpro;
+
+ALProtocol BagItemUse_HeroShowInfo[背包使用道具-大臣展示信息]
+{
+	long heroId[大臣id];
+    Enum.BagItemUseEnum.EBagItemUse_HeroDrawShowType type;
+    long count;
+}
+
+ALProtocol BagItemUse_ConsortShowInfo[背包使用道具-妃子展示信息]
+{
+	long consortId[妃子id];
+    Enum.BagItemUseEnum.EBagItemUse_ConsortDrawShowType type;
+    long count[单次数值];
+}

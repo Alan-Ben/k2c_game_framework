@@ -1,0 +1,24 @@
+JavaPackage Common.CrossTeamEnum;
+csharpspace Common.CrossTeamEnum;
+
+ALEnum ENPCrossTeamMemberPos[队伍成员职位]
+{
+	NONE[无职位];
+	LEADER[队长];
+}
+
+ALEnum ENPCrossTeamJoinCond[队伍加入条件]
+{
+	NONE;
+	MIN_POWER[最小战力];
+	MIN_MARS_POWER[最小火星战力];
+}
+
+ALEnum ENPCrossTeamJoinType[队伍加入方式]
+{
+	NONE;
+	FREE_JOIN[自由加入];
+	FORBID_JOIN[禁止加入];
+	COND_JOIN[条件加入];
+}
+

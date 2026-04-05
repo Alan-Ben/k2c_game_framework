@@ -1,0 +1,9 @@
+JavaPackage GS2GC.p002_InitOp;
+csharpspace GS2GC.p002_InitOp;
+
+import Common.MarsObj.alpro;
+
+ALProtocol GS2GC_002_078_RetMarsTechInit[火星科技数据初始化] <2, 78>
+{
+	Common.MarsObj.Mars_Technology[] technologyList[科技列表];
+}

@@ -1,0 +1,7 @@
+﻿JavaPackage GS2GC.p032_GuildOp;
+csharpspace GS2GC.p032_GuildOp;
+
+ALProtocol GS2GC_032_064_OnGuildJoinRequestRemove <32, 64>
+{
+	long[] requestDbIdList;
+}

@@ -1,0 +1,14 @@
+java_path= ../Common/src
+java_package=NPCommon.ErrMain
+csharp_type = main
+id	name	desc
+1	PARSE_ERR	解析内容错误
+2	INVALID_ZONEID_ERR	无效分区ID
+3	NOT_LATEST_ERR	不是最新数据
+4	BUILD_FILE_FAIL	生成文件失败
+5	DOWNLOAD_FAIL	下载文件失败
+6	SCHEDULE_NOT_FOUND	排期不存在
+7	SUBMIT_COUNT_TOO_LOW	版本号过低
+8	SCHEDULE_NOT_ACTIVE	排期未激活
+9	GROUP_LIST_MISMATCH	分组列表不匹配
+10	GROUP_LIST_REPEAT	分组列表重复

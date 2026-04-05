@@ -1,0 +1,7 @@
+JavaPackage GS2GC.p018_PlayerSkinOp;
+csharpspace GS2GC.p018_PlayerSkinOp;
+import Common.NPPlayerInfo.alpro;
+ALProtocol GS2GC_018_052_OnComboTitleSfxChg [组合称号后缀变更] <18, 52>
+{
+    Common.NPPlayerInfo.PlayerInfo_ComboTitleSfx sfx[空];
+}

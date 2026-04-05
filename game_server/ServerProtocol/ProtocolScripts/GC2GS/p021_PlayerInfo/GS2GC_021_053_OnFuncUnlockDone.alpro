@@ -1,0 +1,7 @@
+﻿JavaPackage GS2GC.p021_PlayerInfo;
+csharpspace GS2GC.p021_PlayerInfo;
+
+ALProtocol GS2GC_021_053_OnFuncUnlockDone <21, 53>
+{
+	Enum.NPEnum.ENPFunctionType funcType[领取的功能类型];
+}

@@ -1,0 +1,6 @@
+﻿JavaPackage ToPay_R.p001_PayOp;
+
+ALProtocol ToPay_R_001_002_NotifyPayCallbackHadPush <1, 2>
+{
+	long[] dbIdList;
+}

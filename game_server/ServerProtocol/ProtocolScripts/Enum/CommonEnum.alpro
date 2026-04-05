@@ -1,0 +1,246 @@
+JavaPackage CommonEnum;
+csharpspace CommonEnum;
+
+ALEnum ESpecAttrType[特长属性类型]
+{
+	NONE;
+	TYPE_A[属性A];
+	TYPE_B[属性B];
+	TYPE_C[属性C];
+	TYPE_D[属性D];
+	TYPE_E[属性E];
+}
+
+ALEnum EBasicAttrType[基础属性类型]
+{
+	NONE;
+	POWER[实力];
+	TALENT[资质];
+	POWER_PER[实例万分比加成];
+}
+
+ALEnum ERedDotType[红点类型]
+{
+	NONE[无];
+}
+
+ALEnum EBonusPropertyType[属性加成类型]
+{
+	NONE;
+	TALENT[大臣资质加成];
+	POWER[大臣实力绝对值加成];
+	POWER_PER[大臣实力加成（万分比）];
+	BONUS[建筑收益绝对值加成];
+	EVENING_DUNGEON_POWER_PER[晚间副本实力加成（万分比）];
+	FIN_STUDY_BONUS_PER[毕业收益加成（万分比）];
+	BUILDING_PROFIT_ADD_PER[建筑收益加成（万分比）];
+	INTIMACY[亲密度];
+	CHARM[加护力];
+	CHARMPOINT_PER[加护点加成（万分比）];
+	MIDDAY_DUNGEON_HERO_ATTACK_EXTRA_TIMES[午间副本大臣额外攻击次数];
+	ARENA_POWER_ADD_PER[竞技场实力加成（万分比）];
+	CHILD_TRAIN_COST_PER[子嗣上课金币消耗减少加成（万分比）];
+	CHILD_TRAIN_GAIN_PER[子嗣上课获得伙伴经验加成（万分比）];
+	BUILDING_EMPLOYEE_REDUCE_PER[建筑雇佣成本减少加成（万分比）];
+	CHARMPOINT[加护点（绝对值）];
+	FIN_STUDY_BONUS[毕业收益加成（绝对值）];
+	CHILD_TRAIN_GAIN[子嗣上课获得伙伴经验加成（绝对值）];
+	ARENA_COINS[商会谈判战胜伙伴商会币加成（绝对值）];
+	BUILDING_EMPLOYEE_PROFIT_ADD[建筑员工基础赚速加成（绝对值）];
+	GIFT_CHILD_FIN_STUDY_BONUS[卷王子嗣毕业收益加成（万分比）];
+	TREASURE_HUNT_TREASURE_OUTPUT_ADD[太空寻宝奇物产出加成];
+	ARENA_GAIN_INFLUENCE_PER[竞技场影响力获得加成（万分比）];
+}
+
+ALEnum EBonusFilterType[加成过滤类型]
+{
+	NONE;
+	HERO_ATTR[特长伙伴];
+	BUILDING_ATTR[特长建筑];
+	BUILDING_ID[指定建筑Id];
+	STUDENT_SEX[指定性别学生];
+	STUDENT_ATTR[指定相性学生];
+	CONSORT_ID[指定家人Id];
+	HERO_ID[指定伙伴ID];
+	QUALITY[指定品质 仅支持大臣];
+	TREASURE_HUNT_TREASURE_ID[指定太空寻宝奇物ID];
+}
+
+ALEnum EChildSexType[子嗣性别]
+{
+	NONE;
+	BOY;
+	GIRL;
+}
+
+ALEnum ECurrency[货币类型]
+{
+    NONE;
+    GEM[钻石];
+	SILVER[金币];
+	ARENA_COIN[商会硬币];
+	VIP_EXP[VIP经验];
+	P_EXP[玩家经验];
+	DINNER_COIN[宴会币];
+	DUNGEON_COIN[副本币];
+	DAILY_QUEST_ACTIVE_POINT[日常任务活跃点];
+	MARKET_POINT[废弃 集市专用-繁荣度];
+	GUILD_COIN[联盟币];
+	HERO_EXP[大臣经验];
+	TOWER_COIN[迷宫币];
+	INN_AFFECTION[旅店心意值];
+	INN_STATION_BLUEPRINT[旅店设施图纸];
+	SATISFY[满意值];
+	MARS_ENERGY[火星系统-能量];
+	MARS_POINT[火星币];
+	BATTLE_PASS_COIN[战令币];
+}
+
+ALEnum EWeekCardNPCType[周卡NPC类型]
+{ 
+	NONE;
+	HERO[大臣];
+	CONSORT[妃子];
+}
+
+ALEnum EWeekCardSettleType[周卡处理类型]
+{ 
+	NONE;
+	LEVY[征收];
+	ANECDOTE[政务];
+	CONSORT_RND_CALL[妃子倾诉];
+	CHILD_TRAIN[子嗣培养];
+	COLLEGE_STUDY[大学学习];
+	TRAVEL[游历];
+}
+
+ALEnum EAchieveType[成就类型]
+{
+	NONE;
+	VILLAGE[城市建设];
+	FAMILY[缘分相遇];
+	PROGRESS[前进道路];
+	TREASURE[宝物收藏];
+	LIFESTYLE[异世生活];
+	EARNING_GOAL[赚速目标];
+	TREASURE_HUNT[太空寻宝];
+	MARS[火星成就];
+}
+
+ALEnum ERankDetailShowType[排行榜详细信息展示类型]
+{
+	NONE;
+	PLAYER[玩家];
+	HERO[大臣];
+}
+
+ALEnum EShopItemRefreshSourceType[商店商品刷新来源类型]
+{
+	NONE;
+	PLAYER[玩家];
+	SERVER[服务器];
+}
+
+ALEnum EMarqueeCanDelType[跑马灯是否可删除类型]
+{
+	READ_REF[读表, 即不覆盖];
+	TRUE[可删除];
+	FALSE[不可删除];
+}
+
+ALEnum ECommonActivityType[活动类型]
+{
+	NONE;
+	RUSH_RANK[冲榜活动];
+	EARNINGS_GOAL[赚速目标];
+	SEVEN_DAY_GOALS[七日目标];
+	REGULAR_EVENT[万能活动];
+	TILE_MATCH[三消];
+	RECHARGE_REBATE[充值返利];
+	NUM_MERGE[2048合成];
+
+	//以下为预留枚举
+	RESERVE_1;
+	RESERVE_2;
+	RESERVE_3;
+	RESERVE_4;
+	RESERVE_5;
+	RESERVE_6;
+	RESERVE_7;
+	RESERVE_8;
+	RESERVE_9;
+	RESERVE_10;
+
+	//活动往后加
+	ACTIVITY_FUND[活动基金];
+	RANK_GIFT_PACK[排行榜礼包];
+	
+	FIRST_TEAM[组队活动];
+}
+
+ALEnum EShareCodeType[分享码类型]
+{
+	MAKE_FACE[捏脸数据 PlayerShow_MakeFace];
+	CLOTHES_SHARE[服装分享 Clothes_ClothesShareRawInfo to Clothes_ClothesShareInfo];
+}
+
+ALEnum ESpecialItemType[特殊物品类型]
+{
+	NONE;
+	GOLD[金币];
+	ARENA_STATION[竞技场贸易站];
+	FARM_MULTIPLE[农场暴击];
+	MARS_ENERGY[火星系统-能量];
+	PAID_GEM[付费钻石];
+	PAID_VOUCHER[付费代金券];
+}
+
+ALEnum EActivityItemExpireTimeType[活动物品过期时间类型]
+{
+	NONE;
+	REWARDING[活动进入领奖期];
+	CLOSED[活动关闭];
+}
+
+ALEnum EAiChatRoleType[AI聊天角色类型]
+{
+	SYSTEM[系统];
+	USER[用户];
+}
+
+ALEnum EOrderStatus[订单状态]
+{
+	WAIT_PAY[待支付];
+	PAY_SUCCESS[支付成功];
+	DELIVERY_COMPLETED[支付成功发货完成];
+	DELIVERY_FAILED[支付成功发货失败];
+	PAY_CANCELED[支付取消];
+}
+
+ALEnum EOrderPayType[订单支付方式类型]
+{
+	NONE[无];
+	PLATFORM[平台支付];
+	VOUCHER[代金券支付];
+	GM[GM支付];
+}
+
+ALEnum EPlatParamType[平台参数类型]
+{
+	CLIENT_VERSION[客户端资源版本];
+	HOT_REF_URL_BASE[热更配表的CDN地址];
+}
+
+ALEnum EGiftPackLogType[礼包日志类型]
+{
+	NONE;
+	GEM[钻石充值];
+	VOUCHER[代金券充值];
+}
+
+ALEnum EGiftPackType[礼包类型]
+{
+	NONE;
+	PUSH_GIFT[推送礼包];
+	FIRST_RECHARGE[首充礼包];
+}

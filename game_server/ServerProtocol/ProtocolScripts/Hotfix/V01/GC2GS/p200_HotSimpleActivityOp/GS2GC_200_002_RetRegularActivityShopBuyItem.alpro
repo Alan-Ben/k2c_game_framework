@@ -1,0 +1,7 @@
+﻿JavaPackage Hotfix.V01.GS2GC.p200_HotSimpleActivityOp;
+csharpspace Hotfix.GS2GC.p200_HotSimpleActivityOp;
+
+ALProtocol GS2GC_200_002_RetRegularActivityShopBuyItem <200, 2>
+{
+	
+}

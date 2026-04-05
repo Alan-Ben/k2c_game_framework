@@ -1,0 +1,7 @@
+﻿﻿JavaPackage GS2GC.p021_PlayerInfo;
+csharpspace GS2GC.p021_PlayerInfo;
+
+ALProtocol GS2GC_021_034_RetFriendRecommend <21, 34>
+{
+    Common.NPCommonObj.PlayerInfo_IconShow[] playerList[玩家信息列表];
+}

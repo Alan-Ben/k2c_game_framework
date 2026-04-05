@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p007_CommOp;
+csharpspace GC2GS.p007_CommOp;
+
+ALProtocol GC2GS_007_023_ReqRemoveCountdownEvent[移除倒计时事件] <7, 23>
+{
+	long dbId;
+}

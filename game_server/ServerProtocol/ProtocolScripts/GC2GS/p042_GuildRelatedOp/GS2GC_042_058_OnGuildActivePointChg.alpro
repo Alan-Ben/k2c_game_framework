@@ -1,0 +1,8 @@
+﻿JavaPackage GS2GC.p042_GuildRelatedOp;
+csharpspace GS2GC.p042_GuildRelatedOp;
+
+ALProtocol GS2GC_042_058_OnGuildActivePointChg[联盟活跃点变化数据] <42, 58>
+{
+	long activePoint;
+	int targetLvl;
+}

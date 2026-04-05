@@ -1,0 +1,14 @@
+﻿﻿import Common.ChildObj.alpro;
+JavaPackage GS2GC.p002_InitOp;
+csharpspace GS2GC.p002_InitOp;
+
+ALProtocol GS2GC_002_013_RetChildList[子嗣初始化回包] <2, 13>
+{
+	Common.ChildObj.Child_Info[] childList[子嗣数据列表];
+	Common.ChildObj.Child_SeatInfo[] seatList[子嗣训练位数据列表];
+	Common.ChildObj.Adult_UnmarriedInfo[] unmarriedAdultList[子嗣（成年未婚）实例ID列表];
+	long[] marriedAdultIdList[子嗣（成年已婚）实例ID列表];
+	Common.ChildObj.Adult_ToMeApplyBaseInfo[] applyToMeBaseList[向玩家发起指定联姻请求数据列表];
+	long bonus[所有子嗣（成年/未成年）总收益];
+	long adultBonus[所有成年子嗣总收益];
+}

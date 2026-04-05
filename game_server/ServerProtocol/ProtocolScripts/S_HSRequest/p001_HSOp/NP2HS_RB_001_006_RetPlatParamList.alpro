@@ -1,0 +1,10 @@
+JavaPackage NP2HS_RB.p001_HSOp;
+
+import Common.ServerObj.alpro;
+
+ALProtocol NP2HS_RB_001_006_RetPlatParamList <1, 6>
+{
+	long dataSerial[数据序列号];
+	string phpSerial[平台序列号];
+    Common.ServerObj.ServerObj_PHPParamList pListObj;
+}

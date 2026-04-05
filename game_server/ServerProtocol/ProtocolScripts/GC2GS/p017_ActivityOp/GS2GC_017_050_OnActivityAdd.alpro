@@ -1,0 +1,7 @@
+JavaPackage GS2GC.p017_ActivityOp;
+csharpspace GS2GC.p017_ActivityOp;
+import Common.ActivityObj.alpro;
+ALProtocol GS2GC_017_050_OnActivityAdd [活动新增推送] <17, 50>
+{
+    Common.ActivityObj.Activity_Info activity[活动信息];
+}

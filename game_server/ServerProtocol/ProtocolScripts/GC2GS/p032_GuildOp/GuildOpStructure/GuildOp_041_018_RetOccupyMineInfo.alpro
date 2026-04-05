@@ -1,0 +1,9 @@
+﻿JavaPackage GC2GS.p032_GuildOp.GuildOpStructure;
+
+﻿﻿﻿﻿﻿import Common.ServerObj.alpro;
+
+ALProtocol GuildOp_041_018_RetOccupyMineInfo[获取联盟内分享矿信息]
+{
+	long posId;
+	Common.ServerObj.ServerObj_MarsMine mineInfo[具体矿的信息];
+}

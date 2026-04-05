@@ -1,0 +1,11 @@
+﻿JavaPackage WCGCS2US.p001_BasicOp;
+
+/**********************************************************
+ * Common服向User通知广播跑马灯信息
+ **********************************************************/
+ALProtocol WCGCS2US_001_002_OnBroadcastMarquee <1, 2>
+{
+	int clentType;
+	String content;
+	String[] params;
+}

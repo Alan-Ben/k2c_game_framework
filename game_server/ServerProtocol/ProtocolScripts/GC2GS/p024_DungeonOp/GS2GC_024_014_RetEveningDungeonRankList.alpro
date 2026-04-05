@@ -1,0 +1,8 @@
+﻿﻿JavaPackage GS2GC.p024_DungeonOp;
+csharpspace GS2GC.p024_DungeonOp;
+
+ALProtocol GS2GC_024_014_RetEveningDungeonRankList <24, 14>
+{
+    Common.RankObj.Rank_BaseItem[] rankList[基础数据列表];
+    Common.RankObj.Rank_BaseItem selfRankItem[玩家排行数据];
+}

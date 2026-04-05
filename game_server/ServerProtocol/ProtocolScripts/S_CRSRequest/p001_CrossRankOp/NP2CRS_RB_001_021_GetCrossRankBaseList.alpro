@@ -1,0 +1,6 @@
+﻿JavaPackage NP2CRS_RB.p001_CrossRankOp;
+
+ALProtocol NP2CRS_RB_001_021_GetCrossRankBaseList <1, 21>
+{
+    Common.RankObj.Rank_BaseItem[] rankItemList;
+}

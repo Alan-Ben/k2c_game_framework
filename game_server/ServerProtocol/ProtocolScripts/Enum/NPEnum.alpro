@@ -1,0 +1,689 @@
+﻿JavaPackage NPEnum;
+csharpspace NPEnum;
+
+ALEnum ENPLoginWayType[游戏登录方式，与文档账号类型相同 https\:\/\/thoughts.teambition.com\/share\/647e8f5e90a37b003eb87cf4]
+{
+	NONE;
+    GUEST[游客];
+    GAMECENTER[游戏圈账号登录  -- iOS支持 android不支持];
+    IOS[Apple账号登录    -- iOS支持 android不支持];
+    GOOGLE[谷歌账号登录    -- iOS不支持 android支持];
+    FACEBOOK[facebook账号登录];
+    VK[vk账号登录];
+    LINE[line账号登录];
+    TWITTER[twitter账号登录];
+    MJ[梦加账号登录];
+}
+
+ALEnum ENPFunctionType[系统功能类型]
+{
+    NONE;
+	CHAT[聊天];
+	CHAT_INPUT[聊天输入];
+	ACHIEVE[成就];
+	FRIEND[好友];
+	GUILD[联盟];
+	DAILY_QUEST[每日任务];
+	CHAPTER[关卡];
+	RANK_COMMON[排行榜];
+	SHOP[商店];	
+    QUEST[主线任务];
+    BAG[背包];
+    WEEKLY_QUEST[周任务];
+    EQUIP[藏品];
+	ANECDOTE[政务];
+	ARENA[竞技场];
+	RANK_RUSH[冲榜];
+	CONSORT[情人];
+	CHILD[子嗣];
+	CHILD_MARRY[子嗣联姻];
+	GACHA[抽卡];
+	DINNER[宴会];
+	HERO[骑士];
+	ROOM[公主卧室];
+	CITY[主城];
+	MARKET[集市];
+	DAILY_CHECK[每日签到];
+	TOWER[爬塔];
+	STAGE_GOAL[阶段目标];
+	PLAYER_INFO[玩家信息];
+	TRAVEL[游历];
+	MAIL[邮件];
+	HERO_RECOMMEND[骑士推荐];
+	RANK[排行榜];
+	ANNOUNCEMENT[运营公告];
+    COMMON_TARGET[家人获得];
+    MIDDAY_DUNGEON[午间副本];
+    EVENING_DUNGEON[晚间副本];
+	WALL_STREET[华尔街];
+    CHILD_TRAIN[子嗣培养];
+    DUNGEON_ENTRANCE[午间＆晚间boss合并入口];
+    INN_MAIN[旅店主界面];
+    TREASURE_HUNT[太空寻宝];
+	MARS[火星系统];
+	SCHOOL[子嗣外围入口];
+	GRAVE[杰出者大厅];
+	GUILD_COOPERATE[联盟协作];
+	LAND_MARS[登录火星];
+	MARS_EXPLORE[火星探索];
+	ACTIVITY_FUND[活动基金];
+	ROOM_SKIN[卧室皮肤];
+}
+
+ALEnum ENPItemType[物品大类型]
+{
+    NONE;
+    CURRENCY[货币，count: 数量];
+    BAG_ITEM[背包物品，count: 数量];
+    TITLE[普通称号，count: 时间（秒）];
+    ICON[头像，count: 时间（秒）];
+    ICON_BGK[头像框，count: 时间（秒）];
+    BUBBLE[气泡框，count: 时间（秒）];
+    REMOTE_EFFECT[远程效果，id为Remote配表ID，count: 执行次数];
+    MAIL[邮件，预设邮件];
+    SYS_INFO[系统信息（如解锁信息），count: 数量];
+    BUILDING[给予建筑信息，count: 数量];
+    REWARD[奖励, count: 数量];
+    CUTE_ACTOR[Q版形象，count: 时间（秒）];
+    WEEK_CARD[周卡，count:时间（秒）];
+    SYS_UNLOCK[系统解锁类型，对应simple_unlock数据，可以增加系统解锁展示，count: 数量];
+    ANECDOTE_EVENT[政务事件 ----- itemId：事件id，count: 位置id];
+    EQUIP[藏品，count: 数量];
+    TITLE_PRE[组合称号前缀];
+    TITLE_SFX[组合称号后缀];
+    TITLE_BG[组合称号底色];
+    PLAYER_SKIN[玩家形象，count: 时间（秒）];
+    ACTIVITY_CURRENCY[活动兑换券，id为活动id, count: 数量];
+    LAZY_CD[CD，count: 数量];
+    INN_RECIPE[旅店菜谱，count: 1];
+    MUSEUM_ITEM[博物馆物品，count:1];
+    PAY[现金支付，count:无意义];
+	BUFF[BUFF，count:有效时长（秒）];
+    FOREVER_ADD[永久加成，id：player_forever_add配表id，count: 次数];
+    TOOL_TIP_ITEM[点击提示，客户端使用];
+    EXCHANGE_ITEM[转换道具，id为转换配表id,count:转换次数];
+    COUNTDOWN_EVENT[倒计时事件，id为倒计时事件配表id，count：数量];
+    QUEST[任务，count无意义];
+    ITEM_DEF[自定义道具 id为itemRef表id，count：数量];
+    FIXED_CD[固定点增加cd，count: 数量];
+	RECORD[玩家记录，id枚举：ENPPlayerRecordParam，count：数量];
+	TREASURE_MAP[藏宝图，count:数量];
+	UNUSE_36[未使用 ----- 随机宠物，count:数量];
+	SHARE[分享物品，id为share表ID，count:分享次数];
+    CLOTHES_UNIT_RAND_DYE[随机获得指定单品色盘，id为单品ID，count：1];
+	CLOTHES_DYE_PALETTE[色盘, id为配表ID，count：1];
+	UNUSE_40[未使用 ----- 精灵，id为elf表id，count为数量];
+	HERO[大臣，id为hero表id，count：1];
+	HERO_SKIN[大臣皮肤，id为hero_skin表id，count：1];
+	CONSORT[情人，id为consort表id，count：1];
+	CONSORT_SKIN[情人皮肤，id为consort_skin表id，count：1];
+	CLOTHES_UNIT[时装单品，id为配表ID，count：1];
+	CLOTHES_BG[时装背景，id为配表ID，count：1];
+	ACHIEVE_POINT[成就点，id为EAchieveTyped的id，count：数量];
+	CLOTHES_SUIT[时装套装，id为配表ID，count：1];
+	HERO_RECOMMEND[大臣推荐事件];
+	CHAT_EMOTE_GROUP[聊天表情包，count: 时间（秒）];
+	CLOTHES_ACT[时装动作，id为配表ID，count：1];
+	CLOTHES_POSE[时装姿势，id为配表ID，count：1];
+	CLOTHES_HAND_POSE[时装手势，id为配表ID，count：1];
+	CONSORT_CG[情人CG，id为consort_cg表id，count：1];
+	PRIVILEGE_CARD[权益卡，id为EPrivilegeCardType枚举，count：数量];
+	GUILD_BOX[联盟宝箱];
+	ROOM_SKIN[房间皮肤];
+}
+
+ALEnum ENPBagItemType[背包物品类型]
+{
+    NONE;
+    RES[资源];
+    HERO[骑士];
+    FUNCTION[功能];
+    OTHER[其他];
+}
+
+ALEnum ENPShareItemType[分享物品类型]
+{
+    NONE;
+    BOX[宝箱];
+}
+
+ALEnum ENPHeroTag[英雄标记处理]
+{
+    NONE[无效属性];
+    RANGE_ATT[远程];
+    NEAR_ATT[近战];
+    MAGIC_ATT[魔法];
+}
+
+ALEnum ENPPlayerConditionType[玩家条件类型]
+{
+    NONE;
+    UNUSE_S_LOGIC_EVENT[废除 监听到事件触发 S_LOGIC_EVENT:事件名称:事件参数:n:m];
+    CS_VALUE[值范围 CS_VALUE:ENPPlayerValueType:min:max];
+    CS_BUF_LAYER[BUFF层级 CS_BUF_LAYER:buf_id:min:max];
+    CS_HAS_ITEM[拥有物品  CS_HAS_ITEM:itemType-item_id:min:max];
+    CS_HAS_BUILDING[玩家已放置建筑 CS_HAS_BUILDING:building_id];
+    CS_JUD_SIM_UNLOCK[判断简要解锁的解锁信息 CS_JUD_SIM_UNLOCK:sim_unlock_id];
+    CS_SPECIAL[特殊判断条件 CS_SPECIAL:ENPPlayer_CS_SpecialCondition];
+    C_ID_JUDGE[针对Id进行判断 C_ID_JUDGE:EPlayer_C_IdJudgeFunc:id];
+    CS_ID_JUDGE[针对Id进行判断 CS_ID_JUDGE:ENPPlayer_CS_IdJudgeFunc:id];
+    CS_RECORD_PARAM[玩家计数 CS_RECORD_PARAM:ENPPlayerRecordParam:min_value（:max_value）];
+	CS_QUEST_COUNT[任务完成次数 CS_QUEST_COUNT:quest_id:min_value（:max_value）];
+	CS_QUEST_DOING[正在进行的任务 CS_QUEST_DOING:quest_id（:quest_step_ID:quest_target_ID）];
+	CS_EVENT_RECORD[玩家事件记录计数 CS_EVENT_RECORD:ENPPlayerEventRecordType:sub_id:min_value（:max_value），sub_id取-1表示所有子计数之和注意，sub_id使用负数时需要用括号括起来，否则会被当成分隔符无法读取例： '（-1）'];
+	C_GUILD_SELF_HAVE_PERMISSION[联盟自己的职位是否拥有对应权限 C_GUILD_SELF_HAVE_PERMISSION:EGuildPermissionType];
+	C_HAS_TREASURE_MAP[拥有藏宝图 C_HAS_TREASURE_MAP（:id配置id）];
+    CS_QUEST_STEP_IS_DONE[是否完成任务 CS_QUEST_STEP_IS_DONE:quest_id:step_id];
+	CS_VARIABLE[某高级公式的值范围 CS_VARIABLE:min:max:高级公式];
+	C_PLAYER_CAN_LEVEL_UP[玩家可以升级 C_PLAYER_CAN_LEVEL_UP];
+	C_PLAYER_IN_SPACE_POS[玩家在大地图指定范围 C_PLAYER_IN_SPACE_POS:mapid（地图id）:位置（Vector3）:范围（float）];
+	CS_HAS_HERO[拥有指定大臣中的n个 CS_HAS_HERO:hero1&hero2:（n）];
+	CS_BUILDING_FUNC_LEVEL[玩家已放置建筑功能等级 CS_BUILDING_FUNC_LEVEL:building_id:EBuildingFuncEnum（:minLevel:maxLevel）];
+	CS_CHAPTER_STAGE_PASSED[章节是否通过指定关卡 CS_CHAPTER_STAGE_PASSED:stageId];
+	CS_CONSORT_SKILL[情人技能解锁检查 CS_CONSORT_SKILL:情人ID:技能ID:最小等级（:最大等级 默认-1）];
+	C_FUNC_UNLOCK_IS_SHOW[系统解锁弹窗是否已经展示过 C_FUNC_UNLOCK_IS_SHOW:ENPFunctionType];
+	CS_HERO_REACH_STAR_NUM[达到指定星级大臣数量 CS_HERO_REACH_STAR_NUM:星级:min（:max）];
+	CS_LEVY_SUM[征收累计数量 CS_LEVY_SUM:ELevy_Type:min（:max）];
+	C_ACHIEVE_IS_DONE[成就是否已经全部完成领奖 C_ACHIEVE_IS_DONE:achieve_id];
+	C_WEEK_CARD_STAT[周卡状态是否满足 C_WEEK_CARD_STAT:stat（EWeekCardStat）];
+	C_ADD_PACK_NEED_DOWNLOAD[是否有增量包需要下载 C_ADD_PACK_NEED_DOWNLOAD];
+	C_CHAPTER_BLOCK_EVENT_DEAL_DONE[关卡格子上事件是否处理完成 C_CHAPTER_BLOCK_EVENT_DEAL_DONE:关卡格子配表id chapter_stage_block_id （:挂起事件是否视为事件已经完成bool, 默认为true）];
+	C_CLOTHES_HANDBOOK_CAN_REWARD[图鉴是否可以领奖 C_CLOTHES_HANDBOOK_CAN_REWARD:TRUE（或者FALSE）];
+	C_CONSORT_INTIMACY_STEP_REACHED[妃子亲密度阶段是否达到 C_CONSORT_INTIMACY_STEP_REACHED:妃子consort_id:阶段intimacy_step];
+	CS_CONSORT_RES_COUNT[指定家人指定资源数量  CS_CONSORT_RES_COUNT:家人ID:EBagItemUse_ConsortDrawShowType:min:max];
+	CS_CONSORT_LIKE_COUNT[指定家人（未获得）好感度数值  CS_CONSORT_LIKE_COUNT:家人ID:min:max];
+	C_HAS_OWNER_DINNER_REWARD[是否有自身宴会奖励未领取 C_HAS_OWNER_DINNER_REWARD];
+	C_EVENING_DUNGEON_ACTIVITY_STATE[晚间副本活动状态 C_EVENING_DUNGEON_ACTIVITY_STATE:（EEveningDungeonActivityState:PREVIEW:ONGOING:END:CLOSE）];
+    C_HOTFIX_CONDITION[热更条件类型 C_HOTFIX_CONDITION:热更条件类型:参数];
+    C_MIDDAY_DUNGEON_ACTIVITY_STATE[午间副本活动状态 C_MIDDAY_DUNGEON_ACTIVITY_STATE:（EMiddayDungeonActivityState:PREVIEW:ONGOING:END）];
+    C_SEVEN_DAY_LOGIN_HAD_DRAW_COUNT[七天登录已领取奖励数量 C_SEVEN_DAY_LOGIN_HAD_DRAW_COUNT:int];
+    CS_HAS_CONSORT[拥有指定妃子中的n个 CS_HAS_CONSORT:consort1&consort2:（n）];
+    C_ACTIVITY_STATE[活动状态 C_ACTIVITY_STATE:EActivityState:activityId];
+    CS_HAD_UNLOCK_INN_DISH[是否解锁旅店菜品 CS_HAD_UNLOCK_INN_DISH:菜品id];
+    CS_HAD_UNLOCK_BUILDING_PRODUCT[是否解锁建筑产品 CS_HAD_UNLOCK_BUILDING_PRODUCT:建筑id:产品id];
+	C_CONSORT_CALL_DIALOG_NOT_SHOW_CG[妃子邀约对话是否不展示CG];
+    S_IS_SYSTEM_QUEST_GROUP_DONE[是否完成系统任务组 S_IS_SYSTEM_QUEST_GROUP_DONE:group_id];
+    CS_MARS_BUILDING_LVL[火星指定建筑等级判断 CS_MARS_BUILDING_LVL:建筑id:min_value（:max_value）];
+    CS_MARS_TECH_LVL[火星指定科技等级判断 CS_MARS_TECH_LVL:科技id:min_value（:max_value）];
+    CS_CONSORT_UNLOCK_CG_NUM[解锁妃子CG的数量 CS_CONSORT_UNLOCK_CG_NUM:min_value（:max_value）];
+	CS_CHECK_PLAYER_PERMISSION[检查玩家是否拥有指定权限 CS_CHECK_PLAYER_PERMISSION:权限配置ID];
+    CS_MARS_PEOPLE_NUM[火星人口数量判断 CS_MARS_PEOPLE_NUM:min_value（:max_value）];
+    CS_MARS_IDLE_PEOPLE_NUM[火星空闲人口数量判断 CS_MARS_IDLE_PEOPLE_NUM:min_value（:max_value）];
+    C_LOVER_COLLECT_HAS_TARGET[情人收集是否有指定目标情人];
+    C_LOVER_COLLECT_HAD_DRAW[情人收集是否已抽取指定情人];
+	C_SPECIAL[客户端特殊判断条件 C_SPECIAL:EClientSpecialConditionType];
+}
+
+ALEnum ENPPlayer_CS_SpecialCondition[玩家特殊的条件判断]
+{
+    NONE;
+    C_IS_IN_TUTORIAL[是否在引导中];
+    C_CITY_SCENE_IS_SHOW[主城场景是否显示];
+    C_ROOM_SCENE_IS_SHOW[卧室场景是否显示];
+    C_CHILD_HAS_UNMARRIED_ADULT[是否有可以联姻的成年子嗣];
+    C_CHILD_CAN_TRAIN[是否有可以培养的子嗣];
+    C_HAVE_ANNOUNCEMENT[是否拥有运营公告];
+    C_HAVE_QUESTIONNAIRE[是否有问卷调查];
+    C_HAVE_RANK_RUSH_ACTIVITY[是否有限时冲榜活动];
+	C_ANECDOTE_IN_EVENT_PROCESS[是否有经营事件处理中];
+	CS_QUEST_ALL_DONE[所有主线任务完成];
+	C_FUNCTION_REWARD_ALL_GET[功能解锁奖励是否全部领取完毕];
+	C_HAVE_STEP_REWARD_ACTIVITY[是否有阶段奖励活动];
+	C_CONSORT_HAS_UNCLAIMED_CG_REWARD[是否有未领取的妃子cg奖励];
+	CS_IS_ARRIVE_MARS[是否已到达火星];
+	C_FIRST_RECHARGE_REWARD_IS_ALL_GET[首充奖励是否已经全部领取];
+	C_HAVE_AVAIABLE_GEM_GIFT_PACK[是否有可用钻石礼包];
+	C_CAN_USE_WEB_RECHARGE[是否可以使用网页充值];
+	C_STAGE_GOAL_IS_ALL_DONE[阶段目标是否全部完成];
+	C_IS_LANDING_MARS[是否已经登录火星];
+	C_CUR_WND_HERO_CAN_UPGRADE[当前窗口的顾问是否可以升级];
+	C_TRAVEL_HAS_EVENT_UNTREATED[游历中是否有未处理事件];
+	C_HAVE_COUNT_DOWN_EVENT[是否有倒计时事件];
+	C_COUNT_DOWN_EVENT_CAN_GET_REWARD[倒计时事件是否可以领取奖励];
+	C_CUR_IS_IN_CHAPTER_BOSS[当前是否在章节boss战中];
+	C_CUR_CHAPTER_BOSS_POWER_IS_ENOUGH[当前boss战战力是否足够];
+}
+ALEnum ENPPlayer_CS_IdJudgeFunc[玩家特殊的条件判断-CS_ID_JUDGE]
+{
+    NONE;
+    STAGE_GOAL_STEP_IS_DONE[阶段目标是否完成];
+    HAD_GAIN_TREASURE_HUNT_ORE[是否获得过太空寻宝矿石];
+    HAD_GAIN_TREASURE_HUNT_TREASURE[是否获得过太空寻宝奇物];
+    HAD_COLLECT_TREASURE_HUNT_COMPOSITE[是否集齐太空寻宝组合];
+    HAD_DONE_SYSTEM_QUEST_TASK[是否已完成指定系统任务];
+}
+
+ALEnum ENPPlayerVariableType[玩家的参数类型 高级公式类型]
+{
+    NONE;
+    C_RND[随机值 c_rnd@max];
+    S_RND[服务端随机值 s_rnd@max];
+    CS_NUM[指定数字 cs_num@num];
+    CS_VALUE[指定类型的值，如等级等 cs_value@ENPPlayerValueType];
+    CS_PROPERTY[玩家属性 cs_property@ENPPlayerPropertyType];
+    CS_VAR_V[对应的动态值 cs_var_v@ENPPlayerVariableVarType];
+    CS_BUF_L[buf层级 cs_buf_l@buf_id];
+    CS_BUFF_HAD_ACTIVE_DAY[buff已生效自然天 从1开始 cs_buff_had_active_day@buff_id];
+    CS_ITEM_COUNT[物品数量 cs_item_count@item_type@sub_id];
+    CS_HAS_BUILDING[是否拥有建筑 CS_HAS_BUILDING@建筑id 1=有 0=无];
+    CS_PARAM[玩家系数 cs_param@ENPPlayerParam];
+    CS_VALUE_ID[玩家对应Id的某一个值 cs_value_id@ENPPlayerIdValueType@value_id];
+    CS_BUSINESS_BUILDING_WORKER_NUM[指定经营建筑员工数量 CS_BUSINESS_BUILDING_WORKER_NUM@建筑id）];
+    CS_BUILDING_LEVEL[建筑等级 CS_BUILDING_LEVEL@建筑功能类型EBuildingFuncEnum@建筑id（如果传0为该类型下所有）];
+	CS_CONDITION_BOOLEAN_V[返回条件的布尔值 CS_CONDITION_BOOLEAN_V@（条件）条件外的括号比较特殊，不可省略];
+	CS_RECORD_PARAM[玩家记录 CS_RECORD_PARAM@ENPPlayerRecordParam];
+	CS_EVENT_RECORD[玩家事件记录计数 CS_EVENT_RECORD@ENPPlayerEventRecordType（@sub_id）注意，sub_id使用负数时需要用括号括起来，否则会被当成分隔符无法读取例： '（-1）'];
+	CS_BUILDING_LVL[已放置指定建筑的等级 CS_BUILDING_LVL@建筑ID];
+    CS_SCOPE_ITEM_COUNT[范围内物品数量 CS_SCOPE_ITEM_COUNT@item_type@startSubIdS:endSubIdS];
+    S_RND_FROM_SCOPE[范围内随机值 S_RND_FROM_SCOPE@startCount@endCount];
+    S_RND_BASIC_ATTR[已废弃 - 随机基础属性类型 S_RND_BASIC_ATTR（@EBasicAttrType） 如果传了则是指定类型，没传则为随机];
+    S_RND_ATTR_HERO[随机已拥有特长大臣 S_RND_ATTR_HERO（@ESpecAttrType） 如果传了则是指定类型，没传则为随机];
+    S_RND_CONSORT[随机已拥有情人 S_RND_CONSORT];
+    CS_HERO_NUM[已拥有大臣数量（可配置等级上下限，无限制即-1） CS_HERO_NUM（@min_lv@max_lv）];
+    S_RND_VALUE_BY_WEIGHT[通过权重随机数值 S_RND_VALUE_BY_WEIGHT@value1：weight1；value2：weight2...];
+	CS_LEVY_SUM[征收累计数量 CS_LEVY_SUM@ELevy_Type];
+	CS_CLOTHES_UNIT_QUALITY_NUM[指定品质服装数量 CS_CLOTHES_UNIT_QUALITY_NUM@ENPQuality];
+	CS_CONSORT_RES_COUNT[指定家人指定类型资源数量 CS_CONSORT_RES_COUNT@家人ID@EBagItemUse_ConsortDrawShowType];
+	CS_CONSORT_FETTER_LEVLE[指定家人的羁绊等级 C_CONSORT_FETTER_LEVLE@家人ID];
+	CS_MARS_BUILDING_LVL[指定火星建筑等级 CS_MARS_BUILDING_LVL@火星建筑ID];
+	CS_MARS_BUILDING_EQUIP_LVL[指定火星建筑指定部件等级 CS_MARS_BUILDING_EQUIP_LVL@火星建筑ID@部件ID];
+	CS_MARS_BUILDING_DISPATCH_NUM[指定火星建筑派遣居民数量 CS_MARS_BUILDING_DISPATCH_NUM@火星建筑ID];
+}
+
+ALEnum ENPMusuemCountType[博物馆藏品数量,筛选类型]
+{
+    NONE;
+    QUALITY[品质];
+}
+
+ALEnum ENPPlayerValueType[玩家的值类型,高级公式 CS_VALUE的值类型]
+{
+    NONE;
+    LVL[玩家等级];
+    VIP_LVL[玩家VIP等级];
+    RMB_NUM[玩家充值RMB值];
+	FRIEND_COUNT[好友数量];
+	HERO_NUM[大臣数量];
+	HERO_IN_BUILDING_NUM[入驻建筑的大臣数量];
+	EARNINGS[每秒赚速];
+	CHILD_SUM[未成年子嗣数量];
+	TOTAL_HERO_POWER[总大臣实力];
+	TOTAL_HERO_TALENT[总大臣资质];
+	CONSORT_NUM[情人数量];
+	CHAPTER_POINT[章节位置 chapterId*1000+point];
+	BUILDING_NUM[建筑数量];
+	TOTAL_HERO_LEVEL[总大臣等级];
+	TOTAL_CONSORT_INTIMACY[总情人亲密度];
+	TOTAL_CONSORT_CHARM[总情人加护力];
+	DAILY_CHECK_SUM[总签到天数];
+	DONE_MAIN_QUEST_COUNT[主线任务完成数（如果多次完成也算1次）];
+	STAGE_GOAL_DONE_STEP[阶段目标已完成阶段];
+	INN_POPULARITY[旅店人气值];
+	INN_LEVEL[旅店等级];
+	TOWER_PASSED_CHAPTER[爬塔当前通关的章节];
+	INN_HAD_UNLOCK_DISH_NUM[旅店已解锁菜品数量];
+	TOWER_PASSED_LVL[爬塔当前通关的关卡层数];
+	INN_STATION_TOTAL_LEVEL[旅店设施总等级];
+	INN_HAD_RECEIVE_GUEST_COUNT[旅店已接待客人数量];
+	TREASURE_HUNT_STATION_LEVEL[太空寻宝太空舱等级];
+	TREASURE_HUNT_HAD_GAIN_ORE_TYPE_COUNT[太空寻宝已收集矿石类型数量];
+	TREASURE_HUNT_HAD_GAIN_TREASURE_TYPE_COUNT[太空寻宝已收集奇物类型数量];
+	TREASURE_HUNT_HAD_COLLECT_COMPOSITE_COUNT[太空寻宝已集齐组合数量];
+	NAMED_CHILD_NUM[已命名未成年子嗣数量];
+	MUSEUM_ITEM_NUM[已获得珍宝数量];
+	CHAPTER_ID[当前章节ID];
+	GUILD_LEVEL[所在联盟等级];
+	UNMARRY_ADULT_SUM[未婚成年子嗣数量];
+	MARS_EXPLORER_NUM[火星探索次数];
+	TOWER_ACTIVE_RESEARCH_COUNT[爬塔已激活研究章节数量];
+	MARS_BUILDING_EQUIP_LVL_SUM[火星所有建筑所有部件总等级];
+	MARS_BUILDING_LVL_SUM[火星所有建筑总等级];
+	INN_MEDAL_LEVEL[旅店奖牌等级];
+	TOTAL_GAIN_GOLD_COUNT[获得的金币总数量];
+}
+
+ALEnum ENPPlayerIdValueType[玩家根据Id获取数值的类型枚举]
+{
+    NONE;
+    CONSORT_INTIMACY[情人亲密度];
+    INN_STATION_LEVEL[旅店设施等级];
+    BUILDING_EARNINGS[指定建筑赚速];
+}
+
+ALEnum ENPPlayerVariableVarType[玩家的参数类型 特殊定义的值类型]
+{
+    NONE;
+    BUY_TIMES[购买次数];
+    HERO_ID[大臣id];
+    CONSORT_ID[情人id];
+	USE_COUNT[使用次数];
+	SPEC_ATTR_TYPE[相性];
+	COUNT[通用数值];
+	ID[通用实例ID];
+	QUALITY[通用品质];
+}
+
+
+
+ALEnum ENpLogType[日志记录类型，增删改]
+{
+    NONE;
+    ADD[增加];
+    DEL[删除];
+    SET[设置];
+}
+
+ALEnum ENpRewardShowType[游戏奖励获取展示样式]
+{
+    DEFAULT[默认样式];
+	TIP[tip提示];
+	NOT_DISPLAY[不展示];
+}
+
+ALEnum ENPChatRoomType[聊天房间类型]
+{
+    NONE;
+    TOTAL_AREA[全区玩家聊天];
+    US_SERVER[单个玩家服聊天];
+    GUILD[联盟聊天];
+	ACTIVITY_TEAM[活动队伍聊天];
+}
+
+ALEnum ENPChatMsgType[聊天消息内容分类]
+{
+    NONE;
+    TEXT[普通私聊内容,代表消息内容需要用 ChatContent_TextMsg];
+    TIME[时间消息,代表消息内容是个时间戳];
+    SYSTEM[系统消息];
+    MIDDAY_DUNGEON_BOX[午间副本宝箱];
+    SYSTEM_LOG[系统日志消息];
+	COMM_BOX[通用宝箱];
+    EVENING_DUNGEON_BOX[晚间副本宝箱];
+	ADULT_MARRY_SERVER_APPLY[子嗣全服联姻];
+    DINNER_INVITE[宴会邀请];
+    EMOTE[表情];
+    SHARE_HERO[骑士分享];
+    SHARE_CONSORT[妃子分享];
+    SHARE_CHILD[子嗣分享];
+	ACTIVITY_RANK_BOX[冲榜宝箱];
+	GUILD_PRIVATE_INFORM[联盟私聊通知];
+	GUILD_LOG[联盟日志消息];
+	GUILD_RECRUIT[联盟招募];
+	SHARE_CONSORT_CG[情人CG分享];
+	GUILD_MARS_MINE_OCCUPY[联盟成员火星矿被攻击];
+	SHARE_MARS_EXPLORE_MINE[火星探险矿分享];
+}
+
+/// 不需要保证客户端和服务器一定同步的效果，战斗相关之外的
+/// （即有的有同步到服务器，有的没有，C开头的一般都是不需要同步到服务器的）
+ALEnum ENPPlayerEffectType[玩家效果类型]
+{
+    NONE;
+    C_UI_TO_SYS_SCE[跳转到系统界面  C_UI_TO_SYS_SCE:ESysSceneType];
+    C_SPECIAL[客户端部分特殊效果  C_SPECIAL:EClientSpecialDealType];
+    C_T_ENTER_DUNGEON[客户端测试进入dungeon地图  C_T_ENTER_DUNGEON:dungeonId];
+    C_USE_BAG_ITEM[使用背包物品  C_USE_BAG_ITEM:itemId:（usecount）];
+    C_ENTER_ACTOR_TEST[客户端进入单位测试地图 C_ENTER_ACTOR_TEST:dungeonId];
+    C_DEAL_ID[针对ID的数据进行处理  C_DEAL_ID:EClientIDDealType:id];
+    C_SHOW_ERR[展示错误信息  C_SHOW_ERR:key:args:args...];
+    C_UI_SHOW_CUST_WND[显示自定义窗口 C_UI_SHOW_CUST_WND:assetPath:objName];
+
+	//后续是对AnimatorControlMono脚本注册对象的处理
+    C_ANI_PLAY[动作控制，对应动作播放，可自定义从某帧开始播normalizedTime：0~1， C_ANI_PLAY:animatorObjName:animatorStateName（:normalizedTime）];
+    C_ANI_SET_BOOL[动作控制，设置动作布尔值  C_ANI_SET_BOOL:animatorObjName:variableName:value];
+    C_ANI_SET_FLOAT[动作控制，设置动作浮点值 C_ANI_SET_FLOAT:animatorObjName:variableName:value];
+    C_ANI_SET_INT[动作控制，设置动作整形值 C_ANI_SET_INT:animatorObjName:variableName:value];
+    C_ANI_G_PLAY[动作控制，对应动作播放 C_ANI_G_PLAY:enum:animatorGroupName:animatorStateName];
+    C_ANI_G_SET_BOOL[动作控制，设置动作布尔值  C_ANI_G_SET_BOOL:animatorGroupName:variableName:value];
+    C_ANI_G_SET_FLOAT[动作控制，设置动作浮点值  C_ANI_G_SET_FLOAT:animatorGroupName:variableName:value];
+    C_ANI_G_SET_INT[动作控制，设置动作整形值  C_ANI_G_SET_INT:animatorGroupName:variableName:value];
+
+	UNUSE_S_S_EFFECT[已废弃];
+	S_R_EFFECT[执行远端效果 S_R_EFFECT:id];
+	S_GAIN_ITEM[获取物品 S_GAIN_ITEM:itemType-itemId:count#itemType-itemId:count];
+	S_SPEND_ITEM[扣除物品（无需保证物品数量满足）S_SPEND_ITEM:itemType-itemId:count#itemType-itemId:count];
+	S_GAIN_ITEM_FORM[获取物品（高级公式） S_GAIN_ITEM_FORM:itemType:count（高级公式）:倍数（高级公式）];
+	S_CHG_BUFF[修改buff（不存在就新增，已存在在原基础上进行调整）  S_CHG_BUFF:buff_id:layer:timeS（秒：-1永久）];
+	S_SET_BUFF[修改buff（不存在就新增，已存在在则替换原基础）  S_CHG_BUFF:buff_id:layer:timeS（秒：-1永久）];
+	UNUSE_S_CHG_BUFF_TIME[已废弃];
+	S_DEL_BUFF[移除buff  S_DEL_BUFF:buff_id];
+	S_GAIN_REWARD[获取奖励 S_GAIN_REWARD:reward_id#reward_id...];
+	S_START_QUEST[开启任务 S_START_QUEST:quest_id];
+	S_QUEST_COUNTER_CHG[修改任务步骤计数 S_QUEST_COUNTER_CHG:quest_id:quest_step:quest_step_target:计数的变化数值（:ENCounterDealType默认ADD）];
+	S_RECORD_CHG[修改玩家计数 S_RECORD_CHG:ENPPlayerRecordParam:计数的变化数值（:ENCounterDealType默认ADD）];
+	S_UNLOCK_ARENA[解锁竞技场功能 S_UNLOCK_ARENA];
+	S_EVENT_RECORD_CHG[修改玩家事件计数（操作枚举：） S_EVENT_RECORD_CHG:ENPPlayerEventRecordType:sub_id:计数的变化数值（:ENCounterDealType默认ADD）];
+	S_DEAL_ID[服务端针对Id的数据进行处理的统一接口 S_DEAL_ID:ENPServerIDDealType:id];
+	C_SHOWCASE_LOAD[showcase加载npc资源 C_SHOWCASE_LOAD:NPGShowcaseIndex:单位下标:NpcId];
+	C_SHOWCASE_GRAY[showcase指定下标单位置灰 C_SHOWCASE_GRAY:NPGShowcaseIndex:单位下标:是否置灰];
+	C_SPECIAL_DIALOGUE[客户端部分特殊对话效果 C_SPECIAL_DIALOGUE:ENPClientSpecialDoalogueDealType];
+    C_WISH_QUEST_SHOWCASE_LOAD[showcase加载心愿任务宠物资源 C_WISH_QUEST_SHOWCASE_LOAD:NPGShowcaseIndex:单位下标];
+    C_SHOWCASE_LOAD_PET[showcase加载宠物资源 C_SHOWCASE_LOAD_PET:ENPPlayerParam:NPGShowcaseIndex:单位下标];
+    C_SEND_MSG[发送客户端自定义监听消息 C_SEND_MSG:WinMsgType];
+    C_DEAL_PRIVATE_ITEM_ACTION[执行某个个人物件的某个action C_DEAL_PRIVATE_ITEM_ACTION:个人物件refId:action的refId:对应op的索引（从0开始，大部分action都只有一个op）];
+    C_CAMERA_MOVE_FOCUS_TO[摄像头移动聚焦到某个位置（视野焦点世界坐标） C_CAMERA_MOVE_FOCUS_TO:（x,y,z）:duration];
+    C_GOTO_EFFECT[执行effect_goto表里的effect: C_GOTO_EFFECT:id1:id2:...];
+    C_ENTER_PRIVATE_ITEM_SIMPLE_PVE_BATTLE[进入一个个人物件挑战，布阵位置是固定的玩家初始阵型，宠物是玩家当前按战力顺序前5只];
+    C_DEAL_STRING[针对String的数据进行处理  C_DEAL_STRING:EClientStringDealType:string];
+    C_SPECIAL_SEND_EVENT[发送第三方埋点 C_SPECIAL_SEND_EVENT:EThirdCustomEventType];
+    C_PREFAB_LOAD[为注册的加载对象，配合脚本PrefabControlMono使用 加载子对象 C_PREFAB_LOAD:tag:uiResPathId];
+
+    S_RND_GAIN_X_BUSINESS_WORKERS[为随机建筑招募X位员工（数量） S_RND_GAIN_X_BUSINESS_WORKERS:数量];
+    S_ANECDOTE_REFRESH[对政务指定刷新组进行刷新 S_ANECDOTE_REFRESH:刷新组id];
+    S_UNLOCK_SEVEN_DAYS_LOGIN[解锁七日登录 S_UNLOCK_SEVEN_DAYS_LOGIN];
+    S_GAIN_X_CONSORT_CHARM_FROM[给予已拥有的情人魅力值（情人id,数量） S_GAIN_X_CONSORT_CHARM_FROM:情人id（高级公式）:数量（高级公式）];
+    S_GAIN_X_CONSORT_INTIMACY_FROM[给予已拥有的情人亲密度（情人id,数量） S_GAIN_X_CONSORT_INTIMACY_FROM:情人id（高级公式）:数量（高级公式）];
+    S_GAIN_LAZY_CD[给予LAZY_CD（CdId,数量）S_GAIN_LAZY_CD:CdId:数量];
+    C_CLOSE_NODE[关闭窗口节点，可指定节点 C_CLOSE_NODE（:nodeTag）];
+	
+	C_SHOWCASE_LOAD_SPEC[showcase加载指定类型资源 C_SHOWCASE_LOAD_SPEC:NPGShowcaseIndex:单位下标:EShowcaseLoadType];
+	
+	S_ADD_P_V[增加玩家数值（数量：定值），S_ADD_P_V:EEffectPlayerValueType:数量];
+	S_ADD_P_V_FORM[增加玩家数值（数量：高级公式），S_ADD_P_V:EEffectPlayerValueType:高级公式];
+	
+	C_CAMERA_MOVE_FOCUS_TO_ENTRYPOINT[摄像头聚焦到当前存在的指定 entry_point C_Camera_Move_Focus_To_EntryPoint:entry_point_id:duration];
+	S_LEVY_ADD_COUNT[征收增加次数，S_LEVY_ADD_COUNT:征收类型枚举ELevy_Type（当前只有士兵征收有效）:数量];
+	
+	S_GAIN_AND_SET_CUTE_ACTOR[获得且设置Q版形象 S_GAIN_AND_SET_CUTE_ACTOR:Q版形象ID（:时间（秒），默认为0）];
+	C_SHOWCASE_MAGICA_CLOTH[showcase指定下标单位开启关闭魔法布料物理效果 C_SHOWCASE_MAGICA_CLOTH:NPGShowcaseIndex:单位下标:是否开启];
+	C_SHOW_BATCH_USE_ITEM_WND[打开批量使用道具窗口 C_SHOW_BATCH_USE_ITEM_WND:itemId];
+	C_SHOWCASE_PLAY_SFX[showcase在指定index播放sfx，要求这个index有对象了 C_SHOWCASE_LOAD:NPGShowcaseIndex:单位下标:sfxId];
+	C_CAMERA_MOVE_TO[摄像头移动到某个位置（世界坐标） C_CAMERA_MOVE_TO:（x,y,z）:duration];
+	C_PLAY_FUNC_UNLOCK_PROCESS[播放系统解锁表现过程，C_PLAY_FUNC_UNLOCK_PROCESS:ENPFunctionType（:是否使用notice）];
+	C_REFRESH_ENTRY_STATE[刷新入口状态，C_REFRESH_ENTRY_STATE:ENPFunctionType];
+	C_PREFAB_DISCARD[配合脚本PrefabControlMono使用，销毁子对象，C_PREFAB_DISCARD:tag];
+	C_SET_CLOTHES_UNIT[设置avatar穿戴部件，如果多个部件后面直接接上id，C_SET_CLOTHES_UNIT:部件id:部件id...];
+	C_PLAY_DIALOG_AUDIO[播放对话音效 C_PLAY_DIALOG_AUDIO:音效refId:音效layer:需要停止的音效layer列表（列表中元素用,分割）];
+	S_CHG_LEVY_SILVER_TIME[修改可征收金币时间，S_CHG_LEVY_SILIVER_TIME:ENPTimeAddType（SET、ADD）:时间（秒）];
+	
+	C_SEND_MSG_WITH_PARAM[发送客户端自定义监听消息 C_SEND_MSG:WinMsgType:自定义参数];
+	
+	S_GAIN_X_CONSORT_LIKE_FROM[给予未拥有的情人好感度（情人id,数量） S_GAIN_X_CONSORT_LIKE_FROM:情人id:数量（高级公式）];
+	
+	C_ANI_SET_ANI[动作控制，强制设置动画 C_ANI_SET_ANI:animatorObjName:aniName];
+	C_ANI_G_SET_ANI[动作控制，强制设置动画 C_ANI_G_SET_ANI:animatorGroupName:aniName];
+	C_HOTFIX_EFFECT[热更操作类型 C_HOTFIX_EFFECT:操作类型:参数（参数可不填）];
+	
+	S_GAIN_X_CONSORT_CHARM_POINT_FROM[给予已拥有的情人加护力点（情人id，数量，倍数） S_GAIN_X_CONSORT_CHARM_POINT_FROM:情人id（高级公式）:数量（高级公式）(:倍数，默认1)];
+
+	S_GAIN_X_CHILD_EXP_POINT_FROM[给予未成年子嗣增加经验（子嗣实例id，数量，倍数） S_GAIN_X_CHILD_EXP_POINT_FROM:未成年id（高级公式）:数量（高级公式）(:倍数，默认1)];
+
+	S_MARS_CHG_MOOD[火星系统：修改心情指数（额外），S_MARS_CHG_MOOD:count数量];
+	S_MARS_CURE[火星系统：治疗数量，S_MARS_CURE:数量（-1 全部病人）];
+	S_MARS_RND_B_RND_SICK[火星系统：随机建筑（需要有工作居民）随机1~n个居民进入医疗室，S_MARS_RND_B_RND_SICK];
+	S_MARS_RND_B_RND_LOST[火星系统：随机建筑随机（需要有工作居民）减少1~n个居民，S_MARS_RND_B_RND_LOST];
+	S_MARS_GAIN_ENERGY[火星系统：立即获得N小时产出的能源，S_MARS_GAIN_ENERGY:mins（分钟）];
+	
+	S_GAIN_REWARD_FORM[获取奖励（高级公式） S_GAIN_REWARD_FORM:reward_id（高级公式）:倍数（高级公式）];
+	S_INN_ADD_GUEST[旅店系统：增加接待客人数量，S_INN_ADD_GUEST:数量];
+	C_TRY_TRIGGER_PUSH_GIFT_PACK[尝试触发推送礼包 C_TRY_TRIGGER_PUSH_GIFT_PACK:礼包组id];
+	
+	C_PLAY_AUDIO[客户端枚举];
+	S_CHG_BIRTH_GIFTDE_COUM[增加卷王子嗣次数 S_CHG_BIRTH_GIFTDE_COUM:数量（:ENCounterDealType默认ADD）];
+}
+
+ALEnum EEffectPlayerValueType[效果S_ADD_P_V_FORM的二级枚举]
+{
+    NONE;
+	UNUSE_ANECDOTE[已废弃-政务事件];
+	UNUSE_TRAVEL_MESS[已废弃-游历情报值];
+}
+
+ALEnum ENPClientSpecialDoalogueDealType 
+{
+	NONE;
+	CONFIRM[确认];
+	CANCEL[取消];
+}
+
+ALEnum ENPBattleShowType[战斗表现类型]
+{
+    NORMAL[普通];
+    MISSION_BOOS[关卡boss];
+}
+
+
+ALEnum ENPServerIDDealType[服务端ID处理效果枚举]
+{
+    NONE;
+    TAKE_MAIL_ATT[取出对应邮件Id的附件];
+}
+
+ALEnum ENPHatchSeedStatusType[孵化场种子状态]
+{
+    NONE;
+    IDLE[空闲];
+    PREPARE[准备队列中];
+    INCUBATING[孵化中];
+    MATURE[成熟];
+}
+
+ALEnum ENPHatchSeedStatusTypeV2[孵化场种子状态V2]
+{
+    NONE;
+    PREPARE[等待中];
+    INCUBATING[孵化中];
+    MATURE[已成熟];
+}
+
+ALEnum ENPBuilding_Res[资源建筑分类枚举]
+{
+    NONE;
+	DEFAULT[默认产出，获取不到其他类型的时候获取本类型];
+    GOLD[金币产出];
+    FOOD[食物产出];
+    P_EXP[玩家经验];
+	DUST[粉尘];
+	ENERGY[注能道具];
+	CEREALS[粮食];
+	FIGHT_REWARD[关卡征收];
+	WOOD[建筑材料];
+}
+
+ALEnum ENPCityBuildDetailType[建筑细分类型]
+{
+    NONE;
+    NORMAL[未分类];
+    HATCH[孵化场];
+    MUSEUM[博物馆];
+	COOKING[烹饪];
+	FIGHT[关卡];
+	MINI_GAME_QUEST[悬赏任务];
+	PLAYER_CARVING[玩家雕像];
+	FIGHT_REWARD[关卡奖励];
+	STELLA[家族星座];
+	SIGN_IN[签到建筑];
+	ELF[精灵爱心工坊建筑];
+}
+
+ALEnum EServerOnlineState[服务器状态]
+{   
+    OPEN[在线-所有人可访问];
+    CLOSED[维护-白名单可以访问];
+    TEMP_CLOSED[测试-白名单可以访问];
+}
+
+ALEnum EServerShowState[服务器对外显示状态]
+{
+    NEW[新服];
+    FULL[爆满];
+    RECOMMEND [推荐];
+}
+
+ALEnum ERankType[排行榜类型]
+{
+    NONE;
+    PLAYER[玩家排行榜];
+    GUILD[联盟排行榜];
+	ACTIVITY_TEAM[活动组队排行榜];
+}
+
+ALEnum EExchangeItemDealType[物品转换生效时机]
+{
+    NONE;
+    GAIN_ITEM_TIME[获得物品时];
+    MUSEUM_ITEM_STAR_MAX[博物馆藏品满星];
+    GAIN_ACTIVE_ITEM[获得活跃度时];
+}
+
+ALEnum ENPMonsterPeriodType[怪物阶级枚举]
+{
+    NONE;
+    BOSS[boss];
+    CREAM[精英];
+    TRASH[杂鱼];
+}
+
+ALEnum EQuality[通用品质枚举]
+{
+	NONE;
+    WHITE[白];
+    GREEN[绿];
+    BLUE[蓝];
+    PURPLE[紫];
+    ORANGE[橙];
+    ORANGE1[橙1];
+	RED[红];
+}
+
+ALEnum ENPSpaceConditionType[空间条件枚举]
+{
+    NONE;
+    S_AREA_ITEM_EXIST[空间对象是否存在 S_AREA_ITEM_EXIST:spaceItem_id];
+}
+
+/// 不需要保证客户端和服务器一定同步的效果，战斗相关之外的
+/// （即有的有同步到服务器，有的没有，C开头的一般都是不需要同步到服务器的）
+ALEnum ENPSpaceEffectType[玩家效果类型]
+{
+    NONE;
+    S_DSI_GROUP_REFRESH[执行动态对象刷新组的刷新  S_DSI_GROUP_REFRESH:dynamic_item_refresh的id]; 
+    S_DSI_GROUP_DISCARD[执行动态对象刷新组的销毁  S_DSI_GROUP_DISCARD:dynamic_item_refresh的id]; 
+}
+
+ALEnum ENPLSGameClientType[登录服务器的客户端连接类型]
+{
+    NONE;
+    USER[正常的用户名登录];
+    USER_CHECK_CODE[用户使用验证串登录];
+    VISITORS[游客登录];
+    CHEAT[作弊登录，username为uid];
+    SDK[SDK登录];
+}
+
+ALEnum ENPCollectDateLogType[日志收集数据类型]
+{
+	NONE;
+	LOGIN[登录日志];
+	CREATE[创角日志];
+	ONLINE[在线日志];
+	RECHARGE[充值日志];
+	ITEM[物品日志];
+	ADMOB[广告日志];
+}
+
+ALEnum ENPPetUseType[宠物使用类型]
+{
+	SPACE_COMMON[地图通用 适用人走物品消失的];
+	DIGGING[挖矿];
+}

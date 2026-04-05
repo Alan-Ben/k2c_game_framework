@@ -1,0 +1,8 @@
+﻿JavaPackage Hotfix.V01.GS2GC.p200_HotSimpleActivityOp;
+csharpspace Hotfix.GS2GC.p200_HotSimpleActivityOp;
+
+ALProtocol GS2GC_200_102_OnRegularActivityShopRefresh [万能活动商店刷新推送] <200, 102>
+{
+	long activityInstanceId;
+	Hotfix.V01.Common.HotSimpleActivityObj.RegularActivity_ShopInfo shopInfo[万能活动商店信息];
+}

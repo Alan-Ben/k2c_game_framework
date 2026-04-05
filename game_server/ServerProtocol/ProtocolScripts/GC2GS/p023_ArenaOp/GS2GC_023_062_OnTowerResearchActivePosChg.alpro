@@ -1,0 +1,8 @@
+﻿﻿JavaPackage GS2GC.p023_ArenaOp;
+csharpspace GS2GC.p023_ArenaOp;
+
+ALProtocol GS2GC_023_062_OnTowerResearchActivePosChg <23, 62>
+{
+    Common.TowerObj.Tower_PosInfo pos[研究位置信息];
+    int buildingProfitAddPer[建筑收益提升万分比];
+}

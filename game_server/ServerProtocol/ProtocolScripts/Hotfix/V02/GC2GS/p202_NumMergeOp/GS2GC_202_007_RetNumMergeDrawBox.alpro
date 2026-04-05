@@ -1,0 +1,6 @@
+JavaPackage Hotfix.V02.GS2GC.p202_NumMergeOp;
+csharpspace Hotfix.GS2GC.p202_NumMergeOp;
+
+ALProtocol GS2GC_202_007_RetNumMergeDrawBox <202, 7>
+{
+}

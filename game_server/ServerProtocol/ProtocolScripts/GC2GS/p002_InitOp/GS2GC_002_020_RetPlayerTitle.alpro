@@ -1,0 +1,15 @@
+﻿﻿import Common.NPPlayerInfo.alpro;
+JavaPackage GS2GC.p002_InitOp;
+csharpspace GS2GC.p002_InitOp;
+
+ALProtocol GS2GC_002_020_RetPlayerTitle[称号初始化数据] <2, 20>
+{
+	Common.NPPlayerInfo.PlayerInfo_Title[] infoList[已解锁的普通称号列表];
+	
+	Common.NPPlayerInfo.PlayerInfo_ComboTitlePre[] comboPreList[已解锁的组合称号前缀列表];
+	Common.NPPlayerInfo.PlayerInfo_ComboTitleSfx[] comboSfxList[已解锁的组合称号后缀列表];
+	Common.NPPlayerInfo.PlayerInfo_ComboTitleBg[] comboBgList[已解锁的组合称号底色列表];
+	
+	Common.NPCommonObj.PlayerInfo_CurTitle curInfo[玩家当前穿戴称号数据];
+	bool isShow[是否展示称号];
+}

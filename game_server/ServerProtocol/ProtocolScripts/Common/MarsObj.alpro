@@ -1,0 +1,335 @@
+﻿JavaPackage Common.MarsObj;
+csharpspace Common.MarsObj;
+
+import Enum.MarsEnum.alpro;
+
+/**********************************************************
+ * 前往火星
+ **********************************************************/
+ALProtocol Mars_GoRoute_StageMsg[前往火星-阶段留言]
+{
+	string playerName[玩家名称];
+	string content[留言内容];
+	long timeMs[留言时间（毫秒）];
+}
+
+/**********************************************************
+ * 火星建筑
+ **********************************************************/
+ALProtocol Mars_Building[火星建筑-基础数据]
+{
+	long buildingId[建筑ID];
+	int lvl[建筑等级];
+}
+
+ALProtocol Mars_HomeBuilding[火星建筑-主基地]
+{
+	long buildingId[建筑ID];
+	bool isNormalOn[普通功率开启];
+	bool isOverdriveOn[最高功率开启];
+	int lastCollectTimeS[最后一次收集资源的时间（秒）];
+}
+
+ALProtocol Mars_PeopleBuilding[火星建筑-居民建筑]
+{
+	long buildingId[建筑ID];
+	int peopleNum[居民数量];
+}
+
+ALProtocol Mars_BuildingEquipment[火星建筑-部件]
+{
+	long buildingId[建筑ID];
+	long equipmentId[部件ID];
+	int lvl[建筑部件等级];
+}
+
+ALProtocol Mars_Mars_BuildingEquipment_Food[火星建筑-部件-Food]
+{
+	long buildingId[建筑ID];
+	bool isPowerOn[功率开关];
+}
+
+ALProtocol Mars_BuildingEnergyOutput[火星建筑-建筑能源产出]
+{
+	long buildingId[建筑ID];
+	long output[已产出数量];
+	long lastSettleMs[上次结算时间（毫秒）];
+}
+
+ALProtocol Mars_BuildingGainEnergyResult[火星建筑-建筑收集结果]
+{
+	long buildingId[建筑ID];
+	long count[产出数量];
+}
+
+ALProtocol Mars_BuildingUpQueue[火星建筑-建造/升级队列数据]
+{
+	long id[队列ID];
+	long buildingId[建筑ID];
+	long startUpgradeLvlMs[建筑开始升级时间（毫秒）];
+	long endUpgradeLvlMs[建筑结束升级时间（毫秒）];
+	long guildHelpId[公会求助数据ID];
+	int guildHelpSecs[公会求助时长（秒）];
+	int itemHelpSecs[道具求助时长（秒）];
+}
+
+/**********************************************************
+ * 火星居民
+ **********************************************************/ 
+ALProtocol Mars_PeopleImmigrant[火星居民-移民数据]
+{
+	long startMs[发起时间（毫秒）];
+	long endMs[结束时间（毫秒）];
+}
+
+ALProtocol Mars_PeopleImmigrantCount[火星居民-移民次数]
+{
+	int dayTag[当日标记 YYYYMMDD];
+	int usedCount[已移民次数];
+}
+ 
+ALProtocol Mars_PeopleNum[火星居民-数量]
+{
+	long idle[休闲居民数量];
+	long sick[生病居民数量];
+}
+
+ALProtocol Mars_Intelligent[火星居民-决策数据]
+{
+	long id[配表ID];
+	long endMs[冷却结束时间（毫秒）];
+}
+
+ALProtocol Mars_Letter[火星居民-信件数据]
+{
+	long id[实例ID];
+	long letterId[信件ID];
+	long npcId;
+	bool isDealed[已处理];
+}
+
+ALProtocol Mars_Help[火星居民-求助数据]
+{
+	long id[实例ID];
+	long helpId[信件ID];
+	long npcId;
+	int chooseIdx;
+	bool isFinish;
+}
+
+ALProtocol Mars_Event[火星居民-事件]
+{
+	long eventId[事件ID];
+}
+
+/**********************************************************
+ * 火星科技
+ **********************************************************/
+ALProtocol Mars_Technology[火星科技-基础数据]
+{
+	long technologyId[科技ID];
+	int lvl[科技等级];
+	bool isUpgrading[是否升级中];
+	long startUpgradeLvlMs[建筑开始升级时间（毫秒）];
+	long endUpgradeLvlMs[建筑结束升级时间（毫秒）];
+	long guildHelpId[公会求助数据ID];
+	int guildHelpSecs[公会求助时长（秒）];
+	int itemHelpSecs[道具求助时长（秒）];
+}
+
+/**********************************************************
+ * 火星探索
+ **********************************************************/
+ALProtocol Mars_Explore[火星探索-基础数据]
+{
+	int lvl;
+	int exploreSum[探索次数];
+}
+
+ALProtocol Mars_ExploreEvent[火星探索-事件数据]
+{
+	long id[实例ID];
+	Enum.MarsEnum.EMarsExploreEventType eventType[事件状态];
+	long eventId[事件ID];
+	long pos[事件位置];
+	bool isDone[是否完成];
+	int exploreLvl[探索等级];
+	long createdMs[创建时间（毫秒）];
+}
+
+ALProtocol Mars_TeamState[火星探索-队伍状态数据]
+{
+	Enum.MarsEnum.EMarsExploreTeamState state[队伍状态];
+	long stateSerialize[队伍状态序列号];
+	long stateStartMs[状态开启时间（毫秒）];
+	long stateEndMs[状态结束时间（毫秒）];
+	long pos[状态对应的目标位置];
+	Bytebuffer exData[队伍状态的额外信息];
+}
+
+ALProtocol Mars_Team[火星探索-队伍数据]
+{
+	long teamId[队伍ID];
+	string name[队伍名称];
+	long[] heroIdList[入驻大臣ID列表];
+	Mars_TeamState state[队伍状态];
+	long lossValue[队伍损耗数量];
+}
+
+ALProtocol MarsTeamState_Battle[火星队伍-battle战斗状态数据]
+{
+	long eventInstanceId[事件实例ID];
+	long marchTimeMS[行军用时（毫秒），用于返程时长];
+	long pos[所在位置];
+}
+
+ALProtocol MarsTeamState_BossBattle[火星队伍-boss战斗状态数据]
+{
+	long eventInstanceId[事件实例ID];
+	long marchTimeMS[行军用时（毫秒），用于返程时长];
+	long pos[所在位置];
+}
+
+ALProtocol MarsTeamState_Collect[火星队伍-采集状态数据]
+{
+	long mineInstanceId[火星矿实例ID];
+	long marchTimeMS[行军用时（毫秒），用于返程时长];
+	long pos[所在位置];
+	long endCollectMs[采集截至时间（毫秒）];
+	long startCollectMs[采集开始时间（毫秒）];
+}
+
+ALProtocol MarsTeamState_March[火星队伍-行军状态数据]
+{
+	long instanceId[对象实例ID，对象类型根据进入的状态确认];
+	int targetState[目标状态类型];
+}
+
+ALProtocol MarsTeamState_JoinRally[火星队伍-加入集结行军状态数据]
+{
+	long guildId[联盟ID];
+	long rallyId[集结ID];
+}
+
+ALProtocol MarsTeamState_WaitRally[火星队伍-等待集结状态数据]
+{
+	long rallyId[集结ID];
+}
+
+ALProtocol MarsBattleV2_MemberInfo[火星探险-队伍战斗单个成员队伍信息]
+{
+	long memberId[成员标记Id，用于区分战损];
+	int teamSoldierLvl[兵种等级];
+	long soldierNum[兵种数量];
+	long soldierLossValue[兵种原损耗量];
+}
+
+ALProtocol MarsTeamState_Repair[火星队伍-维修状态数据]
+{
+	long repairNum[修复士兵数];
+	long guildHelpId[公会求助数据ID];
+	int guildHelpSecs[公会求助时长（秒）];
+	bool isDone[是否完成，用于钻石完成，true-完成];
+	int itemHelpSecs[道具求助时长（秒）];
+	Common.NPCommonObj.NPCommon_ItemInfo[] costItemList[消耗的资源列表，用于取消维修时返还];
+	bool isCancel[是否取消];
+}
+
+ALProtocol Mars_MineIdx[火星探索-矿产数据索引]
+{
+	long id[实例ID];
+	long refId[配置ID];
+	long pos[位置ID];
+	long endShowMs[结束展示时间（毫秒）];
+	long startShowMs[开始展示时间（毫秒）];
+}
+
+ALProtocol Mars_MineDynamic[火星探索-矿产动态数据]
+{
+	long id[实例ID];
+	long refId[数据Id];
+	long serialize[矿状态序列号];
+	long occupiedCid[占据玩家CID];
+	long occupiedTeamId[占据队伍ID];
+	long occupiedMs[占据时间];
+	long collectSpeed[占据队伍采集速度];
+	long remainNum[剩余资源量];
+	long troopNum[占据队伍带兵量];
+	long teamPower[占据队伍实力];
+}
+
+ALProtocol Mars_ExplorePVPLogIdx[火星探索-PVP日志索引数据]
+{
+	long id[日志实力ID];
+	Enum.MarsEnum.EMarsExplorePVPLogType logType[日志类型];
+	long createdAt[创建时间（毫秒）];
+	bytebuffer exData[额外数据];
+}
+
+ALProtocol Mars_GuildBattleReportIdx[火星探索-联盟战报索引数据]
+{
+	long id[战报数据库ID];
+	long cid[发起战斗的玩家CID];
+	Enum.MarsEnum.EMarsExplorePVPLogType logType[日志类型];
+	long createdAt[创建时间（毫秒）];
+	bytebuffer logData[战报数据];
+}
+
+/**********************************************************
+ * 火星探索日志详细数据
+ **********************************************************/
+
+ALProtocol Mars_ExploreBattlePlayerInfo[火星探索-战斗玩家信息]
+{
+	long cid[玩家CID];
+	long oriSoldierNum[原士兵数];
+	long hurtSoldierNum[受伤士兵数];
+	long singleSoldierPower[单个士兵战力];
+}
+
+// NPC信息（用于事件战斗）
+ALProtocol Mars_ExploreBattleNPCInfo[火星探索-战斗NPC信息]
+{
+	long oriSoldierNum[原士兵数];
+    long hurtSoldierNum[受伤士兵数];
+    long singleSoldierPower[单个士兵战力];
+}
+
+ALProtocol Mars_MineAttackLog[火星探索-矿挑战日志]
+{
+    bool isSucc[挑战是否成功];
+    long mineRefId[矿配置ID];
+    Mars_ExploreBattlePlayerInfo attacker[进攻方信息];
+    Mars_ExploreBattlePlayerInfo defender[防守方信息];
+}
+
+ALProtocol Mars_MineDefenceLog[火星探索-矿防守日志]
+{
+    bool isSucc[防守是否成功];
+    long mineRefId[矿配置ID];
+    Mars_ExploreBattlePlayerInfo defender[防守方信息];
+    Mars_ExploreBattlePlayerInfo attacker[进攻方信息];
+}
+
+ALProtocol Mars_BattleEventLog[火星探索-挑战事件日志]
+{
+    bool isSucc[挑战是否成功];
+    long eventRefId[配置ID];
+    Mars_ExploreBattlePlayerInfo attacker[进攻方信息];
+    Mars_ExploreBattleNPCInfo npc[NPC信息];
+}
+
+ALProtocol Mars_BossBattleEventLog[火星探索-boss挑战事件日志]
+{
+    bool isSucc[挑战是否成功];
+    long eventRefId[配置ID];
+    Mars_ExploreBattlePlayerInfo attacker[进攻方信息];
+    Mars_ExploreBattleNPCInfo npc[NPC信息];
+}
+
+ALProtocol Mars_MineCollectLog[火星探索-矿采集日志]
+{
+    long teamId[队伍ID];
+	long mineRefId[矿点配置ID];
+	long collectNum[采集数量];
+}

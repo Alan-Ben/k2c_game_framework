@@ -1,0 +1,11 @@
+﻿JavaPackage WCGCS2US_RB.p002_MatchOp;
+
+
+/**********************************************************
+ * 返回玩家状态
+ **********************************************************/
+ALProtocol WCGCS2US_RB_002_001_RetPlayerState <2, 1>
+{
+	int errCode;
+	int forbidLeftTime;
+}

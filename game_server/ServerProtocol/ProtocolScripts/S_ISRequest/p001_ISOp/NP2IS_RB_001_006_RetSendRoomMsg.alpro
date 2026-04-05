@@ -1,0 +1,5 @@
+JavaPackage NP2IS_RB.p001_ISOp;
+
+ALProtocol NP2IS_RB_001_006_RetSendRoomMsg <1, 6>
+{
+}

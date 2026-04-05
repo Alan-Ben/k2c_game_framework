@@ -1,0 +1,8 @@
+﻿﻿JavaPackage GS2GC.p017_ActivityOp;
+csharpspace GS2GC.p017_ActivityOp;
+
+ALProtocol GS2GC_017_058_OnActivityShopRefresh [活动商店刷新推送] <17, 58>
+{
+     long instanceId[活动实例id];
+     Common.ActivityObj.Activity_ShopInfo shopInfo[活动商店信息];
+}

@@ -1,0 +1,9 @@
+﻿JavaPackage NP2US.p001_BasicOp;
+
+/**********************************************************
+ * 服务器信息列表变更协议
+ **********************************************************/
+ALProtocol NP2US_001_003_USInfoChg <1, 3>
+{
+	Common.NpServerObj.NpServerObj_SYS_ServerItem serverItem[服务器信息];
+}

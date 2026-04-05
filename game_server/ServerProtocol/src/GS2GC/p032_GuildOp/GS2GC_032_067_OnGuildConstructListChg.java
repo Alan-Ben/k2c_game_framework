@@ -1,0 +1,86 @@
+package GS2GC.p032_GuildOp;
+
+import java.nio.ByteBuffer;
+/*********
+ * 联盟建造次数信息变更
+ **/
+public class GS2GC_032_067_OnGuildConstructListChg implements ALBasicProtocolPack._IALProtocolStructure {
+private Common.GuildObj.Guild_ConstructList constructList;
+
+
+public GS2GC_032_067_OnGuildConstructListChg() {
+	constructList = new Common.GuildObj.Guild_ConstructList();
+}
+
+public GS2GC_032_067_OnGuildConstructListChg(
+	 Common.GuildObj.Guild_ConstructList _constructList
+) {	constructList = _constructList;
+}
+
+public final byte getMainOrder() { return (byte)32; }
+
+public final byte getSubOrder() { return (byte)67; }
+
+public Common.GuildObj.Guild_ConstructList getConstructList() { return constructList; }
+public void setConstructList(Common.GuildObj.Guild_ConstructList _constructList) { constructList = _constructList; }
+
+
+public final int GetBufSize() {
+	int _size = 0;
+	_size += 4 + constructList.GetBufSize();
+
+	return _size;
+}
+
+public final int GetFullPackBufSize() {
+	int _size = 2;
+	_size += 4 + constructList.GetBufSize();
+
+	return _size;
+}
+
+
+
+public final void ReadUnzipBuf(ByteBuffer _buf, int _finalPos) {
+	 if(_finalPos > 0 && _buf.position() >= _finalPos) return ;
+	if(_buf.remaining() <= 0) return;
+	int _constructListCustLen = _buf.getInt();
+	int _constructListCurPos = _buf.position();
+	constructList.ReadUnzipBuf(_buf, _constructListCurPos + _constructListCustLen);
+	_buf.position(_constructListCurPos + _constructListCustLen);
+
+}
+
+public final void PutUnzipBuf(ByteBuffer _buf) {
+	_buf.putInt(constructList.GetBufSize());
+	constructList.PutUnzipBuf(_buf);
+}
+
+public final ByteBuffer makeFullPackage() {
+	int _bufSize = GetBufSize() + 2;
+	ByteBuffer _buf = ByteBuffer.allocate(_bufSize);
+	_buf.put((byte)32);
+	_buf.put((byte)67);
+	PutUnzipBuf(_buf);
+	_buf.flip();
+	return _buf;
+}
+public final void makeFullPackage(ByteBuffer _recBuf) {
+	if(null == _recBuf)
+		return ;
+	_recBuf.put((byte)32);
+	_recBuf.put((byte)67);
+	PutUnzipBuf(_recBuf);
+}
+public final ByteBuffer makePackage() {
+	int _bufSize = GetBufSize();
+	ByteBuffer _buf = ByteBuffer.allocate(_bufSize);
+	PutUnzipBuf(_buf);
+	_buf.flip();
+	return _buf;
+}
+public final void readPackage(ByteBuffer _buf) {
+	ReadUnzipBuf(_buf, -1);
+}
+}
+

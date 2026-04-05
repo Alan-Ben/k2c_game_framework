@@ -1,0 +1,8 @@
+JavaPackage GS2GC.p033_SimpleActivityOp;
+csharpspace GS2GC.p033_SimpleActivityOp;
+
+ALProtocol GS2GC_033_111_OnRechargeRebateGroupInfoChg <33, 111>
+{
+	long activityInstanceId[活动实例ID];
+	Common.RechargeRebateObj.RechargeRebate_GroupInfo groupInfo[返利组信息];
+}

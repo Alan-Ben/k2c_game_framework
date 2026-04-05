@@ -1,0 +1,9 @@
+﻿JavaPackage GS2GC.p037_GuildDungeonOp;
+csharpspace GS2GC.p037_GuildDungeonOp;
+
+import Common.GuildDungeonObj.alpro;
+
+ALProtocol GS2GC_037_054_OnDungeonHeroFightChg[公会副本-出战大臣数据变更] <37, 54>
+{
+	Common.GuildDungeonObj.GuildDungeon_FightHero info;
+}

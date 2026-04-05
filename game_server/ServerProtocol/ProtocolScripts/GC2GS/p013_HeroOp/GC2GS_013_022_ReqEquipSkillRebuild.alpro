@@ -1,0 +1,9 @@
+﻿JavaPackage GC2GS.p013_HeroOp;
+csharpspace GC2GS.p013_HeroOp;
+
+ALProtocol GC2GS_013_022_ReqEquipSkillRebuild[藏品技能重塑]<13, 22> 
+{
+    long dbId[数据id];
+    int index[技能索引];
+    bool isAdvance[是否是高级];
+}

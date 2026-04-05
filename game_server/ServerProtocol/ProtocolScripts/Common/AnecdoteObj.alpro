@@ -1,0 +1,16 @@
+﻿JavaPackage Common.AnecdoteObj;
+csharpspace Common.AnecdoteObj;
+
+ALProtocol Anecdote_EventInfo[政务事件数据]
+{
+	long instanceId[实例ID];
+	long posId[位置id];
+	long eventId[事件id];
+	bytebuffer extraData[事件额外信息];
+}
+
+ALProtocol Anecdote_EventExtraData_Earnings[政务事件额外数据_赚速]
+{
+	bool hadDrawFirstReward[是否已领取首次奖励];
+	bool hadDrawFinalReward[是否已领取最终奖励];
+}

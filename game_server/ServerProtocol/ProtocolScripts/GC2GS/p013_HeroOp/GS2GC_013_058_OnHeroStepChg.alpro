@@ -1,0 +1,8 @@
+﻿﻿JavaPackage GS2GC.p013_HeroOp;
+csharpspace GS2GC.p013_HeroOp;
+
+ALProtocol GS2GC_013_058_OnHeroStepChg[大臣阶段变化推送]<13, 58>
+{
+	long heroId;
+	int step;
+}

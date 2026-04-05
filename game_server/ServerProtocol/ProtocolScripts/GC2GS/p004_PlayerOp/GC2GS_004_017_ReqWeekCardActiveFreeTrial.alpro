@@ -1,0 +1,6 @@
+﻿JavaPackage GC2GS.p004_PlayerOp;
+csharpspace GC2GS.p004_PlayerOp;
+
+ALProtocol GC2GS_004_017_ReqWeekCardActiveFreeTrial[请求激活周卡免费试用] <4, 17>
+{
+}

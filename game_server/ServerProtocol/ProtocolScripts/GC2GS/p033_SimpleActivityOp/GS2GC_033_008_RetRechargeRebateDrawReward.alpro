@@ -1,0 +1,6 @@
+JavaPackage GS2GC.p033_SimpleActivityOp;
+csharpspace GS2GC.p033_SimpleActivityOp;
+
+ALProtocol GS2GC_033_008_RetRechargeRebateDrawReward <33, 8>
+{
+}

@@ -1,0 +1,7 @@
+JavaPackage GC2GS.p004_PlayerOp;
+csharpspace GC2GS.p004_PlayerOp;
+
+ALProtocol GC2GS_004_027_ReqOrderVoucherPay [订单代金券支付] <4, 27>
+{
+    string orderId[订单ID];
+}

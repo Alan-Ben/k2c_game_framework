@@ -1,0 +1,6 @@
+JavaPackage GC2GS.p010_BuildingOp;
+csharpspace GC2GS.p010_BuildingOp;
+ALProtocol GC2GS_010_001_ReqBuildingBuild [请求建造建筑] <10, 1>
+{
+    long buildingId[建筑ID];
+}

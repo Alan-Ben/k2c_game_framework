@@ -1,0 +1,16 @@
+﻿JavaPackage ALLRPC.US.Mars;
+
+﻿﻿﻿﻿﻿import Common.ServerObj.alpro;
+
+ALProtocol MarsMineOccupyResult_Req
+{
+	Common.ServerObj.ServerObj_MarsTeam_OccupyMineResult result;
+}
+
+ALProtocol MarsMineOccupyResult_Return
+{
+}
+
+//[RPC] 火星矿占领结果数据
+//[CLASS_PACKAGE] : AllRpcData.US_Service.Mars
+//[DEALER_PACKAGE] : USServer.RPCDispatcher.Mars

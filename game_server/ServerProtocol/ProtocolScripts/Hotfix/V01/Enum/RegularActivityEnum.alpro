@@ -1,0 +1,9 @@
+JavaPackage Hotfix.V01.Enum.RegularActivityEnum;
+csharpspace Hotfix.RegularActivityEnum;
+
+ALEnum ERegularActivity_GameEvent[万能活动事件] 
+{
+	NONE;
+	REGULAR_SHOP_BUY_ITEM(100001)[万能活动商店购买物品];
+    REGULAR_USE_ITEM(100002)[万能活动使用道具];
+}

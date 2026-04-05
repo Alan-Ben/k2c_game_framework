@@ -1,0 +1,16 @@
+﻿JavaPackage ALLRPC.US.Mars;
+
+ALProtocol MarsMineLeave_Req
+{
+	long cid;
+	long teamId;
+	long mineInstanceId;
+}
+
+ALProtocol MarsMineLeave_Return
+{
+}
+
+//[RPC] 火星矿结算数据
+//[CLASS_PACKAGE] : AllRpcData.US_Service.Mars
+//[DEALER_PACKAGE] : USServer.RPCDispatcher.Mars

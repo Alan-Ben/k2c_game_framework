@@ -1,0 +1,11 @@
+﻿JavaPackage GS2GC.p042_GuildRelatedOp;
+csharpspace GS2GC.p042_GuildRelatedOp;
+
+import Enum.GuildEnum.alpro;
+import Common.GuildObj.alpro;
+
+ALProtocol GS2GC_042_057_OnGuildBoxAdd[联盟宝箱奖励物品列表] <42, 57>
+{
+	Enum.GuildEnum.EGuildBoxType boxType[宝箱类型];
+	Common.GuildObj.Guild_BoxInfo[] boxList[宝箱数据列表];
+}

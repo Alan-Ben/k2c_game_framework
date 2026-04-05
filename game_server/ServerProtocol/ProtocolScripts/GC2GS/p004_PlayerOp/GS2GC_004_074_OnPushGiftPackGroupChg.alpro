@@ -1,0 +1,9 @@
+JavaPackage GS2GC.p004_PlayerOp;
+csharpspace GS2GC.p004_PlayerOp;
+
+import Common.PushGiftObj.alpro;
+
+ALProtocol GS2GC_004_074_OnPushGiftPackGroupChg[礼包组变更通知] <4, 74>
+{
+	Common.PushGiftObj.PushGift_GroupInfo groupInfo[礼包组信息];
+}

@@ -1,0 +1,6 @@
+﻿JavaPackage GC2GS.p022_ChatOp;
+csharpspace GC2GS.p022_ChatOp;
+
+ALProtocol GC2GS_022_001_ReqPlayerChatLogin[请求聊天服务器连接信息] <22, 1>
+{
+}

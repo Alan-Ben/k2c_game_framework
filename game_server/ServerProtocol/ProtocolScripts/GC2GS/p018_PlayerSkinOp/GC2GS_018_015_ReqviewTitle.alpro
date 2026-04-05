@@ -1,0 +1,6 @@
+JavaPackage GC2GS.p018_PlayerSkinOp;
+csharpspace GC2GS.p018_PlayerSkinOp;
+ALProtocol GC2GS_018_015_ReqviewTitle [查看普通称号] <18, 15>
+{
+    long title[空];
+}

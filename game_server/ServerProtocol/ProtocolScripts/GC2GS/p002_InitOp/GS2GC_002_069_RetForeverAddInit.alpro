@@ -1,0 +1,9 @@
+﻿JavaPackage GS2GC.p002_InitOp;
+csharpspace GS2GC.p002_InitOp;
+
+import Common.NPCommonObj.alpro;
+
+ALProtocol GS2GC_002_069_RetForeverAddInit <2, 69>
+{
+	Common.NPCommonObj.NPCommon_ForeverAddInfo[] addList;
+}

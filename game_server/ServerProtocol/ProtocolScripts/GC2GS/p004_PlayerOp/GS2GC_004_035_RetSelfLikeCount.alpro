@@ -1,0 +1,8 @@
+﻿JavaPackage GS2GC.p004_PlayerOp;
+csharpspace GS2GC.p004_PlayerOp;
+
+ALProtocol GS2GC_004_035_RetSelfLikeCount <4, 35>
+{
+    long likeCount;
+    long lastLikeCount[上次查看的点赞次数];
+}

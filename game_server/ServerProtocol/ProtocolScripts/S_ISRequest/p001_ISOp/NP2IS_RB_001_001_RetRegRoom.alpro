@@ -1,0 +1,6 @@
+JavaPackage NP2IS_RB.p001_ISOp;
+
+ALProtocol NP2IS_RB_001_001_RetRegRoom <1, 1>
+{
+    long sdkRoomId[注册到聊天服务器的房间实例ID];
+}

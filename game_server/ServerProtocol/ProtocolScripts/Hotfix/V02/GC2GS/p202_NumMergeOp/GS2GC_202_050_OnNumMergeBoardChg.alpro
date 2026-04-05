@@ -1,0 +1,10 @@
+JavaPackage Hotfix.V02.GS2GC.p202_NumMergeOp;
+csharpspace Hotfix.GS2GC.p202_NumMergeOp;
+
+import Hotfix.V02.Common.NumMergeObj.alpro;
+
+ALProtocol GS2GC_202_050_OnNumMergeBoardChg [棋盘变更推送] <202, 50>
+{
+    Hotfix.V02.Common.NumMergeObj.NumMerge_BoardData boardData[棋盘数据];
+    bool isBuffTriggered[是否触发buff合并];
+}

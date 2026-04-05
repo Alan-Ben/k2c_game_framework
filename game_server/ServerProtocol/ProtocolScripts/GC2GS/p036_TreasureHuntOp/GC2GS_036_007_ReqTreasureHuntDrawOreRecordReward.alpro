@@ -1,0 +1,8 @@
+﻿JavaPackage GC2GS.p036_TreasureHuntOp;
+csharpspace GC2GS.p036_TreasureHuntOp;
+
+ALProtocol GC2GS_036_007_ReqTreasureHuntDrawOreRecordReward[太空寻宝-领取矿石记录奖励] <36, 7>
+{
+	long oreId[矿石ID];
+	int recordIndex[记录档位索引];
+}

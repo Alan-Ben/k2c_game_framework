@@ -1,0 +1,8 @@
+﻿JavaPackage GS2GC.p037_GuildDungeonOp;
+csharpspace GS2GC.p037_GuildDungeonOp;
+
+ALProtocol GS2GC_037_055_OnDungeonTagMonsterChg[公会副本-标签怪物变更] <37, 55>
+{
+	long id[公会实例ID];
+	long[] tagMonsterIdList;
+}

@@ -1,0 +1,11 @@
+﻿JavaPackage GC2GS.p041_MarsExploreOp;
+csharpspace GC2GS.p041_MarsExploreOp;
+
+ALProtocol GC2GS_041_010_ReqForwardCollectMine[火星探险-前往采集] <41, 10>
+{
+	long teamId[派遣队伍ID];
+	long id[矿产实例ID];
+	
+	bool isPvpOp[是否Pvp行为];
+	bool isOtherTeamForward[是否已知有其他队伍前往];
+}

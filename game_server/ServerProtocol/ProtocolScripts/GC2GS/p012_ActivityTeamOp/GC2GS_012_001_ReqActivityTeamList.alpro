@@ -1,0 +1,8 @@
+﻿JavaPackage GC2GS.p012_ActivityTeamOp;
+csharpspace GC2GS.p012_ActivityTeamOp;
+
+ALProtocol GC2GS_012_001_ReqActivityTeamList[队伍列表] <12, 1> 
+{
+	long instanceId[活动实例ID];
+	int page[请求页码，从1开始];
+}

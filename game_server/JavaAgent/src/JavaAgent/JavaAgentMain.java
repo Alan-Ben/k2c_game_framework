@@ -1,0 +1,34 @@
+package JavaAgent;
+
+import java.lang.instrument.Instrumentation;
+
+public class JavaAgentMain
+{
+    private static Instrumentation instrumentation;
+    private static Object lockObject = new Object();
+
+    public JavaAgentMain()
+    {
+    }
+
+    public static void agentmain(String args, Instrumentation inst)
+    {
+        synchronized (lockObject)
+        {
+            if (instrumentation == null)
+            {
+                instrumentation = inst;
+                System.out.println("0->" + inst);
+            } else
+            {
+                System.out.println("1->" + inst);
+            }
+
+        }
+    }
+
+    public static Instrumentation getInstrumentation()
+    {
+        return instrumentation;
+    }
+}

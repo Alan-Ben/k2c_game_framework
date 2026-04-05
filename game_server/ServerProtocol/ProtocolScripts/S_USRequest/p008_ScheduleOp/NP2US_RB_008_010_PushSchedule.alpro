@@ -1,0 +1,5 @@
+﻿JavaPackage NP2US_RB.p008_ScheduleOp;
+
+ALProtocol NP2US_RB_008_010_PushSchedule <8, 10>
+{
+}

@@ -1,0 +1,7 @@
+JavaPackage GC2GS.p016_ChapterOp;
+csharpspace GC2GS.p016_ChapterOp;
+
+ALProtocol GC2GS_016_007_ReqDrawChapterPlotReward [领取关卡剧情奖励] <16, 7>
+{
+    long[] plotIdList[剧情ID列表];
+}

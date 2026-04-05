@@ -1,0 +1,5 @@
+JavaPackage GS2GC.p015_ConsortOp;
+csharpspace GS2GC.p015_ConsortOp;
+ALProtocol GS2GC_015_001_RetUpgradeFettersLvl [家人-升级羁绊等级] <15, 1>
+{
+}

@@ -1,0 +1,15 @@
+﻿JavaPackage GS2GC.p002_InitOp;
+csharpspace GS2GC.p002_InitOp;
+
+import Common.MarsObj.alpro;
+
+ALProtocol GS2GC_002_074_RetMarsPeopleInit[火星-火星居民数据初始化] <2, 74>
+{
+	Common.MarsObj.Mars_PeopleNum peopleNum[居民数量];
+	Common.MarsObj.Mars_Intelligent[] intelligentList[决策数据列表];
+	int satisfaction[满意度万分比];
+	Common.MarsObj.Mars_Letter[] letterList[信件数据列表];
+	Common.MarsObj.Mars_Help[] helpList[求助列表];
+	Common.MarsObj.Mars_PeopleImmigrant immigrant[移民数据];
+	Common.MarsObj.Mars_PeopleImmigrantCount immigrantCount[移民次数];
+}

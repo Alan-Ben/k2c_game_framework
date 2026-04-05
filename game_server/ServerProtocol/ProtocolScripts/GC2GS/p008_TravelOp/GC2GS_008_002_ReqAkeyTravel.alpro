@@ -1,0 +1,5 @@
+JavaPackage GC2GS.p008_TravelOp;
+csharpspace GC2GS.p008_TravelOp;
+ALProtocol GC2GS_008_002_ReqAkeyTravel [一键游历] <8, 2>
+{
+}

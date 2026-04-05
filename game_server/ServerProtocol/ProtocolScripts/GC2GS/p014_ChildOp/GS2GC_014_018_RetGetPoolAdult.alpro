@@ -1,0 +1,7 @@
+JavaPackage GS2GC.p014_ChildOp;
+csharpspace GS2GC.p014_ChildOp;
+import Common.ChildObj.alpro;
+ALProtocol GS2GC_014_018_RetGetPoolAdult [获取联姻池待匹配子嗣数据] <14, 18>
+{
+    Common.ChildObj.Adult_PoolInfo poolAdult[匹配池子嗣数据];
+}

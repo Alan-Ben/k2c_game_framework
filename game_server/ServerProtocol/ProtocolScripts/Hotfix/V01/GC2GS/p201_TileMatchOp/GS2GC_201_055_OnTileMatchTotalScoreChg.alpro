@@ -1,0 +1,7 @@
+JavaPackage Hotfix.V01.GS2GC.p201_TileMatchOp;
+csharpspace Hotfix.GS2GC.p201_TileMatchOp;
+
+ALProtocol GS2GC_201_055_OnTileMatchTotalScoreChg [三消总分数变更] <201, 55>
+{
+    long totalScore[总分数];
+}

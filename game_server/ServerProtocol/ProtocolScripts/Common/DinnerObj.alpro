@@ -1,0 +1,95 @@
+﻿JavaPackage Common.DinnerObj;
+csharpspace Common.DinnerObj;
+
+import Common.NPCommonObj.alpro;
+import Enum.DinnerEnum.alpro;
+
+ALProtocol Dinner_Permit[宴会凭证数据]
+{
+	long id[凭证实例ID];
+	Enum.DinnerEnum.EDinnerPermitType permitType[凭证类型];
+	long typeId[凭证类型ID];
+	int expiredTs[凭证过期时间（秒）];
+}
+
+
+ALProtocol Dinner_Joiner[赴宴玩家数据]
+{
+	Enum.DinnerEnum.EDinnerJoinerType joinerType[赴宴对象类型];
+	long joinerId[赴宴对象ID];
+	long costId[赴宴花费配置ID];
+	long score[玩家宴会人气];
+	long joinTimeMs[赴宴时间戳（毫秒）];
+}
+
+ALProtocol Dinner_Idx[宴会索引信息]
+{
+	long instanceId[宴会实例ID];
+	long dinnerId[宴会配置ID];
+	long ownerCid[开宴玩家CID];
+	int joinerCount[当前赴宴玩家数量];
+	long score[当前宴会人气];
+	int endTs[结束时间戳（秒）];
+	bool isJoined[是否加入宴会];
+	Enum.DinnerEnum.EDinnerPermitType permitType[凭证类型];
+	long permitTypeId[凭证类型ID];
+}
+
+ALProtocol Dinner_Info[宴会详情]
+{
+	Dinner_Idx idx[简要信息];
+	
+	int startTs[开始时间戳（秒）];
+	
+	Enum.DinnerEnum.EDinnerPermitType permitType[凭证类型];
+	long permitTypeId[凭证类型ID];
+	
+	Dinner_Joiner[] joinerList[赴宴玩家列表];
+}
+
+ALProtocol Dinner_JoinerLogList[宴会玩家交互记录]
+{
+	long cid[玩家CID];
+	int joinedCount[己方参加玩家宴会次数];
+	int beJoinedCount[玩家参加己方宴会次数];
+}
+
+ALProtocol Dinner_ResultGuestInfo[宴会结算宾客信息]
+{
+	Enum.DinnerEnum.EDinnerJoinerType joinerType[赴宴对象类型];
+	long joinerId[赴宴对象ID];
+	long costId[赴宴花费配置ID];
+	long coin[赴宴玩家宴会币];
+	long score[宴玩家宴会人气];
+}
+
+ALProtocol Dinner_ResultInfo[宴会结算信息]
+{
+	long instanceId[宴会实例ID];
+	long dinnerId[宴会配置ID];
+	long gainCoin[获取的宴会币];
+	long gainScore[获得的宴会人气];
+	long scoreAddPer[宴会人气加成];
+	
+	Enum.DinnerEnum.EDinnerPermitType permitType[凭证类型];
+	long permitTypeId[凭证类型ID];
+	
+	Dinner_ResultGuestInfo[] guestLog[宾客信息列表];
+}
+
+ALProtocol Dinner_StartLogIdx[开宴记录-索引记录]
+{
+	long instanceId[宴会实例ID];
+	long dinnerId[宴会配置ID];
+	long gainScore[获得的宴会人气];
+	int startTs[开始时间戳（秒）];
+	int joinerCount[赴宴玩家数量];
+	
+	Enum.DinnerEnum.EDinnerPermitType permitType[凭证类型];
+	long permitTypeId[凭证类型ID]; 
+}
+
+ALProtocol Dinner_StartLogInfo[开宴记录-详细数据]
+{
+	Dinner_ResultGuestInfo[] guestLog[宾客信息列表];
+}

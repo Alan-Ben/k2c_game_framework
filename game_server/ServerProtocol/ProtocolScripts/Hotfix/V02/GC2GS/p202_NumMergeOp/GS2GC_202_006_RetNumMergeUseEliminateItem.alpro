@@ -1,0 +1,8 @@
+JavaPackage Hotfix.V02.GS2GC.p202_NumMergeOp;
+csharpspace Hotfix.GS2GC.p202_NumMergeOp;
+
+import Common.CommonObj.alpro;
+
+ALProtocol GS2GC_202_006_RetNumMergeUseEliminateItem [返回使用消除道具] <202, 6>
+{
+}

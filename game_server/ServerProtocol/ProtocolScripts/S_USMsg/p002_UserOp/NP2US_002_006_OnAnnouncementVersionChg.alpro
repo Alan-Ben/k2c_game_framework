@@ -1,0 +1,6 @@
+﻿JavaPackage NP2US.p002_UserOp;
+
+ALProtocol NP2US_002_006_OnAnnouncementVersionChg[公告版本号变化] <2, 6>
+{
+	String version[版本号];
+}

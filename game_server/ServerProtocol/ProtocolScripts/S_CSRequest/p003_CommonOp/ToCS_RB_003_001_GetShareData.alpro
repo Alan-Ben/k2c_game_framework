@@ -1,0 +1,6 @@
+﻿﻿JavaPackage NP2CS_RB.p003_CommonOp;
+
+ALProtocol ToCS_RB_003_001_GetShareData <3, 1>
+{
+	bytebuffer data;
+}

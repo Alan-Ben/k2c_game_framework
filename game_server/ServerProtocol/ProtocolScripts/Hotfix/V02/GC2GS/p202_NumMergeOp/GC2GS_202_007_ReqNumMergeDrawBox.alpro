@@ -1,0 +1,7 @@
+JavaPackage Hotfix.V02.GC2GS.p202_NumMergeOp;
+csharpspace Hotfix.GC2GS.p202_NumMergeOp;
+
+ALProtocol GC2GS_202_007_ReqNumMergeDrawBox [数字合并-领取宝箱] <202, 7>
+{
+	
+}

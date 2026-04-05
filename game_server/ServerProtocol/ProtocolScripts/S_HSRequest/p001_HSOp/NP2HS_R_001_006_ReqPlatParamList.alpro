@@ -1,0 +1,5 @@
+JavaPackage NP2HS_R.p001_HSOp;
+
+ALProtocol NP2HS_R_001_006_ReqPlatParamList <1, 6>
+{
+}

@@ -1,0 +1,6 @@
+JavaPackage GC2GS.p018_PlayerSkinOp;
+csharpspace GC2GS.p018_PlayerSkinOp;
+ALProtocol GC2GS_018_009_ReqViewComboTitleBg [查看组合称号底色] <18, 9>
+{
+    long bgId[空];
+}

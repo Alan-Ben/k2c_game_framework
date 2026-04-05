@@ -1,0 +1,6 @@
+JavaPackage GC2GS.p018_PlayerSkinOp;
+csharpspace GC2GS.p018_PlayerSkinOp;
+ALProtocol GC2GS_018_003_ReqSetTitleShow [设置称号是否可展示] <18, 3>
+{
+    bool isShow[空];
+}

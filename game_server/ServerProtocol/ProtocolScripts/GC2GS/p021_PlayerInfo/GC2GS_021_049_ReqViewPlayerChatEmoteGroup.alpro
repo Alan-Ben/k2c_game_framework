@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p021_PlayerInfo;
+csharpspace GC2GS.p021_PlayerInfo;
+
+ALProtocol GC2GS_021_049_ReqViewPlayerChatEmoteGroup [设置表情包已查看] <21, 49>
+{
+    long refId;
+}

@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p021_PlayerInfo;
+csharpspace GC2GS.p021_PlayerInfo;
+
+ALProtocol GC2GS_021_009_ReqViewPlayerCuteActor [设置Q版形象已查看] <21, 9>
+{
+    long refId;
+}

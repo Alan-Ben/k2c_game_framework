@@ -1,0 +1,7 @@
+﻿﻿JavaPackage GS2GC.p017_ActivityOp;
+csharpspace GS2GC.p017_ActivityOp;
+
+ALProtocol GS2GC_017_006_RetActivityHotRefInfo <17, 6>
+{
+    Common.ActivityObj.Activity_HotRefInfo hotRefInfo[活动热更配表信息];
+}

@@ -1,0 +1,6 @@
+﻿JavaPackage ToSCS_RB.p001_ShareCodeOp;
+
+ALProtocol ToSCS_RB_001_002_GetShareData <1, 2>
+{
+	bytebuffer data;
+}

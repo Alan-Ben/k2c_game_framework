@@ -1,0 +1,9 @@
+﻿import Common.RankObj.alpro;
+
+JavaPackage GS2GC.p032_GuildOp;
+csharpspace GS2GC.p032_GuildOp;
+
+ALProtocol GS2GC_032_050_OnGuildShowInfoChg <32, 50>
+{
+	Common.GuildObj.Guild_ShowInfo showInfo;
+}

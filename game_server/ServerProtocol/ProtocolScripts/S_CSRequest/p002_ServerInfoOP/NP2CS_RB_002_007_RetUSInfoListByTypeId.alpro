@@ -1,0 +1,11 @@
+﻿﻿import Common.CommonObj.alpro;
+
+JavaPackage NP2CS_RB.np_p002_serverInfoOp;
+
+/**********************************************************
+ * 查询服务器列表信息
+ **********************************************************/ 
+ALProtocol NP2CS_RB_002_007_RetUSInfoListByTypeId <2, 7>
+{
+   Common.NpServerObj.NpServerObj_SYS_ServerItem serverItem[服务器信息];
+}

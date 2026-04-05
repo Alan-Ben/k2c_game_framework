@@ -1,0 +1,9 @@
+﻿﻿import Common.WeekCardObj.alpro;
+JavaPackage GS2GC.p004_PlayerOp;
+csharpspace GS2GC.p004_PlayerOp;
+
+ALProtocol GS2GC_004_015_RetWeekCardSettleInfo <4, 15>
+{
+	Common.WeekCardObj.WeekCard_SettleInfo settleInfo[结算信息];
+	Common.LevyObj.Levy_FoodOfflineInfo foodOfflineInfo[征收粮食离线数据];
+}

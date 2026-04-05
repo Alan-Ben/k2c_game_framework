@@ -1,0 +1,12 @@
+﻿JavaPackage ALLRPC.US.Guild;
+
+ALProtocol GuildLevelChg_2C_Req
+{
+	long cid;
+	long guildId;
+	int guildLvl;
+}
+
+ALProtocol GuildLevelChg_2C_Return
+{
+}

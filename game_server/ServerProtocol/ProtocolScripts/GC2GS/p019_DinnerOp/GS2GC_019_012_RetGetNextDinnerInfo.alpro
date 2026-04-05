@@ -1,0 +1,10 @@
+JavaPackage GS2GC.p019_DinnerOp;
+csharpspace GS2GC.p019_DinnerOp;
+import Common.DinnerObj.alpro;
+ALProtocol GS2GC_019_012_RetGetNextDinnerInfo [取指定宴会的下一条宴会数据] <19, 12>
+{
+    Common.DinnerObj.Dinner_Info info[宴会详情];
+    int idx[当前排序];
+    bool hasPre[是否有上一条宴会数据 true-有];
+    bool hasNext[是否有下一条宴会数据 true-有];
+}

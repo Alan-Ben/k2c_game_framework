@@ -1,0 +1,7 @@
+﻿JavaPackage NP2CS.p001_BasicOp;
+
+ALProtocol NP2CS_001_011_RemoveHandleServer <1, 11>
+{
+	int serverType;
+	int serverTypeId;
+}

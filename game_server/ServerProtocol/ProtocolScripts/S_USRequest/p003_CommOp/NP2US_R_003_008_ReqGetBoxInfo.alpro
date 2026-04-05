@@ -1,0 +1,7 @@
+﻿JavaPackage WCGCS2US_R.p003_CommOp;
+
+ALProtocol NP2US_R_003_008_ReqGetBoxInfo[请求指定宝箱数据] <3, 8>
+{
+	long instanceId;
+	long cid;
+}

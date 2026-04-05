@@ -1,0 +1,12 @@
+JavaPackage GS2GC.p002_InitOp;
+csharpspace GS2GC.p002_InitOp;
+
+import Common.ChapterObj.alpro;
+
+ALProtocol GS2GC_002_019_RetChapterInit <2, 19>
+{
+    Common.ChapterObj.Chapter_PosInfo posInfo[位置信息];
+    Common.ChapterObj.Chapter_InspireInfo inspireInfo[鼓舞信息];
+    Common.ChapterObj.Chapter_EventInfo eventInfo[事件信息];
+    long[] hadDrawPlotRewardList[已领取剧情奖励列表];
+}

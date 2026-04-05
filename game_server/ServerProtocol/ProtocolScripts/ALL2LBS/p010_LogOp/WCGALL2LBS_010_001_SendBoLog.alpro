@@ -1,0 +1,11 @@
+﻿JavaPackage WCGALL2LBS.p010_LogOp;
+
+/**********************************************************
+ * 发送BO日志
+ **********************************************************/
+ALProtocol WCGALL2LBS_010_001_SendBoLog <10, 1>
+{
+    bytebuffer boBuffer;
+    //是否只记录到第一个日志服服务器
+    bool isMain;
+}

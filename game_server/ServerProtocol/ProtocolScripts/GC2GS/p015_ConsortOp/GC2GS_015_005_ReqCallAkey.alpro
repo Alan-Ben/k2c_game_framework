@@ -1,0 +1,5 @@
+JavaPackage GC2GS.p015_ConsortOp;
+csharpspace GC2GS.p015_ConsortOp;
+ALProtocol GC2GS_015_005_ReqCallAkey [家人-一键邀约] <15, 5>
+{
+}

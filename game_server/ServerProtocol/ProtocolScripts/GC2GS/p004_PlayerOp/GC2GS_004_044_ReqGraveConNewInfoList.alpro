@@ -1,0 +1,6 @@
+﻿JavaPackage GC2GS.p004_PlayerOp;
+csharpspace GC2GS.p004_PlayerOp;
+
+ALProtocol GC2GS_004_044_ReqGraveConNewInfoList[可庆祝新晋杰出者列表] <4, 44>
+{
+}

@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p032_GuildOp;
+csharpspace GC2GS.p032_GuildOp;
+
+ALProtocol GC2GS_032_037_ReqDrawConstructReward[领取建造奖励] <32, 37>
+{
+    int num;
+}

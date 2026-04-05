@@ -1,0 +1,7 @@
+﻿JavaPackage GS2GC.p002_InitOp;
+csharpspace GS2GC.p002_InitOp;
+
+ALProtocol GS2GC_002_061_RetShieldInit[屏蔽数据组件初始化] <2, 61>
+{
+	long[] shieldCidList[已屏蔽玩家CID列表];
+}

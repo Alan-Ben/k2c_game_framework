@@ -1,0 +1,8 @@
+﻿JavaPackage GC2GS.p032_GuildOp.GuildOpStructure;
+
+ALProtocol GuildOp_037_005_AttackDungeonInfo[联盟副本攻击信息]
+{
+	long heroId;
+	long power;
+	int fightedCount[攻击次数用于计算贡献];
+}

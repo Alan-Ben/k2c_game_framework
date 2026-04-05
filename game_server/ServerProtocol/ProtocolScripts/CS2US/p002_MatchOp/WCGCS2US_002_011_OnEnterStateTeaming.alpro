@@ -1,0 +1,11 @@
+﻿JavaPackage WCGCS2US.p002_MatchOp;
+
+/**********************************************************
+ * Common服务器通知User进入组队状态。
+ **********************************************************/
+ALProtocol WCGCS2US_002_011_OnEnterStateTeaming <2, 11>
+{
+	long uid;
+	long teamId;
+	long dungeonId;
+}

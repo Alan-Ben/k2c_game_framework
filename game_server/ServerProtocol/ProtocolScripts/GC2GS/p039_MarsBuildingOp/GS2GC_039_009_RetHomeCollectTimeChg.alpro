@@ -1,0 +1,7 @@
+﻿JavaPackage GS2GC.p039_MarsBuildingOp;
+csharpspace GS2GC.p039_MarsBuildingOp;
+
+ALProtocol GS2GC_039_009_RetHomeCollectTimeChg <39, 9>
+{
+	int lastHomeOutputCollectTimeS[最后一次收集产出时间点];
+}

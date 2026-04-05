@@ -1,0 +1,10 @@
+JavaPackage GC2GS.p030_ShopOp;
+csharpspace GC2GS.p030_ShopOp;
+
+/**********************************************************
+ * 请求免费刷新商店
+ **********************************************************/
+ALProtocol GC2GS_030_002_ReqFreeRefreshShop <30, 2>
+{
+	long shopRefId[商店配置id];
+}

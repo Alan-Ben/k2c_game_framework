@@ -1,0 +1,8 @@
+﻿﻿JavaPackage GC2GS.p003_FristTeamActivityOp;
+csharpspace GC2GS.p003_FristTeamActivityOp;
+
+ALProtocol GC2GS_003_001_ReqGameLogicTest[游戏主体逻辑测试] <3, 1>
+{
+	long instanceId[活动实例ID];
+	int param1[测试参数1];
+}

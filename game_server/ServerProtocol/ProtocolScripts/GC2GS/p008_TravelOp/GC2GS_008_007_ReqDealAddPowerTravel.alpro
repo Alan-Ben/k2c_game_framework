@@ -1,0 +1,7 @@
+JavaPackage GC2GS.p008_TravelOp;
+csharpspace GC2GS.p008_TravelOp;
+ALProtocol GC2GS_008_007_ReqDealAddPowerTravel [处理大臣加国力游历事件] <8, 7>
+{
+    long instanceId[游历事件ID];
+    long heroId[大臣ID];
+}

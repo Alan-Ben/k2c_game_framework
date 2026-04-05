@@ -1,0 +1,9 @@
+JavaPackage GS2GC.p002_InitOp;
+csharpspace GS2GC.p002_InitOp;
+
+import Common.PushGiftObj.alpro;
+
+ALProtocol GS2GC_002_081_RetPushGiftPackList[返回推送礼包列表] <2, 81>
+{
+	Common.PushGiftObj.PushGift_GroupInfo[] groupList[礼包组列表];
+}

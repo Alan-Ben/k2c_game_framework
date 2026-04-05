@@ -1,0 +1,6 @@
+﻿JavaPackage NP2CS.p001_BasicOp;
+
+ALProtocol NP2CS_001_003_AddCrossRankServer <1, 3>
+{
+	int serverTypeId;
+}

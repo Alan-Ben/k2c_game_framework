@@ -1,0 +1,8 @@
+﻿﻿﻿﻿﻿import Common.NPCommonObj.alpro;
+JavaPackage GS2GC.p004_PlayerOp;
+csharpspace GS2GC.p004_PlayerOp;
+
+ALProtocol GS2GC_004_005_SetIconRes <4, 5>
+{
+	int errCode[错误编码，0表示成功];
+}

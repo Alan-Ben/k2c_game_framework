@@ -1,0 +1,6 @@
+﻿JavaPackage ToPay_RB.p001_PayOp;
+
+ALProtocol ToPay_RB_001_001_GetPayCallbackList <1, 1>
+{
+	Common.ServerObj.ServerObj_PayCallbackInfo[] payCallbackList;
+}

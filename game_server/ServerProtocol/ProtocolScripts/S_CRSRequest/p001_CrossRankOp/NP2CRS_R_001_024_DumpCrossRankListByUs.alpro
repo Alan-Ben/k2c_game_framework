@@ -1,0 +1,9 @@
+﻿JavaPackage NP2CRS_R.p001_CrossRankOp;
+
+ALProtocol NP2CRS_R_001_024_DumpCrossRankListByUs <1, 24>
+{
+	long crossInstanceId[跨服分组ID];
+	long rankId[排行Id];
+	int limitRank[限制排名];
+	int usId[指定us];
+}

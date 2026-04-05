@@ -1,0 +1,16 @@
+﻿JavaPackage ALLRPC.US.Child;
+
+﻿﻿﻿﻿﻿import Common.ServerObj.alpro;
+
+ALProtocol RefusePersonMarryApply_Req
+{
+	Common.ServerObj.ServerObj_AdultMarryRefuseApply refusedApply[被拒绝的请求数据];
+}
+
+ALProtocol RefusePersonMarryApply_Return
+{
+}
+
+//[RPC] 拒绝子嗣指定联姻请求
+//[CLASS_PACKAGE] : AllRpcData.US_Service.Child
+//[DEALER_PACKAGE] : USServer.RPCDispatcher.Child

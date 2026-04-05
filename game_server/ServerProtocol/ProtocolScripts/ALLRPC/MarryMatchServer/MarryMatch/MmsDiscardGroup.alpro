@@ -1,0 +1,15 @@
+﻿JavaPackage ALLRPC.MarryMatchServer.MarryMatch;
+
+ALProtocol MmsDiscardGroup_Req
+{
+	long groupId[分组ID];
+	int usId[US服务器ID];
+}
+
+ALProtocol MmsDiscardGroup_Return
+{
+}
+
+//[RPC]销毁联姻池
+//[CLASS_PACKAGE] : AllRpcData.MarryMatch_Service.MarryMatch
+//[DEALER_PACKAGE] : MarryMatchServer.RPCDispatcher.MarryMatch

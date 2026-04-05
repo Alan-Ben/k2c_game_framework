@@ -1,0 +1,7 @@
+﻿JavaPackage GS2GC.p021_PlayerInfo;
+csharpspace GS2GC.p021_PlayerInfo;
+
+ALProtocol GS2GC_021_068_OnDailyCheckChg[每日签到信息变更] <21, 68>
+{
+	Common.DailyCheckObj.DailyCheck_Info info[每日签到信息];
+}

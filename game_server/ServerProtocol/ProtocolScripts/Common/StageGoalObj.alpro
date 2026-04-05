@@ -1,0 +1,32 @@
+﻿import Common.NPInclude.alpro;
+import Common.NPCommonObj.alpro;
+
+JavaPackage Common.StageGoalObj;
+csharpspace Common.StageGoalObj;
+
+ALProtocol StageGoalTask_Info[阶段目标任务数据]
+{
+	long taskId[阶段任务ID];
+	long counter[计数];
+	bool hadDraw[是否已领取奖励];
+}
+
+ALProtocol StageGoal_Info[阶段目标数据]
+{
+	long step[阶段ID];
+	StageGoalTask_Info[] taskList[任务数据列表];
+	bool isDone[是否完成，表示所有阶段任务都已完成并领取奖励];
+}
+
+ALProtocol StageGoal_TopPlayerInfo[阶段目标Top玩家数据]
+{
+	long cid[首达角色ID];
+	long stepId[小阶段ID];
+}
+
+ALProtocol StageGoal_BigStepFirstReachInfo[阶段目标大阶段首达数据]
+{
+	long bigStepId[大阶段ID];
+	long cid[首达角色ID];
+	long reachTimeMs[首达时间，时间戳];
+}

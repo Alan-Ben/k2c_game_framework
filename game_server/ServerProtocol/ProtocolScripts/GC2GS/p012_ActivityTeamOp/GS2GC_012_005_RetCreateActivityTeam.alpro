@@ -1,0 +1,6 @@
+﻿﻿JavaPackage GS2GC.p012_ActivityTeamOp;
+csharpspace GS2GC.p012_ActivityTeamOp;
+
+ALProtocol GS2GC_012_005_RetCreateActivityTeam <12, 5>
+{
+}

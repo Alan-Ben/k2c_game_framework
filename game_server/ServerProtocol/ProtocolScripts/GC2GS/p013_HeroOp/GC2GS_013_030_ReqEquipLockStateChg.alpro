@@ -1,0 +1,8 @@
+﻿JavaPackage GC2GS.p013_HeroOp;
+csharpspace GC2GS.p013_HeroOp;
+
+ALProtocol GC2GS_013_030_ReqEquipLockStateChg[藏品锁定状态修改]<13, 30>
+{
+    long dbId[数据id];
+    bool isLock[是否锁定];
+}

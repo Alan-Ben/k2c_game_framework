@@ -1,0 +1,7 @@
+JavaPackage GC2GS.p014_ChildOp;
+csharpspace GC2GS.p014_ChildOp;
+ALProtocol GC2GS_014_018_ReqGetPoolAdult [获取联姻池待匹配子嗣数据] <14, 18>
+{
+    long cid[玩家CID];
+    long adultId[子嗣实例ID];
+}

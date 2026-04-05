@@ -1,0 +1,10 @@
+﻿JavaPackage GS2GC.p002_InitOp;
+csharpspace GS2GC.p002_InitOp;
+
+import Common.AchieveObj.alpro;
+
+ALProtocol GS2GC_002_050_RetAchieveInit <2, 50>
+{
+	Common.AchieveObj.Achieve_AchievePointInfo[] achievePointList[成就点列表];
+    Common.AchieveObj.Achieve_Info[] achieveList[成就列表];
+}

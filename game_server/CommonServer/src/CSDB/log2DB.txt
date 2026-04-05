@@ -1,0 +1,190 @@
+# coding=utf-8
+
+def genLogFlow(lib):
+    global cnt
+    logTemp = readTemplate(lib, "LOG2DB")
+
+    # 解析每个生成源
+    srcPath = os.path.join(os.getcwd(),"source_db", lib)
+    sys.path.append(srcPath)
+
+    # <%LOG_FUNC%>
+    LOG_FUNC = ""
+    for root, dirs, files in os.walk(srcPath):
+        for name in files:  # 输出文件名
+            if not str(name).endswith(".py"):
+                continue
+
+            if name == "__init__.py":
+                continue
+
+            name = name.split(".")[0]
+            tbl = __import__(name)
+
+            print "deal: %s"%name
+            func = genAFunc(lib, tbl)
+            LOG_FUNC += func
+            cnt += 1
+
+    logTemp = logTemp.replace("<%LOG_FUNC%>", LOG_FUNC)
+
+    # 拷贝
+    open(os.path.join(codeRoot, lib, "LogFlow.java"), "wb").write(logTemp)
+
+
+java2value = {"int":"0",
+            "String":'""',
+            "text":'""',
+            "byte[]":"null",
+            "boolean":"false",
+            "long":"0",
+            "Timestamp":"null",
+            }
+def2java = {"int":"int",
+              "string":"String",
+              "text":"String",
+              "bytes":"byte[]",
+              "bool":"boolean",
+              "long":"long",
+              "timestamp":"Timestamp",
+              }
+def2itype = {"int":"int",
+            "string":"String",
+            "text":"String",
+            "bytes":"Bytes",
+            "bool":"boolean",
+            "long":"long",
+            "timestamp":"Timestamp",
+            }
+                     
+
+sqlType2value = {"int":"0",
+            "varchar":'',
+            "blob":'',
+            "tinyint":"0",
+            "bigint":"0",
+            "timestamp":''
+            }
+defType2sqlType = {"int":"int",
+              "string":"varchar",
+              "text":"text",
+              "bytes":"blob",
+              "bool":"tinyint",
+              "long":"bigint",
+              "timestamp":"timestamp",
+              }
+defType2DefLength = {"int":"11",
+              "string":"50",
+              "text":"0",
+              "bytes":"0",
+              "bool":"1",
+              "long":"20",
+              "timestamp":"0",
+              }              
+
+def getJavaTypeAndLengthByDefQ(type):
+    length = 11
+    if "(" in type:
+        type, length = type.split("(")
+        length = length.split(")")[0]
+    else:
+        length = defType2DefLength.get(type)
+    type = def2java.get(type)    
+    
+    return type, length
+
+def getItypeAndLengthByDefQ(type):
+    length = 11
+    if "(" in type:
+        type, length = type.split("(")
+        length = length.split(")")[0]
+    else:
+        length = defType2DefLength.get(type)
+        
+    type = def2itype.get(type)
+    return type, length
+
+funcTmp = """
+    // <%COMMENT%>
+    private static TimerLogFlow<<%FUNC_NAME%>BO> <%FUNC_NAME%> = new TimerLogFlow<>();
+    public static void <%FUNC_NAME%>(<%FIELD_LIST%>)
+    {
+        <%FUNC_NAME%>BO bo = new <%FUNC_NAME%>BO();
+
+<%FIELD_DEFINE%>
+<%FIELD_OPTIME%>        
+        
+        try{
+            <%FUNC_NAME%>.add(bo);
+        } catch (Throwable e) {
+            CommLog.error("LogFlow", e);
+        }
+    }
+"""
+def genAFunc(lib, src):
+    output = funcTmp
+    output = output.replace("<%FUNC_NAME%>", "%s"%capitalize(src.__name__))
+    output = output.replace("<%COMMENT%>", "%s"%src.tableComment)
+
+    # <%FIELD_DEFINE%>
+    field_define = "" #         bo.setAgi(agi);
+    # <%FIELD_LIST%>
+    field_list = ""
+    
+    field_optime_exists = 0
+
+    for defList, name, comment in src.field:
+
+        # 特殊，写死在模板里
+        if name == "opTime":
+            field_optime_exists = 1;
+            continue
+
+        defq, length = getDefQAndLengthByDefList(defList)
+        if length == 1:
+            javaType, jlength = getJavaTypeAndLengthByDefQ(defq)
+            defValue = java2value.get(javaType)
+            field_define += "        bo.set%s(%s);  // %s\n"%(capitalize(name), name, comment)
+            field_list += ", %s %s"%(javaType, name)
+        else:
+            javaType, jlength = getJavaTypeAndLengthByDefQ(defq)
+            defValue = java2value.get(javaType)
+            for index in range(1, 1 + length):
+                field_define += "        bo.set%s_%s(%s_%s);  // %s\n"%(capitalize(name), index, name, index, comment)
+                field_list += ", %s %s_%s"%(javaType, name, index)
+
+    if field_list != "":
+        field_list = field_list[2:]
+        
+    if field_optime_exists:
+        output = output.replace("<%FIELD_OPTIME%>", "bo.setOptime(CommTime.getNowTimeSecond());");
+    else:
+        output = output.replace("<%FIELD_OPTIME%>", "");
+        
+    output = output.replace("<%FIELD_DEFINE%>", field_define)    
+    output = output.replace("<%FIELD_LIST%>", field_list)
+
+    return output
+
+
+def getDefQAndLengthByDefList(type):
+    length = 1
+    if "[" in type:
+        type, length = type.split("[")
+        length = length.split("]")[0]
+
+    return type, int(length)
+
+def getSqlTypeAndLengthByDefQ(type):
+    length = 11
+    if "(" in type:
+        type, length = type.split("(")
+        length = length.split(")")[0]
+
+    type = defType2sqlType.get(type)
+    return type, length
+
+if __name__ == "__main__":
+    cnt = 0
+    genAll("log")
+    print "total cnt: " + str(cnt);

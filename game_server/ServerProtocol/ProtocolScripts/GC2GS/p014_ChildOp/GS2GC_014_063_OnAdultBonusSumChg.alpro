@@ -1,0 +1,6 @@
+JavaPackage GS2GC.p014_ChildOp;
+csharpspace GS2GC.p014_ChildOp;
+ALProtocol GS2GC_014_063_OnAdultBonusSumChg [所有成年子嗣总收益变动推送] <14, 63>
+{
+    long bonus[所有成年子嗣总收益变动推送];
+}

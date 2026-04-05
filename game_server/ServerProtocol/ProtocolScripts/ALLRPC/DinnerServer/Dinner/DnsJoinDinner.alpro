@@ -1,0 +1,19 @@
+﻿JavaPackage ALLRPC.DinnerServer.Dinner;
+
+
+ALProtocol DnsJoinDinner_Req
+{
+	long groupId;
+	long instanceId;
+	bool isPlayer[是否玩家];
+	long joinerId;
+	long joinerScore[参与宴会带来的宴会人气];
+}
+
+ALProtocol DnsJoinDinner_Return
+{
+}
+
+//[RPC]玩家参加宴会
+//[CLASS_PACKAGE] : AllRpcData.Dinner_Service.Dinner
+//[DEALER_PACKAGE] : DinnerServer.RPCDispatcher.Dinner

@@ -1,0 +1,70 @@
+JavaPackage Common.ScheduleObj;
+
+ALProtocol Schedule_GroupInfo[排期分组信息]
+{
+    Common.CommonObj.Common_IntList[] usGroupList[us分组列表];
+	string resFile[资源文件名];
+	string resFileMd5[资源文件MD5];
+	string resFileDir[资源文件目录];
+}
+
+ALProtocol Schedule_GroupData[排期分组数据]
+{
+    Schedule_GroupInfo[] groupList[分组列表];
+}
+
+ALProtocol Schedule_ActivityInfo[排期活动数据]
+{
+	long activityId[活动ID];
+	long startTimeMs[开启时间];
+	long endTimeMs[结算时间];
+	long closeTimeMs[关闭时间];   
+}
+
+ALProtocol Schedule_PhpInfo[后台排期信息]
+{
+    long phpScheduleId[PHP排期ID];
+    int submitCount[提交次数];
+    long prePushTimeMs[预下发时间];
+    Schedule_ActivityInfo activity[排期活动数据];
+    Schedule_GroupInfo[] groupList[分组列表];
+}
+
+ALProtocol Schedule_ResUpdateInfo[后台排期资源更新信息]
+{
+    long phpScheduleId[PHP排期ID];
+    int submitCount[提交次数];
+    Schedule_GroupInfo[] groupList[分组列表];
+}
+
+ALProtocol Schedule_UsPushData[下发US的排期数据]
+{
+	long scheduleId[排期实例ID];
+	long usGroupId[US分组ID];
+	long crossInstanceId[跨服实例ID];
+	Schedule_ActivityInfo activity[排期活动数据];
+	
+	int[] usIdList[US列表];
+	string resFile[资源文件名];
+	string resFileMd5[资源文件MD5];
+	string resFileDir[资源文件目录];
+	int submitCount[提交次数];
+	
+	long gameLogicInstanceId[游戏逻辑主体实例ID];
+}
+
+ALProtocol Schedule_SimpleActivityInfo
+{
+    long activityId[活动ID];
+    long launchId[发布ID/排期ID];
+    long startTimeMs[开始时间毫秒];
+    long endTimeMs[结束时间毫秒];
+    long closeTimeMs[展示结束时间毫秒];
+    int state[状态：0预热 1进行中 2结算中 3已关闭 4排期中];
+}
+
+ALProtocol Schedule_SimpleActivityInfoByUs
+{
+	int usId;
+    Schedule_SimpleActivityInfo activityInfo;
+}

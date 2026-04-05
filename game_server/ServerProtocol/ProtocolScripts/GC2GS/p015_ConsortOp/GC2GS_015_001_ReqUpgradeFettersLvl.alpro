@@ -1,0 +1,6 @@
+JavaPackage GC2GS.p015_ConsortOp;
+csharpspace GC2GS.p015_ConsortOp;
+ALProtocol GC2GS_015_001_ReqUpgradeFettersLvl [家人-升级羁绊等级] <15, 1>
+{
+    long consortId[家人ID];
+}

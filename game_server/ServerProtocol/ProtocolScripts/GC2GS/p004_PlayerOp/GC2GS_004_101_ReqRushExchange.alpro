@@ -1,0 +1,8 @@
+JavaPackage GC2GS.p004_PlayerOp;
+csharpspace GC2GS.p004_PlayerOp;
+
+
+ALProtocol GC2GS_004_101_ReqRushExchange[请求急速兑换] <4, 101>
+{
+	bool useGemSupplement[是否使用钻石补充不足道具];
+}

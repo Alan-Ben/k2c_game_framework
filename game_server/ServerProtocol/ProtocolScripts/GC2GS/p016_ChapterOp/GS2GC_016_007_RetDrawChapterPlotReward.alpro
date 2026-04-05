@@ -1,0 +1,7 @@
+JavaPackage GS2GC.p016_ChapterOp;
+csharpspace GS2GC.p016_ChapterOp;
+
+ALProtocol GS2GC_016_007_RetDrawChapterPlotReward <16, 7>
+{
+
+}

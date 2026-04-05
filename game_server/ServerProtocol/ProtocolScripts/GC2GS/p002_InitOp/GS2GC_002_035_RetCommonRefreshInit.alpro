@@ -1,0 +1,7 @@
+JavaPackage GS2GC.p002_InitOp;
+csharpspace GS2GC.p002_InitOp;
+
+ALProtocol GS2GC_002_035_RetCommonRefreshInit <2, 35>
+{
+    Common.CommonFuncObj.CommonFunc_Refresh[] infoList[通用刷新信息列表];
+}

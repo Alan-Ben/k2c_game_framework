@@ -1,0 +1,8 @@
+JavaPackage GS2GC.p015_ConsortOp;
+csharpspace GS2GC.p015_ConsortOp;
+import Common.ConsortObj.alpro;
+ALProtocol GS2GC_015_057_OnFettersChg [家人羁绊数据变更] <15, 57>
+{
+    long consortId[空];
+    Common.ConsortObj.Consort_Fetters fetters[家人羁绊数据];
+}

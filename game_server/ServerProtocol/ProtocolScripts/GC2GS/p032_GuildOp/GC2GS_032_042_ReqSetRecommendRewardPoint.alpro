@@ -1,0 +1,9 @@
+import Common.GuildCooperateObj.alpro;
+
+JavaPackage GC2GS.p032_GuildOp;
+csharpspace GC2GS.p032_GuildOp;
+
+ALProtocol GC2GS_032_042_ReqSetRecommendRewardPoint[设置推荐奖励据点] <32, 42>
+{
+    Common.GuildCooperateObj.GuildCooperate_RewardPointPos pos[推荐奖励据点位置];
+}

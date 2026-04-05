@@ -1,0 +1,7 @@
+JavaPackage GC2GS.p017_ActivityOp;
+csharpspace GC2GS.p017_ActivityOp;
+
+ALProtocol GC2GS_017_019_ReqActivityFundTaskInfo[活动基金-请求任务信息] <17, 19>
+{
+	long fundId[基金ID];
+}

@@ -1,0 +1,10 @@
+JavaPackage GC2GS.p021_PlayerInfo;
+csharpspace GC2GS.p021_PlayerInfo;
+
+/**********************************************************
+ * 请求查看指定玩家的CD信息
+ **********************************************************/
+ALProtocol GC2GS_021_045_ReqViewPlayerLazyCD <21, 45>
+{
+	int cdId[CD类型ID];
+}

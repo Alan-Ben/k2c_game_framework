@@ -1,0 +1,14 @@
+import Common.ServerObj.alpro;
+JavaPackage NP2US_R.p010_MarsMineOp;
+
+/**********************************************************
+ * 请求前往占领火星矿
+ **********************************************************/
+ALProtocol NP2US_R_010_003_ReqGoToOccupyMarsMine <10, 3>
+{
+	long instanceId[矿实例ID];
+	bool isOtherTeamForward[是否有其他玩家前往];
+	Common.ServerObj.ServerObj_MarsTeam_OccupyMinePlayer occupyPlayer[占领玩家信息];
+	long startCollectMs[开始采集时间（毫秒）];
+	long collectSpeed[采集速度（秒）];
+}

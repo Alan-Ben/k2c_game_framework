@@ -1,0 +1,8 @@
+﻿﻿JavaPackage GS2GC.p013_HeroOp;
+csharpspace GS2GC.p013_HeroOp;
+
+ALProtocol GS2GC_013_062_OnHeroPlaceBuildingChg[大臣驻扎建筑变更推送]<13, 62>
+{
+    long heroId;
+    Common.HeroObj.Hero_PlaceInfo placeInfo;
+}

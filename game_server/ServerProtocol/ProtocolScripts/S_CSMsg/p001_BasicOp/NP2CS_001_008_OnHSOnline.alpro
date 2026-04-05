@@ -1,0 +1,5 @@
+﻿JavaPackage NP2CS.p001_BasicOp;
+
+ALProtocol NP2CS_001_008_OnHSOnline <1, 8>
+{
+}

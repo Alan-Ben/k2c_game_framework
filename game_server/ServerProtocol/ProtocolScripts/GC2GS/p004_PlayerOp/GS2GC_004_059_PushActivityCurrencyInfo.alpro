@@ -1,0 +1,8 @@
+﻿﻿import Common.CommonObj.alpro;
+JavaPackage GS2GC.p004_PlayerOp;
+csharpspace GS2GC.p004_PlayerOp;
+
+ALProtocol GS2GC_004_059_PushActivityCurrencyInfo <4, 59>
+{
+	Common.CommonObj.Common_ActivityCurrencyInfo currencyInfo;
+}

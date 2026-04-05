@@ -1,0 +1,16 @@
+﻿JavaPackage ALLRPC.US.Team;
+
+ALProtocol UsCrossTeamMemberAdd_Req
+{
+	long groupId;
+	long teamId;
+	long cid;
+}
+
+ALProtocol UsCrossTeamMemberAdd_Return
+{
+}
+
+//[RPC] 增加队伍成员
+//[CLASS_PACKAGE] : AllRpcData.US_Service.Team
+//[DEALER_PACKAGE] : USServer.RPCDispatcher.Team

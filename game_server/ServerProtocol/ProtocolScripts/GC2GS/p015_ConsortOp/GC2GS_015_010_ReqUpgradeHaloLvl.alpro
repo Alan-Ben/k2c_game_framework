@@ -1,0 +1,6 @@
+JavaPackage GC2GS.p015_ConsortOp;
+csharpspace GC2GS.p015_ConsortOp;
+ALProtocol GC2GS_015_010_ReqUpgradeHaloLvl [家人-升级星辉等级] <15, 10>
+{
+    long consortId[家人ID];
+}

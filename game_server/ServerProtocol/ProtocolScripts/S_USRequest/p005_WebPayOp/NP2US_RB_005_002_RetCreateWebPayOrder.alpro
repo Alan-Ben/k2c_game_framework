@@ -1,0 +1,11 @@
+JavaPackage NP2US_RB.p005_WebPayOp;
+
+import Common.ServerObj.alpro;
+
+ALProtocol NP2US_RB_005_002_RetCreateWebPayOrder[返回网页支付订单创建结果] <5, 2>
+{
+	int errCode[错误码,0表示成功];
+	string uid[用户ID];
+	Common.ServerObj.ServerObj_WebPayOrderList orderList[订单列表];
+	long[] failedGoodsIds[失败的商品ID列表];
+}

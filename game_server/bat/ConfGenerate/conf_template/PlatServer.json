@@ -1,0 +1,50 @@
+{
+    "WCGBasicPlatServerConf.properties": {
+        "_comments": {
+            "1": "服务器接收客户端缓存的字节长度",
+            "2": "服务器监听端口",
+            "3": "服务器登录验证的密码"
+        },
+        "WCGBasicPlatServer.RecBufferLen": 102400,
+        "WCGBasicPlatServer.Port": 6660,
+        "WCGBasicPlatServer.CheckPassword": "wcg_basic_plat_server"
+    },
+    "PlatServerConf.properties": {
+        "_comments": {
+            "1": "通用的地域标记",
+            "2": "时区信息"
+        },
+        "PlatServer.CommonAreaTag": "common",
+        "PlatServer.TimeZone": "GMT+8:00"
+    },
+    "ALServerLog.properties": {
+        "_comments": {
+            "1": "打印日志等级 可选: DEBUG, INFO, WARNING, ERROR, FATAL"
+        },
+        "ALServerLog.LogLevel": "INFO"
+    },
+    "ALBasicServerConf.properties": {
+        "_comments": {
+            "1": "服务器标志字符串",
+            "2": "同步任务执行的线程数量",
+            "3": "Socket信息发送线程数量",
+            "4": "定时任务的时间精度",
+            "5": "定时任务的大区间长度，根据精度和长度可以决定一个区间的时间跨度",
+            "6": "是否检测线程加锁等级合法性"
+        },
+        "ALBasicServer.ServerTag": "ALBasicServer",
+        "ALBasicServer.SynTaskDealThreadNum": 4,
+        "ALBasicServer.ServerSendBackDealThreadNum": 1,
+        "ALBasicServer.TimerCheckTime": 20,
+        "ALBasicServer.TimerCheckAreaSize": 5000,
+        "ALBasicServer.CheckMutex": true
+    },
+    "ALBasicClientConf.properties": {
+        "_comments": {
+            "1": "消息发送线程的数量",
+            "2": "缓冲区长度"
+        },
+        "ALBasicClient.SendThreadNum": 1,
+        "ALBasicClient.RecSocketBufLen": 131072
+    }
+}

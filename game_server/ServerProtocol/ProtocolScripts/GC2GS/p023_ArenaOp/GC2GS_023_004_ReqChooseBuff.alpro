@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p023_ArenaOp;
+csharpspace GC2GS.p023_ArenaOp;
+
+ALProtocol GC2GS_023_004_ReqChooseBuff[选择临时增益] <23, 4>
+{
+    long buffId;
+}

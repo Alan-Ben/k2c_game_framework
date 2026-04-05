@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p024_DungeonOp;
+csharpspace GC2GS.p024_DungeonOp;
+
+ALProtocol GC2GS_024_011_ReqEveningDungeonAttack[晚间副本攻击] <24, 11>
+{
+    long heroId[大臣ID];
+}

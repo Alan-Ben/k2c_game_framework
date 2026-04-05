@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p023_ArenaOp;
+csharpspace GC2GS.p023_ArenaOp;
+
+ALProtocol GC2GS_023_008_ReqArenaStationUpgrade[竞技场贸易站升级] <23, 8>
+{
+    
+}

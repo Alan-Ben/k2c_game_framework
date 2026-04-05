@@ -1,0 +1,7 @@
+﻿﻿JavaPackage GS2GC.p024_DungeonOp;
+csharpspace GS2GC.p024_DungeonOp;
+
+ALProtocol GS2GC_024_012_RetEveningDungeonBossInfo <24, 12>
+{
+    Common.DungeonObj.EveningDungeon_BossInfo bossInfo[Boss信息];
+}

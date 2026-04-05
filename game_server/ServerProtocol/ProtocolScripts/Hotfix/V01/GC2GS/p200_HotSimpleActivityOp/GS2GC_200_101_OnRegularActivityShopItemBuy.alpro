@@ -1,0 +1,8 @@
+﻿JavaPackage Hotfix.V01.GS2GC.p200_HotSimpleActivityOp;
+csharpspace Hotfix.GS2GC.p200_HotSimpleActivityOp;
+
+ALProtocol GS2GC_200_101_OnRegularActivityShopItemBuy [万能活动商店购买物品推送] <200, 101>
+{
+	long activityInstanceId;
+	Hotfix.V01.Common.HotSimpleActivityObj.RegularActivity_ShopBuyRecord buyRecord[购买记录];
+}

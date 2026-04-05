@@ -1,0 +1,7 @@
+JavaPackage GS2GC.p019_DinnerOp;
+csharpspace GS2GC.p019_DinnerOp;
+import Common.NPCommonObj.alpro;
+ALProtocol GS2GC_019_008_RetJoinDinner [加入宴会] <19, 8>
+{
+    Common.NPCommonObj.NPCommon_ItemInfo[] gainItemList[领取的物品列表];
+}

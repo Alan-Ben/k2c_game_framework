@@ -1,0 +1,7 @@
+﻿JavaPackage GS2GC.p007_CommOp;
+csharpspace GS2GC.p007_CommOp;
+
+ALProtocol GS2GC_007_023_RetRemoveCountdownEvent <7, 23>
+{
+	
+}

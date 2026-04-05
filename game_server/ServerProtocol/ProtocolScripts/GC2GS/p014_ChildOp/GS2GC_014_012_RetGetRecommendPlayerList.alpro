@@ -1,0 +1,7 @@
+JavaPackage GS2GC.p014_ChildOp;
+csharpspace GS2GC.p014_ChildOp;
+import Common.ChildObj.alpro;
+ALProtocol GS2GC_014_012_RetGetRecommendPlayerList [联姻请求-获取推荐玩家列表] <14, 12>
+{
+    Common.ChildObj.Adult_PoolBaseInfo[] matchList[空];
+}

@@ -1,0 +1,6 @@
+JavaPackage GS2GC.p007_CommOp;
+csharpspace GS2GC.p007_CommOp;
+
+ALProtocol GS2GC_007_032_RetCheckRedDot[红点-检查红点状态响应] <7, 32>
+{
+}

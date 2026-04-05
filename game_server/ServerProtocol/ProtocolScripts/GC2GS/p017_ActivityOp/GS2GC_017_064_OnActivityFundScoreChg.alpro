@@ -1,0 +1,9 @@
+JavaPackage GS2GC.p017_ActivityOp;
+csharpspace GS2GC.p017_ActivityOp;
+
+ALProtocol GS2GC_017_064_OnActivityFundScoreChg[活动基金-分数变化推送] <17, 64>
+{
+	long fundId[基金ID];
+	long formulaScore[公式分数];
+	long taskScore[任务分数];
+}

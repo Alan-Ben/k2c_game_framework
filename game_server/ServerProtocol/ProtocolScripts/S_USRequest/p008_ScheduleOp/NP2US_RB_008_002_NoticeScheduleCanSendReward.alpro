@@ -1,0 +1,6 @@
+﻿JavaPackage NP2US_RB.p008_ScheduleOp;
+
+ALProtocol NP2US_RB_008_002_NoticeScheduleCanSendReward <8, 2>
+{
+	
+}

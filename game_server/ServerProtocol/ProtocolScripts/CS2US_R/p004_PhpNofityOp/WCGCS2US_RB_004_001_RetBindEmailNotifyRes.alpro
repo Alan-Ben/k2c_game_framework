@@ -1,0 +1,8 @@
+﻿JavaPackage WCGCS2US_RB.p004_PhpNofityOp;
+
+/**********************************************************
+ * Common服向User服发送绑定邮箱通知返回结果
+ **********************************************************/
+ALProtocol WCGCS2US_RB_004_001_RetBindEmailNotifyRes <4, 1>
+{
+}

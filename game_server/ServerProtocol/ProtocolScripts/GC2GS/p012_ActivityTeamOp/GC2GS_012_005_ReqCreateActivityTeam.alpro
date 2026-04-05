@@ -1,0 +1,12 @@
+﻿JavaPackage GC2GS.p012_ActivityTeamOp;
+csharpspace GC2GS.p012_ActivityTeamOp;
+import Enum.CrossTeamEnum.alpro;
+import Common.CrossTeamObj.alpro;
+ALProtocol GC2GS_012_005_ReqCreateActivityTeam[创建队伍] <12, 5> 
+{
+        long instanceId[活动实例ID];
+        Enum.CrossTeamEnum.ENPCrossTeamJoinType joinType[加入方式];
+        Common.CrossTeamObj.CrossTeam_SetInfo_Join joinCond[申请条件];
+        string teamName[队伍名称];
+        string teamDec[队伍宣言];
+}

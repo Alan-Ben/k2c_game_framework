@@ -1,0 +1,6 @@
+JavaPackage GS2GC.p019_DinnerOp;
+csharpspace GS2GC.p019_DinnerOp;
+ALProtocol GS2GC_019_051_OnDinnerEnd [宴会结束推送] <19, 51>
+{
+    long instanceId[宴会实例ID];
+}

@@ -1,0 +1,9 @@
+﻿﻿JavaPackage GS2GC.p012_ActivityTeamOp;
+csharpspace GS2GC.p012_ActivityTeamOp;
+
+import Common.CrossTeamObj.alpro;
+
+ALProtocol GS2GC_012_011_RetActivityTeamApplyList <12, 11>
+{
+	Common.CrossTeamObj.CrossTeam_ApplyInfo[] applyList;
+}

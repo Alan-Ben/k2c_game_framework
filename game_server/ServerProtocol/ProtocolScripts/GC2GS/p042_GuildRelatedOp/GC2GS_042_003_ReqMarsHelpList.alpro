@@ -1,0 +1,6 @@
+﻿JavaPackage GC2GS.p042_GuildRelatedOp;
+csharpspace GC2GS.p042_GuildRelatedOp;
+
+ALProtocol GC2GS_042_003_ReqMarsHelpList[获取指定火星求助列表数据] <42, 3>
+{
+}

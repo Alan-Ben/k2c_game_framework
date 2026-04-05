@@ -1,0 +1,6 @@
+java_path= ../Common/src
+java_package=NPCommon.ErrMain
+id	name	desc
+1	STEP_REWARD_NO_EXIST	阶段奖励对象不存在
+2	STEP_EVENT_SCORE_GT	阶段奖励事件分数需要更大值
+3	STEP_EVENT_SCORE_MAX	阶段奖励事件分数达到最大值

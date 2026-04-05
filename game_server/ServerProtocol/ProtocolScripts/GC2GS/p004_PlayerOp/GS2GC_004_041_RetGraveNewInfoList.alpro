@@ -1,0 +1,9 @@
+﻿JavaPackage GS2GC.p004_PlayerOp;
+csharpspace GS2GC.p004_PlayerOp;
+
+﻿﻿﻿﻿import Common.GraveObj.alpro;
+
+ALProtocol GS2GC_004_041_RetGraveNewInfoList <4, 41>
+{
+	Common.GraveObj.GraveObj_NewInfo[] newInfoList;
+}

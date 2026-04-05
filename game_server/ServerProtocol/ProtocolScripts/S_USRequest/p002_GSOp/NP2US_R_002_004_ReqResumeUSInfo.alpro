@@ -1,0 +1,11 @@
+﻿JavaPackage NP2US_R.p002_GSOp;
+
+/**********************************************************
+ * 连恢复US的连接对象
+ **********************************************************/
+ALProtocol NP2US_R_002_004_ReqResumeUSInfo <2, 4>
+{
+	string uid;
+	long gsSessionId[gs连接对象的sessionId，用于处理结果获取对象用];
+	long gsInfoSerialize[GS对应的信息序列号];
+}

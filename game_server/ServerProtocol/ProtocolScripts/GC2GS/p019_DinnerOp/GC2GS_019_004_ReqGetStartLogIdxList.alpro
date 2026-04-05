@@ -1,0 +1,5 @@
+JavaPackage GC2GS.p019_DinnerOp;
+csharpspace GC2GS.p019_DinnerOp;
+ALProtocol GC2GS_019_004_ReqGetStartLogIdxList [开宴索引记录列表] <19, 4>
+{
+}

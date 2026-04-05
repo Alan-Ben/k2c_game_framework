@@ -1,0 +1,11 @@
+﻿JavaPackage NPGC2GS.p001_BasicOp;
+csharpspace NPGC2GS.p001_BasicOp;
+
+/**********************************************************
+ * 玩家退出当前的US服务器
+ **********************************************************/
+ALProtocol NPGC2GS_001_006_QuitUS <1, 6>
+{
+	long clientSerialize[客户端用于识别的序列号];
+	int usId[用户服务器Id];
+}

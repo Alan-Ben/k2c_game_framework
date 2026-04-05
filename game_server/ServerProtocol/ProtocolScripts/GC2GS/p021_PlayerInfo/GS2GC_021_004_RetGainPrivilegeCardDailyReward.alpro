@@ -1,0 +1,9 @@
+﻿JavaPackage GS2GC.p021_PlayerInfo;
+csharpspace GS2GC.p021_PlayerInfo;
+
+﻿import Common.NPCommonObj.alpro;
+
+ALProtocol GS2GC_021_004_RetGainPrivilegeCardDailyReward <21, 4>
+{
+	Common.NPCommonObj.NPCommon_ItemInfo[] itemList[物品列表];
+}

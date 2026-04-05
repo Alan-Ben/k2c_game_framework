@@ -1,0 +1,14 @@
+﻿JavaPackage NPGS2GC.p001_BasicOp;
+csharpspace NPGS2GC.p001_BasicOp;
+
+/**********************************************************
+ * 返回用户的基本信息
+ **********************************************************/
+ALProtocol NPGS2GC_001_001_RetBasicInfo <1, 1>
+{
+	string version[服务器版本];
+	long timeTag;
+	int timezone;
+	int dstOffset[夏令时时差];
+	string resVersion[资源版本];
+}

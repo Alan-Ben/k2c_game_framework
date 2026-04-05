@@ -1,0 +1,116 @@
+{
+    "WCGBasicServerConf.properties": {
+        "_comments": {
+            "1": "服务器接收客户端缓存的字节长度",
+            "2": "服务器在内部系统中的监听端口（注意，非外部监听端口）",
+            "3": "平台服务器连接IP",
+            "4": "平台服务器连接端口",
+            "5": "平台服务器连接密码",
+            "6": "内部其他服务器连接本服务器时使用的IP",
+            "7": "内部其他服务器连接本服务器时使用的端口"
+        },
+        "WCGBasicServer.RecBufferLen": 102400,
+        "WCGBasicServer.Port": 6903,
+        "WCGBasicServer.PlatServerIp": "127.0.0.1",
+        "WCGBasicServer.PlatServerPort": 6660,
+        "WCGBasicServer.PlatServerPassword": "wcg_basic_plat_server",
+        "WCGBasicServer.InternalIp": "127.0.0.1",
+        "WCGBasicServer.InternalPort": 6903
+    },
+    "HttpServerConf.properties": {
+        "_comments": {
+            "1": "平台提供的大区id，通用请求的一部分",
+            "2": "平台提供的平台id，通用请求的一部分", 
+            "3": "平台提供的请求地址",
+            "4": "平台提供的请求key用来生成签名",
+            "5": "对平台开放服务端http端口",
+            "6": "平台推送验证",
+            "7": "平台推送验证",
+            "8": "平台推送验证",
+            "9": "时区信息",
+            "10": "客户端连接端口",
+            "11": "客户端连接缓冲区大小",
+            "12": "是否开启钉钉预警",
+            "13": "AI平台提供的请求地址",
+            "14": "AI平台回调请求地址"
+        },
+        "HttpServer.PlatAreaId": 1,
+        "HttpServer.PlatformId": 1,
+        "HttpServer.PlatUrl": "http://np-manage-test.mengjia.com/",
+        "HttpServer.PlatKey": "npNftGOqMlatLP",
+        "HttpServer.ToPlatHttpPort": 6003,
+        "HttpServer.PlatFromClientUser": "NP-PlatForm",
+        "HttpServer.PlatFromClientPassword": "NP-20230324",
+        "HttpServer.PlatFromClientKey": "NP-NKDLE1N24",
+        "HttpServer.TimeZone": "GMT+8:00",
+        "HttpServer.ClientConnectPort": 9202,
+        "HttpServer.ClientSocketCacheSize": 10240,
+        "HttpServer.OpenDDAlert": false,
+        "HttpServer.AiPlatUrl": "http://127.0.0.1/",
+        "HttpServer.AiPlatCallbackUrl": ""
+    },
+    "HttpLogDBConf.properties": {
+        "_comments": {
+            "1": "数据库主机地址",
+            "2": "数据库名称",
+            "3": "数据库用户名",
+            "4": "数据库密码",
+            "5": "数据库安全保存路径"
+        },
+        "HttpLogDB.DBHost": "127.0.0.1",
+        "HttpLogDB.DBName": "gom_http_log",
+        "HttpLogDB.DBHttp": "wcggame",
+        "HttpLogDB.DBPass": "wcggame",
+        "HttpLogDB.DBSafeSavePath": "./_http_log_db"
+    },
+    "HttpDBConf.properties": {
+        "_comments": {
+            "1": "数据库主机地址",
+            "2": "数据库名称",
+            "3": "数据库用户名",
+            "4": "数据库密码",
+            "5": "数据库安全保存路径"
+        },
+        "HttpDB.DBHost": "127.0.0.1",
+        "HttpDB.DBName": "gom_http",
+        "HttpDB.DBUser": "wcggame",
+        "HttpDB.DBPass": "wcggame",
+        "HttpDB.DBSafeSavePath": "./_http_db"
+    },
+    "GameResConf.properties": {
+        "_comments": {
+            "1": "配表资源地址"
+        },
+        "GameRes.refPath": "../../project_res/Assets/Resources/__dlserverref"
+    },
+    "ALServerLog.properties": {
+        "_comments": {
+            "1": "打印日志等级 可选: DEBUG, INFO, WARNING, ERROR, FATAL"
+        },
+        "ALServerLog.LogLevel": "INFO"
+    },
+    "ALBasicServerConf.properties": {
+        "_comments": {
+            "1": "服务器标志字符串",
+            "2": "同步任务执行的线程数量",
+            "3": "Socket信息发送线程数量",
+            "4": "定时任务的时间精度",
+            "5": "定时任务的大区间长度，根据精度和长度可以决定一个区间的时间跨度",
+            "6": "是否检测线程加锁等级合法性"
+        },
+        "ALBasicServer.ServerTag": "WCGBasicLoginServer",
+        "ALBasicServer.SynTaskDealThreadNum": 4,
+        "ALBasicServer.ServerSendBackDealThreadNum": 1,
+        "ALBasicServer.TimerCheckTime": 20,
+        "ALBasicServer.TimerCheckAreaSize": 5000,
+        "ALBasicServer.CheckMutex": true
+    },
+    "ALBasicClientConf.properties": {
+        "_comments": {
+            "1": "消息发送线程的数量",
+            "2": "缓冲区长度"
+        },
+        "ALBasicClient.SendThreadNum": 1,
+        "ALBasicClient.RecSocketBufLen": 131072
+    }
+}

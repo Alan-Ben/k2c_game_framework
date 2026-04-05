@@ -1,0 +1,7 @@
+JavaPackage GC2GS.p041_MarsExploreOp;
+csharpspace GC2GS.p041_MarsExploreOp;
+
+ALProtocol GC2GS_041_025_ReqShareMarsMineToGuildChat[火星探险-分享矿到联盟聊天] <41, 25>
+{
+	long mineInstanceId[矿实例ID];
+}

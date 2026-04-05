@@ -1,0 +1,8 @@
+﻿﻿JavaPackage GS2GC.p013_HeroOp;
+csharpspace GS2GC.p013_HeroOp;
+
+ALProtocol GS2GC_013_063_OnHeroItemAddPowerChg[大臣道具额外加成实力推送]<13, 63>
+{
+	long heroId;
+	long value;
+}

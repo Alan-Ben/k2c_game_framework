@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p032_GuildOp;
+csharpspace GC2GS.p032_GuildOp;
+
+ALProtocol GC2GS_032_019_ReqMemberContribute[请求联盟成员贡献列表] <32, 19>
+{
+	long memberId;
+}

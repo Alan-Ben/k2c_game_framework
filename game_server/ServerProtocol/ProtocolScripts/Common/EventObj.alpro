@@ -1,0 +1,29 @@
+﻿JavaPackage Common.EventObj;
+csharpspace Common.EventObj;
+
+ALProtocol CommonEvent_DetailInfo[事件详情信息]
+{
+	long commonEventId[通用事件id];
+	bytebuffer showInfo[展示信息];
+}
+
+ALProtocol CommonEvent_DealInfo_Choice[事件详情信息_选项]
+{
+	long optionId[选择选项id];
+}
+
+ALProtocol CommonEvent_DealInfo_Dispatch[事件详情信息_派遣]
+{
+	long[] heroList[大臣列表];
+}
+
+ALProtocol CommonEvent_DoneInfo[事件完成信息]
+{
+    Common.NPCommonObj.NPCommon_ItemInfo[] rewardList[奖励列表];
+	bytebuffer extraInfo[额外信息];
+}
+
+ALProtocol CommonEvent_DealInfo_Fitting[事件详情信息_试衣]
+{
+	long optionId[选择选项id];
+}

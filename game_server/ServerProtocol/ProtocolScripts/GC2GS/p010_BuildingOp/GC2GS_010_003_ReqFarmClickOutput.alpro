@@ -1,0 +1,8 @@
+JavaPackage GC2GS.p010_BuildingOp;
+csharpspace GC2GS.p010_BuildingOp;
+ALProtocol GC2GS_010_003_ReqFarmClickOutput [请求点击农田产出] <10, 3>
+{
+    long buildingId[建筑ID];
+    long clickNum[当前点击次数];
+    long clientOpTimeMs[客户端操作时间戳];
+}

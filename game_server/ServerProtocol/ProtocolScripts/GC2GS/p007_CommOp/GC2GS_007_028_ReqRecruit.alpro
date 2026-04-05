@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p007_CommOp;
+csharpspace GC2GS.p007_CommOp;
+
+ALProtocol GC2GS_007_028_ReqRecruit[兑换]<18, 28> 
+{
+	long id[兑换id];
+}

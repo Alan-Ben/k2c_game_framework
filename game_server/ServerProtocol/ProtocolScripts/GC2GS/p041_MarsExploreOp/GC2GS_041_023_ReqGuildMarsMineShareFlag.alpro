@@ -1,0 +1,6 @@
+JavaPackage GC2GS.p041_MarsExploreOp;
+csharpspace GC2GS.p041_MarsExploreOp;
+
+ALProtocol GC2GS_041_023_ReqGuildMarsMineShareFlag[火星探险-请求最新的联盟分享火星矿的标志] <41, 23>
+{
+}

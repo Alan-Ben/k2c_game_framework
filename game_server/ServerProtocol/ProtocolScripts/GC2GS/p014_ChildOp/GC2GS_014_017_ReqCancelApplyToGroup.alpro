@@ -1,0 +1,6 @@
+JavaPackage GC2GS.p014_ChildOp;
+csharpspace GC2GS.p014_ChildOp;
+ALProtocol GC2GS_014_017_ReqCancelApplyToGroup [联姻请求-取消联姻池申请] <14, 17>
+{
+    long adultId[子嗣实例ID];
+}

@@ -1,0 +1,8 @@
+﻿JavaPackage GC2GS.p012_ActivityTeamOp;
+csharpspace GC2GS.p012_ActivityTeamOp;
+
+ALProtocol GC2GS_012_014_ReqRefuseActivityTeamApply[拒绝玩家组队申请] <12, 14> 
+{
+	long teamId[队伍实例ID];
+	long applyCid[申请玩家CID];
+}

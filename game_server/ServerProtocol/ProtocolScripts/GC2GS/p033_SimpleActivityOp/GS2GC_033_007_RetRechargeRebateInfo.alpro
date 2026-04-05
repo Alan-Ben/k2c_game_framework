@@ -1,0 +1,7 @@
+JavaPackage GS2GC.p033_SimpleActivityOp;
+csharpspace GS2GC.p033_SimpleActivityOp;
+
+ALProtocol GS2GC_033_007_RetRechargeRebateInfo <33, 7>
+{
+	Common.RechargeRebateObj.RechargeRebate_GroupInfo[] groupInfoList[返利组信息列表];
+}

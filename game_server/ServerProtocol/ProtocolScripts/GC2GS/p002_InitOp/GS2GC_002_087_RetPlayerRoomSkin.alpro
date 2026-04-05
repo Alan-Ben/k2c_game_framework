@@ -1,0 +1,11 @@
+﻿import Common.NPPlayerInfo.alpro;
+JavaPackage GS2GC.p002_InitOp;
+csharpspace GS2GC.p002_InitOp;
+
+/**********************************************************
+ * 返回玩家房间皮肤数据
+ **********************************************************/
+ALProtocol GS2GC_002_087_RetPlayerRoomSkin <2, 87>
+{
+	Common.NPPlayerInfo.PlayerInfo_RoomSkin[] roomSkinInfoList[玩家拥有的房间皮肤信息队列];
+}

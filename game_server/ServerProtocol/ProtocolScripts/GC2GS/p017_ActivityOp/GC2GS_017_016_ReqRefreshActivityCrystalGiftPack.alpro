@@ -1,0 +1,8 @@
+﻿JavaPackage GC2GS.p017_ActivityOp;
+csharpspace GC2GS.p017_ActivityOp;
+
+ALProtocol GC2GS_017_016_ReqRefreshActivityCrystalGiftPack [刷新活动钻石礼包] <17, 16> 
+{
+    long instanceId[活动实例id];
+    long groupId[钻石礼包组id];
+}

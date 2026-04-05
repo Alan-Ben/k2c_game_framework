@@ -1,0 +1,18 @@
+﻿JavaPackage ALLRPC.HS;
+import Enum.NPServerEnum.alpro;
+
+ALProtocol HSDDAlert_Req
+{
+	int logLvl;
+	string title;
+    string timeInfo;
+    Enum.NPServerEnum.ENPDDAlertType alertType[报警类型ENPDDAlertType];
+}
+
+ALProtocol HSDDAlert_Return
+{
+}
+
+//[RPC]发送钉钉预警
+//[CLASS_PACKAGE] : AllRpcData.HS_Service.Common
+//[DEALER_PACKAGE] : HttpServer.RPCDispatcher.Common

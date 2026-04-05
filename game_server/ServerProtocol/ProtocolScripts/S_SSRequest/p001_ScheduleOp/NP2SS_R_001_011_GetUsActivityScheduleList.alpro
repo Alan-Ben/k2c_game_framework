@@ -1,0 +1,6 @@
+﻿JavaPackage NP2SS_R.p001_ScheduleOp;
+
+ALProtocol NP2SS_R_001_011_GetUsActivityScheduleList[获取US的所有当前排期数据] <1, 11>
+{
+	int usId;
+}

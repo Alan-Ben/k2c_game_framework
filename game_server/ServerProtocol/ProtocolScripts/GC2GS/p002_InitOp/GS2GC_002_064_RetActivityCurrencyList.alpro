@@ -1,0 +1,9 @@
+﻿﻿import Common.CommonObj.alpro;
+
+JavaPackage GS2GC.p002_InitOp;
+csharpspace GS2GC.p002_InitOp;
+
+ALProtocol GS2GC_002_064_RetActivityCurrencyList <2, 64>
+{
+	Common.CommonObj.Common_ActivityCurrencyInfo[] currencyList;
+}

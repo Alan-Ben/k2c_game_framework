@@ -1,0 +1,9 @@
+﻿JavaPackage GS2GC.p034_InnOp;
+csharpspace GS2GC.p034_InnOp;
+
+import Common.InnObj.alpro;
+
+ALProtocol GS2GC_034_050_OnInnReceiveChg [旅店接待信息变更] <34, 50>
+{
+	Common.InnObj.Inn_ReceiveList receiveList[接待信息];
+}

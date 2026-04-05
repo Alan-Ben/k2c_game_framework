@@ -1,0 +1,10 @@
+JavaPackage GC2GS.p042_GuildRelatedOp;
+csharpspace GC2GS.p042_GuildRelatedOp;
+
+ALProtocol GC2GS_042_061_ReqJoinRally[请求加入集结] <42, 61>
+{
+    long rallyId[集结ID];
+    long teamId[队伍ID];
+}
+
+

@@ -1,0 +1,9 @@
+JavaPackage GC2GS.p004_PlayerOp;
+csharpspace GC2GS.p004_PlayerOp;
+
+
+ALProtocol GC2GS_004_013_ReqReportPlayer[举报指定玩家] <4, 13>
+{
+    long targetCid[举报目标玩家CID];
+	string content[举报内容];
+}

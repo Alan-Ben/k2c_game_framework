@@ -1,0 +1,7 @@
+﻿JavaPackage GS2GC.p002_InitOp;
+csharpspace GS2GC.p002_InitOp;
+
+ALProtocol GS2GC_002_066_RetTreasureHuntInit <2, 66>
+{
+	Common.TreasureHuntObj.TreasureHunt_Info info[信息];
+}

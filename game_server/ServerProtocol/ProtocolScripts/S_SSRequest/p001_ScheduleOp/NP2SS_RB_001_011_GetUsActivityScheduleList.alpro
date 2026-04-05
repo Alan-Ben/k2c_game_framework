@@ -1,0 +1,8 @@
+﻿JavaPackage NP2SS_RB.p001_ScheduleOp;
+
+import Common.ScheduleObj.alpro;
+
+ALProtocol NP2SS_RB_001_011_GetUsActivityScheduleList <1, 11>
+{
+	Common.ScheduleObj.Schedule_UsPushData[] dataList[排期数据列表];
+}

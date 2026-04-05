@@ -1,0 +1,11 @@
+﻿JavaPackage WCGCS2US_R.p001_BasicOp;
+
+/**********************************************************
+ * 
+ **********************************************************/
+ALProtocol NP2US_R_001_006_ReqPlayerFreeze <1, 6>
+{
+	long cid[玩家cid];
+	bool isFreeze[是否冻结处理];
+	long timeSec[冻结时间 秒];
+}

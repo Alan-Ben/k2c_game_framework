@@ -1,0 +1,9 @@
+﻿JavaPackage Hotfix.V01.GC2GS.p200_HotSimpleActivityOp;
+csharpspace Hotfix.GC2GS.p200_HotSimpleActivityOp;
+
+ALProtocol GC2GS_200_003_ReqRegularActivityUseItem[万能活动使用物品] <200, 3>
+{
+	long activityInstanceId[活动实例ID];
+	long itemId[物品ID];
+	bool isTen[是否十连];
+}

@@ -1,0 +1,7 @@
+JavaPackage GS2GC.p017_ActivityOp;
+csharpspace GS2GC.p017_ActivityOp;
+
+ALProtocol GS2GC_017_068_OnActivityFundRemove[活动基金-移除推送] <17, 68>
+{
+	long fundId[基金ID];
+}

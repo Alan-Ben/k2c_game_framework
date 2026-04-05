@@ -1,0 +1,15 @@
+﻿JavaPackage ALLRPC.US.Friend;
+
+ALProtocol RemoveFriend_Req
+{
+	long sendCid[发起移除请求玩家CID];
+	long targetCid[目标玩家CID];
+}
+
+ALProtocol RemoveFriend_Return
+{
+}
+
+//[RPC] 移除好友
+//[CLASS_PACKAGE] : AllRpcData.US_Service.Friend
+//[DEALER_PACKAGE] : USServer.RPCDispatcher.Friend

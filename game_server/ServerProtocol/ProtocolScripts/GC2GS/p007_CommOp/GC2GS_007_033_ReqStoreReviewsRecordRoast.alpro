@@ -1,0 +1,7 @@
+JavaPackage GC2GS.p007_CommOp;
+csharpspace GC2GS.p007_CommOp;
+
+ALProtocol GC2GS_007_033_ReqStoreReviewsRecordRoast[记录商店评价吐槽内容] <7, 33>
+{
+	string content;
+}

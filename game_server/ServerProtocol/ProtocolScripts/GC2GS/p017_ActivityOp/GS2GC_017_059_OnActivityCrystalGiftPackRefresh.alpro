@@ -1,0 +1,10 @@
+﻿﻿import Common.CommonFuncObj.alpro;
+
+JavaPackage GS2GC.p017_ActivityOp;
+csharpspace GS2GC.p017_ActivityOp;
+
+ALProtocol GS2GC_017_059_OnActivityCrystalGiftPackRefresh [活动钻石礼包刷新推送] <17, 59>
+{
+     long instanceId[活动实例id];
+     Common.CommonFuncObj.CrystalGiftPack_Info crystalGiftPackInfo[钻石礼包信息];
+}

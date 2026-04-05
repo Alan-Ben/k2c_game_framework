@@ -1,0 +1,7 @@
+﻿JavaPackage GS2GC.p034_InnOp;
+csharpspace GS2GC.p034_InnOp;
+
+ALProtocol GS2GC_034_001_RetInnReceiveGuest <34, 1>
+{
+
+}

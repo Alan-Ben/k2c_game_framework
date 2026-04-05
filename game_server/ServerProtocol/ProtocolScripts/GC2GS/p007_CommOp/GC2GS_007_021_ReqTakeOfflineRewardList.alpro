@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p007_CommOp;
+csharpspace GC2GS.p007_CommOp;
+
+ALProtocol GC2GS_007_021_ReqTakeOfflineRewardList[获取离线奖励列表] <7, 21>
+{
+	long[] idList;
+}

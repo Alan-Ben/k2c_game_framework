@@ -1,0 +1,8 @@
+﻿﻿JavaPackage GS2GC.p007_CommOp;
+csharpspace GS2GC.p007_CommOp;
+
+ALProtocol GS2GC_007_056_OnMarqueeAdd <7, 56>
+{
+	int showPosId;
+	Common.CommonObj.Common_MarqueeInfo marqueeInfo;
+}

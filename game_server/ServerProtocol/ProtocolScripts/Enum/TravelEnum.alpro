@@ -1,0 +1,25 @@
+﻿JavaPackage Common.TravelEnum;
+csharpspace Common.TravelEnum;
+
+ALEnum ETravelEventType[游历事件类型]
+{
+	NONE;
+	REWARD[对话奖励事件];
+	CONSORT_LIKE[妃子好感度事件];
+	CONSORT_INTIMACY[妃子亲密度事件];
+	CONSORT_BAR[酒馆妃子事件];
+	CHANGE[兑换事件];
+	INVITATION[指定邀约事件];
+	GIFTDE[获得卷王事件];
+	ADD_POWER[增加实力事件];
+	GAMBLING[博彩事件];
+}
+
+ALEnum ETravelGambleResult[博彩结果类型]
+{
+	NONE;
+	WIN[胜利];
+	LOSE[失败];
+	JACKPOT[特别大奖];
+	ABANDON[放弃];
+}

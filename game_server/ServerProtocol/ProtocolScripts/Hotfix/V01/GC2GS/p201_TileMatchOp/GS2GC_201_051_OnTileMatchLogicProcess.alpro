@@ -1,0 +1,11 @@
+JavaPackage Hotfix.V01.GS2GC.p201_TileMatchOp;
+csharpspace Hotfix.GS2GC.p201_TileMatchOp;
+
+import Hotfix.V01.Common.TileMatchObj.alpro;
+import Hotfix.V01.Enum.TileMatchEnum.alpro;
+
+ALProtocol GS2GC_201_051_OnTileMatchLogicProcess [三消逻辑处理] <201, 51>
+{
+    Hotfix.V01.Enum.TileMatchEnum.ETileMatch_ModeType modeType[模式类型];
+    Hotfix.V01.Common.TileMatchObj.TileMatch_LogicInfo[] logicList[逻辑信息列表];
+}

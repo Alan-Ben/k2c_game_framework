@@ -1,0 +1,82 @@
+{
+    "WCGBasicServerConf.properties": {
+        "_comments": {
+            "1": "服务器接收客户端缓存的字节长度",
+            "2": "服务器在内部系统中的监听端口（注意，非外部监听端口）",
+            "3": "平台服务器连接IP",
+            "4": "平台服务器连接端口",
+            "5": "平台服务器连接密码",
+            "6": "内部其他服务器连接本服务器时使用的IP",
+            "7": "内部其他服务器连接本服务器时使用的端口"
+        },
+        "WCGBasicServer.RecBufferLen": 102400,
+        "WCGBasicServer.Port": 7001,
+        "WCGBasicServer.PlatServerIp": "127.0.0.1",
+        "WCGBasicServer.PlatServerPort": 6660,
+        "WCGBasicServer.PlatServerPassword": "wcg_basic_plat_server",
+        "WCGBasicServer.InternalIp": "127.0.0.1",
+        "WCGBasicServer.InternalPort": 7001
+    },
+    "LoginCheckServerConf.properties": {
+        "_comments": {
+            "1": "是否开启检测内部测试用的用户名",
+            "2": "SDK登录后台相关配置",
+            "3": "SDK默认链接",
+            "4": "SDK备选链接列表",
+            "5": "SDK登录验证链接",
+            "6": "登录校验id和秘钥",
+            "7": "时区信息"
+        },
+        "LoginCheckServer.NeedCheckAcc": false,
+        "LoginCheckServer.SdkUrl": "http://127.0.0.1",
+        "LoginCheckServer.StandByLoginUrlList": [],
+        "LoginCheckServer.SdkLoginUrl": "/api/user/login/verify",
+        "LoginCheckServer.SdkAppId": 1,
+        "LoginCheckServer.SdkKey": "test",
+        "LoginCheckServer.TimeZone": "GMT+8:00"
+    },
+    "LoginCheckDBConf.properties": {
+        "_comments": {
+            "1": "数据库主机地址",
+            "2": "数据库名称",
+            "3": "数据库用户名",
+            "4": "数据库密码",
+            "5": "数据库安全保存路径"
+        },
+        "LoginCheckDB.DBHost": "127.0.0.1",
+        "LoginCheckDB.DBName": "gom_login_check",
+        "LoginCheckDB.DBUser": "wcggame",
+        "LoginCheckDB.DBPass": "wcggame",
+        "LoginCheckDB.DBSafeSavePath": "./_login_check_db"
+    },
+    "ALServerLog.properties": {
+        "_comments": {
+            "1": "打印日志等级 可选: DEBUG, INFO, WARNING, ERROR, FATAL"
+        },
+        "ALServerLog.LogLevel": "INFO"
+    },
+    "ALBasicServerConf.properties": {
+        "_comments": {
+            "1": "服务器标志字符串",
+            "2": "同步任务执行的线程数量",
+            "3": "Socket信息发送线程数量",
+            "4": "定时任务的时间精度",
+            "5": "定时任务的大区间长度，根据精度和长度可以决定一个区间的时间跨度",
+            "6": "是否检测线程加锁等级合法性"
+        },
+        "ALBasicServer.ServerTag": "WCGBasicLoginServer",
+        "ALBasicServer.SynTaskDealThreadNum": 4,
+        "ALBasicServer.ServerSendBackDealThreadNum": 1,
+        "ALBasicServer.TimerCheckTime": 20,
+        "ALBasicServer.TimerCheckAreaSize": 5000,
+        "ALBasicServer.CheckMutex": true
+    },
+    "ALBasicClientConf.properties": {
+        "_comments": {
+            "1": "消息发送线程的数量",
+            "2": "缓冲区长度"
+        },
+        "ALBasicClient.SendThreadNum": 1,
+        "ALBasicClient.RecSocketBufLen": 131072
+    }
+}

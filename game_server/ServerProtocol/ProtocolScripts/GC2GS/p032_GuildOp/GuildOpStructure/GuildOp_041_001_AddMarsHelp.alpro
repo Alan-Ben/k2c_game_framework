@@ -1,0 +1,9 @@
+﻿JavaPackage GC2GS.p032_GuildOp.GuildOpStructure;
+
+ALProtocol GuildOp_041_001_AddMarsHelp[添加火星求助信息]
+{
+	int dealLimit;
+	int dealSecs;
+	long usHelpDBId;
+	Bytebuffer helpExData;
+}

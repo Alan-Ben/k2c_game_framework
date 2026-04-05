@@ -1,0 +1,4 @@
+[submodule "Protocol"]
+	path = Protocol
+	url = git@gitlab.dev.mjgame.com:np_core/n_chat_client_protocol.git
+	branch = dev/alzq

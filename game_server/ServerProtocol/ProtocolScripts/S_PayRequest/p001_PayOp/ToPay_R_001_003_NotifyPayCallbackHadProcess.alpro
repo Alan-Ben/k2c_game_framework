@@ -1,0 +1,7 @@
+﻿JavaPackage ToPay_R.p001_PayOp;
+
+ALProtocol ToPay_R_001_003_NotifyPayCallbackHadProcess <1, 3>
+{
+	long dbId;
+	bool isDeliverySuccess;
+}

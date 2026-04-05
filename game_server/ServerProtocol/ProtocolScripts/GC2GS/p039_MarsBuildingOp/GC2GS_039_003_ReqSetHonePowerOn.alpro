@@ -1,0 +1,8 @@
+﻿JavaPackage GC2GS.p039_MarsBuildingOp;
+csharpspace GC2GS.p039_MarsBuildingOp;
+
+ALProtocol GC2GS_039_003_ReqSetHonePowerOn[火星建筑-主建筑开关] <39, 3>
+{
+	bool isNormalOn[普通功率开启];
+	bool isOverdriveOn[最高功率开启];
+}

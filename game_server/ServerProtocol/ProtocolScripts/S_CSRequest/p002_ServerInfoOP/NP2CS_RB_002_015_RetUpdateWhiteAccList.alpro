@@ -1,0 +1,9 @@
+JavaPackage NP2CS_RB.p002_ServerInfoOP;
+
+/**
+ * CommonServer返回白名单更新结果
+ */
+ALProtocol NP2CS_RB_002_015_RetUpdateWhiteAccList[返回更新白名单列表] <2, 15>
+{
+    // 空响应体
+}

@@ -1,0 +1,8 @@
+JavaPackage GC2GS.p042_GuildRelatedOp;
+csharpspace GC2GS.p042_GuildRelatedOp;
+
+ALProtocol GC2GS_042_062_ReqQueryRallyInfo[请求查询单个集结信息] <42, 62>
+{
+    long rallyId[集结ID];
+}
+

@@ -1,0 +1,8 @@
+﻿JavaPackage GC2GS.p037_GuildDungeonOp;
+csharpspace GC2GS.p037_GuildDungeonOp;
+
+ALProtocol GC2GS_037_011_ReqGainDungeonReward[公会副本-领取奖励] <37, 11>
+{
+	long id[公会实例ID];
+	long monsterId[怪物ID];
+}

@@ -1,0 +1,12 @@
+csharpspace RemarkData;
+JavaPackage Common;
+
+/**********************************************************
+ * 引导相关的数据存储对象
+ **********************************************************/
+ALProtocol TutorialData
+{
+	long lastFinishForceTutorial;//最后一个完成的强制引导Id
+	long[] finishTutorialId;//已经完成的所有引导Id
+}
+

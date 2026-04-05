@@ -1,0 +1,7 @@
+JavaPackage NP2IS_R.p001_ISOp;
+
+ALProtocol NP2IS_R_001_003_ReqRegChatUser[注册聊天服务器用户] <1, 3>
+{
+    long cid[玩家CID];
+	string areaTag[登录大区];
+}

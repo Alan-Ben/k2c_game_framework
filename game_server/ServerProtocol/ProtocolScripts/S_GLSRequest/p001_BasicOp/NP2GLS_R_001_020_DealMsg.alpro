@@ -1,0 +1,12 @@
+﻿JavaPackage NP2GLS_R.p001_BasicOp;
+
+ALProtocol NP2GLS_R_001_020_DealMsg[GLS服务器转发消息] <1, 20>
+{
+	long instanceId[游戏逻辑主体实例ID];
+	int usId;
+	long cid;
+	long playerGroupId;
+
+	bytebuffer msg[具体的消息内容];
+	bytebuffer addInfo[附加的信息];
+}

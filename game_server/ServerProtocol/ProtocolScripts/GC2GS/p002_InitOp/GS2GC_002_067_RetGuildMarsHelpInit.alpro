@@ -1,0 +1,9 @@
+﻿JavaPackage GS2GC.p002_InitOp;
+csharpspace GS2GC.p002_InitOp;
+
+import Common.GuildObj.alpro;
+
+ALProtocol GS2GC_002_067_RetGuildMarsHelpInit <2, 67>
+{
+	long[] canDealIdList[可以帮助的火星求助实例ID列表];
+}

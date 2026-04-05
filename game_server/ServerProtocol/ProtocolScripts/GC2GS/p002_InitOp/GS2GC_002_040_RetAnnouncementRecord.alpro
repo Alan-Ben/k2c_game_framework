@@ -1,0 +1,7 @@
+﻿JavaPackage GS2GC.p002_InitOp;
+csharpspace GS2GC.p002_InitOp;
+
+ALProtocol GS2GC_002_040_RetAnnouncementRecord <2, 40>
+{
+	long[] hadDrawIdList[已领取公告id列表];
+}

@@ -1,0 +1,13 @@
+﻿﻿import Common.NPCommonObj.alpro;
+import Enum.NPEnum.alpro;
+JavaPackage GS2GC.p007_CommOp;
+csharpspace GS2GC.p007_CommOp;
+
+/**********************************************************
+ * 推送获得物品列表
+ **********************************************************/
+ALProtocol GS2GC_007_050_OnGainItemList <7, 50>
+{
+    Enum.NPEnum.ENpRewardShowType rewardShowType[奖励展示样式];
+	Common.NPCommonObj.NPCommon_ItemInfo[] itemList[物品列表];
+}

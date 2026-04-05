@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p033_SimpleActivityOp;
+csharpspace GC2GS.p033_SimpleActivityOp;
+
+ALProtocol GC2GS_033_001_ReqEarningsGoalInfo[请求赚速目标信息] <33, 1>
+{
+	long activityInstanceId[活动实例ID];
+}

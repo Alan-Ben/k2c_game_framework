@@ -1,0 +1,13 @@
+﻿JavaPackage NP2US.p002_UserOp;
+
+/**********************************************************
+ *房间通知User服务器比赛结束以及比赛结果
+*/
+ALProtocol NP2US_002_001_PveBattleEnd <2, 1>
+{
+	long cid;
+	bool isWin;
+	long roomSerial;
+	long stageSerial;
+	long battleMs;
+}

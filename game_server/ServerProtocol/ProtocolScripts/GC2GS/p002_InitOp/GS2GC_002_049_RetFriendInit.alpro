@@ -1,0 +1,12 @@
+﻿JavaPackage GS2GC.p002_InitOp;
+csharpspace GS2GC.p002_InitOp;
+
+import Common.FriendObj.alpro;
+
+ALProtocol GS2GC_002_049_RetFriendInit[初始化好友] <2, 49>
+{
+	Common.FriendObj.Friend_ApplyInfo[] applyList[申请数据列表];
+	Common.FriendObj.Friend_Info[] friendList[好友数据列表];
+	Common.FriendObj.Friend_CustomGroupInfo[] groupList[分组数据列表];
+	long[] groupOrderList[分组排序列表];
+}

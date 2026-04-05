@@ -1,0 +1,10 @@
+﻿JavaPackage GC2GS.p023_ArenaOp;
+csharpspace GC2GS.p023_ArenaOp;
+
+ALProtocol GC2GS_023_003_ReqSelectAttackSelectHero[指定攻击选择出战大臣] <23, 3>
+{
+    long opponentCid;
+    long itemId[道具id];
+    long heroId;
+    long buffId;
+}

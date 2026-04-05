@@ -1,0 +1,7 @@
+JavaPackage GS2GC.p015_ConsortOp;
+csharpspace GS2GC.p015_ConsortOp;
+ALProtocol GS2GC_015_056_OnCurSkinChg [家人当前皮肤变更] <15, 56>
+{
+    long consortId[空];
+    long curSkinId[当前皮肤ID];
+}

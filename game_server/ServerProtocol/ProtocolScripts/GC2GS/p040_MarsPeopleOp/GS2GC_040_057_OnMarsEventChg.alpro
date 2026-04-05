@@ -1,0 +1,9 @@
+﻿JavaPackage GS2GC.p040_MarsPeopleOp;
+csharpspace GS2GC.p040_MarsPeopleOp;
+
+import Common.MarsObj.alpro;
+
+ALProtocol GS2GC_040_057_OnMarsEventTrigger[事件触发] <40, 57>
+{
+	Common.MarsObj.Mars_Event marsEvent[火星居民事件];
+}

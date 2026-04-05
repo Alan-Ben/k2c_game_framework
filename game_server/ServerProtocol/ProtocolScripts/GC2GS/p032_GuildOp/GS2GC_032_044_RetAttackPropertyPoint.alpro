@@ -1,0 +1,11 @@
+import Common.CommonObj.alpro;
+import Common.NPCommonObj.alpro;
+
+JavaPackage GS2GC.p032_GuildOp;
+csharpspace GS2GC.p032_GuildOp;
+
+ALProtocol GS2GC_032_044_RetAttackPropertyPoint[攻击属性据点响应] <32, 44>
+{
+    long attackHp[本次攻击血量];
+    Common.NPCommonObj.NPCommon_ItemInfo[] itemList[获得物品列表];
+}

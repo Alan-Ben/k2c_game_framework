@@ -1,0 +1,8 @@
+﻿JavaPackage NP2CRS_R.p001_CrossRankOp;
+
+ALProtocol NP2CRS_R_001_026_GetCrossRankBaseSubListByKey[2级排行榜子数据列表] <1, 26>
+{
+	long crossInstanceId[跨服分组ID];
+	long rankId[排行Id];
+	long key;
+}

@@ -1,0 +1,10 @@
+﻿JavaPackage WCGLBS2LOG.p010_LogOp;
+
+/**********************************************************
+ * 发送BO日志
+ **********************************************************/
+ALProtocol WCGLBS2LOG_010_001_SendBoLog <10, 1>
+{
+    bytebuffer boBuffer;
+    long timeStamp;
+}

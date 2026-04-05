@@ -1,0 +1,15 @@
+﻿JavaPackage GS2GC.p042_GuildRelatedOp;
+csharpspace GS2GC.p042_GuildRelatedOp;
+
+ALProtocol GS2GC_042_053_OnMyMarsHelpDealed <42, 53>
+{
+	long id[求助实例ID];
+	long dealCid[帮助玩家CID];
+	int dealedCount[被帮助的次数];
+	int dealLimit[允许被帮助的上限];
+	
+	Enum.GuildEnum.EGuildMarsHelpObjType objType[对象类型];
+	long objId[对象实例ID];
+	
+	bool isAuto[是否自动帮助];
+}

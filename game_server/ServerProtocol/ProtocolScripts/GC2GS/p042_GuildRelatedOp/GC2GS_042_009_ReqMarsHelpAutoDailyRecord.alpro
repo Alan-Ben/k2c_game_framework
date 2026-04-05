@@ -1,0 +1,6 @@
+﻿JavaPackage GC2GS.p042_GuildRelatedOp;
+csharpspace GC2GS.p042_GuildRelatedOp;
+
+ALProtocol GC2GS_042_009_ReqMarsHelpAutoDailyRecord[获取玩家自动帮助每日次数] <42, 9>
+{
+}

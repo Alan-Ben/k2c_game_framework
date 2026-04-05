@@ -1,0 +1,8 @@
+﻿JavaPackage GC2GS.p013_HeroOp;
+csharpspace GC2GS.p013_HeroOp;
+
+ALProtocol GC2GS_013_028_ReqHeroWearEquip[大臣装备藏品]<13, 28>
+{
+    long dbId[数据id];
+    long heroId[大臣id];
+}

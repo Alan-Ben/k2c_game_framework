@@ -1,0 +1,18 @@
+JavaPackage Common.RankGiftPackObj;
+csharpspace Common.RankGiftPackObj;
+
+ALProtocol RankGiftPack_Info[冲榜礼包信息]
+{
+	int hadBuyTimes[已购买次数];
+	int buyLimitTimes[购买限制次数];
+	long endTimeMs[结束时间毫秒];
+
+	string name[礼包名称];
+	Common.NPCommonObj.NPCommon_ItemInfo consume[消耗道具];
+	Common.NPCommonObj.NPCommon_ItemInfo oriConsume[原价消耗道具];
+	Common.NPCommonObj.NPCommon_ItemInfo[] rewardList[奖励列表];
+
+	long uiResPathId[UI资源路径ID];
+	int sale[折扣];
+	long dbId[数据ID];
+}

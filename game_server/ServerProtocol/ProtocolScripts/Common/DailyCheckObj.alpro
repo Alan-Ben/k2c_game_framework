@@ -1,0 +1,28 @@
+﻿JavaPackage Common.DailyCheckObj;
+csharpspace Common.DailyCheckObj;
+
+ALProtocol DailyCheck_Info[每日签到信息]
+{
+	int notCheckDays[未签到天数];
+	long consortId[情人id];
+	long[] dessertList[甜品列表];
+	bool hasCheck[今日是否已签到];
+	long chooseDessertId[选择的甜品id];
+	Common.NPCommonObj.NPCommon_ItemInfo[] itemList[奖励列表];
+	long nextRefreshTimeMs[下一次刷新时间];
+}
+
+ALProtocol DailyCheck_RewardShowInfo[每日签到奖励展示信息]
+{
+	long refId[daily_check_loop_reward配置ID];
+	int curDay[当前天数];
+}
+ALProtocol DailyCheck_RewardInfo[每日签到奖励信息]
+{
+	int totalCheckDays[累计签到天数];
+	int rewardedDays[已经领取奖励的天数];
+	DailyCheck_RewardShowInfo[] showInfoList[展示数据列表];
+	DailyCheck_RewardShowInfo preShowInfo[数据列表的前一条数据，即上一组最后一条展示数据];
+	DailyCheck_RewardShowInfo nextShowInfo[数据列表的后一条数据，即下一组第一条展示数据];
+}
+

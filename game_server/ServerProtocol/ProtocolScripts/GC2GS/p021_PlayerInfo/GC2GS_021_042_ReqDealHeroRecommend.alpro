@@ -1,0 +1,8 @@
+﻿JavaPackage GC2GS.p021_PlayerInfo;
+csharpspace GC2GS.p021_PlayerInfo;
+
+ALProtocol GC2GS_021_042_ReqDealHeroRecommend[处理大臣推荐事件] <21, 42>
+{
+	long instanceId;
+	long heroId;
+}

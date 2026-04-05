@@ -1,0 +1,7 @@
+﻿﻿JavaPackage GS2GC.p024_DungeonOp;
+csharpspace GS2GC.p024_DungeonOp;
+
+ALProtocol GS2GC_024_061_OnEveningDungeonInfoChg <24, 61>
+{
+    Common.DungeonObj.EveningDungeon_Info info[副本信息];
+}

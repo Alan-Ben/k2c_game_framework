@@ -1,0 +1,7 @@
+﻿JavaPackage ToSCS_R.p001_ShareCodeOp;
+
+ALProtocol ToSCS_R_001_002_GetShareData <1, 2>
+{
+	int type;
+	long serial;
+}

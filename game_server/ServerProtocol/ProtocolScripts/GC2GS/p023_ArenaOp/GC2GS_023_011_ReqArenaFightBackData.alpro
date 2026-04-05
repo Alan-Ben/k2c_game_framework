@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p023_ArenaOp;
+csharpspace GC2GS.p023_ArenaOp;
+
+ALProtocol GC2GS_023_011_ReqArenaFightBackData[竞技场反击数据] <23, 11>
+{
+    
+}

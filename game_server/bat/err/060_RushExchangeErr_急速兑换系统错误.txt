@@ -1,0 +1,10 @@
+java_path= ../Common/src
+java_package=NPCommon.ErrMain
+csharp_type = main
+id	name	desc
+1	EXCHANGE_COUNT_NOT_ENOUGH	今日兑换次数已达上限
+2	EXCHANGE_IN_PROGRESS	已有进行中的兑换
+3	EXCHANGE_TIME_NOT_REACH	未到达可领奖时间
+4	EXCHANGE_NOT_FOUND	没有兑换记录
+5	EXCHANGE_ALREADY_REWARDED	已经领取过奖励
+6	EXCHANGE_CANNOT_REFRESH	还没到刷新时间

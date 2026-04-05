@@ -1,0 +1,6 @@
+﻿JavaPackage WCGCS2US_RB.p003_CommOp;
+
+ALProtocol NP2US_RB_003_006_RetRankFixedLike <3, 6>
+{
+	long likeScore[点赞积分];
+}

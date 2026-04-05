@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p024_DungeonOp;
+csharpspace GC2GS.p024_DungeonOp;
+
+ALProtocol GC2GS_024_012_ReqEveningDungeonBossInfo[晚间副本Boss信息] <24, 12>
+{
+    
+}

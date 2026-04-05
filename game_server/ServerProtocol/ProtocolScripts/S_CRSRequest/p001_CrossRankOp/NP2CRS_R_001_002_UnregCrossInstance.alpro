@@ -1,0 +1,7 @@
+﻿JavaPackage NP2CRS_R.p001_CrossRankOp;
+
+ALProtocol NP2CRS_R_001_002_UnregCrossInstance <1, 2>
+{
+	long crossInstanceId[跨服分组ID];
+	long joinerId[us服务器ID];
+}

@@ -1,0 +1,7 @@
+JavaPackage GC2GS.p021_PlayerInfo;
+csharpspace GC2GS.p021_PlayerInfo;
+
+ALProtocol GC2GS_021_044_ReqDrawFirstRechargeReward <21, 44>
+{
+	int day[天数];
+}

@@ -1,0 +1,6 @@
+﻿JavaPackage GC2GS.p032_GuildOp.GuildOpStructure;
+
+ALProtocol GuildOp_PlayerCname[附带玩家名称]
+{
+	string cname;
+}

@@ -1,0 +1,6 @@
+﻿JavaPackage NP2GLS_R.p001_BasicOp;
+
+ALProtocol NP2GLS_RB_001_005_RegGroupInstance <1, 5>
+{
+	long instanceId[游戏逻辑主体实例ID];
+}

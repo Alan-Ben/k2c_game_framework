@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p004_PlayerOp;
+csharpspace GC2GS.p004_PlayerOp;
+
+ALProtocol GC2GS_004_036_ReqDrawLoginCountReward[领取七日登录奖励] <4, 36>
+{
+    int day[第几天];
+}

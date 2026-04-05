@@ -1,0 +1,7 @@
+JavaPackage GS2GC.p008_TravelOp;
+csharpspace GS2GC.p008_TravelOp;
+import Common.TravelObj.alpro;
+ALProtocol GS2GC_008_008_RetDealConsortLikeTravel [处理增加妃子好感度游历事件] <8, 8>
+{
+    Common.TravelObj.Travel_EventResult result[游历事件结果];
+}

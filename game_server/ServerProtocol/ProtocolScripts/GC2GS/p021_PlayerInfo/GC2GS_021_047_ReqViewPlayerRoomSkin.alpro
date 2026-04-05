@@ -1,0 +1,10 @@
+﻿JavaPackage GC2GS.p021_PlayerInfo;
+csharpspace GC2GS.p021_PlayerInfo;
+
+/**********************************************************
+ * 玩家请求设置房间皮肤已查看。此协议是单向处理，不需要响应服务器消息
+ **********************************************************/
+ALProtocol GC2GS_021_047_ReqViewPlayerRoomSkin <21, 47>
+{
+	long roomSkinId;
+}

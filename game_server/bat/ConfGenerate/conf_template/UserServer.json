@@ -1,0 +1,106 @@
+{
+    "WCGBasicServerConf.properties": {
+        "_comments": {
+            "1": "服务器接收客户端缓存的字节长度",
+            "2": "服务器在内部系统中的监听端口（注意，非外部监听端口）",
+            "3": "平台服务器连接IP",
+            "4": "平台服务器连接端口",
+            "5": "平台服务器连接密码",
+            "6": "内部其他服务器连接本服务器时使用的IP",
+            "7": "内部其他服务器连接本服务器时使用的端口"
+        },
+        "WCGBasicServer.RecBufferLen": 102400,
+        "WCGBasicServer.Port": 6700,
+        "WCGBasicServer.PlatServerIp": "127.0.0.1",
+        "WCGBasicServer.PlatServerPort": 6660,
+        "WCGBasicServer.PlatServerPassword": "wcg_basic_plat_server",
+        "WCGBasicServer.InternalIp": "127.0.0.1",
+        "WCGBasicServer.InternalPort": 6700
+    },
+    "UserServerConf.properties": {
+        "_comments": {
+            "1": "开启用户服务器的数量",
+            "2": "用户服务器的列表，格式为1:2:3....",
+            "3": "最高可加载的用户数据数量，超出数量则需要排队",
+            "4": "最大注册玩家数，目前仅做预警处理，不做限制",
+            "5": "玩家数据卸载时间，最低为600000毫秒",
+            "6": "服务器是否需要依赖CS上的服务器信息开启，默认需要，如果特殊情况本地设置为false",
+            "7": "服务器是否非正式服务器，一般在一些信息获取的流程上会根据本变量做一些特殊处理。默认false",
+            "8": "时区信息",
+            "9": "是否开启GM命令"
+        },
+        "UserServer.openCount": 1,
+        "UserServer.typeId": 1,
+        "UserServer.maxLoadUserData": 3000,
+        "UserServer.userMaxCount": 3000,
+        "UserServer.userDataExpiredTimeMs": 600000,
+        "UserServer.needRelyCSOpen": true,
+        "UserServer.isIllegalServer": false,
+        "UserServer.TimeZone": "GMT+8:00",
+        "UserServer.openGM": false
+    },
+    "UserLogDBConf.properties": {
+        "_comments": {
+            "1": "数据库主机地址",
+            "2": "数据库名称",
+            "3": "数据库用户名",
+            "4": "数据库密码",
+            "5": "数据库安全保存路径"
+        },
+        "UserLogDB.DBHost": "127.0.0.1",
+        "UserLogDB.DBName": "gom_user_log",
+        "UserLogDB.DBUser": "wcggame",
+        "UserLogDB.DBPass": "wcggame",
+        "UserLogDB.DBSafeSavePath": "./_user_db_log"
+    },
+    "UserDBConf.properties": {
+        "_comments": {
+            "1": "数据库主机地址",
+            "2": "数据库名称",
+            "3": "数据库用户名",
+            "4": "数据库密码",
+            "5": "数据库安全保存路径"
+        },
+        "UserDB.DBHost": "127.0.0.1",
+        "UserDB.DBName": "gom_user",
+        "UserDB.DBUser": "wcggame",
+        "UserDB.DBPass": "wcggame",
+        "UserDB.DBSafeSavePath": "./_user_db"
+    },
+    "GameResConf.properties": {
+        "_comments": {
+            "1": "配表资源地址"
+        },
+        "GameRes.refPath": "../../project_res/Assets/Resources/__dlserverref"
+    },
+    "ALServerLog.properties": {
+        "_comments": {
+            "1": "打印日志等级 可选: DEBUG, INFO, WARNING, ERROR, FATAL"
+        },
+        "ALServerLog.LogLevel": "INFO"
+    },
+    "ALBasicServerConf.properties": {
+        "_comments": {
+            "1": "服务器标志字符串",
+            "2": "同步任务执行的线程数量",
+            "3": "Socket信息发送线程数量",
+            "4": "定时任务的时间精度",
+            "5": "定时任务的大区间长度，根据精度和长度可以决定一个区间的时间跨度",
+            "6": "是否检测线程加锁等级合法性"
+        },
+        "ALBasicServer.ServerTag": "WCGBasicLoginServer",
+        "ALBasicServer.SynTaskDealThreadNum": 4,
+        "ALBasicServer.ServerSendBackDealThreadNum": 1,
+        "ALBasicServer.TimerCheckTime": 20,
+        "ALBasicServer.TimerCheckAreaSize": 5000,
+        "ALBasicServer.CheckMutex": true
+    },
+    "ALBasicClientConf.properties": {
+        "_comments": {
+            "1": "消息发送线程的数量",
+            "2": "缓冲区长度"
+        },
+        "ALBasicClient.SendThreadNum": 1,
+        "ALBasicClient.RecSocketBufLen": 131072
+    }
+}

@@ -1,0 +1,8 @@
+﻿JavaPackage GC2GS.p007_CommOp;
+csharpspace GC2GS.p007_CommOp;
+
+ALProtocol GC2GS_007_029_ReqGachaPublicRollRecord[抽卡公屏记录]<7, 29> 
+{
+	long poolId[卡池id];
+	long dbId[抽卡记录数据id 查询这个id之后的数据];
+}

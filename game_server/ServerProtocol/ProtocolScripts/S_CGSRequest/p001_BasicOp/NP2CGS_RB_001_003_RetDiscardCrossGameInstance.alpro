@@ -1,0 +1,5 @@
+﻿JavaPackage NP2CGS_RB.p001_BasicOp;
+
+ALProtocol NP2CGS_RB_001_003_RetDiscardCrossGameInstance <1, 3>
+{
+}

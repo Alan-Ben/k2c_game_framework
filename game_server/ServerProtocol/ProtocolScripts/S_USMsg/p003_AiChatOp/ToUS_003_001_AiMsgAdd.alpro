@@ -1,0 +1,8 @@
+﻿JavaPackage NP2US.p003_AiChatOp;
+
+ALProtocol ToUS_003_001_AiMsgAdd[Ai消息新增] <3, 1>
+{
+	long usRequestId;
+	int errCode;
+	string response;
+}

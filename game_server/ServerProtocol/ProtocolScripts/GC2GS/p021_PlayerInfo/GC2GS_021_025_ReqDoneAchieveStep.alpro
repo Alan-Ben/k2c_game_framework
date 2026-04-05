@@ -1,0 +1,8 @@
+﻿JavaPackage GC2GS.p021_PlayerInfo;
+csharpspace GC2GS.p021_PlayerInfo;
+
+ALProtocol GC2GS_021_025_ReqDoneAchieveStep <21, 25>
+{
+	long achieveId;
+	int step;
+}

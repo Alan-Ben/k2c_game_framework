@@ -1,0 +1,7 @@
+﻿JavaPackage NP2CRS_R.p001_CrossRankOp;
+
+ALProtocol NP2CRS_R_001_020_GetCrossRankListSize <1, 20>
+{
+	long crossInstanceId[跨服分组ID];
+	long rankId[排行Id];
+}

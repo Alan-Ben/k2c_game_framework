@@ -1,0 +1,856 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  
+   Build file for 'build.xml'  
+   Creation date : $Date: 2018-08-11 $  
+   Updated date : $Date: 2018-08-11 $  
+   Author:   egg
+   build _Server
+-->
+<project name="GOE_Server" default="build" basedir="./">
+    <presetdef name="javac">
+        <javac encoding="utf-8" debug="true" debuglevel="lines,vars,source" includeantruntime="false" source="1.8" target="1.8"/>
+    </presetdef>
+    <property name="target" value="1.8"/>
+    <property name="source" value="1.8"/>
+    <property name="src.home" value="../"/>
+    <echo message="${src.home}"/>
+    <target name="init">
+        <delete dir="./out"/>
+        <mkdir dir="./out"/>
+        <copy tofile="./out/version.txt" file="./version.txt"/>
+
+        <!--build libs lib -->
+        <delete file="../Lib/Common.jar"/>
+        <delete file="../Lib/ServerProtocol.jar"/>
+        <delete file="../Lib/GameRes.jar"/>
+        <delete file="../Lib/GameLogicCommon.jar"/>
+        <path id="libpath">
+            <fileset dir="${src.home}/Lib">
+                <include name="**/*.jar"/>
+            </fileset>
+        </path>
+    </target>
+
+    <target name="delete">
+        <!--build libs lib -->
+        <delete file="../Lib/Common.jar"/>
+        <delete file="../Lib/ServerProtocol.jar"/>
+        <delete file="../Lib/GameRes.jar"/>
+        <delete file="../Lib/GameLogicCommon.jar"/>
+    </target>
+
+    <!-- ServerProtocol -->
+    <target name="ServerProtocol">
+        <property name="ServerProtocol" value="${src.home}/ServerProtocol"/>
+        <property name="ServerProtocol.sgr.dir" value="${ServerProtocol}/src"/>
+        <property name="ServerProtocol.ps.dir" value="${ServerProtocol}/ProtocolScripts"/>
+        <property name="ServerProtocol.dst.dir" value="${ServerProtocol}/temp"/>
+        <delete dir="${ServerProtocol.dst.dir}"/>
+        <mkdir dir="${ServerProtocol.dst.dir}"/>
+        <javac srcdir="${ServerProtocol.sgr.dir}:${ServerProtocol.ps.dir}" destdir="${ServerProtocol.dst.dir}" nowarn="true" target="1.8">
+            <classpath refid="libpath"/>
+        </javac>
+        <delete file="../Lib/ServerProtocol.jar"/>
+        <jar jarfile="../Lib/ServerProtocol.jar">
+
+            <exclude name="**/*.*"/>
+            <fileset excludes="META-INF/*.SF" dir="${ServerProtocol.dst.dir}" includes="**/*.class"/>
+            <fileset excludes="META-INF/*.SF" dir="${ServerProtocol.dst.dir}" includes="**/*.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../Lib/ALBasicServer.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../Lib/WCGBasicServer.jar"/>
+        </jar>
+        <delete dir="${ServerProtocol.dst.dir}"/>
+    </target>
+
+    <!--JavaAgent-->
+    <target name="JavaAgent">
+        <property name="JavaAgent" value="${src.home}/JavaAgent"/>
+        <property name="JavaAgent.sgr.dir" value="${JavaAgent}/src"/>
+        <property name="JavaAgent.dst.dir" value="${JavaAgent}/temp"/>
+        <delete dir="${JavaAgent.dst.dir}"/>
+        <mkdir dir="${JavaAgent.dst.dir}"/>
+        <javac srcdir="${JavaAgent.sgr.dir}" destdir="${JavaAgent.dst.dir}" nowarn="true" target="1.8" source="1.7">
+            <classpath refid="libpath"/>
+        </javac>
+        <delete dir="./out/JavaAgent"/>
+        <mkdir dir="./out/JavaAgent"/>
+        <jar jarfile="./out/JavaAgent/JavaAgent.jar">
+            <manifest>
+                <attribute name="Agent-Class" value="JavaAgent.JavaAgentMain"/>
+                <attribute name="Can-Redefine-Classes" value="true"/>
+                <attribute name="Can-Retransform-Classes" value="true"/>
+            </manifest>
+            <exclude name="**/*.*"/>
+            <fileset dir="${JavaAgent.dst.dir}" includes="**/*.class"/>
+            <fileset dir="${JavaAgent.dst.dir}" includes="**/*.jar"/>
+        </jar>
+        <delete dir="${JavaAgent.dst.dir}"/>
+    </target>
+	
+    <!-- Common -->
+    <target name="Common">
+        <property name="Common" value="${src.home}/Common"/>
+        <property name="Common.sgr.dir" value="${Common}/src"/>
+        <property name="Common.dst.dir" value="${Common}/temp"/>
+        <delete dir="${Common.dst.dir}"/>
+        <mkdir dir="${Common.dst.dir}"/>
+        <javac srcdir="${Common.sgr.dir}" destdir="${Common.dst.dir}" nowarn="true" target="1.8">
+            <classpath refid="libpath"/>
+            <classpath>
+                <fileset dir="./out/JavaAgent">
+                    <include name="JavaAgent.jar"/>
+                </fileset>
+            </classpath>
+        </javac>
+
+        <copy tofile="${Common}/temp/Common/GitNode/version.txt" file="./version.txt"/>
+        <delete file="../Lib/Common.jar"/>
+        <jar jarfile="../Lib/Common.jar">
+
+            <exclude name="**/*.*"/>
+            <fileset dir="${Common.dst.dir}" includes="**/*.class"/>
+            <fileset dir="${Common.dst.dir}" includes="**/*.jar"/>
+            <fileset dir="${Common.dst.dir}" includes="**/*.txt"/>
+            <zipfileset excludes="META-INF/*.SF" src="../Lib/ServerProtocol.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../Lib/SevenZip.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../Lib/gson-2.2.4.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../Lib/ApacheHttp/commons-logging-1.1.1.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../Lib/ApacheHttp/httpasyncclient-4.1.5.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../Lib/ApacheHttp/httpclient-4.5.14.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../Lib/ApacheHttp/httpcore-4.4.16.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../Lib/ApacheHttp/httpcore-nio-4.4.16.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../Lib/ApacheHttp/httpmime-4.5.14.jar"/>
+        </jar>
+        <delete dir="${Common.dst.dir}"/>
+    </target>
+	
+    <!-- GameLogicCommon -->
+    <target name="GameLogicCommon">
+        <property name="GameLogicCommon" value="${src.home}/GameLogicCommon"/>
+        <property name="GameLogicCommon.sgr.dir" value="${GameLogicCommon}/src"/>
+        <property name="GameLogicCommon.dst.dir" value="${GameLogicCommon}/temp"/>
+        <delete dir="${GameLogicCommon.dst.dir}"/>
+        <mkdir dir="${GameLogicCommon.dst.dir}"/>
+        <javac srcdir="${GameLogicCommon.sgr.dir}" destdir="${GameLogicCommon.dst.dir}" nowarn="true" target="1.8">
+            <classpath refid="libpath"/>
+            <classpath>
+                <fileset dir="./out/JavaAgent">
+                    <include name="JavaAgent.jar"/>
+                </fileset>
+            </classpath>
+        </javac>
+
+        <copy tofile="${GameLogicCommon}/temp/GameLogicCommon/GitNode/version.txt" file="./version.txt"/>
+        <delete file="../Lib/GameLogicCommon.jar"/>
+        <jar jarfile="../Lib/GameLogicCommon.jar">
+            <exclude name="**/*.*"/>
+            <fileset dir="${GameLogicCommon.dst.dir}" includes="**/*.class"/>
+            <fileset dir="${GameLogicCommon.dst.dir}" includes="**/*.jar"/>
+            <fileset dir="${GameLogicCommon.dst.dir}" includes="**/*.txt"/>
+            <zipfileset excludes="META-INF/*.SF" src="../Lib/GameRes.jar"/>
+        </jar>
+        <delete dir="${GameLogicCommon.dst.dir}"/>
+    </target>
+	
+    <!-- GameRes -->
+    <target name="GameRes">
+        <property name="GameRes" value="${src.home}/GameRes"/>
+        <property name="GameRes.sgr.dir" value="${GameRes}/src"/>
+        <property name="GameRes.dst.dir" value="${GameRes}/temp"/>
+        <delete dir="${GameRes.dst.dir}"/>
+        <mkdir dir="${GameRes.dst.dir}"/>
+        <javac srcdir="${GameRes.sgr.dir}" destdir="${GameRes.dst.dir}" nowarn="true" target="1.8">
+            <classpath refid="libpath"/>
+        </javac>
+        <delete file="../Lib/GameRes.jar"/>
+        <jar jarfile="../Lib/GameRes.jar">
+            <manifest>
+                <attribute name="Main-Class" value="GameRes.App"/>
+            </manifest>
+            <exclude name="**/*.*"/>
+            <fileset excludes="META-INF/*.SF" dir="${GameRes.dst.dir}" includes="**/*.class"/>
+            <fileset excludes="META-INF/*.SF" dir="${GameRes.dst.dir}" includes="**/*.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../Lib/Common.jar"/>
+        </jar>
+        <delete dir="${GameRes.dst.dir}"/>
+    </target>
+
+    <!-- LoginServer -->
+    <target name="LoginServer">
+        <property name="LoginServer" value="${src.home}/LoginServer"/>
+        <property name="LoginServer.sgr.dir" value="${LoginServer}/src"/>
+        <property name="LoginServer.dst.dir" value="${LoginServer}/temp"/>
+        <delete dir="${LoginServer.dst.dir}"/>
+        <mkdir dir="${LoginServer.dst.dir}"/>
+        <javac srcdir="${LoginServer.sgr.dir}" destdir="${LoginServer.dst.dir}" nowarn="true" target="1.8">
+            <classpath refid="libpath"/>
+        </javac>
+        <delete dir="./out/LoginServer"/>
+        <mkdir dir="./out/LoginServer"/>
+		<mkdir dir="./out/LoginServer/conf"/>
+		<copy todir="./out/LoginServer/conf"  >
+			<fileset dir="../LoginServer/conf" />
+		</copy>
+        <jar jarfile="./out/LoginServer/LoginServer.jar">
+            <manifest>
+                <attribute name="Main-Class" value="NPLoginServer.NPLSMain"/>
+            </manifest>
+            <exclude name="**/*.*"/>
+            <fileset dir="${LoginServer.dst.dir}" includes="**/*.class"/>
+            <fileset dir="${LoginServer.dst.dir}" includes="**/*.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../Lib/Common.jar"/>
+        </jar>
+        <delete dir="${LoginServer.dst.dir}"/>
+    </target>
+
+    <!-- LoginCheckServer -->
+    <target name="LoginCheckServer">
+        <property name="LoginCheckServer" value="${src.home}/LoginCheckServer"/>
+        <property name="LoginCheckServer.sgr.dir" value="${LoginCheckServer}/src"/>
+        <property name="LoginCheckServer.dst.dir" value="${LoginCheckServer}/temp"/>
+        <delete dir="${LoginCheckServer.dst.dir}"/>
+        <mkdir dir="${LoginCheckServer.dst.dir}"/>
+        <javac srcdir="${LoginCheckServer.sgr.dir}" destdir="${LoginCheckServer.dst.dir}" nowarn="true" target="1.8">
+            <classpath refid="libpath"/>
+        </javac>
+        <delete dir="./out/LoginCheckServer"/>
+        <mkdir dir="./out/LoginCheckServer"/>
+		<mkdir dir="./out/LoginCheckServer/conf"/>
+		<copy todir="./out/LoginCheckServer/conf"  >
+			<fileset dir="../LoginCheckServer/conf" />
+		</copy>
+        <jar jarfile="./out/LoginCheckServer/LoginCheckServer.jar">
+            <manifest>
+                <attribute name="Main-Class" value="NPLoginCheckServer.NPLCSMain"/>
+            </manifest>
+            <exclude name="**/*.*"/>
+            <fileset dir="${LoginCheckServer.dst.dir}" includes="**/*.class"/>
+            <fileset dir="${LoginCheckServer.dst.dir}" includes="**/*.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../Lib/Common.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../Lib/mysql-connector-java-8.0.11.jar"/>
+        </jar>
+        <delete dir="${LoginCheckServer.dst.dir}"/>
+    </target>
+
+    <!-- PlatServer -->
+    <target name="PlatServer">
+        <property name="PlatServer" value="${src.home}/PlatServer"/>
+        <property name="PlatServer.sgr.dir" value="${PlatServer}/src"/>
+        <property name="PlatServer.dst.dir" value="${PlatServer}/temp"/>
+        <delete dir="${PlatServer.dst.dir}"/>
+        <mkdir dir="${PlatServer.dst.dir}"/>
+        <javac srcdir="${PlatServer.sgr.dir}" destdir="${PlatServer.dst.dir}" nowarn="true" target="1.8">
+            <classpath refid="libpath"/>
+        </javac>
+        <delete dir="./out/PlatServer"/>
+        <mkdir dir="./out/PlatServer"/>
+		<mkdir dir="./out/PlatServer/conf"/>
+		<copy todir="./out/PlatServer/conf"  >
+			<fileset dir="../PlatServer/conf" />
+		</copy>
+        <jar jarfile="./out/PlatServer/PlatServer.jar">
+            <manifest>
+                <attribute name="Main-Class" value="NPPlatServer.NPPSMain"/>
+            </manifest>
+            <exclude name="**/*.*"/>
+            <fileset dir="${PlatServer.dst.dir}" includes="**/*.class"/>
+            <fileset dir="${PlatServer.dst.dir}" includes="**/*.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../Lib/Common.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../Lib/mysql-connector-java-8.0.11.jar"/>
+        </jar>
+        <delete dir="${PlatServer.dst.dir}"/>
+    </target>
+	
+    <!-- Client -->
+    <target name="Client">
+        <property name="Client" value="${src.home}/Client"/>
+        <property name="Client.sgr.dir" value="${Client}/src"/>
+        <property name="Client.dst.dir" value="${Client}/temp"/>
+        <delete dir="${Client.dst.dir}"/>
+        <mkdir dir="${Client.dst.dir}"/>
+        <javac srcdir="${Client.sgr.dir}" destdir="${Client.dst.dir}" nowarn="true" target="1.8">
+            <classpath refid="libpath"/>
+        </javac>
+        <delete dir="./out/Client"/>
+        <mkdir dir="./out/Client"/>
+        <jar jarfile="./out/Client/Client.jar">
+            <manifest>
+                <attribute name="Main-Class" value="MGClient.NPClientMain"/>
+            </manifest>
+            <exclude name="**/*.*"/>
+            <fileset dir="${Client.dst.dir}" includes="**/*.class"/>
+            <fileset dir="${Client.dst.dir}" includes="**/*.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../Lib/GameRes.jar"/>
+        </jar>
+        <delete dir="${Client.dst.dir}"/>
+    </target>
+	
+    <!-- CommonServer -->
+    <target name="CommonServer">
+        <property name="CommonServer" value="${src.home}/CommonServer"/>
+        <property name="CommonServer.sgr.dir" value="${CommonServer}/src"/>
+        <property name="CommonServer.dst.dir" value="${CommonServer}/temp"/>
+        <delete dir="${CommonServer.dst.dir}"/>
+        <mkdir dir="${CommonServer.dst.dir}"/>
+        <javac srcdir="${CommonServer.sgr.dir}" destdir="${CommonServer.dst.dir}" nowarn="true" target="1.8">
+            <classpath refid="libpath"/>
+        </javac>
+        <delete dir="./out/CommonServer"/>
+        <mkdir dir="./out/CommonServer"/>
+		<mkdir dir="./out/CommonServer/conf"/>
+		<copy todir="./out/CommonServer/conf"  >
+			<fileset dir="../CommonServer/conf" />
+		</copy>
+        <jar jarfile="./out/CommonServer/CommonServer.jar">
+            <manifest>
+                <attribute name="Main-Class" value="NPCommonServer.NPCSMain"/>
+            </manifest>
+            <exclude name="**/*.*"/>
+            <fileset dir="${CommonServer.dst.dir}" includes="**/*.class"/>
+            <fileset dir="${CommonServer.dst.dir}" includes="**/*.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../Lib/GameRes.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../Lib/mysql-connector-java-8.0.11.jar"/>
+        </jar>
+         <delete dir="${CommonServer.dst.dir}"/>
+    </target>
+	
+	<!-- MarryMatchServer -->
+    <target name="MarryMatchServer">
+        <property name="MarryMatchServer" value="${src.home}/MarryMatchServer"/>
+        <property name="MarryMatchServer.sgr.dir" value="${MarryMatchServer}/src"/>
+        <property name="MarryMatchServer.dst.dir" value="${MarryMatchServer}/temp"/>
+        <delete dir="${MarryMatchServer.dst.dir}"/>
+        <mkdir dir="${MarryMatchServer.dst.dir}"/>
+        <javac srcdir="${MarryMatchServer.sgr.dir}" destdir="${MarryMatchServer.dst.dir}" nowarn="true" target="1.8">
+            <classpath refid="libpath"/>
+        </javac>
+        <delete dir="./out/MarryMatchServer"/>
+        <mkdir dir="./out/MarryMatchServer"/>
+		<mkdir dir="./out/MarryMatchServer/conf"/>
+		<copy todir="./out/MarryMatchServer/conf"  >
+			<fileset dir="../MarryMatchServer/conf" />
+		</copy>
+        <jar jarfile="./out/MarryMatchServer/MarryMatchServer.jar">
+            <manifest>
+                <attribute name="Main-Class" value="MarryMatchServer.MarryMatchMain"/>
+            </manifest>
+            <exclude name="**/*.*"/>
+            <fileset dir="${MarryMatchServer.dst.dir}" includes="**/*.class"/>
+            <fileset dir="${MarryMatchServer.dst.dir}" includes="**/*.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../Lib/Common.jar"/>
+        </jar>
+         <delete dir="${MarryMatchServer.dst.dir}"/>
+    </target>
+	
+    <!-- GatewayServer -->
+    <target name="GatewayServer">
+        <property name="GatewayServer" value="${src.home}/GatewayServer"/>
+        <property name="GatewayServer.sgr.dir" value="${GatewayServer}/src"/>
+        <property name="GatewayServer.dst.dir" value="${GatewayServer}/temp"/>
+        <delete dir="${GatewayServer.dst.dir}"/>
+        <mkdir dir="${GatewayServer.dst.dir}"/>
+        <javac srcdir="${GatewayServer.sgr.dir}" destdir="${GatewayServer.dst.dir}" nowarn="true" target="1.8">
+            <classpath refid="libpath"/>
+        </javac>
+        <delete dir="./out/GatewayServer"/>
+        <mkdir dir="./out/GatewayServer"/>
+		<mkdir dir="./out/GatewayServer/conf"/>
+		<copy todir="./out/GatewayServer/conf"  >
+			<fileset dir="../GatewayServer/conf" />
+		</copy>
+        <jar jarfile="./out/GatewayServer/GatewayServer.jar">
+            <manifest>
+                <attribute name="Main-Class" value="NPGateServer.NPGSMain"/>
+            </manifest>
+            <exclude name="**/*.*"/>
+            <fileset dir="${GatewayServer.dst.dir}" includes="**/*.class"/>
+            <fileset dir="${GatewayServer.dst.dir}" includes="**/*.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../Lib/GameRes.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../Lib/mysql-connector-java-8.0.11.jar"/>
+        </jar>
+        <delete dir="${GatewayServer.dst.dir}"/>
+    </target>
+	
+    <!-- InterfaceServer -->
+    <target name="InterfaceServer">
+        <property name="InterfaceServer" value="${src.home}/InterfaceServer"/>
+        <property name="InterfaceServer.sgr.dir" value="${InterfaceServer}/src"/>
+        <property name="InterfaceServer.dst.dir" value="${InterfaceServer}/temp"/>
+        <delete dir="${InterfaceServer.dst.dir}"/>
+        <mkdir dir="${InterfaceServer.dst.dir}"/>
+        <javac srcdir="${InterfaceServer.sgr.dir}" destdir="${InterfaceServer.dst.dir}" nowarn="true" target="1.8">
+            <classpath refid="libpath"/>
+        </javac>
+        <delete dir="./out/InterfaceServer"/>
+        <mkdir dir="./out/InterfaceServer"/>
+		<mkdir dir="./out/InterfaceServer/conf"/>
+		<copy todir="./out/InterfaceServer/conf"  >
+			<fileset dir="../InterfaceServer/conf" />
+		</copy>
+        <jar jarfile="./out/InterfaceServer/InterfaceServer.jar">
+            <manifest>
+                <attribute name="Main-Class" value="NPInterfaceServer.NPISMain"/>
+            </manifest>
+            <exclude name="**/*.*"/>
+            <fileset dir="${InterfaceServer.dst.dir}" includes="**/*.class"/>
+            <fileset dir="${InterfaceServer.dst.dir}" includes="**/*.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../Lib/mysql-connector-java-8.0.11.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../Lib/Common.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../lib/ChatSDK.jar"/>
+        </jar>
+         <delete dir="${InterfaceServer.dst.dir}"/>
+    </target>
+	
+    <!-- MonitorServer -->
+    <target name="MonitorServer">
+        <property name="MonitorServer" value="${src.home}/MonitorServer"/>
+        <property name="MonitorServer.sgr.dir" value="${MonitorServer}/src"/>
+        <property name="MonitorServer.dst.dir" value="${MonitorServer}/temp"/>
+        <delete dir="${MonitorServer.dst.dir}"/>
+        <mkdir dir="${MonitorServer.dst.dir}"/>
+        <javac srcdir="${MonitorServer.sgr.dir}" destdir="${MonitorServer.dst.dir}" nowarn="true" target="1.8">
+            <classpath refid="libpath"/>
+        </javac>
+        <delete dir="./out/MonitorServer"/>
+        <mkdir dir="./out/MonitorServer"/>
+		<mkdir dir="./out/MonitorServer/conf"/>
+		<copy todir="./out/MonitorServer/conf"  >
+			<fileset dir="../MonitorServer/conf" />
+		</copy>
+        <jar jarfile="./out/MonitorServer/MonitorServer.jar">
+            <manifest>
+                <attribute name="Main-Class" value="NPMonitorServer.NPMonitorMain"/>
+            </manifest>
+            <exclude name="**/*.*"/>
+            <fileset dir="${MonitorServer.dst.dir}" includes="**/*.class"/>
+            <fileset dir="${MonitorServer.dst.dir}" includes="**/*.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../Lib/Common.jar"/>
+        </jar>
+         <delete dir="${MonitorServer.dst.dir}"/>
+    </target>
+
+    <!--BusServer-->
+    <target name="BusServer">
+        <property name="BusServer" value="${src.home}/BusServer"/>
+        <property name="BusServer.sgr.dir" value="${BusServer}/src"/>
+        <property name="BusServer.dst.dir" value="${BusServer}/temp"/>
+        <delete dir="${BusServer.dst.dir}"/>
+        <mkdir dir="${BusServer.dst.dir}"/>
+        <javac srcdir="${BusServer.sgr.dir}" destdir="${BusServer.dst.dir}" nowarn="true" target="1.8">
+            <classpath refid="libpath"/>
+        </javac>
+        <delete dir="./out/BusServer"/>
+        <mkdir dir="./out/BusServer"/>
+		<mkdir dir="./out/BusServer/conf"/>
+		<copy todir="./out/BusServer/conf"  >
+			<fileset dir="../BusServer/conf" />
+		</copy>
+        <jar jarfile="./out/BusServer/BusServer.jar">
+            <manifest>
+                <attribute name="Main-Class" value="NPBusServer.NPBusMain"/>
+            </manifest>
+            <exclude name="**/*.*"/>
+            <fileset dir="${BusServer.dst.dir}" includes="**/*.class"/>
+            <fileset dir="${BusServer.dst.dir}" includes="**/*.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../Lib/Common.jar"/>
+        </jar>
+        <delete dir="${BusServer.dst.dir}"/>
+    </target>
+
+    <!-- UserServer -->
+    <target name="UserServer">
+        <property name="UserServer" value="${src.home}/UserServer"/>
+        <property name="UserServer.sgr.dir" value="${UserServer}/src"/>
+        <property name="UserServer.dst.dir" value="${UserServer}/temp"/>
+        <delete dir="${UserServer.dst.dir}"/>
+        <mkdir dir="${UserServer.dst.dir}"/>
+        <javac srcdir="${UserServer.sgr.dir}" destdir="${UserServer.dst.dir}" nowarn="true" target="1.8">
+            <classpath refid="libpath"/>
+        </javac>
+        <delete dir="./out/UserServer"/>
+        <mkdir dir="./out/UserServer"/>
+		<mkdir dir="./out/UserServer/conf"/>
+		<copy todir="./out/UserServer/conf"  >
+			<fileset dir="../UserServer/conf" />
+		</copy>
+        <jar jarfile="./out/UserServer/UserServer.jar">
+            <manifest>
+                <attribute name="Main-Class" value="NPUSServer.NPUSMain"/>
+            </manifest>
+            <exclude name="**/*.*"/>
+            <fileset dir="${UserServer.dst.dir}" includes="**/*.class"/>
+            <fileset dir="${UserServer.dst.dir}" includes="**/*.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../Lib/mysql-connector-java-8.0.11.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../Lib/GameLogicCommon.jar"/>
+        </jar>
+         <delete dir="${UserServer.dst.dir}"/>
+    </target>
+	
+    <!-- RecordServer  -->
+    <target name="RecordServer">
+        <property name="RecordServer" value="${src.home}/RecordServer"/>
+        <property name="RecordServer.sgr.dir" value="${RecordServer}/src"/>
+        <property name="RecordServer.dst.dir" value="${RecordServer}/temp"/>
+        <delete dir="${RecordServer.dst.dir}"/>
+        <mkdir dir="${RecordServer.dst.dir}"/>
+        <javac srcdir="${RecordServer.sgr.dir}" destdir="${RecordServer.dst.dir}" nowarn="true" target="1.8">
+            <classpath refid="libpath"/>
+        </javac>
+        <delete dir="./out/RecordServer"/>
+        <mkdir dir="./out/RecordServer"/>
+		<mkdir dir="./out/RecordServer/conf"/>
+		<copy todir="./out/RecordServer/conf"  >
+			<fileset dir="../RecordServer/conf" />
+		</copy>
+        <jar jarfile="./out/RecordServer/RecordServer.jar">
+            <manifest>
+                <attribute name="Main-Class" value="NPRecordServer.NPRCSMain"/>
+            </manifest>
+            <exclude name="**/*.*"/>
+            <fileset dir="${RecordServer.dst.dir}" includes="**/*.class"/>
+            <fileset dir="${RecordServer.dst.dir}" includes="**/*.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../Lib/mysql-connector-java-8.0.11.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../Lib/Common.jar"/>
+        </jar>
+         <delete dir="${RecordServer.dst.dir}"/>
+    </target>
+    
+    <!-- CrossGameServer  -->
+    <target name="CrossGameServer">
+        <property name="CrossGameServer" value="${src.home}/CrossGameServer"/>
+        <property name="CrossGameServer.sgr.dir" value="${CrossGameServer}/src"/>
+        <property name="CrossGameServer.dst.dir" value="${CrossGameServer}/temp"/>
+        <delete dir="${CrossGameServer.dst.dir}"/>
+        <mkdir dir="${CrossGameServer.dst.dir}"/>
+        <javac srcdir="${CrossGameServer.sgr.dir}" destdir="${CrossGameServer.dst.dir}" nowarn="true" target="1.8">
+            <classpath refid="libpath"/>
+        </javac>
+        <delete dir="./out/CrossGameServer"/>
+        <mkdir dir="./out/CrossGameServer"/>
+        <mkdir dir="./out/CrossGameServer/conf"/>
+        <copy todir="./out/CrossGameServer/conf"  >
+            <fileset dir="../CrossGameServer/conf" />
+        </copy>
+        <jar jarfile="./out/CrossGameServer/CrossGameServer.jar">
+            <manifest>
+                <attribute name="Main-Class" value="NPCrossGameServer.NPCrossGameMain"/>
+            </manifest>
+            <exclude name="**/*.*"/>
+            <fileset dir="${CrossGameServer.dst.dir}" includes="**/*.class"/>
+            <fileset dir="${CrossGameServer.dst.dir}" includes="**/*.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../Lib/mysql-connector-java-8.0.11.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../Lib/GameLogicCommon.jar"/>
+        </jar>
+         <delete dir="${CrossGameServer.dst.dir}"/>
+    </target>
+
+    <!-- CrossRankServer  -->
+    <target name="CrossRankServer">
+        <property name="CrossRankServer" value="${src.home}/CrossRankServer"/>
+        <property name="CrossRankServer.sgr.dir" value="${CrossRankServer}/src"/>
+        <property name="CrossRankServer.dst.dir" value="${CrossRankServer}/temp"/>
+        <delete dir="${CrossRankServer.dst.dir}"/>
+        <mkdir dir="${CrossRankServer.dst.dir}"/>
+        <javac srcdir="${CrossRankServer.sgr.dir}" destdir="${CrossRankServer.dst.dir}" nowarn="true" target="1.8">
+            <classpath refid="libpath"/>
+        </javac>
+        <delete dir="./out/CrossRankServer"/>
+        <mkdir dir="./out/CrossRankServer"/>
+        <mkdir dir="./out/CrossRankServer/conf"/>
+        <copy todir="./out/CrossRankServer/conf"  >
+            <fileset dir="../CrossRankServer/conf" />
+        </copy>
+        <jar jarfile="./out/CrossRankServer/CrossRankServer.jar">
+            <manifest>
+                <attribute name="Main-Class" value="NPCrossRankServer.NPCrossRankMain"/>
+            </manifest>
+            <exclude name="**/*.*"/>
+            <fileset dir="${CrossRankServer.dst.dir}" includes="**/*.class"/>
+            <fileset dir="${CrossRankServer.dst.dir}" includes="**/*.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../Lib/mysql-connector-java-8.0.11.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../Lib/GameRes.jar"/>
+        </jar>
+         <delete dir="${CrossRankServer.dst.dir}"/>
+    </target>
+
+	<!-- HttpServer -->
+    <target name="HttpServer">
+        <property name="HttpServer" value="${src.home}/HttpServer"/>
+        <property name="HttpServer.sgr.dir" value="${HttpServer}/src"/>
+        <property name="HttpServer.dst.dir" value="${HttpServer}/temp"/>
+        <delete dir="${HttpServer.dst.dir}"/>
+        <mkdir dir="${HttpServer.dst.dir}"/>
+        <javac srcdir="${HttpServer.sgr.dir}" destdir="${HttpServer.dst.dir}" nowarn="true" target="1.8">
+            <classpath refid="libpath"/>
+        </javac>
+        <delete dir="./out/HttpServer"/>
+        <mkdir dir="./out/HttpServer"/>
+		<mkdir dir="./out/HttpServer/conf"/>
+		<copy todir="./out/HttpServer/conf"  >
+			<fileset dir="../HttpServer/conf" />
+		</copy>
+        <jar jarfile="./out/HttpServer/HttpServer.jar">
+            <manifest>
+                <attribute name="Main-Class" value="NPHttpServer.NPHSMain"/>
+            </manifest>
+            <exclude name="**/*.*"/>
+            <fileset dir="${HttpServer.dst.dir}" includes="**/*.class"/>
+            <fileset dir="${HttpServer.dst.dir}" includes="**/*.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../Lib/mysql-connector-java-8.0.11.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../Lib/GameRes.jar"/>
+        </jar>
+         <delete dir="${HttpServer.dst.dir}"/>
+    </target>
+
+    <!-- ScheduleServer  -->
+    <target name="ScheduleServer">
+        <property name="ScheduleServer" value="${src.home}/ScheduleServer"/>
+        <property name="ScheduleServer.sgr.dir" value="${ScheduleServer}/src"/>
+        <property name="ScheduleServer.dst.dir" value="${ScheduleServer}/temp"/>
+        <delete dir="${ScheduleServer.dst.dir}"/>
+        <mkdir dir="${ScheduleServer.dst.dir}"/>
+        <javac srcdir="${ScheduleServer.sgr.dir}" destdir="${ScheduleServer.dst.dir}" nowarn="true" target="1.8">
+            <classpath refid="libpath"/>
+        </javac>
+        <delete dir="./out/ScheduleServer"/>
+        <mkdir dir="./out/ScheduleServer"/>
+        <mkdir dir="./out/ScheduleServer/conf"/>
+        <copy todir="./out/ScheduleServer/conf"  >
+            <fileset dir="../ScheduleServer/conf" />
+        </copy>
+        <jar jarfile="./out/ScheduleServer/ScheduleServer.jar">
+            <manifest>
+                <attribute name="Main-Class" value="NPScheduleServer.NPSSMain"/>
+            </manifest>
+            <exclude name="**/*.*"/>
+            <fileset dir="${ScheduleServer.dst.dir}" includes="**/*.class"/>
+            <fileset dir="${ScheduleServer.dst.dir}" includes="**/*.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../Lib/mysql-connector-java-8.0.11.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../Lib/GameRes.jar"/>
+        </jar>
+         <delete dir="${ScheduleServer.dst.dir}"/>
+    </target>
+
+    <!-- ShareCodeCenter  -->
+    <target name="ShareCodeCenter">
+        <property name="ShareCodeCenter" value="${src.home}/ShareCodeCenter"/>
+        <property name="ShareCodeCenter.sgr.dir" value="${ShareCodeCenter}/src"/>
+        <property name="ShareCodeCenter.dst.dir" value="${ShareCodeCenter}/temp"/>
+        <delete dir="${ShareCodeCenter.dst.dir}"/>
+        <mkdir dir="${ShareCodeCenter.dst.dir}"/>
+        <javac srcdir="${ShareCodeCenter.sgr.dir}" destdir="${ShareCodeCenter.dst.dir}" nowarn="true" target="1.8">
+            <classpath refid="libpath"/>
+        </javac>
+        <delete dir="./out/ShareCodeCenter"/>
+        <mkdir dir="./out/ShareCodeCenter"/>
+        <mkdir dir="./out/ShareCodeCenter/conf"/>
+        <copy todir="./out/ShareCodeCenter/conf"  >
+            <fileset dir="../ShareCodeCenter/conf" />
+        </copy>
+        <jar jarfile="./out/ShareCodeCenter/ShareCodeCenter.jar">
+            <manifest>
+                <attribute name="Main-Class" value="ShareCodeCenter.ShareCodeCenterMain"/>
+            </manifest>
+            <exclude name="**/*.*"/>
+            <fileset dir="${ShareCodeCenter.dst.dir}" includes="**/*.class"/>
+            <fileset dir="${ShareCodeCenter.dst.dir}" includes="**/*.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../Lib/mysql-connector-java-8.0.11.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../Lib/GameRes.jar"/>
+        </jar>
+         <delete dir="${ShareCodeCenter.dst.dir}"/>
+    </target>
+
+    <!-- PayCenter  -->
+    <target name="PayCenter">
+        <property name="PayCenter" value="${src.home}/PayCenter"/>
+        <property name="PayCenter.sgr.dir" value="${PayCenter}/src"/>
+        <property name="PayCenter.dst.dir" value="${PayCenter}/temp"/>
+        <delete dir="${PayCenter.dst.dir}"/>
+        <mkdir dir="${PayCenter.dst.dir}"/>
+        <javac srcdir="${PayCenter.sgr.dir}" destdir="${PayCenter.dst.dir}" nowarn="true" target="1.8">
+            <classpath refid="libpath"/>
+        </javac>
+        <delete dir="./out/PayCenter"/>
+        <mkdir dir="./out/PayCenter"/>
+        <mkdir dir="./out/PayCenter/conf"/>
+        <copy todir="./out/PayCenter/conf"  >
+            <fileset dir="../PayCenter/conf" />
+        </copy>
+        <jar jarfile="./out/PayCenter/PayCenter.jar">
+            <manifest>
+                <attribute name="Main-Class" value="PayCenter.PayCenterMain"/>
+            </manifest>
+            <exclude name="**/*.*"/>
+            <fileset dir="${PayCenter.dst.dir}" includes="**/*.class"/>
+            <fileset dir="${PayCenter.dst.dir}" includes="**/*.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../Lib/Common.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../Lib/mysql-connector-java-8.0.11.jar"/>
+        </jar>
+         <delete dir="${PayCenter.dst.dir}"/>
+    </target>
+
+    <!-- DinnerServer  -->
+    <target name="DinnerServer">
+        <property name="DinnerServer" value="${src.home}/DinnerServer"/>
+        <property name="DinnerServer.sgr.dir" value="${DinnerServer}/src"/>
+        <property name="DinnerServer.dst.dir" value="${DinnerServer}/temp"/>
+        <delete dir="${DinnerServer.dst.dir}"/>
+        <mkdir dir="${DinnerServer.dst.dir}"/>
+        <javac srcdir="${DinnerServer.sgr.dir}" destdir="${DinnerServer.dst.dir}" nowarn="true" target="1.8">
+            <classpath refid="libpath"/>
+        </javac>
+        <delete dir="./out/DinnerServer"/>
+        <mkdir dir="./out/DinnerServer"/>
+        <mkdir dir="./out/DinnerServer/conf"/>
+        <copy todir="./out/DinnerServer/conf"  >
+            <fileset dir="../DinnerServer/conf" />
+        </copy>
+        <jar jarfile="./out/DinnerServer/DinnerServer.jar">
+            <manifest>
+                <attribute name="Main-Class" value="DinnerServer.DinnerMain"/>
+            </manifest>
+            <exclude name="**/*.*"/>
+            <fileset dir="${DinnerServer.dst.dir}" includes="**/*.class"/>
+            <fileset dir="${DinnerServer.dst.dir}" includes="**/*.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../Lib/Common.jar"/>
+        </jar>
+         <delete dir="${DinnerServer.dst.dir}"/>
+    </target>
+
+    <!-- CrossTeamServer  -->
+    <target name="CrossTeamServer">
+        <property name="CrossTeamServer" value="${src.home}/CrossTeamServer"/>
+        <property name="CrossTeamServer.sgr.dir" value="${CrossTeamServer}/src"/>
+        <property name="CrossTeamServer.dst.dir" value="${CrossTeamServer}/temp"/>
+        <delete dir="${CrossTeamServer.dst.dir}"/>
+        <mkdir dir="${CrossTeamServer.dst.dir}"/>
+        <javac srcdir="${CrossTeamServer.sgr.dir}" destdir="${CrossTeamServer.dst.dir}" nowarn="true" target="1.8">
+            <classpath refid="libpath"/>
+        </javac>
+        <delete dir="./out/CrossTeamServer"/>
+        <mkdir dir="./out/CrossTeamServer"/>
+        <mkdir dir="./out/CrossTeamServer/conf"/>
+        <copy todir="./out/CrossTeamServer/conf"  >
+            <fileset dir="../CrossTeamServer/conf" />
+        </copy>
+        <jar jarfile="./out/CrossTeamServer/CrossTeamServer.jar">
+            <manifest>
+                <attribute name="Main-Class" value="CrossTeamServer.CrossTeamMain"/>
+            </manifest>
+            <exclude name="**/*.*"/>
+            <fileset dir="${CrossTeamServer.dst.dir}" includes="**/*.class"/>
+            <fileset dir="${CrossTeamServer.dst.dir}" includes="**/*.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../Lib/mysql-connector-java-8.0.11.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../Lib/GameLogicCommon.jar"/>
+        </jar>
+         <delete dir="${CrossTeamServer.dst.dir}"/>
+    </target>
+
+    <!-- HsClient -->
+    <target name="HsClient">
+        <property name="HsClient" value="${src.home}/HsClient"/>
+        <property name="HsClient.sgr.dir" value="${HsClient}/src"/>
+        <property name="HsClient.dst.dir" value="${HsClient}/temp"/>
+        <delete dir="${HsClient.dst.dir}"/>
+        <mkdir dir="${HsClient.dst.dir}"/>
+        <javac srcdir="${HsClient.sgr.dir}" destdir="${HsClient.dst.dir}" nowarn="true" target="1.8">
+            <classpath refid="libpath"/>
+        </javac>
+        <delete dir="./out/HsClient"/>
+        <mkdir dir="./out/HsClient"/>
+        <jar jarfile="./out/HsClient/HsClient.jar" >
+            <manifest>
+                <attribute name="Main-Class" value="NPHsClient.HsClientMain"/>
+            </manifest>
+            <exclude name="**/*.*" />
+            <fileset dir="${HsClient.dst.dir}" includes="**/*.class"/>
+            <fileset dir="${HsClient.dst.dir}" includes="**/*.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../Lib/Common.jar"/>
+        </jar>
+    </target>
+	
+	<!-- ActivitiesV01 -->
+	<target name="ActivitiesV01">
+		<property name="ActivitiesV01" value="${src.home}/ActivitiesV01"/>
+		<property name="ActivitiesV01.sgr.dir" value="${ActivitiesV01}/src"/>
+		<property name="ActivitiesV01.dst.dir" value="${ActivitiesV01}/temp"/>
+		<delete dir="${ActivitiesV01.dst.dir}"/>
+		<mkdir dir="${ActivitiesV01.dst.dir}"/>
+		
+		<javac srcdir="${ActivitiesV01.sgr.dir}" destdir="${ActivitiesV01.dst.dir}" nowarn="true" target="1.8">
+			<classpath refid="libpath"/>
+			<classpath>
+				<fileset dir="./out/UserServer">
+					<include name="UserServer.jar"/>
+				</fileset>
+			</classpath>
+		</javac>
+
+		<delete file="./out/UserServer/activities/ActivitiesV01.jar"/>
+		<jar jarfile="./out/UserServer/activities/ActivitiesV01.jar" >
+			<exclude name="**/*.*" />
+			<fileset excludes="META-INF/*.SF" dir="${ActivitiesV01.dst.dir}" includes="**/*.class"/>
+            <fileset excludes="META-INF/*.SF" dir="${ActivitiesV01.dst.dir}" includes="**/*.jar"/>
+		</jar>
+	</target>
+	
+	<!-- ActivitiesV02 -->
+	<target name="ActivitiesV02">
+		<property name="ActivitiesV02" value="${src.home}/ActivitiesV02"/>
+		<property name="ActivitiesV02.sgr.dir" value="${ActivitiesV02}/src"/>
+		<property name="ActivitiesV02.dst.dir" value="${ActivitiesV02}/temp"/>
+		<delete dir="${ActivitiesV02.dst.dir}"/>
+		<mkdir dir="${ActivitiesV02.dst.dir}"/>
+		
+		<javac srcdir="${ActivitiesV02.sgr.dir}" destdir="${ActivitiesV02.dst.dir}" nowarn="true" target="1.8">
+			<classpath refid="libpath"/>
+			<classpath>
+				<fileset dir="./out/UserServer">
+					<include name="UserServer.jar"/>
+				</fileset>
+			</classpath>
+		</javac>
+
+		<delete file="./out/UserServer/activities/ActivitiesV02.jar"/>
+		<jar jarfile="./out/UserServer/activities/ActivitiesV02.jar" >
+			<exclude name="**/*.*" />
+			<fileset excludes="META-INF/*.SF" dir="${ActivitiesV02.dst.dir}" includes="**/*.class"/>
+            <fileset excludes="META-INF/*.SF" dir="${ActivitiesV02.dst.dir}" includes="**/*.jar"/>
+		</jar>
+	</target>
+	
+    <!-- ============================================================================= -->
+    <!--<target name="build" depends="init,ServerProtocol,JavaAgent,Common,GameRes,LoginServer,LoginCheckServer,LogServer,PlatServer,CommonServer,GatewayServer,BusServer,LogBusServer,UserServer,RoomServer,InterfaceServer">-->
+    <target name="build" depends="
+            init,
+            ServerProtocol,
+            JavaAgent,
+            Common,
+            GameRes,
+            GameLogicCommon,
+            BusServer,
+            CommonServer,
+			MarryMatchServer,
+            GatewayServer,
+            InterfaceServer,
+            LoginCheckServer,
+            LoginServer,
+            MonitorServer,
+            PlatServer,
+            UserServer,
+            RecordServer,
+            CrossGameServer,
+            CrossRankServer,
+            HttpServer,
+			ScheduleServer,
+			ShareCodeCenter,
+		    PayCenter,
+            DinnerServer,
+			HsClient,
+            ActivitiesV01,
+			ActivitiesV02,
+            delete">
+        <tstamp/>
+        <echo message="${TSTAMP}"/>
+    </target>
+</project>

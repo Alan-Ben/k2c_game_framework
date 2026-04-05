@@ -1,0 +1,8 @@
+JavaPackage GS2GC.p016_ChapterOp;
+csharpspace GS2GC.p016_ChapterOp;
+
+ALProtocol GS2GC_016_006_RetDealChapterDispatchEvent <16, 6>
+{
+    int reachNum[达成数量];
+    Common.NPCommonObj.NPCommon_ItemInfo[] itemList[物品列表];
+}

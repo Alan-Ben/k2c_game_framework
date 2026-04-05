@@ -1,0 +1,11 @@
+﻿﻿import Common.CommonObj.alpro;
+
+JavaPackage NP2CS_RB.np_p002_serverInfoOp;
+
+/**********************************************************
+ * 查询US负载信息更新
+ **********************************************************/ 
+ALProtocol NP2CS_RB_002_005_RetUSHoldInfo <2, 5>
+{
+	Common.NPServerObj.NpServerObj_SYS_ServerHoldInfo[] holdInfoList[US负载信息];
+}

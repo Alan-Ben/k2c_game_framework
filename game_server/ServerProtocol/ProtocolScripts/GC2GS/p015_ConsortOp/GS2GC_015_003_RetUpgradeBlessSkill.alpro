@@ -1,0 +1,5 @@
+JavaPackage GS2GC.p015_ConsortOp;
+csharpspace GS2GC.p015_ConsortOp;
+ALProtocol GS2GC_015_003_RetUpgradeBlessSkill [家人-升级加护技能等级] <15, 3>
+{
+}

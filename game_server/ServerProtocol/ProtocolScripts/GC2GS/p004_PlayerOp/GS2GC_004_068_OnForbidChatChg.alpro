@@ -1,0 +1,9 @@
+﻿JavaPackage GS2GC.p004_PlayerOp;
+csharpspace GS2GC.p004_PlayerOp;
+
+﻿﻿﻿﻿import Common.NPCommonObj.alpro;
+
+ALProtocol GS2GC_004_068_OnForbidChatChg[禁言数据变更推送] <4, 68>
+{
+	Common.NPCommonObj.NPCommon_ForbidChatInfo forbidChat;
+}

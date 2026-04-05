@@ -1,0 +1,7 @@
+﻿JavaPackage GS2GC.p021_PlayerInfo;
+csharpspace GS2GC.p021_PlayerInfo;
+
+ALProtocol GS2GC_021_062_OnPlayerPermissionsChg[玩家权限信息变更推送] <21, 62>
+{
+	long[] effectIdList[已生效权限ID列表];
+}

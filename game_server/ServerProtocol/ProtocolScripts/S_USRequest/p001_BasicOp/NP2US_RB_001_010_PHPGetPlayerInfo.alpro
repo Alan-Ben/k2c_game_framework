@@ -1,0 +1,8 @@
+﻿JavaPackage NP2US_RB.p001_BasicOp;
+
+import Common.ServerObj.alpro;
+
+ALProtocol NP2US_RB_001_010_PHPGetPlayerInfo <1, 10>
+{
+	Common.ServerObj.ServerObj_PHPPlayer player[平台需要的玩家信息数据];
+}

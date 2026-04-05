@@ -1,0 +1,8 @@
+[submodule "ClientProtocol"]
+	path = ClientProtocol
+	url = git@gitlab.dev.mjgame.com:GOM/n_client_protocol.git
+	branch = master
+[submodule "ServerProtocol"]
+	path = ServerProtocol
+	url = git@gitlab.dev.mjgame.com:GOM/n_server_protocol.git
+	branch = master

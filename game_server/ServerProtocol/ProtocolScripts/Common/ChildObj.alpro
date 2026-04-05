@@ -1,0 +1,101 @@
+﻿import Common.NPInclude.alpro;
+import Enum.ChildEnum.alpro;
+import Common.NPCommonObj.alpro;
+
+JavaPackage Common.ChildObj;
+csharpspace Common.ChildObj;
+
+ALProtocol Child_Info[子嗣数据]
+{
+	long id[子嗣ID];
+	long consortId[关联家人ID];
+	long initResId[子嗣初始形象配置ID];
+	long quality[子嗣资质];
+	Enum.CommonEnum.ESpecAttrType attrType[子嗣相性];
+	long careerId[子嗣职业配置ID];
+	long seatId[训练位ID];
+	bool isGiftde[是否卷王];
+	long initIntimacy[初始亲密度];
+	string name[子嗣名称];
+	int lvl[子嗣等级];
+	long baseBonus[子嗣基础收益（用于计算上课收益）];
+	long bonus[子嗣收益（上课收益）];
+	int initStudyBonus[子嗣初始教学经验加成（万分比），来源：consort_fetters_lvl.study_bonus];
+}
+
+ALProtocol Child_SeatInfo[子嗣训练位数据]
+{
+	long seatId[训练位ID];
+	int maxEnergy[最大脑力值];
+	int energy[脑力值];
+	long lastCalMs[上次计算时间（毫秒）];
+	long fullGetNextRemainMs[脑力值已满时，获得下一点脑力值所需时间];
+}
+
+ALProtocol Adult_Info[成年子嗣数据]
+{
+	long id[子嗣ID];
+	long consortId[关联家人ID];
+	long initResId[子嗣初始形象配置ID];
+	long quality[子嗣资质];
+	Enum.CommonEnum.ESpecAttrType attrType[子嗣相性];
+	long careerId[子嗣职业配置ID];
+	bool isGiftde[是否卷王];
+	long initIntimacy[初始亲密度];
+	string name[子嗣名称];
+	long bonus[子嗣收益（上课收益+毕业收益）];
+	int graduateTs[毕业时间戳（秒）];
+	int initStudyBonus[子嗣初始教学经验加成（万分比），来源：consort_fetters_lvl.study_bonus];
+}
+
+ALProtocol Adult_UnmarriedInfo[子嗣（成年未婚）数据]
+{
+	Adult_Info adult[子嗣数据];
+
+	Enum.ChildEnum.EAdultStatus status[子嗣状态];
+	int expiredTs[请求过期截至时间（秒）];
+	
+	long minAllowBonus[允许联姻的最小收益数值];
+}
+
+ALProtocol Adult_MarriedInfo[子嗣（成年已婚）数据]
+{
+	Adult_Info adult[子嗣数据];
+	
+	long marriedCid[结婚对象玩家CID];
+	Adult_Info marriedAdult[结婚对象子嗣数据];
+	
+	int marriedTs[结婚时间（秒）];
+}
+
+ALProtocol Adult_PoolBaseInfo[联姻池待匹配子嗣（成年未婚）基础数据]
+{
+	long applyCid[发起请求的玩家CID];
+	long applyAdultId[发起请求的玩家子嗣ID];
+	long bonus[子嗣收益];
+	long minBonus[对方子嗣允许联姻的最低收益];
+}
+
+ALProtocol Adult_PoolInfo[联姻池待匹配子嗣（成年未婚）数据]
+{
+	long cid[玩家CID];
+	Adult_Info adult[子嗣数据];
+}
+
+ALProtocol Adult_ToMeApplyBaseInfo[向玩家请求指定联姻基础数据]
+{
+	long applyAdultId[请求子嗣实例ID];
+	int expiredTs[请求过期截至时间（秒）];
+}
+
+ALProtocol Adult_ToMeApplyInfo[向玩家请求指定联姻请求数据]
+{
+	long applyCid[请求玩家CID];
+	Adult_Info applyAdult[请求子嗣的数据];
+}
+
+ALProtocol Adult_MarryReward[子嗣数据奖励]
+{
+	Adult_MarriedInfo marriedInfo[已婚子嗣数据];
+	Common.NPCommonObj.NPCommon_ItemInfo item[奖励物品];
+}

@@ -1,0 +1,7 @@
+JavaPackage NP2HS_RB.p001_HSOp;
+
+ALProtocol NP2HS_RB_001_005_RetPlatformInfo <1, 5>
+{
+    int platformId[平台提供的平台id];
+    int platAreaId[平台提供的大区id];
+}

@@ -1,0 +1,14 @@
+﻿JavaPackage NP2US.p001_BasicOp;
+
+/**********************************************************
+ * 发送给用户的消息
+ **********************************************************/
+ALProtocol NP2US_001_001_ToUSUserMsg <1, 1>
+{
+	long cid;
+	long serialize;
+	
+	//客户端请求序列号
+	long clientRequestSerialize;
+	bytebuffer msg;
+}

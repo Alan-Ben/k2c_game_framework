@@ -1,0 +1,7 @@
+JavaPackage GS2GC.p018_PlayerSkinOp;
+csharpspace GS2GC.p018_PlayerSkinOp;
+import Common.NPPlayerInfo.alpro;
+ALProtocol GS2GC_018_050_OnCommTitleChg [普通称号数据变更] <18, 50>
+{
+    Common.NPPlayerInfo.PlayerInfo_Title info[空];
+}

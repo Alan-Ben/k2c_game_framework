@@ -1,0 +1,7 @@
+JavaPackage GS2GC.p032_GuildOp;
+csharpspace GS2GC.p032_GuildOp;
+
+ALProtocol GS2GC_032_081_OnGuildMarsBattleReportAdd[火星矿-新增联盟战报推送] <32, 81>
+{
+	long id[最新联盟战报数据库ID];
+}

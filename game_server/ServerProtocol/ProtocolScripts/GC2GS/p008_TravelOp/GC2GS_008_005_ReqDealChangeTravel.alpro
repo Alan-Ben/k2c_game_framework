@@ -1,0 +1,7 @@
+JavaPackage GC2GS.p008_TravelOp;
+csharpspace GC2GS.p008_TravelOp;
+ALProtocol GC2GS_008_005_ReqDealChangeTravel [处理兑换游历事件] <8, 5>
+{
+    long instanceId[游历事件ID];
+    bool isChange[是否兑换 true-兑换];
+}

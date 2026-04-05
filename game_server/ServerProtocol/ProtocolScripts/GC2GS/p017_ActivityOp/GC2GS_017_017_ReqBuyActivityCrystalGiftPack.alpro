@@ -1,0 +1,10 @@
+﻿JavaPackage GC2GS.p017_ActivityOp;
+csharpspace GC2GS.p017_ActivityOp;
+
+ALProtocol GC2GS_017_017_ReqBuyActivityCrystalGiftPack [购买活动钻石礼包] <17, 17> 
+{
+    long instanceId[活动实例id];
+    long groupId[礼包组id];
+    long packId[礼包id];
+    int num[购买数量];
+}

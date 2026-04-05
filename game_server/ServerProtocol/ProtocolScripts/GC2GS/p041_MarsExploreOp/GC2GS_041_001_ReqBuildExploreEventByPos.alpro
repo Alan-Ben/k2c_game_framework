@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p041_MarsExploreOp;
+csharpspace GC2GS.p041_MarsExploreOp;
+
+ALProtocol GC2GS_041_001_ReqBuildExploreEventByPos[火星探险-创建事件] <41, 1>
+{
+	long pos[事件生成位置ID，0-随机];
+}

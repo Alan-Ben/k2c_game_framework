@@ -1,0 +1,7 @@
+﻿JavaPackage GS2GC.p037_GuildDungeonOp;
+csharpspace GS2GC.p037_GuildDungeonOp;
+
+ALProtocol GS2GC_037_004_RetUpgradeDungeonLvl <37, 4>
+{
+	int upgradeLvl[升级后的等级];
+}

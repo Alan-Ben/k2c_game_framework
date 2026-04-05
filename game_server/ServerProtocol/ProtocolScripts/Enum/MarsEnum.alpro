@@ -1,0 +1,84 @@
+﻿JavaPackage Common.MarsEnum;
+csharpspace Common.MarsEnum;
+
+ALEnum EMarsPropertyType[火星属性]
+{
+	NONE;
+	HEALTH_ADD_PER[健康指数万分比加成];
+	HAPPY_ADD_PER[幸福指数万分比加成];
+	OXYGEN_ADD_PER[氧气指数万分比加成];
+	SATIETY_ADD_PER[饱腹指数万分比加成];
+	SLEEP_ADD_PER[睡眠指数万分比加成];
+	COMFORT_ADD_PER[舒适指数万分比加成];
+	MOOD_ADD_PER[心情指数万分比加成];
+}
+
+ALEnum EMarsPeopleHelpType[火星居民帮助类型]
+{
+	NONE;
+	REWARD[直接奖励];
+	CHOICE[需要选择回答];
+}
+
+ALEnum EMarsPeopleValueType[火星居民指数类型]
+{
+	NONE;
+	HEALTH[健康指数];
+	HAPPY[幸福指数];
+}
+
+ALEnum EMarsBuildingType[火星建筑类型]
+{
+	NONE;
+	HOME[主基地];
+	FOOD[生态园];
+	HOSPITAL[医务室];
+	SOLDIER[兵工厂];
+	REPAIR[维修室];
+	TECHNOLOGY[科研所];
+	ENERGY[能源厂];
+	LIVING[居住舱];
+	LAW[律令所];
+	EXPLORE[灯塔];
+	HELP[互助];
+}
+
+ALEnum EMarsExploreEventType[火星探索事件类型]
+{
+	NONE;
+	BATTLE[战斗];
+	BOSS[固定点刷新战斗事件];
+}
+
+ALEnum EMarsExploreTeamState[火星探索队伍状态]
+{
+	NONE[未解锁];
+	ERROR[错误状态，需要手动处理];
+	IDLE[空闲中];
+	MARCH[行军中];
+	BACK[返程中];
+	REPAIR[修理中];
+	BATTLE[Battle事件战斗中];
+	COLLECT[采集中];
+	BOSS_BATTLE[Boss事件战斗中];
+	WAIT_RALLY[等待集结出发];
+}
+
+ALEnum EMarsExplorePVPLogType[火星探索-PVP日志]
+{
+	NONE;
+	MINE_ATTACK[矿挑战日志];
+	MINE_DEFEND[矿防守日志];
+	BATTLE_EVENT[事件挑战日志];
+	BOSS_BATTLE_EVENT[BOSS事件挑战日志];
+	MINE_COLLECT_COMPLETE[矿采集完成日志];
+}
+
+ALEnum EMarsBagItemUseTimeType[火星系统-火星系统专用消减时间类型]
+{
+	NONE;
+	ALL[全部];
+	MARS_BUILDING[火星建筑时间加速];
+	MARS_TECH[火星科技时间消减];
+	MARS_TEAM_REPAIR[火星队伍修复时间加速];
+}

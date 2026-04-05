@@ -1,0 +1,5 @@
+﻿JavaPackage NP2CS_RB.np_p007_GameLogicOp;
+
+ALProtocol NP2CS_RB_007_002_RetDiscardGameLogicInstance <7, 2>
+{
+}

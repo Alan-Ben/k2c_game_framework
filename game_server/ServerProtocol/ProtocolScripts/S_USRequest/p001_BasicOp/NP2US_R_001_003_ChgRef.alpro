@@ -1,0 +1,9 @@
+﻿JavaPackage NP2US_R.p001_BasicOp;
+
+ALProtocol NP2US_R_001_003_ChgRef <1, 3>
+{
+	string tableName;
+	string id;
+	string key;
+	string value;
+}

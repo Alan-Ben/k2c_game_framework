@@ -1,0 +1,25 @@
+﻿JavaPackage Common.GuildDungeonEnum;
+csharpspace Common.GuildDungeonEnum;
+
+ALEnum EGuildDungeon_StartType[联盟副本开启类型]
+{
+	COMMON_ITEM[通用物品];
+	ALLIANCE_WEALTH[联盟财富];
+}
+
+ALEnum EGuildDungeon_MonsterType[联盟副本怪物类型]
+{
+	NONE;
+	COMMON[普通怪物];
+	SENIOR[高级怪物];
+	BOSS[boss];
+}
+
+ALEnum EGuildDungeon_LogType[联盟副本日志类型]
+{
+	NONE;
+	START[开启];
+	ATTACK[攻击];
+	KILL[击杀];
+	AUTO_START[自动开启];
+}

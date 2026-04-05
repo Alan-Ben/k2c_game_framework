@@ -1,0 +1,13 @@
+java_path= ../Common/src
+java_package=NPCommon.ErrMain
+id	name	desc
+2	BUILDING_NOT_EXIST	建筑不存在
+3	BUILDING_EXISTED	建筑已经存在
+4	BUILDING_BUILD_FAIL	建筑创建失败
+5	BUILDING_NO_TYPE	建筑类型错误
+6	BUILDING_LVL_FULL	建筑满级
+7	BUSINESS_EMPLOYEE_FULL	经营建筑雇佣人数上限
+8	BUSINESS_HERO_FULL	经营建筑委派伙伴数量上限
+9	BUSINESS_PRODUCT_ALREADY_UNLOCK	经营建筑产品已经解锁
+10	FARM_CLICK_GAP_LESS	农田建筑点击间隔时间不足
+11	BUSINESS_PRODUCT_UNLOCK_REQUIRE_NOT_REACH	经营建筑产品解锁条件未达成

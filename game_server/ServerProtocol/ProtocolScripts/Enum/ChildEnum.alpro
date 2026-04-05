@@ -1,0 +1,10 @@
+﻿JavaPackage Common.ChildEnum;
+csharpspace Common.ChildEnum;
+
+ALEnum EAdultStatus[子嗣状态]
+{
+	NONE;
+	APPLY_PLAYER[指定联姻请求中];
+	APPLY_SERVER[全服联姻请求中];
+	MARRIED[已婚];
+}

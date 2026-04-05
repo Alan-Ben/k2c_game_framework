@@ -1,0 +1,9 @@
+JavaPackage GS2GC.p033_SimpleActivityOp;
+csharpspace GS2GC.p033_SimpleActivityOp;
+
+ALProtocol GS2GC_033_110_OnRechargeRebateRewardDraw <33, 110>
+{
+	long activityInstanceId[活动实例ID];
+	long groupId[返利组ID];
+	long stepId[档位ID];
+}

@@ -1,0 +1,5 @@
+﻿JavaPackage NP2PS_R.p001_BasicOp;
+
+ALProtocol NP2PS_R_001_013_RegCrossDataServer[注册跨服数据服务器] <1, 13>
+{
+}

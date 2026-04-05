@@ -1,0 +1,6 @@
+﻿JavaPackage WCGCS2US_R.p004_PayOp;
+
+ALProtocol NP2US_R_004_001_ReqRechargeNotify[充值通知] <4, 1>
+{
+	Common.ServerObj.ServerObj_PayCallbackInfo payCallbackInfo; // 支付回调信息
+}

@@ -1,0 +1,7 @@
+JavaPackage GC2GS.p014_ChildOp;
+csharpspace GC2GS.p014_ChildOp;
+ALProtocol GC2GS_014_014_ReqApplyToGroup [联姻请求-对指定群体发起请求] <14, 14>
+{
+    long adultId[子嗣实例ID];
+	long minValue[最小比例最终值];
+}

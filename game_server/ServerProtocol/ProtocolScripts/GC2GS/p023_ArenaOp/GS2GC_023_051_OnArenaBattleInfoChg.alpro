@@ -1,0 +1,7 @@
+﻿﻿JavaPackage GS2GC.p023_ArenaOp;
+csharpspace GS2GC.p023_ArenaOp;
+
+ALProtocol GS2GC_023_051_OnArenaBattleInfoChg <23, 51>
+{
+    Common.ArenaObj.Arena_BattleInfo battleInfo[战斗数据];
+}

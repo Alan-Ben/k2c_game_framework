@@ -1,0 +1,13 @@
+﻿﻿import Common.NPPlayerInfo.alpro;
+JavaPackage GS2GC.p021_PlayerInfo;
+csharpspace GS2GC.p021_PlayerInfo;
+
+/**********************************************************
+ * 玩家获得新气泡框的时候的推送消息
+ **********************************************************/
+ALProtocol GS2GC_021_016_PlayerBubbleAdd <21, 16>
+{
+	long id[气泡框唯一Id];
+	int expireTimeTagS[超时时间标记，单位秒。-1表示永久];
+	bool viewed[是否查看过];
+}

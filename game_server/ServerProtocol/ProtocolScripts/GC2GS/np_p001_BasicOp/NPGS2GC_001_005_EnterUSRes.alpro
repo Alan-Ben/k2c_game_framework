@@ -1,0 +1,14 @@
+﻿﻿JavaPackage NPGS2GC.p001_BasicOp;
+csharpspace NPGS2GC.p001_BasicOp;
+
+/**********************************************************
+ * 返回进入对应服务器的结果
+ **********************************************************/
+ALProtocol NPGS2GC_001_005_EnterUSRes <1, 5>
+{
+	long clientSerialize[客户端用于识别的序列号];
+	int error[错误信息，根据枚举处理];
+	
+	long queueIndex[队列索引信息，如果需要排队将返回非0数字];
+}
+

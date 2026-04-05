@@ -1,0 +1,9 @@
+﻿JavaPackage GS2GC.p040_MarsPeopleOp;
+csharpspace GS2GC.p040_MarsPeopleOp;
+
+import Common.MarsObj.alpro;
+
+ALProtocol GS2GC_040_058_OnPeopleImmigrantAdd[移民数据增加] <40, 58>
+{
+	Common.MarsObj.Mars_PeopleImmigrant info;
+}

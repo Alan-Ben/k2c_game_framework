@@ -1,0 +1,5 @@
+﻿JavaPackage NP2CRS_RB.p001_CrossRankOp;
+
+ALProtocol NP2CRS_RB_001_006_DiscardCrossInstance <1, 6>
+{
+}

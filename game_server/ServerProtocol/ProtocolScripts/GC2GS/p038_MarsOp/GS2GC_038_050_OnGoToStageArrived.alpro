@@ -1,0 +1,9 @@
+﻿JavaPackage GS2GC.p038_MarsOp;
+csharpspace GS2GC.p038_MarsOp;
+
+ALProtocol GS2GC_038_050_OnGoToStageArrived[前往火星-到达新阶段] <38, 50>
+{
+	int stage[当前阶段];
+	long startMs[开启前往火星时间（毫秒）];
+	long stageStartMs[当前阶段开始时间（毫秒）];
+}

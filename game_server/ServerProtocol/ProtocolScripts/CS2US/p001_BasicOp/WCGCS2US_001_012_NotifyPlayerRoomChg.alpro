@@ -1,0 +1,10 @@
+﻿JavaPackage WCGCS2US.p001_BasicOp;
+
+/**********************************************************
+ * Common服向User通知玩家所在房间服务器变更
+ **********************************************************/
+ALProtocol WCGCS2US_001_012_NotifyPlayerRoomChg <1, 12>
+{
+	long uid;
+	int roomSid;
+}

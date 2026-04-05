@@ -1,0 +1,8 @@
+﻿JavaPackage GC2GS.p017_ActivityOp;
+csharpspace GC2GS.p017_ActivityOp;
+
+ALProtocol GC2GS_017_014_ReqRefreshActivityShop [刷新活动商店] <17, 14> 
+{
+    long instanceId[活动实例id];
+    long shopId[商店id];
+}

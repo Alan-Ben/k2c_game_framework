@@ -1,0 +1,9 @@
+﻿JavaPackage GS2GC.p021_PlayerInfo;
+csharpspace GS2GC.p021_PlayerInfo;
+
+import Common.FriendObj.alpro;
+
+ALProtocol GS2GC_021_060_OnFriendApplyChg[推送好友申请变更消息] <21, 60>
+{
+	Common.FriendObj.Friend_ApplyInfo apply[申请数据];
+}

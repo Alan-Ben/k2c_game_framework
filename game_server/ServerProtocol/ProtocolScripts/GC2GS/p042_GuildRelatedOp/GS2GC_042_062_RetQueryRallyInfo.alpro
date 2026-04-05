@@ -1,0 +1,21 @@
+JavaPackage GS2GC.p042_GuildRelatedOp;
+csharpspace GS2GC.p042_GuildRelatedOp;
+
+import Enum.GuildEnum.alpro;
+import Common.MarsObj.alpro;
+
+ALProtocol GS2GC_042_062_RetQueryRallyInfo[返回单个集结信息] <42, 62>
+{
+    long rallyId[集结ID];
+    Enum.GuildEnum.EGuildRallyType rallyType[集结类型];
+    long leaderCid[创建者CID];
+    long leaderTeamId[创建者队伍ID];
+    long createTimeMs[创建时间毫秒];
+    long expireTimeMs[过期时间毫秒];
+    long minPowerLimit[最低战力限制];
+    int maxMemberLimit[最大成员限制];
+    Common.MarsObj.MarsBattleV2_MemberInfo leaderTeamSnapshot[创建者队伍快照];
+    bytebuffer extData[扩展数据];
+    long[] memberCidList[当前成员CID列表];
+}
+

@@ -1,0 +1,27 @@
+﻿JavaPackage Common.ChapterObj;
+csharpspace Common.ChapterObj;
+
+import Enum.ChapterEnum.alpro;
+
+ALProtocol Chapter_PosInfo[关卡位置信息]
+{
+	long chapterId[关卡id];
+	int point[所在点位];
+}
+
+ALProtocol Chapter_SingleInspireInfo[关卡单一鼓舞信息]
+{
+	Enum.ChapterEnum.EChapterInspireType type[鼓舞类型];
+	int inspireTimes[鼓舞次数];
+}
+
+ALProtocol Chapter_InspireInfo[关卡鼓舞信息]
+{
+	Chapter_SingleInspireInfo[] inspireList[鼓舞信息列表];
+}
+
+ALProtocol Chapter_EventInfo[关卡事件信息]
+{
+	long eventId;
+	bytebuffer extraData;
+}

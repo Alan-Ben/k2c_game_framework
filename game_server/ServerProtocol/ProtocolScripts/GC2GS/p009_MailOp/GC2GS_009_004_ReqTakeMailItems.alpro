@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p009_MailOp;
+csharpspace GC2GS.p009_MailOp;
+
+ALProtocol GC2GS_009_004_ReqTakeMailItems[请求领取邮件附件列表] <9, 4>
+{
+    long mailUid[邮件唯一id];
+}

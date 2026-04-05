@@ -1,0 +1,7 @@
+﻿JavaPackage GS2GC.p033_SimpleActivityOp;
+csharpspace GS2GC.p033_SimpleActivityOp;
+
+ALProtocol GS2GC_033_108_OnSevenDayGoalStepRewardDraw [七日目标阶段奖励领取] <33, 108>
+{
+	long refId;
+}

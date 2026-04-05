@@ -1,0 +1,9 @@
+JavaPackage GS2GC.p002_InitOp;
+csharpspace GS2GC.p002_InitOp;
+
+import Common.ActivityFundObj.alpro;
+
+ALProtocol GS2GC_002_083_RetActivityFundInit <2, 83>
+{
+	Common.ActivityFundObj.ActivityFund_Info[] fundList[基金列表];
+}

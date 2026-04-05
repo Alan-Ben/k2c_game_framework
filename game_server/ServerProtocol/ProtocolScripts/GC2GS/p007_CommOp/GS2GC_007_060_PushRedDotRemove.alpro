@@ -1,0 +1,7 @@
+JavaPackage GS2GC.p007_CommOp;
+csharpspace GS2GC.p007_CommOp;
+
+ALProtocol GS2GC_007_060_PushRedDotRemove <7, 60>
+{
+    Enum.CommonEnum.ERedDotType redDotType[移除的红点类型];
+}

@@ -1,0 +1,8 @@
+﻿JavaPackage GC2GS.p039_MarsBuildingOp;
+csharpspace GC2GS.p039_MarsBuildingOp;
+
+ALProtocol GC2GS_039_013_ReqFoodBuildingPowerChg[火星建筑-基地开关] <39, 13>
+{
+	long buildingId;
+	bool powerOn;
+}

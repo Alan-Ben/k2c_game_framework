@@ -1,0 +1,11 @@
+JavaPackage GS2GC.p002_InitOp;
+csharpspace GS2GC.p002_InitOp;
+
+import Common.DinnerObj.alpro;
+
+ALProtocol GS2GC_002_060_RetDinnerInit [宴会初始化] <2, 60>
+{
+	long instanceId[正在举办的宴会实例ID];
+	bool hasOwnerReward[是否有开宴的奖励];
+	Common.DinnerObj.Dinner_Permit[] permitList[宴会凭证数据列表];
+}

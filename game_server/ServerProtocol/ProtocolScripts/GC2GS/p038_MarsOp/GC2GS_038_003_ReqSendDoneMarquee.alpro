@@ -1,0 +1,6 @@
+﻿JavaPackage GC2GS.p038_MarsOp;
+csharpspace GC2GS.p038_MarsOp;
+
+ALProtocol GC2GS_038_003_ReqSendDoneMarquee[发送登录成功跑马灯] <38, 3>
+{
+}

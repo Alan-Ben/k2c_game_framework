@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p012_ActivityTeamOp;
+csharpspace GC2GS.p012_ActivityTeamOp;
+
+ALProtocol GC2GS_012_012_ReqSelfActivityTeamApplyList[请求玩家发起的队伍申请列表] <12, 12> 
+{
+	long instanceId[活动实例ID];
+}

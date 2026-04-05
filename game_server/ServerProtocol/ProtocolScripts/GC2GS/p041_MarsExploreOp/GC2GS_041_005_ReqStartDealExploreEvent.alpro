@@ -1,0 +1,8 @@
+﻿JavaPackage GC2GS.p041_MarsExploreOp;
+csharpspace GC2GS.p041_MarsExploreOp;
+
+ALProtocol GC2GS_041_005_ReqStartDealExploreEvent[火星探险-开启处理事件] <41, 5>
+{
+	long teamId;
+	long id[事件实例ID];
+}

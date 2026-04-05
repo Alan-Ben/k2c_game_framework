@@ -1,0 +1,6 @@
+JavaPackage GC2GS.p015_ConsortOp;
+csharpspace GC2GS.p015_ConsortOp;
+ALProtocol GC2GS_015_008_ReqGetRoundTravelCount [家人-获取周期出游次数] <15, 8>
+{
+    long consortTravelId[家人邀约类型ID];
+}

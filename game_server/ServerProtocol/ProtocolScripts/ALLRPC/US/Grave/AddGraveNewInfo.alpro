@@ -1,0 +1,16 @@
+﻿JavaPackage ALLRPC.US.Grave;
+
+﻿﻿﻿﻿﻿import Common.GraveObj.alpro;
+
+ALProtocol AddGraveNewInfo_Req
+{
+	Common.GraveObj.GraveObj_NewInfo[] newInfoList;
+}
+
+ALProtocol AddGraveNewInfo_Return
+{
+}
+
+//[RPC] 增加新晋杰出者
+//[CLASS_PACKAGE] : AllRpcData.US_Service.Grave
+//[DEALER_PACKAGE] : USServer.RPCDispatcher.Grave

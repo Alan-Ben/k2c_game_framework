@@ -1,0 +1,28 @@
+﻿JavaPackage WCGCS2US.p002_MatchOp;
+
+/**********************************************************
+ * 战斗结束时发送
+ **********************************************************/
+ALProtocol WCGCS2US_002_030_UserEventOnBattleEnd <2, 30>
+{
+	//玩家ID
+	long uid;
+	//玩家等级
+	int userLvl;
+	//房间ID
+	long roomSerial;
+	//房间服务器
+	int roomSid;
+	//房间类型
+	int roomType;
+	//开始时间
+	long startTimeMs;
+	//结束时间
+	long endTimeMs;
+	//是否胜场
+	bool isWin;
+	//是否平局
+	bool isDraw;
+	//战斗积分
+	int battleScore;
+}

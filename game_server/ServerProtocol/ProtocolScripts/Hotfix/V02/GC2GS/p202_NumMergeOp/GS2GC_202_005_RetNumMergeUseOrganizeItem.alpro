@@ -1,0 +1,8 @@
+JavaPackage Hotfix.V02.GS2GC.p202_NumMergeOp;
+csharpspace Hotfix.GS2GC.p202_NumMergeOp;
+
+import Common.CommonObj.alpro;
+
+ALProtocol GS2GC_202_005_RetNumMergeUseOrganizeItem [返回使用重排道具] <202, 5>
+{
+}

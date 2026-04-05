@@ -1,0 +1,7 @@
+﻿JavaPackage GS2GC.p007_CommOp;
+csharpspace GS2GC.p007_CommOp;
+
+ALProtocol GS2GC_007_019_RetTakeStageGoalBigStepReward <7, 19>
+{
+    Common.NPCommonObj.NPCommon_ItemInfo[] itemList[奖励列表];
+}

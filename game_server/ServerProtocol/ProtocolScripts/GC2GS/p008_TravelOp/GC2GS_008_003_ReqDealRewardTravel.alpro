@@ -1,0 +1,6 @@
+JavaPackage GC2GS.p008_TravelOp;
+csharpspace GC2GS.p008_TravelOp;
+ALProtocol GC2GS_008_003_ReqDealRewardTravel [处理奖励游历事件] <8, 3>
+{
+    long instanceId[游历事件ID];
+}

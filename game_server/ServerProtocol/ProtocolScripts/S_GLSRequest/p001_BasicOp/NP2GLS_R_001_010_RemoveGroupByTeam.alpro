@@ -1,0 +1,9 @@
+JavaPackage NP2GLS_R.p001_BasicOp;
+
+ALProtocol NP2GLS_R_001_010_RemoveGroupByTeam <1, 10>
+{
+	long instanceId[游戏逻辑实例ID];
+	int usId[US服务器ID];
+	long groupId[群组ID];
+}
+

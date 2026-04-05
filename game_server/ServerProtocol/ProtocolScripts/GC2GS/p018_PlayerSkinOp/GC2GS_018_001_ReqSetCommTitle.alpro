@@ -1,0 +1,6 @@
+JavaPackage GC2GS.p018_PlayerSkinOp;
+csharpspace GC2GS.p018_PlayerSkinOp;
+ALProtocol GC2GS_018_001_ReqSetCommTitle [穿戴普通称号] <18, 1>
+{
+    long title[空];
+}

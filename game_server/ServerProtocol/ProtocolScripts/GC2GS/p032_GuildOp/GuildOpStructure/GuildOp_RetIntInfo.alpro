@@ -1,0 +1,6 @@
+﻿JavaPackage GC2GS.p032_GuildOp.GuildOpStructure;
+
+ALProtocol GuildOp_RetIntInfo[返回一个整形数据]
+{
+	int num;
+}

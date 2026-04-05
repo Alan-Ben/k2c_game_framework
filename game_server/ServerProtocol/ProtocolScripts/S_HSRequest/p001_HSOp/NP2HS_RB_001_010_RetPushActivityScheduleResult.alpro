@@ -1,0 +1,5 @@
+JavaPackage NP2HS_RB.p001_HSOp;
+
+ALProtocol NP2HS_RB_001_010_RetPushActivityScheduleResult <1, 10>
+{
+}

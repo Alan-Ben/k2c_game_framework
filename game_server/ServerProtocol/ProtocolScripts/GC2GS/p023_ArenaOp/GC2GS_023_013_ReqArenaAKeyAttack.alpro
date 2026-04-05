@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p023_ArenaOp;
+csharpspace GC2GS.p023_ArenaOp;
+
+ALProtocol GC2GS_023_013_ReqArenaAKeyAttack[一键攻击] <23, 13>
+{
+    Enum.ArenaEnum.EArenaBuffType buffType;
+}

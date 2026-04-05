@@ -1,0 +1,8 @@
+JavaPackage GS2GC.p015_ConsortOp;
+csharpspace GS2GC.p015_ConsortOp;
+import Common.ConsortObj.alpro;
+ALProtocol GS2GC_015_055_OnSkinAdd [家人新增皮肤推送] <15, 55>
+{
+    long consortId[空];
+    Common.ConsortObj.Consort_SkinInfo skin[皮肤数据];
+}

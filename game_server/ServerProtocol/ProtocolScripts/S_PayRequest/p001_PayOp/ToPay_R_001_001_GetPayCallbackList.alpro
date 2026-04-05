@@ -1,0 +1,6 @@
+﻿JavaPackage ToPay_R.p001_PayOp;
+
+ALProtocol ToPay_R_001_001_GetPayCallbackList <1, 1>
+{
+	int usId;
+}

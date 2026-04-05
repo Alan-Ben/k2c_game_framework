@@ -1,0 +1,11 @@
+﻿JavaPackage NPLS2GC.p001_BasicOp;
+csharpspace NPLS2GC.p001_BasicOp;
+
+/**********************************************************
+ * 进入队列的通知函数
+ **********************************************************/
+ALProtocol NPLS2GC_001_004_EnterQueue <1, 4>
+{
+	//本对象在队列中的位置索引
+	long queueIdx;
+}

@@ -1,0 +1,14 @@
+﻿JavaPackage Hotfix.V01.Common.HotSimpleActivityObj;
+csharpspace Hotfix.Common.HotSimpleActivityObj;
+
+ALProtocol RegularActivity_ShopBuyRecord[万能活动商店购买记录]
+{
+	long itemId[商品id];
+	long buyCount[购买数量];
+}
+
+ALProtocol RegularActivity_ShopInfo[万能活动商店信息]
+{
+	long nextRefreshTimeMs[下次刷新时间];
+    RegularActivity_ShopBuyRecord[] buyRecordList[购买记录列表];
+}

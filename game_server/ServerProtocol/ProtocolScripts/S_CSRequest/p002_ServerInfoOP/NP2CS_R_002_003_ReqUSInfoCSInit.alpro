@@ -1,0 +1,10 @@
+JavaPackage NP2CS_R.np_p002_serverInfoOp;
+
+/**********************************************************
+ * 根据外部信息初始化CS的服务器列表
+ **********************************************************/
+ALProtocol NP2CS_R_002_003_ReqUSInfoCSInit <2, 3>
+{
+	Common.NPServerObj.NpServerObj_SYS_ServerIndexInfo[] serverIndexList[外部展示id与服务器typeId对应关系列表];
+	Common.NPServerObj.NpServerObj_SYS_ServerItem[] serverItemList[服务器状态信息列表];
+}

@@ -1,0 +1,6 @@
+JavaPackage GC2GS.p015_ConsortOp;
+csharpspace GC2GS.p015_ConsortOp;
+ALProtocol GC2GS_015_013_ReqUnlockHalo [家人-解锁星辉] <15, 13>
+{
+    long consortId[家人ID];
+}

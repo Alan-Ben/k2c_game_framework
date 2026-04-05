@@ -1,0 +1,7 @@
+﻿﻿JavaPackage GS2GC.p023_ArenaOp;
+csharpspace GS2GC.p023_ArenaOp;
+
+ALProtocol GS2GC_023_010_RetArenaBattleReport <23, 10>
+{
+    Common.ArenaObj.Arena_BattleReport[] reportList;
+}

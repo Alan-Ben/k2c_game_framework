@@ -1,0 +1,9 @@
+﻿JavaPackage WCGCS2US_R.p001_BasicOp;
+
+/**********************************************************
+ * Common服务器向User服发送Bsh脚本
+ **********************************************************/
+ALProtocol WCGCS2US_R_001_004_ReqExecBshScript <1, 4>
+{
+	string bshScript; //Bsh脚本
+}

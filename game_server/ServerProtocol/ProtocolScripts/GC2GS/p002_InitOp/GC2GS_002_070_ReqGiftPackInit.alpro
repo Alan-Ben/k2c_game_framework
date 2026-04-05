@@ -1,0 +1,6 @@
+﻿JavaPackage GC2GS.p002_InitOp;
+csharpspace GC2GS.p002_InitOp;
+
+ALProtocol GC2GS_002_070_ReqGiftPackInit[礼包初始化] <2, 70>
+{
+}

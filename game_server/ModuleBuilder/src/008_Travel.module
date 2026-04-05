@@ -1,0 +1,151 @@
+/************************
+关键字：
+$Module	:模块
+$Action	:行为，包含$req{} 和$ret{}
+$Push	:推送协议
+$Req	:请求包
+$Ret	:返回包
+************************/
+
+$Module 008 Travel //游历
+
+$Action 001 StartTravel[单次游历]
+(
+	$req	
+	{
+	}
+	$ret	
+	{
+	}
+)
+
+$Action 002 AkeyTravel[一键游历]
+(
+	$req	
+	{
+	}
+	$ret	
+	{
+		Common.TravelObj.Travel_EventResult[] resultList[游历事件结果列表];
+	}
+)
+
+$Action 003 DealRewardTravel[处理奖励游历事件]
+(
+	$req	
+	{
+		long instanceId[游历事件ID];
+	}
+	$ret	
+	{
+		Common.TravelObj.Travel_EventResult result[游历事件结果];
+	}
+)
+
+$Action 004 DealConsortBarTravel[处理妃子酒馆游历事件]
+(
+	$req	
+	{
+		long instanceId[游历事件ID];
+		long consortId[妃子ID];
+		long costId[消耗配置ID];
+	}
+	$ret	
+	{
+		Common.TravelObj.Travel_EventResult result[游历事件结果];
+	}
+)
+
+$Action 005 DealChangeTravel[处理兑换游历事件]
+(
+	$req	
+	{
+		long instanceId[游历事件ID];
+		bool isChange[是否兑换 true-兑换];
+	}
+	$ret	
+	{
+		Common.TravelObj.Travel_EventResult result[游历事件结果];
+	}
+)
+
+$Action 006 DealInvitationTravel[处理妃子邀约游历事件]
+(
+	$req	
+	{
+		long instanceId[游历事件ID];
+		long consortId[妃子ID];
+	}
+	$ret	
+	{
+		Common.TravelObj.Travel_EventResult result[游历事件结果];
+	}
+)
+
+$Action 007 DealAddPowerTravel[处理大臣加国力游历事件]
+(
+	$req	
+	{
+		long instanceId[游历事件ID];
+		long heroId[大臣ID];
+	}
+	$ret	
+	{
+		Common.TravelObj.Travel_EventResult result[游历事件结果];
+	}
+)
+
+$Action 008 DealConsortLikeTravel[处理增加妃子好感度游历事件]
+(
+	$req	
+	{
+		long instanceId[游历事件ID];
+	}
+	$ret	
+	{
+		Common.TravelObj.Travel_EventResult result[游历事件结果];
+	}
+)
+
+$Action 009 DealConsortIntimacyTravel[处理增加妃子亲密度游历事件]
+(
+	$req	
+	{
+		long instanceId[游历事件ID];
+	}
+	$ret	
+	{
+		Common.TravelObj.Travel_EventResult result[游历事件结果];
+	}
+)
+
+$Action 010 DealGiftedTravel[处理增加必生卷王游历事件]
+(
+	$req	
+	{
+		long instanceId[游历事件ID];
+	}
+	$ret	
+	{
+		Common.TravelObj.Travel_EventResult result[游历事件结果];
+	}
+)
+
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+
+$Push 050 OnEventAdd[新增事件推送]
+{
+   Common.TravelObj.Travel_Event eventInfo;
+}
+
+$Push 051 OnEventDel[移除事件推送]
+{
+   long instanceId[事件实例ID];
+}
+
+$Push 052 OnConsortChg[妃子数据变化推送]
+{
+   Common.TravelObj.Travel_Consort consort[妃子数据];
+}

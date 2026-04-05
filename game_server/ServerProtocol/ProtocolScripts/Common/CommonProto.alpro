@@ -1,0 +1,12 @@
+﻿JavaPackage CommonProto;
+
+ALProtocol Common_R_255_001_ReqRpc[通用的RPC请求] <255, 1>
+{
+	int classId;
+	bytebuffer reqBytes;
+}
+
+ALProtocol Common_RB_255_001_RetRpc[通用的RPC返回] <255, 1>
+{
+	bytebuffer retBytes;
+}

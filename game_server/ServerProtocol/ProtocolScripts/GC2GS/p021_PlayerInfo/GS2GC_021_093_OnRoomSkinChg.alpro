@@ -1,0 +1,10 @@
+﻿JavaPackage GS2GC.p021_PlayerInfo;
+csharpspace GS2GC.p021_PlayerInfo;
+
+/**********************************************************
+ * 推送玩家房间皮肤信息变更
+ **********************************************************/
+ALProtocol GS2GC_021_093_OnRoomSkinChg[房间皮肤变更推送]<21, 93>
+{
+	Common.NPPlayerInfo.PlayerInfo_RoomSkin info;
+}

@@ -1,0 +1,39 @@
+﻿JavaPackage Common.LevyObj;
+csharpspace Common.LevyObj;
+
+import Enum.LevyEnum.alpro;
+import Common.NPCommonObj.alpro;
+
+ALProtocol Levy_Food[粮食征收信息]
+{
+	long lastSettleMs[上次结算时间（毫秒）];
+	long speed[每秒产出数量];
+}
+
+ALProtocol Levy_Silver[银币征收信息]
+{
+	long lastSettleMs[上次结算时间（毫秒）];
+	long startMs[本次征收开始时间（毫秒）];
+	long speed[每秒产出数量];
+	long settledSum[已经结算的数量总和];
+}
+
+ALProtocol Levy_Soldier[士兵征收信息]
+{
+	long nextSettleMs[下次结算时间（毫秒）];
+	long curDurationMs[当前周期用时（毫秒）];
+	int count[使用次数];
+}
+
+ALProtocol Levy_Info[征收信息]
+{
+	Enum.LevyEnum.ELevy_Type levyType[征收类型];
+	bytebuffer levyInfo;
+	long levySum[征收的数量累计总和];
+}
+
+ALProtocol Levy_FoodOfflineInfo[征收粮食离线收益信息]
+{
+	long offlineMs[离线时长];
+	long count[征收数量];
+}

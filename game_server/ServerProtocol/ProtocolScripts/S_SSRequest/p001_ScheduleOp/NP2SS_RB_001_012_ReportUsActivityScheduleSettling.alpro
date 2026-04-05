@@ -1,0 +1,5 @@
+﻿JavaPackage NP2SS_RB.p001_ScheduleOp;
+
+ALProtocol NP2SS_RB_001_012_ReportUsActivityScheduleSettling <1, 12>
+{
+}

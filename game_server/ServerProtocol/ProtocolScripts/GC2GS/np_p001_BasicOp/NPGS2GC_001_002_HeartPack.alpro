@@ -1,0 +1,17 @@
+﻿JavaPackage NPGS2GC.p001_BasicOp;
+csharpspace NPGS2GC.p001_BasicOp;
+
+/**********************************************************
+ * 返回用户的基本信息
+ **********************************************************/
+ALProtocol NPGS2GC_001_002_HeartPack <1, 2>
+{
+	//接收到的客户端事件标记
+	long clientTimeTag;
+	//当前服务器时间标记
+	long serverTimeTag;
+	
+	//客户端心跳包序列号，避免返回消息的心跳包触发非法处理
+	//放在最后，可以新旧兼容
+	long clientHeartSerialize;
+}

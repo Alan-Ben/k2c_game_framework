@@ -1,0 +1,11 @@
+﻿JavaPackage GS2GC.p042_GuildRelatedOp;
+csharpspace GS2GC.p042_GuildRelatedOp;
+
+ALProtocol GS2GC_042_050_OnMyMarsHelpChg[自身发起的求助数据变更] <42, 50>
+{
+	long id[求助实例ID];
+	int guildHelpSecs[公会求助时长（秒）];
+	
+	Enum.GuildEnum.EGuildMarsHelpObjType objType[对象类型];
+	long objId[对象实例ID];
+}

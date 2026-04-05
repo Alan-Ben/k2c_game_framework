@@ -1,0 +1,9 @@
+JavaPackage GS2GC.p041_MarsExploreOp;
+csharpspace GS2GC.p041_MarsExploreOp;
+
+/**
+ * 火星探险-开始并立即完成队伍维修的响应
+ */
+ALProtocol GS2GC_041_021_RetStartAndFinishRepair <41, 21>
+{
+}

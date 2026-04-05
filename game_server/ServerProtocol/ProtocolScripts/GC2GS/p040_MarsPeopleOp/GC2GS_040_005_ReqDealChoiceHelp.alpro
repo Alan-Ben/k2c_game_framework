@@ -1,0 +1,8 @@
+﻿JavaPackage GC2GS.p040_MarsPeopleOp;
+csharpspace GC2GS.p040_MarsPeopleOp;
+
+ALProtocol GC2GS_040_005_ReqDealChoiceHelp[火星居民-处理选择帮助] <40, 5>
+{
+	long id[实例ID];
+	int choice[选择];
+}

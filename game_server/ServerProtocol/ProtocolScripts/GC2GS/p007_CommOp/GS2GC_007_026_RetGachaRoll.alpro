@@ -1,0 +1,9 @@
+﻿﻿JavaPackage GS2GC.p007_CommOp;
+csharpspace GS2GC.p007_CommOp;
+
+ALProtocol GS2GC_007_026_RetGachaRoll <7, 26>
+{
+    bool isTen[是否十连抽];
+    Common.NPCommonObj.NPCommon_ItemInfo[] itemList[物品列表];
+    long[] poolItemIdList[物品ID列表];
+}

@@ -1,0 +1,7 @@
+JavaPackage GC2GS.p014_ChildOp;
+csharpspace GC2GS.p014_ChildOp;
+ALProtocol GC2GS_014_011_ReqAgreeToMeApply [同意对玩家的指定联姻请求] <14, 11>
+{
+    long adultId[匹配的子嗣实例ID];
+    long applyAdultId[发起请求的子嗣实例ID];
+}

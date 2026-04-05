@@ -1,0 +1,10 @@
+﻿JavaPackage GS2GC.p021_PlayerInfo;
+csharpspace GS2GC.p021_PlayerInfo;
+
+import Common.FriendObj.alpro;
+
+ALProtocol GS2GC_021_056_OnFriendGroupCreate[创建分组] <21, 56>
+{
+	long groupDbId[分组数据id];
+	string name[分组名];
+}

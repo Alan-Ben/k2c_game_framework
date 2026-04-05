@@ -1,0 +1,12 @@
+﻿JavaPackage ALLRPC.Common.Chat;
+
+ALProtocol GetChatRoom_Req
+{
+	int roomType;
+	long roomTypeId;
+}
+
+ALProtocol GetChatRoom_Return
+{
+	long roomId;
+}

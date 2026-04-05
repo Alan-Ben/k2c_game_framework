@@ -1,0 +1,7 @@
+JavaPackage GC2GS.p019_DinnerOp;
+csharpspace GC2GS.p019_DinnerOp;
+ALProtocol GC2GS_019_006_ReqGetDinnerIdxList [宴会索引列表] <19, 6>
+{
+    int page[当前页数];
+    int num[展示数量，上限不超过100];
+}

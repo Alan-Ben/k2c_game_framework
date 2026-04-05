@@ -1,0 +1,7 @@
+JavaPackage GS2GC.p018_PlayerSkinOp;
+csharpspace GS2GC.p018_PlayerSkinOp;
+import Common.NPPlayerInfo.alpro;
+ALProtocol GS2GC_018_060_OnPlayerSkinChg [玩家皮肤数据变更] <18, 60>
+{
+    Common.NPPlayerInfo.PlayerInfo_Skin info[空];
+}

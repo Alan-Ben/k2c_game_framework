@@ -1,0 +1,6 @@
+﻿﻿JavaPackage GS2GC.p022_ChatOp;
+csharpspace GS2GC.p022_ChatOp;
+
+ALProtocol GS2GC_022_003_RetPlayerQuitChatRoom <22, 3>
+{
+}

@@ -1,0 +1,9 @@
+﻿JavaPackage GS2GC.p037_GuildDungeonOp;
+csharpspace GS2GC.p037_GuildDungeonOp;
+
+ALProtocol GS2GC_037_001_RetDungeontGlobalSet <37, 1>
+{
+	long[] autoStartDungeonIdList;
+	int autoHour[自动开启时间：小时];
+	int autoMin[自动开启时间：分钟];
+}

@@ -1,0 +1,9 @@
+﻿JavaPackage GS2GC.p002_InitOp;
+csharpspace GS2GC.p002_InitOp;
+
+import Common.AnecdoteObj.alpro;
+
+ALProtocol GS2GC_002_009_RetAnecdoteInit[政务初始化] <2, 9>
+{
+	Common.AnecdoteObj.Anecdote_EventInfo[] eventList[事件数据列表];
+}

@@ -1,0 +1,9 @@
+java_path= ../Common/src
+java_package=NPCommon.ErrMain
+csharp_type = main
+id	name	desc
+1	ALREADY_HAS_TARGET	已选择情人目标，不可修改
+2	NO_TARGET	未选择情人目标
+3	ALREADY_CLAIMED	情人已领取
+4	EARN_SPEED_NOT_ENOUGH	赚速不足
+5	INVALID_LOVER_ID	情人ID不在可选列表中

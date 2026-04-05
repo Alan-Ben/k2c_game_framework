@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags: []
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - UI_Ignore_RT
+  - 
+  - PostProcessing
+  - 
+  - GO_TRIGGER
+  - GAME_UNIT
+  - GAME_UNIT_SHADOW
+  - GAME_ACTOR
+  - GAME_SCENE
+  - MOVE_AGENT
+  - GAME_SCENE_OVERLAY
+  - GAME_OVERLAY_VFX
+  - 
+  - ScreenLights
+  - GAME_IGNORE_LAYER
+  - GAME_SPECIAL_ACTOR
+  - GAME_MINI_MAP_UNIT
+  - GAME_MINI_MAP_AND_UNIT
+  - SHOWCASE
+  - GAME_SCENE_ENTIY
+  - GAME_SCENE_DISEMBODIED_OUTLINE
+  - GAME_SCENE_ENTIY_OUTLINE
+  - 
+  - 
+  - GAME_FIELD_OF_VIEW
+  - UI_TOP
+  m_SortingLayers:
+  - name: bg
+    uniqueID: 730086929
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: bk
+    uniqueID: 4071480155
+    locked: 0
+  - name: normal
+    uniqueID: 1154700115
+    locked: 0
+  - name: top
+    uniqueID: 1244769465
+    locked: 0
+  - name: top_mask
+    uniqueID: 2421857517
+    locked: 0

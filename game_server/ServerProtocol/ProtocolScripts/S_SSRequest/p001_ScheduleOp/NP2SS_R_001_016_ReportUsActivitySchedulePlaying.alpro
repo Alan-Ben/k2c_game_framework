@@ -1,0 +1,9 @@
+﻿JavaPackage NP2SS_R.p001_ScheduleOp;
+
+ALProtocol NP2SS_R_001_016_ReportUsActivitySchedulePlaying[US上报活动开启] <1, 16>
+{
+	int usId;
+	
+	long scheduleId[排期ID];
+	long usGroupId[US分组ID];
+}

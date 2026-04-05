@@ -1,0 +1,6 @@
+﻿JavaPackage NP2US_R.p008_ScheduleOp;
+
+ALProtocol NP2US_R_008_001_ChgCrossServerGroup[变更跨服分组] <8, 1>
+{
+	Common.NpServerObj.NPServerObj_CrossServerGroupInfo groupInfo[分组信息];
+}

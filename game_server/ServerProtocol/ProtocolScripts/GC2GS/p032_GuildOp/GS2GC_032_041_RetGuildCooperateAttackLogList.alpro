@@ -1,0 +1,10 @@
+import Common.CommonObj.alpro;
+import Common.GuildCooperateObj.alpro;
+
+JavaPackage GS2GC.p032_GuildOp;
+csharpspace GS2GC.p032_GuildOp;
+
+ALProtocol GS2GC_032_041_RetGuildCooperateAttackLogList[返回联盟协作攻击日志列表] <32, 41>
+{
+    Common.GuildCooperateObj.GuildCooperate_AttackLog[] attackLogList[攻击日志列表];
+}

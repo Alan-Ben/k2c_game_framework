@@ -1,0 +1,7 @@
+﻿﻿JavaPackage GS2GC.p021_PlayerInfo;
+csharpspace GS2GC.p021_PlayerInfo;
+
+ALProtocol GS2GC_021_088_OnCuteActorDel[移除Q版形象推送]<21, 88>
+{
+    long refId;
+}

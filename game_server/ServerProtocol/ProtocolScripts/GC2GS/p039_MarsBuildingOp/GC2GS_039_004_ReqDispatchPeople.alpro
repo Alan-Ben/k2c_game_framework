@@ -1,0 +1,8 @@
+﻿JavaPackage GC2GS.p039_MarsBuildingOp;
+csharpspace GC2GS.p039_MarsBuildingOp;
+
+ALProtocol GC2GS_039_004_ReqDispatchPeople[火星建筑-派遣居民] <39, 4>
+{
+	long buildingId;
+	int peopleNum[居民数量];
+}

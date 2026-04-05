@@ -1,0 +1,79 @@
+﻿import Common.NPPlayerInfo.alpro;
+import Common.PlayerShowObj.alpro;
+import Common.HeroObj.alpro;
+﻿import Common.NpChatObj.alpro;
+
+JavaPackage Common.CachedObj;
+
+ALProtocol CachedObj_CachedIconInfo
+{
+	long iconId[头像id];
+	int expiredTimeS[超时时间戳，0一下表示永久];
+}
+
+ALProtocol CachedObj_CachedIconBgkInfo
+{
+	long iconBgkId[头像框id];
+	int expiredTimeS[超时时间戳，0一下表示永久];
+}
+
+ALProtocol CachedObj_CachedTitleObj
+{
+	Common.NPCommonObj.PlayerInfo_CurTitle curInfo[玩家当前穿戴称号数据];
+	bool isShow[是否展示称号];
+}
+
+ALProtocol CachedObj_CachedBubbleInfo
+{
+	long bubbleId[气泡框id];
+	int expiredTimeS[超时时间戳，0一下表示永久];
+}
+
+ALProtocol CachedObj_CachedCuteActorInfo
+{
+	long cuteActorId[Q版形象id];
+	int expiredTimeS[超时时间戳，0一下表示永久];
+}
+
+ALProtocol CachedObj_CachedGuildInfo
+{
+	long guildId[联盟id];
+	string guildName[联盟名];
+	string guildSimpleName[联盟简称];
+}
+
+ALProtocol CachedObj_CachedPlayerInfo
+{
+	long cid[玩家id];
+	string playerName[玩家名];
+	long vipLvl[vip等级];
+	long playerLvl[玩家等级];
+	CachedObj_CachedIconInfo iconInfo[当前佩戴头像];
+	CachedObj_CachedIconBgkInfo iconBgkInfo[当前佩戴头像框];
+	CachedObj_CachedBubbleInfo bubbleInfo[当前佩戴气泡框];
+	CachedObj_CachedGuildInfo guildInfo[联盟信息];
+	long lastOfflineTimeMs[最近离线时间];
+	long lastOnlineTimeMs[最近登录时间];
+	long freezeTimeMs[冻结结束时间];
+	string language[玩家语言];
+	CachedObj_CachedCuteActorInfo cuteAcotrInfo[当前佩戴Q版形象];
+
+	long totalPower[总实力];
+	long maxPower[历史最高实力];
+	long earnings[赚速];
+	long maxEarnings[历史最大赚速];
+	long exp[经验];
+	
+	CachedObj_CachedTitleObj titleObjV2[称号相关];
+	long playerSkin[玩家皮肤];
+	
+	long vipExp[VIP经验];
+}
+
+ALProtocol CachedObj_CachedPlayerHeroInfo
+{
+	long heroId;
+	long skinId;
+	long power;
+	int level;
+}

@@ -1,0 +1,295 @@
+/************************
+关键字：
+$Module	:模块
+$Action	:行为，包含$req{} 和$ret{}
+$Push	:推送协议
+$Req	:请求包
+$Ret	:返回包
+************************/
+
+$Module 014 Child //子嗣
+
+$Action 001 SetChildName[设置子嗣（未成年）名称]
+(
+	$req	
+	{
+		long id[子嗣（未成年）实例ID];
+		string name[子嗣名称];
+	}
+	$ret	
+	{
+	}
+)
+
+$Action 002 TrainChild[训练子嗣（未成年）]
+(
+	$req	
+	{
+		long id[子嗣（未成年）实例ID];
+	}
+	$ret	
+	{
+		long costValue[子嗣上课金币消耗];
+		long gainValue[子嗣上课获得伙伴经验];
+		long addBonus[子嗣收益加成增加];
+	}
+)
+
+$Action 003 AddSeatEnergy[增加训练位脑力值]
+(
+	$req	
+	{
+		long seatId[训练位ID];
+		int addCount[增加数量];
+	}
+	$ret	
+	{
+	}
+)
+
+$Action 004 SetChildGraduate[设置子嗣（未成年）毕业]
+(
+	$req	
+	{
+		long id[子嗣（未成年）实例ID];
+	}
+	$ret	
+	{
+		Common.NPCommonObj.NPCommon_ItemInfo[] gainItemList[奖励物品列表];
+		Common.ChildObj.Adult_UnmarriedInfo adult;
+	}
+)
+
+$Action 006 GetUnMarriedAdult[获取子嗣（成年未婚）数据]
+(
+	$req	
+	{
+		long adultId[子嗣实例ID];
+	}
+	$ret	
+	{
+		Common.ChildObj.Adult_UnmarriedInfo adult;
+	}
+)
+
+$Action 007 GetMarriedAdult[获取子嗣（成年已婚）数据]
+(
+	$req	
+	{
+		long adultId[子嗣实例ID];
+	}
+	$ret	
+	{
+		Common.ChildObj.Adult_MarriedInfo adult;
+	}
+)
+
+$Action 008 GetToMeApply[获取对玩家的指定联姻请求]
+(
+	$req	
+	{
+		long applyAdultId[发起请求的玩家子嗣实例ID];
+	}
+	$ret	
+	{
+		Common.ChildObj.Adult_ToMeApplyInfo apply;
+	}
+)
+
+$Action 009 RefuseToMeApply[拒绝对玩家的指定联姻请求]
+(
+	$req	
+	{
+		long applyAdultId[发起请求的玩家子嗣实例ID];
+	}
+	$ret	
+	{
+	}
+)
+
+$Action 010 AkeyRefuseToMeApply[一键拒绝对玩家的指定联姻请求]
+(
+	$req	
+	{
+	}
+	$ret	
+	{
+	}
+)
+
+$Action 011 AgreeToMeApply[同意对玩家的指定联姻请求]
+(
+	$req	
+	{
+		long adultId[匹配的子嗣实例ID];
+		
+		long applyAdultId[发起请求的子嗣实例ID];
+	}
+	$ret	
+	{
+	}
+)
+
+$Action 012 GetRecommendPlayerList[联姻请求-获取推荐玩家列表]
+(
+	$req	
+	{
+		long adultId[匹配的子嗣实例ID];
+	}
+	$ret	
+	{
+		Common.ChildObj.Adult_PoolBaseInfo[] matchList;
+	}
+)
+
+$Action 013 ApplyToPlayer[联姻请求-对指定玩家发起请求]
+(
+	$req	
+	{
+		long adultId[匹配的子嗣实例ID];
+		
+		long targetCid[目标玩家CID];
+	}
+	$ret	
+	{
+	}
+)
+
+$Action 014 ApplyToGroup[联姻请求-对指定群体发起请求]
+(
+	$req	
+	{
+		long adultId[子嗣实例ID];
+	}
+	$ret	
+	{
+	}
+)
+
+$Action 015 AgreeApplyGroup[联姻请求-对指定群体发起请求]
+(
+	$req
+	{
+		long adultId[匹配的子嗣实例ID];
+		
+		long applyCid[发起请求的玩家CID];
+		long applyAdultId[发起请求的子嗣实例ID];
+	}
+	$ret	
+	{
+	}
+)
+
+$Action 016 CancelApplyToPlayer[联姻请求-取消指定联姻申请]
+(
+	$req	
+	{
+		long adultId[子嗣实例ID];
+	}
+	$ret	
+	{
+	}
+)
+
+$Action 017 CancelApplyToGroup[联姻请求-取消联姻池申请]
+(
+	$req	
+	{
+		long adultId[子嗣实例ID];
+	}
+	$ret	
+	{
+	}
+)
+
+
+$Action 018 GetPoolAdult[获取联姻池待匹配子嗣数据]
+(
+	$req	
+	{
+		long cid[玩家CID];
+		long adultId[子嗣实例ID];
+	}
+	$ret	
+	{
+		Common.ChildObj.Adult_PoolInfo poolAdult[匹配池子嗣数据];
+	}
+)
+
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+
+$Push 050 OnChildAdd[子嗣（未成年）新增推送]
+{
+   Common.ChildObj.Child_Info child;
+}
+
+$Push 051 OnChildNameChg[子嗣（未成年）名称变动推送]
+{
+	long id[子嗣实例ID];
+	string name[子嗣名称];
+}
+
+$Push 052 OnChildLvlChg[子嗣（未成年）等级变动推送]
+{
+	long id[子嗣实例ID];
+	int lvl[子嗣等级];
+}
+
+$Push 053 OnSeatChg[训练位变动推送]
+{
+	Common.ChildObj.Child_SeatInfo seat[训练位数据];
+}
+
+$Push 054 OnUnmarriedAdultAdd[子嗣（成年未婚）新增推送]
+{
+	Common.ChildObj.Adult_UnmarriedInfo adult;
+}
+
+$Push 055 OnMarriedAdultAdd[子嗣（成年已婚）新增推送]
+{
+	Common.ChildObj.Adult_MarriedInfo adult;
+}
+
+$Push 056 OnToMeApplyAdd[对自身指定请求新增推送]
+{
+	Common.ChildObj.Adult_ToMeApplyBaseInfo toMeApply;
+}
+
+$Push 057 OnChildRemove[子嗣（未成年）移除]
+{
+	long id[子嗣实例ID];
+}
+
+$Push 058 OnToMeApplyDel[对自身指定请求移除推送]
+{
+	long applyAdultId[请求子嗣实例ID];
+}
+
+$Push 059 OnUnmarriedAdultStatusChg[子嗣（成年未婚）状态变更]
+{
+	long id[子嗣实例ID];
+	Enum.ChildEnum.EAdultStatus status[子嗣状态];
+	int expiredTs[请求过期截至时间（秒）];
+}
+
+$Push 060 OnToMeApplyClear[对自身指定请求清空]
+{
+}
+
+$Push 061 OnChildBonusSumChg[所有子嗣（成年/未成年）总收益变动推送]
+{
+	long bonus[所有子嗣总收益];
+}
+
+$Push 062 OnChildBonusChg[指定子嗣（未成年）收益变动推送]
+{
+	long id[子嗣实例ID];
+	long bonus[指定子嗣（未成年）收益];
+}
+
+$Push 063 OnAdultBonusSumChg[所有成年子嗣总收益变动推送]
+{
+	long bonus[所有成年子嗣总收益变动推送];
+}

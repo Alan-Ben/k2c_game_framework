@@ -1,0 +1,9 @@
+﻿JavaPackage GS2GC.p022_ChatOp;
+csharpspace GS2GC.p022_ChatOp;
+
+ALProtocol GS2GC_022_050_OnChatRoomJoin[加入新房间] <22, 50>
+{
+    int roomType[聊天房间类型];
+	long roomId[聊天房间ID];
+	long extId[额外参数];
+}

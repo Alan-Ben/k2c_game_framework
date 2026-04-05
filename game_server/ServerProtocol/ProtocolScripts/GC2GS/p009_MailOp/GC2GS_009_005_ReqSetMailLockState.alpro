@@ -1,0 +1,8 @@
+﻿JavaPackage GC2GS.p009_MailOp;
+csharpspace GC2GS.p009_MailOp;
+
+ALProtocol GC2GS_009_005_ReqSetMailLockState[设置邮件是否收藏] <09, 5>
+{
+    long mailUid[邮件唯一id];
+    bool isLocked[是否收藏];
+}

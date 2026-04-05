@@ -1,0 +1,12 @@
+﻿﻿JavaPackage NPGS2GC.p001_BasicOp;
+csharpspace NPGS2GC.p001_BasicOp;
+
+/**********************************************************
+ * 返回进入对应服务器的结果
+ **********************************************************/
+ALProtocol NPGS2GC_001_013_EnterUSButFreeze <1, 13>
+{
+	long clientSerialize[客户端用于识别的序列号];
+	long freezeTimeMs[冻结时间];
+}
+

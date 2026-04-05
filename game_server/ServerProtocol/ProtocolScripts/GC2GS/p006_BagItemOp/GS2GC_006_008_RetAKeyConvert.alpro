@@ -1,0 +1,7 @@
+JavaPackage GS2GC.p006_BagItemOp;
+csharpspace GS2GC.p006_BagItemOp;
+
+ALProtocol GS2GC_006_008_RetAKeyConvert <6, 8>
+{
+
+}

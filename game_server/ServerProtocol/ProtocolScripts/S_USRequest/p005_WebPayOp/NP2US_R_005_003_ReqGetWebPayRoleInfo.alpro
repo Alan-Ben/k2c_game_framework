@@ -1,0 +1,6 @@
+JavaPackage NP2US_R.p005_WebPayOp;
+
+ALProtocol NP2US_R_005_003_ReqGetWebPayRoleInfo[获取网页支付角色信息] <5, 3>
+{
+	long cid[角色ID];
+}

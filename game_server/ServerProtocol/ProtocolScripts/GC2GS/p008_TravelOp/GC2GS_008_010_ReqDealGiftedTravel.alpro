@@ -1,0 +1,6 @@
+JavaPackage GC2GS.p008_TravelOp;
+csharpspace GC2GS.p008_TravelOp;
+ALProtocol GC2GS_008_010_ReqDealGiftedTravel [处理增加必生卷王游历事件] <8, 10>
+{
+    long instanceId[游历事件ID];
+}

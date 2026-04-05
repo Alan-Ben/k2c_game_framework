@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p009_MailOp;
+csharpspace GC2GS.p009_MailOp;
+
+ALProtocol GC2GS_009_010_ReqMailTitleInfo[请求邮件标题列表] <9, 10>
+{
+    long[] mailUidList[邮件唯一id列表];
+}

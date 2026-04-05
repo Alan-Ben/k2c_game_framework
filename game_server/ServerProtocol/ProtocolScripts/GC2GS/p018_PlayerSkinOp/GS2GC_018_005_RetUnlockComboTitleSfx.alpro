@@ -1,0 +1,5 @@
+JavaPackage GS2GC.p018_PlayerSkinOp;
+csharpspace GS2GC.p018_PlayerSkinOp;
+ALProtocol GS2GC_018_005_RetUnlockComboTitleSfx [解锁组合称号后缀] <18, 5>
+{
+}

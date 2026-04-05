@@ -1,0 +1,9 @@
+﻿JavaPackage NPLS2GC.p001_BasicOp;
+csharpspace NPLS2GC.p001_BasicOp;
+
+/**********************************************************
+ * 服务器通知需要验证激活码
+ **********************************************************/
+ALProtocol NPLS2GC_001_050_OnNotifyNeedCheckSN <1, 50>
+{
+}

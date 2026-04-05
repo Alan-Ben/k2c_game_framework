@@ -1,0 +1,7 @@
+JavaPackage GS2GC.p021_PlayerInfo;
+csharpspace GS2GC.p021_PlayerInfo;
+
+ALProtocol GS2GC_021_065_OnClientNotifyFuncUnlock <21, 65>
+{
+	Enum.NPEnum.ENPFunctionType funcType[客户端通知功能解锁类型];
+}

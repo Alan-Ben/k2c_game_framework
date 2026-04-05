@@ -1,0 +1,7 @@
+﻿JavaPackage GS2GC.p042_GuildRelatedOp;
+csharpspace GS2GC.p042_GuildRelatedOp;
+
+ALProtocol GS2GC_042_051_OnCanDealMarsHelpAdd[可以帮助的火星求助实例数量新增] <42, 51>
+{
+	long canDealId[新增可帮助的火星求助实例ID];
+}

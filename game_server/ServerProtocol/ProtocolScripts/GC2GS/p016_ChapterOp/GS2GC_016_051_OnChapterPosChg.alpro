@@ -1,0 +1,8 @@
+JavaPackage GS2GC.p016_ChapterOp;
+csharpspace GS2GC.p016_ChapterOp;
+import Common.ChapterObj.alpro;
+
+ALProtocol GS2GC_016_051_OnChapterPosChg [关卡玩家进度变更] <16, 51>
+{
+    Common.ChapterObj.Chapter_PosInfo posInfo[位置信息];
+}

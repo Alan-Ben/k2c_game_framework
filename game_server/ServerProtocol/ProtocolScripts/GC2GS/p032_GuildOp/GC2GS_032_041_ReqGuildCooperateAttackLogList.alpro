@@ -1,0 +1,8 @@
+JavaPackage GC2GS.p032_GuildOp;
+csharpspace GC2GS.p032_GuildOp;
+
+ALProtocol GC2GS_032_041_ReqGuildCooperateAttackLogList[请求联盟协作攻击日志列表] <32, 41>
+{
+    long lastDbId[上一次读取的数据id];
+    int num[所需日志数量];
+}

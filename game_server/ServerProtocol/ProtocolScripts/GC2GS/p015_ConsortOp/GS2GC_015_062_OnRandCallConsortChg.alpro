@@ -1,0 +1,6 @@
+JavaPackage GS2GC.p015_ConsortOp;
+csharpspace GS2GC.p015_ConsortOp;
+ALProtocol GS2GC_015_062_OnRandCallConsortChg [随机邀约中指定的妃子ID列表变更] <15, 62>
+{
+    long[] consortIdList[空];
+}

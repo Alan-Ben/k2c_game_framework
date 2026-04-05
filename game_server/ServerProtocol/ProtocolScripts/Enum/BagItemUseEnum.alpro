@@ -1,0 +1,37 @@
+﻿JavaPackage Common.BagItemUseEnum;
+csharpspace Common.BagItemUseEnum;
+
+ALEnum EBagItemUse_TargetType[背包使用道具-选择目标类型]
+{
+	NONE;
+	SELECT[选择];
+	RAND[随机];
+}
+
+ALEnum EBagItemUse_HeroType[背包使用道具-大臣类型]
+{
+	NONE;
+	POWER[实力];
+}
+
+ALEnum EBagItemUse_HeroDrawShowType[背包使用道具-大臣获得展示类型]
+{
+	NONE;
+	POWER[实力];
+}
+
+ALEnum EBagItemUse_ConsortType[背包使用道具-妃子类型]
+{
+	NONE;
+	INTIMACY[亲密度];
+	CHARM[魅力];
+	CHARM_POINT[加护点];
+}
+
+ALEnum EBagItemUse_ConsortDrawShowType[背包使用道具-妃子获得展示类型]
+{
+	NONE;
+	CHARM[加护力];
+	INTIMACY[亲密度];
+	CHARM_POINT[加护点];
+}

@@ -1,0 +1,6 @@
+﻿﻿JavaPackage GS2GC.p022_ChatOp;
+csharpspace GS2GC.p022_ChatOp;
+
+ALProtocol GS2GC_022_006_RetPlayerSendRoomMsgV2 <22, 6>
+{
+}

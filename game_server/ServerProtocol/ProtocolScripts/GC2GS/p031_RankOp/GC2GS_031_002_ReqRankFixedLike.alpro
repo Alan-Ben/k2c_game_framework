@@ -1,0 +1,8 @@
+﻿JavaPackage GC2GS.p031_RankOp;
+csharpspace GC2GS.p031_RankOp;
+
+ALProtocol GC2GS_031_002_ReqRankFixedLike[请求常驻排行榜点赞] <31, 2>
+{
+	long rankFixedId;
+	bool isCross[是否跨服];
+}

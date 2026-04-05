@@ -1,0 +1,10 @@
+JavaPackage NP2HS_RB.p001_HSOp;
+
+/**********************************************************
+ * 获取所有的US服务器列表
+ **********************************************************/
+ALProtocol NP2HS_RB_001_001_RetServerInfoList <1, 1>
+{
+	long serial[序列号];
+    Common.NPCommonObj.NP_SYS_ServerItem[] serverInfoList[后台服务器信息列表];
+}

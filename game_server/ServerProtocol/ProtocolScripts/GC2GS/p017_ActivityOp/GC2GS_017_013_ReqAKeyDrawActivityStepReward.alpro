@@ -1,0 +1,8 @@
+﻿JavaPackage GC2GS.p017_ActivityOp;
+csharpspace GC2GS.p017_ActivityOp;
+
+ALProtocol GC2GS_017_013_ReqAKeyDrawActivityStepReward [一键领取活动阶段奖励] <17, 13> 
+{
+    long instanceId[活动实例id];
+    long stepRewardId[阶段奖励id];
+}

@@ -1,0 +1,7 @@
+JavaPackage GS2GC.p014_ChildOp;
+csharpspace GS2GC.p014_ChildOp;
+ALProtocol GS2GC_014_062_OnChildBonusChg [指定子嗣（未成年）收益变动推送] <14, 62>
+{
+    long id[子嗣实例ID];
+    long bonus[指定子嗣（未成年）收益];
+}

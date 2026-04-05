@@ -1,0 +1,7 @@
+java_path= ../Common/src
+java_package=NPCommon.ErrMain
+csharp_type = main
+id	name	desc
+1	FUND_NOT_FOUND	基金不存在
+2	ALREADY_DRAWN	已经领取过该阶段奖励
+3	LEVEL_NOT_FOUND	等级配置不存在

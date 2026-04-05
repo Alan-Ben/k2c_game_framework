@@ -1,0 +1,38 @@
+﻿JavaPackage WCGCS2US.p002_MatchOp;
+
+ALProtocol BattleEnd_PlayerInfo
+{
+	int summonScore;
+	long matchingRewardRefId;
+	long matchingOvertimeRewadId;
+	long casualMatchingId;
+	//额外展示信息
+	int[] honorList;
+}
+
+ALProtocol BattleEnd_BattileInfo
+{
+	long battleStartTimeMs;
+	long battleEndTimeMs;
+}
+
+/**********************************************************
+ * 在公平竞技场出现结果之后的处理
+ **********************************************************/
+ALProtocol WCGCS2US_002_020_OnArenaEnd <2, 20>
+{
+	long uid;
+	long usedRace;
+	//竞技场类型
+	int arenaType;
+	//胜利者的Uid
+	long[] winUidList;
+	//是否平局
+	bool isDraw;
+	//玩家信息
+	BattleEnd_PlayerInfo battleEndPlayerInfo;
+	//战斗信息
+	BattleEnd_BattileInfo battleEndBattleInfo;
+	//匹配类型
+	int matchingType;
+}

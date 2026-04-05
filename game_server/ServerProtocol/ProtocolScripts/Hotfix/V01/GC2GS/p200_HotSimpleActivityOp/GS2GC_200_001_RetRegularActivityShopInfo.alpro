@@ -1,0 +1,7 @@
+﻿JavaPackage Hotfix.V01.GS2GC.p200_HotSimpleActivityOp;
+csharpspace Hotfix.GS2GC.p200_HotSimpleActivityOp;
+
+ALProtocol GS2GC_200_001_RetRegularActivityShopInfo <200, 1>
+{
+	Hotfix.V01.Common.HotSimpleActivityObj.RegularActivity_ShopInfo shopInfo[万能活动商店信息];
+}

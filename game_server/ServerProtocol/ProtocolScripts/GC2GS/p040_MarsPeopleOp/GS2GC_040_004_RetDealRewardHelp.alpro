@@ -1,0 +1,9 @@
+﻿JavaPackage GS2GC.p040_MarsPeopleOp;
+csharpspace GS2GC.p040_MarsPeopleOp;
+
+﻿import Common.NPCommonObj.alpro;
+
+ALProtocol GS2GC_040_004_RetDealRewardHelp <40, 4>
+{
+	Common.NPCommonObj.NPCommon_ItemInfo[] itemList[物品列表];
+}

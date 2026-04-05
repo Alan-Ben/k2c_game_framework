@@ -1,0 +1,8 @@
+JavaPackage GC2GS.p042_GuildRelatedOp;
+csharpspace GC2GS.p042_GuildRelatedOp;
+
+ALProtocol GC2GS_042_060_ReqCreateRally[请求创建集结] <42, 60>
+{
+    long teamId[队伍ID];
+}
+

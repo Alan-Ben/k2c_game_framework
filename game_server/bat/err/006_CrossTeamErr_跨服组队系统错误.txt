@@ -1,0 +1,18 @@
+java_path= ../Common/src
+java_package=NPCommon.ErrMain
+id	name	desc
+1	GROUP_NOT_FOUND	分组不存在
+2	TEAM_NOT_FOUND	队伍不存在
+3	TEAM_MEMBER_NOT_FOUND	未加入队伍
+4	TEAM_MEMBER_EXISTED	已加入队伍
+5	TEAM_CREATE_FAIL	创建队伍失败
+6	TEAM_JOIN_FAIL	加入队伍失败
+7	TEAM_MEMBER_NOT_LEADER	不是队长
+8	TEAM_NOT_FREE_JOIN	不允许自由加入队伍
+9	TEAM_MEMBER_FULL	队伍已满员
+10	TEAM_LEADER_NOT_QUIT	队长不能退出队伍
+11	TEAM_APPLY_COND_FAIL	不满足队伍申请条件
+12	TEAM_APPLY_NOT_FOUND	申请数据不存在
+13	TEAM_APPLY_COND_ERROR	申请条件类型错误
+14	TEAM_APPLY_ALREADY_EXIST	已申请加入队伍
+15	TEAM_FORBID_JOIN	队伍已禁止加入

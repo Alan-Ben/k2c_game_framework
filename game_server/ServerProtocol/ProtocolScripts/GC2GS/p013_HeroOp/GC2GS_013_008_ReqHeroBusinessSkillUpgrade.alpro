@@ -1,0 +1,8 @@
+﻿JavaPackage GC2GS.p013_HeroOp;
+csharpspace GC2GS.p013_HeroOp;
+
+ALProtocol GC2GS_013_008_ReqHeroBusinessSkillUpgrade[升级大臣经营技能]<13, 8> 
+{
+    long heroId[大臣id];
+    long businessSkillId[经营技能id];
+}

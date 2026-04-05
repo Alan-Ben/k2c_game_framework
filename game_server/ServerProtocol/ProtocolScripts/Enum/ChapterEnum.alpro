@@ -1,0 +1,18 @@
+JavaPackage Common.ChapterEnum;
+csharpspace Common.ChapterEnum;
+
+ALEnum EChapterInspireType[关卡鼓舞类型]
+{
+	NONE;
+	GOLD[金币鼓舞];
+	CRYSTAL[水晶鼓舞];
+	ITEM[道具鼓舞];
+}
+
+ALEnum EChapterEventType[关卡事件类型]
+{
+	NONE;
+	REWARD[奖励];
+	DISPATCH[大臣派遣];
+	CHOICE[选择];
+}

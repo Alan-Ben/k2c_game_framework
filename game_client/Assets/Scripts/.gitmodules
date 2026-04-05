@@ -1,0 +1,24 @@
+[submodule "ALPackage"]
+	path = ALPackage
+	url = git@gitlab.dev.mjgame.com:np_client/np_client.alpackage.git
+	branch = master
+[submodule "CommonChatScripts"]
+	path = CommonChatScripts
+	url = git@gitlab.dev.mjgame.com:NP/sp_chat_script.git
+	branch = master
+[submodule "ClientProtocol"]
+	path = ClientProtocol
+	url = git@gitlab.dev.mjgame.com:GOM/n_client_protocol.git
+	branch = master
+[submodule "LogicScripts"]
+	path = LogicScripts
+	url =git@gitlab.dev.mjgame.com:GOM/n_logic_scripts.git
+	branch = master
+[submodule "ResScripts"]
+	path = ResScripts
+	url = git@gitlab.dev.mjgame.com:GOM/n_res_scripts.git
+	branch = master
+[submodule "ExportScripts"]
+	path = ExportScripts
+	url = git@gitlab.dev.mjgame.com:GOM/n_export_scripts.git
+	branch = master

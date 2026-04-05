@@ -1,0 +1,19 @@
+﻿JavaPackage NPGS2GC.p001_BasicOp;
+csharpspace NPGS2GC.p001_BasicOp;
+
+/**********************************************************
+ * 返回客户端请求的消息结果
+ **********************************************************/
+ALProtocol NPGS2GC_001_023_RetClientRequest <1, 23>
+{
+	int msgSerialize; //消息序列号
+	//客户端请求序列号
+	long clientRequestSerialize;
+	
+	//处理结果
+	bool res;
+	//错误时使用的错误编号
+	int errCode;
+	//实际的返回消息内容
+	bytebuffer msgBuffer;
+}

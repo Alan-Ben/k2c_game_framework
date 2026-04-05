@@ -1,0 +1,7 @@
+﻿﻿JavaPackage GS2GC.p017_ActivityOp;
+csharpspace GS2GC.p017_ActivityOp;
+
+ALProtocol GS2GC_017_002_RetActivityRankSettleInfo <17, 2>
+{
+    Common.ActivityObj.Activity_RankSettleInfo settleInfo[结算信息];
+}

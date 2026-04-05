@@ -1,0 +1,9 @@
+﻿JavaPackage GS2GC.p021_PlayerInfo;
+csharpspace GS2GC.p021_PlayerInfo;
+
+import Common.AchieveObj.alpro;
+
+ALProtocol GS2GC_021_067_OnAchievePointChg[成就点变更推送] <21, 67>
+{
+	Common.AchieveObj.Achieve_AchievePointInfo achievePointInfo[成就点信息];
+}

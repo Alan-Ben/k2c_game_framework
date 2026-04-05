@@ -1,0 +1,17 @@
+﻿JavaPackage ALLRPC.US.Friend;
+
+ALProtocol AgreeFriendApply_Req
+{
+	long applyCid[发起请求玩家CID];
+	long agreeCid[同意请求玩家CID];
+}
+
+ALProtocol AgreeFriendApply_Return
+{
+	bool isSuc;
+	int errCode;
+}
+
+//[RPC] 同意好友申请
+//[CLASS_PACKAGE] : AllRpcData.US_Service.Friend
+//[DEALER_PACKAGE] : USServer.RPCDispatcher.Friend

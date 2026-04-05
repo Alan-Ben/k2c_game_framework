@@ -1,0 +1,7 @@
+﻿JavaPackage GS2GC.p004_PlayerOp;
+csharpspace GS2GC.p004_PlayerOp;
+
+ALProtocol GS2GC_004_025_RetHireEmployee <4, 24>
+{
+	int num[雇佣数量];
+}

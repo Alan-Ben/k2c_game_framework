@@ -1,0 +1,16 @@
+﻿JavaPackage GS2GC.p002_InitOp;
+csharpspace GS2GC.p002_InitOp;
+
+import Common.MarsObj.alpro;
+
+ALProtocol GS2GC_002_073_RetMarsBuildingInit[火星-火星建筑数据初始化] <2, 73>
+{
+	Common.MarsObj.Mars_Building[] buildingList[建筑列表];
+	Common.MarsObj.Mars_HomeBuilding homeBuilding[主基地数据];
+	Common.MarsObj.Mars_PeopleBuilding[] peopleBuildingList[居民建筑列表];
+	Common.MarsObj.Mars_BuildingEquipment[] equipmentList[部件列表];
+	Common.MarsObj.Mars_BuildingEnergyOutput[] energyOutputList[能量产出数据列表];
+	Common.MarsObj.Mars_Mars_BuildingEquipment_Food[] foodEquipmentList[food部件列表];
+	Common.MarsObj.Mars_BuildingUpQueue[] buildingUpQueueList[建筑建造/升级列表];
+	long extMoodIndex[额外心情指数];
+}

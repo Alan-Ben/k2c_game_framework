@@ -1,0 +1,7 @@
+java_path= ../Common/src
+java_package=NPCommon.ErrMain
+id	name	desc
+1	MUSEUM_ITEM_ALREADY_ACTIVE	博物馆藏品已激活
+2	MUSEUM_ITEM_NOT_ACTIVE	博物馆藏品未激活
+3	MUSEUM_ITEM_NOT_FOUND	博物馆藏品未找到
+4	MUSEUM_ITEM_LEVEL_REACH_MAX	博物馆藏品等级已达上限

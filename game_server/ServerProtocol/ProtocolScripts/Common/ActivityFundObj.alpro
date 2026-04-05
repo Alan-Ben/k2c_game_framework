@@ -1,0 +1,19 @@
+JavaPackage Common.ActivityFundObj;
+csharpspace Common.ActivityFundObj;
+
+ALProtocol ActivityFund_TaskInfo[活动基金-任务信息]
+{
+	long taskId[任务ID];
+	long currentCount[当前计数];
+	int finishedTimes[已完成次数];
+}
+
+ALProtocol ActivityFund_Info[活动基金-基金信息]
+{
+	long fundId[基金ID];
+	long activityInstanceId[活动实例ID（常驻基金为0）];
+	long formulaScore[公式分数];
+	long taskScore[任务分数];
+	int hadDrawFreeStep[已领取免费档阶段];
+	int hadDrawPayStep[已领取付费档阶段];
+}

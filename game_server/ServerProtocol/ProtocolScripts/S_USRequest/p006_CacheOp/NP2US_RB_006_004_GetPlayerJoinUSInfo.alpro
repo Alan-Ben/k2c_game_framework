@@ -1,0 +1,8 @@
+﻿import Common.NpPlayerInfo.alpro;
+
+JavaPackage NP2US_RB.p006_CacheOp;
+
+ALProtocol NP2US_RB_006_004_GetPlayerJoinUSInfo <6, 4>
+{
+	Common.NpPlayerInfo.NP_SYS_PlayerJoinedUSInfo joinInfo;
+}

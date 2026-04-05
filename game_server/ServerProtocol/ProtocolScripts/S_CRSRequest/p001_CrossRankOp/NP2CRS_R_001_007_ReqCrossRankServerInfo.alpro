@@ -1,0 +1,5 @@
+﻿JavaPackage NP2CRS_R.p001_CrossRankOp;
+
+ALProtocol NP2CRS_R_001_007_ReqCrossRankServerInfo [请求服务器信息] <1, 7>
+{
+}

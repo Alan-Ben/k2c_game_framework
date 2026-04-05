@@ -1,0 +1,7 @@
+JavaPackage Hotfix.V02.GC2GS.p202_NumMergeOp;
+csharpspace Hotfix.GC2GS.p202_NumMergeOp;
+
+ALProtocol GC2GS_202_001_ReqNumMergeInit [数字合并-初始化活动数据] <202, 1>
+{
+
+}

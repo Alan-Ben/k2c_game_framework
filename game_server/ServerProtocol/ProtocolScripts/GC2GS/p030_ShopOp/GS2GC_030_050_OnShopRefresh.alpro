@@ -1,0 +1,10 @@
+﻿JavaPackage GS2GC.p030_ShopOp;
+csharpspace GS2GC.p030_ShopOp;
+
+/**********************************************************
+ * 商店刷新推送
+ **********************************************************/
+ALProtocol GS2GC_030_050_OnShopRefresh <30, 50>
+{
+    Common.ShopObj.Shop_Info shop[商店数据];
+}

@@ -1,0 +1,7 @@
+﻿JavaPackage GS2GC.p002_InitOp;
+csharpspace GS2GC.p002_InitOp;
+
+ALProtocol GS2GC_002_046_RetDailyQuest[日常任务] <2, 46>
+{
+	Common.QuestObj.DailyQuest_Group[] dailyquestInfoList[日常任务数据];
+}

@@ -1,0 +1,6 @@
+﻿﻿JavaPackage GS2GC.p012_ActivityTeamOp;
+csharpspace GS2GC.p012_ActivityTeamOp;
+
+ALProtocol GS2GC_012_004_RetSetActivityTeamApplyCond <12, 4>
+{
+}

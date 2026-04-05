@@ -1,0 +1,7 @@
+﻿JavaPackage GS2GC.p040_MarsPeopleOp;
+csharpspace GS2GC.p040_MarsPeopleOp;
+
+ALProtocol GS2GC_040_054_OnLetterDel[删除信件] <40, 54>
+{
+	long id;
+}

@@ -1,0 +1,9 @@
+import Common.PlayerObj.alpro;
+
+JavaPackage GS2GC.p002_InitOp;
+csharpspace GS2GC.p002_InitOp;
+
+ALProtocol GS2GC_002_076_RetMarsEnergyInit[火星能量数据初始化] <2, 76>
+{
+    Common.PlayerObj.Player_MarsEnergyInfo info;
+}

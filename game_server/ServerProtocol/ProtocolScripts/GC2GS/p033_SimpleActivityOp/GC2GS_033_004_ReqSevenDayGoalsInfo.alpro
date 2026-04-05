@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p033_SimpleActivityOp;
+csharpspace GC2GS.p033_SimpleActivityOp;
+
+ALProtocol GC2GS_033_004_ReqSevenDayGoalsInfo[请求七日目标信息] <33, 4>
+{
+	
+}

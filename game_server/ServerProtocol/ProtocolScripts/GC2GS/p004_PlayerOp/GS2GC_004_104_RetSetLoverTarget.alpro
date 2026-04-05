@@ -1,0 +1,6 @@
+JavaPackage GS2GC.p004_PlayerOp;
+csharpspace GS2GC.p004_PlayerOp;
+
+ALProtocol GS2GC_004_104_RetSetLoverTarget <4, 104>
+{
+}

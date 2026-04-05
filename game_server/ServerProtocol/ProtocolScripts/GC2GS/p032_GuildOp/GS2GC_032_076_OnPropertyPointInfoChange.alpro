@@ -1,0 +1,10 @@
+import Common.GuildCooperateObj.alpro;
+
+JavaPackage GS2GC.p032_GuildOp;
+csharpspace GS2GC.p032_GuildOp;
+
+ALProtocol GS2GC_032_076_OnPropertyPointInfoChange[属性据点信息变更推送] <32, 76>
+{
+    Common.GuildCooperateObj.GuildCooperate_RewardPointPos pos[奖励据点位置];
+    Common.GuildCooperateObj.GuildCooperate_PropertyPointInfo propertyPointInfo[属性据点信息];
+}

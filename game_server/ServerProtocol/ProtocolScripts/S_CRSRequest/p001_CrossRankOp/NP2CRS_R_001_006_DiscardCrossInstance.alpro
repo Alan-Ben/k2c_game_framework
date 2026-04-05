@@ -1,0 +1,6 @@
+﻿JavaPackage NP2CRS_R.p001_CrossRankOp;
+
+ALProtocol NP2CRS_R_001_006_DiscardCrossInstance <1, 6>
+{
+	long crossInstanceId[跨服分组ID];
+}

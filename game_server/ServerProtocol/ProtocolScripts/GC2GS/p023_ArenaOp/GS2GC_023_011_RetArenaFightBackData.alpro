@@ -1,0 +1,7 @@
+﻿﻿JavaPackage GS2GC.p023_ArenaOp;
+csharpspace GS2GC.p023_ArenaOp;
+
+ALProtocol GS2GC_023_011_RetArenaFightBackData <23, 11>
+{
+    Common.ArenaObj.Arena_FightBackInfo[] fightBackList;
+}

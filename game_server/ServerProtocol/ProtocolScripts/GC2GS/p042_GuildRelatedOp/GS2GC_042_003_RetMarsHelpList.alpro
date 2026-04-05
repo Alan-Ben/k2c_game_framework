@@ -1,0 +1,10 @@
+﻿JavaPackage GS2GC.p042_GuildRelatedOp;
+csharpspace GS2GC.p042_GuildRelatedOp;
+
+import Common.GuildObj.alpro;
+
+ALProtocol GS2GC_042_003_RetMarsHelpList <42, 3>
+{
+	Common.GuildObj.Guild_MarsHelpInfo[] myHelpList[玩家自身发起的火星求助数据列表];
+	Common.GuildObj.Guild_MarsHelpShowInfo[] helpList[求助数据列表];
+}

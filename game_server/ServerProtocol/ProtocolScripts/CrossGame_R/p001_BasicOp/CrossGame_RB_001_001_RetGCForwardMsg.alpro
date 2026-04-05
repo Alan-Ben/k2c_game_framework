@@ -1,0 +1,6 @@
+﻿JavaPackage CrossGame_RB.p001_BasicOp;
+
+ALProtocol CrossGame_RB_001_001_RetGCForwardMsg <1, 1>
+{
+	bytebuffer msg[转发协议];
+}

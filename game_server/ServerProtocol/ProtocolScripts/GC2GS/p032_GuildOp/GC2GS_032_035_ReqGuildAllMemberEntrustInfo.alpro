@@ -1,0 +1,6 @@
+﻿JavaPackage GC2GS.p032_GuildOp;
+csharpspace GC2GS.p032_GuildOp;
+
+ALProtocol GC2GS_032_035_ReqGuildAllMemberEntrustInfo[请求联盟所有成员的委托信息] <32, 35>
+{
+}

@@ -1,0 +1,7 @@
+﻿﻿JavaPackage GS2GC.p007_CommOp;
+csharpspace GS2GC.p007_CommOp;
+
+ALProtocol GS2GC_007_057_OnCrossServerGroupInfoChg <7, 57>
+{
+	Common.CommonObj.Common_CrossServerGroupInfo groupInfo;
+}

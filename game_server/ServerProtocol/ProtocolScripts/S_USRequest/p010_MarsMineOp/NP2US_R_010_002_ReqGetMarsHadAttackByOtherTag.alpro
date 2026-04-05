@@ -1,0 +1,10 @@
+JavaPackage NP2US_R.p010_MarsMineOp;
+
+/**********************************************************
+ * 请求查询火星矿是否被其他公会攻击过
+ **********************************************************/
+ALProtocol NP2US_R_010_002_ReqGetMarsHadAttackByOtherTag <10, 2>
+{
+	long instanceId[矿实例ID];
+	long guildId[公会ID];
+}

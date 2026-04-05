@@ -1,0 +1,8 @@
+JavaPackage NP2US_RB.p005_WebPayOp;
+
+import Common.ServerObj.alpro;
+
+ALProtocol NP2US_RB_005_001_RetGetWebPayGoodsList[返回网页支付商品列表] <5, 1>
+{
+	Common.ServerObj.ServerObj_WebPayGoodsList goodsList[商品列表];
+}

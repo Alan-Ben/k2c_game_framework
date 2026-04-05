@@ -1,0 +1,159 @@
+﻿import Enum.NPPlayerPro.alpro;
+import Common.NPInclude.alpro;
+import Common.PlayerShowObj.alpro;
+
+JavaPackage Common.NpPlayerInfoObj;
+csharpspace Common.NpPlayerInfoObj;
+
+/**********************************************************
+ *玩家通用展示信息
+ **********************************************************/
+ALProtocol PlayerInfo_CommonShow[玩家通用展示信息]
+{
+	long cid[玩家id];
+	Common.NPCommonObj.PlayerInfo_IconShow iconShow[小头像组合信息];
+	Common.CommonObj.Common_LongList attrList[属性列表];
+	long cuteActorId[Q版形象id];
+	long beLikeCount[被点赞次数];
+	long exp[经验值];
+	long vipExp[vip经验];
+	long maxPower[历史最大战力];
+}
+
+
+/**********************************************************
+ *玩家皮肤信息
+ **********************************************************/
+ALProtocol PlayerInfo_Skin[玩家皮肤]
+{
+	long skinId[皮肤ID];
+	int lvl[皮肤等级];
+}
+
+/**********************************************************
+ *玩家称号信息
+ **********************************************************/
+ALProtocol PlayerInfo_Title[普通称号]
+{
+	long id[称号唯一Id];
+	int expireTimeTagS[超时时间标记，单位秒。0表示永久];
+	bool viewed[是否查看过];
+	int lastGainTs[最近一次获得时间];
+	int gainCount[获得次数];
+}
+
+ALProtocol PlayerInfo_ComboTitle[组合称号]
+{
+	long preId[称号前缀];
+	long sfxId[称号后缀];
+	long bgId[称号底色];
+}
+
+ALProtocol PlayerInfo_ComboTitlePre[组合称号-称号前缀]
+{
+	long preId[称号前缀];
+	bool viewed[是否查看过];
+}
+
+ALProtocol PlayerInfo_ComboTitleSfx[组合称号-称号后缀]
+{
+	long sfxId[称号后缀];
+	bool viewed[是否查看过];
+}
+
+ALProtocol PlayerInfo_ComboTitleBg[组合称号-称号底色]
+{
+	long bgId[称号底色];
+	bool viewed[是否查看过];
+}
+/**********************************************************
+ *玩家头像信息
+ **********************************************************/
+ALProtocol PlayerInfo_Icon
+{
+	long id[头像唯一Id];
+	int expireTimeTagS[超时时间标记，单位秒。0表示永久];
+	bool viewed[是否查看过];
+}
+
+/**********************************************************
+ *玩家头像框信息
+ **********************************************************/
+ALProtocol PlayerInfo_IconBgk
+{
+	long id[头像框唯一Id];
+	int expireTimeTagS[超时时间标记，单位秒。0表示永久];
+	bool viewed[是否查看过];
+}
+
+/**********************************************************
+ *玩家气泡框信息
+ **********************************************************/
+ALProtocol PlayerInfo_Bubble
+{
+	long id[气泡框唯一Id];
+	int expireTimeTagS[超时时间标记，单位秒。0表示永久];
+	bool viewed[是否查看过];
+}
+
+/**********************************************************
+ *玩家聊天表情包信息
+ **********************************************************/
+ALProtocol PlayerInfo_ChatEmoteGroup
+{
+	long id[表情包唯一id];
+	int expireTimeTagS[超时时间标记，单位秒。0表示永久];
+	bool viewed[是否查看过];
+}
+
+ALProtocol PlayerInfo_CuteActor[玩家Q版形象信息]
+{
+	long id[Q版形象唯一id];
+	int expireTimeTagS[超时时间标记，单位秒。0表示永久];
+	bool viewed[是否查看过];
+}
+
+/**********************************************************
+ *玩家房间皮肤信息
+ **********************************************************/
+ALProtocol PlayerInfo_RoomSkin[玩家房间皮肤]
+{
+	long id[房间皮肤唯一id];
+	int expireTimeTagS[超时时间标记，单位秒。0表示永久];
+	bool viewed[是否查看过];
+}
+
+/**********************************************************
+ *玩家记录信息
+ **********************************************************/
+ALProtocol PlayerInfo_Record
+{
+	Enum.NPPlayerPro.ENPPlayerRecordParam type;
+	long count;
+}
+
+/**********************************************************
+ *玩家登录过的服务及服务器上的角色信息
+ **********************************************************/
+  ALProtocol NP_SYS_PlayerJoinedUSInfo[玩家登录过的服务及服务器上的角色展示信息]
+ {
+    Common.NPCommonObj.NP_SYS_ServerItem serverItem[服务器信息];
+    long cid[玩家cid];
+    string playerName[玩家名];
+    Common.NPCommonObj.PlayerInfo_IconShow iconShowInfo[头像展示信息];
+    long lastLoginTimeMs[最后登录时间];
+    bool isFreeze[是否被封禁];
+    long freezeTimeMs[封禁结束时间];
+ }
+
+ALProtocol CommPlayerInfo_FlourishCategory[玩家繁荣度信息]
+{
+	Enum.NPPlayerPro.ENPFlourishCategory category;
+	long value;
+}
+
+ALProtocol PlayerInfo_Report[玩家举报数据]
+{
+	long targetCid[目标玩家CID];
+	string contenxt[举报内容];
+}

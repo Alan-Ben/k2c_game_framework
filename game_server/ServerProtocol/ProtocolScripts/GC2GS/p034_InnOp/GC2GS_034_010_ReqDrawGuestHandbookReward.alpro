@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p034_InnOp;
+csharpspace GC2GS.p034_InnOp;
+
+ALProtocol GC2GS_034_010_ReqDrawGuestHandbookReward[领取旅店客人图鉴奖励] <34, 10>
+{
+	long guestId[特殊客人ID];
+}

@@ -1,0 +1,10 @@
+﻿JavaPackage GC2GS.p004_PlayerOp;
+csharpspace GC2GS.p004_PlayerOp;
+
+/**********************************************************
+ * 延迟消息确认
+ **********************************************************/
+ALProtocol GC2GS_004_023_ReqGainChatBox <4, 23>
+{
+    long instanceId[宝箱实例ID];
+}

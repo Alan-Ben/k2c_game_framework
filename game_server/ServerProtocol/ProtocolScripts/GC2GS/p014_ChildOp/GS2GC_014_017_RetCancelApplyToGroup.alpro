@@ -1,0 +1,5 @@
+JavaPackage GS2GC.p014_ChildOp;
+csharpspace GS2GC.p014_ChildOp;
+ALProtocol GS2GC_014_017_RetCancelApplyToGroup [联姻请求-取消联姻池申请] <14, 17>
+{
+}

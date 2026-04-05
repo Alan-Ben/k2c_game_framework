@@ -1,0 +1,7 @@
+JavaPackage GS2GC.p010_BuildingOp;
+csharpspace GS2GC.p010_BuildingOp;
+import Common.BuildingObj.alpro;
+ALProtocol GS2GC_010_052_OnBusinessChg [推送经营建筑数据变更] <10, 52>
+{
+    Common.BuildingObj.Building_Business business[经营建筑建筑数据];
+}

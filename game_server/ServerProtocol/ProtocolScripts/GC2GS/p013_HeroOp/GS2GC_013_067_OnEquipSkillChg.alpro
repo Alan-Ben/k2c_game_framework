@@ -1,0 +1,8 @@
+﻿﻿JavaPackage GS2GC.p013_HeroOp;
+csharpspace GS2GC.p013_HeroOp;
+
+ALProtocol GS2GC_013_067_OnEquipSkillChg[藏品技能信息变更]<13, 67>
+{
+    long dbId[藏品数据id];
+    Common.HeroObj.Equip_SkillInfo skillInfo;
+}

@@ -1,0 +1,12 @@
+JavaPackage GC2GS.p030_ShopOp;
+csharpspace GC2GS.p030_ShopOp;
+
+/**********************************************************
+ * 请求购买商店商品
+ **********************************************************/
+ALProtocol GC2GS_030_001_ReqBuyShopItem <30, 1>
+{
+	long shopRefId[商店配置id];
+	long instanceId[商品id];
+	long count[数量];
+}

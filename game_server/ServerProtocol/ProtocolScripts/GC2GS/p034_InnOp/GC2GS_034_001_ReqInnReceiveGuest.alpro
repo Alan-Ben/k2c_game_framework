@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p034_InnOp;
+csharpspace GC2GS.p034_InnOp;
+
+ALProtocol GC2GS_034_001_ReqInnReceiveGuest[旅店接待客人] <34, 1>
+{
+	bool isAKey[是否一键];
+}

@@ -1,0 +1,17 @@
+﻿JavaPackage ALLRPC.US.Guild;
+
+import Enum.GuildEnum.alpro;
+import Common.GuildObj.alpro;
+
+ALProtocol GuildRefreshPlayerBox_Req
+{
+	long cid;
+	long guildId;
+	Enum.GuildEnum.EGuildBoxType boxType;
+	int needCount;
+}
+
+ALProtocol GuildRefreshPlayerBox_Return
+{
+	Common.GuildObj.Guild_BoxInfo[] boxList;
+}

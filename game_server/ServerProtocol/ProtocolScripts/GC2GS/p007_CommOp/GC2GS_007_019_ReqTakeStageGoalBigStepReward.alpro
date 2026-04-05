@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p007_CommOp;
+csharpspace GC2GS.p007_CommOp;
+
+ALProtocol GC2GS_007_019_ReqTakeStageGoalBigStepReward[领取阶段目标大阶段奖励] <7, 19>
+{
+	long bigStepId;
+}

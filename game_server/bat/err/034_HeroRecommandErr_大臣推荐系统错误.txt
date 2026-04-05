@@ -1,0 +1,6 @@
+java_path= ../Common/src
+java_package=NPCommon.ErrMain
+id	name	desc
+1	HERO_RECOMMEND_NOT_FIND	大臣推荐事件不存在
+2	HERO_RECOMMEND_NOT_IN_POOL	推荐大臣不在池子中
+3	HERO_RECOMMEND_COND_ERROR	推荐大臣获得条件不满足

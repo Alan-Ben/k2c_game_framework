@@ -1,0 +1,6 @@
+JavaPackage Hotfix.V02.GS2GC.p202_NumMergeOp;
+csharpspace Hotfix.GS2GC.p202_NumMergeOp;
+
+ALProtocol GS2GC_202_003_RetNumMergeMove [返回数字合并-移动棋子操作] <202, 3>
+{
+}

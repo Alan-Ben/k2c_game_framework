@@ -1,0 +1,6 @@
+﻿JavaPackage GC2GS.p039_MarsBuildingOp;
+csharpspace GC2GS.p039_MarsBuildingOp;
+
+ALProtocol GC2GS_039_009_ReqCollectHomeOutput[火星建筑-收集主基地产出] <39, 9>
+{
+}

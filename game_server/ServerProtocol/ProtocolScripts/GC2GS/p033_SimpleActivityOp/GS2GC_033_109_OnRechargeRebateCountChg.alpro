@@ -1,0 +1,9 @@
+JavaPackage GS2GC.p033_SimpleActivityOp;
+csharpspace GS2GC.p033_SimpleActivityOp;
+
+ALProtocol GS2GC_033_109_OnRechargeRebateCountChg <33, 109>
+{
+	long activityInstanceId[活动实例ID];
+	long groupId[返利组ID];
+	long count[当前计数 VIP经验或充值天数];
+}

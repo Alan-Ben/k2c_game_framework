@@ -1,0 +1,10 @@
+JavaPackage GS2GC.p004_PlayerOp;
+csharpspace GS2GC.p004_PlayerOp;
+
+/**********************************************************
+ * 推送玩家名字更新
+ **********************************************************/
+ALProtocol GS2GC_004_055_OnPlayerNameUpdated <4, 55>
+{
+   string newName;
+}

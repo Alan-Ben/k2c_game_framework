@@ -1,0 +1,11 @@
+java_path= ../Common/src
+java_package=NPCommon.ErrMain
+
+id	name	desc
+1	BAG_ITEM_ERROR	背包物品错误
+2	BAG_ITEM_NOT_EXISTS_ERROR	背包物品不存在
+3	BAG_ITEM_CAN_NOT_SELL_ERROR	背包物品不能出售
+4	BAG_ITEM_CAN_NOT_USE_ERROR	背包物品不能使用
+5	BAG_ITEM_USE_CONDITION_ERROR	背包物品使用条件错误
+6	BAG_ITEM_USE_OPTION_ERROR	背包物品使用下多选奖励物品错误
+7	BAG_ITEM_A_KEY_CONVERT_CHECK_FAIL	背包道具一键转换校验失败

@@ -1,0 +1,9 @@
+JavaPackage GS2GC.p002_InitOp;
+csharpspace GS2GC.p002_InitOp;
+
+﻿﻿﻿﻿import Common.NPCommonObj.alpro;
+
+ALProtocol GS2GC_002_089_RetForbidChatInit <2, 89>
+{
+	Common.NPCommonObj.NPCommon_ForbidChatInfo[] forbidChatList;
+}

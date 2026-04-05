@@ -1,0 +1,7 @@
+JavaPackage GC2GS.p033_SimpleActivityOp;
+csharpspace GC2GS.p033_SimpleActivityOp;
+
+ALProtocol GC2GS_033_007_ReqRechargeRebateInfo[请求充值返利信息] <33, 7>
+{
+	long activityInstanceId[活动实例ID];
+}

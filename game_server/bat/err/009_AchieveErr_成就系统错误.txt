@@ -1,0 +1,9 @@
+java_path= ../Common/src
+java_package=NPCommon.ErrMain
+id	name	desc
+1	ACHIEVE_POINT_NOT_EXIST	成就点类型不存在
+2	ACHIEVE_POINT_STEP_REWARD_HAD_DRAW	成就点阶段奖励已领取
+3	ACHIEVE_POINT_NOT_ENOUGH	成就点点数不够
+4	ACHIEVE_NOT_ENOUGH	成就不存在
+5	ACHIEVE_STEP_REWARD_HAD_DRAW	成就阶段奖励已领取
+6	ACHIEVE_STEP_NOT_SATISFIED	成就阶段分数不满足

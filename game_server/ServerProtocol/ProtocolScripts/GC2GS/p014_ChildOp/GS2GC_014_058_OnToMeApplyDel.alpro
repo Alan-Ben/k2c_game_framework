@@ -1,0 +1,6 @@
+JavaPackage GS2GC.p014_ChildOp;
+csharpspace GS2GC.p014_ChildOp;
+ALProtocol GS2GC_014_058_OnToMeApplyDel [对自身指定请求移除推送] <14, 58>
+{
+    long applyAdultId[请求子嗣实例ID];
+}

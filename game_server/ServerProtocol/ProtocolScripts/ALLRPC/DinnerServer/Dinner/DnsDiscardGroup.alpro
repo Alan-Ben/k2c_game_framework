@@ -1,0 +1,15 @@
+﻿JavaPackage ALLRPC.DinnerServer.Dinner;
+
+ALProtocol DnsDiscardGroup_Req
+{
+	long groupId[分组ID];
+	int usId[US服务器ID];
+}
+
+ALProtocol DnsDiscardGroup_Return
+{
+}
+
+//[RPC]解散跨服宴会池指定分组
+//[CLASS_PACKAGE] : AllRpcData.Dinner_Service.Dinner
+//[DEALER_PACKAGE] : DinnerServer.RPCDispatcher.Dinner

@@ -1,0 +1,174 @@
+﻿/// <summary>
+/// 界面枚举类型
+/// </summary>
+public enum ESysSceneType
+{
+    NONE, //0 ==== 
+    BAG, //1 ==== 背包界面
+    FRIEND, //2 ==== 好友界面
+    MAIL, //3 ==== 邮件界面
+    SETTING, //4 ==== 设置界面
+    PLAYER, //5 ==== 玩家详情界面
+    QUEST, //6 ==== 任务界面 C_UI_TO_SYS_SCE:QUEST:(MAIN_QUEST或者FUNC_PREVIEW，没写默认MAIN_QUEST)
+    CHAT, //7 ==== 聊天界面
+    EMPTY, //8 ==== 空视图
+    RANK_FIXED, //9 ==== 常驻排行榜
+    CITY_MAIN, //10 ==== 主城界面 C_UI_TO_SYS_SCE:CITY_MAIN:buildingId/anecdoteId/ECityMainJumpType:duration:bool(是否要展示引导手指，不填默认 false )
+    MINI_GAME, //11 ==== 小游戏界面:小游戏主id
+    DIALOGUE, //12 ==== 对话界面:对话段id
+    SHOP, //13 ==== 商店（:shop配置id）
+    CUSTOM_MAIN_UI, //14 ==== 自定义主窗口，两个参数（:是否展示通用返回按钮:资源id）
+    CUSTOM_ADD_UI, //15 ==== 自定义附加窗口，两个参数（:是否展示模糊背景:资源id）
+    DIALOGUE_NOTICE, //16 ==== 对话Notic界面:对话段id
+    CREATE_PLAYER, //17 ==== 创角界面
+    CHAPTER_MAIN, //18 ==== 关卡主界面
+    FUNC_UNLOCK, //19 ==== 解锁
+    RULE, //20 ==== 规则弹窗 新增跳转窗口枚举：C_UI_TO_SYS_SCE:RULE:res_path_id:ruleindex
+    RULE_LIST, //21 ==== 规则列表弹窗 C_UI_TO_SYS_SCE:RULE_LIST
+    DAILY_CHECK, //22 ==== 签到类型
+    CONSORT_LIST, //23 ==== 情人列表界面 C_UI_TO_SYS_SCE:CONSORT_LIST
+    CONSORT_DETAIL, //24 ==== 情人详情界面 ： C_UI_TO_SYS_SCE:CONSORT_DETAIL:consortId
+    CONSORT_INTIMACY_PROGRESS, //25 ==== 亲密历程界面 : C_UI_TO_SYS_SCE:CONSORT_INTIMACY_PROGRESS:consortId
+    CONSORT_INTIMACY_PROGRESS_SKILL, //26 ==== 亲密历程势力技能弹窗 : C_UI_TO_SYS_SCE:CONSORT_INTIMACY_PROGRESS_SKILL:experienceId
+    CONSORT_INTIMACY_PROGRESS_STORY, //27 ==== 亲密历程剧情回忆弹窗 : C_UI_TO_SYS_SCE:CONSORT_INTIMACY_PROGRESS_STORY:experienceId
+    CONSORT_POWER_RELATIONS, //28 ==== 势力关系弹窗：C_UI_TO_SYS_SCE:CONSORT_POWER_RELATIONS:consortId
+    CONSORT_ENTER, //29 ==== 妃子入口界面：C_UI_TO_SYS_SCE:CONSORT_ENTER
+    CHILD_MAIN, //30 ==== 子嗣主界面
+    HERO, //31 ==== 骑士
+    COLLEGE, //32 ==== 大学
+    ADULT, //33 ==== 成年子嗣
+    DINNER_LIST, //34 ==== 宴会列表：C_UI_TO_SYS_SCE:DINNER_LIST
+    HERO_BATTLE_ENTRY, //35 ==== 骑士战斗入口
+    SHOP_NO_TAB, //36 ==== 没tab的商店界面  C_UI_TO_SYS_SCE:SHOP_NO_TAB:shop_ref_id
+    ANECDOTE, //37 ==== 政务
+    PLOT_DIALOGUE, //38 ==== 剧情对话界面:对话段id:是否是主界面
+    TRAVEL, //39 ==== 游历
+    LEVY_SILVER, //40 ==== 征收银币 C_UI_TO_SYS_SCE:LEVY_SILVER
+    LEVY_FOOD, //41 ==== 征收粮食 C_UI_TO_SYS_SCE:LEVY_FOOD
+    LEVY_SOLDIER, //42 ==== 征收士兵 C_UI_TO_SYS_SCE:LEVY_SOLDIER
+    SIMPLE_COMIC, //43 ==== 简单漫画 C_UI_TO_SYS_SCE:SIMPLE_COMIC:comic_id
+    MARKET, //44 ==== 集市
+    HERO_RECOMMEND, //45 ==== 骑士推荐 C_UI_TO_SYS_SCE:HERO_RECOMMEND(:queue_id)
+    DAILY, //46 ==== 日常界面 C_UI_TO_SYS_SCE:DAILY:
+    DAILY_QUEST, //47 ==== 每日任务界面 C_UI_TO_SYS_SCE:DAILY_QUEST
+    DAILY_CHECK_TAB, //48 ==== 签到页签界面 C_UI_TO_SYS_SCE:DAILY_CHECK_TAB
+    CHAT_SHARE_HERO, //49 ==== 骑士分享弹窗 C_UI_TO_SYS_SCE:CHAT_SHARE_HERO
+    CHAT_SHARE_CONSORT, //50 ==== 妃子分享 C_UI_TO_SYS_SCE:CHAT_SHARE_CONSORT
+    CHAT_SHARE_CHILD, //51 ==== 子嗣分享弹窗 C_UI_TO_SYS_SCE:CHAT_SHARE_CHILD
+    CHAPTER_STORY, //52 ==== 章节剧情故事书界面 C_UI_TO_SYS_SCE:CHAPTER_STORY
+    TRAVEL_MAP, //53 ==== 游历地图 C_UI_TO_SYS_SCE:TRAVEL_MAP
+    DINNER_ENTER, //54 ==== 宴会功能入口：C_UI_TO_SYS_SCE:DINNER_ENTER
+    DINNER_MAIN, //55 ==== 宴会主界面：C_UI_TO_SYS_SCE:DINNER_MAIN
+    CHILD_LIST, //56 ==== 子嗣培养列表: C_UI_TO_SYS_SCE:CHILD_LIST
+    WEEK_CARD, //57 ==== 周卡界面: C_UI_TO_SYS_SCE:WEEK_CARD
+    WEEK_CARD_ASSIGN, //58 ==== 周卡委派界面: C_UI_TO_SYS_SCE:WEEK_CARD_ASSIGN
+    ADD_FRIEND, //59 ==== 好友申请界面: C_UI_TO_SYS_SCE:ADD_FRIEND
+    WEEK_CARD_NOTICE, //60 ==== 周卡NOTICE: C_UI_TO_SYS_SCE:WEEK_CARD_NOTICE
+    ADD_PACK, //61 ==== 增量包界面: C_UI_TO_SYS_SCE:ADD_PACK
+    ANNOUNCEMENT, //62 ==== 运营公告界面: C_UI_TO_SYS_SCE:ANNOUNCEMENT
+    QUESTIONNAIRE, //63 ==== 问卷调查界面: C_UI_TO_SYS_SCE:QUESTIONNAIRE
+    SHOW_UI_VIDEO, //64 ==== UI视频播放界面: C_UI_TO_SYS_SCE:SHOW_UI_VIDEO:ui_path_id
+    PLAYER_RENAME, //65 ==== 玩家取名界面: C_UI_TO_SYS_SCE:PLAYER_RENAME
+    SHOW_INTRO_STORY, //66 ==== 开篇剧情界面: C_UI_TO_SYS_SCE:SHOW_INTRO_STORY
+    GUILD, //67 ==== 联盟界面: C_UI_TO_SYS_SCE:GUILD
+    EQUIP, //68 ==== 藏品界面: C_UI_TO_SYS_SCE:EQUIP
+    SUMMON_MAIN, //69 ==== 召唤主页面: C_UI_TO_SYS_SCE:SUMMON_MAIN
+    RECRUIT_MAIN, //70 ==== 招募主页面: C_UI_TO_SYS_SCE:RECRUIT_MAIN
+    ARENA, //71 ==== 竞技场界面: C_UI_TO_SYS_SCE:ARENA
+    STAGE_GOAL, //72 ==== 阶段目标界面: C_UI_TO_SYS_SCE:STAGE_GOAL(:OVERVIEW 或者 TASK 或者 PEAK，不填默认按ui上默认页签)
+    BUSINESS_BUILDING, //73 ==== 经营建筑界面: C_UI_TO_SYS_SCE:BUSINESS_BUILDING:buildingId
+    SPACE_STATION, //74 ==== 空间站界面: C_UI_TO_SYS_SCE:SPACE_STATION
+    FARMING_BUILDING_UPGRADE, //75 ==== 农场升级界面: C_UI_TO_SYS_SCE:FARMING_BUILDING_UPGRADE:buildingId
+    COMMON_TARGET_REWARD, //76 ==== 通用目标奖励界面: C_UI_TO_SYS_SCE:COMMON_TARGET_REWARD:uesId
+    CONSORT_LOCK_DETAIL, //77 ==== 妃子未解锁详情界面: C_UI_TO_SYS_SCE:CONSORT_LOCK_DETAIL:consortId
+    RANK_RUSH, //78 ==== 限时冲榜界面: C_UI_TO_SYS_SCE:RANK_RUSH
+    PLAYER_HERO_UNLOCK, //79 ==== 玩家信息界面的大臣解锁列表 C_UI_TO_SYS_SCE:PLAYER_HERO_UNLOCK
+    TOWER_MAIN, //80 ==== 爬塔主界面: C_UI_TO_SYS_SCE:TOWER_MAIN
+    BUILDING_BUILD, //81 ==== 建筑建造界面: C_UI_TO_SYS_SCE:BUILDING_BUILD:buildingId
+    TOWER_CHALLENGE_INFO, //82 ==== 迷宫可挑战界面: C_UI_TO_SYS_SCE:TOWER_CHALLENGE_INFO
+    MIDDAY_DUNGEON, //83 ==== 午间副本界面: C_UI_TO_SYS_SCE:MIDDAY_DUNGEON
+    EVENING_DUNGEON_GAME, //84 ==== 晚间活动游戏界面: C_UI_TO_SYS_SCE:EVENING_DUNGEON_GAME
+    EVENING_DUNGEON_ENTRANCE, //85 ==== 晚间活动入口界面: C_UI_TO_SYS_SCE:EVENING_DUNGEON_ENTRANCE
+    GUILD_MEMBER, //86 ==== 联盟成员界面: C_UI_TO_SYS_SCE:GUILD_MEMBER
+    GUILD_ENTRUST, //87 ==== 联盟委托（商业论坛）界面: C_UI_TO_SYS_SCE:GUILD_ENTRUST
+    GUILD_DISPATCH, //88 ==== 联盟派遣（办公室）界面: C_UI_TO_SYS_SCE:GUILD_DISPATCH
+    STEP_REWARD, //89 ==== 阶段奖励界面: C_UI_TO_SYS_SCE:STEP_REWARD
+    SHOP_MAIN, //90 ==== 商店（:shop_main配置id）
+    SHOP_MAIN_NO_TAB, //91 ==== 没tab的商店界面 C_UI_TO_SYS_SCE:SHOP_MAIN_NO_TAB:shop_main_ref_id
+    SEVEN_DAY_LOGIN, //92 ==== 七天登录界面: C_UI_TO_SYS_SCE:SEVEN_DAY_LOGIN
+    ACTIVITY_EXCHANGE_SHOP, //93 ==== 通用活动兑换商店界面: C_UI_TO_SYS_SCE:ACTIVITY_EXCHANGE_SHOP:activityId
+    ACTIVITY_GIFT_PACK, //94 ==== 通用活动礼包界面: C_UI_TO_SYS_SCE:ACTIVITY_GIFT_PACK:activityId
+    ACTIVITY_RANK, //95 ==== 通用活动排行榜界面: C_UI_TO_SYS_SCE:ACTIVITY_RANK:activityId:ERankRushDetailTabType(:是否需要展示礼包按钮)
+    EARNING_GOAL_MAIN, //96 ==== 收益目标主界面: C_UI_TO_SYS_SCE:EARNING_GOAL_MAIN
+    EARNING_GOAL_GLOBAL_REWARD, //97 ==== 收益目标奖励界面: C_UI_TO_SYS_SCE:EARNING_GOAL_GLOBAL_REWARD
+    EARNING_GOAL_SELF_REWARD, //98 ==== 收益目标奖励详情界面: C_UI_TO_SYS_SCE:EARNING_GOAL_SELF_REWARD
+    SEVEN_DAY_GOALS, //99 ==== 七天目标界面: C_UI_TO_SYS_SCE:SEVEN_DAY_GOALS
+    RANK_FIXED_DETAIL_NORMAL, //100 ==== 常驻排行榜界面: C_UI_TO_SYS_SCE:RANK_FIXED_DETAIL_NORMAL:rank_fixed_id(:ui_path_id)
+    RANK_FIXED_DETAIL_ADDITION, //101 ==== 常驻排行榜附加界面: C_UI_TO_SYS_SCE:RANK_FIXED_DETAIL_ADDITION:rank_fixed_id(:ui_path_id)
+    OPEN_SET_PREFAB_WND, //102 ==== 打开设置预制形象界面
+    FUNC_PREVIEW, //103 ==== 打开系统解锁预告界面：C_UI_TO_SYS_SCE:FUNC_PREVIEW
+    ACTIVITY_CENTER, //104 ==== 打开活动中心界面：C_UI_TO_SYS_SCE:ACTIVITY_CENTER(:activityCenterId)
+    COUNTDOWN_EVENT, //105 ==== 打开倒计时事件界面：C_UI_TO_SYS_SCE:COUNTDOWN_EVENT
+    DUNGEON_ENTRANCE, //106 ==== 打开副本入口界面：C_UI_TO_SYS_SCE:DUNGEON_ENTRANCE
+    CONSORT_CHAT_MAIN, //107 ==== 妃子聊天主界面: C_UI_TO_SYS_SCE:CONSORT_CHAT_MAIN
+    CHAPTER_STAGE, //108 ==== 关卡 - 节窗口 C_UI_TO_SYS_SCE:CHAPTER_STAGE:
+    INN_MAIN, //109 ==== 旅店主界面：C_UI_TO_SYS_SCE:INN_MAIN
+    STAGE_GOAL_OVERVIEW, //110 ==== 阶段目标大阶段预览界面：C_UI_TO_SYS_SCE:STAGE_GOAL_OVERVIEW
+    HIRE_MAIN, //111 ==== 招聘体验界面：C_UI_TO_SYS_SCE:HIRE_MAIN:buildingId
+    TOWER_RESEARCH, //112 ==== 迷宫研究界面: C_UI_TO_SYS_SCE:TOWER_RESEARCH
+    TREASURE_HUNT_MAIN, // 113 ==== 太空寻宝主界面：C_UI_TO_SYS_SCE:TREASURE_HUNT_MAIN
+    TREASURE_HUNT_LAB, // 114 ==== 太空寻宝实验室界面：C_UI_TO_SYS_SCE:TREASURE_HUNT_LAB(:labId)
+    TREASURE_HUNT_GAME_MAIN, // 115 ==== 太空寻宝游戏主界面：C_UI_TO_SYS_SCE:TREASURE_HUNT_GAME_MAIN(:areaId)
+    TREASURE_HUNT_SELECT_AREA, // 116 ==== 太空寻宝选择区域界面：C_UI_TO_SYS_SCE:TREASURE_HUNT_SELECT_AREA
+    TREASURE_HUNT_COLLECT_ACHIEVE, // 117 ==== 太空寻宝收集成就界面：C_UI_TO_SYS_SCE:TREASURE_HUNT_COLLECT_ACHIEVE
+    TREASURE_HUNT_COMPOSITE_CATALOG, // 118 ==== 太空寻宝组合图鉴界面：C_UI_TO_SYS_SCE:TREASURE_HUNT_COMPOSITE_CATALOG(:filterType)
+    TREASURE_HUNT_ORE_CATALOG, // 119 ==== 太空寻宝矿石图鉴界面：C_UI_TO_SYS_SCE:TREASURE_HUNT_ORE_CATALOG(:tabRefId:filterType)
+    TREASURE_HUNT_TREASURE_CATALOG, // 120 ==== 太空寻宝奇物图鉴界面：C_UI_TO_SYS_SCE:TREASURE_HUNT_TREASURE_CATALOG(:tabRefId:filterType)
+    GRAVE_MAIN, // 121 ==== 杰出者大厅主界面: C_UI_TO_SYS_SCE:GRAVE_MAIN
+    CONSORT_CG_MAIN, // 122 ==== 妃子CG主界面: C_UI_TO_SYS_SCE:CONSORT_CG_MAIN(:cgType)
+    PLAYER_LEVEL_PREVIEW, // 123 ==== 玩家等级预览界面: C_UI_TO_SYS_SCE:PLAYER_LEVEL_PREVIEW
+    CASH_GIFT_PACK, //124 ==== 现金礼包界面：C_UI_TO_SYS_SCE:CASH_GIFT_PACK(:ECashGiftPackMainTabType:ECashGiftPackSpecialDealType)
+    GUILD_DUNGEON_MAIN, // 125 ==== 联盟副本主界面: C_UI_TO_SYS_SCE:GUILD_DUNGEON_MAIN
+    MARS_MISSION_PREVIEW, // 126 ==== 火星任务预览界面: C_UI_TO_SYS_SCE:MARS_MISSION_PREVIEW
+    MARS, // 127 ==== 火星界面: C_UI_TO_SYS_SCE:MARS（:buildId:time:是否要手指）
+    MARS_INTELLIGENT_CONTROL, // 128 ==== 火星智能控制界面: C_UI_TO_SYS_SCE:MARS_INTELLIGENT_CONTROL
+    MARS_INTELLIGENT_CONTROL_DETAIL, // 129 ==== 火星智能控制详情界面: C_UI_TO_SYS_SCE:MARS_INTELLIGENT_CONTROL_DETAIL:intelligentControlId
+    MARS_POPULAR_WILL, // 130 ==== 火星民意主界面: C_UI_TO_SYS_SCE:MARS_POPULAR_WILL(:LETTER 或 HELP)
+    HERO_DETAIL, // 131 ==== 已解锁英雄详情界面: C_UI_TO_SYS_SCE:HERO_DETAIL:heroId
+    HERO_LOCK_DETAIL, // 132 ==== 未解锁详情界面: C_UI_TO_SYS_SCE:HERO_LOCK_DETAIL:heroId
+    GEM_GIFT_PACK, // 133 ==== 钻石礼包界面: C_UI_TO_SYS_SCE:GEM_GIFT_PACK
+    SCHOOL, // 134 ==== 学院主界面: C_UI_TO_SYS_SCE:SCHOOL
+    EQUIP_RECYCLE, // 135 ==== 藏品分解界面: C_UI_TO_SYS_SCE:EQUIP_RECYCLE
+    CHAPTER_FORWARD, //136 ==== 关卡前进投资界面
+    GUILD_COOPERATE, // 137 ==== 联盟协作界面: C_UI_TO_SYS_SCE:GUILD_COOPERATE
+    INN_STATION, // 138 ==== 旅店设施界面: C_UI_TO_SYS_SCE:INN_STATION:stationId
+    VIP, // 139 ==== VIP界面: C_UI_TO_SYS_SCE:VIP
+    FIRST_RECHARGE, // 140 ==== 首充礼包界面: C_UI_TO_SYS_SCE:FIRST_RECHARGE
+    INN_DISH_UNLOCK, // 141 ==== 旅店菜肴解锁界面: C_UI_TO_SYS_SCE:INN_DISH_UNLOCK:dishId
+    CONSORT_MAIN_ENTER, //142 ==== 情人列表界面 C_UI_TO_SYS_SCE:CONSORT_MAIN_ENTER
+    MARS_TECHNOLOGY_TREE, // 143 ==== 火星科技树界面: C_UI_TO_SYS_SCE:MARS_TECHNOLOGY_TREE(:technologyType/EMarsEnterTreeWndParamType:param)
+    MARS_EXPLORE, // 144 ==== 火星探索界面: C_UI_TO_SYS_SCE:MARS_EXPLORE
+    MARS_BUILDING_UPGRADE, // 145 ==== 火星建筑升级界面: C_UI_TO_SYS_SCE:MARS_BUILDING_UPGRADE:buildingId (备注：这个命令会根据这个建筑的当前状态，打开和升级最相关的界面（比如升级中，建造，升级部件页面））
+    MARS_FIRST_EQUIPMENT_UPGRADE, // 146 ==== 火星建筑部件升级界面: C_UI_TO_SYS_SCE:MARS_FIRST_EQUIPMENT_UPGRADE
+    MARS_RESIDENT_REPLENISH, // 147 ==== 火星居民补充界面: C_UI_TO_SYS_SCE:MARS_RESIDENT_REPLENISH
+    MARS_BUILDING_INFO, // 148 ==== 火星建筑信息界面: C_UI_TO_SYS_SCE:MARS_BUILDING_INFO:buildingId
+    MARS_TECHNOLOGY_DETAIL, // 149 ==== 火星科技详情界面: C_UI_TO_SYS_SCE:MARS_TECHNOLOGY_DETAIL:technologyId
+    MARS_BUILDING_SETTLE, // 150 ==== 火星建筑安置界面: C_UI_TO_SYS_SCE:MARS_BUILDING_SETTLE(:buildingId) (备注：buildingId 可选，若不传则打开人数最少的可派遣建筑)
+    MARS_CASH_GIFT_PACK, // 151 ==== 火星现金礼包界面: C_UI_TO_SYS_SCE:MARS_CASH_GIFT_PACK
+    COMMON_ACHIEVE, // 152 ==== 通用成就界面: C_UI_TO_SYS_SCE:COMMON_ACHIEVE:EAchieveType:UIResId:是否是全屏主界面
+    CHAT_SHARE_CONSORT_CG, //153 ==== 妃子CG分享 C_UI_TO_SYS_SCE:CHAT_SHARE_CONSORT_CG
+    GUILD_MARS_HELP, // 154 ==== 联盟火星帮助界面: C_UI_TO_SYS_SCE:GUILD_MARS_HELP
+    ACTIVITY_STEP_REWARD, //155 ==== 通用活动阶段奖励界面: C_UI_TO_SYS_SCE:ACTIVITY_STEP_REWARD:activityId
+    ACTIVITY_MULTIPLE_RANK, //156 ==== 通用活动多个排行榜界面: C_UI_TO_SYS_SCE:ACTIVITY_MULTIPLE_RANK:activityId:ERankRushDetailTabType(:是否需要展示礼包按钮)
+    MARS_BUILDING, // 157 ==== 火星移动到建筑: C_UI_TO_SYS_SCE:MARS_BUILDING:EMarsBuildingType:EMarsBuildingJumpType:移动时间秒:是否要手指
+    MIDDAY_DUNGEON_BATTLE, //158 ==== 午间副本界面: C_UI_TO_SYS_SCE:MIDDAY_DUNGEON_BATTLE
+    FUND, //159 ==== 基金界面: C_UI_TO_SYS_SCE:FUND(:fundId)
+    RUSH_EXCHANGE, // 160 ==== 限时兑换界面: C_UI_TO_SYS_SCE:RUSH_EXCHANGE
+    IMPROVE_WAY, //161 ==== 提升途径: C_UI_TO_SYS_SCE:IMPROVE_WAY:EImproveTargetType
+    ROOM,// 162 ==== 卧室
+    ROOM_SKIN, // 163 ==== 卧室皮肤界面
+    LOVER_COLLECT, // 164 ==== 情人收集: C_UI_TO_SYS_SCE:LOVER_COLLECT
+    ARENA_CELEBRITY_LIST, //165 ==== 竞技场界面: C_UI_TO_SYS_SCE:ARENA_CELEBRITY_LIST
+    BUILDING_EFFECT, //166 ==== 主城破产表现界面: C_UI_TO_SYS_SCE:BUILDING_EFFECT
+    CHANGE_ENTRANCE_CONSORT, //167 ==== 切换入口妃子界面: C_UI_TO_SYS_SCE:CHANGE_ENTRANCE_CONSORT
+}

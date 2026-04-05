@@ -1,0 +1,10 @@
+JavaPackage GS2GC.p015_ConsortOp;
+csharpspace GS2GC.p015_ConsortOp;
+
+ALProtocol GS2GC_015_076_OnConsortAiChatMomentMsgAdd [家人朋友圈AI对话新增消息] <15, 76>
+{
+    long instanceId[实例id];
+    string msg[消息内容];
+    int errCode[错误码];
+    long consortId[家人ID];
+}

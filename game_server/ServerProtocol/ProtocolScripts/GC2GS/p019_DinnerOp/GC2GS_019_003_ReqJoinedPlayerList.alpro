@@ -1,0 +1,5 @@
+JavaPackage GC2GS.p019_DinnerOp;
+csharpspace GC2GS.p019_DinnerOp;
+ALProtocol GC2GS_019_003_ReqJoinedPlayerList [宴会交互记录] <19, 3>
+{
+}

@@ -1,0 +1,10 @@
+﻿JavaPackage GC2GS.p017_ActivityOp;
+csharpspace GC2GS.p017_ActivityOp;
+
+ALProtocol GC2GS_017_007_ReqActivityRankBaseSubInfoList [请求排行榜子数据列表] <17, 7> 
+{
+    long instanceId[活动实例id];
+    long rankId[排行榜id];
+    long key;
+    bool isCross;
+}

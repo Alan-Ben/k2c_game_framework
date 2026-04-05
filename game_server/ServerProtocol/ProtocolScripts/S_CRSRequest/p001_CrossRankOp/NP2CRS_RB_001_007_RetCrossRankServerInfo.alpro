@@ -1,0 +1,7 @@
+﻿JavaPackage NP2CRS_RB.p001_CrossRankOp;
+
+ALProtocol NP2CRS_RB_001_007_RetCrossRankServerInfo <1, 7>
+{
+    int hadHandleInstanceNum[已经承载实例数量];
+    int handleInstanceLimit[承载实例数量上限];
+}

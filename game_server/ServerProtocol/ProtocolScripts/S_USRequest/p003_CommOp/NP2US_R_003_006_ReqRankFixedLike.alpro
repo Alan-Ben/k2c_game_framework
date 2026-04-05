@@ -1,0 +1,8 @@
+﻿JavaPackage WCGCS2US_R.p003_CommOp;
+
+ALProtocol NP2US_R_003_006_ReqRankFixedLike[常驻排行榜点赞] <3, 6>
+{
+	long rankFixedId;
+	long key;
+	bool isCross[是否跨服];
+}

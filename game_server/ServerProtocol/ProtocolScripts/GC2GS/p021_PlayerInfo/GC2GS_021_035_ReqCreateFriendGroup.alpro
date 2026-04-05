@@ -1,0 +1,8 @@
+﻿JavaPackage GC2GS.p021_PlayerInfo;
+csharpspace GC2GS.p021_PlayerInfo;
+
+ALProtocol GC2GS_021_035_ReqCreateFriendGroup[创建好友分组] <21, 35>
+{
+	string groupName;
+    long[] cidList[好友列表];
+}

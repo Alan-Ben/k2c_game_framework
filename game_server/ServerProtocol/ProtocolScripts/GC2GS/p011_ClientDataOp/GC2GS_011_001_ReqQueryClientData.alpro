@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p011_ClientDataOp;
+csharpspace GC2GS.p011_ClientDataOp;
+
+ALProtocol GC2GS_011_001_ReqQueryClientData[客户端数据] <11, 1>
+{
+	int index;
+}

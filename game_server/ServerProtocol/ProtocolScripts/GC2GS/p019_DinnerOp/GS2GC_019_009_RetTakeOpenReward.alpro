@@ -1,0 +1,7 @@
+JavaPackage GS2GC.p019_DinnerOp;
+csharpspace GS2GC.p019_DinnerOp;
+import Common.DinnerObj.alpro;
+ALProtocol GS2GC_019_009_RetTakeOpenReward [领取开宴结算奖励] <19, 9>
+{
+    Common.DinnerObj.Dinner_ResultInfo result[开宴玩家结算数据];
+}

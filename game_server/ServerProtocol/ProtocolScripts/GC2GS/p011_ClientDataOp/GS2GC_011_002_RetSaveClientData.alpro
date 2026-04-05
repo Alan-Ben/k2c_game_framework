@@ -1,0 +1,6 @@
+﻿JavaPackage GS2GC.p011_ClientDataOp;
+csharpspace GS2GC.p011_ClientDataOp;
+
+ALProtocol GS2GC_011_002_RetSaveClientData <11, 2>
+{
+}

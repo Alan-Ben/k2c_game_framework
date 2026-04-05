@@ -1,0 +1,8 @@
+﻿JavaPackage GC2GS.p041_MarsExploreOp;
+csharpspace GC2GS.p041_MarsExploreOp;
+
+ALProtocol GC2GS_041_007_ReqStartExploreTeamRepair[火星探险-修复队伍] <41, 7>
+{
+	long teamId;
+	long repairNum[修复数量，0-当前全部伤兵];
+}

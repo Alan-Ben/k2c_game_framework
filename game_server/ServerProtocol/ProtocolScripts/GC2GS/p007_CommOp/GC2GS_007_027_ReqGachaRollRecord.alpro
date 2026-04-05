@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p007_CommOp;
+csharpspace GC2GS.p007_CommOp;
+
+ALProtocol GC2GS_007_027_ReqGachaRollRecord[抽卡记录]<18, 27> 
+{
+	long poolId[卡池id];
+}

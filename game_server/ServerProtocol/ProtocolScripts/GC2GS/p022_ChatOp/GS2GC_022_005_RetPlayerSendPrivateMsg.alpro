@@ -1,0 +1,7 @@
+﻿﻿JavaPackage GS2GC.p022_ChatOp;
+csharpspace GS2GC.p022_ChatOp;
+
+ALProtocol GS2GC_022_005_RetPlayerSendPrivateMsg <22, 5>
+{
+	long msgId[私聊消息ID];
+}

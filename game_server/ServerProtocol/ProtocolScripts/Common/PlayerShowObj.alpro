@@ -1,0 +1,10 @@
+﻿JavaPackage Common.PlayerShowObj;
+csharpspace Common.PlayerShowObj;
+
+
+ALProtocol PlayerShow_MakeFace[玩家捏脸展示信息]
+{
+	long colorId;
+	long[] faceList;
+	long[] avatarList;
+}

@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p032_GuildOp;
+csharpspace GC2GS.p032_GuildOp;
+
+ALProtocol GC2GS_032_023_ReqGuildJoinRequestAKeyDeal[一键处理入盟请求] <32, 23>
+{
+	bool isAgree[是否同意];
+}

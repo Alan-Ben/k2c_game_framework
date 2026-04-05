@@ -1,0 +1,9 @@
+JavaPackage GS2GC.p014_ChildOp;
+csharpspace GS2GC.p014_ChildOp;
+import Common.ChildObj.alpro;
+import Common.NPCommonObj.alpro;
+ALProtocol GS2GC_014_004_RetSetChildGraduate [设置子嗣（未成年）毕业] <14, 4>
+{
+    Common.NPCommonObj.NPCommon_ItemInfo[] gainItemList[奖励物品列表];
+    Common.ChildObj.Adult_UnmarriedInfo adult[空];
+}

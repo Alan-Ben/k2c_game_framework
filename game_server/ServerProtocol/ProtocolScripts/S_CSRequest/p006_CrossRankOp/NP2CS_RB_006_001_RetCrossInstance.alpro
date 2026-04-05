@@ -1,0 +1,6 @@
+﻿JavaPackage NP2CS_RB.np_p006_RankOp;
+
+ALProtocol NP2CS_RB_006_001_RetCrossInstance <6, 1>
+{
+	long crossInstanceId;
+}

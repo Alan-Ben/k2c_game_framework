@@ -1,0 +1,16 @@
+﻿﻿JavaPackage NPGS2GC.p001_BasicOp;
+csharpspace NPGS2GC.p001_BasicOp;
+
+/**********************************************************
+ * 在玩家成功进入US的时候，返回的一个推送消息
+ **********************************************************/
+ALProtocol NPGS2GC_001_004_OnUSEnterDone <1, 4>
+{
+	int errCode;
+	
+	long clientInitSerialize[客户端登录操作的序列号];
+	long serverTimeTag[服务器时间戳，用于心跳包处理];
+	int usId;
+	long cid[玩家cid];
+}
+

@@ -1,0 +1,7 @@
+﻿JavaPackage GS2GC.p004_PlayerOp;
+csharpspace GS2GC.p004_PlayerOp;
+
+ALProtocol GS2GC_004_072_OnShieldCidRemove[屏蔽玩家CID移除推送] <4, 72>
+{
+	long cid;
+}

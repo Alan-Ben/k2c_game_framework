@@ -1,0 +1,8 @@
+﻿JavaPackage GC2GS.p017_ActivityOp;
+csharpspace GC2GS.p017_ActivityOp;
+
+ALProtocol GC2GS_017_002_ReqActivityRankSettleInfo [活动排行榜结算信息] <17, 2> 
+{
+    long instanceId[活动实例id];
+    long rankId[排行榜id];
+}

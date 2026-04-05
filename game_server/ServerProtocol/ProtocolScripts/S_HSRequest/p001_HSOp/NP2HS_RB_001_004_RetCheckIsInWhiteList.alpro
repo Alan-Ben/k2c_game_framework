@@ -1,0 +1,6 @@
+JavaPackage NP2HS_RB.p001_HSOp;
+
+ALProtocol NP2HS_RB_001_004_RetCheckIsInWhiteList <1, 4>
+{
+    bool isInWhiteList[是否在白名单中];
+}

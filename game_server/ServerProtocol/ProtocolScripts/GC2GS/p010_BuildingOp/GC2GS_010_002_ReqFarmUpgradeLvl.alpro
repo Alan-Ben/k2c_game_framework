@@ -1,0 +1,6 @@
+JavaPackage GC2GS.p010_BuildingOp;
+csharpspace GC2GS.p010_BuildingOp;
+ALProtocol GC2GS_010_002_ReqFarmUpgradeLvl [请求升级农田建筑等级] <10, 2>
+{
+    long buildingId[建筑ID];
+}

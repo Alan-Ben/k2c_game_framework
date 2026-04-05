@@ -1,0 +1,6 @@
+﻿JavaPackage NP2PS_R.p001_BasicOp;
+
+ALProtocol NP2PS_R_001_011_ReqOnlineServerList <1, 11>
+{
+	int serverType;
+}

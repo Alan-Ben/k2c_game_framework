@@ -1,0 +1,17 @@
+﻿JavaPackage ALLRPC.Common.Chat;
+﻿﻿﻿﻿﻿
+import Common.ServerObj.alpro;
+
+ALProtocol SendChatRoomMsg_Req
+{
+	long roomId;
+	long cid[聊天房间用户];
+	
+	int msgType[消息类型,解释消息内容];
+	bytebuffer gameUser[发送者信息];
+    bytebuffer gameContent[消息内容];
+}
+
+ALProtocol SendChatRoomMsg_Return
+{
+}

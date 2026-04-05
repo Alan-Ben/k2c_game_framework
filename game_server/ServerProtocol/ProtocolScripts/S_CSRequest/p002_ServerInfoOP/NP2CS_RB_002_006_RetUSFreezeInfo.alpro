@@ -1,0 +1,13 @@
+﻿﻿import Common.CommonObj.alpro;
+
+JavaPackage NP2CS_RB.np_p002_serverInfoOp;
+
+/**********************************************************
+ * 查询US负载信息更新
+ **********************************************************/ 
+ALProtocol NP2CS_RB_002_006_RetUSFreezeInfo <2, 6>
+{
+	bool isFreeze[是否被冻结];
+	long freezeTimeMs[冻结结束时间];
+	bool inWhitelist[是否在白名单中];
+}

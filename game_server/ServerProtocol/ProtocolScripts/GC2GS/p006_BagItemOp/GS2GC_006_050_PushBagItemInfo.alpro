@@ -1,0 +1,8 @@
+﻿﻿﻿﻿import Common.NPCommonObj.alpro;
+JavaPackage GS2GC.p006_BagItemOp;
+csharpspace GS2GC.p006_BagItemOp;
+
+ALProtocol GS2GC_006_050_PushBagItemInfo <6, 50>
+{
+	Common.NPCommonObj.NPCommon_BagItemInfo bagItemInfo;
+}

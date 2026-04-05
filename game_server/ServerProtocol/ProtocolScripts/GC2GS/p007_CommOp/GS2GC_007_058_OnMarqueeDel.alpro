@@ -1,0 +1,7 @@
+﻿﻿JavaPackage GS2GC.p007_CommOp;
+csharpspace GS2GC.p007_CommOp;
+
+ALProtocol GS2GC_007_058_OnMarqueeDel <7, 58>
+{
+	long marqueeDbid;
+}

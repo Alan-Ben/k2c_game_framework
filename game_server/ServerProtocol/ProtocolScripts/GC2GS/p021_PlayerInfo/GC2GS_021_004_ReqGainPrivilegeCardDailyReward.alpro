@@ -1,0 +1,9 @@
+﻿JavaPackage GC2GS.p021_PlayerInfo;
+csharpspace GC2GS.p021_PlayerInfo;
+
+import Enum.PrivilegeCardEnum.alpro;
+
+ALProtocol GC2GS_021_004_ReqGainPrivilegeCardDailyReward[领取权益卡每日奖励] <21, 4>
+{
+	Enum.PrivilegeCardEnum.EPrivilegeCardType cardType[权益卡类型];
+}

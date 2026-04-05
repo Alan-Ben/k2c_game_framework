@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p013_HeroOp;
+csharpspace GC2GS.p013_HeroOp;
+
+ALProtocol GC2GS_013_011_ReqBuildingRemoveHero[建筑收起大臣]<13, 11> 
+{
+    long heroId[大臣id];
+}

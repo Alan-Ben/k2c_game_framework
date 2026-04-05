@@ -1,0 +1,8 @@
+JavaPackage GS2GC.p041_MarsExploreOp;
+csharpspace GS2GC.p041_MarsExploreOp;
+import Common.GuildObj.alpro;
+
+ALProtocol GS2GC_041_017_RetGuildMineShareList <41, 17>
+{
+    Common.GuildObj.Guild_MineShareInfo[] mineShareList[分享矿列表];
+}

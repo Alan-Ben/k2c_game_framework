@@ -1,0 +1,15 @@
+﻿JavaPackage ALLRPC.CrossTeamServer.Team;
+
+ALProtocol CTSQuitTeamGroup_Req
+{
+	long groupId[分组实例ID];
+	long usId[US服务器ID];
+}
+
+ALProtocol CTSQuitTeamGroup_Return
+{
+}
+
+//[RPC]退出跨服队伍分组
+//[CLASS_PACKAGE] : AllRpcData.CrossTeam_Service.Team
+//[DEALER_PACKAGE] : CrossTeamServer.RPCDispatcher.Team

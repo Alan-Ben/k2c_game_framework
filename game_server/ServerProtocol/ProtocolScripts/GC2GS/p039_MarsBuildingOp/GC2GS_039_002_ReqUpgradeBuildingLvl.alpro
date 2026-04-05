@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p039_MarsBuildingOp;
+csharpspace GC2GS.p039_MarsBuildingOp;
+
+ALProtocol GC2GS_039_002_ReqUpgradeBuildingLvl[火星建筑-建造升级] <39, 2>
+{
+	long buildingId[建筑ID];
+}

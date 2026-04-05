@@ -1,0 +1,8 @@
+﻿﻿JavaPackage GS2GC.p012_ActivityTeamOp;
+csharpspace GS2GC.p012_ActivityTeamOp;
+
+ALProtocol GS2GC_012_053_OnActivityTeamMemberRemove[活动队伍成员退出] <12, 53>
+{
+	long teamId[队伍实例ID];
+	long cid[玩家CID];
+}

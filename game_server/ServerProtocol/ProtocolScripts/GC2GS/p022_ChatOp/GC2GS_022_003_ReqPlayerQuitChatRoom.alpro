@@ -1,0 +1,8 @@
+﻿JavaPackage GC2GS.p022_ChatOp;
+csharpspace GC2GS.p022_ChatOp;
+
+ALProtocol GC2GS_022_003_ReqPlayerQuitChatRoom[请求退出聊天房间] <22, 3>
+{
+	int roomType[聊天房间类型];
+	long extId[额外参数，活动组队聊天-活动实例ID，其他-0];
+}

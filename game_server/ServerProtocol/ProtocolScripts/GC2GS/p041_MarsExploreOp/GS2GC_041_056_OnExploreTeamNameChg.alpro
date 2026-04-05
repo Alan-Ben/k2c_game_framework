@@ -1,0 +1,8 @@
+﻿JavaPackage GS2GC.p041_MarsExploreOp;
+csharpspace GS2GC.p041_MarsExploreOp;
+
+ALProtocol GS2GC_041_056_OnExploreTeamNameChg[火星探索队伍-队伍名称变更] <41, 56>
+{
+	long teamId;
+	string name[队伍名称]; 
+}

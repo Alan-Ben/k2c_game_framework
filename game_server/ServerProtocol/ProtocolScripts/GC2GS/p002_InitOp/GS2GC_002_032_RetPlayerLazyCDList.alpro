@@ -1,0 +1,7 @@
+JavaPackage GS2GC.p002_InitOp;
+csharpspace GS2GC.p002_InitOp;
+
+ALProtocol GS2GC_002_032_RetPlayerLazyCDList[请求CD组件初始化]<2, 32>
+{
+    Common.NPCommonObj.NPCommon_PlayerLazyCD[] cdList[cd数据列表];
+}

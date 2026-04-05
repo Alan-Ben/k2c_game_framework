@@ -1,0 +1,6 @@
+JavaPackage GC2GS.p019_DinnerOp;
+csharpspace GC2GS.p019_DinnerOp;
+ALProtocol GC2GS_019_002_ReqStartDinnerByPermit [开启宴会（许可证模式）] <19, 2>
+{
+    long permitInstanceId[许可证实例ID];
+}

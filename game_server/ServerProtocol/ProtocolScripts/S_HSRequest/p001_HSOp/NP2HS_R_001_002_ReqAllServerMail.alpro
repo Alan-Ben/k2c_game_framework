@@ -1,0 +1,10 @@
+JavaPackage NP2HS_R.p001_HSOp;
+
+/**********************************************************
+ * 获取全服邮件
+ **********************************************************/
+ALProtocol NP2HS_R_001_002_ReqAllServerMail <1, 2>
+{
+    long maxMailDbId[全服邮件最大id，取大于此id的邮件];
+    int usTypeId[us服务器id];
+}

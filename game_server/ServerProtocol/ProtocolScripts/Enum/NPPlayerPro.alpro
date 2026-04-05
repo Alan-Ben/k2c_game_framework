@@ -1,0 +1,248 @@
+﻿JavaPackage NPEnum;
+csharpspace NPEnum;
+
+ALEnum ENPPlayerPropertyType[玩家属性枚举]
+{
+	NONE;
+	OFFLINE_OUTPUT_LIMIT_SEC[离线产出上限时间（秒）];
+	EXTRA_EARNINGS_ADD_PER[额外赚速万分比加成];
+	UNUSE_ARENA_STATION_STORAGE_UNLIMITED[已废弃 竞技场贸易站存储无上限 0-限制 1-无限制];
+	ARENA_IDENTITY_EFFECT_VALUE[竞技场身份效果值];
+
+	TREASURE_HUNT_CAPTURE_GAIN_EXP_ADD_PER[太空寻宝拾取处理经验万分比加成];
+	TREASURE_HUNT_CD_RECOVER_TIME_ADD_SEC[太空寻宝CD恢复时间秒数加成];
+	TREASURE_HUNT_CD_LIMIT_ADD[太空寻宝CD上限加成];
+	TREASURE_HUNT_ADVANCED_ORE_WEIGHT_ADD[太空寻宝高级矿石权重加成];
+	UNUSE_TREASURE_HUNT_DAILY_GEM_OUTPUT_ADD[已废弃 太空寻宝每日钻石产出加成];
+	GOLD_JOIN_DINNER_DAILY_LIMIT_ADD[宴会金币赴宴每日上限次数绝对值加成];
+	
+	TRAVEL_EVENT_GAIN_PLAYER_EXP_ADD[游历事件获得玩家经验绝对值加成];
+	EQUIP_LEVEL_LIMIT_ADD[藏品等级上限加成];
+	UNUSE_LVL_GOLD_BASE[已废弃 等级金币基础值,随着等级提升];
+	UNUSE_SLOT_MACHINE_BASE[已废弃 老虎机基础值,随着等级提升];
+	UNUSE_PET_LVL_MAX[已废弃 宠物最大等级上限];
+	UNUSE_LVL_P_EXP_BASE[已废弃 等级经验基础值,随着等级提升];
+	UNUSE_SPACE_DIGGING_PER[已废弃 大地图上自动挖矿效率提升系数 万分比];
+	UNUSE_SPACE_MANUAL_DIGGING_PER[已废弃 大地图上手动挖矿效率提升系数 万分比];
+	UNUSE_LVL_CEREALS_BASE[已废弃 等级食物基础值,随着等级提升];
+	UNUSE_LVL_DUST_BASE[已废弃 等级粉尘基础值,随着等级提升];
+	UNUSE_LVL_BUILDING_RES_BASE[已废弃 等级建筑材料基础值,随着等级提升];
+	UNUSE_LVL_ENERGY_BASE[已废弃 等级注能材料基础值,随着等级提升];
+	UNUSE_COOKING_SCORE_ADD_PER[已废弃 烹饪分数提升 万分比加成];
+	UNUSE_DIGGINGS_SPEED_ADD[已废弃 挖矿速度加成];
+	UNUSE_DIGGINGS_SPEED_ADD_PER[已废弃 挖矿速度万分比加成];
+	UNUSE_DIGGINGS_MAX_TEAM_NUM[已废弃 挖矿最大队伍数量];
+	UNUSE_ELF_NURSERY_NUM[已废弃 精灵培养室数量];
+	UNUSE_LEVY_SILVER_CD_MIN[已废弃：征收银币最小时间间隔（分钟）];
+	UNUSE_LEVY_SILVER_CD_MAX[已废弃 征收银币最大时间间隔（分钟）];
+	UNUSE_LEVY_SOLDIER_CD_LIMIT[已废弃 征收士兵CD数量上限];
+	UNUSE_EXTRA_CUSTOM_SUIT_COUNT[已废弃 额外自定义套装数量];
+
+	ANECDOTE_LIMIT[玩家可拥有的政务数量上限];
+	CUSTOM_FRIEND_GROUP_NUM[自定义好友分组数量上限];
+	FRIEND_NUM[好友数量上限];
+	CHILD_SEAT_ENERGY_NUM[子嗣系统训练位脑力值上限];
+	CHILD_BONUS_PER[子嗣转速系数万分比];
+	DINNER_OWNER_SCORE_PER[开宴玩家宴会人气加成万分比];
+	DINNER_JOINER_SCORE_PER[赴宴玩家宴会人气加成万分比];
+	CONSORT_CALL_ADD_CHARM_POINT[所有妃子邀约时增加的加护点数值];
+	TRAVEL_ENERGY_LIMIT[游历体力上限];
+	CONSORT_RANDCALL_ENERGY_LIMIT[家人邀约精力上限];
+	INTIMACY[亲密度];
+	CHARM[加护力];
+	INN_RECEIVE_GUEST_LIMIT[旅店接待次数上限];
+	
+	MARS_ENERGY_OUTPUT_PER[火星能源产出万分比加成];
+	MARS_TECH_SPEED_PER[科研所研究速度加成万分比];
+	MARS_TECH_COST_PER[科研所研究消耗减少万分比];
+	MARS_REPAIR_SPEED_PER[维修室维修速度加成万分比];
+	MARS_REPAIR_COST_PER[维修室维修消耗减少万分比];
+	MARS_BUILDING_UP_TIME_PER[建筑创建/升级完成时间加成];
+	MARS_BUILDING_UP_COST_PER[建筑创建/升级消耗减少万分比];
+	MARS_POWER_PER[火星实力加成万分比];
+	MARS_EXPLORE_COUNT[火星探索次数];
+	MARS_TEAM_TROOP_NUM_PER[火星队伍带兵量加成万分比];
+	MARS_TEAM_TROOP_NUM[火星队伍带兵基础数量];
+	MARS_TEAM_TROOP_EXT_NUM[火星队伍带兵额外数量];
+	MARS_TEAM_SOLDIER_POWER_PER[火星队伍单兵实力值加成万分比];
+	MARS_TEAM_SOLDIER_POWER[火星队伍单兵基础实力值];
+	MARS_TEAM_MARCH_SPEED_PER[火星探索行进时间加成万分比];
+	MARS_BUILDING_QUEUE_NUM[火星建筑队列数量];
+	
+	MARS_HELP_ACCEPT_LIMIT[火星互助单次可以接收帮助的次数];
+	MARS_HELP_DOWN_SECS[火星互助单次可以减少的时长（秒）];
+}
+
+ALEnum ENPPlayerParam[玩家参数枚举]
+{
+	NONE[无效默认值];
+	LEVEL[玩家（领主）等级];
+	VIP_LVL[VIP等级];
+	GM_LVL[未接入 GM权限];
+	PLAYER_SKIN[玩家使用皮肤Id];
+	ICON[玩家头像];
+	ICON_BGK[头像框ID];
+	BUBBLE[玩家使用气泡框Id];
+	CREATE_TIME[创角时间];
+	RECHARGED_GEM[未接入 累计充值宝石];
+	BIRTH_GIFTDE_COUM[下次出生卷王次数];
+	LOGIN_DAY_COUNT[登录天数];
+	LAST_LOGIN_DATE[ 最后一次登录的日期标记];
+	LAST_TAKE_VERSION[未接入 最后领取客户端版本奖励的版本];
+	LAST_LEFT_BAG_TIME[最后一次查看背包物品的时间];
+	LAST_OFFLINE_MS[最后一次离线时间戳（毫秒）];
+	CUTE_ACTOR[玩家Q版形象ID];
+	OFFLINE_PERIOD_REWARD_DURATION_MS[离线期间奖励时长（毫秒） 大于0则有奖励需要展示];
+	POWER_MAX_RECORD[玩家战力历史记录最高值];
+	EARNINGS_MAX_RECORD[玩家赚速历史记录最高值];
+	PREFAB[玩家预制形象];
+	LAST_DRAW_DAILY_REWARD_DATE[最后一次领取每日奖励的日期标记];
+	IS_SPACE_CAM_DRAG[大地图摄像机是否拖拽 0-不可以 1-可以];
+	SERVER_START_DAYS[服务器开启天数];
+	EXTRA_EARNINGS[额外赚速];
+	IS_SET_DEFAULT[已完成创角操作];
+	BUILDINGS_EARNINGS_MAX_RECORD[建筑赚速历史记录最高值];
+	CHILD_EARNINGS_MAX_RECORD[子嗣赚速历史记录最高值];
+	PLAYER_STAGE[已废弃 玩家段位];
+	LAST_LOGIN_WEEK_TAG[最后一次登录周标记];
+	WEEK_LOGIN_DAY_COUNT[本周登录天数];
+	LATEST_LOGIN_TIME_MS[最近一次登陆时间（毫秒）];
+	SEVEN_DAYS_LOGIN_COUNT[七日登录天数];
+	HAD_DRAW_VIP_REWARD_LIST[已领取VIP奖励列表 二进制位表示];
+	HAD_DRAW_VIP_RECHARGE_REWARD_LIST[已领取VIP充值奖励列表 二进制位表示];
+	NATION_POWER_MAX_RECORD[已废弃 玩家国力历史记录最高值];
+	MARKET_NEXT_REFRESH_MS[集市下次刷新时间];
+	HERO_ATTR_MAX_RECORD[已废弃 单一大臣属性值历史记录最高值];
+	CONSORT_CALL_NEXT_REFRESH_MS[情人指定邀约下次刷新时间 毫秒时间戳];
+	LAST_GAIN_VISIT_REWARD_DAY[最近一次领取拜访其他玩家奖励日期 YYYYMMDD];
+	ADULT_RECORD_BONUS[子嗣记录收益总值（因为移除记录在玩家身上）];
+	IS_SET_PREFAB[已设置预制形象];
+	DAY_HAD_SEND_PAY_AI_TIMES[每日已发送付费AI次数];
+	PENDING_ORDER_DB_ID[待处理订单ID];
+	IS_REFUSE_MARRY_REQUEST[是否拒绝所有联姻请求 0-否 1-是];
+	HAD_MARS_POWER_RANK_OPENED[是否开启过火星实力排行榜 0-否 1-是];
+	ROOM_SKIN[房间皮肤Id];
+	MARS_GO_ROUTE_ARRIVE_COUNT[累计抵达火星的玩家数量];
+	GIFTDE_CHILD_GRADUATE_COUNT[卷王子嗣毕业历史数量，第一个毕业时无视概率发放宴会凭证（仅服务端使用）];
+}
+
+ALEnum ENPPlayerTitleType[玩家称号类型]
+{
+	NONE;
+	COMMON[普通称号];
+	COMBO[组合称号];
+}
+
+ALEnum ENPPlayerComboTitleType[玩家组合具体称号]
+{
+	PRE[前缀];
+	SFX[后缀];
+	BG[底色];
+}
+
+ALEnum ENPGenderType[性别类型]
+{
+    NONE;
+    MALE[男性];
+    FEMALE[女性];
+}
+
+ALEnum ENPPlayerRecordParam[玩家记录枚举]
+{
+	NONE[无效默认值];
+	HERO_BUSINESS_SKILL_UPGRADE_TIMES[伙伴累计提升经营技能次数];
+	HERO_PLACE_TO_BUILDING_TIME[向建筑累计委任伙伴次数];
+	MAX_SERVER_MAIL_ID[已处理最大全服邮件id];
+	EQUIP_RESHARP_ACTIVE_TIMES[藏品重塑激活次数];
+	ARENA_STATION_COLLECT_TIMES[领取竞技场收益次数];
+	ARENA_DEFEAT_HERO_COUNT[竞技场累计击败大臣数量];
+	HERO_WEAR_EQUIP_TIMES[大臣穿戴藏品次数];
+	CONSORT_SEND_GIFT_TIMES[妃子赠送礼物次数];
+	CONSORT_CALL_TIMES[妃子指定宠幸次数];
+	CONSORT_RND_CALL_TIMES[妃子随机宠幸次数];
+	GAIN_EQUIP_TIMES[获得藏品次数];
+	EQUIP_UPGRADE_TIMES[藏品升级次数];
+	CHILD_GAIN_NUM[子嗣获得数量];
+	CHILD_TRAIN_TIMES[子嗣指导次数];
+	FRAM_COLLECT[农场收获次数];
+	CONSORT_BUSINESS_SKILL_UPGRADE_TIMES[累计领悟家人经营技能次数];
+	MARRIED_COUNT[联姻次数];
+	START_DINNER_COUNT[举办宴会次数];
+	JOIN_DINNER_COUNT[参加宴会次数];
+	FRIEND_NUM_MAX_RECORD[玩家好友数量历史记录最高值];
+	CONSORT_BLESSING_SKILL_UPGRADE_TIMES[妃子加护技能升级次数];
+	FINISH_DAILY_QUEST[完成日常任务];
+	ADULT_GAIN_NUM[子嗣毕业次数];
+	ANECDOTE_DEAL_COUNT[政务处理数量];
+	TRAVEL_COUNT[游历数量];
+	CHAPTER_PASS_STAGE_COUNT[章节通过关卡数量];
+	SHOP_BUY_COUNT[商店购买商品次数];
+	ARENA_MAX_DEFEAT_HERO_NUM[竞技场单场最大击败大臣数量];
+	PAID_GEM_COUNT[付费钻石数量];
+	PAID_VOUCHER_COUNT[付费代金券数量];
+	DEAL_HERO_RECOMMEND[处理大臣推荐];
+	ADD_FRIEND[添加好友];
+	SEND_CHAT_TO_ROOM[聊天频道发言];
+	EQUIP_RESHARP_TIMES[藏品重塑次数];
+	RANK_FIXED_LIKE[常驻排行榜点赞];
+	AVATAR_GACHA_ROLL[时装抽卡];
+	UNLOCK_NEW_EQUIP_TYPE_COUNT[解锁藏品种类数量];
+	MAX_EARNINGS_CHILD[赚速最高子嗣];
+	ARENA_BEEN_DEFEAT_HERO_COUNT[竞技场累计被击败大臣数量];
+	JOIN_GUILD_TIMES[加入联盟次数];
+	ARENA_ATTACK_TIMES[竞技场挑战次数];
+	PLAYER_CONSORT_INTIMACY[玩家妃子亲密度记录];
+	PLAYER_CONSORT_CHARM[玩家妃子加护值记录];
+	PLAYER_CONSORT_INTIMACY_ADD[玩家妃子亲密度增加记录（不包括初始值）];
+	PLAYER_CONSORT_CHARM_ADD[玩家妃子加护值增加记录（不包括初始值）];
+	FRAM_COLLECT_SUM[农场收获金币数量];
+	ARENA_SELECT_ATTACK_TIME[竞技场选择攻击次数];
+	GUILD_CONSTRUCT_TIMES[联盟建设次数];
+	GUILD_DEAL_ENTRUST_TIMES[联盟处理委托次数];
+	TOWER_FIGHT_SUCCESS_TIMES[迷宫挑战成功次数];
+	HERO_IMPROVE_STEP_TIMES[大臣提升阶数次数];
+	TREASURE_HUNT_CAPTURE_TIMES[太空寻宝累计捕捉次数];
+	DRAW_ACHIEVE_REWARD_TIMES[领取成就奖励次数];
+	DEAL_HIRE_EMPLOYEE_PLOT[雇佣员工剧情];
+	GAIN_GIFTED_CHILD_COUNT[获得卷王子嗣数量];
+	INN_DISH_UPGRADE_TIMES[旅店菜品升级次数];
+	TREASURE_HUNT_UPGRADE_ORE_NORMAL_SKILL_TIMES[太空寻宝升级矿石普通技能次数];
+	TREASURE_HUNT_UPGRADE_ORE_ADVANCED_SKILL_TIMES[太空寻宝升级矿石高级技能次数];
+	GUILD_COOPERATE_DRAW_RECORD_LAST_REFRESH_TIME_MS[联盟协作领取记录记录最后刷新时间 毫秒时间戳];
+	MAIL_PLAN_HAD_SEND_DAYS[邮件计划已发送天数];
+	EVENING_DUNGEON_BOSS_KILL_COUNT[累计击杀晚间副本boss次数];
+	MARS_MAX_POWER[火星实力记录];
+	MARS_TEAM_MAX_POWER[火星所有队伍实力记录（系数general.mars_explore_team_power_coef计算后再放入，只用于计算火星实力）];
+	MARS_EXPLORER_ATTACK_BOSS[火星探险-击败boss次数];
+	MARS_EXPLORER_OCCUPY_MINE_NUM[火星探险-成功占领火星矿次数];
+	MARS_BUILDING_MAX_POWER[火星所有建筑实力记录];
+	MARS_TECH_MAX_POWER[火星所有科技实力记录];
+	MARS_BUILDING_EQUIP_UP_NUM[火星所有建筑部件升级次数];
+	MARS_PEOPLE_IMMIGRATION_NUM[火星移民次数];
+	MARS_BUILDING_TEMP_QUEUE_TIMES[火星建筑临时队列创建次数];
+	MARS_BUILDING_DISPATCH_NUM[火星探险-火星建筑派遣居民数量历史记录];
+	MARS_PEOPLE_IMMIGRATION_SUM[火星移民数量];
+	MARS_TIME_REDUCED_MIN_SUM[火星累计使用道具加速时长之和（分钟）];
+	MARS_TECH_TIME_REDUCED_MIN_SUM[火星研究科技累计使用道具加速之和（分钟）];
+	MARS_BUILD_TIME_REDUCED_MIN_SUM[火星建筑升级累计使用道具加速之和（分钟）];
+	MARS_GET_ENERGY_COUNT[火星收取能源次数];
+	MARS_TEAM_COLLECT_SUM[火星矿场采集资源量];
+	TREASURE_HUNT_ACTIVE_ORE_SKILL_TIMES[太空寻宝激活矿石技能次数];
+	MARS_TEAM_REPAIR_TIME_REDUCED_MIN_SUM[火星队伍修复累计使用道具加速之和（分钟）];
+	TUTORIAL_DATA_MIGRATED[引导数据旧版本迁移已完成（仅服务端使用）];
+}
+
+ALEnum ENPFlourishCategory[玩家繁荣度类别枚举]
+{
+	NONE;
+	TOTAL[总繁荣度];
+	BUILDING[建筑类别];
+	PET[宠物类别];
+	MUSEUM[收藏品类别];
+}
+
+ALEnum ENPPlayerBuffFunctionType[玩家buff类型]
+{
+	NONE;
+	MARS_EVENT[火星事件];
+}

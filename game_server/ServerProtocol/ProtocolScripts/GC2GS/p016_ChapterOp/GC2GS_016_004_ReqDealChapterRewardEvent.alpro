@@ -1,0 +1,6 @@
+JavaPackage GC2GS.p016_ChapterOp;
+csharpspace GC2GS.p016_ChapterOp;
+
+ALProtocol GC2GS_016_004_ReqDealChapterRewardEvent [处理奖励事件] <16, 4>
+{
+}

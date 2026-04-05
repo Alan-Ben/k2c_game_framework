@@ -1,0 +1,12 @@
+﻿import Common.NPInclude.alpro;
+import Common.NPCommonObj.alpro;
+
+JavaPackage Common.HeroRecommendObj;
+csharpspace Common.HeroRecommendObj;
+
+ALProtocol HeroRecommend_Info[大臣推荐事件数据]
+{
+	long instanceId[实例ID];
+	long refId[配置ID];
+	long rndSeed[随机种子];
+}

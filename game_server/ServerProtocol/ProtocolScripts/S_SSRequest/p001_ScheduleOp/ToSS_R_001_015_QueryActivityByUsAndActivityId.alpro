@@ -1,0 +1,7 @@
+JavaPackage NP2SS_R.p001_ScheduleOp;
+
+ALProtocol ToSS_R_001_015_QueryActivityByUsAndActivityId[查询指定US列表的指定活动排期] <1, 15>
+{
+    int[] usIdList[用户服务器ID列表];
+    long activityId[活动ID];
+}

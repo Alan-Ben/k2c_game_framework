@@ -1,0 +1,10 @@
+﻿JavaPackage GS2GC.p033_SimpleActivityOp;
+csharpspace GS2GC.p033_SimpleActivityOp;
+
+ALProtocol GS2GC_033_001_RetEarningsGoalInfo <33, 1>
+{
+	Common.EarningsGoalObj.EarningsGoal_RewardInfo[] rewardInfoList[奖励信息列表];
+    Common.EarningsGoalObj.EarningsGoal_HonorRewardInfo[] honorRewardInfoList[荣誉奖励信息列表];
+    long[] hadDrawRewardList[已领取奖励列表];
+    long[] hadDrawHonorRewardList[已领取荣誉奖励列表];
+}

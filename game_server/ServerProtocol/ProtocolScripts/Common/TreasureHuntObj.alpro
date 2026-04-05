@@ -1,0 +1,113 @@
+﻿JavaPackage Common.TreasureHuntObj;
+csharpspace Common.TreasureHuntObj;
+
+import Enum.TreasureHuntEnum.alpro;
+
+ALProtocol TreasureHunt_OreSkillInfo[太空寻宝-矿石技能信息]
+{
+	int skillLevel[技能等级];
+	int skillPoint[技能点数];
+}
+
+ALProtocol TreasureHunt_OreNumInfo[太空寻宝-矿石数量信息]
+{
+	int totalGainNum[已获得数量];
+	int normalPendingNum[普通矿石待处理数量];
+	int advancedPendingNum[高级矿石待处理数量];
+}
+
+ALProtocol TreasureHunt_OreInfo[太空寻宝-矿石信息]
+{
+	long oreId[矿石ID];
+	long firstGainTimeMs[首次获得时间 ms];
+	int maxRecord[最大记录];
+	int[] hadDrawRecordRewardList[已领取奖励档位列表];
+
+	TreasureHunt_OreNumInfo numInfo[数量信息];
+	TreasureHunt_OreSkillInfo normalSkillInfo[普通技能信息];
+	TreasureHunt_OreSkillInfo advancedSkillInfo[高级技能信息];
+}
+
+ALProtocol TreasureHunt_TreasureInfo[太空寻宝-奇物信息]
+{
+	long treasureId[奇物ID];
+	int skillLevel[技能等级];
+	long gainTimeMs[获得时间 ms];
+}
+
+ALProtocol TreasureHunt_CompositeInfo[太空寻宝-组合信息]
+{
+	long refId[组合ID];
+	long collectTimeMs[收集时间 ms];
+	bool isNormalActive[是否激活普通组合];
+	bool isAdvancedActive[是否激活高级组合];
+}
+
+ALProtocol TreasureHunt_StationInfo[太空寻宝-太空舱信息]
+{
+	int stationLevel[太空舱等级];
+	long exp[经验值];
+}
+
+ALProtocol TreasureHunt_TreasureOutputInfo[太空寻宝-奇物产出信息]
+{
+	long treasureId[奇物ID];
+	long nextCanDrawGemTimeMs[下次可领取钻石时间 ms];
+	int nextCanDrawGemNum[下次可领取钻石数量];
+}
+
+ALProtocol TreasureHunt_Info[太空寻宝-信息]
+{
+	TreasureHunt_StationInfo stationInfo[太空舱信息];
+	TreasureHunt_OreInfo[] oreList[矿石列表];
+	TreasureHunt_TreasureInfo[] treasureList[奇物列表];
+	TreasureHunt_CompositeInfo[] compositeList[组合列表];
+	TreasureHunt_TreasureOutputInfo[] treasureOutputList[奇物产出列表];
+}
+
+ALProtocol TreasureHunt_CaptureReward[太空寻宝-捕捉奖励]
+{
+	Enum.TreasureHuntEnum.ETreasureHuntGainType gainType[获得类型];
+	bytebuffer data[数据];
+}
+
+ALProtocol TreasureHunt_CaptureResult[太空寻宝-捕捉结果]
+{
+	TreasureHunt_CaptureReward[] captureRewardList[捕捉奖励列表];
+}
+
+ALProtocol TreasureHunt_CaptureResult_Ore[太空寻宝-捕捉结果_矿石]
+{
+	long oreId[矿石ID];
+	int weight[重量];
+
+	bool isFirstCapture[是否首次捕捉];
+
+	long serverMaxCid[最大矿石归属者cid];
+	int serverMaxWeight[最大矿石重量];
+	bool isFirstDrawAdvanced[是否首次捕捉高级];
+}
+
+ALProtocol TreasureHunt_CaptureResult_Treasure[太空寻宝-捕捉结果_奇物]
+{
+	long treasureId[奇物ID];
+}
+
+ALProtocol TreasureHunt_CaptureResult_Reward[太空寻宝-捕捉结果_奖励]
+{
+	Common.NPCommonObj.NPCommon_ItemInfo[] itemList[物品列表];
+}
+
+ALProtocol TreasureHunt_TransOreResult[太空寻宝-转换矿石结果]
+{
+	long oreId[矿石ID];
+	bool isNormal[是否普通矿石];
+	int num[转换数量];
+}
+
+ALProtocol TreasureHunt_OreRankItem[太空寻宝-矿石排行榜项]
+{
+	int rank[排名];
+	long cid[cid];
+	int weight[重量];
+}

@@ -1,0 +1,9 @@
+﻿JavaPackage GS2GC.p007_CommOp;
+csharpspace GS2GC.p007_CommOp;
+
+import Common.StageGoalObj.alpro;
+
+ALProtocol GS2GC_007_077_OnStageGoalBigStepFirstReachAdd <7, 77>
+{
+	long bigStepId[大阶段ID];
+}

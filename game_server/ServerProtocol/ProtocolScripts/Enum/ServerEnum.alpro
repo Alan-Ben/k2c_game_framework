@@ -1,0 +1,54 @@
+JavaPackage NPEnum;
+
+ALEnum EActivityScheduleEnum[活动排期类型]
+{
+	NONE;
+	SINGLE[单服];
+	CROSS[跨服];
+}
+
+ALEnum EPlayerShowEnum[玩家展示类型]
+{
+	NONE;
+	MAKE_FACE[捏脸数据];
+}
+
+ALEnum EPlayerCounterEnum[玩家计数类型]
+{
+	FRIEND[好友数量];
+	FRIEND_APPLY[好友申请数量];
+	FRIEND_LIMIT[好友数量上限];
+}
+
+ALEnum ERankingEventListenerType[排行事件监听者类型]
+{
+	NONE[无];
+	RANK[排行榜];
+	STEP_REWARD[阶段奖励];
+	STEP_REWARD_EVENT_TASK[阶段事件任务奖励];
+}
+
+ALEnum ERankingEventServerType[排行事件服务器类型]
+{
+	NONE[无];
+	USER[玩家服务器];
+}
+
+ALEnum ERankingInstanceServerType[排行榜实例服务器类型]
+{
+	NONE[无];
+	USER[玩家服务器];
+}
+
+ALEnum ELogSectionType[日志截面类型]
+{
+	LVL[等级];
+	DAY[每日];
+}
+
+ALEnum EMarqueeOfflineNeedShowType[跑马灯-玩家离线期间展示]
+{
+    READ_REF[读表];
+	TRUE[展示];
+	FALSE[不展示];
+}

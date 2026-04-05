@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p036_TreasureHuntOp;
+csharpspace GC2GS.p036_TreasureHuntOp;
+
+ALProtocol GC2GS_036_010_ReqTreasureHuntOreRankInfo[太空寻宝-矿石排行榜信息] <36, 10>
+{
+	long oreId[矿石ID];
+}

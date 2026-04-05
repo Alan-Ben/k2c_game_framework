@@ -1,0 +1,14 @@
+JavaPackage GC2GS.p028_QuestOp;
+csharpspace GC2GS.p028_QuestOp;
+
+/**********************************************************
+ * 在任务目标是客户端触发的时候
+ * 客户端在对应消息触发情况下会发送这个消息给服务器要求增加进度值
+ **********************************************************/
+ALProtocol GC2GS_028_004_ReqAddClientTargetCount <28, 4>
+{
+	long questId;
+	long questStepId;
+	long questStepTargetId;
+	int changeCount[修改的进度值];
+}

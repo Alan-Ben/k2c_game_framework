@@ -1,0 +1,25 @@
+﻿using ALBasicProtocolPack;
+using GS2GC.p032_GuildOp;
+
+namespace GOE
+{
+    /// <summary>
+    /// 联盟成员移除
+    /// </summary>
+    public class GSSubDealer_032_055_OnGuildMemberRemove : NPSubDealer<GS2GC_032_055_OnGuildMemberRemove>
+    {
+		/// <summary>
+        /// 构造协议对象结构体，默认让子类重载，这样的性能会比createInstance高，特别在协议处理初始化的时候
+        /// </summary>
+        /// <returns></returns>
+        protected override GS2GC_032_055_OnGuildMemberRemove _createProtocolObj()
+        {
+            return new GS2GC_032_055_OnGuildMemberRemove();
+        }
+		
+        protected override void _dealProtocolByLog(_IALProtocolDealer _dealer, GS2GC_032_055_OnGuildMemberRemove _msg)
+        {
+			NPPlayer.instance.guildComp.onGuildMemberRemove(_msg);
+        }
+    }
+}

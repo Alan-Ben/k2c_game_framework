@@ -1,0 +1,10 @@
+JavaPackage GC2GS.p028_QuestOp;
+csharpspace GC2GS.p028_QuestOp;
+
+/**********************************************************
+ * 请求完成任务
+ **********************************************************/
+ALProtocol GC2GS_028_002_ReqFinishQuest <28, 2>
+{
+	long questId;
+}

@@ -1,0 +1,11 @@
+JavaPackage NP2LCS_R.p001_BasicOp;
+
+/**********************************************************
+ * 申请帐号信息
+ **********************************************************/
+ALProtocol NP2LCS_R_001_003_ReqCheatUidInfo <1, 3>
+{
+	//用户名
+	string userName;
+	string accountPass;
+}

@@ -1,0 +1,7 @@
+JavaPackage GS2GC.p015_ConsortOp;
+csharpspace GS2GC.p015_ConsortOp;
+ALProtocol GS2GC_015_006_RetCallAppoint [家人-指定邀约] <15, 6>
+{
+    long addCharmPoint[增加的加护点数];
+	long childId[获得子嗣的实例ID，0-未获得];
+}

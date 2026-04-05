@@ -1,0 +1,7 @@
+JavaPackage GC2GS.p015_ConsortOp;
+csharpspace GC2GS.p015_ConsortOp;
+ALProtocol GC2GS_015_003_ReqUpgradeBlessSkill [家人-升级加护技能等级] <15, 3>
+{
+    long consortId[家人ID];
+    long skillId[经营技能ID];
+}

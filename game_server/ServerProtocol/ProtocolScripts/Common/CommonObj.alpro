@@ -1,0 +1,1101 @@
+﻿JavaPackage Common;
+csharpspace Common;
+
+import Enum.CommonEnum.alpro;
+import Enum.NPEnum.alpro;
+import Enum.NPCommonEnum.alpro;
+import Enum.CommonEnum.alpro;
+import Common.NPCommonObj.alpro;
+
+ALProtocol Common_IntList
+{
+	int[] valueList;
+}
+
+ALProtocol Common_LongList
+{
+	long[] valueList;
+}
+
+ALProtocol Common_StringList
+{
+	string[] valueList;
+}
+
+ALProtocol Common_Int[用于需要引用传递的Integer的场景]
+{
+	int value;
+}
+ALProtocol Common_Long[用于需要引用传递的Long的场景]
+{
+	long value;
+}
+
+/**********************************************************
+ * us info
+ **********************************************************/
+ALProtocol Common_USInfo
+{
+	int serverTypeId;
+	long usServerId;
+}
+
+/**********************************************************
+ * rs info
+ **********************************************************/
+ALProtocol Common_RSInfo
+{
+	int serverTypeId;
+}
+
+/**********************************************************
+ * 地图坐标信息
+ **********************************************************/
+ALProtocol Common_MapPos
+{
+	int x;
+	int z;
+}
+
+/**********************************************************
+ * 浮点计算坐标信息
+ **********************************************************/
+ALProtocol Common_FloatVec
+{
+	float x;
+	float z;
+}
+
+/**********************************************************
+ * actor info
+ **********************************************************/
+ALProtocol Common_ActorInfo
+{
+	long petInstanceId[宠物实例Id，虚构的使用负数];
+	long petId[宠物卡牌Id];
+	int lvl;
+	short star;
+	short quality;
+	long skin_id;
+	bytebuffer cardExInfo;
+	Enum.NPCommonEnum.ENPAttrGrade attrGrade[宠物资质品质];
+}
+
+/**********************************************************
+ * 头像框信息
+ **********************************************************/
+ALProtocol Common_IconBgk
+{
+	long iconBgk;
+	int leftTimeS;
+}
+
+/**********************************************************
+ * 比赛阵容数据
+ **********************************************************/
+ALProtocol Common_Lineup
+{
+	//所选种族Id
+	long raceId;
+	//选择的英雄单位阵容Id队列
+	Common_ActorInfo[] cardList;
+    //选择的指挥官技能
+    long[] cmdSkillIds;
+}
+
+/**********************************************************
+ * 活动数据
+ **********************************************************/
+ALProtocol Common_ActivityInfo
+{
+	//活动Id
+	long activity;
+	//当前活动阶段
+	int curStep;
+	//当前阶段已经完成的次数
+	int curStepDoneTime;
+	//当前阶段在服务器的完成状态
+	bool curServerDoneState;
+	//当前计数
+	long curCounter;
+	//是否已经看过
+	bool isReaded;
+}
+
+/**********************************************************
+ * 成就数据
+ **********************************************************/
+ALProtocol Common_AchieveInfo
+{
+	//成就Id
+	long achieveId;
+	//当前活动阶段
+	int curStep;
+	//当前阶段在服务器的完成状态
+	bool curServerDoneState;
+	//当前计数
+	long curCounter;
+}
+
+/**********************************************************
+ * 语音设置信息
+ **********************************************************/
+ALProtocol Common_VoiceSetting
+{
+	bool isSpeakerOn;
+	bool isMicroOn;
+}
+
+/**********************************************************
+ * 通用参与战斗玩家信息
+ **********************************************************/
+ALProtocol Common_FighterInfo
+{
+	//连胜场数
+	int serialVictory;
+	//连败场数
+	int serialFail;
+	//玩家段位
+	int grades;
+	//玩家星耀
+	int starhoner;
+	//传说积分
+	long legendscore;
+	//图标
+	long icon;
+	//天梯比赛次数
+	int ladderFightNum;
+	//总胜利次数
+	int totalVictory;
+	//总平局数
+	int totalDraw;
+	//总失败
+	int totalFail;
+	//1v1胜利次数
+	int victory1v1;
+	//2v2胜利次数
+	int victory2v2;
+	//客户端版本号
+	string clientVersion;
+	//图标框
+	long iconBgk;
+}
+
+/**********************************************************
+ * 通用赛季信息
+ **********************************************************/
+ ALProtocol Common_SeasonInfo
+ {
+ 	//上个赛季描述
+ 	int lastSeasonDesc; 
+ 	//当前赛季ID
+	int curSeason;   
+	//赛季开始时间   
+	int seasonStartTime;
+	//赛季结束时间
+	int seasonEndTime;
+ }
+ 
+/**********************************************************
+ * 通用玩家登陆、日志信息
+ **********************************************************/
+ALProtocol Common_UserLoginInfo
+{
+	long pid;			//平台id
+	string jsonExtends;	//额外Json格式信息,包括adform等
+}
+
+//用户登录信息
+ALProtocol Common_UserLogInfo
+{
+	long   cid;
+	string name;
+	long  gem;
+	long  cardCoin;
+	long silver;
+	long recharge;
+	int  level;
+	int lastLoginTime;
+	int lastLoginDate;
+	bool isBanded;
+}
+
+/**********************************************************
+ * 通用好友聊天记录
+ **********************************************************/
+ALProtocol Common_FriendChatInfo
+{
+	long fuid; //好友uid
+	int type;  //发送者类型 1玩家发的 2好友发的
+	string content; //聊天内容
+	int chatTime; //聊天时间
+	int msgType; //内容形式
+	long id;
+}
+
+/**********************************************************
+ * 通用帮会系统
+ **********************************************************/
+ALProtocol Common_GuildInfo
+{
+	long guildId; //帮会ID
+	string guildName; //帮会名字
+	string manifesto; //公会宣言
+	int level; //公会等级
+	int exp;   //公会经验
+	int createTime; //创建时间
+	long guildIcon; //公会图标
+	long national; //国籍图标
+	long joinGrades;//加入所需最低段位
+	int joinLimit;//公会入会类型
+	int memberCnt; //成员人数
+}
+
+ALProtocol Common_GuildMemberInfo
+{
+	long uid; //玩家uid
+	string playerName; //玩家名字
+	long playerIcon; //玩家头像
+	int guildPost; //公会职位
+	long grades; //玩家段位
+	int starhoner; //玩家星耀
+	long legendscore; 	//传说积分
+	bool isOnline; //是否在线
+	int state;//战斗状态
+	int playerLevel; //玩家等级
+	long playerIconBgk;//图标框
+}
+
+ALProtocol Common_GuildApplyInfo
+{
+	long sId; //申请唯一ID
+	long uid; //玩家uid
+	string playerName; //玩家名字
+	int playerLevel; //玩家等级
+	long playerIcon; //玩家头像
+	long grades; //玩家段位
+	int starhoner; //玩家星耀
+	long legendscore; //传说积分
+	long playerIconBgk;//图标框
+}
+
+ALProtocol Common_GuildChatInfo
+{
+	long uid; //玩家uid
+	string playerName; //玩家名字
+	long playerIcon; //玩家头像
+	int guildPost; //公会职位
+	long grades; //玩家段位
+	int starhoner; //玩家星耀
+	long legendscore; //传说积分
+	string content;//聊天内容
+	int chatTime; //聊天时间
+	int playerLevel; //玩家等级
+	long playerIconBgk;//图标框
+	int msgType; //内容形式
+	long id;
+}
+
+/**********************************************************
+ * 公会请求捐献数据
+ **********************************************************/
+ALProtocol Common_GuildReqDonateCountInfo
+{
+	//捐献玩家UID
+	long donateUid;
+	//捐献数量
+	short donateCount;
+}
+
+ALProtocol Common_GuildReqDonateInfo
+{
+	long id;
+	//申请捐献公会玩家数据
+	Common_GuildMemberInfo reqGuildMemberInfo;
+	//请求捐献卡ID
+	long cardId;
+	//已经捐献数量
+	int donateCount;
+	//请求捐献的上限数量
+	int reqDonateCountLimit;
+	//请求捐献的时间戳
+	int reqTimeTag;
+	//请求捐献的过期时间戳
+	int reqExpireTimeTag;
+	//捐助玩家信息列表
+	Common_GuildReqDonateCountInfo[] guildReqDonateCountInfoList;
+}
+
+/**********************************************************
+ * 公会捐献数据
+ **********************************************************/
+ALProtocol Common_GuildDonateInfo
+{
+	long id;
+	//请求捐助的唯一ID
+	long reqId;
+	//捐献公会玩家数据
+	Common_GuildMemberInfo guildMemberInfo;
+	//捐献卡ID
+	long cardId;
+	//捐献数量
+	int donateCount;
+	//申请捐献时间戳
+	int timeTag;
+}
+
+/**********************************************************
+ * 客户端传给服务端的公会基础信息，一般用于新增和修改
+ **********************************************************/
+ALProtocol WCGGC2GS_GuildBaseInfo
+{
+	string guildName; //帮会名字
+	string manifesto; //公会宣言
+	long guildIcon; //公会图标
+	long national; //国籍图标
+	long joinGrades;//加入所需最低段位
+	int joinLimit;//公会入会类型
+}
+ 
+/**********************************************************
+ * 战斗结束统计信息
+ **********************************************************/
+ALProtocol WCGGS2GC_Stastics_ActorBattleReliveCostData
+{
+	int resType;
+	int resCost;
+}
+//统计信息
+ALProtocol WCGGS2GC_Stastics_ActorBattleData
+{
+    long ownerId;
+    long actorId;
+    int actorLevel;
+    long[] dataList; 
+    WCGGS2GC_Stastics_ActorBattleReliveCostData[] reliveCostDataList;
+}
+
+//统计信息
+ALProtocol WCGGS2GC_Stastics_ResourceBattleData
+{
+    long resAbout;
+    long[] dataList;
+    float wasteData;
+}
+
+//单一玩家统计信息
+ALProtocol WCGGS2GC_Stastics_TeamDataItem
+{
+	//玩家 groupID
+	int groupId;
+	//兵统计
+	WCGGS2GC_Stastics_ActorBattleData[] actorBattleDataList;
+	//英雄统计
+	WCGGS2GC_Stastics_ActorBattleData[]  heroBattleDataList;   
+	//资源统计
+	WCGGS2GC_Stastics_ResourceBattleData[] resDataList;
+	
+	int totalKillNum;
+	int totalHeroKill;
+	int TotalHeroDie;
+	int totalDragronKill;
+	long maxPopulayion;
+	int miningSameTime;
+	int skillBeBreakDown;
+	int skillBreakDown;
+}
+
+/**********************************************************
+ * 玩家队伍信息
+ **********************************************************/
+ALProtocol WCGGS2GC_PlayerCommonLineup
+{
+	//阵容信息
+	Common_Lineup lineUp;
+	//队伍
+	long teamConfigID;
+	
+	bytebuffer raceExInfo;
+    bytebuffer playerExInfo;
+}
+
+/**********************************************************
+ * 发给客户端的匹配相关信息
+ **********************************************************/
+//匹配中的玩家信息
+ALProtocol WCGGS2GC_MatchPlayerInfo
+{
+   	//玩家ID
+   	long uid;
+   	//玩家名字
+   	string playerName;
+   	//玩家等级
+   	int playerLvl;   
+   	//是否准备好
+  	bool isReady;
+   	//玩家图标
+  	int playerIcon;
+   	//阵容信息
+   	Common_Lineup lineup;
+   	//玩家段位
+	long grades;
+	//玩家星耀
+	int starhoner;
+	//传说积分
+	long legendscore; 
+	//地图groupId
+	
+	int goupId;
+	int campId;
+	
+	Common_VoiceSetting voiceSetting;
+
+	long playerIconBgk;//图标框
+} 
+ 
+//匹配队伍成员信息
+ALProtocol WCGGS2GC_MatchTeamMember
+{
+    long uid;
+    string cname;
+    long grades;
+    int starhoner;
+    long legendscore; 
+    bool  isReady;
+    Common_Lineup lineup;
+    long icon;
+    int level;
+    Common_VoiceSetting voiceSetting;
+    bool isOnline;
+    long iconBgk;//图标框
+}
+
+/**********************************************************
+ * 通用物品包
+ **********************************************************/
+ALProtocol WCGGS2GC_UniformItem
+{
+ 	//主表ID
+ 	long uniformId;
+ 	//实际物品数量
+ 	long count;
+}
+
+ALProtocol WCGGS2GC_UniformItemFix
+{
+ 	int modifierId; //修正原因ID
+ 	int fixType;//修正类型
+ 	long value;//修正值
+}
+
+ALProtocol WCGGS2GC_UniformItemChg
+{
+ 	//主表ID
+ 	long uniformId;
+ 	//实际物品数量
+ 	long count;
+ 	//原本数量
+ 	long srcCount;
+ 	
+ 	WCGGS2GC_UniformItemFix[] fixList;
+}
+
+ALProtocol WCGGS2GC_UniformPack
+{
+ 	WCGGS2GC_UniformItem[] items; 
+}
+ 
+/**********************************************************
+ * 物品转描述
+ **********************************************************/
+ALProtocol WCGGS2GC_UniformItemTranform
+{
+	long fromId;
+ 	long fromNum;
+ 	long toId;
+ 	long toNum;
+}
+ 
+/**********************************************************
+ * 货币信息
+ **********************************************************/
+ALProtocol WCGGS2GC_Currency
+{
+    //货币类型
+    int type;
+    //货币值
+    long value;
+}
+
+/**********************************************************
+ * 卡牌信息
+ **********************************************************/
+ALProtocol WCGGS2GC_PlayerCardInfo
+{
+    //卡牌id
+	long cardId;
+	//是否解锁
+	bool isUnLocked;
+	//碎片数量
+	int chipNum;
+	//使用次数
+	int canUseNum;
+	//每日已购买次数
+	int dailyBroughtNum;
+	//卡牌等级
+	int level;
+	//升级剩余秒数
+	int upRemainSec;
+}
+
+/**********************************************************
+ * 商店信息
+ **********************************************************/
+ALProtocol WCGGS2GC_PlayerGoodsInfo
+{
+	//唯一ID，数据库主键
+	long sId;   
+	//商店类型  
+	int shopType; 
+	//商品页签Id
+	int tabId;
+	//商品ID
+	long goodsId; 
+	//单次购买数量
+	int amount;
+	//已购买次数
+	int buyTimes; 
+}
+
+/**********************************************************
+ * Common服向用户服发送邮件信息：全局邮件和个人邮件
+ **********************************************************/
+ALProtocol WCGCS2US_GlobalMail
+{
+	//全局邮件ID
+	long gMailSID;
+	//发送者名称
+	string senderName;
+	//邮件标题
+	string title;
+	//邮件内容
+	string content;
+	//奖励内容
+	string reward;
+	//创建时间
+	int createTime;
+	//存在时间
+	int existTime;
+	//发送给玩家类型(0全部玩家 1旧玩家 2新玩家 )
+	int sendType;
+	//指定渠道列表
+	string[] channelList;
+	//渠道列表发送或不发送
+	bool isSend;
+}
+
+ALProtocol WCGCS2US_PersonalMail
+{
+	//发送者名称
+	string senderName;
+	//邮件标题
+	string title;
+	//邮件内容
+	string content;
+	//奖励内容
+	string reward;
+	//创建时间
+	int createTime;
+	//存在时间
+	int existTime;
+}
+
+/**********************************************************
+ * 邮件信息
+ **********************************************************/
+ALProtocol WCGGS2GC_MailBrief
+{
+	//邮件统一ID。数据库主键
+	long sId;   
+	//邮件标题
+	string title;
+	//邮件创建时间
+	long createTime;
+	//邮件阅读时间，未读是0
+	long readTime;
+	//邮件领取时间，未领取是0
+	long pickUpTime;
+	//发送者名称，为空客户端取默认值
+	string senderName;
+	//是否是奖励邮件
+	bool isReward;
+	//过期时间
+	long expireTime;
+} 
+ 
+ALProtocol WCGGS2GC_MailDetails
+{
+	//邮件统一ID。数据库主键
+	long sId;
+	//邮件内容
+	string content;
+	//邮件内容参数
+	string[] contentParams; 
+	//物品包封装
+	WCGGS2GC_UniformPack uniformPack;
+}
+
+/**********************************************************
+ * 排行榜榜单信息
+ **********************************************************/
+ALProtocol WCGGS2GC_RankInfo
+{
+	long uid;
+	//排名
+	int rank;
+	//用户名称
+	string playername;
+	//头像
+	long icon;
+	//服务器ID
+	int serverId;
+	//段位
+	long grades;
+	//星耀
+	int starhoner;
+	//传说积分
+	long legendscore;
+	long iconBgk;//图标框
+}
+
+/**********************************************************
+ * 自定义战斗
+ **********************************************************/
+ALProtocol WCGGS2GC_CustomRoomPlayer
+{
+	long uid;
+	string name;
+	long icon;
+	bool isHost;
+	bool isAI;
+	int  aiLevel;
+	long aiRace;
+	bool isReady;
+	bool isRandomRace;
+	Common_Lineup lineup;
+	bool isOnline;
+	long grades;
+	int starhoner;
+	long legendscore; 
+	int level;
+	int groupId;
+	int campId;
+	Common_VoiceSetting voiceSetting;
+	long iconBgk;//图标框
+}
+
+ALProtocol WCGGS2GC_CustomRoomSlot
+{
+	int slotId;
+	bool isOB;	//是否观战
+	int campId;
+	int groupId;
+	bool hasPlayer; //是否有玩家
+	WCGGS2GC_CustomRoomPlayer Player;
+}
+
+//分组
+ALProtocol WCGGS2GC_CustomSlotGroup
+{
+	WCGGS2GC_CustomRoomSlot[] slots;
+}
+
+/**********************************************************
+ * 玩家参数
+ **********************************************************/
+ALProtocol WCGGS2GC_PlayerParam
+{
+    //参数枚举ID
+    int paramIndex;
+    //参数值
+    long value;
+}
+
+/**********************************************************
+ * 玩家任务
+ **********************************************************/
+ALProtocol WCGGS2GC_TaskInfo
+{
+    //实例ID
+    long instanceId;
+	//任务ID
+	long taskRefId;    
+	//当前计数器值
+	long curCounter;
+	
+	//待替换的活动
+	long toReplaceRefId;
+}
+
+/**********************************************************
+ * 好友基本信息
+ **********************************************************/
+ALProtocol Common_FriendBaseInfo
+{
+	long uid;
+	string name;
+	long icon;
+	int grade;
+	int starHonor;
+	int legendScore;
+	int addTime;
+	int level;
+	long iconBgk;//图标框
+}
+
+/**********************************************************
+ * 自定义房间基础信息
+ **********************************************************/
+ALProtocol Common_CustomRoomListItem
+{
+	long roomId;  
+  	bool isNeedPassord;
+  	int  minGrade;
+  	int  matchType;
+  	int  roomState;
+  	long hostUid;
+  	string hostName;
+  	int maxFightNum;
+  	int curFightNum;
+  	int maxObNum;
+  	int curObNum;
+  	long dungeonId;
+  	bool isCanOb;
+  	bool isEquit;
+}
+
+/**********************************************************
+ * 公平竞技通用信息
+ **********************************************************/
+ ALProtocol Common_EquitableArenaInfo
+{
+	//竞技类型
+  	int arenatype; 
+  	//免费次数
+  	int freeTimes;
+  	//是否处于挑战中
+  	bool isChallenge;
+  	//胜利场数
+  	int victory;
+  	//失败场数
+  	int failed; 
+  	//是否已领取结算宝箱 
+  	bool hasGotBalanceBox; 
+  	//普通公平竞技最大胜利
+  	int maxVictory;
+  	//刷新倒计时
+  	int remainSec;
+}
+
+/**********************************************************
+ * 匹配中的玩家信息
+ **********************************************************/
+ALProtocol WCGGS2GC_AreanConfirmPlayerInfo
+{
+   	//玩家ID
+   	long uid;
+   	//玩家名字
+   	string playerName;
+   	//是否准备好
+  	bool isReady;
+   	//玩家图标
+  	long playerIcon;
+   	//阵容信息
+   	Common_Lineup lineup;
+	long playerIconBgk;//图标框
+}
+
+/**********************************************************
+ * 召唤（宝箱）数据
+ **********************************************************/
+ALProtocol WCGGS2GC_SummonInfo
+{
+	//召唤位置（从0开始）
+	int pos;
+	//对应的召唤配置ID
+	long summonId;
+	//倒计时秒数
+	int pauseLeftSec;
+	//解锁开始时间
+	int beginUnlockTimeS;
+}
+
+/**********************************************************
+ * 背包物品数据
+ **********************************************************/
+ALProtocol WCGGS2GC_BagItemInfo
+{
+	long itemId;
+	long itemCount;
+	int lastGetTimeS;
+}
+/**********************************************************
+ * 玩家任务
+ **********************************************************/
+ALProtocol WCGGS2GC_GrowthTaskInfo
+{
+	//任务ID
+	long taskRefId;    
+	//当前计数器值
+	long curCounter;
+	//是否已经领取过奖励
+	bool hasTookReward;
+}
+
+/**********************************************************
+ * 准备状态玩家信息
+ **********************************************************/
+ALProtocol WCGGS2GC_CheckReadyPlayerInfo
+{
+	long uid;
+	long icon;
+	string name;
+	bool isReady;
+	long iconBgk;//图标框
+}
+
+/**********************************************************
+ * 限制商品次数和刷新时间
+ **********************************************************/
+ALProtocol WCGGS2GC_RechargedLimitGood
+{
+	long goodId;
+	int  rechargedNum;
+	int  limitNum;
+	int  restRemainSec;
+}
+
+/**********************************************************
+ * buff信息
+ **********************************************************/
+ALProtocol WCGGS2GC_BuffInfo
+{
+	long buffId;
+	long addTimeMs;
+	long leftTimeMs;
+	int  layer;
+}
+
+/**********************************************************
+ * battle stastics
+ **********************************************************/
+ALProtocol WCGGS2GC_BattleStatInfo
+{
+	int statType;
+	int win;
+	int lose;
+	int draw;
+}
+
+/**********************************************************
+ * battle stastics
+ **********************************************************/
+ALProtocol WCGGS2GC_SeasonRankInfo
+{
+	int seaonId;
+	int rank;
+	int grade;
+	int star;
+	int legendScore;
+	
+}
+
+/**********************************************************
+ * casual stastics
+ **********************************************************/
+ALProtocol WCGGS2GC_CasualStatInfo
+{
+	long casualId;
+	int win;
+	int lose;
+	int draw;
+	int serialWin;
+	int serialLose;
+}
+
+
+/**********************************************************
+ * facebook info
+ **********************************************************/
+ALProtocol WCGGS2GC_FBInfo
+{
+	long uid;
+	long fbId;
+}
+
+/**********************************************************
+ * SkinInfo info
+ **********************************************************/
+ALProtocol WCGGS2GC_Skininfo
+{
+	long skinId;
+	long remaniningTime;
+	bool isUsing;
+}
+
+
+
+/**********************************************************
+ *PVE Level Info
+ **********************************************************/
+ALProtocol WCGGS2GC_PveLevelInfo
+{
+	long levelId;
+	bool hasPassed;
+	long stars;//完成的星星,按位存储。
+	
+}
+
+/**********************************************************
+ *PVE Level Info
+ **********************************************************/
+ALProtocol WCGGS2GC_PveLevelInfo
+{
+	long levelId;
+	int starNum;//完成的星数
+	
+}
+
+
+/**********************************************************
+ *PVE Chapter reward
+ **********************************************************/
+ALProtocol WCGGS2GC_PveChapterRewardInfo
+{
+	long chapterId;
+	int  takenRewardIndex; //已领取取奖励索引
+}
+
+ALProtocol RESULT[错误码以及信息]
+{
+	int code[错误号];
+	string msg[错误消息];
+}
+
+ALProtocol Common_Context[通用上下文]
+{
+	int eventId[事件id];
+	long guid[上下文唯一id];
+}
+
+/**********************************************************
+ *MCC user struct
+ **********************************************************/
+ALProtocol MCC_Common_User_Extra
+{
+	String name;
+	long icon;
+	long iconFrame;
+	long lvl;
+	long grade;
+	int starhoner;
+	long legendscore;
+}
+ALProtocol MCC_Common_User
+{
+	long uid;
+	long gameUid;
+	MCC_Common_User_Extra extraInfo;
+}
+
+ALProtocol Common_MarqueeShowPosReadInfo
+{
+	int showPosId;
+	long hadReadDbId[已经读取的跑马灯唯一id];
+}
+
+ALProtocol Common_MarqueeRecordPriorityReadInfo
+{
+  long priorityId;
+  long hadReadDbId;
+}
+
+ALProtocol Common_MarqueeRecordReadInfo
+{
+    int showPosId;
+    long recordDbId;
+    Common_MarqueeRecordPriorityReadInfo[] priorityReadInfoList;
+}
+
+ALProtocol Common_MarqueeRecordReadInfoList
+{
+	Common_MarqueeRecordReadInfo[] infoList[已经读取的跑马灯信息列表];
+}
+
+ALProtocol Common_MarqueeInfo
+{
+	long dbId;
+	long refId;
+	long expiredTimeMs[过期时间];
+	string[] paramList;
+	int priorityId[优先级];
+	int durationSec[循环播放时长秒];
+	int durationCount[循环播放次数];
+	long uiResId[预制体ID];
+	string content[内容];
+	Enum.CommonEnum.EMarqueeCanDelType canDelType[是否可删除类型];
+	string[] channelList[渠道列表];
+	string showCondition[展示条件（客户端使用）];
+}
+
+ALProtocol Common_MarqueeShowPosInfo
+{
+	int showPosId;
+	Common_MarqueeInfo[] marqueeList;
+}
+
+ALProtocol Common_CrossServerGroupInfo
+{
+	long groupId[跨服分组id];
+	int[] usIdList[参与跨服的us列表];
+}
+
+ALProtocol Common_QuestionnaireInfo
+{
+	long questionnaireId[问卷实例id];
+	string urlLink[链接];
+	string questionnaireCode[问卷编码];
+	long startTimeMs[开始时间];
+	long endTimeMs[结束时间];
+	Common.NPCommonObj.NPCommon_ItemInfo[] rewardList[奖励列表];
+}
+
+ALProtocol Common_QuestionnaireRewardInfo
+{
+	long questionnaireId[问卷实例id];
+	bool hasDraw[是否已领取];
+}
+
+ALProtocol Common_TodayLikeCidInfo
+{
+	int lastFreshDate[上次刷新日期];
+    long[] likeCidList[点赞过玩家CID列表];
+}
+
+ALProtocol Common_ActivityCurrencyInfo
+{
+	long refId[配表id];
+	long count;
+}
+
+ALProtocol Common_AiChatMessage[AI聊天消息]
+{
+	Enum.CommonEnum.EAiChatRoleType roleType[角色类型];
+	String msg[聊天内容];
+}
+
+ALProtocol Common_RedDotInfo[红点信息]
+{
+	Enum.CommonEnum.ERedDotType redDotType[红点类型];
+	long needCheckTimeMs[需要检查的时间点];
+}

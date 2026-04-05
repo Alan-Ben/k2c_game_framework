@@ -1,0 +1,8 @@
+﻿JavaPackage GS2GC.p007_CommOp;
+csharpspace GS2GC.p007_CommOp;
+
+ALProtocol GS2GC_007_004_RetQuestionnaireInfo <7, 4>
+{
+    bool hasReward[是否有奖励];
+    Common.CommonObj.Common_QuestionnaireRewardInfo rewardInfo[问卷奖励信息];
+}

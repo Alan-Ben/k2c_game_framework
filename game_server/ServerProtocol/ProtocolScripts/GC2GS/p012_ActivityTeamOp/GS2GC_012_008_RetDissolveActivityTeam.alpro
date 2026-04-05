@@ -1,0 +1,6 @@
+﻿﻿JavaPackage GS2GC.p012_ActivityTeamOp;
+csharpspace GS2GC.p012_ActivityTeamOp;
+
+ALProtocol GS2GC_012_008_RetDissolveActivityTeam <12, 7>
+{
+}

@@ -1,0 +1,25 @@
+﻿JavaPackage Common.QuestEnum;
+csharpspace Common.QuestEnum;
+
+ALEnum EQuestStatus[任务状态]
+{
+	NONE;
+	WAITING[等待中];
+	PROGRESSING[进行中];
+}
+
+ALEnum EQuestType[任务类型]
+{
+	NONE;
+	MAIN[主线任务];
+	BRANCH[支线任务];
+	WISH[心愿任务];
+}
+
+ALEnum EDailyQuestType[日常任务类型枚举]
+{
+	NONE;
+	DAY[每日任务];
+	INN[旅店];
+	TREASURE_HUNT[太空寻宝];
+}

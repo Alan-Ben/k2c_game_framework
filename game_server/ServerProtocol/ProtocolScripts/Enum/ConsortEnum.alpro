@@ -1,0 +1,19 @@
+﻿JavaPackage Common.ConsortEnum;
+csharpspace Common.ConsortEnum;
+
+ALEnum EConsortStoryType[家人剧情类型]
+{
+	NONE;
+	PLAY[游玩];
+	CALL[邀约];
+	MARRY[成为家人];
+	FIRST_CALL[首次邀约];
+	SECOND_CALL[二次邀约];
+}
+
+ALEnum EConsortSourceType[家人来源类型]
+{
+	NONE;
+	TRAVEL[游历获取];
+	CHAPTER[关卡获取];
+}

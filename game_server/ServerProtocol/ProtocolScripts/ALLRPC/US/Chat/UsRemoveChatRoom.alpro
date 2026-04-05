@@ -1,0 +1,14 @@
+﻿JavaPackage ALLRPC.US.Chat;
+
+ALProtocol UsRemoveChatRoom_Req
+{
+	long roomId;
+}
+
+ALProtocol UsRemoveChatRoom_Return
+{
+}
+
+//[RPC] 移除聊天房间
+//[CLASS_PACKAGE] : AllRpcData.US_Service.Chat
+//[DEALER_PACKAGE] : USServer.RPCDispatcher.Chat

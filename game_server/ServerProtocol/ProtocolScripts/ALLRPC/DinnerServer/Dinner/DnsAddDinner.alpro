@@ -1,0 +1,21 @@
+﻿JavaPackage ALLRPC.DinnerServer.Dinner;
+
+import Common.DinnerObj.alpro;
+
+ALProtocol DnsAddDinner_Req
+{
+	long groupId[分组ID];
+	
+	Common.DinnerObj.Dinner_Idx dinnerIdx[宴会索引数据];
+	int startTs[宴会开启时间];
+	int sortId[宴会排序ID];
+	long[] joinerCidList[宴会参与玩家CID列表];
+}
+
+ALProtocol DnsAddDinner_Return
+{
+}
+
+//[RPC]向跨服宴会池增加宴会数据
+//[CLASS_PACKAGE] : AllRpcData.Dinner_Service.Dinner
+//[DEALER_PACKAGE] : DinnerServer.RPCDispatcher.Dinner

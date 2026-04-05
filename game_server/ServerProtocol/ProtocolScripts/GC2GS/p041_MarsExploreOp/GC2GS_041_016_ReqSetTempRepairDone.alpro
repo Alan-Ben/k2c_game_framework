@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p041_MarsExploreOp;
+csharpspace GC2GS.p041_MarsExploreOp;
+
+ALProtocol GC2GS_041_016_ReqSetTempRepairDone[火星探险-设置队伍维修立即完成] <41, 16>
+{
+    long teamId;
+}

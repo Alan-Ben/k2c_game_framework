@@ -1,0 +1,7 @@
+﻿﻿﻿JavaPackage GS2GC.p003_FristTeamActivityOp;
+csharpspace GS2GC.p003_FristTeamActivityOp;
+
+ALProtocol GS2GC_003_002_RetGameLogicRedirectTest <3, 2>
+{
+	long param1[测试参数1];
+}

@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p032_GuildOp;
+csharpspace GC2GS.p032_GuildOp;
+
+ALProtocol GC2GS_032_034_ReqGuildDispatchHero[联盟派遣大臣] <32, 34>
+{
+    long heroId;
+}

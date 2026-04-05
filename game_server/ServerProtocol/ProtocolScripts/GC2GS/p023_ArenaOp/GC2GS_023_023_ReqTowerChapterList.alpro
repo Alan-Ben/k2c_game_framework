@@ -1,0 +1,9 @@
+﻿JavaPackage GC2GS.p023_ArenaOp;
+csharpspace GC2GS.p023_ArenaOp;
+
+ALProtocol GC2GS_023_023_ReqTowerChapterList[请求章节列表] <23, 23>
+{
+    long chapterId;
+    int level[开始查询的位置];
+    int num;
+}

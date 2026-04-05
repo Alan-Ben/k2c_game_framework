@@ -1,0 +1,111 @@
+﻿JavaPackage Common.ArenaObj;
+csharpspace Common.ArenaObj;
+
+import Common.HeroObj.alpro;
+
+ALProtocol Arena_SingleBuffInfo[竞技场单buff数据]
+{
+	long buffId;
+	int num;
+}
+
+ALProtocol Arena_BuffList[竞技场buff数据]
+{
+	Arena_SingleBuffInfo[] buffList;
+}
+
+ALProtocol Arena_BattleInfo[竞技场战斗数据]
+{
+	long opponentCid[对手CID];
+	int hadDefeatNum[已击败对手数量];
+	int opponentHeroNum[对手大臣数量];
+	long opponentPower[对手战力];
+	Common.HeroObj.Hero_ArenaShowInfo[] canAttackHeroList[本回合可攻击英雄列表];
+	bool hadBuyBuff[本轮是否已购买buff];
+	Arena_SingleBuffInfo[] buffList[临时增益列表];
+
+	long heroId[我方大臣id];
+	long basePower[我方基础实力];
+	long deductedHp[我方被扣除血量];
+
+	bool isNpc[是否npc];
+	string npcName[npc名字];
+}
+
+ALProtocol Arena_BaseInfo[竞技场基础数据]
+{
+	long lastResetTimeMs[上次重置时间戳 毫秒];
+	int hadSelectAttackNum[已指定攻击次数];
+	int hadRandomAttackNum[已随机攻击次数];
+	int hadBuyRandomAttackNum[已购买随机攻击次数];
+	long[] hadSelectAttackHeroList[已指定攻击大臣id列表];
+	long[] hadRandomAttackHeroList[已随机攻击大臣id列表];
+}
+
+ALProtocol Arena_Info[竞技场数据]
+{
+	Arena_BaseInfo baseInfo[基础数据];
+	Arena_BattleInfo battleInfo[战斗数据];
+}
+
+ALProtocol Arena_RoundReward[竞技场回合奖励]
+{
+	Common.NPCommonObj.NPCommon_ItemInfo[] gainItem[获得道具列表];
+}
+
+ALProtocol Arena_RoundResult[竞技场回合结果]
+{
+	int round[回合数];
+	bool isDefeat[是否击败对手];
+	int opponentDeductinfluence[对手扣除影响力];
+	int gainInfluence[获得影响力];
+	int gainCoin[获得硬币];
+}
+
+ALProtocol Arena_BattleResult[竞技场战斗结果]
+{
+	int hadDefeatNum[已击败对手数量];
+	int opponentHeroNum[对手大臣数量];
+
+	int opponentDeductinfluence[对手扣除影响力];
+	int gainInfluence[获得影响力];
+	Common.NPCommonObj.NPCommon_ItemInfo[] gainItem[获得道具列表];
+
+	long addPower[实力提升];
+	long selectAttackItemId[指定攻击道具id];
+
+	bool isSettle[是否结算];
+}
+
+ALProtocol Arena_BattleReportShow[竞技场战报展示]
+{
+	long opponentCid[对手CID];
+	int defeatHeroNum[击败我方大臣数量];
+	int deductinfluence[扣除影响力];
+	long timestamp[时间戳];
+}
+
+ALProtocol Arena_BattleReport[竞技场战报]
+{
+	long dbId[数据id];
+	Arena_BattleReportShow showInfo[展示信息];
+}
+
+ALProtocol Arena_FightBackInfo[竞技场反击数据]
+{
+	long dbId[数据id];
+	Arena_BattleReportShow showInfo[展示信息];
+	bool hadFightBack[是否反击];
+}
+
+ALProtocol Arena_CelebrityRankInfo[竞技场名人榜数据]
+{
+	long dbId[数据id];
+	long attackerCid[攻击者CID];
+	string attackerName[攻击者名字];
+	string defenderName[防守者名字];
+	int defeatHeroNum[击败大臣数量];
+	bool isSelectAttack[是否指定攻击];
+	long timeMs[发生时间戳];
+}
+

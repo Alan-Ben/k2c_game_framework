@@ -1,0 +1,8 @@
+JavaPackage GS2GC.p014_ChildOp;
+csharpspace GS2GC.p014_ChildOp;
+ALProtocol GS2GC_014_002_RetTrainChild [训练子嗣（未成年）] <14, 2>
+{
+    long costValue[子嗣上课金币消耗];
+    long gainValue[子嗣上课获得伙伴经验];
+    long addBonus[子嗣收益加成增加];
+}

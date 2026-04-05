@@ -1,0 +1,11 @@
+JavaPackage NP2CS_R.p002_ServerInfoOP;
+import Enum.NPCommonEnum.alpro;
+
+/**
+ * HttpServer推送白名单增量更新到CommonServer
+ */
+ALProtocol NP2CS_R_002_015_ReqUpdateWhiteAccList[请求更新白名单列表] <2, 15>
+{
+    Enum.NPCommonEnum.EWhiteAccOpType opType[操作类型：ADD添加/REMOVE删除];
+    string acc[账号];
+}

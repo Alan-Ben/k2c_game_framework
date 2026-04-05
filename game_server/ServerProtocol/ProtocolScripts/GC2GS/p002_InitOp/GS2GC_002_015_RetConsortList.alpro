@@ -1,0 +1,10 @@
+﻿﻿﻿﻿﻿import Common.ConsortObj.alpro;
+﻿﻿﻿﻿JavaPackage GS2GC.p002_InitOp;
+csharpspace GS2GC.p002_InitOp;
+
+ALProtocol GS2GC_002_015_RetConsortList[家人初始化] <2, 15>
+{
+	Common.ConsortObj.Consort_Info[] consortList[已获得家人列表];
+	Common.ConsortObj.Consort_CGInfo[] unlockedCGList[已解锁的CG列表];
+	long[] randCallConsortIdList[随机邀约的指定妃子ID列表];
+}

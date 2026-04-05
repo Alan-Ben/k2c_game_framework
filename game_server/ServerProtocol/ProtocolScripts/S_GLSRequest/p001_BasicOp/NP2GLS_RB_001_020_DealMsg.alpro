@@ -1,0 +1,6 @@
+﻿JavaPackage NP2GLS_R.p001_BasicOp;
+
+ALProtocol NP2GLS_RB_001_020_DealMsg <1, 20>
+{
+	bytebuffer msg[具体的消息内容];
+}

@@ -1,0 +1,9 @@
+﻿JavaPackage GS2GC.p037_GuildDungeonOp;
+csharpspace GS2GC.p037_GuildDungeonOp;
+
+import Common.GuildDungeonObj.alpro;
+
+ALProtocol GS2GC_037_051_OnDungeonInstanceChg <37, 51>
+{
+	Common.GuildDungeonObj.GuildDungeon_InstanceInfo instanceInfo;
+}

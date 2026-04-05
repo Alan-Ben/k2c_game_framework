@@ -1,0 +1,7 @@
+﻿JavaPackage GS2GC.p004_PlayerOp;
+csharpspace GS2GC.p004_PlayerOp;
+
+ALProtocol GS2GC_004_067_OnOrderChg <4, 67>
+{
+	Common.CommonFuncObj.Order_Info orderInfo[订单信息];
+}

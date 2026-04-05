@@ -1,0 +1,7 @@
+JavaPackage GC2GS.p019_DinnerOp;
+csharpspace GC2GS.p019_DinnerOp;
+ALProtocol GC2GS_019_008_ReqJoinDinner [加入宴会] <19, 8>
+{
+    long instanceId[宴会实例ID];
+    long costId[消耗配置ID];
+}

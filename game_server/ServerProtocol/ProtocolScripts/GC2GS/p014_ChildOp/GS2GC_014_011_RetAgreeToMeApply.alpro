@@ -1,0 +1,5 @@
+JavaPackage GS2GC.p014_ChildOp;
+csharpspace GS2GC.p014_ChildOp;
+ALProtocol GS2GC_014_011_RetAgreeToMeApply [同意对玩家的指定联姻请求] <14, 11>
+{
+}

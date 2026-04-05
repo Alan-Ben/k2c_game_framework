@@ -1,0 +1,57 @@
+﻿import Enum.QuestEnum.alpro;
+
+JavaPackage Common.QuestObj;
+csharpspace Common.QuestObj;
+
+/**********************************************************
+ * 玩家任务数据
+ **********************************************************/
+
+ALProtocol Quest_Target[任务步骤目标数据]
+{
+	long targetId[目标配置ID];
+	long curCount[当前计数];
+}
+
+ALProtocol Quest_Step[任务步骤数据]
+{
+	long questStep;
+	Quest_Target[] targetList[任务目标数据列表];
+	int expireTimeTagS[任务超时时间标记，单位秒。0表示永久];
+}
+
+ALProtocol Quest_info[任务数据]
+{
+	long questId[任务配置ID];
+	Enum.QuestEnum.EQuestStatus questStatus[任务状态];
+	Quest_Step questStep[任务步骤数据];
+}
+
+ALProtocol Quest_Count[任务计数]
+{
+	long questId[任务配置ID];
+	int doneCount[完成次数];
+}
+ALProtocol DailyQuest_Info[日常任务数据]
+{
+	long targetId[目标配置ID];
+	long curCount[当前计数];
+	bool isFinish[是否已完成,且领取奖励];
+}
+
+ALProtocol DailyQuest_Group[日常任务刷新组]
+{
+	Enum.QuestEnum.EDailyQuestType type[日常任务类型];
+	long refreshSerial[刷新序列号];
+	long nextFreshTimeMs[下一次刷新时间];
+	DailyQuest_Info[] questInfoList[任务目标信息];
+	DailyQuest_Info[] randomQuestInfoList[随机任务目标信息];
+	long[] hasTakenActiveRewardRefIdList[已领取活跃度奖励id];
+}
+
+ALProtocol SystemQuest_Info[系统任务数据]
+{
+	long groupId[组ID];
+	int step[步骤];
+	long count[计数];
+}

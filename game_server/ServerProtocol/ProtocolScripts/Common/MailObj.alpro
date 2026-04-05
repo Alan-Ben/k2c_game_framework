@@ -1,0 +1,84 @@
+﻿import Common.NPInclude.alpro;
+JavaPackage Common.MailObj;
+csharpspace Common.MailObj;
+
+ALProtocol Mail_StatInfo[邮件统计信息]
+{
+	int totalMailCount[总邮件数量];
+	int unReadCount[未读邮件数量];
+	int unTakeCount[未领取邮件数量];
+}
+
+ALProtocol Mail_BriefInfo[邮件统简单信息]
+{
+	long mailUid[邮件唯一id];
+	int gainTimeSec[获得邮件时间，秒];
+	bool isRead[是否已读];
+	bool hasTaken[是否已领取物品];
+	Common.NPCommonObj.NPCommon_ItemInfo item[首个附件物品];
+	bool isMustRead[是否必读];
+	bool isLocked[是否收藏];
+	long mailRefId[邮件配表id];
+}
+
+ALProtocol Mail_TitleInfo[邮件系统标题展示信息]
+{
+	long mailUid[邮件唯一id];
+	int senderId[发送者];
+	long mailRefId[邮件配表id,由配表id决定类型];
+	String title[邮件标题];
+	int endTimeSec[结束时间戳，秒];
+	int gainTimeSec[获得邮件时间，秒];
+	bool isLocked[是否收藏];
+	bool isRead[是否已读];
+	bool hasItem[是否有物品];
+	bool hasTaken[是否已领取物品];
+	bool isReadOver[是否已经读完];
+	bool isMustRead[是否必读];
+	String[] contentReplace[替换文本列表];
+	
+	bytebuffer exTitleData[额外标题信息内容];
+}
+
+ALProtocol Mail_ExtTitleHeroInfo[邮件标题额外信息-大臣]
+{
+	long heroId;
+}
+
+ALProtocol Mail_DetailInfo[邮件详细信息]
+{
+	long mailUid[邮件唯一id];
+	String content[邮件文本内容];
+	String[] contentReplace[替换的参数内容];
+	Common.NPCommonObj.NPCommon_ItemInfo[] itemList[附件物品列表];
+	int exType[额外信息类型id];
+	bytebuffer exData[额外信息内容];
+}
+
+ALProtocol Mail_Data[邮件数据]
+{
+	long mailRefId[邮件配表id,可以为0];
+	int senderId[发送者id,为0读取配表];
+	String title[标题,为空读取配表];
+	String content[内容,为空读取配表];
+	string[] contentReplace[替换的参数内容];
+	Common.NPCommonObj.NPCommon_ItemList itemList[附件物品列表];
+	int exType[额外信息类型id];
+	bytebuffer exData[额外信息内容];
+	int createTimeSec[创建时间];
+	int expiredTimeSec[创建时间];
+	bool isMustRead[是否必读];
+	long phpMailId[后台邮件id];
+	bytebuffer exTitleData[额外标题信息内容];
+}
+
+ALProtocol Mail_DetailExt_HeroGain[邮件额外信息-HERO_GAIN骑士获得]
+{
+	long heroId;
+}
+
+ALProtocol Mail_DetailExt_HeroUpgradeStep[邮件额外信息-HERO_UP_STEP骑士升阶]
+{
+	long heroId;
+	int step;
+}

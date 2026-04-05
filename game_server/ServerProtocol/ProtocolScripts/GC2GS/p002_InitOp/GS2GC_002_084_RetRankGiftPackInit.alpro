@@ -1,0 +1,7 @@
+JavaPackage GS2GC.p002_InitOp;
+csharpspace GS2GC.p002_InitOp;
+
+ALProtocol GS2GC_002_084_RetRankGiftPackInit <2, 84>
+{
+	Common.RankGiftPackObj.RankGiftPack_Info giftPackInfo[冲榜礼包信息];
+}

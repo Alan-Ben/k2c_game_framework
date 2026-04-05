@@ -1,0 +1,7 @@
+﻿JavaPackage GS2GC.p004_PlayerOp;
+csharpspace GS2GC.p004_PlayerOp;
+
+ALProtocol GS2GC_004_069_OnRemoveForbidChat[解除禁言数据推送] <4, 69>
+{
+	int roomType;
+}

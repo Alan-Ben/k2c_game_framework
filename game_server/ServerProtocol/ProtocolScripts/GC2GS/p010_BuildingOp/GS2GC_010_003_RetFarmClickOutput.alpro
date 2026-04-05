@@ -1,0 +1,5 @@
+JavaPackage GS2GC.p010_BuildingOp;
+csharpspace GS2GC.p010_BuildingOp;
+ALProtocol GS2GC_010_003_RetFarmClickOutput [请求点击农田产出] <10, 3>
+{
+}

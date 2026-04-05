@@ -1,0 +1,15 @@
+JavaPackage Common.EventEnum;
+csharpspace Common.EventEnum;
+
+ALEnum ECommonEventType[通用事件类型]
+{
+	NONE;
+	AWARD[奖励事件];
+	CHOICE[选项事件];
+	DIALOG[剧情事件];
+	DISPATCH[派遣事件];
+	PLOT_DIALOG[剧情对话事件];
+	MINI_GAME[小游戏事件];
+	FITTING[试穿事件];
+	AVATAR_SCORE[评分事件];
+}

@@ -1,0 +1,11 @@
+﻿JavaPackage GS2GC.p030_ShopOp;
+csharpspace GS2GC.p030_ShopOp;
+
+/**********************************************************
+ * 商店刷新推送
+ **********************************************************/
+ALProtocol GS2GC_030_051_OnShopItemChg <30, 51>
+{
+    long shopRefId[商店配置id];
+    Common.ShopObj.Shop_ItemInfo shopItem[商品数据变更];
+}

@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p041_MarsExploreOp;
+csharpspace GC2GS.p041_MarsExploreOp;
+
+ALProtocol GC2GS_041_009_ReqGetBossDoneReward[火星探险-获取Boss事件战斗完成奖励] <41, 9>
+{
+	long id[事件实例ID];
+}

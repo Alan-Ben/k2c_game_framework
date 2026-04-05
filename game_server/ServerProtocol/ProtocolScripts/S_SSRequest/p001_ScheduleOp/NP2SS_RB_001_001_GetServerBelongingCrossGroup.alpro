@@ -1,0 +1,7 @@
+﻿JavaPackage NP2SS_RB.p001_ScheduleOp;
+
+ALProtocol NP2SS_RB_001_001_GetServerBelongingCrossGroup <1, 1>
+{
+	bool inGroup[是否在分组中];
+	Common.NpServerObj.NPServerObj_CrossServerGroupInfo groupInfo[分组信息];
+}

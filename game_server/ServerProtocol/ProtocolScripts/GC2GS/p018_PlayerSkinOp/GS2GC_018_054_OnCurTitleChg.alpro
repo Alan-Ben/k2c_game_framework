@@ -1,0 +1,7 @@
+JavaPackage GS2GC.p018_PlayerSkinOp;
+csharpspace GS2GC.p018_PlayerSkinOp;
+import Common.NPCommonObj.alpro;
+ALProtocol GS2GC_018_054_OnCurTitleChg [当前穿戴称号变化] <18, 54>
+{
+    Common.NPCommonObj.PlayerInfo_CurTitle curInfo[玩家当前穿戴称号数据];
+}

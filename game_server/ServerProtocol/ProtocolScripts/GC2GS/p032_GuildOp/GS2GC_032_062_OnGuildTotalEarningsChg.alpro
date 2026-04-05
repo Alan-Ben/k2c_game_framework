@@ -1,0 +1,7 @@
+﻿JavaPackage GS2GC.p032_GuildOp;
+csharpspace GS2GC.p032_GuildOp;
+
+ALProtocol GS2GC_032_062_OnGuildTotalEarningsChg <32, 62>
+{
+	long totalEarnings;
+}

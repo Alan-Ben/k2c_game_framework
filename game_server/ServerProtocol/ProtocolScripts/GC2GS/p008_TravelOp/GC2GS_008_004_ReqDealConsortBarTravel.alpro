@@ -1,0 +1,8 @@
+JavaPackage GC2GS.p008_TravelOp;
+csharpspace GC2GS.p008_TravelOp;
+ALProtocol GC2GS_008_004_ReqDealConsortBarTravel [处理妃子酒馆游历事件] <8, 4>
+{
+    long instanceId[游历事件ID];
+    long consortId[妃子ID];
+    long costId[消耗配置ID];
+}

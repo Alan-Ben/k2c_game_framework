@@ -1,0 +1,17 @@
+JavaPackage ALLRPC.US.Mars;
+
+ALProtocol MarsRallyJoinFailBack_Req
+{
+    long cid[玩家CID];
+    long teamId[队伍ID];
+}
+
+ALProtocol MarsRallyJoinFailBack_Return
+{
+}
+
+//[RPC] 集结加入失败后遣返队伍
+//[CLASS_PACKAGE] : AllRpcData.US_Service.Mars
+//[DEALER_PACKAGE] : USServer.RPCDispatcher.Mars
+
+

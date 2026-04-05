@@ -1,0 +1,8 @@
+﻿JavaPackage GC2GS.p032_GuildOp;
+csharpspace GC2GS.p032_GuildOp;
+
+ALProtocol GC2GS_032_009_ReqChgGuildName[请求变更联盟名称] <32, 9>
+{
+	string name;
+	string simpleName;
+}

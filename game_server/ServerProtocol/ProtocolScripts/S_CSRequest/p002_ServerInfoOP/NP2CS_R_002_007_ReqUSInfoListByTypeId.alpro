@@ -1,0 +1,9 @@
+JavaPackage NP2CS_R.np_p002_serverInfoOp;
+
+/**********************************************************
+ * 查询服务器列表信息
+ **********************************************************/
+ALProtocol NP2CS_R_002_007_ReqUSInfoListByTypeId <2, 7>
+{
+	int usTypeId[需要查询的服务typeId];
+}

@@ -1,0 +1,7 @@
+JavaPackage GS2GC.p010_BuildingOp;
+csharpspace GS2GC.p010_BuildingOp;
+
+ALProtocol GS2GC_010_057_OnBusinessUnlockProduct [经营建筑解锁产品推送] <10, 57>
+{
+    long refId[产品ID];
+}

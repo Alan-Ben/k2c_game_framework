@@ -1,0 +1,6 @@
+JavaPackage GS2GC.p014_ChildOp;
+csharpspace GS2GC.p014_ChildOp;
+ALProtocol GS2GC_014_013_RetApplyToPlayer [联姻请求-对指定玩家发起请求] <14, 13>
+{
+    bool isPlayerRefuseAllRequest[是否拒绝所有联姻请求];
+}

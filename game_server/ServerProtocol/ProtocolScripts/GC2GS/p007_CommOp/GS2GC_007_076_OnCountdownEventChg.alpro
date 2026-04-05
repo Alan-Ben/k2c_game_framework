@@ -1,0 +1,7 @@
+﻿JavaPackage GS2GC.p007_CommOp;
+csharpspace GS2GC.p007_CommOp;
+
+ALProtocol GS2GC_007_076_OnCountdownEventChg <7, 76>
+{
+	Common.CountdownEventObj.CountdownEvent_Info info[任务数据];
+}

@@ -1,0 +1,11 @@
+﻿JavaPackage NPGC2GS.p001_BasicOp;
+csharpspace NPGC2GS.p001_BasicOp;
+
+/**********************************************************
+ * 在客户端快速断线重连的时候，走的快速连接通道
+ **********************************************************/
+ALProtocol NPGC2GS_001_009_ResumeUSConnection <1, 9>
+{
+	long clientSerialize[客户端用于识别的序列号];
+	int serverLogicId[用户挑选的US服务器LogicId];
+}

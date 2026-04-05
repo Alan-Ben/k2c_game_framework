@@ -1,0 +1,10 @@
+JavaPackage GC2GS.p015_ConsortOp;
+csharpspace GC2GS.p015_ConsortOp;
+
+ALProtocol GC2GS_015_020_ReqConsortChooseDialogueOption [家人-选择对话选项] <15, 20>
+{
+    long consortId[家人ID];
+    long dialogueId[对话ID];
+    long sentenceId[句子ID];
+    long optionId[选项ID];
+}

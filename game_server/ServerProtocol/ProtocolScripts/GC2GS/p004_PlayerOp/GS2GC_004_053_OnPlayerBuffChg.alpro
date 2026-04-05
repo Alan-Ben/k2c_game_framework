@@ -1,0 +1,8 @@
+﻿﻿﻿﻿﻿import Common.NPCommonObj.alpro;
+JavaPackage GS2GC.p004_PlayerOp;
+csharpspace GS2GC.p004_PlayerOp;
+
+ALProtocol GS2GC_004_053_OnPlayerBuffChg <4, 53>
+{
+	Common.NPCommonObj.NPCommon_PlayerBuffInfo buff;
+}

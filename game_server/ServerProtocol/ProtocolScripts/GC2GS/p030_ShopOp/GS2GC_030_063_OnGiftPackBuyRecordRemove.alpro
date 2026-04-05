@@ -1,0 +1,9 @@
+﻿﻿import Common.CommonFuncObj.alpro;
+
+JavaPackage GS2GC.p030_ShopOp;
+csharpspace GS2GC.p030_ShopOp;
+
+ALProtocol GS2GC_030_063_OnGiftPackBuyRecordRemove [礼包记录移除推送] <30, 63>
+{
+     long[] giftPackIdList[礼包id列表];
+}

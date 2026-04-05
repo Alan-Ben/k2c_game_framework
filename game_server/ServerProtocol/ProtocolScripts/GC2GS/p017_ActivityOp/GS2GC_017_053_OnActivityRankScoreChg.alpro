@@ -1,0 +1,11 @@
+﻿﻿JavaPackage GS2GC.p017_ActivityOp;
+csharpspace GS2GC.p017_ActivityOp;
+
+ALProtocol GS2GC_017_053_OnActivityRankScoreChg [活动排行榜分数变更] <17, 53>
+{
+     long instanceId[活动实例ID];
+     long rankId[排行榜ID];
+     int oriRank[原排名];
+     int curRank[排名];
+     long score;
+}

@@ -1,0 +1,14 @@
+﻿JavaPackage ALLRPC.Common.Chat;
+
+﻿﻿﻿﻿﻿import Common.ServerObj.alpro;
+
+ALProtocol JoinChatRoom_Req
+{
+	long roomId;
+	Common.ServerObj.ServerObj_ChatUser chatUser[聊天房间用户];
+}
+
+ALProtocol JoinChatRoom_Return
+{
+	long roomId;
+}

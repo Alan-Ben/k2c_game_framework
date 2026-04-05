@@ -1,0 +1,9 @@
+﻿JavaPackage GC2GS.p004_PlayerOp;
+csharpspace GC2GS.p004_PlayerOp;
+
+ALProtocol GC2GS_004_042_ReqGraveRecordList[杰出者数据记录] <4, 42>
+{
+    int typeId;
+	int curPage[当前页数];
+	int pageCount[每页数量，不超过50条];
+}

@@ -1,0 +1,16 @@
+java_path= ../Common/src
+java_package=NPCommon.ErrMain
+id	name	desc
+
+1	DINNER_OWNER_REWARD	宴会未领取开宴奖励
+2	DINNER_STARTED	宴会已开启
+3	DINNER_NOT_PERMIT	宴会不允许开启
+4	DINNER_PERMIT_NOT_FOUND	宴会凭证不存在
+5	DINNER_NOT_FOUND	宴会不存在
+6	DINNER_END	宴会已结束
+7	DINNER_FULL	宴会已经满座
+8	DINNER_JOINED	已经加入宴会
+9	DINNER_IS_OWN	是自己举办的宴会
+10	DINNER_OWNER_REWARD_NOT_FOUND	没有开宴奖励
+11	DINNER_OWNER_REWARD_FAIL	开宴奖励领取失败
+12	DINNER_JOIN_CD_NOT_ENOUGH	赴宴次数限制

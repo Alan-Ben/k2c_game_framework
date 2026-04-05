@@ -1,0 +1,10 @@
+﻿JavaPackage WCGPS2LBS.p001_BasicOp;
+
+/**********************************************************
+ * 日志服务器变更的消息
+ **********************************************************/
+ALProtocol WCGPS2LBS_001_001_LogServerChanged <1, 1>
+{
+	int serverTypeId;
+	bool addOrRemoved; //新加日志服或移除日志服
+}

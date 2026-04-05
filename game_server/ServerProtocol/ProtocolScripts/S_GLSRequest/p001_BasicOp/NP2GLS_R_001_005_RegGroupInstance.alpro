@@ -1,0 +1,8 @@
+﻿JavaPackage NP2GLS_R.p001_BasicOp;
+
+ALProtocol NP2GLS_R_001_005_RegGroupInstance <1, 5>
+{
+	long groupId;
+	long activityId;
+	bytebuffer addInfo;
+}

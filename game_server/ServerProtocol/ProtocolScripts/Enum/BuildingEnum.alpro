@@ -1,0 +1,8 @@
+﻿JavaPackage Common.BuildingEnum;
+csharpspace Common.BuildingEnum;
+
+ALEnum EBuildingFuncEnum[建筑功能类型]
+{
+	FARM[农田建筑];
+	BUSINESS[经营建筑];
+}

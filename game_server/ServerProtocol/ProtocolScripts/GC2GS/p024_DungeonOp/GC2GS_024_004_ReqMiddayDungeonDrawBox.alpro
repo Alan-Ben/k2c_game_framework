@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p024_DungeonOp;
+csharpspace GC2GS.p024_DungeonOp;
+
+ALProtocol GC2GS_024_004_ReqMiddayDungeonDrawBox[领取午间副本宝箱] <24, 4>
+{
+    long dbId[宝箱数据ID];
+}

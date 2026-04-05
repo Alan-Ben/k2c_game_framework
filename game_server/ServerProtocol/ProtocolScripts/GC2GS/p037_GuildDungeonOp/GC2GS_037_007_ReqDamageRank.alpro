@@ -1,0 +1,8 @@
+﻿JavaPackage GC2GS.p037_GuildDungeonOp;
+csharpspace GC2GS.p037_GuildDungeonOp;
+
+ALProtocol GC2GS_037_007_ReqDamageRank[公会副本-伤害排行榜] <37, 7>
+{
+	int page;
+	int pageNum[每页数量，不超过100];
+}

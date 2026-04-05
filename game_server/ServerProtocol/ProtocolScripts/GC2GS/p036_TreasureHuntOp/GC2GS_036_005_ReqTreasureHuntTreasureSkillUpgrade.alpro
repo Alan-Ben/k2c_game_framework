@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p036_TreasureHuntOp;
+csharpspace GC2GS.p036_TreasureHuntOp;
+
+ALProtocol GC2GS_036_005_ReqTreasureHuntTreasureSkillUpgrade[太空寻宝-奇物技能升级] <36, 5>
+{
+	long treasureId[奇物ID];
+}

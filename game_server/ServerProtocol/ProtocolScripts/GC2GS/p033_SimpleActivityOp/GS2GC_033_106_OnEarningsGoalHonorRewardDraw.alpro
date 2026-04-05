@@ -1,0 +1,8 @@
+﻿JavaPackage GS2GC.p033_SimpleActivityOp;
+csharpspace GS2GC.p033_SimpleActivityOp;
+
+ALProtocol GS2GC_033_106_OnEarningsGoalHonorRewardDraw <33, 106>
+{
+    long refId;
+    long activityInstanceId[活动实例ID];
+}

@@ -1,0 +1,8 @@
+﻿JavaPackage GS2GC.p002_InitOp;
+csharpspace GS2GC.p002_InitOp;
+
+ALProtocol GS2GC_002_042_RetQuestionnaireInit <2, 42>
+{
+	Common.CommonObj.Common_QuestionnaireInfo[] infoList[问卷列表];
+	Common.CommonObj.Common_QuestionnaireRewardInfo[] rewardList[问卷奖励列表];
+}

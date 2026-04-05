@@ -1,0 +1,9 @@
+﻿JavaPackage GS2GC.p040_MarsPeopleOp;
+csharpspace GS2GC.p040_MarsPeopleOp;
+
+import Common.MarsObj.alpro;
+
+ALProtocol GS2GC_040_053_OnLetterChg[火星居民信件变更] <40, 53>
+{
+	Common.MarsObj.Mars_Letter letter;
+}

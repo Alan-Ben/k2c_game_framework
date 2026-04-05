@@ -1,0 +1,7 @@
+﻿JavaPackage NP2GLS_R.p001_BasicOp;
+
+ALProtocol NP2GLS_R_001_008_RegUs <1, 8>
+{
+	long instanceId[游戏逻辑实例ID];
+	int usId[注册的US服务器ID];
+}

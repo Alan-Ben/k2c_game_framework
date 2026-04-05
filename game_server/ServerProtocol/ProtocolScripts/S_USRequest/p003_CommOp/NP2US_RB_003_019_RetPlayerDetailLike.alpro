@@ -1,0 +1,6 @@
+﻿JavaPackage WCGCS2US_RB.p003_CommOp;
+
+ALProtocol NP2US_RB_003_019_RetPlayerDetailLike <3, 19>
+{
+    long likeCount;
+}

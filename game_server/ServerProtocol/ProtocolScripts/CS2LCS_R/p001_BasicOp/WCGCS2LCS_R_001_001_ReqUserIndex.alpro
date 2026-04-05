@@ -1,0 +1,9 @@
+﻿JavaPackage WCGCS2LCS_R.p001_BasicOp;
+
+/**********************************************************
+ * 请求玩家的UserIndex
+ **********************************************************/
+ALProtocol WCGCS2LCS_R_001_001_ReqUserIndex <1, 1>
+{
+	long uid;
+}

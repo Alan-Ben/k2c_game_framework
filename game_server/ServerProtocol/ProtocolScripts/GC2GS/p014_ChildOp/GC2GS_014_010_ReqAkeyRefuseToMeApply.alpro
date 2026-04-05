@@ -1,0 +1,5 @@
+JavaPackage GC2GS.p014_ChildOp;
+csharpspace GC2GS.p014_ChildOp;
+ALProtocol GC2GS_014_010_ReqAkeyRefuseToMeApply [一键拒绝对玩家的指定联姻请求] <14, 10>
+{
+}

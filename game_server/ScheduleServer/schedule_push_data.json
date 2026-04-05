@@ -1,0 +1,40 @@
+{
+  "scheduleId": 21,
+  "submitCount": 3,
+  "prePushTime": "2025-09-20 17:00:00",
+  "activity": {
+    "activityId": 99999,
+    "startTime": "2025-09-20 21:00:00",
+    "endTime": "2025-10-29 23:00:00",
+    "closeTime": "2025-10-29 23:00:00"
+  },
+  "list": [
+    {
+      "usIdList": [
+        [1, 2, 3],
+        [9]
+      ],
+      "resFileList": [
+        ["php_goods", "76_1_1_20250915175443"]
+      ]
+    },
+    {
+      "usIdList": [
+        [4],
+        [6, 7, 8],
+        [10, 11, 12, 13, 14, 15]
+      ],
+      "resFileList": [
+        ["php_goods", "76_1_5_20250915175443"]
+      ]
+    },
+    {
+      "usIdList": [
+        [5]
+      ],
+      "resFileList": [
+        ["php_goods", "76_1_5_20250915175443"]
+      ]
+    }
+  ]
+}

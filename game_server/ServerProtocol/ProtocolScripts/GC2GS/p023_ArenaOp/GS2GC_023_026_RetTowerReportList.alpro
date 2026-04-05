@@ -1,0 +1,7 @@
+﻿﻿JavaPackage GS2GC.p023_ArenaOp;
+csharpspace GS2GC.p023_ArenaOp;
+
+ALProtocol GS2GC_023_026_RetTowerReportList <23, 26>
+{
+    Common.TowerObj.Tower_ReportInfo[] reportList[战报列表];
+}

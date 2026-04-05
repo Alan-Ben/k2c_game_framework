@@ -1,0 +1,11 @@
+﻿import Common.QuestObj.alpro;
+JavaPackage GS2GC.p002_InitOp;
+csharpspace GS2GC.p002_InitOp;
+
+/**********************************************************
+ * 任务数据初始化
+ **********************************************************/
+ALProtocol GS2GC_002_255_OnQuestCountInit <2, 255>
+{
+	Common.QuestObj.Quest_Count[] questCountList[任务计数列表];
+}

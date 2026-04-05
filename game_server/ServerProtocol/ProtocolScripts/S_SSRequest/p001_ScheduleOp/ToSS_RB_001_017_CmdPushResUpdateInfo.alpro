@@ -1,0 +1,8 @@
+JavaPackage NP2SS_RB.p001_ScheduleOp;
+
+/**
+ * 命令推送资源更新信息响应
+ */
+ALProtocol ToSS_RB_001_017_CmdPushResUpdateInfo <1, 17>
+{
+}

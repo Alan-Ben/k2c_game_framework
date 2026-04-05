@@ -1,0 +1,8 @@
+﻿JavaPackage WCGCS2US_R.p003_CommOp;
+
+import Common.ServerObj.alpro;
+
+ALProtocol NP2US_R_003_015_ReqSendMarquee[发送跑马灯] <3, 15>
+{
+	Common.ServerObj.ServerObj_PHPMarquee marquee[跑马灯数据];
+}

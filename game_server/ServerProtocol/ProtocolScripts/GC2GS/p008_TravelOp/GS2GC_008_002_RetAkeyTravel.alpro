@@ -1,0 +1,7 @@
+JavaPackage GS2GC.p008_TravelOp;
+csharpspace GS2GC.p008_TravelOp;
+import Common.TravelObj.alpro;
+ALProtocol GS2GC_008_002_RetAkeyTravel [一键游历] <8, 2>
+{
+    Common.TravelObj.Travel_EventResult[] resultList[游历事件结果列表];
+}

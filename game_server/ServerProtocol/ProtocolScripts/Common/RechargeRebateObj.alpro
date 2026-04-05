@@ -1,0 +1,10 @@
+JavaPackage Common.RechargeRebateObj;
+csharpspace Common.RechargeRebateObj;
+
+// 充值返利组信息
+ALProtocol RechargeRebate_GroupInfo[充值返利组信息]
+{
+	long groupId[组ID];
+	long count[计数 VIP经验或充值天数];
+	long[] hadDrawStepList[已领取档位ID列表];
+}

@@ -1,0 +1,6 @@
+JavaPackage GC2GS.p041_MarsExploreOp;
+csharpspace GC2GS.p041_MarsExploreOp;
+
+ALProtocol GC2GS_041_022_ReqLastPVPLogFlag[火星探险-请求最新PVP日志的标志] <41, 22>
+{
+}

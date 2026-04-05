@@ -1,0 +1,11 @@
+﻿JavaPackage GC2GS.p011_ClientDataOp;
+csharpspace GC2GS.p011_ClientDataOp;
+
+ALProtocol GC2GS_011_003_ReqWebEncryptedData <11, 3>
+{
+	float userPay[账号充值美金价值];
+	string langCode[用户语言];
+	string project[项目id];
+	string packageName[项目名称];
+	string products[商品列表];
+}

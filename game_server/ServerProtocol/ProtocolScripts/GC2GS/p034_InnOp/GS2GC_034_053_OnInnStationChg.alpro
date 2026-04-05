@@ -1,0 +1,9 @@
+﻿JavaPackage GS2GC.p034_InnOp;
+csharpspace GS2GC.p034_InnOp;
+
+import Common.InnObj.alpro;
+
+ALProtocol GS2GC_034_053_OnInnStationChg [旅店设施信息变更] <34, 53>
+{
+    Common.InnObj.Inn_StationInfo stationInfo[设施信息];
+}

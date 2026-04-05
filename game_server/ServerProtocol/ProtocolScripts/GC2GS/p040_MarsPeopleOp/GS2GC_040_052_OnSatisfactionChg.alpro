@@ -1,0 +1,8 @@
+﻿JavaPackage GS2GC.p040_MarsPeopleOp;
+csharpspace GS2GC.p040_MarsPeopleOp;
+
+
+ALProtocol GS2GC_040_052_OnSatisfactionChg[满意度变化] <40, 52>
+{
+	int satisfaction[满意度万分比]; 
+}

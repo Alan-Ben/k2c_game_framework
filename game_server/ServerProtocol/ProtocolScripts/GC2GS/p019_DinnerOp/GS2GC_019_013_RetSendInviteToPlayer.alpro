@@ -1,0 +1,6 @@
+JavaPackage GS2GC.p019_DinnerOp;
+csharpspace GS2GC.p019_DinnerOp;
+ALProtocol GS2GC_019_013_RetSendInviteToPlayer [对指定玩家发起邀请] <19, 13>
+{
+    long msgId[私聊消息ID];
+}

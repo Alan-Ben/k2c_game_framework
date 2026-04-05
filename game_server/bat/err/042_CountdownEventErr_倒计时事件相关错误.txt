@@ -1,0 +1,6 @@
+java_path= ../Common/src
+java_package=NPCommon.ErrMain
+id	name	desc
+1	NO_ONGOING_COUNTDOWN_EVENT	没有进行中的倒计时事件
+2	COUNTDOWN_EVENT_RELATIVE_QUEST_NOT_FOUND	倒计时事件相关的任务不存在
+4	COUNTDOWN_EVENT_IN_TIME	倒计时事件未超时

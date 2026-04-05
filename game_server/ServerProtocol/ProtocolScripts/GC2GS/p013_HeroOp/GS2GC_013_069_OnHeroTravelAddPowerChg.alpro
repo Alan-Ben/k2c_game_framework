@@ -1,0 +1,8 @@
+﻿﻿JavaPackage GS2GC.p013_HeroOp;
+csharpspace GS2GC.p013_HeroOp;
+
+ALProtocol GS2GC_013_069_OnHeroTravelAddPowerChg[大臣游历额外加成实力推送]<13, 69>
+{
+	long heroId;
+	long value;
+}

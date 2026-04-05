@@ -1,0 +1,6 @@
+﻿JavaPackage GC2GS.p032_GuildOp.GuildOpStructure;
+
+ALProtocol GuildOp_RetLongInfo[返回一个长整形数据]
+{
+	long num;
+}

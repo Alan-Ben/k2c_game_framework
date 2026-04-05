@@ -1,0 +1,7 @@
+JavaPackage GC2GS.p019_DinnerOp;
+csharpspace GC2GS.p019_DinnerOp;
+ALProtocol GC2GS_019_012_ReqGetNextDinnerInfo [取指定宴会的下一条宴会数据] <19, 12>
+{
+    long instanceId[宴会实例ID];
+    int idx[当前排序];
+}

@@ -1,0 +1,18 @@
+﻿JavaPackage ALLRPC.US.Child;
+
+﻿﻿﻿﻿﻿import Common.ChildObj.alpro;
+
+ALProtocol GetServerPoolAdult_Req
+{
+	long cid;
+	long adultId;
+}
+
+ALProtocol GetServerPoolAdult_Return
+{
+	Common.ChildObj.Adult_PoolInfo poolAdult[匹配池子嗣数据];
+}
+
+//[RPC] 获取联姻池指定子嗣数据
+//[CLASS_PACKAGE] : AllRpcData.US_Service.Child
+//[DEALER_PACKAGE] : USServer.RPCDispatcher.Child

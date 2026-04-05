@@ -1,0 +1,10 @@
+﻿JavaPackage GC2GS.p022_ChatOp;
+csharpspace GC2GS.p022_ChatOp;
+
+ALProtocol GC2GS_022_004_ReqPlayerSendRoomMsg[发送聊天房间消息-旧版协议，后续使用新版协议22-6] <22, 4>
+{
+    long roomId[聊天房间ID];
+    int msgType[消息类型,解释消息内容];
+    bytebuffer gameUser[发送者信息];
+    bytebuffer gameContent[消息内容];
+}

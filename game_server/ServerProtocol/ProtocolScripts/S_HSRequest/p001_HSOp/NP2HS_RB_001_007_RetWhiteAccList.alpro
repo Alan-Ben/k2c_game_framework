@@ -1,0 +1,10 @@
+JavaPackage NP2HS_RB.p001_HSOp;
+import Common.ServerObj.alpro;
+
+/**
+ * HttpServer返回白名单列表
+ */
+ALProtocol NP2HS_RB_001_007_RetWhiteAccList[返回白名单列表] <1, 7>
+{
+    Common.ServerObj.ServerObj_WhiteAccList whiteAccList[白名单列表];
+}

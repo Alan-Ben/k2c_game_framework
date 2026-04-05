@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p024_DungeonOp;
+csharpspace GC2GS.p024_DungeonOp;
+
+ALProtocol GC2GS_024_014_ReqEveningDungeonRankList[晚间副本排行榜列表] <24, 14>
+{
+    
+}

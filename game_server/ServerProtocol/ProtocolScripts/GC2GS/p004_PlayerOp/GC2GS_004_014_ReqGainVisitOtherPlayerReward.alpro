@@ -1,0 +1,9 @@
+JavaPackage GC2GS.p004_PlayerOp;
+csharpspace GC2GS.p004_PlayerOp;
+
+/**********************************************************
+ * 查询某玩家数据
+ **********************************************************/
+ALProtocol GC2GS_004_014_ReqGainVisitOtherPlayerReward <4, 14>
+{
+}

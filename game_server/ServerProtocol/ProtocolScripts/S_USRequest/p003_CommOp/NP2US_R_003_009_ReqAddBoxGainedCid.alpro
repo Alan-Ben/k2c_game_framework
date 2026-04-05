@@ -1,0 +1,7 @@
+﻿JavaPackage WCGCS2US_R.p003_CommOp;
+
+ALProtocol NP2US_R_003_009_ReqAddBoxGainedCid[请求宝箱已领取玩家数据] <3, 9>
+{
+	long instanceId;
+	long cid;
+}

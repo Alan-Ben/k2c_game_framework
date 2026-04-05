@@ -1,0 +1,9 @@
+﻿JavaPackage WCGCS2US_R.p003_CommOp;
+
+import Common.NpServerObj.alpro;
+
+ALProtocol NP2US_R_003_014_ReqSendUserMail[发送玩家邮件] <3, 14>
+{
+	long cid;
+	Common.NpServerObj.NpServerObj_PlatFormMail mailData;
+}

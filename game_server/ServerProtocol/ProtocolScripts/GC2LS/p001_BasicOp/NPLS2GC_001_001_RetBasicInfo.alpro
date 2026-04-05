@@ -1,0 +1,12 @@
+﻿JavaPackage NPLS2GC.p001_BasicOp;
+csharpspace NPLS2GC.p001_BasicOp;
+
+/**********************************************************
+ * 返回用户的基本信息
+ **********************************************************/
+ALProtocol NPLS2GC_001_001_RetBasicInfo <1, 1>
+{
+	string uid;
+	//国家枚举索引
+	int countryIdx;
+}

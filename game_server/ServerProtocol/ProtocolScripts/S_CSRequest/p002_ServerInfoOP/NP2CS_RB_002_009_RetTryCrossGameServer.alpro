@@ -1,0 +1,7 @@
+﻿﻿JavaPackage NP2CS_RB.np_p002_serverInfoOp;
+
+ALProtocol NP2CS_RB_002_009_RetTryCrossGameServer <2, 9>
+{
+	int serverTypeId;
+	long instanceId[对应生成的实例ID];
+}

@@ -1,0 +1,102 @@
+﻿JavaPackage Common.HeroObj;
+csharpspace Common.HeroObj;
+
+import Enum.CommonEnum.alpro;
+
+ALProtocol Hero_SuitSkillInfo[大臣套系技能信息]
+{
+	long suitSkillId[套系技能id];
+	int level[等级];
+}
+
+ALProtocol Hero_SuitInfo[大臣套系信息]
+{
+	long suitId[套系id];
+	Hero_SuitSkillInfo[] suitSkillList[套系技能列表];
+}
+
+ALProtocol Hero_BusinessSkillInfo[大臣经营技能信息]
+{
+	long businessSkillId[经营技能id];
+	int level[等级];
+}
+
+ALProtocol Hero_TalentSkillInfo[大臣资质技能信息]
+{
+	long tealentSkillId[资质技能id];
+	int level[等级];
+}
+
+ALProtocol Hero_SkinInfo[大臣皮肤信息]
+{
+	long skinId[皮肤id];
+	int level[等级];
+}
+
+ALProtocol Hero_HaloInfo[大臣光环信息]
+{
+	long heroId[大臣id];
+	bool isUnlock[是否解锁];
+	int level[等级];
+}
+
+ALProtocol Hero_PlaceInfo[大臣放置信息]
+{
+	long buildingId[所在建筑id];
+	long serial[放置序列号];
+}
+
+ALProtocol Hero_Info[大臣信息]
+{
+	long heroId[大臣id];
+	long skinId[皮肤id];
+	int level[等级];
+	int step[阶段];
+	int star[觉醒星级];
+	Hero_SkinInfo[] skinList[皮肤列表];
+	Hero_TalentSkillInfo[] talentSkillList[资质技能列表];
+	Hero_BusinessSkillInfo[] businessSkillList[经营技能列表];
+	Hero_HaloInfo haloInfo[光环信息];
+	Hero_PlaceInfo placeInfo[放置信息];
+	long itemAddPower[道具额外加成实力];
+	long arenaAddPower[竞技场额外加成实力];
+	long travelAddPower[游历额外加成实力];
+}
+
+ALProtocol Equip_SkillInfo[藏品技能信息]
+{
+	int index[技能索引];
+	int value[当前加成值];
+	int pendingValue[上次重塑的加成值];
+	int normalRebuildNum[普通重塑次数];
+}
+
+ALProtocol Equip_BaseInfo[藏品基础信息]
+{
+	long dbId[数据id];
+	long equipId[藏品id];
+	int level[等级];
+	int awakenLevel[觉醒等级];
+	long wearHeroId[穿戴大臣id];
+	int skillAddValue[总加成值];
+	bool isLock[是否锁定];
+}
+
+ALProtocol Equip_Info[藏品信息]
+{
+	Equip_BaseInfo baseInfo[基础信息];
+	Equip_SkillInfo[] skillList[技能列表];
+}
+
+ALProtocol Hero_ArenaShowInfo[大臣竞技场展示信息]
+{
+	long heroId[大臣id];
+	long skinId[皮肤id];
+	int level[等级];
+	long power[实力];
+}
+
+ALProtocol Hero_ArenaShowList[大臣竞技场展示信息列表]
+{
+	Hero_ArenaShowInfo[] heroList[大臣列表];
+}

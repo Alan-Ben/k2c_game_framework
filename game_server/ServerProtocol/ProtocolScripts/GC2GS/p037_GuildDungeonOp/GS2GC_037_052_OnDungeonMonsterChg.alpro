@@ -1,0 +1,9 @@
+﻿JavaPackage GS2GC.p037_GuildDungeonOp;
+csharpspace GS2GC.p037_GuildDungeonOp;
+
+ALProtocol GS2GC_037_052_OnDungeonMonsterChg[副本怪物数据变化] <37, 52>
+{
+	long id[公会副本实例ID];
+	long monsterId[怪物ID];
+	long hp[当前血量];
+}

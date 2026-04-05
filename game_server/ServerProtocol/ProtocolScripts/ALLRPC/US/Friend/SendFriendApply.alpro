@@ -1,0 +1,17 @@
+﻿JavaPackage ALLRPC.US.Friend;
+
+ALProtocol SendFriendApply_Req
+{
+	long applyCid;
+	long targetCid;
+}
+
+ALProtocol SendFriendApply_Return
+{
+	bool isSuc;
+	int errCode;
+}
+
+//[RPC] 发送好友申请
+//[CLASS_PACKAGE] : AllRpcData.US_Service.Friend
+//[DEALER_PACKAGE] : USServer.RPCDispatcher.Friend

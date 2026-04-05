@@ -1,0 +1,12 @@
+﻿JavaPackage GS2GC.p004_PlayerOp;
+csharpspace GS2GC.p004_PlayerOp;
+
+import Common.PlayerObj.alpro;
+
+/**********************************************************
+ * 事件记录变更
+ **********************************************************/
+ALProtocol GS2GC_004_065_OnEventRecordChg <4, 65>
+{
+	Common.PlayerObj.Player_EventRecordInfo record;
+}

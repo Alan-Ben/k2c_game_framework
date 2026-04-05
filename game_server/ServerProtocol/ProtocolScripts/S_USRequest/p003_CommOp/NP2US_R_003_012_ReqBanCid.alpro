@@ -1,0 +1,7 @@
+﻿JavaPackage WCGCS2US_R.p003_CommOp;
+
+ALProtocol NP2US_R_003_012_ReqBanCid[禁用cid] <3, 12>
+{
+	long cid[玩家cid];
+	long freezeTimeMs[封禁时间];
+}

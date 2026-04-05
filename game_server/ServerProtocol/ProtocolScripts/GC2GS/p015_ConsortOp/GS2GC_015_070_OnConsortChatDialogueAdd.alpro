@@ -1,0 +1,9 @@
+JavaPackage GS2GC.p015_ConsortOp;
+csharpspace GS2GC.p015_ConsortOp;
+
+ALProtocol GS2GC_015_070_OnConsortChatDialogueAdd [新增家人对话推送] <15, 70>
+{
+    long consortId;
+    long dialogueId[对话ID];
+    long triggerTimeMs[触发时间戳];
+}

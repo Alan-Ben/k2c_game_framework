@@ -1,0 +1,18 @@
+﻿JavaPackage ALLRPC.US.Dinner;
+
+﻿﻿﻿﻿﻿import Common.DinnerObj.alpro;
+
+ALProtocol UsGetDinnerInfo_Req
+{
+	long instanceId;
+	long cid;
+}
+
+ALProtocol UsGetDinnerInfo_Return
+{
+	Common.DinnerObj.Dinner_Info info;
+}
+
+//[RPC]获取宴会详细数据
+//[CLASS_PACKAGE] : AllRpcData.US_Service.Dinner
+//[DEALER_PACKAGE] : USServer.RPCDispatcher.Dinner

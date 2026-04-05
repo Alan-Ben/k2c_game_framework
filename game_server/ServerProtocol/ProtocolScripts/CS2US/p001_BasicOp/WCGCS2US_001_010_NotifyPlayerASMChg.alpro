@@ -1,0 +1,11 @@
+﻿JavaPackage WCGCS2US.p001_BasicOp;
+
+/**********************************************************
+ * Common服向User通知玩家行为状态变更
+ **********************************************************/
+ALProtocol WCGCS2US_001_010_NotifyPlayerASMChg <1, 10>
+{
+	long uid;
+	int asmState;
+	long asmStartTimeMS;
+}

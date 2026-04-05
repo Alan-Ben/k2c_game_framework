@@ -1,0 +1,6 @@
+﻿JavaPackage WCGCS2US_R.p003_CommOp;
+
+ALProtocol NP2US_R_003_013_ReqUnBanCid[解除禁用cid] <3, 13>
+{
+	long cid;
+}

@@ -1,0 +1,7 @@
+JavaPackage GS2GC.p015_ConsortOp;
+csharpspace GS2GC.p015_ConsortOp;
+import Common.ConsortObj.alpro;
+ALProtocol GS2GC_015_004_RetCallRand [家人-随机邀约] <15, 4>
+{
+    Common.ConsortObj.Consort_CallRes res[邀约结果];
+}

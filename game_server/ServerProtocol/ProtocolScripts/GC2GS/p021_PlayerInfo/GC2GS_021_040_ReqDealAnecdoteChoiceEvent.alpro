@@ -1,0 +1,8 @@
+﻿JavaPackage GC2GS.p021_PlayerInfo;
+csharpspace GC2GS.p021_PlayerInfo;
+
+ALProtocol GC2GS_021_040_ReqDealAnecdoteChoiceEvent <21, 40>
+{
+	long instanceId[政务实例ID];
+	long optionId[选项ID];
+}

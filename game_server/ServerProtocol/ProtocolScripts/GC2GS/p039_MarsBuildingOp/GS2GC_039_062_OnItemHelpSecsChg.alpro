@@ -1,0 +1,11 @@
+﻿JavaPackage GS2GC.p039_MarsBuildingOp;
+csharpspace GS2GC.p039_MarsBuildingOp;
+
+import Enum.MarsEnum.alpro;
+
+ALProtocol GS2GC_039_062_OnItemHelpSecsChg[火星加速道具加速时长数值变化] <39, 62>
+{
+	Enum.MarsEnum.EMarsBagItemUseTimeType objType;
+	long objId[对象ID];
+	int secs[加速时长（秒）];
+}

@@ -1,0 +1,5 @@
+java_path= ../Common/src
+java_package=NPCommon.ErrMain
+id	name	desc
+1	DAILY_CHECK_HAS_CHECK	每日签到今天已签到
+2	DAILY_CHECK_DESSERT_NOT_FOUND	每日签到选择甜品存在

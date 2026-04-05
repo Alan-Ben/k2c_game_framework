@@ -1,0 +1,12 @@
+﻿JavaPackage GS2GC.p004_PlayerOp;
+csharpspace GS2GC.p004_PlayerOp;
+/**********************************************************
+ * 请求GM 命令
+ **********************************************************/
+ALProtocol GS2GC_004_002_RetGmCommand <4, 2>
+{
+    bool isSucc;
+    string result;
+    bytebuffer zipedResult;
+    
+}

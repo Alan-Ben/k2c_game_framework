@@ -1,0 +1,6 @@
+﻿JavaPackage GC2GS.p002_InitOp;
+csharpspace GC2GS.p002_InitOp;
+
+ALProtocol GC2GS_002_064_ReqActivityCurrencyList [请求活动货币信息] <2, 64>
+{
+}

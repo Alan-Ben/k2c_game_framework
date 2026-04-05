@@ -1,0 +1,6 @@
+﻿JavaPackage ToPay_RB.p001_PayOp;
+
+ALProtocol ToPay_RB_001_003_NotifyPayCallbackHadProcess <1, 3>
+{
+	
+}

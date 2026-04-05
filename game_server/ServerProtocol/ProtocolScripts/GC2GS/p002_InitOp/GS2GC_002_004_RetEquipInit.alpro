@@ -1,0 +1,7 @@
+﻿﻿JavaPackage GS2GC.p002_InitOp;
+csharpspace GS2GC.p002_InitOp;
+
+ALProtocol GS2GC_002_004_RetEquipInit <2, 4>
+{
+	Common.HeroObj.Equip_BaseInfo[] equipList[藏品列表];
+}

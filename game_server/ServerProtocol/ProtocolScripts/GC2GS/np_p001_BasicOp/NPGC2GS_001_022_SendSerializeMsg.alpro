@@ -1,0 +1,14 @@
+﻿JavaPackage NPGC2GS.p001_BasicOp;
+csharpspace NPGC2GS.p001_BasicOp;
+
+/**********************************************************
+ * 发送序列化的消息，保障消息合法性
+ **********************************************************/
+ALProtocol NPGC2GS_001_022_SendSerializeMsg <1, 22>
+{
+	int msgSerialize; //消息序列号
+	
+	//客户端请求序列号，如果客户端不是回调式请求的时候这个值为0
+	long clientRequestSerialize;
+	Bytebuffer msg;
+}

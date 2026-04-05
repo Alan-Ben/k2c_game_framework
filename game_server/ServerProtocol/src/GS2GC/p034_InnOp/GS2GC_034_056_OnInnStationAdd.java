@@ -1,0 +1,87 @@
+package GS2GC.p034_InnOp;
+
+import java.nio.ByteBuffer;
+/*********
+ * 旅店设施信息新增
+ **/
+public class GS2GC_034_056_OnInnStationAdd implements ALBasicProtocolPack._IALProtocolStructure {
+/** 设施信息 */
+private Common.InnObj.Inn_StationInfo stationInfo;
+
+
+public GS2GC_034_056_OnInnStationAdd() {
+	stationInfo = new Common.InnObj.Inn_StationInfo();
+}
+
+public GS2GC_034_056_OnInnStationAdd(
+	 Common.InnObj.Inn_StationInfo _stationInfo
+) {	stationInfo = _stationInfo;
+}
+
+public final byte getMainOrder() { return (byte)34; }
+
+public final byte getSubOrder() { return (byte)56; }
+
+/** 设施信息 */
+public Common.InnObj.Inn_StationInfo getStationInfo() { return stationInfo; }
+/** 设施信息 */
+public void setStationInfo(Common.InnObj.Inn_StationInfo _stationInfo) { stationInfo = _stationInfo; }
+
+
+public final int GetBufSize() {
+	int _size = 16;
+
+	return _size;
+}
+
+public final int GetFullPackBufSize() {
+	int _size = 18;
+
+	return _size;
+}
+
+
+
+public final void ReadUnzipBuf(ByteBuffer _buf, int _finalPos) {
+	 if(_finalPos > 0 && _buf.position() >= _finalPos) return ;
+	if(_buf.remaining() <= 0) return;
+	int _stationInfoCustLen = _buf.getInt();
+	int _stationInfoCurPos = _buf.position();
+	stationInfo.ReadUnzipBuf(_buf, _stationInfoCurPos + _stationInfoCustLen);
+	_buf.position(_stationInfoCurPos + _stationInfoCustLen);
+
+}
+
+public final void PutUnzipBuf(ByteBuffer _buf) {
+	_buf.putInt(stationInfo.GetBufSize());
+	stationInfo.PutUnzipBuf(_buf);
+}
+
+public final ByteBuffer makeFullPackage() {
+	int _bufSize = GetBufSize() + 2;
+	ByteBuffer _buf = ByteBuffer.allocate(_bufSize);
+	_buf.put((byte)34);
+	_buf.put((byte)56);
+	PutUnzipBuf(_buf);
+	_buf.flip();
+	return _buf;
+}
+public final void makeFullPackage(ByteBuffer _recBuf) {
+	if(null == _recBuf)
+		return ;
+	_recBuf.put((byte)34);
+	_recBuf.put((byte)56);
+	PutUnzipBuf(_recBuf);
+}
+public final ByteBuffer makePackage() {
+	int _bufSize = GetBufSize();
+	ByteBuffer _buf = ByteBuffer.allocate(_bufSize);
+	PutUnzipBuf(_buf);
+	_buf.flip();
+	return _buf;
+}
+public final void readPackage(ByteBuffer _buf) {
+	ReadUnzipBuf(_buf, -1);
+}
+}
+

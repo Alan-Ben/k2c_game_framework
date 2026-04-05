@@ -1,0 +1,7 @@
+JavaPackage NP2SS_RB.p001_ScheduleOp;
+import Common.ScheduleObj.alpro;
+
+ALProtocol ToSS_RB_001_014_QueryActivityByUs[返回排期列表] <1, 14>
+{
+    Common.ScheduleObj.Schedule_SimpleActivityInfo[] activityList[排期列表];
+}

@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p023_ArenaOp;
+csharpspace GC2GS.p023_ArenaOp;
+
+ALProtocol GC2GS_023_021_ReqTowerFight[爬塔攻击] <23, 21>
+{
+    Common.TowerObj.Tower_PosInfo targetPos[目标位置信息];
+}

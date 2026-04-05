@@ -1,0 +1,8 @@
+﻿JavaPackage GS2GC.p034_InnOp;
+csharpspace GS2GC.p034_InnOp;
+
+
+ALProtocol GS2GC_034_061_OnInnSpecialGuestChg [旅店特殊客人变更] <34, 61>
+{
+    Common.InnObj.Inn_SpecialGuestInfo specialGuestInfo[特殊客人信息];
+}

@@ -1,0 +1,10 @@
+﻿JavaPackage GC2GS.p021_PlayerInfo;
+csharpspace GC2GS.p021_PlayerInfo;
+
+/**********************************************************
+ * 玩家请求设置头像已查看。此协议是单向处理，不需要响应服务器消息
+ **********************************************************/
+ALProtocol GC2GS_021_005_ReqViewPlayerIcon <21, 5>
+{
+	long iconId;
+}

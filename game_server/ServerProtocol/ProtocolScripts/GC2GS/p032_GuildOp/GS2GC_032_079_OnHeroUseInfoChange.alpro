@@ -1,0 +1,9 @@
+import Common.GuildCooperateObj.alpro;
+
+JavaPackage GS2GC.p032_GuildOp;
+csharpspace GS2GC.p032_GuildOp;
+
+ALProtocol GS2GC_032_079_OnHeroUseInfoChange[大臣使用信息变更推送] <32, 79>
+{
+    Common.GuildCooperateObj.GuildCooperate_HeroUseInfo heroUseInfo[大臣使用信息];
+}

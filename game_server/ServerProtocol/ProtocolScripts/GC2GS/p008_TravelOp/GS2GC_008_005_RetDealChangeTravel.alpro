@@ -1,0 +1,7 @@
+JavaPackage GS2GC.p008_TravelOp;
+csharpspace GS2GC.p008_TravelOp;
+import Common.TravelObj.alpro;
+ALProtocol GS2GC_008_005_RetDealChangeTravel [处理兑换游历事件] <8, 5>
+{
+    Common.TravelObj.Travel_EventResult result[游历事件结果];
+}

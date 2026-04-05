@@ -1,0 +1,7 @@
+﻿﻿JavaPackage GS2GC.p004_PlayerOp;
+csharpspace GS2GC.p004_PlayerOp;
+
+ALProtocol GS2GC_004_058_OnLoginCountChg <4, 58>
+{
+	int[] hadDrawRewardDays[已经领取的奖励天数];
+}

@@ -1,0 +1,6 @@
+﻿JavaPackage NP2CS.p001_BasicOp;
+
+ALProtocol NP2CS_001_006_AddCrossGameServer <1, 6>
+{
+	int serverTypeId;
+}

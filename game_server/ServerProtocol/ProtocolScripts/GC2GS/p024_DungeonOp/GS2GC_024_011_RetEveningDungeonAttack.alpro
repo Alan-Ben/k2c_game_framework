@@ -1,0 +1,11 @@
+﻿﻿JavaPackage GS2GC.p024_DungeonOp;
+csharpspace GS2GC.p024_DungeonOp;
+
+ALProtocol GS2GC_024_011_RetEveningDungeonAttack <24, 11>
+{
+    long harmHp[伤害血量];
+    Common.NPCommonObj.NPCommon_ItemInfo[] attackRewardList[攻击奖励列表];
+
+    bool isDefeat[是否击杀];
+    Common.NPCommonObj.NPCommon_ItemInfo[] defeatRewardList[击杀奖励列表];
+}

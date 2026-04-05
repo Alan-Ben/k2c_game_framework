@@ -1,0 +1,10 @@
+﻿﻿import Common.NPPlayerInfo.alpro;
+
+JavaPackage GS2GC.p002_InitOp;
+csharpspace GS2GC.p002_InitOp;
+
+ALProtocol GS2GC_002_029_RetPlayerFuncUnlockInit <2, 29>
+{
+    Enum.NPEnum.ENPFunctionType[] hadUnlockTypeList[已领取功能类型列表];
+    Enum.NPEnum.ENPFunctionType[] clientNotifiedTypeList[客户端已通知功能列表];
+}

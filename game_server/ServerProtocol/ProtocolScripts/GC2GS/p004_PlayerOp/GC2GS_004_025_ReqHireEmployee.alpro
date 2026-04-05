@@ -1,0 +1,8 @@
+﻿JavaPackage GC2GS.p004_PlayerOp;
+csharpspace GC2GS.p004_PlayerOp;
+
+ALProtocol GC2GS_004_025_ReqHireEmployee [请求雇佣员工] <4, 25>
+{
+    int num[雇佣数量];
+    long buildingId[建筑ID];
+}

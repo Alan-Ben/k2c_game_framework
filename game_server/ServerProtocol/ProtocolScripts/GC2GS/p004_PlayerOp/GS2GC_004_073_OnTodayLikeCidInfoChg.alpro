@@ -1,0 +1,7 @@
+﻿JavaPackage GS2GC.p004_PlayerOp;
+csharpspace GS2GC.p004_PlayerOp;
+
+ALProtocol GS2GC_004_073_OnTodayLikeCidInfoChg[今天点赞过玩家信息变更] <4, 73>
+{
+    Common.CommonObj.Common_TodayLikeCidInfo todayLikeCidInfo;
+}

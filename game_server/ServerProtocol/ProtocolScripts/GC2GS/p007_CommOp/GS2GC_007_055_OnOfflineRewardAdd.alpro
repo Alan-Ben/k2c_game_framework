@@ -1,0 +1,9 @@
+﻿﻿JavaPackage GS2GC.p007_CommOp;
+csharpspace GS2GC.p007_CommOp;
+
+import Common.OfflineRewardObj.alpro;
+
+ALProtocol GS2GC_007_055_OnOfflineRewardAdd <7, 55>
+{
+	Common.OfflineRewardObj.OfflineReward_Info reward;
+}

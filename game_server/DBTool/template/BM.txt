@@ -1,0 +1,21 @@
+package core.database.<%LIB%>.bm;
+
+import com.mg.server.common.db.BaseBM_<%LIB%>;
+
+import core.database.<%LIB%>.bo.<%BO_NAME%>;
+
+public class <%CLASS_NAME%> extends BaseBM_<%LIB%><<%BO_NAME%>> {
+    private static <%CLASS_NAME%> _instance;
+
+    public static <%CLASS_NAME%> getInstance() {
+        if (_instance == null) {
+            _instance = new <%CLASS_NAME%>();
+        }
+        return _instance;
+    }
+
+    public <%CLASS_NAME%>() {
+        super(<%BO_NAME%>.class);
+    }
+
+}

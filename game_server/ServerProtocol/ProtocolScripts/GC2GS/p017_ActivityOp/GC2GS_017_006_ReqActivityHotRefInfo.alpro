@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p017_ActivityOp;
+csharpspace GC2GS.p017_ActivityOp;
+
+ALProtocol GC2GS_017_006_ReqActivityHotRefInfo [请求活动热更配表信息] <17, 6> 
+{
+    long instanceId[活动实例id];
+}

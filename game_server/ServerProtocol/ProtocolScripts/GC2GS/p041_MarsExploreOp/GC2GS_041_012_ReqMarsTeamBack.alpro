@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p041_MarsExploreOp;
+csharpspace GC2GS.p041_MarsExploreOp;
+
+ALProtocol GC2GS_041_012_ReqMarsTeamBack[火星探险-队伍召回] <41, 12>
+{
+	long teamId;
+}

@@ -1,0 +1,20 @@
+JavaPackage Common.PushGiftObj;
+csharpspace Common.PushGiftObj;
+
+// 单个激活的推送礼包信息（仅存储激活状态）
+ALProtocol PushGift_ActivePackInfo[推送礼包-激活礼包信息]
+{
+	long pushGiftId[推送礼包id];
+	long activateTimeMs[激活时间毫秒];
+	bool hasRead[是否已读];
+	bool isAutoActive[是否自动激活];
+}
+
+// 礼包组信息（核心结构）
+ALProtocol PushGift_GroupInfo[推送礼包-组信息]
+{
+	long groupId[礼包组id];
+	long lastTriggerTimeMs[上次触发时间毫秒];
+	PushGift_ActivePackInfo activePack[当前激活的礼包];
+}
+ 

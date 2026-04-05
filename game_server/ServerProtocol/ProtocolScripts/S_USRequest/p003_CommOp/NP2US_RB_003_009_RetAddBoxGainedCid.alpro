@@ -1,0 +1,9 @@
+﻿JavaPackage WCGCS2US_RB.p003_CommOp;
+
+ALProtocol NP2US_RB_003_009_RetAddBoxGainedCid[请求宝箱已领取玩家数据] <3, 9>
+{
+	bool res;
+	long boxId[宝箱配置ID];
+	Enum.NPCommBoxEnum.ENPBoxChatStatus boxStatus[宝箱状态];
+	long[] gainedCidList[已经领取的玩家CID列表];
+}

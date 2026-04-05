@@ -1,0 +1,11 @@
+﻿JavaPackage GS2GC.p002_InitOp;
+csharpspace GS2GC.p002_InitOp;
+
+ALProtocol GS2GC_002_044_RetTowerInit <2, 44>
+{
+	Common.TowerObj.Tower_PosInfo posInfo[位置信息];
+	long[] hadDrawResearchRewardList[已领取研究奖励列表];
+	Common.TowerObj.Tower_PosInfo highestPosHadReach[已到达最高位置信息];
+	Common.TowerObj.Tower_PosInfo hadActiveResearchPos[已激活研究位置信息];
+	int buildingProfitAddPer[建筑收益提升万分比];
+}

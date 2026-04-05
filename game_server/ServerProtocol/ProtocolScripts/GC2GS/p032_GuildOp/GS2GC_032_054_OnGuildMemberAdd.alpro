@@ -1,0 +1,7 @@
+﻿JavaPackage GS2GC.p032_GuildOp;
+csharpspace GS2GC.p032_GuildOp;
+
+ALProtocol GS2GC_032_054_OnGuildMemberAdd <32, 54>
+{
+	Common.GuildObj.Guild_MemberBaseInfo baseInfo[成员基础信息];
+}

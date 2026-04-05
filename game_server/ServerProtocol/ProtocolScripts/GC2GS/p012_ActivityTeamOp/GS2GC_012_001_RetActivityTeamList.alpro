@@ -1,0 +1,10 @@
+﻿﻿JavaPackage GS2GC.p012_ActivityTeamOp;
+csharpspace GS2GC.p012_ActivityTeamOp;
+
+import Common.CrossTeamObj.alpro;
+
+ALProtocol GS2GC_012_001_RetActivityTeamList <12, 1>
+{
+	Common.CrossTeamObj.CrossTeam_BaseInfo[] teamBaseList[活动队伍基础数据列表];
+	int totalCount[队伍总数量，用于客户端分页计算];
+}

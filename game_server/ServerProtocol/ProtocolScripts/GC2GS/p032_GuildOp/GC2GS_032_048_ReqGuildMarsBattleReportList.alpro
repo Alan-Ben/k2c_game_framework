@@ -1,0 +1,8 @@
+JavaPackage GC2GS.p032_GuildOp;
+csharpspace GC2GS.p032_GuildOp;
+
+/**
+ * 请求联盟战报列表
+ */
+ALProtocol GC2GS_032_048_ReqGuildMarsBattleReportList[请求联盟战报列表] <32, 48> {
+}

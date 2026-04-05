@@ -1,0 +1,11 @@
+﻿﻿﻿﻿﻿import Common.NPCommonObj.alpro;
+JavaPackage GS2GC.p002_InitOp;
+csharpspace GS2GC.p002_InitOp;
+
+/**********************************************************
+ * 返回召物品息列表
+ **********************************************************/
+ALProtocol GS2GC_002_008_RetPlayerBuffList <2, 8>
+{
+	Common.NPCommonObj.NPCommon_PlayerBuffInfo[] playerBuffList;
+}

@@ -1,0 +1,11 @@
+﻿JavaPackage GC2GS.p032_GuildOp;
+csharpspace GC2GS.p032_GuildOp;
+
+ALProtocol GC2GS_032_001_ReqCreateGuild[请求创建联盟] <32, 1>
+{
+	long flagId[旗帜id];
+	string name[名称];
+	string simpleName[简称];
+	string declaration[宣言];
+	bool canFreeJoin[是否允许自由加入];
+}

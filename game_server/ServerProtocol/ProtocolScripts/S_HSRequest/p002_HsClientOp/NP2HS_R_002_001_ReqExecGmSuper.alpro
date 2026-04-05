@@ -1,0 +1,10 @@
+﻿JavaPackage NP2HS_R.p002_HsClientOp;
+
+ALProtocol NP2HS_R_002_001_ReqExecGmSuper <2, 1>
+{
+	bool isAll;
+	int serverType;
+	int[] serverIdList;
+	String gmComamnd;
+	bool isAllRef[全部服务端资源的服务器列表];
+}

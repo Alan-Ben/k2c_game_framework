@@ -1,0 +1,7 @@
+﻿﻿JavaPackage GS2GC.p024_DungeonOp;
+csharpspace GS2GC.p024_DungeonOp;
+
+ALProtocol GS2GC_024_013_RetEveningDungeonAttackLog <24, 13>
+{
+    Common.DungeonObj.EveningDungeon_AttackLog[] logList[攻击日志列表];
+}

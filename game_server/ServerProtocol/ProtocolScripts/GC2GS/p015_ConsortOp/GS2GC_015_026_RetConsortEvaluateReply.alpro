@@ -1,0 +1,7 @@
+JavaPackage GS2GC.p015_ConsortOp;
+csharpspace GS2GC.p015_ConsortOp;
+
+ALProtocol GS2GC_015_026_RetConsortEvaluateReply [返回AI评价回复响应] <15, 26>
+{
+    // 空协议，仅表示请求已接收
+}

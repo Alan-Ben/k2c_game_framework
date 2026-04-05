@@ -1,0 +1,15 @@
+JavaPackage ALLRPC.US.Team;
+
+ALProtocol UsNotifyRemoveGroup_Req
+{
+	long groupId[群组ID];
+}
+
+ALProtocol UsNotifyRemoveGroup_Return
+{
+}
+
+//[RPC] 通知US移除Group数据（队伍解散时）
+//[CLASS_PACKAGE] : AllRpcData.US_Service.Team
+//[DEALER_PACKAGE] : USServer.RPCDispatcher.Team
+

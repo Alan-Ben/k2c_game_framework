@@ -1,0 +1,9 @@
+﻿﻿import Common.CommonFuncObj.alpro;
+
+JavaPackage GS2GC.p030_ShopOp;
+csharpspace GS2GC.p030_ShopOp;
+
+ALProtocol GS2GC_030_062_OnGiftPackBuyRecordAdd [礼包新增推送] <30, 62>
+{
+     Common.CommonFuncObj.GiftPack_Info giftPackInfo[礼包信息];
+}

@@ -1,0 +1,7 @@
+java_path= ../ActivitiesV01/src
+java_package=ActivitiesV01.Err
+id	name	desc
+1	TILE_MATCH_SWITCH_ILLEGAL	三消交换不合法	
+2	TILE_MATCH_MODE_UNLOCK_FAIL	三消模式解锁失败	
+3	TILE_MATCH_STEP_REWARD_EMPTY	三消阶段奖励为空	
+4	TILE_MATCH_NOT_GAME_OVER	三消未死局	

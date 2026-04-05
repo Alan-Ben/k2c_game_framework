@@ -1,0 +1,15 @@
+﻿JavaPackage ALLRPC.MarryMatchServer.MarryMatch;
+
+ALProtocol MmsRemoveMatchItem_Req
+{
+	long groupId[分组ID];
+	long applyAdultId[请求子嗣ID];
+}
+
+ALProtocol MmsRemoveMatchItem_Return
+{
+}
+
+//[RPC] 移除联姻池请求数据
+//[CLASS_PACKAGE] : AllRpcData.MarryMatch_Service.MarryMatch
+//[DEALER_PACKAGE] : MarryMatchServer.RPCDispatcher.MarryMatch

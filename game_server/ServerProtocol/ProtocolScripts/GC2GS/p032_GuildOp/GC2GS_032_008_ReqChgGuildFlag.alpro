@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p032_GuildOp;
+csharpspace GC2GS.p032_GuildOp;
+
+ALProtocol GC2GS_032_008_ReqChgGuildFlag[请求变更联盟旗帜] <32, 8>
+{
+	long flagId;
+}

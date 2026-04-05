@@ -1,0 +1,10 @@
+import Common.ServerObj.alpro;
+JavaPackage NP2US_RB.p010_MarsMineOp;
+
+/**********************************************************
+ * 返回火星矿数据
+ **********************************************************/
+ALProtocol NP2US_RB_010_001_RetGetMarsMine <10, 1>
+{
+	Common.ServerObj.ServerObj_MarsMine marsMine[矿数据];
+}

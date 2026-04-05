@@ -1,0 +1,7 @@
+JavaPackage GS2GC.p004_PlayerOp;
+csharpspace GS2GC.p004_PlayerOp;
+
+ALProtocol GS2GC_004_075_OnRushExchangeChg[急速兑换信息变更] <4, 75>
+{
+	Common.RushExchangeObj.RushExchange_Info info[急速兑换信息];
+}

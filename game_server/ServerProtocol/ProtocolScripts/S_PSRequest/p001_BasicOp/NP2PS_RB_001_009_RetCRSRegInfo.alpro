@@ -1,0 +1,5 @@
+﻿JavaPackage NP2PS_RB.p001_BasicOp;
+
+ALProtocol NP2PS_RB_001_009_RetCRSRegInfo [返回跨服排行榜服务器的注册信息] <1, 9>
+{
+}

@@ -1,0 +1,10 @@
+﻿JavaPackage GC2GS.p042_GuildRelatedOp;
+csharpspace GC2GS.p042_GuildRelatedOp;
+
+import Enum.GuildEnum.alpro;
+
+ALProtocol GC2GS_042_001_ReqSendMarsHelp[请求火星系统求助] <42, 1>
+{
+	Enum.GuildEnum.EGuildMarshelpObjType objType[求助目标类型];
+	long objId[求助目标ID];
+}

@@ -1,0 +1,8 @@
+﻿JavaPackage GS2GC.p036_TreasureHuntOp;
+csharpspace GS2GC.p036_TreasureHuntOp;
+
+ALProtocol GS2GC_036_001_RetTreasureHuntOreCapture <36, 1>
+{
+    long addExp[获得经验值];
+    Common.TreasureHuntObj.TreasureHunt_CaptureResult[] resultList[捕捉结果列表];
+}

@@ -1,0 +1,8 @@
+JavaPackage GS2GC.p015_ConsortOp;
+csharpspace GS2GC.p015_ConsortOp;
+
+ALProtocol GS2GC_015_071_OnConsortChatDialogueRewardDraw [家人对话奖励领取推送] <15, 71>
+{
+    long consortId;
+    long dialogueId[对话ID];
+}

@@ -1,0 +1,10 @@
+﻿JavaPackage GS2GC.p040_MarsPeopleOp;
+csharpspace GS2GC.p040_MarsPeopleOp;
+
+﻿import Common.NPCommonObj.alpro;
+
+ALProtocol GS2GC_040_002_RetPeopleConfirmImmigrant <40, 2>
+{
+	long num[确认移民数量];
+	Common.NPCommonObj.NPCommon_ItemInfo[] itemList[获取奖励物品列表];
+}

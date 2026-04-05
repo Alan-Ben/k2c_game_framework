@@ -1,0 +1,12 @@
+﻿JavaPackage GS2GC.p002_InitOp;
+csharpspace GS2GC.p002_InitOp;
+
+import Common.StageGoalObj.alpro;
+
+ALProtocol GS2GC_002_062_RetStageGoalInit[阶段任务数据组件初始化] <2, 62>
+{
+	Common.StageGoalObj.StageGoal_Info curStageGoal[当前阶段任务数据];
+	long[] hadDrawBigStepList[已领取的大阶段奖励列表];
+	long[] hadDrawBigStepFirstReachList[已领取的大阶段首达奖励列表];
+	long[] canDrawBigStepFirstReachList[可领取的大阶段首达奖励列表];
+}

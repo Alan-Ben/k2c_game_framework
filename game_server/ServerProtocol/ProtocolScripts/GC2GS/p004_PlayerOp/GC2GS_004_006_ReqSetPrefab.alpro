@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p004_PlayerOp;
+csharpspace GC2GS.p004_PlayerOp;
+
+ALProtocol GC2GS_004_006_ReqSetPrefab[设置外观] <4, 6>
+{
+    long refId;
+}

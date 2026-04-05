@@ -1,0 +1,5 @@
+﻿﻿JavaPackage NP2CS_RB.np_p002_serverInfoOp;
+
+ALProtocol NP2CS_RB_002_011_RetUpdateUSInfoList <2, 11>
+{
+}

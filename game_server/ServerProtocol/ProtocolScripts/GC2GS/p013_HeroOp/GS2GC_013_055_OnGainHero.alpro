@@ -1,0 +1,7 @@
+﻿﻿JavaPackage GS2GC.p013_HeroOp;
+csharpspace GS2GC.p013_HeroOp;
+
+ALProtocol GS2GC_013_055_OnGainHero[获得大臣]<13, 55>
+{
+	Common.HeroObj.Hero_Info heroInfo[大臣信息];
+}

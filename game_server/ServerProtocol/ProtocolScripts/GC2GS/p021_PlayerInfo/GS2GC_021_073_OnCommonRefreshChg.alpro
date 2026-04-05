@@ -1,0 +1,7 @@
+﻿JavaPackage GS2GC.p021_PlayerInfo;
+csharpspace GS2GC.p021_PlayerInfo;
+
+ALProtocol GS2GC_021_073_OnCommonRefreshChg [通用刷新变更] <21, 73>
+{
+	Common.CommonFuncObj.CommonFunc_Refresh refreshData[刷新数据];
+}

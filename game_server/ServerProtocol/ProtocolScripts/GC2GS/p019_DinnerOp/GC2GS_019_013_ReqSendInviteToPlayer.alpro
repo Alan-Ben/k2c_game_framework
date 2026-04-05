@@ -1,0 +1,6 @@
+JavaPackage GC2GS.p019_DinnerOp;
+csharpspace GC2GS.p019_DinnerOp;
+ALProtocol GC2GS_019_013_ReqSendInviteToPlayer [对指定玩家发起邀请] <19, 13>
+{
+    long targetCid[目标玩家CID];
+}

@@ -1,0 +1,9 @@
+﻿﻿import Common.WeekCardObj.alpro;
+
+JavaPackage GS2GC.p004_PlayerOp;
+csharpspace GS2GC.p004_PlayerOp;
+
+ALProtocol GS2GC_004_063_OnWeekCardChg[周卡信息变更推送] <4, 63>
+{
+	Common.WeekCardObj.WeekCard_Info info;
+}

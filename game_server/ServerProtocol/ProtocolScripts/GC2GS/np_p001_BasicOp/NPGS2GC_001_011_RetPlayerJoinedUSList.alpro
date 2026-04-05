@@ -1,0 +1,14 @@
+﻿﻿JavaPackage NPGS2GC.p001_BasicOp;
+csharpspace NPGS2GC.p001_BasicOp;
+
+/**********************************************************
+ * 玩家请求US服务器信息列表
+ **********************************************************/
+ALProtocol NPGS2GC_001_011_RetPlayerJoinedUSList <1, 11>
+{
+	int lastJoinUSLogicId[最后一次登录的US服务器逻辑id];
+	Common.NPPlayerInfo.NP_SYS_PlayerJoinedUSInfo[] joinedUSList[玩家登录过的服务及服务器上的角色信息];
+	bool isFreeze[是否账号被封禁];
+	long freezeTimeMs[封禁结束时间];
+}
+

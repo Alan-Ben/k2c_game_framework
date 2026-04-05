@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p009_MailOp;
+csharpspace GC2GS.p009_MailOp;
+
+ALProtocol GC2GS_009_009_ReqSetReadOver[设置已读完] <9, 9>
+{
+	long mailUid[设置已读完];
+}

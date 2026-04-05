@@ -1,0 +1,9 @@
+﻿JavaPackage GS2GC.p031_RankOp;
+csharpspace GS2GC.p031_RankOp;
+
+import Common.RankObj.alpro;
+
+ALProtocol GS2GC_031_001_RetRankFixedBaseList <31, 1>
+{
+	Common.RankObj.Rank_BaseItem[] baseItemlist[基础数据列表];
+}

@@ -1,0 +1,6 @@
+﻿JavaPackage GC2GS.p040_MarsPeopleOp;
+csharpspace GC2GS.p040_MarsPeopleOp;
+
+ALProtocol GC2GS_040_001_ReqPeopleImmigrant[火星居民-移民] <40, 1>
+{
+}

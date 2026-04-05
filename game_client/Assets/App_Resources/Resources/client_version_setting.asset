@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab1a9bf176be4f2abe3dff4f16753c7c, type: 3}
+  m_Name: client_version_setting
+  m_EditorClassIdentifier: 
+  ClientVersionInfo:
+    majorVersion: 0
+    minorVersion: 6
+    revisionVersion: 27
+    _buildVersion: 0
+    _dateVersion: 327

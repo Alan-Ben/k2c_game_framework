@@ -1,0 +1,18 @@
+﻿JavaPackage WCGCS2US.p003_FriendOp;
+
+/**********************************************************
+ * Common服务器通知和其它人匹配成功,添加好友推荐
+ **********************************************************/
+ALProtocol WCGCS2US_003_005_Inner_GroupPlayer
+{
+    long uid;
+    string name;
+    long icon;
+    long iconBgk;
+}
+
+ALProtocol WCGCS2US_003_005_OnMatchSuccInGroup <3, 5>
+{
+    long uid;
+    WCGCS2US_003_005_Inner_GroupPlayer[] members;
+}

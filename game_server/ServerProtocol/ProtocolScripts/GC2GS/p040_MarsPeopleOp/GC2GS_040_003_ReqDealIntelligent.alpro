@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p040_MarsPeopleOp;
+csharpspace GC2GS.p040_MarsPeopleOp;
+
+ALProtocol GC2GS_040_003_ReqDealIntelligent[火星居民-执行决策] <40, 3>
+{
+	long id[决策ID];
+}

@@ -1,0 +1,11 @@
+JavaPackage GS2GC.p004_PlayerOp;
+csharpspace GS2GC.p004_PlayerOp;
+
+/**********************************************************
+ * 推送玩家参数更新
+ **********************************************************/
+ALProtocol GS2GC_004_054_OnPlayerParamUpdated <4, 54>
+{
+   int index;
+   long paramValue;
+}

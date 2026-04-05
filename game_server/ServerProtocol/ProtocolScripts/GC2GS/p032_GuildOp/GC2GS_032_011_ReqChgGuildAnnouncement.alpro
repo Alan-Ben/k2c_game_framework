@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p032_GuildOp;
+csharpspace GC2GS.p032_GuildOp;
+
+ALProtocol GC2GS_032_011_ReqChgGuildAnnouncement[请求变更联盟公告] <32, 11>
+{
+	string announcement;
+}

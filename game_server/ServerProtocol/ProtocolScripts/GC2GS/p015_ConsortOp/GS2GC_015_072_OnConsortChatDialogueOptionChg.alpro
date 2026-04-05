@@ -1,0 +1,9 @@
+JavaPackage GS2GC.p015_ConsortOp;
+csharpspace GS2GC.p015_ConsortOp;
+
+ALProtocol GS2GC_015_072_OnConsortChatDialogueOptionChg [家人对话选择变更推送] <15, 72>
+{
+    long consortId;
+    long dialogueId[对话ID];
+    Common.ConsortObj.Consort_DialogueOption optionInfo[对话选项信息];
+}

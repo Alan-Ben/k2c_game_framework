@@ -1,0 +1,10 @@
+﻿JavaPackage GS2GC.p032_GuildOp;
+csharpspace GS2GC.p032_GuildOp;
+
+ALProtocol GS2GC_032_056_OnSelfGuildContributeChg <32, 56>
+{
+	Common.GuildObj.Guild_MemberContributeInfo contributeInfo;
+}
+
+
+

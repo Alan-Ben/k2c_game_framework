@@ -1,0 +1,14 @@
+JavaPackage GS2GC.p016_ChapterOp;
+csharpspace GS2GC.p016_ChapterOp;
+
+ALProtocol GS2GC_016_001_RetChapterForward <16, 1>
+{
+    long chapterId;
+    int point;
+    int coefficient;
+    long rewardExp[奖励大臣经验];
+    long rewardPlayerExp[奖励玩家经验];
+    long eventId[触发事件id];
+    Common.NPCommonObj.NPCommon_ItemInfo[] itemList[物品列表];
+    long costGoldNum[花费金币数量];
+}

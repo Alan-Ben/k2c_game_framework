@@ -1,0 +1,16 @@
+java_path= ../Common/src
+java_package=NPCommon.ErrMain
+csharp_type = main
+id	name	desc
+1	RALLY_NOT_FOUND	集结不存在
+2	RALLY_MEMBER_EXIST	成员已在集结中
+3	RALLY_OP_DISABLE	集结操作无效
+4	RALLY_ALREADY_EXIST	集结已存在
+5	RALLY_MEMBER_FULL	集结人数已满
+6	RALLY_EXPIRED	集结已过期
+7	RALLY_TEAM_STATE_INVALID	队伍状态非法
+8	RALLY_TEAM_IN_OTHER_RALLY	队伍已在其他集结中
+9	RALLY_POWER_NOT_ENOUGH	战力不足无法加入集结
+10	RALLY_PERMISSION_DENIED	无权限执行集结操作
+
+

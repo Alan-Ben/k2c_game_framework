@@ -1,0 +1,10 @@
+﻿﻿JavaPackage WCGCS2US_R.p004_PhpNofityOp;
+
+/**********************************************************
+ * Common服向User服发送绑定邮箱通知
+ **********************************************************/
+ALProtocol WCGCS2US_R_004_001_BindEmailNotify <4, 1>
+{
+	long uid;	 //玩家uid
+	string email;//邮件地址
+}

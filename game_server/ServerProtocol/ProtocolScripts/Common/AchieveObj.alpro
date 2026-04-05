@@ -1,0 +1,16 @@
+﻿JavaPackage Common.AchieveObj;
+csharpspace Common.AchieveObj;
+
+ALProtocol Achieve_Info[成就数据]
+{
+	long achieveId[成就ID];
+	long counter[成就步骤计数];
+	int[] hadDrawStepList[已领取成就步骤列表];
+}
+
+ALProtocol Achieve_AchievePointInfo[成就点数据]
+{
+	int type[成就点ID EAchieveType];
+	long count[数量];
+	int hadDrawMaxStep[已领取最大成就步骤];
+}

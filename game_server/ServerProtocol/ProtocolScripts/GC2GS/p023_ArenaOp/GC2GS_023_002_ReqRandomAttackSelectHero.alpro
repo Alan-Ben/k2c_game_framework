@@ -1,0 +1,9 @@
+﻿JavaPackage GC2GS.p023_ArenaOp;
+csharpspace GC2GS.p023_ArenaOp;
+
+ALProtocol GC2GS_023_002_ReqRandomAttackSelectHero[随机攻击选择出战大臣] <23, 2>
+{
+    long heroId;
+    string opponentBotName[对手机器人名字];
+    long buffId;
+}

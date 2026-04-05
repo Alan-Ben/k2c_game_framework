@@ -1,0 +1,7 @@
+﻿JavaPackage GS2GC.p002_InitOp;
+csharpspace GS2GC.p002_InitOp;
+
+ALProtocol GS2GC_002_070_RetGiftPackInit <2, 70>
+{
+	Common.CommonFuncObj.GiftPack_Info[] infoList[礼包列表];
+}

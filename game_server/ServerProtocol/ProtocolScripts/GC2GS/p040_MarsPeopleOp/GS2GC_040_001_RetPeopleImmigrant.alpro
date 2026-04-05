@@ -1,0 +1,6 @@
+﻿JavaPackage GS2GC.p040_MarsPeopleOp;
+csharpspace GS2GC.p040_MarsPeopleOp;
+
+ALProtocol GS2GC_040_001_RetPeopleImmigrant <40, 1>
+{
+}

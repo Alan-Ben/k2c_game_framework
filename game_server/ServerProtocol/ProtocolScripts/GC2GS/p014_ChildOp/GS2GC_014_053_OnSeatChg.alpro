@@ -1,0 +1,7 @@
+JavaPackage GS2GC.p014_ChildOp;
+csharpspace GS2GC.p014_ChildOp;
+import Common.ChildObj.alpro;
+ALProtocol GS2GC_014_053_OnSeatChg [训练位变动推送] <14, 53>
+{
+    Common.ChildObj.Child_SeatInfo seat[训练位数据];
+}

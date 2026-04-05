@@ -1,0 +1,6 @@
+JavaPackage GS2GC.p019_DinnerOp;
+csharpspace GS2GC.p019_DinnerOp;
+ALProtocol GS2GC_019_014_RetCheckDinnerInvite [检查宴会邀请信息] <19, 14>
+{
+    int joinerCount[参与宴会玩家数量];
+}

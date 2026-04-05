@@ -1,0 +1,17 @@
+﻿JavaPackage ALLRPC.US.Child;
+
+import Common.ServerObj.alpro;
+
+ALProtocol SendPersonMarryApply_Req
+{
+	Common.ServerObj.ServerObj_AdultMarryApplyInfo apply[子嗣联姻请求数据];
+}
+
+ALProtocol SendPersonMarryApply_Return
+{
+	bool isPlayerRefuseAllRequest[玩家是否拒绝所有联姻请求];
+}
+
+//[RPC] 发起针对玩家的子嗣联姻请求
+//[CLASS_PACKAGE] : AllRpcData.US_Service.Child
+//[DEALER_PACKAGE] : USServer.RPCDispatcher.Child

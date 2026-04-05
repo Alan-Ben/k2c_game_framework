@@ -1,0 +1,10 @@
+java_path= ../Common/src
+java_package=NPCommon.ErrMain
+
+id	name	desc
+1	CROSS_SERVER_GROUP_LIST_IS_EMPTY	没有预备跨服分组信息
+2	CROSS_SERVER_GROUP_ID_HAD_USE	跨服分组ID在往期已被使用
+3	CROSS_SERVER_GROUP_US_IN_OTHER_GROUP	玩家服务器已经在其他跨服分组
+4	CROSS_SERVER_GROUP_ID_REPEAT	跨服分组ID已存在
+5	CROSS_SERVER_GROUP_NOT_FOUND	跨服分组不存在
+6	SCHEDULE_HAD_ACTIVE_CANT_UPDATE	排期已激活不能更新

@@ -1,0 +1,9 @@
+﻿JavaPackage GS2GC.p041_MarsExploreOp;
+csharpspace GS2GC.p041_MarsExploreOp;
+
+import Common.MarsObj.alpro;
+
+ALProtocol GS2GC_041_050_OnExploreChg[探索数据变化] <41, 50>
+{
+	Common.MarsObj.Mars_Explore explore[探索数据];
+}

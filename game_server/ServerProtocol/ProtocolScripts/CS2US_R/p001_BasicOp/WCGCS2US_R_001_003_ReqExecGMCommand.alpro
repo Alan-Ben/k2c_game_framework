@@ -1,0 +1,10 @@
+﻿JavaPackage WCGCS2US_R.p001_BasicOp;
+
+/**********************************************************
+ * Common服务器向User服发送GM命令
+ **********************************************************/
+ALProtocol WCGCS2US_R_001_003_ReqExecGMCommand <1, 3>
+{
+	long uid;  //玩家uid
+	string gmCommand; //GM命令内容
+}

@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p032_GuildOp;
+csharpspace GC2GS.p032_GuildOp;
+
+ALProtocol GC2GS_032_024_ReqCancelSelfJoinRequest[取消自己的入盟申请] <32, 24>
+{
+	long guildId;
+}

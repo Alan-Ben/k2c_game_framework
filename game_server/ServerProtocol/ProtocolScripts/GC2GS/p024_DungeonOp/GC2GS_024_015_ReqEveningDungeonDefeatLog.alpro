@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p024_DungeonOp;
+csharpspace GC2GS.p024_DungeonOp;
+
+ALProtocol GC2GS_024_015_ReqEveningDungeonDefeatLog[晚间副本击杀日志] <24, 15>
+{
+    
+}

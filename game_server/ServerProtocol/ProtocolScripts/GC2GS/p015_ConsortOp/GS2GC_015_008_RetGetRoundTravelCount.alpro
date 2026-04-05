@@ -1,0 +1,6 @@
+JavaPackage GS2GC.p015_ConsortOp;
+csharpspace GS2GC.p015_ConsortOp;
+ALProtocol GS2GC_015_008_RetGetRoundTravelCount [家人-获取周期出游次数] <15, 8>
+{
+    long counter[出游次数];
+}

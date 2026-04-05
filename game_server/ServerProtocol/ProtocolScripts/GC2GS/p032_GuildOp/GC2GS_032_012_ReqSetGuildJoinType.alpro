@@ -1,0 +1,10 @@
+﻿import Enum.GuildEnum.alpro;
+
+JavaPackage GC2GS.p032_GuildOp;
+csharpspace GC2GS.p032_GuildOp;
+
+ALProtocol GC2GS_032_012_ReqSetGuildJoinType[切换联盟加入类型] <32, 12>
+{
+	Enum.GuildEnum.EGuildJoinType type;
+	Common.GuildObj.Guild_JoinLimitInfo[] joinLimitInfo;
+}

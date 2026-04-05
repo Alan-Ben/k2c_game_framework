@@ -1,0 +1,8 @@
+﻿JavaPackage GS2GC.p041_MarsExploreOp;
+csharpspace GS2GC.p041_MarsExploreOp;
+
+ALProtocol GS2GC_041_057_OnExploreTeamHeroChg[火星探索队伍-大臣数据变更] <41, 57>
+{
+	long teamId;
+	long[] heroIdList[入驻大臣ID列表];
+}

@@ -1,0 +1,7 @@
+﻿JavaPackage GS2GC.p032_GuildOp;
+csharpspace GS2GC.p032_GuildOp;
+
+ALProtocol GS2GC_032_058_OnJoinGuildCdChg <32, 58>
+{
+	Common.GuildObj.Guild_JoinCdInfo joinCdInfo[加入联盟CD信息];
+}

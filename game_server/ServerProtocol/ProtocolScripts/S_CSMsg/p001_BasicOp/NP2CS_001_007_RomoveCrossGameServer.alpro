@@ -1,0 +1,6 @@
+﻿JavaPackage NP2CS.p001_BasicOp;
+
+ALProtocol NP2CS_001_007_RomoveCrossGameServer <1, 7>
+{
+	int serverTypeId;
+}

@@ -1,0 +1,7 @@
+JavaPackage GC2GS.p007_CommOp;
+csharpspace GC2GS.p007_CommOp;
+
+ALProtocol GC2GS_007_032_ReqCheckRedDot[红点-检查红点状态请求] <7, 32>
+{
+	Enum.CommonEnum.ERedDotType redDotType[要检查的红点类型];
+}

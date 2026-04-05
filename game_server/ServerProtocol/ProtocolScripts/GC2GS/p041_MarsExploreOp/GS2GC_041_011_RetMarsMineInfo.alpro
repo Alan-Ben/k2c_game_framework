@@ -1,0 +1,9 @@
+﻿JavaPackage GS2GC.p041_MarsExploreOp;
+csharpspace GS2GC.p041_MarsExploreOp;
+
+import Common.MarsObj.alpro;
+
+ALProtocol GS2GC_041_011_RetMarsMineInfo <41, 11>
+{
+	Common.MarsObj.Mars_MineDynamic info[火星矿产动态数据];
+}

@@ -1,0 +1,7 @@
+﻿﻿JavaPackage GS2GC.p002_InitOp;
+csharpspace GS2GC.p002_InitOp;
+
+ALProtocol GS2GC_002_031_RetPlayerStationInit <2, 31>
+{
+    Common.PlayerObj.Player_StationInfo stationInfo[贸易站信息];
+}

@@ -1,0 +1,16 @@
+﻿JavaPackage ALLRPC.US.Common;
+
+ALProtocol ExecServerGmCommand_Req
+{
+	string command;
+}
+
+ALProtocol ExecServerGmCommand_Return
+{
+	bool isSucc;
+	string result;
+}
+
+//[RPC] 执行服务器GM命令
+//[CLASS_PACKAGE] : AllRpcData.US_Service.Common
+//[DEALER_PACKAGE] : USServer.RPCDispatcher.Common

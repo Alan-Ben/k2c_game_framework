@@ -1,0 +1,7 @@
+java_path= ../Common/src
+java_package=NPCommon.ErrMain
+csharp_type = main
+id	name	desc
+1	GRAVE_RECORD_NOT_FOUND	无法找到记录
+2	GRAVE_CELE_TODAY_ERROR	今日无膜拜次数
+3	GRAVE_CONG_NOT_NEW_INFO	无可以祝贺的新晋杰出者

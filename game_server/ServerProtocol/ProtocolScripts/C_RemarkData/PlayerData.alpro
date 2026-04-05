@@ -1,0 +1,6 @@
+csharpspace RemarkData;
+
+ALProtocol PlayerUpgradeData
+{
+	long alreadyShowUpgradeWndLevel[已经展示过升级弹窗的等级];
+}

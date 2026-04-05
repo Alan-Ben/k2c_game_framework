@@ -1,0 +1,7 @@
+﻿JavaPackage NP2US_R.p001_BasicOp;
+
+ALProtocol NP2US_R_001_010_PHPGetPlayerInfo <1, 10>
+{
+	long cid;
+	string name;
+}

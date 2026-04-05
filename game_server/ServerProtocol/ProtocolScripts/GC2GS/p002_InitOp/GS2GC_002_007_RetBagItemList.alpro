@@ -1,0 +1,11 @@
+﻿﻿﻿﻿﻿import Common.NPCommonObj.alpro;
+JavaPackage GS2GC.p002_InitOp;
+csharpspace GS2GC.p002_InitOp;
+
+/**********************************************************
+ * 返回召物品息列表
+ **********************************************************/
+ALProtocol GS2GC_002_007_RetBagItemList <2, 7>
+{
+	Common.NPCommonObj.NPCommon_BagItemInfo[] bagItemList;
+}

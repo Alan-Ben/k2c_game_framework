@@ -1,0 +1,9 @@
+JavaPackage GS2GC.p032_GuildOp;
+csharpspace GS2GC.p032_GuildOp;
+
+import Common.GuildObj.alpro;
+
+ALProtocol GS2GC_032_047_RetGuildIconShow <32, 47>
+{
+    Common.GuildObj.Guild_IconShow info[联盟最简展示数据];
+}

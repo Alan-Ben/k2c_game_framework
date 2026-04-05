@@ -1,0 +1,57 @@
+JavaPackage Common.GuildCooperateObj;
+csharpspace Common.GuildCooperateObj;
+
+ALProtocol GuildCooperate_RewardPointPos[联盟协作奖励点位置]
+{
+    long areaId[区域ID];
+    int index[奖励点索引，从0开始];
+}
+
+ALProtocol GuildCooperate_PropertyPointInfo[联盟协作属性据点信息]
+{
+    int index[属性据点索引，从0开始];
+	Enum.CommonEnum.ESpecAttrType attr[所属属性];
+	long hadAttackHp[已攻击血量];
+	long totalHp[总血量];
+}
+
+ALProtocol GuildCooperate_RewardPointInfo[联盟协作奖励据点信息]
+{
+	GuildCooperate_RewardPointPos pos[位置];
+	long posId[奖励据点ID];
+	bool isUnlock[是否已解锁];
+	long leaderCid[盟主cid];
+	GuildCooperate_PropertyPointInfo[] propertyPointList[属性据点信息列表];
+}
+
+ALProtocol GuildCooperate_Info[联盟协作信息]
+{
+    long nextRefreshTimeMs[下次刷新时间];
+    int resetCount[已重置次数];
+	GuildCooperate_RewardPointInfo[] pointList[奖励据点信息列表];
+	GuildCooperate_RewardPointPos recommendPos[推荐奖励据点];
+}
+
+ALProtocol GuildCooperate_HeroUseInfo[联盟协作大臣使用信息]
+{
+    long lastRefreshTimeMs[上次刷新时间 ms];
+    long heroId[大臣ID];
+    int useCount[已使用次数];
+    int recoveredCount[已恢复次数];
+}
+
+ALProtocol GuildCooperate_HadDrawRewardPointList[联盟协作已领取奖励点]
+{
+    long lastRefreshTimeMs[上次刷新时间 ms];
+    GuildCooperate_RewardPointPos[] hadDrawList[已领取奖励点列表];
+}
+
+ALProtocol GuildCooperate_AttackLog[联盟协作攻击日志]
+{
+    long dbId[数据ID];
+    long timeMs[攻击时间 ms];
+    string name[攻击者名称];
+    long posId[奖励据点ID];
+    Enum.CommonEnum.ESpecAttrType attr[属性];
+    long attackHp[攻击血量];
+}

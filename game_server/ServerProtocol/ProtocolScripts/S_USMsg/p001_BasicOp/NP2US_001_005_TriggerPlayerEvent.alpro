@@ -1,0 +1,12 @@
+JavaPackage NP2US.p001_BasicOp;
+
+/**********************************************************
+ * 远程触发指定玩家的逻辑事件
+ **********************************************************/
+ALProtocol NP2US_001_005_TriggerPlayerEvent <1, 5>
+{
+	long cid[目标玩家CID];
+	string eventName[事件名称，与@EventDesc.name一致];
+	long[] paramList[事件参数列表];
+}
+

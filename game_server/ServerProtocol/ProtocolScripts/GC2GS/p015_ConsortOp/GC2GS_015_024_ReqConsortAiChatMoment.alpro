@@ -1,0 +1,10 @@
+JavaPackage GC2GS.p015_ConsortOp;
+csharpspace GC2GS.p015_ConsortOp;
+
+ALProtocol GC2GS_015_024_ReqConsortAiChatMoment [家人-朋友圈AI对话] <15, 24>
+{
+    long instanceId[实例id];
+    Common.CommonObj.Common_AiChatMessage[] msgList[消息列表];
+    long consortId[家人ID];
+    bool isMomentContent[是否是朋友圈内容];
+}

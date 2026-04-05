@@ -1,0 +1,5 @@
+﻿JavaPackage NP2US_B.p001_BasicOp;
+
+ALProtocol NP2US_B_001_009_MatchAdultServerOnline[MatchAdult子嗣联姻匹配服务器上线] <1, 9>
+{
+}

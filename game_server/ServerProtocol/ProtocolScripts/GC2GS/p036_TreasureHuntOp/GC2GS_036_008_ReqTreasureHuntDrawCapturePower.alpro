@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p036_TreasureHuntOp;
+csharpspace GC2GS.p036_TreasureHuntOp;
+
+ALProtocol GC2GS_036_008_ReqTreasureHuntDrawCapturePower[太空寻宝-领取捕捉能量] <36, 8>
+{
+	
+}

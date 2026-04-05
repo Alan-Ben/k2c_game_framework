@@ -1,0 +1,9 @@
+﻿JavaPackage Hotfix.V01.GC2GS.p200_HotSimpleActivityOp;
+csharpspace Hotfix.GC2GS.p200_HotSimpleActivityOp;
+
+ALProtocol GC2GS_200_002_ReqRegularActivityShopBuyItem[万能活动商店购买物品] <200, 2>
+{
+	long activityInstanceId[活动实例ID];
+	long itemId[物品ID];
+	int num[购买数量];
+}

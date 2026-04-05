@@ -1,0 +1,7 @@
+JavaPackage GC2GS.p004_PlayerOp;
+csharpspace GC2GS.p004_PlayerOp;
+
+ALProtocol GC2GS_004_021_ReqClientPayDone [通知客户端支付完成] <4, 21>
+{
+    string orderId[订单ID];
+}

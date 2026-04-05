@@ -1,0 +1,66 @@
+JavaPackage Common.ClothesEnum;
+csharpspace Common.ClothesEnum;
+
+ALEnum EAvatarGachaGuaranteeCondType[avatar抽卡条件类型]
+{
+	NONE;
+	QUALITY[筛选道具品质 QUALITY:min:max];
+	TAG[筛选道具TAG TAG:EXAMPLE];
+	DONT_HAVE[筛选还没获得的道具];
+}
+
+ALEnum EClothesUnitType[时装类型]
+{
+	NONE;
+	HAIRSTYLE[发型];
+	DRESS[连衣裙];
+	COAT[外套];
+	TOP[上衣];
+	BOTTOMS[下装];
+	SOCKS[袜子];
+	SHOES[鞋子];
+	ACCESSORIES[饰品];
+	EYEBROW_MAKEUP[眉妆];
+	COSMETIC_CONTACT_LENSES[美瞳];
+	EYE_SHADOW[眼影];
+	EYE_LIINER[眼线];
+	EYELASH[睫毛];
+	ROUGE[腮红];
+	LIP_MAKEUP[唇妆];
+	FACE_TATTOOS[纹面];
+}
+
+ALEnum EClothesUnitDetailType[时装单品详细类型]
+{
+	NONE;
+	HAIRSTYLE[发型];
+	DRESS[连衣裙];
+	COAT[外套];
+	TOP[上衣];
+	BOTTOMS[下装];
+	SOCKS[袜子];
+	SHOES[鞋子];
+	HAT[帽子];
+	FACE_ACCESSORY[面饰];
+	EAR_ACCESSORY[耳饰];
+	NECK_ACCESSORY[颈饰];
+	GLOVES[手套];
+	HANDHELD[手持物];
+	HAIR_ACCESSORY[发饰];
+	WRIST_ACCESSORY[腕饰];
+	RING[戒指];
+	WING[翅膀];
+	EYEBROW_MAKEUP[眉妆];
+	COSMETIC_CONTACT_LENSES[美瞳];
+	EYE_SHADOW[眼影];
+	EYE_LIINER[眼线];
+	EYELASH[睫毛];
+	ROUGE[腮红];
+	LIP_MAKEUP[唇妆];
+	FACE_TATTOOS[纹面];
+	TAIL[尾巴];
+	BACK_ACCESSORY[背饰];
+	CROSSBODY[斜挎];
+	FLOATING[悬浮];
+	TATTOO[纹身];
+}

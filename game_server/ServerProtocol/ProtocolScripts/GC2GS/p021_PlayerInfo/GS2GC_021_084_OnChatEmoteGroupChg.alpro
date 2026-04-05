@@ -1,0 +1,7 @@
+﻿﻿JavaPackage GS2GC.p021_PlayerInfo;
+csharpspace GS2GC.p021_PlayerInfo;
+
+ALProtocol GS2GC_021_084_OnChatEmoteGroupChg[聊天表情包变更推送]<21, 84>
+{
+    Common.NPPlayerInfo.PlayerInfo_ChatEmoteGroup info;
+}

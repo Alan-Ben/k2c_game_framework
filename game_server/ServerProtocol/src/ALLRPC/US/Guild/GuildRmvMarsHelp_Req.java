@@ -1,0 +1,102 @@
+package ALLRPC.US.Guild;
+
+import java.nio.ByteBuffer;
+public class GuildRmvMarsHelp_Req implements ALBasicProtocolPack._IALProtocolStructure {
+private long cid;
+private long guildId;
+private long helpId;
+private boolean needPush;
+
+
+public GuildRmvMarsHelp_Req() {
+	cid = (long)0;
+	guildId = (long)0;
+	helpId = (long)0;
+	needPush = false;
+}
+
+public GuildRmvMarsHelp_Req(
+	 long _cid
+	, long _guildId
+	, long _helpId
+	, boolean _needPush
+) {	cid = _cid;
+	guildId = _guildId;
+	helpId = _helpId;
+	needPush = _needPush;
+}
+
+public final byte getMainOrder() { return (byte)0; }
+
+public final byte getSubOrder() { return (byte)0; }
+
+public long getCid() { return cid; }
+public void setCid(long _cid) { cid = _cid; }
+public long getGuildId() { return guildId; }
+public void setGuildId(long _guildId) { guildId = _guildId; }
+public long getHelpId() { return helpId; }
+public void setHelpId(long _helpId) { helpId = _helpId; }
+public boolean getNeedPush() { return needPush; }
+public void setNeedPush(boolean _needPush) { needPush = _needPush; }
+
+
+public final int GetBufSize() {
+	int _size = 25;
+
+	return _size;
+}
+
+public final int GetFullPackBufSize() {
+	int _size = 27;
+
+	return _size;
+}
+
+
+
+public final void ReadUnzipBuf(ByteBuffer _buf, int _finalPos) {
+	 if(_finalPos > 0 && _buf.position() >= _finalPos) return ;
+	if(_buf.remaining() > 0) cid = _buf.getLong();
+	 if(_finalPos > 0 && _buf.position() >= _finalPos) return ;
+	if(_buf.remaining() > 0) guildId = _buf.getLong();
+	 if(_finalPos > 0 && _buf.position() >= _finalPos) return ;
+	if(_buf.remaining() > 0) helpId = _buf.getLong();
+	 if(_finalPos > 0 && _buf.position() >= _finalPos) return ;
+	if(_buf.remaining() > 0) needPush = (_buf.get() != 0);
+}
+
+public final void PutUnzipBuf(ByteBuffer _buf) {
+	_buf.putLong(cid);
+	_buf.putLong(guildId);
+	_buf.putLong(helpId);
+	_buf.put(needPush?(byte)1:(byte)0);
+}
+
+public final ByteBuffer makeFullPackage() {
+	int _bufSize = GetBufSize() + 2;
+	ByteBuffer _buf = ByteBuffer.allocate(_bufSize);
+	_buf.put((byte)0);
+	_buf.put((byte)0);
+	PutUnzipBuf(_buf);
+	_buf.flip();
+	return _buf;
+}
+public final void makeFullPackage(ByteBuffer _recBuf) {
+	if(null == _recBuf)
+		return ;
+	_recBuf.put((byte)0);
+	_recBuf.put((byte)0);
+	PutUnzipBuf(_recBuf);
+}
+public final ByteBuffer makePackage() {
+	int _bufSize = GetBufSize();
+	ByteBuffer _buf = ByteBuffer.allocate(_bufSize);
+	PutUnzipBuf(_buf);
+	_buf.flip();
+	return _buf;
+}
+public final void readPackage(ByteBuffer _buf) {
+	ReadUnzipBuf(_buf, -1);
+}
+}
+

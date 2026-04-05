@@ -1,0 +1,10 @@
+﻿JavaPackage Common.MuseumObj;
+csharpspace Common.MuseumObj;
+
+ALProtocol Museum_ItemInfo[博物馆_物品信息]
+{
+	long itemId[物品ID];
+	bool isActive[是否激活];
+	int level[等级];
+	long gainTimeMs[获得时间(毫秒)];
+}

@@ -1,0 +1,7 @@
+﻿﻿JavaPackage GS2GC.p024_DungeonOp;
+csharpspace GS2GC.p024_DungeonOp;
+
+ALProtocol GS2GC_024_003_RetMiddayDungeonBoxList <24, 3>
+{
+    Common.DungeonObj.MiddayDungeon_BoxInfo[] boxList[宝箱列表];
+}

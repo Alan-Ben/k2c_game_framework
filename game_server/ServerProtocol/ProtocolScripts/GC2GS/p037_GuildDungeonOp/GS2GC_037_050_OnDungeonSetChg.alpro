@@ -1,0 +1,9 @@
+﻿JavaPackage GS2GC.p037_GuildDungeonOp;
+csharpspace GS2GC.p037_GuildDungeonOp;
+
+import Common.GuildDungeonObj.alpro;
+
+ALProtocol GS2GC_037_050_OnDungeonSetChg <37, 50>
+{
+	Common.GuildDungeonObj.GuildDungeon_SetInfo setInfo;
+}

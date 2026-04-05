@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p023_ArenaOp;
+csharpspace GC2GS.p023_ArenaOp;
+
+ALProtocol GC2GS_023_007_ReqCelebrityRank[名人榜数据] <23, 7>
+{
+    long dbId[起始id];
+}

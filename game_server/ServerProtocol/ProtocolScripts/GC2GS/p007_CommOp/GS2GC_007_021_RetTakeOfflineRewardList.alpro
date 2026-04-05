@@ -1,0 +1,7 @@
+﻿JavaPackage GS2GC.p007_CommOp;
+csharpspace GS2GC.p007_CommOp;
+
+ALProtocol GS2GC_007_021_RetTakeOfflineRewardList <7, 21>
+{
+	long[] idList[成功处理的列表];
+}

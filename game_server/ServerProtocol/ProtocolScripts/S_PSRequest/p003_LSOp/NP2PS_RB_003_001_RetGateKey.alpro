@@ -1,0 +1,15 @@
+JavaPackage NP2PS_RB.p003_LSOp;
+
+/**********************************************************
+ * 返回连接服务器的连接key
+ **********************************************************/
+ALProtocol NP2PS_RB_003_001_RetGateKey <3, 1>
+{
+	//申请结果
+	bool res;
+	
+	string uid;
+	string gateServerIp;
+	int gateServerPort;
+	string checkCode;
+}

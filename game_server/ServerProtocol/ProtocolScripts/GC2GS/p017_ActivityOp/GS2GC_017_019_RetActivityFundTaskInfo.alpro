@@ -1,0 +1,8 @@
+JavaPackage GS2GC.p017_ActivityOp;
+csharpspace GS2GC.p017_ActivityOp;
+
+ALProtocol GS2GC_017_019_RetActivityFundTaskInfo <17, 19>
+{
+	Common.ActivityFundObj.ActivityFund_TaskInfo[] taskList[任务列表];
+	long taskNextRefreshTime[任务下次刷新时间];
+}

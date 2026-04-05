@@ -1,0 +1,8 @@
+JavaPackage GC2GS.p014_ChildOp;
+csharpspace GC2GS.p014_ChildOp;
+
+ALProtocol GC2GS_014_030_ReqCidAdultIsMarried[请求玩家子嗣是否结婚的信息] <14, 30>
+{
+	long cid;
+	long adultId;
+}

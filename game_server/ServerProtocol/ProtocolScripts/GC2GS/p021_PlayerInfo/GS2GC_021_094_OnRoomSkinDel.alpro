@@ -1,0 +1,10 @@
+﻿JavaPackage GS2GC.p021_PlayerInfo;
+csharpspace GS2GC.p021_PlayerInfo;
+
+/**********************************************************
+ * 推送玩家删除房间皮肤
+ **********************************************************/
+ALProtocol GS2GC_021_094_OnRoomSkinDel[房间皮肤删除推送]<21, 94>
+{
+	long roomSkinId[房间皮肤ID];
+}

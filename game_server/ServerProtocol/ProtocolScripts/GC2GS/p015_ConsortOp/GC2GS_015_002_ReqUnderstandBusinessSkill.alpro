@@ -1,0 +1,8 @@
+JavaPackage GC2GS.p015_ConsortOp;
+csharpspace GC2GS.p015_ConsortOp;
+ALProtocol GC2GS_015_002_ReqUnderstandBusinessSkill [家人-领悟经营技能等级] <15, 2>
+{
+    long consortId[家人ID];
+    long skillId[经营技能ID];
+    bool isAdvanced[是否高级领悟];
+}

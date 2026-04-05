@@ -1,0 +1,7 @@
+JavaPackage NP2US_R.p005_WebPayOp;
+
+ALProtocol NP2US_R_005_001_ReqGetWebPayGoodsList[获取网页支付商品列表] <5, 1>
+{
+	long cid[角色ID];
+	string channelCode[渠道标识];
+}

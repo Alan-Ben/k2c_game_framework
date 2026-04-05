@@ -1,0 +1,6 @@
+﻿JavaPackage ToSCS_RB.p001_ShareCodeOp;
+
+ALProtocol ToSCS_RB_001_001_GenShareCode <1, 1>
+{
+	long serial;
+}

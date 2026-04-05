@@ -1,0 +1,8 @@
+﻿JavaPackage GC2GS.p041_MarsExploreOp;
+csharpspace GC2GS.p041_MarsExploreOp;
+
+ALProtocol GC2GS_041_004_ReqSetExploreTeamName[火星探险-设置队伍名称] <41, 4>
+{
+	long teamId;
+	string name;
+}

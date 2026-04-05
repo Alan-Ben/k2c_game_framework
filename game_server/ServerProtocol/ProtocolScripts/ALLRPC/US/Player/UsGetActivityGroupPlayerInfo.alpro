@@ -1,0 +1,17 @@
+JavaPackage ALLRPC.US.Player;
+
+ALProtocol UsGetActivityGroupPlayerInfo_Req
+{
+    long groupId[活动群组ID];
+    long cid[目标玩家CID];
+}
+
+ALProtocol UsGetActivityGroupPlayerInfo_Return
+{
+    bytebuffer obj[玩家群组数据];
+}
+
+//[RPC]向US查询指定活动群组下玩家的数据，返回序列化的玩家数据
+//[CLASS_PACKAGE] : AllRpcData.US_Service.Player
+//[DEALER_PACKAGE] : USServer.RPCDispatcher.Player
+

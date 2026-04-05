@@ -1,0 +1,9 @@
+﻿JavaPackage GS2GC.p037_GuildDungeonOp;
+csharpspace GS2GC.p037_GuildDungeonOp;
+
+import Common.GuildDungeonObj.alpro;
+
+ALProtocol GS2GC_037_010_RetGetDungeonLogList <37, 10>
+{
+	Common.GuildDungeonObj.GuildDungeon_Log[] logList[副本日志数据];
+}

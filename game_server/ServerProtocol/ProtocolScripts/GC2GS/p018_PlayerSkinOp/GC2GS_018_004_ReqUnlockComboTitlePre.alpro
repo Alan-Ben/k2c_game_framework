@@ -1,0 +1,6 @@
+JavaPackage GC2GS.p018_PlayerSkinOp;
+csharpspace GC2GS.p018_PlayerSkinOp;
+ALProtocol GC2GS_018_004_ReqUnlockComboTitlePre [解锁组合称号前缀] <18, 4>
+{
+    long preId[空];
+}

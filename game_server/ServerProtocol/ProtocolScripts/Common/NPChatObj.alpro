@@ -1,0 +1,189 @@
+import Common.NPInclude.alpro;
+JavaPackage Common.NpChatObj;
+csharpspace Common.NpChatObj;
+
+import Common.NPPlayerInfo.alpro;
+import Common.ChildObj.alpro;
+import Enum.GuildEnum.alpro;
+import Common.ConsortObj.alpro;
+import Common.HeroObj.alpro;
+
+
+/**********************************************************
+ * 聊天房间信息
+ **********************************************************/
+ALProtocol NPCommon_ChatRoomInfo[NP聊天房间信息]
+{
+	long chatSdkRoomId[聊天服务器房间的唯一id];
+	int chatRoomType[房间类型,ENPChatRoomType];
+	long chatRoomSubTypeId[在指定类型下的房间唯一id];
+}
+
+ ALProtocol NPCommon_ChatSystemPlayerContent
+ {
+    long systemPlayerId[系统用户展示信息id];
+ }
+ 
+/**********************************************************
+ *  聊天消息 Common_Msg 里 gamePlayerContent 对应的结构体 
+ **********************************************************/
+ ALProtocol NPCommon_ChatPlayerContent
+ {
+    string cName[玩家名];
+    long cid[玩家id];
+    long bubbleId[气泡框id];
+    long iconId[头像id];
+    long iconBgkId[头像框id];
+	long playerSkinId[皮肤ID];
+	Common.NPCommonObj.PlayerInfo_CurTitle curTitle[玩家当前穿戴称号数据];
+	bool isShow[是否展示称号];
+	int vipLvl[VIP等级];
+ }
+
+/**********************************************************
+ * ENPChatMsgType 为 TEXT 的聊天内容结构体
+ **********************************************************/
+ ALProtocol NPCommon_ChatContent_Text
+ {
+    string content;
+ }
+ 
+ /**********************************************************
+ * ENPChatMsgType 为 SYSTEM 的聊天内容结构体
+ **********************************************************/
+ ALProtocol NPCommon_ChatContent_System
+ {
+    string content;
+ }
+ 
+ /**********************************************************
+ * 聊天宝箱
+ **********************************************************/
+ ALProtocol NPCommon_ChatContent_CommBox
+ {
+	long instanceId[实例ID];
+	long refId[宝箱配表ID];
+	long senderCid[发送玩家CID];
+ }
+
+ /**********************************************************
+ * 活动排行榜宝箱
+ **********************************************************/
+ ALProtocol NPCommon_ChatContent_ActivityRankBox
+ {
+	long instanceId[实例ID];
+	long refId[宝箱配表ID];
+	long key[cid或团体id];
+	long activityRankRushId[活动冲榜ID];
+ }
+
+ ALProtocol NPCommon_ChatContent_ConsortCGShare[情人CG分享]
+{
+	long cgId;
+}
+ 
+/**********************************************************
+ * 子嗣
+**********************************************************/
+ALProtocol NPCommon_ChatContent_AdultMarryServerApply[子嗣全服联姻]
+{
+	Common.ChildObj.Adult_Info adult[子嗣数据];
+}
+
+/**********************************************************
+ * 宴会
+**********************************************************/
+ALProtocol NPCommon_ChatContent_Dinner[宴会邀请]
+{
+	long instanceId[宴会实例ID];
+	long dinnerId[宴会配置ID];
+	long ownerCid[开宴玩家CID];
+	int joinerCount[参与宴会玩家数量];
+}
+
+ALProtocol NPCommon_ChatContent_Emoji[表情包]
+{
+	long refId;
+}
+
+ALProtocol NPCommon_ChatContent_ConsortShare[妃子分享]
+{
+	long consortId[妃子id];
+	long skinId[皮肤id];
+	long charm[魅力];
+	long intimacy[亲密度];
+	Common.ConsortObj.Consort_Fetters consortFetters[羁绊];
+}
+
+ALProtocol NPCommon_ChatContent_ChildShare[子嗣分享]
+{
+    string childName[子嗣名称];
+    long consortId[监护人id];
+    int childLevel[子嗣等级];
+    int childStep[子嗣升学阶段];
+    long childResId[子嗣资源id];
+    long childCareerId[子嗣职业id];
+    long childQualityId[子嗣品质id];
+    Enum.CommonEnum.ESpecAttrType attrType[相性];
+    long earnings[收益];
+    long educationExpValue[单次教学奖励];
+    long educatingBaseAwards[基础奖励];
+    long childQualityBonus[天资加成];
+    long consortBonus[情人羁绊加成];
+    long heroBonus[顾问技能加成];
+    bool isSuper[是否卷王];
+	long cid;
+	bool isGraduated[是否毕业，未毕业的adultId无效];
+	long adultId;
+}
+
+
+ALProtocol Common_ChatContent_GuildLog[联盟系统消息]
+{
+	Enum.GuildEnum.EGuildLogType logType[日志类型];
+	bytebuffer data[数据];
+}
+
+ALProtocol Common_ChatContent_GuildRecruit[联盟招募]
+{
+	long guildId;
+	string guildName;
+}
+
+ALProtocol NPCommon_ChatContent_HeroShare[大臣分享]
+{
+	long heroId[大臣id];
+	long skinId[皮肤id];
+	int level[等级];
+	int step[阶段];
+	int star[觉醒星级];
+	long power[战力];
+	Common.HeroObj.Hero_TalentSkillInfo[] talentSkillList[资质技能列表];
+	long talent[资质];
+}
+
+ALProtocol ChatObj_MiddayDungeonBox[午间副本宝箱]
+{
+	long dbId[数据id];
+	long boxId[宝箱ID];
+	long expiredTimeMs[过期时间];
+}
+
+ALProtocol ChatObj_SystemLog[系统日志]
+{
+	long logType[日志类型];
+}
+
+ALProtocol ChatContent_GuildMarsMineAttackShare[联盟成员火星矿被攻击分享]
+{
+	string attackCname[攻击玩家昵称];
+	string attackGuildSimpleName[攻击玩家的联盟简称];
+	string cname[联盟被攻击玩家昵称];
+	long mineInstanceId[火星矿实例ID];
+}
+
+ALProtocol NPCommon_ChatContent_MarsExploreMineShare[火星探险矿分享]
+{
+	long guildShareMineMsgId[联盟分享矿消息id];
+	long refId[矿配表id];
+}

@@ -1,0 +1,14 @@
+JavaPackage GS2GC.p002_InitOp;
+csharpspace GS2GC.p002_InitOp;
+
+import Common.GuildObj.alpro;
+
+ALProtocol GS2GC_002_082_RetGuildBoxInit <2, 82>
+{
+	Common.GuildObj.Guild_BoxInfo[] boxList[宝箱列表];
+	
+	long activePoint;
+	int targetLvl;
+	
+	bool isGuildBoxShareAnonymous[分享宝箱匿名];
+}

@@ -1,0 +1,7 @@
+JavaPackage GS2GC.p019_DinnerOp;
+csharpspace GS2GC.p019_DinnerOp;
+import Common.DinnerObj.alpro;
+ALProtocol GS2GC_019_052_OnPermitAdd [宴会凭证推送] <19, 52>
+{
+    Common.DinnerObj.Dinner_Permit permit[宴会凭证];
+}

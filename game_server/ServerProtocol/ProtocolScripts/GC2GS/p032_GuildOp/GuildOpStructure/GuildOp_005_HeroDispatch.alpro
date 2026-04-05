@@ -1,0 +1,10 @@
+﻿JavaPackage GC2GS.p032_GuildOp.GuildOpStructure;
+
+ALProtocol GuildOp_005_HeroDispatch[更换派遣大臣]
+{
+	long heroId;
+	int dispatchValue;
+	int level;
+	long power;
+	long skinId;
+}

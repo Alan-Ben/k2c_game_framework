@@ -1,0 +1,12 @@
+import Common.CommonObj.alpro;
+import Common.GuildCooperateObj.alpro;
+
+JavaPackage GS2GC.p002_InitOp;
+csharpspace GS2GC.p002_InitOp;
+
+ALProtocol GS2GC_002_075_RetGuildCooperateInit[联盟协作初始化响应] <2, 75>
+{
+    Common.GuildCooperateObj.GuildCooperate_Info info[联盟协作信息];
+    Common.GuildCooperateObj.GuildCooperate_HeroUseInfo[] heroUseInfoList[大臣使用信息列表];
+    Common.GuildCooperateObj.GuildCooperate_HadDrawRewardPointList hadDrawRewardPointList[已领取奖励点列表];
+}

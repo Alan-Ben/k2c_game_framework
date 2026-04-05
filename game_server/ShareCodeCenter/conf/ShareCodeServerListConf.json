@@ -1,0 +1,12 @@
+[
+    {
+        "Id": 1,
+        "RecBufferLen": 102400,
+        "Port": 7005,
+        "PlatServerIp": "127.0.0.1",
+        "PlatServerPort": 6660,
+        "PlatServerPassword": "wcg_basic_plat_server",
+        "InternalIp": "127.0.0.1",
+        "InternalPort": 7005
+    }
+]

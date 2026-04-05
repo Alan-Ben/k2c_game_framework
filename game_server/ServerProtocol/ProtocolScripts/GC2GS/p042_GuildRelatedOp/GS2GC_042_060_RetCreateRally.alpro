@@ -1,0 +1,8 @@
+JavaPackage GS2GC.p042_GuildRelatedOp;
+csharpspace GS2GC.p042_GuildRelatedOp;
+
+ALProtocol GS2GC_042_060_RetCreateRally[返回创建集结结果] <42, 60>
+{
+    long rallyId[集结ID];
+}
+

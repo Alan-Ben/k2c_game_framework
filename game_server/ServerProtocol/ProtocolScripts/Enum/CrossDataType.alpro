@@ -1,0 +1,9 @@
+﻿JavaPackage Common.CrossDataType;
+csharpspace Common.CrossDataType;
+
+ALEnum ECrossDataType[跨服数据类型枚举]
+{
+	NONE;
+	MARS_MINE[火星矿];
+}
+

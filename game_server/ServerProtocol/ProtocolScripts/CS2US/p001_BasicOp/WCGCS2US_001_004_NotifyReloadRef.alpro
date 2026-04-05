@@ -1,0 +1,6 @@
+﻿JavaPackage WCGCS2US.p001_BasicOp;
+
+ALProtocol WCGCS2US_001_004_NotifyReloadRef <1, 4>
+{
+	string refList;//服务端资源文件名(多个资源:分隔)
+}

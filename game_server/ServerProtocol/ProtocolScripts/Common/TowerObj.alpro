@@ -1,0 +1,23 @@
+﻿JavaPackage Common.TowerObj;
+csharpspace Common.TowerObj;
+
+ALProtocol Tower_PosInfo[玩家位置信息]
+{
+	long chapterId;
+	int level[关卡层数 从1开始];
+}
+
+ALProtocol Tower_OpponentInfo[爬塔_对手信息]
+{
+	Tower_PosInfo posInfo;
+	long playerId;
+}
+
+ALProtocol Tower_ReportInfo[爬塔_战报信息]
+{
+	Tower_PosInfo posInfo[所在位置];
+	long attackerCid[攻击者Cid];
+	bool isSucc[攻击是否成功];
+	int downLevel[下降层数];
+	long timestamp[时间戳 毫秒];
+}

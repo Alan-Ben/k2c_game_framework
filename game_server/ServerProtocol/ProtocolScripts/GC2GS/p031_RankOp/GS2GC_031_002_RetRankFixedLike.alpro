@@ -1,0 +1,7 @@
+﻿JavaPackage GS2GC.p031_RankOp;
+csharpspace GS2GC.p031_RankOp;
+
+ALProtocol GS2GC_031_002_RetRankFixedLike <31, 2>
+{
+	Common.RankObj.RankFixed_LikeResult likeResult[点赞结果];
+}

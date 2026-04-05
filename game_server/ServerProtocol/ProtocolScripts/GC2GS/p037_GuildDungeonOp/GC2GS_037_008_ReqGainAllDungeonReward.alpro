@@ -1,0 +1,6 @@
+﻿JavaPackage GC2GS.p037_GuildDungeonOp;
+csharpspace GC2GS.p037_GuildDungeonOp;
+
+ALProtocol GC2GS_037_008_ReqGainAllDungeonReward[公会副本-一键领取所有奖励] <37, 8>
+{
+}

@@ -1,0 +1,8 @@
+﻿﻿JavaPackage GS2GC.p002_InitOp;
+csharpspace GS2GC.p002_InitOp;
+
+ALProtocol GS2GC_002_012_RetHeroInit <2, 12>
+{
+	Common.HeroObj.Hero_Info[] heroList[大臣列表];
+	Common.HeroObj.Hero_SuitInfo[] suitList[套系列表];
+}

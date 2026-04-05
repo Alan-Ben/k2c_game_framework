@@ -1,0 +1,20 @@
+﻿JavaPackage ALLRPC.US.Mars;
+
+﻿﻿﻿﻿﻿import Common.ServerObj.alpro;
+
+ALProtocol MarsMineOccupyReq_Req
+{
+	long mineInstanceId;
+	bool isOtherTeamForward;
+	Common.ServerObj.ServerObj_MarsTeam_OccupyMinePlayer playerInfo[玩家派遣信息];
+	long startCollectMs;
+	long collectSpeed;
+}
+
+ALProtocol MarsMineOccupyReq_Return
+{
+}
+
+//[RPC] 火星矿结算数据
+//[CLASS_PACKAGE] : AllRpcData.US_Service.Mars
+//[DEALER_PACKAGE] : USServer.RPCDispatcher.Mars

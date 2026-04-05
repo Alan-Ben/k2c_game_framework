@@ -1,0 +1,16 @@
+﻿JavaPackage ALLRPC.US.Child;
+
+﻿﻿﻿﻿﻿import Common.ServerObj.alpro;
+
+ALProtocol CancelPersonMarryApply_Req
+{
+	Common.ServerObj.ServerObj_AdultMarryCancelApply cancel[取消的请求数据];
+}
+
+ALProtocol CancelPersonMarryApply_Return
+{
+}
+
+//[RPC] 取消子嗣指定联姻请求
+//[CLASS_PACKAGE] : AllRpcData.US_Service.Child
+//[DEALER_PACKAGE] : USServer.RPCDispatcher.Child

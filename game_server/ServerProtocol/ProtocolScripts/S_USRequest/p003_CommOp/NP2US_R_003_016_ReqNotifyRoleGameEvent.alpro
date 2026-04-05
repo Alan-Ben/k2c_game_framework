@@ -1,0 +1,8 @@
+﻿JavaPackage WCGCS2US_R.p003_CommOp;
+
+ALProtocol NP2US_R_003_016_ReqNotifyRoleGameEvent[通知角色游戏事件] <3, 16>
+{
+	long cid;
+	string activityCode[活动标识];
+	String type[事件类型];
+}

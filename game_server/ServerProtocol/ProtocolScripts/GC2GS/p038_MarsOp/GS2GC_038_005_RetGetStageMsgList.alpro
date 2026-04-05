@@ -1,0 +1,10 @@
+JavaPackage GS2GC.p038_MarsOp;
+csharpspace GS2GC.p038_MarsOp;
+
+import Common.MarsObj.alpro;
+
+ALProtocol GS2GC_038_005_RetGetStageMsgList[前往火星-阶段留言列表响应] <38, 5>
+{
+	int stage[阶段];
+	Common.MarsObj.Mars_GoRoute_StageMsg[] msgList[留言列表];
+}

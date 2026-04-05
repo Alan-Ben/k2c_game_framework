@@ -1,0 +1,20 @@
+﻿import Common.NPInclude.alpro;
+import Common.NPCommonObj.alpro;
+
+JavaPackage Common.MarketObj;
+csharpspace Common.MarketObj;
+
+ALProtocol Market_Info[集市数据]
+{
+	long marketId[集市ID];
+	long marketLvl[集市等级];
+	int count[当前操作次数];
+	long lastOperateMs[上次经营时间（毫秒）];
+}
+
+ALProtocol Market_AkeyResult[集市一键经营结果数据]
+{
+	long marketId[集市ID];
+	int multiple[倍数];
+	bool isCrit[是否暴击];
+}

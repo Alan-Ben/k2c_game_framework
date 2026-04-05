@@ -1,0 +1,8 @@
+﻿JavaPackage GS2GC.p034_InnOp;
+csharpspace GS2GC.p034_InnOp;
+
+
+ALProtocol GS2GC_034_059_OnInnMedalLevelChg [旅店奖牌等级变更] <34, 59>
+{
+    int medalLevel[新奖牌等级];
+}

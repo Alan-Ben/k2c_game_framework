@@ -1,0 +1,260 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using ALPackage;
+using System;
+
+namespace GOE
+{
+    // 背包弹窗:使用概率物品
+    public class GGUIWndBagItemUseSelect : _ANPGGUIBasicWnd<GGUIMonoBagItemUseSelect>
+    {
+        private static GGUIWndBagItemUseSelect _g_instance = new GGUIWndBagItemUseSelect();
+        public static GGUIWndBagItemUseSelect instance
+        {
+            get
+            {
+                if (null == _g_instance)
+                    _g_instance = new GGUIWndBagItemUseSelect();
+
+                return _g_instance;
+            }
+        }
+        //列表容器
+        private GGUIWndBagSelectItemContainer _m_gSelectGrid;
+
+        // 物品数据
+        private BagItem _m_iItem = null;
+
+        // 使用数量
+        private long _m_lUseCount = 1;
+
+        //使用个数是否满足
+        private bool _m_isSelectMax = false;
+
+        // 弹窗属性
+        private NPGGUIWndCommonItem _m_wItemInfo = null;
+
+        // 数量计数器
+        private GGUIWndBagPopCounter _m_wCounter = null;
+
+        //消耗按钮
+        private GGUIWndBagCostUseBtn _m_costUseBtn;
+
+        //物品不足按钮
+        private GGUIWndBagCostUseBtn _m_notEnoughUseBtn;
+
+        //使用回调
+        private Action<BagItem,long, List<int>> _m_useAction;
+
+        public GGUIWndBagItemUseSelect()
+            : base(EALUIWndLayer.ADDITION)
+        {
+        }
+
+        protected override string _monoAssetPath { get { return GGUIMonoBagItemUseSelect.assetPath; } }
+        protected override string _monoObjName { get { return GGUIMonoBagItemUseSelect.objName; } }
+        protected override _AALResourceCore _resourceCore { get { return GameResCore.instance; } }
+
+
+        protected override void _onWndInitDone()
+        {
+            if (wnd.itemWnd != null)
+                _m_wItemInfo = new NPGGUIWndCommonItem(wnd.itemWnd);
+
+            if (wnd.useCounter != null)
+            {
+                _m_wCounter = new GGUIWndBagPopCounter(wnd.useCounter);
+                _m_wCounter.regCounterChangedEvent(_onCounterChanged);
+            }
+            if (wnd.selectGrid != null)
+            {
+                _m_gSelectGrid = new GGUIWndBagSelectItemContainer(wnd.selectGrid);
+                _m_gSelectGrid.setSelectDelegate(_refreshSelectedCount);
+            }
+
+            if (null != wnd.costUseBtn)
+                _m_costUseBtn = new GGUIWndBagCostUseBtn(wnd.costUseBtn, _onConfirmBtnClick);
+
+            if (null != wnd.notEnoughUseBtn)
+                _m_notEnoughUseBtn = new GGUIWndBagCostUseBtn(wnd.notEnoughUseBtn, _onConfirmBtnClick);
+
+            //绑定按钮
+            ALUGUICommon.combineBtnClick(wnd.closeBtn, _onCloseBtnClick);
+
+        }
+        protected override void _onShowWnd()
+        {
+
+
+        }
+
+        protected override void _onHideWnd()
+        {
+            // 重置数量
+            _m_lUseCount = 1;
+        }
+
+        protected override void _onReset()
+        {
+            if (_m_wItemInfo != null)
+                _m_wItemInfo.resetWnd();
+            if (_m_wCounter != null)
+                _m_wCounter.resetWnd();
+            if (_m_gSelectGrid != null)
+                _m_gSelectGrid.resetWnd();
+        }
+
+        protected override void _onDiscard()
+        {
+            _m_iItem = null;
+            _m_lUseCount = 1;
+
+            if (_m_wItemInfo != null)
+                _m_wItemInfo.discard();
+            _m_wItemInfo = null;
+
+            if (_m_wCounter != null)
+                _m_wCounter.discard();
+            _m_wCounter = null;
+            if (_m_gSelectGrid != null)
+                _m_gSelectGrid.discard();
+            _m_gSelectGrid = null;
+
+            if (null != _m_costUseBtn)
+                _m_costUseBtn.discard();
+            _m_costUseBtn = null;
+
+            if (null != _m_notEnoughUseBtn)
+                _m_notEnoughUseBtn.discard();
+            _m_notEnoughUseBtn = null;
+
+            //解绑按钮
+            ALUGUICommon.uncombineBtnClick(wnd.closeBtn, _onCloseBtnClick);
+        }
+
+
+
+        // 初始化
+        public void init(BagItem _item, Action<BagItem,long, List<int>> _useAction)
+        {
+            if (null == wnd || null == _item)
+                return;
+
+            _m_iItem = _item;
+            _m_useAction = _useAction;
+
+            // 初始化计数器
+            if (null != _m_wCounter)
+                _m_wCounter.init(_item);
+
+            // 窗口属性
+            CommonItemData itemData = new CommonItemData(_item);
+            if (_m_wItemInfo != null)
+                _m_wItemInfo.setItem(itemData);
+
+            ALUGUICommon.setLabelTxt(wnd.itemDetail, _item.baseItemData.transDesc);
+            
+            if (_item.itemUseRefObj == null)
+                return;
+            if (_item.itemUseRefObj.option_count <= 0)
+            {
+                _item.itemUseRefObj.option_count = 1;
+            }
+            if (_m_gSelectGrid != null)
+            {
+                _m_gSelectGrid.refreshWindow(_item.itemUseRefObj.option_item_list, _item.itemUseRefObj.option_count);
+                //默认初始化选中个数为1
+                _m_gSelectGrid.setSelectCount(1);
+            }
+
+            if (null != _m_costUseBtn)
+                _m_costUseBtn.setItem(_item.itemUseRefObj.cost_item_list);
+
+            if (null != _m_notEnoughUseBtn)
+                _m_notEnoughUseBtn.setItem(_item.itemUseRefObj.cost_item_list);
+
+            _refreshSelectedCount(0, _item.itemUseRefObj.option_count);
+        }
+
+        /// <summary>
+        /// 刷新使用按钮状态 
+        /// </summary>
+        private void _refreshUseBtnState()
+        {
+            if (wnd == null)
+                return;
+
+            //置灰
+            bool isEnable = NPPlayer.instance.bagComp.isItemCanUse(_m_iItem, _m_lUseCount, false);
+            if (isEnable && _m_isSelectMax)
+                GGameCommonInfo.disgrayImage(wnd.grayImgList);
+            else
+                GGameCommonInfo.grayImage(wnd.grayImgList);
+            ALUGUICommon.setGameObjEnable(wnd.goItemNotEnoughHideList, isEnable);
+            ALUGUICommon.setGameObjEnable(wnd.goItemNotEnoughShowList, !isEnable);
+        }
+
+        // 响应确定按钮点击事件
+        private void _onConfirmBtnClick()
+        {
+            if (null == _m_iItem)
+                return;
+
+            if (null != _m_gSelectGrid && _m_gSelectGrid.SelectedIndexList.Count >= 0 && NPPlayer.instance.bagComp.isItemCanUse(_m_iItem, _m_lUseCount))
+            {
+                //没有选够物品
+                if (_m_iItem.itemUseRefObj != null && _m_gSelectGrid.SelectedIndexList.Count < _m_iItem.itemUseRefObj.option_count)
+                {
+                    NPGUIAddSceneCenterTip.instance.showTransTextInfo(TransKeyConst.bag_select_tip);
+                    return;
+                }
+                else
+                {
+                    if (null != _m_useAction)
+                        _m_useAction(_m_iItem,_m_lUseCount, _m_gSelectGrid.SelectedIndexList);
+                }
+            }
+        }
+
+        // 响应关闭按钮点击事件
+        private void _onCloseBtnClick(GameObject _btn)
+        {
+            QueueMgr.instance.forceCloseNodeByTag(UINodeTagConst.C_ADD_Bag_Item_Use_Select);
+        }
+
+        // 响应计数器更改事件
+        private void _onCounterChanged(long _newCount)
+        {
+            _m_lUseCount = _newCount;
+
+            if (null != _m_gSelectGrid)
+                _m_gSelectGrid.setSelectCount((int)_m_lUseCount);
+
+            if (null != _m_costUseBtn)
+                _m_costUseBtn.setSelectCount(_newCount);
+
+            if (null != _m_notEnoughUseBtn)
+                _m_notEnoughUseBtn.setSelectCount(_newCount);
+
+            _refreshUseBtnState();
+        }
+
+        //更新选中个数
+        private void _refreshSelectedCount(int _selectedNum, int _needSelectNum)
+        {
+            bool flag = _selectedNum == _needSelectNum;
+
+            string selectNumStr = _selectedNum.ToString();
+            if (!flag)
+            {
+                selectNumStr = GCommon.addColorForRichText(selectNumStr, wnd.noEnoughSelectCountColor);
+            }
+
+            ALUGUICommon.setLabelTxt(wnd.selectNumText, TextTranslate.instance.getLanguage(TransKeyConst.bag_select_num_num, selectNumStr, _needSelectNum));
+
+            _m_isSelectMax = flag;
+            _refreshUseBtnState();
+        }
+    }
+}

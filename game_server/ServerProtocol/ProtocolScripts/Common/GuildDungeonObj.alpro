@@ -1,0 +1,81 @@
+﻿JavaPackage Common.GuildDungeonObj;
+csharpspace Common.GuildDungeonObj;
+
+import Enum.GuildDungeonEnum.alpro;
+
+ALProtocol GuildDungeon_SetInfo[公会副本数据]
+{
+	long dungeonId[公会副本ID];
+	int lvl[公会副本等级];
+}
+
+ALProtocol GuildDungeon_Monster[公会副本怪物数据]
+{
+	long monsterId[怪物ID];
+	bool isReward[有奖励的怪物];
+	long hp[当前怪物血量];
+}
+
+ALProtocol GuildDungeon_InstanceInfo[公会副本实例数据]
+{
+	long id[实例ID];
+	long dungeonId[公会副本ID];
+	int lvl[公会副本等级];
+	long startMs[开启时间];
+	GuildDungeon_Monster[] monsterList[怪物列表];
+	long[] tagMonsterIdLiist[已标记的怪物ID列表];
+}
+
+ALProtocol GuildDungeon_DungeonMonster[公会副本怪物数据]
+{
+	long id[实例ID];
+	long monsterId[怪物ID];
+}
+
+ALProtocol GuildDungeon_DamageRankItem[公会副本伤害排行]
+{
+	long cid[玩家CID];
+	long value[分数];
+}
+
+ALProtocol GuildDungeon_LogStart[公会副本日志-开启]
+{
+	long cid;
+	long dungeonId[副本ID];
+	Enum.GuildDungeonEnum.EGuildDungeon_StartType startType[开启方式];
+	long startCost[开启消耗数值];
+}
+
+ALProtocol GuildDungeon_LogAttack[公会副本日志-攻击]
+{
+	long cid;
+	long monsterId[怪物ID];
+	long damage[伤害数值];
+}
+
+ALProtocol GuildDungeon_LogKill[公会副本日志-击杀]
+{
+	long cid;
+	long monsterId[怪物ID];
+}
+
+ALProtocol GuildDungeon_LogAutoStart[公会副本日志-自动开启]
+{
+	long dungeonId[副本ID];
+	long costValue[联盟财富消耗数值];
+}
+
+ALProtocol GuildDungeon_Log[公会副本日志]
+{
+	Enum.GuildDungeonEnum.EGuildDungeon_LogType logType[日志类型];
+	int createdAt[创建时间];
+	bytebuffer info[日志数据];
+}
+
+ALProtocol GuildDungeon_FightHero[出战大臣数据]
+{
+	long heroId;
+	int fightedCount[出战次数];
+	int recoveredCount[已恢复次数];
+	long lastFightedMs[最后一次出战时间（毫秒）];
+}

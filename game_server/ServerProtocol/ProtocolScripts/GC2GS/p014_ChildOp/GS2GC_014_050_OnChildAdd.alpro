@@ -1,0 +1,7 @@
+JavaPackage GS2GC.p014_ChildOp;
+csharpspace GS2GC.p014_ChildOp;
+import Common.ChildObj.alpro;
+ALProtocol GS2GC_014_050_OnChildAdd [子嗣（未成年）新增推送] <14, 50>
+{
+    Common.ChildObj.Child_Info child[空];
+}

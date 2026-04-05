@@ -1,0 +1,16 @@
+﻿JavaPackage ALLRPC.CrossTeamServer.Team;
+
+ALProtocol CTSKickTeamPlayer_Req
+{
+	long teamId[队伍实例ID];
+	long cid[玩家CID];
+	long kickCid[被踢玩家CID];
+}
+
+ALProtocol CTSKickTeamPlayer_Return
+{
+}
+
+//[RPC]踢出队伍成员
+//[CLASS_PACKAGE] : AllRpcData.CrossTeam_Service.Team
+//[DEALER_PACKAGE] : CrossTeamServer.RPCDispatcher.Team

@@ -1,0 +1,16 @@
+JavaPackage ALLRPC.US.Team;
+
+ALProtocol UsNotifySyncGroupTeam_Req
+{
+	long groupId[群组ID];
+	long teamId[队伍ID];
+}
+
+ALProtocol UsNotifySyncGroupTeam_Return
+{
+}
+
+//[RPC] 通知US同步Group队伍成员数据
+//[CLASS_PACKAGE] : AllRpcData.US_Service.Team
+//[DEALER_PACKAGE] : USServer.RPCDispatcher.Team
+

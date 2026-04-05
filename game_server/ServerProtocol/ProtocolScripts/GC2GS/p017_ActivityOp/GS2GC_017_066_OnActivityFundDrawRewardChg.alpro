@@ -1,0 +1,9 @@
+JavaPackage GS2GC.p017_ActivityOp;
+csharpspace GS2GC.p017_ActivityOp;
+
+ALProtocol GS2GC_017_066_OnActivityFundDrawRewardChg[活动基金-领取奖励后推送] <17, 66>
+{
+	long fundId[基金ID];
+    int hadDrawFreeStep[已领取免费档阶段];
+    int hadDrawPayStep[已领取付费档阶段];
+}

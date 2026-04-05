@@ -1,0 +1,13 @@
+﻿﻿import Common.CommonObj.alpro;
+
+JavaPackage NP2CS_RB.np_p004_PveOp;
+
+/**********************************************************
+ * 返回Common服上全局邮件列表
+ **********************************************************/ 
+ALProtocol NP2CS_RB_004_002_RetPvpRoom <4, 2>
+{
+	int err;
+	long roomSerial;
+	int roomServerID;
+}

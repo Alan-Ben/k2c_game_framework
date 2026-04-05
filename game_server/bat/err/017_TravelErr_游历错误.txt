@@ -1,0 +1,11 @@
+java_path= ../Common/src
+java_package=NPCommon.ErrMain
+id	name	desc
+
+1	TRAVEL_EVENT_CREATE_FAIL	游历事件创建失败
+2	TRAVEL_EVENT_NOT_FOUND	游历事件未找到
+3	TRAVEL_EVENT_NOT_DEAL	游历事件未处理
+4	TRAVEL_EVENT_CONSORT_NOT_IN	游历事件不属于指定妃子列表
+5	TRAVEL_COST_NOT_ENOUGH	游历事件消耗不足
+6	TRAVEL_COST_FAIL	游历事件消耗失败
+7	TRAVEL_GAMBLE_BET_INVALID	博彩押注额度不合法

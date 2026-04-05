@@ -1,0 +1,9 @@
+﻿JavaPackage Common.PrivilegeCardEnum;
+csharpspace Common.PrivilegeCardEnum;
+
+ALEnum EPrivilegeCardType[权益卡类型]
+{
+	NONE;
+	MONTH[月卡];
+	YEAR[年卡];
+}

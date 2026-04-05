@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p007_CommOp;
+csharpspace GC2GS.p007_CommOp;
+
+ALProtocol GC2GS_007_020_ReqTakeOfflineReward[获取离线奖励] <7, 20>
+{
+	long id;
+}

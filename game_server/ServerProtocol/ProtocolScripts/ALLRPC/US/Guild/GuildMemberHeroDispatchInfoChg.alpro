@@ -1,0 +1,15 @@
+﻿JavaPackage ALLRPC.US.Guild;
+
+ALProtocol GuildMemberHeroDispatchInfoChg_Req
+{
+	long guildId;
+	long cid;
+	long heroId;
+	int level;
+	long power;
+	long skinId;
+}
+
+ALProtocol GuildMemberHeroDispatchInfoChg_Return
+{
+}

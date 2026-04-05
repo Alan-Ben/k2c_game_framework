@@ -1,0 +1,7 @@
+JavaPackage GC2GS.p007_CommOp;
+csharpspace GC2GS.p007_CommOp;
+
+ALProtocol GC2GS_007_031_ReqClearRedDot[红点-清除红点请求] <7, 31>
+{
+	Enum.CommonEnum.ERedDotType[] redDotTypes[要清除的红点类型列表];
+}

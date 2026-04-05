@@ -1,0 +1,6 @@
+﻿JavaPackage GS2GC.p037_GuildDungeonOp;
+csharpspace GS2GC.p037_GuildDungeonOp;
+
+ALProtocol GS2GC_037_002_RetSetAutoStartDungeon <37, 2>
+{
+}

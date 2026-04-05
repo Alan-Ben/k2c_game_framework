@@ -1,0 +1,14 @@
+﻿JavaPackage WCGCS2US.p003_FriendOp;
+
+/**********************************************************
+ * Common服务器通知向玩家发送好友聊天
+ **********************************************************/
+ALProtocol WCGCS2US_003_008_OnSendFriendChat <3, 8>
+{
+	long uid;
+	long fuid;
+	string content;
+	int chatTime;
+	int msgType;
+	string voiceUrl;
+}

@@ -1,0 +1,7 @@
+﻿JavaPackage GS2GC.p034_InnOp;
+csharpspace GS2GC.p034_InnOp;
+
+ALProtocol GS2GC_034_006_RetInnSettle <34, 6>
+{
+	Common.InnObj.Inn_SettleInfo settleInfo[结算信息];
+}

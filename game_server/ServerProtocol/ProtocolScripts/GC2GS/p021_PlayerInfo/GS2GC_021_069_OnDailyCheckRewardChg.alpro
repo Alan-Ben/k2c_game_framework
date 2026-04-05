@@ -1,0 +1,9 @@
+﻿JavaPackage GS2GC.p021_PlayerInfo;
+csharpspace GS2GC.p021_PlayerInfo;
+
+import Common.DailyCheckObj.alpro;
+
+ALProtocol GS2GC_021_069_OnDailyCheckRewardChg[每日签到奖励信息变更] <21, 69>
+{
+	Common.DailyCheckObj.DailyCheck_RewardInfo rewardInfo[每日签到奖励信息];
+}

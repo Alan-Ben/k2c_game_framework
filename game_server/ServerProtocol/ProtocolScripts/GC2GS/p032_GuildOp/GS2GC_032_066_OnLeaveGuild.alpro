@@ -1,0 +1,7 @@
+﻿JavaPackage GS2GC.p032_GuildOp;
+csharpspace GS2GC.p032_GuildOp;
+
+ALProtocol GS2GC_032_066_OnLeaveGuild <32, 66>
+{
+    bool isKick[是否被踢出];
+}

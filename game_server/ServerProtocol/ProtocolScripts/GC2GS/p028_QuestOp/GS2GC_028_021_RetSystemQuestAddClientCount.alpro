@@ -1,0 +1,6 @@
+﻿JavaPackage GS2GC.p028_QuestOp;
+csharpspace GS2GC.p028_QuestOp;
+
+ALProtocol GS2GC_028_021_RetSystemQuestAddClientCount <28, 21>
+{
+}

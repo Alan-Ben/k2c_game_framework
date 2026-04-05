@@ -1,0 +1,7 @@
+﻿JavaPackage GS2GC.p007_CommOp;
+csharpspace GS2GC.p007_CommOp;
+
+ALProtocol GS2GC_007_062_OnTargetRewardUpdate <7, 62>
+{
+    Common.CommonFuncObj.CommonFunc_TargetReward info[目标奖励信息];
+}

@@ -1,0 +1,9 @@
+﻿﻿JavaPackage GS2GC.p023_ArenaOp;
+csharpspace GS2GC.p023_ArenaOp;
+
+ALProtocol GS2GC_023_005_RetRoundAttack <23, 5>
+{
+    Common.ArenaObj.Arena_RoundResult roundResult[回合结果];
+    Common.ArenaObj.Arena_RoundReward roundReward[回合奖励];
+    Common.ArenaObj.Arena_BattleResult battleResult[战斗结果];
+}

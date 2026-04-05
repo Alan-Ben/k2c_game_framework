@@ -1,0 +1,7 @@
+﻿JavaPackage GC2GS.p039_MarsBuildingOp;
+csharpspace GC2GS.p039_MarsBuildingOp;
+
+ALProtocol GC2GS_039_021_ReqConfirmUpgradeTechnologyLvl[火星科技-确认科技升级] <39, 21>
+{
+	long technologyId[科技ID];
+}

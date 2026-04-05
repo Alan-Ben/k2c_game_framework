@@ -1,0 +1,12 @@
+﻿JavaPackage Common.PrivilegeCardObj;
+csharpspace Common.PrivilegeCardObj;
+
+import Enum.PrivilegeCardEnum.alpro;
+
+ALProtocol PrivilegeCardObj_Info[权益卡数据]
+{
+	Enum.PrivilegeCardEnum.EPrivilegeCardType cardType[权益卡类型];
+	long startS[生效开始时间戳（秒）];
+	long endS[生效结束时间戳（秒）];
+	long lastGainDailyRewardS[最后一次领取每日奖励的时间戳（秒）];
+}

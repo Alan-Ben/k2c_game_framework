@@ -1,0 +1,14 @@
+﻿JavaPackage GS2GC.p037_GuildDungeonOp;
+csharpspace GS2GC.p037_GuildDungeonOp;
+
+import Common.GuildDungeonObj.alpro;
+
+ALProtocol GS2GC_037_056_OnDungeonPush[公会副本-推送数据] <37, 56>
+{
+	//公会副本数据
+	Common.GuildDungeonObj.GuildDungeon_SetInfo[] setList[设置数据列表];
+	Common.GuildDungeonObj.GuildDungeon_InstanceInfo[] instanceList[实力数据列表];
+	
+	//已领取奖励的怪物ID列表
+	Common.GuildDungeonObj.GuildDungeon_DungeonMonster[] gainedRewardMonsterIdList[已领取奖励的怪物数据列表];
+}

@@ -1,0 +1,7 @@
+﻿﻿JavaPackage GS2GC.p017_ActivityOp;
+csharpspace GS2GC.p017_ActivityOp;
+
+ALProtocol GS2GC_017_003_RetActivityRankBaseList <17, 3>
+{
+    Common.RankObj.Rank_BaseItem[] baseItemlist[基础数据列表];
+}

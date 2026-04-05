@@ -1,0 +1,9 @@
+﻿﻿JavaPackage GS2GC.p017_ActivityOp;
+csharpspace GS2GC.p017_ActivityOp;
+
+ALProtocol GS2GC_017_060_OnActivityShopItemBuy [活动商店商品购买记录推送] <17, 60>
+{
+     long instanceId[活动实例id];
+     long shopId[商店id];
+     Common.ActivityObj.Activity_ShopBuyRecord buyRecord[购买记录];
+}

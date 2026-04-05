@@ -1,0 +1,8 @@
+﻿JavaPackage WCGCS2US_R.p003_CommOp;
+
+ALProtocol NP2US_R_003_019_ReqPlayerDetailLike[玩家详情点赞] <3, 19>
+{
+	long cid;
+	long beLikeCid;
+	long guid;
+}

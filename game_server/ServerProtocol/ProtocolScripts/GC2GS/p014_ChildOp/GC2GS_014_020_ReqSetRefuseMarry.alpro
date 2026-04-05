@@ -1,0 +1,7 @@
+JavaPackage GC2GS.p014_ChildOp;
+csharpspace GC2GS.p014_ChildOp;
+
+ALProtocol GC2GS_014_020_ReqSetRefuseMarry[设置拒绝联姻] <14, 20>
+{
+	bool isRefuse[是否拒绝联姻];
+}

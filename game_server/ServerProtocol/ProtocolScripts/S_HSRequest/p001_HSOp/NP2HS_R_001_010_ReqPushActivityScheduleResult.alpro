@@ -1,0 +1,8 @@
+JavaPackage NP2HS_R.p001_HSOp;
+
+ALProtocol NP2HS_R_001_010_ReqPushActivityScheduleResult[通知HS活动排期推送结果] <1, 10>
+{
+	long phpOpSerial[后台操作序列号];
+	int errCode[错误码 0-无操作];
+	string errMsg[错误信息];
+}

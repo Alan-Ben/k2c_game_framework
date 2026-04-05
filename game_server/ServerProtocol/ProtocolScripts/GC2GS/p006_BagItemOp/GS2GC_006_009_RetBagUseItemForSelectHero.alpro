@@ -1,0 +1,7 @@
+JavaPackage GS2GC.p006_BagItemOp;
+csharpspace GS2GC.p006_BagItemOp;
+
+ALProtocol GS2GC_006_009_RetBagUseItemForSelectHero <6, 9>
+{
+    Common.BagItemUseObj.BagItemUse_HeroShowInfo[] itemList;
+}

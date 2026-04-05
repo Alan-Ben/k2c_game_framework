@@ -1,0 +1,9 @@
+﻿JavaPackage GS2GC.p038_MarsOp;
+csharpspace GS2GC.p038_MarsOp;
+
+﻿import Common.NPCommonObj.alpro;
+
+ALProtocol GS2GC_038_002_RetArriveMarsStage <38, 2>
+{
+	Common.NPCommonObj.NPCommon_ItemInfo[] itemList[物品列表];
+}

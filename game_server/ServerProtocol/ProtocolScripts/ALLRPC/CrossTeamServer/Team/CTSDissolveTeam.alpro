@@ -1,0 +1,15 @@
+﻿JavaPackage ALLRPC.CrossTeamServer.Team;
+
+ALProtocol CTSDissolveTeam_Req
+{
+	long teamId[队伍实例ID];
+	long cid[操作玩家CID];
+}
+
+ALProtocol CTSDissolveTeam_Return
+{
+}
+
+//[RPC]解散跨服队伍
+//[CLASS_PACKAGE] : AllRpcData.CrossTeam_Service.Team
+//[DEALER_PACKAGE] : CrossTeamServer.RPCDispatcher.Team

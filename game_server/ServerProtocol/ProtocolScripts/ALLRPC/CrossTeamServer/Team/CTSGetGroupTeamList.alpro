@@ -1,0 +1,20 @@
+JavaPackage ALLRPC.CrossTeamServer.Team;
+
+import Common.CrossTeamObj.alpro;
+
+ALProtocol CTSGetGroupTeamList_Req
+{
+	long groupId[分组实例ID];
+	int page[请求页码，从1开始];
+}
+
+ALProtocol CTSGetGroupTeamList_Return
+{
+	Common.CrossTeamObj.CrossTeam_BaseInfo[] teamBaseList[队伍基础数据列表];
+	int totalCount[队伍总数量];
+}
+
+//[RPC]获取指定分组的分页队伍列表
+// 注意：每页最多返回 50 条数据，该限制由服务端固定，不对外开放，客户端无法修改
+//[CLASS_PACKAGE] : AllRpcData.CrossTeam_Service.Team
+//[DEALER_PACKAGE] : CrossTeamServer.RPCDispatcher.Team

@@ -1,0 +1,11 @@
+JavaPackage NP2LCS_R.p001_BasicOp;
+
+/**********************************************************
+ * 根据验证串验证帐号信息
+ **********************************************************/
+ALProtocol NP2LCS_R_001_002_ReqAccInfoByChkKey <1, 2>
+{
+	//帐号名
+	string accountName;
+	string chkKey;
+}

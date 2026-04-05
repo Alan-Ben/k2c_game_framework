@@ -1,0 +1,99 @@
+﻿JavaPackage Common.DungeonObj;
+csharpspace Common.DungeonObj;
+
+ALProtocol MiddayDungeon_BossInfo[午间副本_Boss信息]
+{
+	int wave[波数];
+	long deductedHp[扣除血量];
+}
+
+ALProtocol MiddayDungeon_FightHero[午间副本_出战大臣信息]
+{
+	long heroId[大臣ID];
+	short num[出战次数];
+}
+
+ALProtocol MiddayDungeon_Info[午间副本信息]
+{
+	long roundStartTimeMS[本轮开始时间戳];
+	MiddayDungeon_BossInfo bossInfo[Boss信息];
+	MiddayDungeon_FightHero[] hadFightHeroList[已战斗过的英雄列表];
+	long[] borrowCidList[借用过大臣的玩家列表];
+}
+
+ALProtocol MiddayDungeon_SettleInfo[午间副本_结算信息]
+{
+	bool isDefeat[是否击杀];
+	Common.NPCommonObj.NPCommon_ItemInfo[] defeatRewardList[击败奖励];
+
+	long dropBoxId[掉落宝箱ID];
+	Common.NPCommonObj.NPCommon_ItemInfo[] boxRewardList[掉落宝箱获得道具列表];
+}
+
+ALProtocol MiddayDungeon_BoxInfo[午间副本_宝箱信息]
+{
+	long dbId[数据id];
+	long boxId[宝箱ID];
+	long senderCid[发送者ID];
+	string senderName[发送者名字];
+	long expireTimeMS[过期时间戳];
+}
+
+ALProtocol MiddayDungeon_TimeInfo[午间副本时间信息]
+{
+	long previewTimeMs[预告时间戳];
+	long startTimeMs[开始时间戳];
+	long endTimeMs[结束时间戳];
+}
+
+ALProtocol MiddayDungeon_DrawRecord[午间副本_宝箱领取记录]
+{
+	long cid[玩家ID];
+	long drawTimeMs[领取时间戳];
+}
+
+ALProtocol MiddayDungeon_DrawRecordList[午间副本_宝箱领取记录列表]
+{
+	MiddayDungeon_DrawRecord[] recordList[记录列表];
+}
+
+ALProtocol EveningDungeon_BossInfo[晚间副本_Boss信息]
+{
+	int wave[波数];
+	long deductedHp[扣除血量];
+	long totalHp[总血量];
+	long beDefeatTimeMs[被击败时间戳];
+	long defeatCid[击杀玩家ID];
+}
+
+ALProtocol EveningDungeon_AttackLog[晚间副本_攻击日志]
+{
+	long serial[序列号];
+	long cid[玩家ID];
+	int wave[波数];
+	long harmHp[造成伤害];
+	string playerName[玩家名];
+	long iconId[头像id];
+	long timestamp[时间戳];
+	long attackHeroId[攻击英雄ID];
+}
+
+ALProtocol EveningDungeon_Info[晚间副本信息]
+{
+	long roundStartTimeMS[本轮开始时间戳];
+	long[] hadFightHeroList[已战斗过的英雄列表];
+}
+
+ALProtocol EveningDungeon_DefeatInfo[晚间副本击杀信息]
+{
+	long cid[玩家ID];
+	long defeatTimeMs[击杀时间戳];
+}
+
+ALProtocol EveningDungeon_TimeInfo[晚间副本时间信息]
+{
+	long preCloseTimeMs[上轮关闭时间戳];
+	long previewTimeMs[预告时间戳];
+	long startTimeMs[开始时间戳];
+	long endTimeMs[结束时间戳];
+}

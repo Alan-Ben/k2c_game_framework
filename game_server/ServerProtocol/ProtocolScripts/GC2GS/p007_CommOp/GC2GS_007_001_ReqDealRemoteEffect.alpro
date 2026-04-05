@@ -1,0 +1,11 @@
+﻿JavaPackage GC2GS.p007_CommOp;
+csharpspace GC2GS.p007_CommOp;
+
+/**********************************************************
+ * 请求处理远程效果
+ **********************************************************/
+ALProtocol GC2GS_007_001_ReqDealRemoteEffect <7, 1>
+{
+	long clientSerialize;
+	long refId;
+}

@@ -1,0 +1,5 @@
+JavaPackage GS2GC.p014_ChildOp;
+csharpspace GS2GC.p014_ChildOp;
+ALProtocol GS2GC_014_016_RetCancelApplyToPlayer [联姻请求-取消指定联姻申请] <14, 16>
+{
+}

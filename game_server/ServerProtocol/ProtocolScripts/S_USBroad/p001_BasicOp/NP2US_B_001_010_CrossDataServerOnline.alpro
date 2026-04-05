@@ -1,0 +1,5 @@
+﻿JavaPackage NP2US_B.p001_BasicOp;
+
+ALProtocol NP2US_B_001_010_CrossDataServerOnline[CrossData服务器上线] <1, 10>
+{
+}

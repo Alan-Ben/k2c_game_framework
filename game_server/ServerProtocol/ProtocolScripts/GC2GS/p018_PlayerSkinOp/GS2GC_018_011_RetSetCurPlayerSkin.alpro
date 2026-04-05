@@ -1,0 +1,5 @@
+JavaPackage GS2GC.p018_PlayerSkinOp;
+csharpspace GS2GC.p018_PlayerSkinOp;
+ALProtocol GS2GC_018_011_RetSetCurPlayerSkin [穿戴皮肤] <18, 11>
+{
+}

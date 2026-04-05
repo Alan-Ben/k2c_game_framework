@@ -1,0 +1,34 @@
+java_path= ../Common/src
+java_package=NPCommon.ErrMain
+csharp_type = main
+id	name	desc
+1	SYS_ERR	系统错误
+2	REF_NOT_FOUND	配表找不到
+3	SYS_BUSY	系统忙
+4	UNKNOW_ERR	未知错误
+5	PARAM_ERROR	参数错误
+6	RPC_CALL_ERR	远程调用失败
+7	CONSUME_FAIL	消耗失败
+8	ITEM_NOT_ENOUGH	物品不足
+9	FILE_READ_ERR	文件读取错误
+10	PLAYER_NOT_FOUND	玩家找不到
+11	SYSTEM_UNLOCK	系统未开放
+12	PRICE_ERR	价格配置错误
+13	NOT_CROSS_GROUP_ERR	当前不是跨服分组
+14	PLAYER_CACHE_ERR	玩家缓存错误
+15	REF_ERROR	配表错误
+17	TIME_PRICE_CAL_ERR	道具消耗计算错误
+18	NUM_REACH_LIMIT	数量超过限制
+19	CONDITION_NOT_ENABLE	不满足条件
+20	OP_DISABLE	操作无效
+21	DATA_STATE_ERR	数据对象状态变化引发的通用错误
+22	OBJ_ERR	数据对象错误
+23	PROTOCOL_ERR	通用协议处理错误
+24	CID_ILLEGAL	CID格式错误
+25	US_NOT_FOUND	US服务器找不到
+26	DATA_LOST	数据已丢失
+27	PROCESS_TIMEOUT	处理超时
+28	SING_CHECK_FAIL	签名校验失败
+29	PARAM_NUM_ERROR	参数数量错误
+30	PROTOCOL_BLOCKED	系统暂未开放，请耐心等待
+31	REWARD_NOT_FOUND	奖励物品未找到

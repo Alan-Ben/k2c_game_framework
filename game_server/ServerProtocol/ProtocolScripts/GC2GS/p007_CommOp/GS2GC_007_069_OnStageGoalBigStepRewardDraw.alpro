@@ -1,0 +1,7 @@
+﻿JavaPackage GS2GC.p007_CommOp;
+csharpspace GS2GC.p007_CommOp;
+
+ALProtocol GS2GC_007_069_OnStageGoalBigStepRewardDraw [阶段目标大阶段奖励领取推送] <7, 69>
+{
+	long bigStep;
+}

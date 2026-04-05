@@ -1,0 +1,6 @@
+﻿﻿JavaPackage GS2GC.p017_ActivityOp;
+csharpspace GS2GC.p017_ActivityOp;
+
+ALProtocol GS2GC_017_015_RetBuyActivityShopItem <17, 15>
+{
+}

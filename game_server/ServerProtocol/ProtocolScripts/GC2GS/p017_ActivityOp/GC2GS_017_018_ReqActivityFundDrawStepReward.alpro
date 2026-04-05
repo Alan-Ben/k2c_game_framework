@@ -1,0 +1,7 @@
+JavaPackage GC2GS.p017_ActivityOp;
+csharpspace GC2GS.p017_ActivityOp;
+
+ALProtocol GC2GS_017_018_ReqActivityFundDrawStepReward[活动基金-请求领取阶段奖励] <17, 18>
+{
+	long fundId[基金ID];
+}
